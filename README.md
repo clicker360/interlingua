@@ -1,4 +1,5 @@
-interlingua
+Interlingua
 ===========
 
-Interlingua Sitio y CRM
+*Sitio de Interlingua
+*CRM Interlingua
