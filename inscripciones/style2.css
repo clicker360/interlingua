@@ -1,0 +1,255 @@
+
+header{
+	width:940px;
+	height:95px;
+	margin: 30px auto;
+}
+
+body{
+	margin: 0px;
+}
+
+		#logo{
+			background: url(images/logo.png) no-repeat;
+			width:253px;
+			height:95px;
+			float:left;
+			cursor:pointer;
+		}
+		
+		#linea1{
+			width:450px;
+			height:18px;
+			float:right;
+			text-align:right;
+			font-size:17px;
+			margin-top:50px;
+			color:#0098aa;
+			font-family: 'Cabin', sans-serif;
+		}
+		
+		#linea2{
+			width:450px;
+			text-align:right;
+			height:18px;
+			float:right;
+			margin-top:9px;
+			font-size:17px;
+			color:#989898;
+			font-family: 'Cabin', sans-serif;
+		}
+
+
+#contenido{	
+	width: 100%;
+	background:url(images/textura.png) repeat;	
+	height:310px;
+	margin: 28px auto;		
+}
+
+	#wrap{	
+		width: 940px;	
+		height:310px;
+		margin: 0px auto;		
+	}
+
+		section{
+			background: url(images/mariana.png) no-repeat;
+			width:540px;
+			height:310px;
+			float: left;
+		}
+		
+			#slogan{
+				
+				background:url(images/slogan.png)no-repeat;
+				padding-top:19px;
+				width:400px;
+				margin-top:180px;
+				height:92px;
+				
+			}
+	
+			#slogantext{
+				margin-top: -11px;
+				
+				text-align:center;
+				width:350px;
+				height:92px;	
+				margin-left:18px;			
+				color:#FFF;
+				font-size:18px;
+				font-family: 'Cabin', sans-serif;
+				text-shadow: 1px 1px 3px #6d6d6d;				
+			}
+
+			#sloganfirma{
+				float:right;
+				margin-top: -15px;
+				font-style: italic;				
+				text-align:center;
+				width:150px;
+				height:30px;	
+				margin-left:0px;			
+				color:#FFF;
+				font-size:14px;
+				font-family: 'Cabin', sans-serif;
+				text-shadow: 1px 1px 3px #6d6d6d;				
+			}
+
+aside{
+	background: url(images/backgroundform.png);		
+	width:400px;
+	height:310px;
+	float: right;	
+}
+
+			#p3{
+				font-size: 23px;
+				font-family: 'Muli', sans-serif;
+				width:400px;
+				width:400px;
+				height:23px;
+				margin: 0px auto;
+				text-align: center;	
+				margin-top:100px;
+				color: #064e5c;
+				font-weight:bold;
+				letter-spacing:-1px;
+			}
+			@-moz-document url-prefix(){
+			  #p3{
+			    font-size: 18px;
+			    
+			  }
+			}
+			
+			#p4{
+				font-size: 16px;
+				font-family: 'Muli', sans-serif;
+				width:400px;
+				width:350px;
+				height:23px;
+				margin: 0px auto;
+				text-align: center;	
+				margin-top:12px;
+				color: #064e5c;
+			}
+			
+			
+
+	#contenido1{
+		background:url(images/sombra.png)no-repeat;
+		width: 940px;
+		height: 300px;
+		margin: 0px auto;
+		
+	}
+
+		#lista1{
+			width: 360px;
+			font-size:15px;
+			height: auto;
+			margin-top:60px;
+			float:left;
+			font-family: 'Cabin', sans-serif;
+			font-style:italic;
+			line-height: 20pt; 
+		}
+		
+		ul.ok {
+			list-style-image:url(images/ok.png);
+		}
+		
+		
+		#lista2{
+			width: 350px;
+			font-size:15px;
+			height: auto;
+			margin-top:60px;
+			float:left;
+			font-family: 'Cabin', sans-serif;
+			font-style:italic;
+			line-height: 20pt; 
+		}
+		
+		#social{
+			width: 132px;
+			height: 100px;
+			margin-top:70px;
+			float:right;
+			margin-right:50px;
+		}
+		
+		#interlingua{
+			width: 33px;
+			height: 33px;
+			float:right;	
+			margin-top:30px;
+			margin-left:12px;			
+		}
+		
+		#facebook{
+			width: 33px;
+			height: 33px;
+			float:right;	
+			margin-top:30px;
+			margin-left:10px;		
+		}
+		
+		#twitter{
+			width:33px;
+			height: 33px;
+			float:right;	
+			margin-top:30px;
+			margin-left:10px;			
+		}
+	
+footer{
+	width: 100%;
+	margin: 0 auto;	
+	height: 47px;
+	background: #0096a7;
+	position: absolute;	
+	
+}
+
+	#pie{
+		width:940px;
+		height:47px;
+		margin: 0px auto;
+}
+
+		#copyright{
+			width:50%;
+			height:30px;
+			font-size: 13px;
+			font-family: 'Cabin', sans-serif;
+			color: #fff;
+			margin-top: 15px;
+			float: left;
+			text-align: left;
+		}
+
+			a:hover{
+				text-decoration:none;
+				color:#fff;
+			}
+			
+			a{
+				text-decoration:none;
+				color:#fff;
+			}
+
+
+		#aviso{
+			width:50%;
+			height:30px;
+			font-size: 13px;
+			font-family: 'Cabin', sans-serif;
+			color: #fff;
+			margin-top: 15px;
+			float: right;
+			text-align: right;
+			l
+		}

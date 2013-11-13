@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="4.0.2.18" name="SCAPSetup.exe" publicKeyToken="3148d3727a29392f" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="SCAP4b.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SCAPSetup" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SCAPSetup.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SCAPSetup.exe" size="16384">
+      <assemblyIdentity name="SCAPSetup" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>0MxZ9a3ZswTRgReDpdpvDzyIYD0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="fondoSCAP.jpg" size="32731">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>loHF8ic/1zNnuyuuoJtbRqLvKds=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAP.ini" size="219" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fJZ994HSmPjREz9ELsZZp9QVfkU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAP4b.ico" size="2238">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vgjvAlRNCMAaUIs0ORU4vsRORlg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPAjuste.ocx" size="385024">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ErcG74jeKhgwXsOfEjEA0j+fjdc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPBanco.ocx" size="176128">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vd3kwnKPgmAsMi/Y2hzVpaAuy4I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPBusqueda.ocx" size="102400">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q4NhtUUqk7B6R+mRMBmBIY33AKY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPBusquedaArticulo.ocx" size="69632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ihOuFVmowW1SBaVuxTJCvD+Kdbk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPBusquedaP.ocx" size="90112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oJKT3L3azKczv7glRy6bk6yyu5o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCaja.ocx" size="815104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vPAi+gjvaCcadtPXaLT4VuTYPvM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCajaConfiguracion.ocx" size="688128">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QtHLOiySK+8sV1y2eHUAEMuskfU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCajaCorte.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>23PmlJm7uTVc97tOCGP79xlAuIE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCategoria.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>e0ITMnFgYiKAPj86inM8U9HP230=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCFDError.ocx" size="266240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KZ2DN1vhZ5RsrV/kwXSNhBxghvg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCia.ocx" size="204800">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6LneOG9zPz8RBDnlr0ky4h6BYl4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCliente.exe" size="114688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>L3A5DttAbEDL3ZuAveh/vsTi9wI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPCliente.exe.manifest" size="93459">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VQnM79k6tsHoR8VnuudSxeGXpDY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPComision.ocx" size="229376">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OWACx2UuJZISEV5bCFDN2x2zFFU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPComisionPago.ocx" size="253952">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>07z3+DWKTFdxS3ZoU0d0GqvSxtY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPComisionPeriodo.ocx" size="229376">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>AaqlPrrpud4a9nDbRXb9NJOEKHQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPConceptoContable.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>L3N3Ohs2qKfpfhAv7T3wvHY05KU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPConceptoVenta.ocx" size="303104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0m6jNZYvzJXkMQ1SR8jVdM0HrXY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPConsultaAlumno.ocx" size="122880">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QuVIEyRpqRJsi72Gs83p2UKzrus=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPConsultaSCAP3.ocx" size="45056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RqtZVfeWeHuN8ZkRAXLshEvbma8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPConsultaUniversal.ocx" size="32768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GcubdtzW4uiFXnLIh+xcXIy37I4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPConsultaVersion3.ocx" size="180224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jWXaliN3P7cCd+uyCEWdR/S/EUk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPControlesAlumno.ocx" size="335872">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bxZxD7sAR/qbCdenTGDxcXRYGo0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPDeposito.ocx" size="397312">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OGkyztjLAc9dlX6iYNjUOmiw0go=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPDepositoCorporativo.ocx" size="204800">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nVgeq1LDAfexyGyRdtKtaeWhWsE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPDescarga.ocx" size="28672">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>04mgm7PBKKtTcb6qeu4RfNLiTBk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPDocumento.ocx" size="692224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Ob+UQIdfU33VQUWW28ar7x329Qg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPEmpresa.ocx" size="245760">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ygbksH9M7w7iZeRaiGFFdXAyjts=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPEstados.ocx" size="180224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z6xUi8+9XYyuMJRpI0/m+uII7ZY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPFactura.ocx" size="688128">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vFdcv3nw+FVA/gXxkFDCXSLZ5ZU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPFacturaManual.ocx" size="303104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/oqCHqGW8nC+pdeZBV2nKpHV0i0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPFiltro.ocx" size="200704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zXTxurUgKBjdwzBjK6PvdaxdI2s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPInfMovtosInterSAP.ocx" size="126976">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7BRXH9oafpVHRsTZNaTTmq2EwuI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPInventario.ocx" size="274432">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>J38pd1/2GKzFS4cuWiu+NZWa52E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPMagazine.ocx" size="311296">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8rOBH5vWZU/6vl/TlBivCB6jUF4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPMetodoPago.ocx" size="172032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KQqycyvYVIBvq2J6hB6Faz2D8Cc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPModificaAsiento.ocx" size="282624">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DOonneHATUC24m96usx6UsXllus=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPModifRegInter.ocx" size="335872">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bvx1PAItZSqxoAfJA6fkxhS5pNM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPModRegEmpI.ocx" size="290816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>rz9ny3M9TcOf80FWaWijj5ps/I0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPModulo.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OlmME/Afu8VGzEMyaHZWD7nA/YM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPModuloSesion.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z5yyxsZFtzk+ur0fMZxJORaaxTE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPMonitor.ocx" size="413696">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>x2Bv2j5ZDgrGgL8MrLKXE0rnfog=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPMttoFiltro.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GfroiUkUz5H5C4p8+gSTDc02jCA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPPais.ocx" size="172032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VliEUcPha1yAw+h9lmwxjGsq3Oo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPPeriodoAnticipo.ocx" size="192512">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>y2BCb7mLI/hu0bEjKvZifabHoJ8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPReporteCajas.ocx" size="126976">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a5RvrmAi7yGm9tlWsp/NdjDlZIY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPSaldos.ocx" size="143360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nbFNDEBzlRH2pQMEKEpzVxpbt4k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPSalida.ocx" size="278528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qUxLacP2aAz34YeMwyLwuRq+Kt4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPSesion.ocx" size="188416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>I9LAhW/U6ObK2h7v5KB/zrMbtiM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPSistema.ocx" size="180224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LSECC9orKAzFO1/Dloq06KomIpQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPTercero.ocx" size="266240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TSCwV8e0ktoh8ZhW8eaJsggkEFg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPTipoDeposito.ocx" size="180224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dO2ehCmeV3jKJsmo0UzPwgxdt0c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPTipoDocumento.ocx" size="180224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GHqRdhCumnLzA+Wh4d7IjdADTMw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPTipoPago.ocx" size="294912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tIqGOQ2D4bTtV4b2M+ZB2my7I5Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPTransformaCuenta.ocx" size="184320">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>x2jZTt7rzHmIS7DJCbaZ732reoM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPUnidadMedida.ocx" size="172032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>o+xKgUM9lc1yQAUTRJTf3kyY4ow=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPUsuarios.ocx" size="409600">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mwSPGVfHDjwsGICUXYdDshB+zso=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPUsuarioSesion.ocx" size="192512">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CPF0FPwBexPJ/Nh6XHOxJUUXcI0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SCAPWeb.ocx" size="278528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mM/IyKLvmnoX8NH4QiryoyK87vE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="toWord.dll" size="36864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>V7DXjUAJObZX71tO19QUb88SOjM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Trabajando.jpg" size="4661">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>s+za6/TYtAxNmao8u/nBsjwEYTY=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DSPCORPSIST3\SERGIO" issuerKeyHash="16d52fd20c29efde666841d2dafd84ea255a6a0d" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>X/nhj45Uw+F7PBFyq/4HUEjVls8=</DigestValue></Reference></SignedInfo><SignatureValue>X5VP1TZ9JTXL+9XKl7unyjUJ1aKEcQLHO5QqOUh092thHHrmVTFdBG4U3LcK3sHy5Z84U3JRzCy+2C8EOUmJQAJTLzSFTIXvXPu+b2Q1fi1QZUm16SCE9BEO/hM49CJF6Wgl8qSvPkyDkEWfXp76VIJFSAYFKWxdiXcXhW/ibAA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>0d8yKBZCLGBj9Xf7C7xYVvyWOXu8VSjQi8lxi4DGvADIcHITF3A8IMyrYft2+l7QRUpuY3ljcRDxR0iTe3Tf34RJSetNxJ6tLm9r+0FyYqlbm+PwPvWVoTBmcpziUB+FRSdjt268skY8itGa7cfQGq19L8gtcpLKjAnhmJk6riU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="cf96d5485007feab72113c7be1c3548e8fe1f95f" Description="" Url=""><as:assemblyIdentity version="4.0.2.18" name="SCAPSetup.exe" publicKeyToken="3148d3727a29392f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DSPCORPSIST3\SERGIO</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>zLZckI8BKFoHLDpJsTVJLTwLpU8=</DigestValue></Reference></SignedInfo><SignatureValue>FmfYRWDYDV70Fkvv8h4B+HTxiz6Yf/9cyQiCI73RUrrgrdP6HWbaB9DwRC1DGEwK2ai6cGnclf35s1pCQWJjDKNeRvYZGi3iZNedFGRIfPGVNcOG940IkP7bqQR+F+DMWgdrx3NTo5/l1Ceca7Ce/36056pjv63oTrGmFrJxt7A=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0d8yKBZCLGBj9Xf7C7xYVvyWOXu8VSjQi8lxi4DGvADIcHITF3A8IMyrYft2+l7QRUpuY3ljcRDxR0iTe3Tf34RJSetNxJ6tLm9r+0FyYqlbm+PwPvWVoTBmcpziUB+FRSdjt268skY8itGa7cfQGq19L8gtcpLKjAnhmJk6riU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQY1HPqG4AZahGpy4urx1UezANBgkqhkiG9w0BAQUFADAxMS8wLQYDVQQDHiYARABTAFAAQwBPAFIAUABTAEkAUwBUADMAXABTAEUAUgBHAEkATzAeFw0xMzA2MDUwMTEzMjFaFw0xNDA2MDUwNzEzMjFaMDExLzAtBgNVBAMeJgBEAFMAUABDAE8AUgBQAFMASQBTAFQAMwBcAFMARQBSAEcASQBPMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDR3zIoFkIsYGP1d/sLvFhW/JY5e7xVKNCLyXGLgMa8AMhwchMXcDwgzKth+3b6XtBFSm5jeWNxEPFHSJN7dN/fhElJ603Enq0ub2v7QXJiqVub4/A+9ZWhMGZynOJQH4VFJ2O3bryyRjyK0Zrtx9AarX0vyC1yksqMCeGYmTquJQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAMKYO6sQU2JnedSvFPeOb85tNBx6eBFCo2F/i1tYaUC3VBxsH7V9nZiKKqwpqMLE5iX0KitB41AvGfanG3MrfVQ9KfaTX8LBNhD3M0s7dV4vV02eHi0xokoh0veefL5O0gWnZZSLrKGiR/vcfRwpMHEdKzZ9mcAXLr02JFBdSTt0</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

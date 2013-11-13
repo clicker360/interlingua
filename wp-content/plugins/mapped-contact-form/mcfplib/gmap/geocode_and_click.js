@@ -1,0 +1,95 @@
+google.load("maps", "3",  {other_params:"sensor=false"});
+var markersArray = [];
+var geocoder;
+var map;
+var marker;
+function initialize() {
+geocoder = new google.maps.Geocoder();
+var latlng = new google.maps.LatLng(-34.397, 150.644);
+var myOptions = {
+  zoom: 8,
+  center: latlng,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+  google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        });
+
+  google.maps.event.addListener(map, 'click', function(event) {
+	//call function to create marker
+         if (marker) {
+            marker.setMap(null);
+            marker = null;
+         }
+	 marker = createMarker(event.latLng, "name", "<b>Copy and paste:</b><br>"+event.latLng);
+  });
+}
+
+var infowindow = new google.maps.InfoWindow(
+  { 
+    size: new google.maps.Size(150,50)
+  });
+
+function codeAddress() {
+var address = document.getElementById("address").value;
+if (geocoder) {
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+
+		    var contentString = '<div>'+
+		        '<b>Copy and paste:</b><br/>' +
+						results[0].geometry.location + 
+		        '</div>';
+
+		    var infowindow = new google.maps.InfoWindow({
+		        content: contentString
+		    });
+				if (marker) {
+            marker.setMap(null);
+            marker = null;
+         }
+				marker = new google.maps.Marker({
+          map: map,
+						addMarker: true, 
+          position: results[0].geometry.location
+      });
+
+				google.maps.event.addListener(marker, 'click' , function() {
+		      infowindow.open(map,marker);
+		    });
+				google.maps.event.trigger(marker, 'click'); 
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
+    }
+  });
+}
+}
+
+// A function to create the marker and set up the event window function 
+function createMarker(latlng, name, html) {
+    var contentString = html;
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        zIndex: Math.round(latlng.lat()*-100000)<<5
+        });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(contentString); 
+        infowindow.open(map,marker);
+        });
+    google.maps.event.trigger(marker, 'click');    
+    return marker;
+}
+
+function clearOverlays() {
+  if (markersArray) {
+    for (i in markersArray) {
+      markersArray[i].setMap(null);
+    }
+  }
+}
+google.setOnLoadCallback(mappedContactForm.initialize);

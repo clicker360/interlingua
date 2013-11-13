@@ -1,0 +1,655 @@
+
+header{
+	width:940px;
+	height:95px;
+	margin: 30px auto;
+}
+
+body{
+	margin: 0px;
+}
+
+.placeholder
+{
+  color: #000;
+}
+
+		#logo{
+			background: url(images/logo.png) no-repeat;
+			width:253px;
+			height:95px;
+			float:left;
+		}
+		
+		#linea1{
+			width:450px;
+			height:18px;
+			float:right;
+			text-align:right;
+			font-size:17px;
+			margin-top:50px;
+			color:#0098aa;
+			font-family: 'Cabin', sans-serif;
+		}
+		
+		#linea2{
+			width:450px;
+			text-align:right;
+			height:18px;
+			float:right;
+			margin-top:9px;
+			font-size:17px;
+			color:#989898;
+			font-family: 'Cabin', sans-serif;
+		}
+
+
+#contenido{	
+	width: 100%;
+	background:url(images/textura.png) repeat;	
+	height:382px;
+	margin: 28px auto;		
+}
+
+	#wrap{	
+		width: 940px;	
+		height:310px;
+		margin: 0px auto;		
+	}
+
+		section{
+			background: url(images/background-chico.jpg) no-repeat;
+			width:940px;
+			height:380px;
+			float: left;
+			position: absolute;
+			z-index: 0;
+		}
+		
+			#slogan{
+				
+				background:url(images/slogan.png)no-repeat;
+				padding-top:19px;
+				width:400px;
+				margin-top:180px;
+				height:92px;
+				
+			}
+	
+			#slogantext{
+				margin-top: -11px;
+				
+				text-align:center;
+				width:350px;
+				height:92px;	
+				margin-left:18px;			
+				color:#FFF;
+				font-size:18px;
+				font-family: 'Cabin', sans-serif;
+				text-shadow: 1px 1px 3px #6d6d6d;				
+			}
+
+			#sloganfirma{
+				float:right;
+				margin-top: -15px;
+				font-style: italic;				
+				text-align:center;
+				width:150px;
+				height:30px;	
+				margin-left:0px;			
+				color:#FFF;
+				font-size:14px;
+				font-family: 'Cabin', sans-serif;
+				text-shadow: 1px 1px 3px #6d6d6d;				
+			}
+
+aside{
+	/*background: url(images/backgroundform.png);*/
+	width:651px;
+	height:375px;
+	float: right;	
+	position: relative;
+	z-index: 1;
+}
+.aside2{
+	background: url(images/backgroundform.png);		
+/*	width:451px;
+	height:35px;
+	float: right;	*/
+	padding: 12px;
+}
+
+.logobf{
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+#formulario{
+	background: url(images/backgroundform.png);		
+	width:400px;
+	height:310px;
+	margin: 30px auto;
+}
+
+			#p3{
+				font-size: 30px;
+				font-family: 'Muli', sans-serif;
+				width:400px;
+				height:23px;
+				margin: 0px auto;
+				text-align: center;	
+				margin-top:40px;
+				color: #064e5c;
+				font-weight:bold;
+				letter-spacing:-1px;
+			}			
+			#p4{
+				font-size: 20px;
+				font-family: 'Muli', sans-serif;
+				width:350px;
+				margin: 0px auto;
+				text-align: center;	
+				margin-top:0px;
+				margin-bottom: 12px;
+				color: #fff;
+			}
+			#p5{
+				font-size: 20px;
+				font-family: 'Muli', sans-serif;
+				width:471px;
+				margin: 0px auto;
+				text-align: left;	
+				margin-top:40px;
+				margin-bottom: 20px;
+				color: #fff;
+				font-weight:normal;
+			/*	text-shadow: 3px 1px 3px #136c6e;
+filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
+			}
+			.p5amarillo{
+				font-size: 20px;
+				font-family: 'Muli', sans-serif;
+				margin: 0px auto;
+				text-align: left;	
+				color: #fae124;
+				font-weight:normal;
+				/*text-shadow: 3px 1px 3px #136c6e;
+filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
+			}
+			#p6{
+				font-size: 20px;
+				font-family: 'Muli', sans-serif;
+				width:531px;
+				margin: 0px auto;
+				text-align: center;	
+				margin-top:40px;
+				margin-bottom: 20px;
+				color: #fff;
+				font-weight:normal;
+			/*	text-shadow: 3px 1px 3px #136c6e;
+filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
+			}
+			.p6amarillo{
+				font-size: 20px;
+				font-family: 'Muli', sans-serif;
+				margin: 0px auto;
+				text-align: left;	
+				color: #fae124;
+				font-weight:normal;
+				/*text-shadow: 3px 1px 3px #136c6e;
+filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
+			}
+
+			.bases{
+				font-size: 8px;
+				font-family: 'Muli', sans-serif;
+				width:575px;
+				margin: 0px auto;
+				text-align: justify;	
+				margin-top:25px;
+				margin-bottom: 12px;
+				margin-left: -110px;
+				color: #fff;
+			}
+
+			#formulariodiv{
+				margin: 5px auto;
+				width:360px;
+				height:122px;				
+			}
+			
+			/**#txtNombre{
+				font-family: 'Cabin', sans-serif;
+				border: none;
+				width:167px;
+				padding-left: 8px;
+				height:38px;
+				background-color: #fff;
+				float: left;
+				
+				
+			}	**/
+				#nombre1{
+				font-family: 'Cabin', sans-serif;
+				border: none;
+				width:167px;
+				padding-left: 0px;
+				height:38px;
+				float: left;
+				font-size: 11px;
+					
+				}
+
+					#txtNombre{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:167px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+					}
+			
+				#correo1{
+					margin-top: -38px;
+					border: none;
+					font-family: 'Cabin', sans-serif;
+					width:174px;
+					padding-left: 0px;
+					height:38px;
+					margin-left:185px;
+					float: left;
+					font-size: 11px;
+						
+					}
+
+
+					#txtCorreo{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:167px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+								
+					}
+
+						
+			#lada1{
+				
+				border: none;
+				font-family: 'Cabin', sans-serif;
+				padding-left: 0px;
+				width:51px;
+				height:38px;
+				margin-top:15px;
+				float: left;
+				font-size: 11px;
+				
+			}
+					
+				
+					#txtLada{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:51px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+					}
+								
+					
+			#telefono1{
+											
+				border: none;
+				font-family: 'Cabin', sans-serif;
+				margin-left:70px;
+				width:105px;
+				height:38px;				
+				margin-top:53px;
+				position: absolute;
+				font-size: 11px;
+			}
+					
+						
+			#txtTelefono{
+												
+				font-family: 'Cabin', sans-serif;
+						border: none;
+						width:96px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+			}
+			
+			#estado1{
+				position:absolute;
+				margin-left:0px;
+				border: none;
+				font-family: 'Cabin', sans-serif;
+				width:190px;
+				height:38px;
+				margin-top:107px;
+				font-size: 11px;
+				
+			}
+							
+				#cmbEstados{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:177px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+			}
+			#celular1{
+				font-family: 'Cabin', sans-serif;
+				border: none;
+				width:167px;
+				padding-left: 0px;
+				height:38px;
+				float: left;
+				font-size: 11px;
+				margin-top: -38px;
+				margin-left: 185px;
+				margin-bottom: 50px;
+					
+				}
+
+					#txtCelular{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:167px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+					}
+
+			#sucursal1{
+				position:absolute;
+				margin-left:185px;
+				border: none;
+				font-family: 'Cabin', sans-serif;
+				width:190px;
+				height:38px;
+				margin-top:107px;
+				font-size: 11px;
+				
+			}
+							
+				#cmbSucursales{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:177px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+			}
+				
+			#estado1{
+			}
+				
+			/**#cmbEstados option {
+				color: black;
+			}**/
+
+			/**.empty {
+				color: #bba9a9; }**/
+			
+			
+				#politicas1{
+				
+				
+				font-family: 'Cabin', sans-serif;
+
+				margin-left:70px;
+				width:200px;
+				height:40px;				
+				margin-top:-3px;					
+				font-size: 11px;
+
+			}
+
+				#acepto1{
+					font-family: 'Cabin', sans-serif;
+					margin-left: 30px;
+					margin-top: 5.5px;
+					color:#000;
+					
+
+				}
+
+					/*#chkPoliticas{
+						
+						border: none;
+						font-family: 'Cabin', sans-serif;
+						width:250px;
+						height:38px;
+						margin-left: 0px;
+						margin-top:0px;
+						font-size: 11px;
+						
+					}*/
+
+							
+				#cmbEstados{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:177px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+			}
+			/**#politicas{
+				font-family: 'Muli', sans-serif;
+				width:360px;
+				height:36px;
+				color: #000;
+				font-size: 12px;
+				margin: 6px auto;
+				
+			}**/
+
+				#errorpoliticas{
+						width:96px;
+						height:14px;
+						font-size:12px;
+						position:absolute;
+						margin-top:4px;
+						margin-left:150px;
+					}
+
+		/**	#politicas input {
+				float: left;
+				margin-top: 2px;
+				margin-left: 78px;
+			
+			}**/
+
+			/**.error{
+				position:absolute;
+				color: #fff;
+
+							
+			}**/
+
+			#form1 label.error {
+				margin-top: 0px;
+			float: left;
+			clear: both;
+			position: relative;
+			color:  #064e5c;
+			display: block;
+			
+			padding: 2px;
+				
+			}
+		
+			
+			/**#politicas #acepto {
+				float: left;
+				padding-left: 8px;			
+			}**/
+
+			 #btnEnviar{
+			 	background: url(images/boton.png);	
+			 	border:none;
+				width:306px;
+			  	height:61px;
+			  	margin-top: 27px;
+				margin-left:24px;				
+			  	font-family: Arial;
+			  	font-size: 19.73px;
+			  	font-family: 'Muli', sans-serif;
+			  	font-weight: bold;
+			  	color:#fff;
+			  	text-shadow: 1px 1px 3px #666666;
+
+			}
+			
+			#btnEnviar:hover {
+			  	background: url(images/botonh.png);	
+			}
+
+			.flecha {
+				float: right;
+				margin-top: -63px;
+				margin-right: -7px;
+			}  
+						
+#contenido1{
+		background:url(images/sombra.png)no-repeat;
+		width: 940px;
+		height: 300px;
+		margin: -30px auto;
+}
+
+		#lista1{
+			width: 360px;
+			font-size:15px;
+			height: auto;
+			margin-top:60px;
+			float:left;
+			font-family: 'Cabin', sans-serif;
+			font-style:italic;
+			line-height: 20pt; 
+		}
+		
+		ul.ok {
+			list-style-image:url(images/ok.png);
+		}
+		
+		
+		#lista2{
+			width: 350px;
+			font-size:15px;
+			height: auto;
+			margin-top:60px;
+			float:left;
+			font-family: 'Cabin', sans-serif;
+			font-style:italic;
+			line-height: 20pt; 
+		}
+		
+		#social{
+			width: 132px;
+			height: 100px;
+			margin-top:70px;
+			float:right;
+			margin-right:50px;
+		}
+		
+		#interlingua{
+			width: 33px;
+			height: 33px;
+			float:right;	
+			margin-top:30px;
+			margin-left:12px;			
+		}
+		
+		#facebook{
+			width: 33px;
+			height: 33px;
+			float:right;	
+			margin-top:30px;
+			margin-left:10px;		
+		}
+		
+		#twitter{
+			width:33px;
+			height: 33px;
+			float:right;	
+			margin-top:30px;
+			margin-left:10px;			
+		}
+	
+footer{
+	width: 100%;
+	margin: 0 auto;	
+	height: 47px;
+	background: #0096a7;
+	position: absolute;	
+	/*bottom: 0px;*/
+}
+
+	#pie{
+		width:940px;
+		height:47px;
+		margin: 0px auto;
+}
+
+		#copyright{
+			width:50%;
+			height:30px;
+			font-size: 13px;
+			font-family: 'Cabin', sans-serif;
+			color: #fff;
+			margin-top: 15px;
+			float: left;
+			text-align: left;
+		}
+
+			a:hover{
+				text-decoration:none;
+				color:#fff;
+			}
+			
+			a{
+				text-decoration:none;
+				color:#fff;
+			}
+
+
+		#aviso{
+			width:50%;
+			height:30px;
+			font-size: 13px;
+			font-family: 'Cabin', sans-serif;
+			color: #fff;
+			margin-top: 15px;
+			float: right;
+			text-align: right;
+			
+		}
+
+		#politicas1 label{
+			margin-top:10px;
+
+		}
+
+		#politicas1 input{
+			float:left;
+			margin-top: 1px;
+		}
+
+		#politicas1 a{
+			color:#064e5c;
+		}

@@ -1,0 +1,7241 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE6/7/8/9 & FF3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7.
+ * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/*
+ * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses styling not present in S5, Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/*
+ * Addresses styling not present in IE6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome.
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*
+ * Addresses CSS quotes not supported in IE6/7.
+ */
+q {
+  quotes: none;
+}
+/*
+ * Addresses `quotes` property not supported in S4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 0em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+
+}
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7.
+ */
+form {
+  margin: 0;
+}
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9.
+ * 2. Corrects text not wrapping in FF3.
+ * 3. Corrects alignment displayed oddly in IE6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* 3 */
+
+}
+/*
+ * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
+ * UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+
+  cursor: pointer;
+  /* 3 */
+
+  *overflow: visible;
+  /* 4 */
+
+}
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9.
+ * 2. Removes excess padding in IE8/9.
+ * 3. Removes excess padding in IE7.
+ *    Known issue: excess padding remains in IE6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  *width: 13px;
+  /* 3 */
+
+}
+/*
+ * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
+ *    to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in FF3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-spacing: 0;
+}
+/******************************************************************
+CUSTOMIZED RESET VALUES
+I added these extra styles as a more personalized reset. Feel free
+to remove them if you like or add your own. If you want to update
+the normalize styles, make sure to edit from this point up.
+******************************************************************/
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+small,
+.small {
+  font-size: 75%;
+}
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  background: url(../images/check.png) no-repeat;
+  padding-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+dd {
+  margin: 0;
+}
+.sidebar ul,
+.sidebar ol,
+.commentlist {
+  list-style: none;
+}
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*@link-color:        #none;
+@link-hover:        darken(@link-color, 9%);
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+	*/
+@font-face {
+  font-family: 'Conv_MyriadPro-Regular';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_MyriadPro-Semibold';
+  src: url('../fonts/MyriadPro-Semibold.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Semibold.woff') format('woff'), url('../fonts/MyriadPro-Semibold.ttf') format('truetype'), url('../fonts/MyriadPro-Semibold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_MyriadPro-Bold';
+  src: url('../fonts/MyriadPro-Bold.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+.alert-help {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+.alert-info {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+.alert-error {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+.alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/* .css-gradient(#f6f6f6,#d1d1d1); */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0,0,4px,0,#444); */
+/* .boxShadow(none); */
+/*********************
+BUTTONS
+*********************/
+.button,
+.button:visited,
+#curso-boton-enviar,
+#boton-slider-cursos,
+.boton-slider-cursos-type,
+#bolsa-trabajo-enviar,
+#localiza-ubicacion,
+#btnEnviar,
+#btnEnviarCursos,
+#btnEnviarEmpresas,
+#btnEnviarAlumnos,
+#btnEnviarFranquicias,
+#sendtest,
+#btnEnviarHome {
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 3px 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
+  /*text-shadow: 0 1px rgba(0,0,0, .75);*/
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  /*&:active {
+		.css-gradient(darken(@bones-orange, 5%),@bones-pink);
+	}*/
+}
+.button:hover,
+.button:visited:hover,
+#curso-boton-enviar:hover,
+#boton-slider-cursos:hover,
+.boton-slider-cursos-type:hover,
+#bolsa-trabajo-enviar:hover,
+#localiza-ubicacion:hover,
+#btnEnviar:hover,
+#btnEnviarCursos:hover,
+#btnEnviarEmpresas:hover,
+#btnEnviarAlumnos:hover,
+#btnEnviarFranquicias:hover,
+#sendtest:hover,
+#btnEnviarHome:hover,
+.button:focus,
+.button:visited:focus,
+#curso-boton-enviar:focus,
+#boton-slider-cursos:focus,
+.boton-slider-cursos-type:focus,
+#bolsa-trabajo-enviar:focus,
+#localiza-ubicacion:focus,
+#btnEnviar:focus,
+#btnEnviarCursos:focus,
+#btnEnviarEmpresas:focus,
+#btnEnviarAlumnos:focus,
+#btnEnviarFranquicias:focus,
+#sendtest:focus,
+#btnEnviarHome:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+#bolsa-trabajo-enviar {
+  font-size: 13px;
+}
+.boton-slider-cursos-type {
+  font-size: 18px;
+  padding: 8px 17px;
+  margin-top: 10px;
+}
+.blue-button,
+.blue-button:visited {
+  border-color: #ca5913;
+  text-shadow: 0 1px 1px #ca5913;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  -webkit-box-shadow: inset 0 0 3px #f2a270;
+  -moz-box-shadow: inset 0 0 3px #f2a270;
+  box-shadow: inset 0 0 3px #f2a270;
+  /*&:active {
+		.css-gradient( darken(@bones-orange, 5%), @bones-orange );
+	}*/
+
+}
+.blue-button:hover,
+.blue-button:visited:hover,
+.blue-button:focus,
+.blue-button:visited:focus {
+  border-color: #b34f10;
+  background-color: #ca5913;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e66515), to(#ca5913));
+  background-image: -webkit-linear-gradient(top, #e66515, #ca5913);
+  background-image: -moz-linear-gradient(top, #e66515, #ca5913);
+  background-image: -o-linear-gradient(top, #e66515, #ca5913);
+  background-image: linear-gradient(to bottom, #e66515, #ca5913);
+}
+.buton-widget {
+  font-family: 'Conv_MyriadPro-Regular';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 3px 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: none;
+  /*text-shadow: 0 1px rgba(0,0,0, .75);*/
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  /*&:active {
+		.css-gradient(darken(@bones-orange, 5%),@bones-pink);
+	}	*/
+
+}
+.buton-widget:hover,
+.buton-widget:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+.buton-widget:visited {
+  border-color: #ca5913;
+  text-shadow: 0 1px 1px #ca5913;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  -webkit-box-shadow: inset 0 0 3px #f2a270;
+  -moz-box-shadow: inset 0 0 3px #f2a270;
+  box-shadow: inset 0 0 3px #f2a270;
+  /*&:active {
+		.css-gradient( darken(@bones-orange, 5%), @bones-orange );
+	}*/
+
+}
+.buton-widget:visited:hover,
+.buton-widget:visited:focus {
+  border-color: #b34f10;
+  background-color: #ca5913;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e66515), to(#ca5913));
+  background-image: -webkit-linear-gradient(top, #e66515, #ca5913);
+  background-image: -moz-linear-gradient(top, #e66515, #ca5913);
+  background-image: -o-linear-gradient(top, #e66515, #ca5913);
+  background-image: linear-gradient(to bottom, #e66515, #ca5913);
+}
+/**************** Boton Home ****************/
+.buton-home {
+  font-family: 'Conv_MyriadPro-Semibold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 12px 12px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  /*text-shadow: 0 1px rgba(0,0,0, .75);*/
+
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  /*&:active {
+		.css-gradient(darken(@bones-orange, 5%),@bones-pink);
+	}	*/
+
+}
+.buton-home:hover,
+.buton-home:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+.buton-home:visited {
+  border-color: #ca5913;
+  text-shadow: 0 1px 1px #ca5913;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  -webkit-box-shadow: inset 0 0 3px #f2a270;
+  -moz-box-shadow: inset 0 0 3px #f2a270;
+  box-shadow: inset 0 0 3px #f2a270;
+  /*&:active {
+		.css-gradient( darken(@bones-orange, 5%), @bones-orange );
+	}*/
+
+}
+.buton-home:visited:hover,
+.buton-home:visited:focus {
+  border-color: #b34f10;
+  background-color: #ca5913;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e66515), to(#ca5913));
+  background-image: -webkit-linear-gradient(top, #e66515, #ca5913);
+  background-image: -moz-linear-gradient(top, #e66515, #ca5913);
+  background-image: -o-linear-gradient(top, #e66515, #ca5913);
+  background-image: linear-gradient(to bottom, #e66515, #ca5913);
+}
+/**************** Fin Boton Home ****************/
+#editar-alumno {
+  font-family: 'Conv_MyriadPro-Regular';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 3px 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
+  /*text-shadow: 0 1px rgba(0,0,0, .75);*/
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+#editar-alumno:hover,
+#editar-alumno:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+.boton-contacto-plantel {
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 3px 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  /*text-shadow: 0 1px rgba(0,0,0, .75);*/
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+.boton-contacto-plantel:hover,
+.boton-contacto-plantel:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+/*
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+------------ MAP ------------
+
+01. GENERAL STYLES
+02. WORDPRESS BODY CLASSES
+03. LAYOUT & GRID STYLES
+04. LINK STYLES
+05. H1, H2, H3, H4, H5 STYLES
+06. HEADER STYLES
+07. NAVIGATION STYLES
+08. POSTS & CONTENT STYLES
+09. PAGE NAVI STYLES
+10. COMMENT STYLES
+11. COMMENT FORM STYLES
+12. SIDEBARS & ASIDES
+13. FOOTER STYLES
+
+******************************************************************/
+/*********************
+01. GENERAL STYLES
+*********************/
+html,
+body {
+  /* height: 100%; */
+
+}
+body {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 14px;
+  /*	line-height: 1.5;*/
+
+  color: #797979;
+}
+/********************
+02. WORDPRESS BODY CLASSES
+    style a page via class
+********************/
+/* for sites that are read right to left (i.e. hebrew) */
+/* home page */
+/* blog template page */
+/* archive page */
+/* date archive page */
+/* replace the number to the corresponding page number */
+/* search page */
+/* search result page */
+/* no results search page */
+/* individual paged search (i.e. body.search-paged-3) */
+/* 404 page */
+/* single post page */
+/* individual post page by id (i.e. body.postid-73) */
+/* individual paged single (i.e. body.single-paged-3) */
+/* attatchment page */
+/* individual attatchment page (i.e. body.attachmentid-763) */
+/* style mime type pages */
+/* author page */
+/* user nicename (i.e. body.author-samueladams) */
+/* paged author archives (i.e. body.author-paged-4) for page 4 */
+/* category page */
+/* individual category page (i.e. body.category-6) */
+/* replace the number to the corresponding page number */
+/* tag page */
+/* individual tag page (i.e. body.tag-news) */
+/* replace the number to the corresponding page number */
+/* custom page template page */
+/* individual page template (i.e. body.page-template-contact-php */
+/* replace the number to the corresponding page number */
+/* parent page template */
+/* child page template */
+/* replace the number to the corresponding page number */
+/* if user is logged in */
+/* paged items like search results or archives */
+/* individual paged (i.e. body.paged-3) */
+/*********************
+03. LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 96%;
+  margin: 0 auto;
+}
+/*********************
+04. LINK STYLES
+*********************/
+/* a, a:visited {
+	color: @link-color;
+
+	/* on hover */
+/*	&:hover, &:focus {
+		color: @link-hover;
+	}
+
+	/* on click */
+/*	&:active {
+
+	}
+
+	/* mobile tap color */
+/*	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+/*		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+05. H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: 'Conv_MyriadPro-Regular';
+  text-rendering: optimizelegibility;
+  font-weight: 400;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+  /* removing text decoration from all headline links */
+
+}
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a {
+  text-decoration: none;
+}
+h1,
+.h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+h2,
+.h2 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+h3,
+.h3 {
+  font-size: 1.125em;
+}
+h4,
+.h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+h5,
+.h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/*********************
+06. HEADER STYLES
+*********************/
+/*********************
+07. NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+.nav {
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  /* end .menu li */
+
+  /* highlight current page */
+
+  /* end current highlighters */
+
+}
+.nav li {
+  /*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+
+}
+.nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 10px;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  /*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px;
+}
+/* end .nav */
+/*********************
+08. POSTS & CONTENT STYLES
+*********************/
+#content {
+  /*margin-top: 1em;*/
+
+}
+/* end .hentry */
+/* want to style individual post classes? Booya! */
+/* post by id (i.e. post-3) */
+/* general post style */
+/* general article on a page style */
+/* general style on an attatchment */
+/* sticky post style */
+/* hentry class */
+/* style by category (i.e. category-videos) */
+/* style by tag (i.e. tag-news) */
+/* post meta */
+.byline {
+  color: #999;
+}
+/* entry content */
+.entry-content {
+  /*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+
+}
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+.entry-content img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+.entry-content video,
+.entry-content object {
+  max-width: 100%;
+  height: auto;
+}
+.entry-content pre {
+  background: #eee;
+  border: 1px solid #cecece;
+  padding: 10px;
+}
+/* end .entry-content */
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+
+}
+.wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+/* end .wp-caption */
+/* image gallery styles */
+/* end .gallery */
+/* gallery caption styles */
+/******************************************************************
+09. PAGE NAVI STYLES
+******************************************************************/
+.page-navigation,
+.wp-prev-next {
+  margin: 1.1em 0 2.2em;
+}
+.bones_page_navi {
+  /* current page link */
+
+  /* end .bones_page_navi .bpn-current */
+
+  /* common styles for page-navi links */
+
+  /* remove the bg on end links */
+
+  /* previous link */
+
+  /* next page link */
+
+  /* first page link */
+
+  /* last page link */
+
+}
+.bones_page_navi li {
+  float: left;
+  margin-left: 10px;
+}
+.bones_page_navi li a {
+  padding: 3px 6px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.bones_page_navi li a:hover,
+.bones_page_navi li a:focus {
+  color: #f01d4f;
+  text-decoration: underline;
+}
+.bones_page_navi li.bpn-current {
+  padding: 3px 6px;
+  border-bottom: 0px solid #f01d4f;
+  position: relative;
+}
+.bones_page_navi li.bpn-current a {
+  /* hovering on current page link */
+
+}
+.bones_page_navi li.bpn-prev-link,
+.bones_page_navi li.bpn-next-link {
+  font-weight: 700;
+}
+.bones_page_navi li.bpn-prev-link a,
+.bones_page_navi li.bpn-next-link a {
+  padding: 0;
+}
+.bones_page_navi li.bpn-prev-link a:hover,
+.bones_page_navi li.bpn-next-link a:hover,
+.bones_page_navi li.bpn-first-page-link a:hover,
+.bones_page_navi li.bpn-last-page-link a:hover {
+  background: none;
+}
+/* end .bones_page_navi */
+/* fallback previous & next links */
+.wp-prev-next .prev-link {
+  float: left;
+}
+.wp-prev-next .next-link {
+  float: right;
+}
+/* end .wp-prev-next */
+/******************************************************************
+10. COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+#comments {
+  /* number of comments span */
+
+}
+.commentlist {
+  /* general comment classes */
+
+  /* vcard */
+
+  /* end .commentlist .vcard */
+
+  /* comment meta */
+
+  /* comment content */
+
+  /* end .commentlist .comment_content */
+
+  /* comment reply link */
+
+  /* end .commentlist .comment-reply-link */
+
+}
+.commentlist li {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  list-style-type: background;
+  margin-bottom: 1.5em;
+  padding: 0.7335em 10px;
+  /* end .commentlist li ul.children */
+
+}
+.commentlist li:last-child {
+  margin-bottom: 0;
+}
+.commentlist li ul.children {
+  margin: 0;
+  list-style: square;
+  /* variations */
+
+  /* change number for different depth */
+
+}
+.commentlist li[class*=depth-] {
+  margin-top: 1.1em;
+}
+.commentlist li.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+.commentlist li:not(.depth-1) {
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.commentlist .odd {
+  background: #eee;
+}
+.commentlist .even {
+  background: #fefefe;
+}
+.commentlist .vcard {
+  margin-left: 50px;
+}
+.commentlist .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+.commentlist .vcard time {
+  float: right;
+}
+.commentlist .vcard time a {
+  color: #999;
+  text-decoration: none;
+}
+.commentlist .vcard time a:hover {
+  text-decoration: underline;
+}
+.commentlist .vcard img.avatar {
+  position: absolute;
+  left: 10px;
+  padding: 2px;
+  border: 1px solid #cecece;
+  background: #fff;
+}
+.commentlist .comment_content {
+  margin-left: 50px;
+}
+.commentlist .comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.commentlist .comment-reply-link {
+  text-decoration: none;
+  float: right;
+  background: #4598bb;
+  padding: 3px 5px;
+  color: #fff;
+  opacity: 0.65;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.commentlist .comment-reply-link:hover,
+.commentlist .comment-reply-link:focus {
+  opacity: 1;
+}
+/* end .commentlist */
+/******************************************************************
+11. COMMENT FORM STYLES
+******************************************************************/
+.respond-form {
+  margin: 1.5em 10px;
+  padding-bottom: 2.2em;
+}
+.respond-form form {
+  margin: 0.75em 0;
+}
+.respond-form form li {
+  list-style-type: square;
+  clear: both;
+  margin-bottom: 0.7335em;
+}
+.respond-form form li label,
+.respond-form form li small {
+  display: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url],
+.respond-form form textarea {
+  padding: 3px 6px;
+  background: #efefef;
+  border: 2px solid #cecece;
+  line-height: 1.5em;
+  /* form validation */
+
+}
+.respond-form form input[type=text]:focus,
+.respond-form form input[type=email]:focus,
+.respond-form form input[type=url]:focus,
+.respond-form form textarea:focus {
+  background: #fff;
+}
+.respond-form form input[type=text]:invalid,
+.respond-form form input[type=email]:invalid,
+.respond-form form input[type=url]:invalid,
+.respond-form form textarea:invalid {
+  outline: none;
+  border-color: #fbc2c4;
+  background-color: #f6e7eb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url] {
+  max-width: 400px;
+  min-width: 250px;
+}
+.respond-form form textarea {
+  resize: none;
+  width: 97.3%;
+  height: 150px;
+}
+/* comment submit button */
+/* comment form title */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+/* no comments */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+/*********************
+12. SIDEBARS & ASIDES
+*********************/
+.widget ul li {
+  /* deep nesting */
+
+}
+.widget ul li a {
+  text-decoration: none;
+  padding-left: 0px;
+}
+.widget ul li a:hover {
+  color: 000;
+}
+.widget ul li {
+  background: none;
+  padding-left: 25px;
+  margin-top: 0px;
+}
+/*********************
+13. FOOTER STYLES
+*********************/
+.footer {
+  clear: both;
+}
+/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+/* end .footer-links */
+/****************	Estilos Peronalizados	****************
+---------------------------------------------------------- */
+.prueba {
+  background: #ccc;
+}
+/*** Acordeon ***/
+#accordion {
+  /*background:@valores-verde;*/
+
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  /* accordion header */
+
+}
+#accordion > h2 {
+  line-height: 14px;
+  margin: 0;
+  padding: 5px 0px;
+  font-size: 10px;
+  font-weight: normal;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #ffffff;
+}
+#accordion > h2 span {
+  cursor: pointer;
+  color: #30aebc;
+  padding: 10px;
+  background: #ddfcff;
+  font-size: 2em;
+  display: block;
+  width: 100%;
+  height: auto;
+  line-height: 30px;
+}
+/* currently active header */
+h2.current {
+  cursor: default;
+}
+/* accordion pane */
+.pane {
+  display: none;
+  padding: 15px;
+  color: #989898;
+}
+/*	Span
+	------------------------------------------ */
+.telefono1 {
+  color: #33b0be;
+}
+.telefono2 {
+  color: #595959;
+}
+.alumnos-header {
+  color: #33b0be;
+  text-decoration: none;
+}
+.titulos-footer {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-weight: bold;
+}
+/*	Slider
+	------------------------------------------ */
+.slider-home {
+  display: none;
+}
+/*	Header
+	------------------------------------------ */
+.logo-header {
+  margin: 15px 0 0px 0;
+}
+.logo-header img {
+  max-width: 90%;
+  height: auto;
+  float: none;
+}
+#contenedor-derecho {
+  text-align: center;
+  line-height: 25px;
+}
+.logos-redes img {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.telefonos {
+  color: #33b0be;
+  float: right;
+  font-size: 1em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  margin-top: 5px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+#contenedor-menu {
+  background: #33b0be;
+}
+/*	Pagina Home
+	------------------------------------------ */
+.titulo-seccion-home {
+  font-size: 4.375em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 65px;
+}
+.cursos-full,
+.planteles-full,
+.trabajo-full {
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+  height: auto;
+  color: #30aebc;
+}
+/*	Seccion Metodo
+		------------------------------------------ */
+.metodo-full {
+  background: #0098aa;
+  height: auto;
+  overflow: hidden;
+  color: #ffffff;
+}
+.metodo-segmento {
+  margin-top: 10px;
+}
+.metodo-segmento img {
+  max-width: 50%;
+  height: auto;
+}
+#metodo1 {
+  margin-top: 30px;
+}
+.titulo-seccion-metodo {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 50px;
+}
+.descripcion-metodo {
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#boton-metodo {
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+.boton-metodo {
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 10px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  /*margin-bottom: 10px;
+						margin-top:5px;*/
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+.boton-metodo:hover,
+.boton-metodo:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+/*	Pagina Cursos
+		------------------------------------------ */
+.cursos-full {
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+  height: auto;
+}
+.curso-segmento {
+  margin-top: 10px;
+}
+#curso1 {
+  margin-top: 30px;
+}
+#curso2 {
+  margin-top: -31px;
+}
+.curso-segmento img {
+  max-width: 40%;
+  height: auto;
+}
+.titulo-seccion-cursos {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 50px;
+}
+.descripcion-curso {
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#boton-cursos {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.boton-cursos {
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 10px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  /*margin-bottom: 10px;
+						margin-top:5px;*/
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+.boton-cursos:hover,
+.boton-cursos:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+/*	Seccion Test
+		------------------------------------------ */
+.test-full {
+  background: #0098aa;
+  height: auto;
+  color: #ffffff;
+}
+.test-segmento {
+  margin-top: 10px;
+}
+.test-segmento img {
+  max-width: 40%;
+}
+.titulo-seccion-test {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 50px;
+}
+.descripcion-test {
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 80%;
+}
+#boton-test {
+  margin-bottom: 30px;
+}
+.boton-test {
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 10px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  /*margin-bottom: 10px;
+					margin-top:5px;*/
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+.boton-test:hover,
+.boton-test:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+/*	Planteles
+		------------------------------------------ */
+.planteles-full {
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+  height: auto;
+}
+.plantel-segmento {
+  margin-top: 10px;
+}
+.planteles-interior img {
+  max-width: 70%;
+  height: auto;
+}
+.titulo-seccion-planteles {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 50px;
+}
+.descripcion-planteles {
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 80%;
+}
+.planteles-form-home {
+  width: 80%;
+  margin-bottom: 35px;
+}
+#estado-form-home,
+#plantel-form-home,
+#country,
+#state {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 14px 12px;
+  color: #989898;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  float: left;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+#enviar-form-home {
+  width: 136px;
+  height: 47px;
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #30aebc url(../images/enviar.png) no-repeat;
+  background-position: center;
+  margin-top: 20px;
+}
+#enviar-form-home:hover {
+  background: #30aebc url(../images/enviar.png) no-repeat;
+  background-position: center;
+  border: none;
+}
+/*	Seccion Contacto
+		------------------------------------------ */
+.contacto-full {
+  background: #0098aa;
+  height: auto;
+  color: #ffffff;
+}
+.contacto-segmento {
+  margin-top: 10px;
+}
+.titulo-seccion-contacto {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 50px;
+}
+.formulario-contacto-home {
+  margin-left: 10px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+#nombre-completo-home,
+#correo-electronico-home,
+#telefono-home,
+#estado-contacto-home,
+#lada-home {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 14px 12px;
+  color: #989898;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 100%;
+  float: left;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+#nombre1Home {
+  position: relative;
+}
+#nombre1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Home {
+  position: relative;
+}
+#correo1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 407px;
+  top: 40px;
+  font-size: 12px;
+}
+#lada1Home {
+  position: relative;
+}
+#lada1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 110px;
+  font-size: 12px;
+}
+#telefono1Home {
+  position: relative;
+}
+#telefono1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 212px;
+  color: #fff;
+  position: absolute;
+  left: 164px;
+  top: 110px;
+  font-size: 12px;
+}
+#celular1Home {
+  position: relative;
+}
+#celular1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 200px;
+  color: #fff;
+  position: absolute;
+  left: 407px;
+  top: 110px;
+  font-size: 12px;
+}
+#estado1Home {
+  position: relative;
+}
+#estado1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 195px;
+  font-size: 12px;
+}
+#sucursal1Home {
+  position: relative;
+}
+#sucursal1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 407px;
+  top: 195px;
+  font-size: 12px;
+}
+#politicas1Home {
+  position: relative;
+}
+#politicas1Home label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 226px;
+  color: #fff;
+  position: absolute;
+  left: 280px;
+  top: 23px;
+  font-size: 12px;
+}
+#telefono-home {
+  width: 65%;
+  margin-left: 5%;
+  margin-top: 20px;
+}
+#lada-home {
+  width: 30%;
+  margin-top: 20px;
+}
+#estado-contacto-home {
+  margin-top: 20px;
+}
+#boton-enviar-contacto-home {
+  margin-top: 20px;
+  width: auto;
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 10px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  /*margin-bottom: 10px;
+						margin-top:5px;*/
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+#boton-enviar-contacto-home:hover,
+#boton-enviar-contacto-home:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+.formulario-contacto-home .wpcf7-validation-errors {
+  margin-top: 5px;
+}
+/*	Bolsa de Trabajo
+		------------------------------------------ */
+.bolsa-trabajo-full {
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+  height: auto;
+  color: #30aebc;
+}
+.titulo-seccion-bolsa-trabajo {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  padding-top: 50px;
+}
+.subtitulo-seccion-bolsa-trabajo {
+  font-size: 2em;
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  margin-bottom: 15px;
+}
+.plantel-segmento {
+  margin-top: 20px;
+}
+.bolsa-trabajo-interior img {
+  margin-bottom: 20px;
+  width: 50%;
+  height: auto;
+}
+.bolsa-trabajo-requisitos,
+.bolsa-trabajo-ofrecemos {
+  font-family: 'Conv_MyriadPro-Semibold';
+  text-align: center;
+  font-size: 1.48em;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+.bolsa-trabajo-ofrecemos {
+  margin-top: 0px;
+}
+.boton-trabajo {
+  margin-bottom: 30px;
+}
+.boton-bolsa {
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 10px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  /*margin-bottom: 10px;
+					margin-top:5px;*/
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+.boton-bolsa:hover,
+.boton-bolsa:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+/*	Paginas	Generales
+	------------------------------------------ */
+/*	Titulos	
+		------------------------------------------ */
+.curso-titulo,
+.page-title {
+  border-bottom: solid 1px #ececec;
+  color: #30aebc;
+  font-size: 1.875em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+/*	Paginas	Cursos
+	------------------------------------------ */
+/*	Menu
+		------------------------------------------ */
+.menu-cursos {
+  margin-top: -20px;
+}
+.menu-cursos a:link {
+  text-decoration: none;
+  color: #989898;
+}
+.menu-cursos a:visited {
+  color: #989898;
+}
+.menu-cursos a:hover {
+  color: #30aebc;
+}
+.menu-cursos a:active {
+  color: #30aebc;
+}
+.menu-cursos ul li {
+  list-style: none;
+  float: left;
+  padding: 0 30px 0 0;
+  background: none;
+}
+/*	Contenedor
+		------------------------------------------ */
+#contenedor-curso {
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+}
+.contenedor-curso-informacion {
+  font-family: 'Conv_MyriadPro-Semibold';
+}
+.titulo-del-curso {
+  padding-top: 0.5em;
+  font-size: 4em;
+  color: #30aebc;
+  text-align: center;
+}
+.subtitulo-del-curso {
+  font-size: 2.8em;
+  color: #30aebc;
+  text-align: center;
+}
+.descripcion-del-curso {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 1.25em;
+  color: #989898;
+  margin-top: 0.8em;
+  margin-left: 0.25em;
+  line-height: 1.99em;
+  width: 100%;
+  text-align: center;
+}
+.nota-del-curso {
+  font-size: 2.45em;
+  color: #30aebc;
+  margin-top: 0.5em;
+  margin-bottom: 0.45em;
+  margin-left: 0.15em;
+  text-align: center;
+}
+.contenedor-curso-formulario {
+  background: #30aebc;
+}
+.contenedor-curso-formulario {
+  background: #30aebc;
+}
+.titulo-formulario {
+  padding-top: 1em;
+  font-size: 1.35em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.formulario-registro-cursos {
+  width: 95%;
+}
+/* Formulario Pagina Cursos
+		------------------------------------------ */
+#formulario-cursos {
+  height: 600px;
+}
+#txtNombreCursos,
+#txtCorreoCursos,
+#txtLadaCursos,
+#txtTelefonoCursos,
+#cmbEstadosCursos,
+#txtCelularCursos,
+#cmbSucursalesCursos {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+  float: left;
+}
+#nombre1Cursos {
+  position: relative;
+}
+#nombre1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Cursos {
+  position: relative;
+}
+#correo1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 112px;
+  font-size: 12px;
+}
+#lada1Cursos {
+  position: relative;
+}
+#lada1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 300%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 185px;
+  font-size: 12px;
+}
+#telefono1Cursos {
+  position: relative;
+}
+#telefono1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+  position: absolute;
+  left: 30%;
+  top: 185px;
+  font-size: 12px;
+}
+#celular1Cursos {
+  position: relative;
+}
+#celular1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  font-size: 12px;
+}
+#estado1Cursos {
+  position: relative;
+}
+#estado1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 355px;
+  font-size: 12px;
+}
+#sucursal1Cursos {
+  position: relative;
+}
+#sucursal1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 433px;
+  font-size: 12px;
+}
+#politicas1Cursos {
+  position: relative;
+}
+#politicas1Cursos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 565px;
+  font-size: 12px;
+}
+#txtCorreoCursos {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtLadaCursos {
+  width: 25%;
+  margin-top: 30px;
+}
+#txtTelefonoCursos {
+  width: 70%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+#txtCelularCursos {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#cmbSucursalesCursos {
+  margin-left: 0%;
+}
+#btnEnviarCursos {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#cmbEstadosCursos,
+#cmbSucursalesCursos {
+  margin-top: 30px;
+}
+#politicas1Cursos {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasCursos {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Cursos {
+  width: 95%;
+  float: left;
+}
+#acepto1Cursos a {
+  text-decoration: none;
+  color: #fff;
+}
+/* Formulario Pagina Empresas
+		------------------------------------------ */
+#formulario-empresas {
+  height: 820px;
+}
+#txtNombreEmpresas,
+#txtCorreoEmpresas,
+#txtEmpresaEmpresas,
+#txtPuestoEmpresas,
+#txtLadaEmpresas,
+#txtTelefonoEmpresas,
+#cmbEstadosEmpresas,
+#txtCelularEmpresas,
+#cmbSucursalesEmpresas,
+#txtComentarioEmpresas {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+  float: left;
+}
+#nombre1Empresas {
+  position: relative;
+}
+#nombre1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Empresas {
+  position: relative;
+}
+#correo1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 110px;
+  font-size: 12px;
+}
+#empresa1Empresas {
+  position: relative;
+}
+#empresa1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 185px;
+  font-size: 12px;
+}
+#puesto1Empresas {
+  position: relative;
+}
+#puesto1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  font-size: 12px;
+}
+#lada1Empresas {
+  position: relative;
+}
+#lada1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 50%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 347px;
+  font-size: 12px;
+}
+#telefono1Empresas {
+  position: relative;
+}
+#telefono1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+  position: absolute;
+  left: 30%;
+  top: 347px;
+  font-size: 12px;
+}
+#celular1Empresas {
+  position: relative;
+}
+#celular1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 425px;
+  font-size: 12px;
+}
+#estado1Empresas {
+  position: relative;
+  width: 100%;
+}
+#estado1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 508px;
+  font-size: 12px;
+  z-index: 1000;
+}
+#sucursal1Empresas {
+  position: relative;
+}
+#sucursal1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 588px;
+  font-size: 12px;
+  z-index: 1000;
+}
+#comentario1Empresas {
+  position: relative;
+  width: 100%;
+}
+#comentario1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 680px;
+  font-size: 12px;
+}
+#politicas1Empresas {
+  position: relative;
+}
+#politicas1Empresas label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 810px;
+  font-size: 12px;
+}
+#txtCorreoEmpresas {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtEmpresaEmpresas {
+  margin-top: 30px;
+}
+#txtPuestoEmpresas {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtLadaEmpresas {
+  width: 25%;
+  margin-top: 30px;
+}
+#txtTelefonoEmpresas {
+  width: 70%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+#txtCelularEmpresas {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#cmbSucursaleEmpresas {
+  margin-left: 4%;
+}
+#txtComentarioEmpresas {
+  margin-top: 30px;
+  width: 100%;
+}
+#btnEnviarEmpresas {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#cmbEstadosEmpresas,
+#cmbSucursalesEmpresas {
+  margin-top: 30px;
+}
+#cmbSucursalesEmpresas {
+  margin-left: 0%;
+}
+#politicas1Empresas {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasEmpresas {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Empresas {
+  width: 95%;
+  float: left;
+}
+#acepto1Empresas a {
+  text-decoration: none;
+  color: #fff;
+}
+/* Formulario Pagina Franquicias
+		------------------------------------------ */
+#formulario-franquicias {
+  height: 777px;
+}
+#txtNombreFranquicias,
+#txtCorreoFranquicias,
+#txtMedioFranquicias,
+#txtLadaFranquicias,
+#txtTelefonoFranquicias,
+#cmbEstadosFranquicias,
+#txtCelularFranquicias,
+#cmbSucursalesFranquicias,
+#txtComentarioFranquicias,
+#txtNacionalidadFranquicias {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+  float: left;
+}
+#nombre1Franquicias {
+  position: relative;
+}
+#nombre1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Franquicias {
+  position: relative;
+}
+#correo1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 112px;
+  font-size: 12px;
+}
+#medio1Franquicias {
+  position: relative;
+}
+#medio1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 510px;
+  font-size: 12px;
+}
+#lada1Franquicias {
+  position: relative;
+}
+#lada1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 300%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 185px;
+  font-size: 12px;
+}
+#telefono1Franquicias {
+  position: relative;
+}
+#telefono1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+  position: absolute;
+  left: 30%;
+  top: 185px;
+  font-size: 12px;
+}
+#celular1Franquicias {
+  position: relative;
+}
+#celular1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  font-size: 12px;
+}
+#estado1Franquicias {
+  position: relative;
+  width: 100%;
+}
+#estado1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 355px;
+  font-size: 12px;
+}
+#sucursal1Franquicias {
+  position: relative;
+}
+#sucursal1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 433px;
+  font-size: 12px;
+}
+#comentario1Franquicias {
+  position: relative;
+  width: 100%;
+}
+#comentario1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 600px;
+  font-size: 12px;
+}
+#politicas1Franquicias {
+  position: relative;
+}
+#politicas1Franquicias label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 730px;
+  font-size: 12px;
+}
+#txtCorreoFranquicias {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtMedioFranquicias {
+  margin-top: 30px;
+  width: 100%;
+}
+#txtNacionalidadFranquicias {
+  margin-top: 30px;
+  width: 100%;
+}
+#txtLadaFranquicias {
+  width: 25%;
+  margin-top: 30px;
+}
+#txtTelefonoFranquicias {
+  width: 70%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+#txtCelularFranquicias {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#cmbSucursaleFranquicias {
+  margin-left: 4%;
+}
+#txtComentarioFranquicias {
+  margin-top: 30px;
+  width: 100%;
+}
+#btnEnviarFranquicias {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#cmbEstadosFranquicias,
+#cmbSucursalesFranquicias {
+  margin-top: 30px;
+}
+#cmbSucursalesFranquicias {
+  margin-left: 0%;
+}
+#politicas1Franquicias {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasFranquicias {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Franquicias {
+  width: 95%;
+  float: left;
+}
+#acepto1Franquicias a {
+  text-decoration: none;
+  color: #fff;
+}
+label.error {
+  z-index: 10000;
+}
+/* Formulario Pagina Alumnos
+		------------------------------------------ */
+#formulario-alumnos {
+  height: 600px;
+  padding-top: 20px;
+}
+#txtNombreAlumnos,
+#txtCorreoAlumnos,
+#txtLadaAlumnos,
+#txtTelefonoAlumnos,
+#cmbEstadosAlumnos,
+#txtCelularAlumnos,
+#cmbSucursalesAlumnos {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+  float: left;
+}
+#nombre1Alumnos {
+  position: relative;
+}
+#nombre1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Alumnos {
+  position: relative;
+}
+#correo1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 112px;
+  font-size: 12px;
+}
+#lada1Alumnos {
+  position: relative;
+}
+#lada1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 300%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 185px;
+  font-size: 12px;
+}
+#telefono1Alumnos {
+  position: relative;
+}
+#telefono1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+  position: absolute;
+  left: 30%;
+  top: 185px;
+  font-size: 12px;
+}
+#celular1Alumnos {
+  position: relative;
+}
+#celular1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  font-size: 12px;
+}
+#estado1Alumnos {
+  position: relative;
+}
+#estado1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 355px;
+  font-size: 12px;
+}
+#sucursal1Alumnos {
+  position: relative;
+}
+#sucursal1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 433px;
+  font-size: 12px;
+}
+#politicas1Alumnos {
+  position: relative;
+}
+#politicas1Alumnos label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 565px;
+  font-size: 12px;
+}
+#txtCorreoAlumnos {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtLadaAlumnos {
+  width: 25%;
+  margin-top: 30px;
+}
+#txtTelefonoAlumnos {
+  width: 70%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+#txtCelularAlumnos {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#cmbSucursaleAlumnos {
+  margin-left: 0%;
+}
+#btnEnviarAlumnos {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#cmbEstadosAlumnos,
+#cmbSucursalesAlumnos {
+  margin-top: 30px;
+}
+#cmbSucursalesAlumnos {
+  margin-left: 0%;
+}
+#politicas1Alumnos {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasAlumnos {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Alumnos {
+  width: 95%;
+  float: left;
+}
+#acepto1Alumnos a {
+  text-decoration: none;
+  color: #fff;
+}
+label.error {
+  z-index: 10000;
+}
+/* Formulario Pagina Test
+    ------------------------------------------ */
+#formulario-test {
+  height: auto;
+}
+#txtNombreTest,
+#txtCorreoTest,
+#txtLadaTest,
+#txtTelefonoTest,
+#estado,
+#txtCelularTest,
+#plantel {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+  float: left;
+}
+#nombre1Test {
+  position: relative;
+}
+#nombre1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Test {
+  position: relative;
+}
+#correo1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 112px;
+  font-size: 12px;
+}
+#lada1Test {
+  position: relative;
+}
+#lada1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 300%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 185px;
+  font-size: 12px;
+}
+#telefono1Test {
+  position: relative;
+}
+#telefono1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+  position: absolute;
+  left: 30%;
+  top: 185px;
+  font-size: 12px;
+}
+#celular1Test {
+  position: relative;
+}
+#celular1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  font-size: 12px;
+}
+#estado1Test {
+  position: relative;
+}
+#estado1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 355px;
+  font-size: 12px;
+}
+#sucursal1Test {
+  position: relative;
+}
+#sucursal1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 433px;
+  font-size: 12px;
+}
+#politicas1Test {
+  position: relative;
+}
+#politicas1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 565px;
+  font-size: 12px;
+}
+#txtCorreoTest {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtLadaTest {
+  width: 25%;
+  margin-top: 30px;
+}
+#txtTelefonoTest {
+  width: 70%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+#txtCelularTest {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#cmbSucursaleTest {
+  margin-left: 0%;
+}
+#sendtest {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#estado,
+#plantel {
+  margin-top: 30px;
+}
+#plantel {
+  margin-left: 0%;
+}
+#politicas1Test {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasTest {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Test {
+  width: 95%;
+  float: left;
+}
+#acepto1Test a {
+  text-decoration: none;
+  color: #30aebc;
+}
+label.error {
+  z-index: 10000;
+}
+
+/*	Slider
+		------------------------------------------ */
+.contenedor-slider-cursos {
+  float: left;
+}
+.slider-tipo-cursos {
+  margin-top: 10px;
+}
+.slider-curso-1,
+.slider-curso-2,
+.slider-curso-3,
+.slider-curso-4 {
+  padding: 0 14px;
+}
+.imagen-slider-curso img {
+  margin: 0 auto;
+}
+.titulo-slider-curso {
+  font-family: 'Conv_MyriadPro-Semibold';
+  font-size: .863em;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 0.3em;
+}
+.descripcion-slider-curso {
+  font-size: .863em;
+  line-height: 30px;
+  text-align: center;
+}
+#boton-slider-cursos {
+  width: auto;
+  font-size: 1.2em;
+  padding: 8px 20px;
+  margin-top: 0.7em;
+}
+/*	Paginas Contacto
+	------------------------------------------ */
+#contenedor-contacto {
+  /*margin-top: 2em;*/
+
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+}
+.contenedor-contacto-informacion {
+  font-family: 'Conv_MyriadPro-Semibold';
+}
+.titulo-contacto {
+  padding-top: 0.5em;
+  font-size: 3em;
+  color: #30aebc;
+  text-align: center;
+}
+.subtitulo-contacto {
+  font-size: 2.5em;
+  color: #30aebc;
+  text-align: center;
+}
+.resultado-test {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 5.5em;
+    color: #30aebc;
+    margin-top: -0.5em;
+/*    margin-left: 2em;*/
+    line-height: 1.99em;
+    width: 100%;
+    text-align: center;
+  }
+.subtitulo-resultado-test {
+    padding-top: 0.5em;
+    font-size: 1.875em;
+    color: #ed7213;
+    text-align: left;
+    margin-left: 4em;
+  }
+.descripcion-contacto {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 1.25em;
+  color: #989898;
+  margin-top: 0.8em;
+  margin-left: 0.25em;
+  line-height: 1.99em;
+  width: 100%;
+  text-align: center;
+}
+.descripcion-test-int {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 1.25em;
+  color: #989898;
+  margin-top: 0.8em;
+  margin-left: 0.25em;
+  line-height: 1.99em;
+  width: 66%;
+  text-align: left;
+}
+.nota-contacto {
+  font-size: 2.45em;
+  color: #30aebc;
+  margin-top: 0.5em;
+  margin-bottom: 0.45em;
+  margin-left: 0.15em;
+  text-align: center;
+}
+/*.imagen-test-inicio {
+    margin-bottom: -20px;
+    margin-top: -296px;
+    margin-left: 370px;
+}*/
+.contenedor-curso-formulario {
+  background: #30aebc;
+}
+.contenedor-curso-formulario {
+  background: #30aebc;
+}
+.titulo-formulario {
+  padding-top: 0.4em;
+  font-size: 1.35em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+.formulario-registro-cursos {
+  width: 80%;
+}
+.formulario-registro-cursos input,
+.formulario-registro-cursos select,
+#contacto-mensaje {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 12px 12px;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+}
+#curso-boton-enviar {
+  width: 100%;
+}
+#contacto-nombre-completo,
+#contacto-correo-electronico,
+#contacto-lada,
+#contacto-telefono,
+#contacto-mensaje,
+#contacto-boton-enviar {
+  margin-top: 10px;
+}
+#contacto-mensaje {
+  margin-top: 25px;
+  height: 120px;
+}
+#contacto-lada {
+  float: left;
+  width: 30%;
+}
+#contacto-telefono {
+  float: right;
+  width: 65%;
+}
+.sombra-slider-curso img {
+  width: 100%;
+  height: auto;
+}
+/*	Paginas	Planteles
+	------------------------------------------ */
+.encabezado-planteles,
+.nombre-plantel {
+  font-family: 'Conv_MyriadPro-Semibold';
+}
+.descripcion-planteles,
+.telefono-plantel {
+  margin-top: 10px;
+}
+.direccion-plantel {
+  margin-top: 10px;
+  font-size: 0.850em;
+}
+.planteles-mapa {
+  margin-top: 30px;
+}
+.formulario-estado {
+  margin-top: 20px;
+}
+#estado-form,
+#plantel-form {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 12px 12px;
+  color: #989898;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 40%;
+  float: left;
+}
+#plantel-form {
+  margin-left: 10px;
+}
+/*** Formulario Pagina Plantel ***/
+#formulariodiv {
+  max-width: 350px;
+  width: 350px;
+}
+.firstHeading {
+  text-align: center;
+  font-size: 20px;
+}
+#txtNombre,
+#txtCorreo,
+#txtLada,
+#txtTelefono,
+#cmbEstados,
+#txtCelular,
+#cmbSucursales {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 8px 8px;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 95%;
+  float: right;
+  margin-top: 15px;
+}
+#btnEnviar {
+  margin-top: 15px;
+  width: 95%;
+  padding: 10px;
+  float: right;
+}
+#politicas1 {
+  float: right;
+  width: 100%;
+  margin-top: 5px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+#chkPoliticas {
+  float: left;
+  margin-top: 4px;
+  margin-left: 80px;
+}
+#acepto1 {
+  margin-left: 100px;
+}
+/*	Paginas Contacto
+	------------------------------------------ */
+/*	.formulario-contacto-home{
+				margin-top: 40px;
+				width: 80%;
+			}
+
+			#nombre-completo-home, #correo-electronico-home,
+			#telefono-home, #estado-contacto-home, #lada-home{
+				font-family: @myriad-regular;
+				font-size: 1.1em;
+				background: #fff;
+				border: solid 4px #f1f1f1;
+				padding: 12px 12px;
+				color:@texto-gris;
+				.border-radius(10px);
+				width: 100%;
+				float: left;
+				margin-left: 0px;
+				margin-top: 20px;
+			}
+
+			#telefono-home{
+				width: 55%;
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			#lada-home{
+				width: 39%;
+				margin-top: 30px;
+			}
+
+			#formulario-contacto-home{
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			#estado-contacto-home{
+				margin-top: 30px;
+			}
+
+			#boton-enviar-contacto-home{
+				margin-top: 30px;
+			}
+
+
+	/* Seccion Alumnos
+	------------------------------------------ */
+/* Menu Inicio Alumnos */
+.menu-alumnos {
+  width: 100%;
+  float: left;
+  margin: 0px 0 0 10px;
+}
+.inicio-alumnos,
+.calificaciones-alumnos,
+.magazine-alumnos {
+  float: left;
+  height: 28px;
+}
+.inicio-alumnos {
+  background: #0398a9 url(../images/arrow-azul.png) no-repeat right;
+  color: #fff;
+  padding: 7px 42px 0 30px;
+}
+.calificaciones-alumnos,
+.magazine-alumnos {
+  background: #e3e3e3 url(../images/arrow-gray.png) no-repeat right;
+  color: #747373;
+  padding: 7px 42px 0 30px;
+  cursor: pointer;
+}
+.calificaciones-alumnos,
+.magazine-alumnos {
+  background: #e3e3e3 url(../images/arrow-gray2.png) no-repeat right;
+}
+.calificaciones-alumnos:hover{
+  color: #656565;
+}
+.datos-escuela-alumno {
+  float: left;
+  margin: 25px 0 0 10px;
+  width: 100%;
+}
+.foto-alumno {
+  float: left;
+  background: url(../images/alumno.jpg) no-repeat;
+  width: 155px;
+  height: 155px;
+}
+.informacion-alumno {
+  float: left;
+  margin-right: 30px;
+}
+.datos-alumno {
+  float: left;
+  margin-left: 30px;
+}
+.nombre-alumno,
+.matricula-alumno {
+  font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+}
+.ciudad-alumno,
+.curso-alumno,
+.hora-alumno,
+.nivel-alumno {
+  font-size: 16px;
+  line-height: 20px;
+}
+.datos-personales-titulo {
+  float: left;
+  width: 100%;
+  margin: 20px 0 0 10px;
+  font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+.informacion-del-alumno {
+  width: 100%;
+  float: left;
+}
+.datos-personales-alumno {
+  float: left;
+  margin: 20px 0 0 10px;
+}
+.correo-alumno,
+.sexo-alumno,
+.edad-alumno,
+.nacimiento-alumno,
+.telefono1-alumno,
+.telefono2-alumno,
+.calle-numero-alumno,
+.colonia-alumno,
+.poblacion-alumno,
+.cp-alumno {
+  font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+.campos-datos-personales-alumno {
+  float: left;
+  margin: 20px 0 0 10px;
+}
+.campo-correo-alumno,
+.campo-sexo-alumno,
+.campo-edad-alumno,
+.campo-nacimiento-alumno,
+.campo-telefono1-alumno,
+.campo-telefono2-alumno,
+.campo-calle-numero-alumno,
+.campo-colonia-alumno,
+.campo-poblacion-alumno,
+.campo-cp-alumno {
+  font-family: 'Conv_MyriadPro-Regular_0', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+.informacion-importante {
+  float: left;
+  width: 95%;
+  border-bottom: solid 1px #ccc;
+  margin-top: 35px;
+  font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+.informacion1,
+.informacion2 {
+  float: left;
+  width: 45%;
+  margin-top: 20px;
+}
+.imagen-informacion1 {
+  width: 100%;
+  height: 105px;
+  background: url(../images/info1.jpg) no-repeat;
+  float: left;
+}
+.imagen-informacion2 {
+  width: 100%;
+  height: 105px;
+  background: url(../images/info2.jpg) no-repeat;
+  float: left;
+}
+.titulo-informacion1,
+.titulo-informacion2 {
+  float: left;
+  width: 95%;
+  font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  margin: 7px 0 7px 0;
+}
+.contenido-informacion1,
+.contenido-informacion2 {
+  width: 75%;
+}
+
+/*Sección calificaciones alumnos 
+-------------------------------------------- */
+.menu-calificaciones {
+  width: 100%;
+  float: left;
+  margin: 0px 0 0 10px;
+}
+.inicio-calif,
+.calificaciones-calif{
+  float: left;
+  height: 28px;
+}
+.calificaciones-calif {
+  background: #0398a9 url(../images/arrow-azul2.png) no-repeat right;
+  color: #fff;
+  padding: 7px 42px 0 30px;
+}
+.inicio-calif {
+  background: #e3e3e3 url(../images/arrow-gray3.png) no-repeat right;
+  color: #747373;
+  padding: 7px 42px 0 30px;
+  cursor: pointer;
+}
+.inicio-calif:hover{
+  color: #656565;
+}
+.calificaciones-tabla {
+  width: 100%;
+  float: left;
+  margin: 25px 0 0 10px;
+}
+.datos-escuela-alumno {
+  float: left;
+  margin: 25px 0 0 10px;
+  width: 100%;
+}
+.bg-labels {
+  background-color: #30aebc;
+  color:#FFF;
+}
+.top-labels {
+  font-size: 16px;
+  color: #30aebc;
+/*  border: 1px solid #30aebc;*/
+  text-align: center;
+  position: relative;
+}
+.tabla-calif {
+  border: 3px solid #30aebc;
+  border-collapse: none !important;
+}
+
+
+/*	Paginas Bolsa de Trabajo
+	------------------------------------------ */
+#bolsa-trabajo-apellidos,
+#bolsa-trabajo-nombre,
+#bolsa-trabajo-email,
+#bolsa-trabajo-telefono,
+#bolsa-trabajo-nacionalidad,
+#bolsa-trabajo-fuente,
+#bolsa-trabajo-comentarios {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 12px 12px;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 45%;
+  float: left;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+#bolsa-trabajo-fuente,
+#bolsa-trabajo-nacionalidad {
+  height: 42px;
+}
+#bolsa-trabajo-enviar {
+  font-family: 'Conv_MyriadPro-Regular';
+  border-radius: 0px;
+  font-weight: normal;
+  margin-top: 15px;
+  padding: 3px 6px;
+}
+#bolsa-trabajo-comentarios {
+  width: 93%;
+  height: 110px;
+}
+#contacto-nombre-completo,
+#contacto-correo-electronico,
+#contacto-lada,
+#contacto-telefono,
+#contacto-mensaje,
+#contacto-boton-enviar {
+  margin-top: 10px;
+}
+#contacto-mensaje {
+  margin-top: 25px;
+  height: 120px;
+}
+#contacto-lada {
+  float: left;
+  width: 30%;
+}
+#contacto-telefono {
+  float: right;
+  width: 65%;
+}
+.sombra-slider-curso img {
+  width: 100%;
+  height: auto;
+}
+/*	Footer
+	------------------------------------------ */
+.footer1 {
+  background: #666666;
+  color: #fff;
+  font-family: 'Conv_MyriadPro-Regular';
+  text-align: center;
+}
+.menu-footer {
+  margin: 15px 0 15px 0;
+}
+.footer2 {
+  background: #504f4f;
+  color: #fff;
+  font-family: 'Conv_MyriadPro-Regular';
+  text-align: center;
+}
+.footer-social {
+  float: left;
+}
+.copyright {
+  font-size: 14px;
+  float: left;
+  text-align: center;
+}
+.copyright a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+.privacidad {
+  font-size: 14px;
+  float: right;
+  text-align: center;
+}
+.google-footer,
+.twitter-footer,
+.facebook-footer {
+  float: left;
+  margin-left: 10px;
+}
+#footer-interior1 a:visited,
+#footer-interior1 a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+#footer-interior2 p {
+  width: 100%;
+  float: left;
+}
+.footer-centrado-social {
+  background: #ccc;
+}
+/*** Botones Home ****/
+.buton-home {
+  float: none;
+}
+.buton-test {
+  float: none;
+}
+/*** Hojas FAQ ***/
+.titulo-faq {
+  padding-top: 0.5em;
+  font-size: 3em;
+  color: #30aebc;
+}
+.menu-faq {
+  margin-top: -20px;
+  border-bottom: solid 1px #e7e7e7;
+}
+.menu-faq a:link {
+  text-decoration: none;
+  color: #989898;
+}
+.menu-faq a:visited {
+  color: #989898;
+}
+.menu-faq a:hover {
+  color: #30aebc;
+}
+.menu-faq a:active {
+  color: #30aebc;
+}
+.menu-faq ul li {
+  list-style: none;
+  float: left;
+  padding: 0 30px 0 0;
+  background: none;
+}
+/*** Formulario Pagina Home ***/
+#txtNombreHome,
+#txtCorreoHome,
+#txtLadaHome,
+#txtTelefonoHome,
+#cmbEstadosHome,
+#txtCelularHome,
+#cmbSucursalesHome {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 14px 12px;
+  color: #989898;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 48%;
+  float: left;
+}
+#txtCorreoHome {
+  margin-left: 4%;
+}
+#txtLadaHome {
+  width: 17%;
+  margin-top: 30px;
+}
+#txtTelefonoHome {
+  width: 27%;
+  margin-left: 4%;
+  margin-top: 30px;
+}
+#txtCelularHome {
+  margin-left: 4%;
+  margin-top: 30px;
+}
+#cmbSucursalesHome {
+  margin-left: 4%;
+}
+#btnEnviarHome {
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 20px 35px;
+  margin-top: 25px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.875em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  /*margin-bottom: 10px;
+		margin-top:5px;*/
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
+#btnEnviarHome:hover,
+#btnEnviarHome:focus {
+  color: #ffffff;
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  background-color: #ea6817;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+  background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+  background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+  background-image: -o-linear-gradient(top, #e26315, #ea6817);
+  background-image: linear-gradient(to bottom, #e26315, #ea6817);
+}
+#cmbEstadosHome,
+#cmbSucursalesHome {
+  margin-top: 30px;
+}
+#chkPoliticasHome {
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  margin-left: 35%;
+  margin-right: 10px;
+}
+#acepto1Home {
+  float: left;
+}
+#acepto1Home a {
+  text-decoration: none;
+  color: #fff;
+}
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to 
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection. 
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.less styles.
+  
+  ******************************************************************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /* .menu is clearfixed inside mixins.scss */
+  .menu {
+    /* end .menu ul */
+  
+  }
+  .menu ul {
+    /* end .menu ul li */
+  
+    /* highlight current page */
+  
+    /* end current highlighters */
+  
+  }
+  .menu ul li {
+    /*
+  				plan your menus and drop-downs wisely.
+  				*/
+  
+  }
+  .menu ul li a {
+    /*
+  					you can use hover styles here even though this size
+  					has the possibility of being a mobile device.
+  					*/
+  
+  }
+  /* end .menu */
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  
+  }
+  .entry-content .alignleft,
+  .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  .entry-content .alignright,
+  .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .entry-content .aligncenter,
+  .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+  /* end .entry-content */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  check your menus here. do they look good?
+  do they need tweaking?
+  */
+  /* end .footer-links */
+  /****************	Estilos Peronalizados	****************
+  ---------------------------------------------------------- */
+  /*	Slider
+  	------------------------------------------ */
+  .slider-home {
+    display: block;
+  }
+  /*	Header
+  	------------------------------------------ */
+  .logo-header {
+    margin: 15px 0 0px 0;
+  }
+  .logo-header img {
+    max-width: 80%;
+    height: auto;
+    float: none;
+  }
+  #contenedor-derecho {
+    text-align: center;
+    line-height: 25px;
+  }
+  .logos-redes img {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .telefonos {
+    color: #33b0be;
+    float: right;
+    font-size: 1.125em;
+    font-family: 'Conv_MyriadPro-Semibold';
+    margin-top: 2px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  #contenedor-menu {
+    background: #33b0be;
+  }
+  /*	Pagina Home
+  	------------------------------------------ */
+  /*	Seccion Metodo
+  		------------------------------------------ */
+  .metodo-segmento {
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+  }
+  .metodo-segmento img {
+    max-width: 100%;
+  }
+  #metodo1 {
+    margin-top: 50px;
+  }
+  #metodo2 {
+    margin-top: 80px;
+  }
+  .titulo-seccion-metodo {
+    font-size: 3.375em;
+  }
+  .descripcion-metodo {
+    font-size: 1.5em;
+    width: 50%;
+  }
+  .boton-metodo {
+    padding: 20px 35px;
+    font-size: 1.875em;
+  }
+  /*	Seccion Cursos
+  		------------------------------------------ */
+  .curso-segmento {
+    float: left;
+    width: 50%;
+  }
+  #curso2 {
+    margin-top: 31px;
+  }
+  .curso-segmento img {
+    max-width: 80%;
+    height: auto;
+  }
+  .titulo-seccion-cursos {
+    font-size: 3.375em;
+  }
+  .descripcion-curso {
+    font-size: 1.8em;
+  }
+  .boton-cursos {
+    padding: 20px 35px;
+    font-size: 1.875em;
+  }
+  /*	Seccion Test
+  		------------------------------------------ */
+  .test-segmento {
+    margin-top: 50px;
+  }
+  .test-segmento img {
+    max-width: 30%;
+  }
+  .titulo-seccion-test {
+    font-size: 3.375em;
+  }
+  .descripcion-test {
+    font-size: 2.2em;
+  }
+  .boton-test {
+    padding: 20px 35px;
+    font-size: 1.875em;
+  }
+  /*	Planteles
+  		------------------------------------------ */.plantel-segmento {
+    margin-top: 20px;
+  }
+  .titulo-seccion-planteles {
+    font-size: 3.375em;
+  }
+  .descripcion-planteles {
+    font-size: 2.2em;
+  }
+  .planteles-form-home {
+    width: 80%;
+    margin-bottom: 35px;
+  }
+  /*	Seccion Contacto
+  		------------------------------------------ */.contacto-segmento {
+    margin-top: 20px;
+  }
+  .titulo-seccion-contacto {
+    font-size: 3.375em;
+  }
+  #nombre-completo-home,
+  #correo-electronico-home,
+  #telefono-home,
+  #estado-contacto-home,
+  #lada-home {
+    padding: 18px 12px;
+  }
+  #formulario-contacto-home {
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  #boton-enviar-contacto-home {
+    padding: 20px 30px;
+  }
+  /*	Bolsa de Trabajo
+  		------------------------------------------ */
+  .titulo-seccion-bolsa-trabajo {
+    font-size: 3.375em;
+    font-family: 'Conv_MyriadPro-Semibold';
+    text-align: center;
+    padding-top: 50px;
+  }
+  .subtitulo-seccion-bolsa-trabajo {
+    font-size: 2em;
+    font-family: 'Conv_MyriadPro-Semibold';
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .plantel-segmento {
+    margin-top: 20px;
+  }
+  .bolsa-trabajo-interior img {
+    margin-bottom: 20px;
+    width: 40%;
+    height: auto;
+  }
+  .bolsa-trabajo-requisitos,
+  .bolsa-trabajo-ofrecemos {
+    font-family: 'Conv_MyriadPro-Semibold';
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+  .bolsa-trabajo-ofrecemos {
+    margin-top: 0px;
+  }
+  .boton-trabajo {
+    margin-bottom: 30px;
+  }
+  .boton-bolsa {
+    font-family: 'Conv_MyriadPro-Bold';
+    border: 1px solid #bc5311;
+    border-top-color: #d85f14;
+    border-left-color: #d85f14;
+    padding: 10px 10px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+    cursor: pointer;
+    /*margin-bottom: 10px;
+  					margin-top:5px;*/
+  
+    line-height: 25px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #e26315;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+    background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+    background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+    background-image: -o-linear-gradient(top, #eb7125, #e26315);
+    background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  }
+  .boton-bolsa:hover,
+  .boton-bolsa:focus {
+    color: #ffffff;
+    border: 1px solid #bc5311;
+    border-top-color: #d85f14;
+    border-left-color: #d85f14;
+    background-color: #ea6817;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+    background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+    background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+    background-image: -o-linear-gradient(top, #e26315, #ea6817);
+    background-image: linear-gradient(to bottom, #e26315, #ea6817);
+  }
+  /*	Footer
+  	------------------------------------------ */
+  .footer1 {
+    background: #666666;
+    color: #fff;
+    font-family: 'Conv_MyriadPro-Regular';
+    text-align: center;
+  }
+  .menu-footer {
+    margin: 15px 0 15px 0;
+  }
+  .footer2 {
+    background: #504f4f;
+    color: #fff;
+    font-family: 'Conv_MyriadPro-Regular';
+    text-align: center;
+  }
+  .footer-social {
+    float: left;
+  }
+  .copyright {
+    font-size: 14px;
+    float: left;
+    text-align: center;
+  }
+  .copyright a:visited {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .privacidad {
+    font-size: 14px;
+    float: right;
+    text-align: center;
+  }
+  .google-footer,
+  .twitter-footer,
+  .facebook-footer {
+    float: left;
+    margin-left: 10px;
+  }
+  /*	Paginas Contacto
+  	------------------------------------------ */
+  /*	.formulario-contacto-home{
+  				margin-top: 40px;
+  			}
+  
+  			#nombre-completo-home, #correo-electronico-home,
+  			#telefono-home, #estado-contacto-home, #lada-home{
+  				font-family: @myriad-regular;
+  				font-size: 1.1em;
+  				background: #fff;
+  				border: solid 4px #f1f1f1;
+  				padding: 12px 12px;
+  				color:@texto-gris;
+  				.border-radius(10px);
+  				width: 100%;
+  				float: left;
+  				margin-left: 0px;
+  				margin-top: 20px;
+  			}
+  
+  			#telefono-home{
+  				width: 68%;
+  				margin-left: 10px;
+  				margin-top: 30px;
+  			}
+  
+  			#lada-home{
+  				width: 28%;
+  				margin-top: 30px;
+  			}
+  
+  			#formulario-contacto-home{
+  				margin-left: 10px;
+  				margin-top: 30px;
+  			}
+  
+  			#estado-contacto-home{
+  				margin-top: 30px;
+  			}
+  
+  			#boton-enviar-contacto-home{
+  				margin-top: 30px;
+  			}
+  
+  
+  /*** Botones Home ****/
+  .buton-home {
+    float: none;
+  }
+  /*	Paginas	Planteles
+  	------------------------------------------ */
+  .encabezado-planteles,
+  .nombre-plantel {
+    font-family: 'Conv_MyriadPro-Semibold';
+  }
+  .nombre-plantel {
+    margin-top: 0px;
+  }
+  /* Formulario Pagina Franquicias
+  		------------------------------------------ */
+  #formulario-franquicias {
+    height: 520px;
+  }
+  #txtNombreFranquicias,
+  #txtCorreoFranquicias,
+  #txtMedioFranquicias,
+  #txtLadaFranquicias,
+  #txtTelefonoFranquicias,
+  #cmbEstadosFranquicias,
+  #txtCelularFranquicias,
+  #cmbSucursalesFranquicias,
+  #txtComentarioFranquicias {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+    float: left;
+  }
+  #nombre1Franquicias {
+    position: relative;
+  }
+  #nombre1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #correo1Franquicias {
+    position: relative;
+  }
+  #correo1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 40px;
+    font-size: 12px;
+  }
+  #nacionalidad1Franquicias {
+    position: relative;
+  }
+  #nacionalidad1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 198px;
+    font-size: 12px;
+  }
+  #medio1Franquicias {
+    position: relative;
+  }
+  #medio1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 275px;
+    font-size: 12px;
+  }
+  #lada1Franquicias {
+    position: relative;
+  }
+  #lada1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 63px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #telefono1Franquicias {
+    position: relative;
+  }
+  #telefono1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 78px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #celular1Franquicias {
+    position: relative;
+  }
+  #celular1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 110px;
+    font-size: 12px;
+  }
+  #estado1Franquicias {
+    position: relative;
+    width: 100%;
+  }
+  #estado1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #sucursal1Franquicias {
+    position: relative;
+  }
+  #sucursal1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 195px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #comentario1Franquicias {
+    position: relative;
+    width: 100%;
+  }
+  #comentario1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 365px;
+    font-size: 12px;
+  }
+  #politicas1Franquicias {
+    position: relative;
+  }
+  #politicas1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 201px;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 490px;
+    font-size: 12px;
+  }
+  #txtCorreoFranquicias {
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+  #txtMedioFranquicias {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #txtNacionalidadFranquicias {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #txtLadaFranquicias {
+    width: 17%;
+    margin-top: 30px;
+  }
+  #txtTelefonoFranquicias {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtCelularFranquicias {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #cmbSucursaleFranquicias {
+    margin-left: 4%;
+  }
+  #txtComentarioFranquicias {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #btnEnviarFranquicias {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
+  }
+  #cmbEstadosFranquicias,
+  #cmbSucursalesFranquicias {
+    margin-top: 30px;
+  }
+  #cmbSucursalesFranquicias {
+    margin-left: 4%;
+  }
+  #politicas1Franquicias {
+    width: 80%;
+    margin-left: 20%;
+  }
+  #chkPoliticasFranquicias {
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+  #acepto1Franquicias {
+    width: 95%;
+    float: left;
+  }
+  #acepto1Franquicias a {
+    text-decoration: none;
+    color: #fff;
+  }
+  label.error {
+    z-index: 10000;
+  }
+  /* Formulario Pagina Empresas
+  		------------------------------------------ */
+  #formulario-empresas {
+    height: 521px;
+  }
+  #txtNombreEmpresas,
+  #txtCorreoEmpresas,
+  #txtEmpresaEmpresas,
+  #txtPuestoEmpresas,
+  #txtLadaEmpresas,
+  #txtTelefonoEmpresas,
+  #cmbEstadosEmpresas,
+  #txtCelularEmpresas,
+  #cmbSucursalesEmpresas,
+  #txtComentarioEmpresas {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+    float: left;
+  }
+  #nombre1Empresas {
+    position: relative;
+  }
+  #nombre1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #correo1Empresas {
+    position: relative;
+  }
+  #correo1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 40px;
+    font-size: 12px;
+  }
+  #empresa1Empresas {
+    position: relative;
+  }
+  #empresa1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #puesto1Empresas {
+    position: relative;
+  }
+  #puesto1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 110px;
+    font-size: 12px;
+  }
+  #lada1Empresas {
+    position: relative;
+  }
+  #lada1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 63px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    font-size: 12px;
+  }
+  #telefono1Empresas {
+    position: relative;
+  }
+  #telefono1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 21%;
+    top: 195px;
+    font-size: 12px;
+  }
+  #celular1Empresas {
+    position: relative;
+  }
+  #celular1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 195px;
+    font-size: 12px;
+  }
+  #estado1Empresas {
+    position: relative;
+    width: 100%;
+  }
+  #estado1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 275px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #sucursal1Empresas {
+    position: relative;
+  }
+  #sucursal1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 275px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #comentario1Empresas {
+    position: relative;
+    width: 100%;
+  }
+  #comentario1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 365px;
+    font-size: 12px;
+  }
+  #politicas1Empresas {
+    position: relative;
+  }
+  #politicas1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 201px;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 490px;
+    font-size: 12px;
+  }
+  #txtCorreoEmpresas {
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+  #txtEmpresaEmpresas {
+    margin-top: 30px;
+  }
+  #txtPuestoEmpresas {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtLadaEmpresas {
+    width: 17%;
+    margin-top: 30px;
+  }
+  #txtTelefonoEmpresas {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtCelularEmpresas {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #cmbSucursaleEmpresas {
+    margin-left: 4%;
+  }
+  #txtComentarioEmpresas {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #btnEnviarEmpresas {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
+  }
+  #cmbEstadosEmpresas,
+  #cmbSucursalesEmpresas {
+    margin-top: 30px;
+  }
+  #cmbSucursalesEmpresas {
+    margin-left: 4%;
+  }
+  #politicas1Empresas {
+    width: 80%;
+    margin-left: 30%;
+  }
+  #chkPoliticasEmpresas {
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+  #acepto1Empresas {
+    width: 95%;
+    float: left;
+  }
+  #acepto1Empresas a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Grid Stylesheet
+  
+  I've seperated the grid so you can swap it out easily. It's
+  called at the top the style.less stylesheet.
+  
+  There are a ton of grid solutions out there. You should definitely
+  experiment with your own. Here are some recommendations:
+  
+  http://gridsetapp.com - Love this site. Responsive Grids made easy.
+  http://gridpak.com/ - Create your own responsive grid.
+  
+  The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+  I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+  together, let's see how this works out. If you want to use 1140, the original 
+  values are commented out on each line.
+  
+  ******************************************************************/
+  .onecol {
+    width: 5.801104972%;
+  }
+  /* 4.85%;  } /* grid_1  */
+  .twocol {
+    width: 14.364640883%;
+  }
+  /* 13.45%; } /* grid_2  */
+  .threecol {
+    width: 22.928176794%;
+  }
+  /* 22.05%; } /* grid_3  */
+  .fourcol {
+    width: 31.491712705%;
+  }
+  /* 30.75%; } /* grid_4  */
+  .fivecol {
+    width: 40.055248616%;
+  }
+  /* 39.45%; } /* grid_5  */
+  .sixcol {
+    width: 48.618784527%;
+  }
+  /* 48%;    } /* grid_6  */
+  .sevencol {
+    width: 57.182320438000005%;
+  }
+  /* 56.75%; } /* grid_7  */
+  .eightcol {
+    width: 65.74585634900001%;
+  }
+  /* 65.4%;  } /* grid_8  */
+  .ninecol {
+    width: 74.30939226%;
+  }
+  /* 74.05%; } /* grid_9  */
+  .tencol {
+    width: 82.87292817100001%;
+  }
+  /* 82.7%;  } /* grid_10 */
+  .elevencol {
+    width: 91.436464082%;
+  }
+  /* 91.35%; } /* grid_11 */
+  .twelvecol {
+    width: 99.999999993%;
+  }
+  /* 100%;   } /* grid_12 */
+  .fullcol {
+    width: 100%;
+  }
+  /* 100%;   } /* grid_13 */
+  .cursocol {
+    width: 25%;
+  }
+  /* 25%;    } /* grid_14 */
+  .cincocol {
+    width: 20%;
+  }
+  .formthreecol {
+    width: 22.928176794%;
+  }
+  /* 22.05%; } /* grid_3  */
+  .onecol,
+  .twocol,
+  .threecol,
+  .fourcol,
+  .fivecol,
+  .sixcol,
+  .sevencol,
+  .eightcol,
+  .ninecol,
+  .tencol,
+  .elevencol,
+  .twelvecol {
+    position: relative;
+    float: left;
+    /* margin-left: 2.762430939%;*/
+  
+  }
+  .formthreecol,
+  .threecol {
+    position: relative;
+    float: left;
+    margin-left: 2.762430939%;
+  }
+  .cincocol,
+  .fullcol,
+  .cursocol {
+    position: relative;
+    float: left;
+  }
+  .first {
+    margin-left: 100;
+  }
+  .last {
+    float: right;
+  }
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  .wrap {
+    max-width: 1020px;
+  }
+  /*********************
+  HEADER STYLES
+  *********************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  .nav {
+    background: #eee;
+    border: 0;
+    /* end .menu ul li */
+  
+    /* highlight current page */
+  
+    /* end current highlighters */
+  
+  }
+  .nav li {
+    float: left;
+    position: relative;
+    /*
+  		plan your menus and drop-downs wisely.
+  		*/
+  
+    /* showing sub-menus */
+  
+  }
+  .nav li a {
+    border-bottom: 0;
+    /*
+  			you can use hover styles here even though this size
+  			has the possibility of being a mobile device.
+  			*/
+  
+  }
+  .nav li a:hover,
+  .nav li a:focus {
+    background-color: #dedede;
+  }
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    display: none;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  
+  }
+  .nav li ul.sub-menu li,
+  .nav li ul.children li {
+    /*
+  				if you need to go deeper, go nuts
+  				just remember deeper menus suck
+  				for usability. k, bai.
+  				*/
+  
+  }
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+  }
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  .nav li:hover ul {
+    top: auto;
+    display: block;
+  }
+  /* end .nav */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  .sidebar {
+    margin-top: 0.5em;
+    border-left: solid 1px #ececec;
+  }
+  .widgettitle {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-weight: normal;
+    border-bottom: solid 1px #ececec;
+    color: #30aebc;
+    margin-bottom: 0.75em;
+    padding-bottom: 8px;
+  }
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  
+  }
+  .widget ul li a {
+    color: #989898;
+  }
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  .footer-links ul li {
+    /*
+  			be careful with the depth of your menus.
+  			it's very rare to have multi-depth menus in
+  			the footer.
+  			*/
+  
+  }
+  /* end .footer-links */
+  /****************	Estilos Peronalizados	****************
+  ---------------------------------------------------------- */
+  /*	Slider
+  	------------------------------------------ */
+  .slider-home {
+    display: block;
+  }
+  /*	Header
+  	------------------------------------------ */
+  .logo-header {
+    margin: 15px 0 20px 0;
+  }
+  .logo-header img {
+    width: 298px;
+    height: 112px;
+    float: left;
+  }
+  #contenedor-derecho {
+    text-align: right;
+    line-height: 25px;
+  }
+  .logos-redes img {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .telefonos {
+    color: #33b0be;
+    float: right;
+    font-size: 1.125em;
+    font-family: 'Conv_MyriadPro-Semibold';
+    margin-top: 2px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  #contenedor-menu {
+    background: #33b0be;
+  }
+  /*	Pagina Home
+  	------------------------------------------ *//*	Seccion Metodo
+  		------------------------------------------ */
+  .metodo-segmento {
+    margin-top: 80px;
+    float: block;
+  }
+  .metodo-segmento img {
+    max-width: 100%;
+    height: auto;
+  }
+  #metodo1,
+  #metodo2 {
+    margin-top: 80px;
+  }
+  .titulo-seccion-metodo {
+    font-size: 4.375em;
+    padding-top: 90px;
+  }
+  .descripcion-metodo {
+    font-size: 1.8em;
+  }
+  #boton-metodo {
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+  /*	Seccion Cursos
+  		------------------------------------------ */.curso-segmento {
+    margin-top: 30px;
+    float: block;
+  }
+  .titulo-seccion-cursos {
+    font-size: 4.375em;
+    padding-top: 90px;
+  }
+  /*	Seccion Test
+  		------------------------------------------ */.test-segmento {
+    margin-top: 60px;
+  }
+  .titulo-seccion-test {
+    font-size: 4.375em;
+    padding-top: 90px;
+  }
+  .descripcion-test {
+    font-size: 2.5em;
+    margin-top: 50px;
+  }
+  /*	Planteles
+  		------------------------------------------ */.plantel-segmento {
+    margin-top: 60px;
+  }
+  .nombre-plantel {
+    margin-top: 25px;
+  }
+  .planteles-interior img {
+    max-width: 450px;
+  }
+  .titulo-seccion-planteles {
+    font-size: 4.375em;
+    padding-top: 90px;
+  }
+  .descripcion-planteles {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .descripcion-planteles-interior {
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  #estado-form-home,
+  #plantel-form-home,
+  #country,
+  #state {
+    font-size: 1.1em;
+    padding: 18px 12px;
+    width: 40%;
+    margin-top: 0px;
+  }
+  .planteles-form-home #country,
+  .planteles-form-home #state {
+    width: 46%;
+    margin-left: 4%;
+  }
+  .formulario-planteles #state {
+    margin-left: 20px;
+  }
+  #enviar-form-home {
+    width: 64px;
+    height: 64px;
+    background: #30aebc url(../images/send.png) center no-repeat;
+    margin-top: 0px;
+  }
+  #enviar-form-home:hover {
+    background: #30aebc url(../images/send.png) center no-repeat;
+  }
+  /*	Seccion Contacto
+  		------------------------------------------ */.contacto-segmento {
+    margin-top: 60px;
+  }
+  .titulo-seccion-contacto {
+    font-size: 4.375em;
+    padding-top: 76px;
+  }
+  .descripcion-contacto {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 1.25em;
+    color: #989898;
+    margin-top: 0.8em;
+    margin-left: 0.25em;
+    line-height: 1.99em;
+    width: 85%;
+  }
+  /*.descripcion-test {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 1.25em;
+    color: #989898;
+    margin-top: 0.8em;
+    margin-left: 0.25em;
+    line-height: 1.99em;
+    width: 66%;
+  }*/
+  .formulario-contacto-home {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  #nombre-completo-home,
+  #correo-electronico-home,
+  #telefono-home,
+  #estado-contacto-home,
+  #lada-home {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 45%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+  #telefono-home {
+    width: 33%;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  #lada-home {
+    width: 10%;
+    margin-top: 30px;
+  }
+  #formulario-contacto-home {
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  #estado-contacto-home {
+    margin-top: 30px;
+  }
+  #boton-enviar-contacto-home {
+    font-family: 'Conv_MyriadPro-Bold';
+    border: 1px solid #bc5311;
+    border-top-color: #d85f14;
+    border-left-color: #d85f14;
+    padding: 20px 30px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.875em;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+    cursor: pointer;
+    /*margin-bottom: 10px;
+  					margin-top:5px;*/
+  
+    line-height: 25px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #e26315;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+    background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+    background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+    background-image: -o-linear-gradient(top, #eb7125, #e26315);
+    background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  }
+  #boton-enviar-contacto-home:hover,
+  #boton-enviar-contacto-home:focus {
+    color: #ffffff;
+    border: 1px solid #bc5311;
+    border-top-color: #d85f14;
+    border-left-color: #d85f14;
+    background-color: #ea6817;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+    background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+    background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+    background-image: -o-linear-gradient(top, #e26315, #ea6817);
+    background-image: linear-gradient(to bottom, #e26315, #ea6817);
+  }
+  /*	Bolsa de Trabajo
+  		------------------------------------------ */
+  .titulo-seccion-bolsa-trabajo {
+    font-size: 4.375em;
+    font-family: 'Conv_MyriadPro-Semibold';
+    text-align: center;
+    padding-top: 60px;
+  }
+  .subtitulo-seccion-bolsa-trabajo {
+    font-size: 3em;
+    font-family: 'Conv_MyriadPro-Semibold';
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .bolsa-trabajo-segmento {
+    margin-top: 20px;
+  }
+  .bolsa-trabajo-interior img {
+    margin-bottom: 30px;
+    width: auto;
+    height: auto;
+    margin-left: none;
+  }
+  .bolsa-trabajo-requisitos,
+  .bolsa-trabajo-ofrecemos {
+    font-family: 'Conv_MyriadPro-Semibold';
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    width: 80%;
+  }
+  .bolsa-trabajo-ofrecemos {
+    margin-top: 10px;
+  }
+  .boton-bolsa {
+    float: left;
+    font-family: 'Conv_MyriadPro-Bold';
+    border: 1px solid #bc5311;
+    border-top-color: #d85f14;
+    border-left-color: #d85f14;
+    padding: 20px 30px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.875em;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+    cursor: pointer;
+    /*margin-bottom: 10px;
+  					margin-top:5px;*/
+  
+    line-height: 25px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #e26315;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+    background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+    background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+    background-image: -o-linear-gradient(top, #eb7125, #e26315);
+    background-image: linear-gradient(to bottom, #eb7125, #e26315);
+  }
+  .boton-bolsa:hover,
+  .boton-bolsa:focus {
+    color: #ffffff;
+    border: 1px solid #bc5311;
+    border-top-color: #d85f14;
+    border-left-color: #d85f14;
+    background-color: #ea6817;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e26315), to(#ea6817));
+    background-image: -webkit-linear-gradient(top, #e26315, #ea6817);
+    background-image: -moz-linear-gradient(top, #e26315, #ea6817);
+    background-image: -o-linear-gradient(top, #e26315, #ea6817);
+    background-image: linear-gradient(to bottom, #e26315, #ea6817);
+  }
+  /*	Paginas	Cursos
+  	------------------------------------------ */
+  /*	Menu Paginas	Cursos
+  		------------------------------------------ */
+  .curso-titulo,
+  .page-title {
+    border-bottom: solid 1px #ececec;
+    color: #30aebc;
+    font-size: 1.875em;
+    padding-bottom: 0.938em;
+    text-align: left;
+  }
+  .menu-cursos a:link {
+    text-decoration: none;
+    color: #989898;
+  }
+  .menu-cursos a:visited {
+    color: #989898;
+  }
+  .menu-cursos a:hover {
+    color: #30aebc;
+  }
+  .menu-cursos a:active {
+    color: #30aebc;
+  }
+  .menu-cursos ul li {
+    list-style: none;
+    float: left;
+    padding: 0 30px 0 0;
+  }
+  /*	Contenedor Paginas	Cursos
+  		------------------------------------------ */
+  #contenedor-curso {
+    /*margin-top: 2em;*/
+  
+    background-color: #d1d1d1;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+    background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+    background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+    background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+  }
+  .contenedor-curso-informacion {
+    font-family: 'Conv_MyriadPro-Semibold';
+  }
+  .titulo-del-curso {
+    padding-top: 0.5em;
+    font-size: 3em;
+    color: #30aebc;
+    text-align: left;
+  }
+  .subtitulo-del-curso {
+    font-size: 2.5em;
+    color: #30aebc;
+    text-align: left;
+  }
+  .descripcion-del-curso {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 1.25em;
+    color: #989898;
+    margin-top: 0.8em;
+    margin-left: 0.25em;
+    line-height: 1.99em;
+    width: 85%;
+    text-align: left;
+  }
+  .nota-del-curso {
+    font-size: 2.45em;
+    color: #30aebc;
+    margin-top: 0.5em;
+    margin-bottom: 0.45em;
+    margin-left: 0.15em;
+    text-align: left;
+  }
+  .contenedor-curso-formulario {
+    background: #30aebc;
+  }
+  .titulo-formulario {
+    padding-top: 0;
+    font-size: 1.35em;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+  }
+  .formulario-registro-cursos {
+    width: 90%;
+  }
+  .formulario-registro-cursos input,
+  .formulario-registro-cursos select {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    padding: 12px 12px;
+    color: #989898;
+    /*.border-radius(0px);*/
+  
+    width: 100%;
+  }
+  #curso-boton-enviar {
+    width: 100%;
+  }
+  #curso-nombre-completo,
+  #curso-correo-electronico,
+  #curso-lada,
+  #curso-telefono,
+  #curso-seleccion-estado,
+  #curso-boton-enviar {
+    margin-top: 10px;
+  }
+  #curso-seleccion-estado {
+    margin-top: 25px;
+  }
+  #curso-lada {
+    float: left;
+    width: 30%;
+  }
+  #curso-telefono {
+    float: right;
+    width: 65%;
+  }
+  .sombra-slider-curso img {
+    width: 100%;
+    height: auto;
+  }
+  /* Formulario Pagina Cursos
+  		------------------------------------------ */
+  #formulario-cursos {
+    height: auto;
+  }
+  #txtNombreCursos,
+  #txtCorreoCursos,
+  #txtLadaCursos,
+  #txtTelefonoCursos,
+  #cmbEstadosCursos,
+  #txtCelularCursos,
+  #cmbSucursalesCursos {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+    float: left;
+  }
+  #nombre1Cursos {
+    position: relative;
+  }
+  #nombre1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #correo1Cursos {
+    position: relative;
+  }
+  #correo1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #lada1Cursos {
+    position: relative;
+  }
+  #lada1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 63px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #telefono1Cursos {
+    position: relative;
+  }
+  #telefono1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 78px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #celular1Cursos {
+    position: relative;
+  }
+  #celular1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #estado1Cursos {
+    position: relative;
+  }
+  #estado1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    font-size: 12px;
+  }
+  #sucursal1Cursos {
+    position: relative;
+  }
+  #sucursal1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 195px;
+    font-size: 12px;
+  }
+  #politicas1Cursos {
+    position: relative;
+  }
+  #politicas1Cursos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 201px;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 277px;
+    font-size: 12px;
+  }
+  #txtCorreoCursos {
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+  #txtLadaCursos {
+    width: 17%;
+    margin-top: 30px;
+  }
+  #txtTelefonoCursos {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtCelularCursos {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #cmbSucursalesCursos {
+    margin-left: 4%;
+  }
+  #btnEnviarCursos {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
+  }
+  #cmbEstadosCursos,
+  #cmbSucursalesCursos {
+    margin-top: 30px;
+  }
+  #politicas1Cursos {
+    width: 80%;
+    margin-left: 20%;
+  }
+  #chkPoliticasCursos {
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+  #acepto1Cursos {
+    width: 95%;
+    float: left;
+  }
+  #acepto1Cursos a {
+    text-decoration: none;
+    color: #fff;
+  }
+  /*	Slider Tipo	Cursos
+  		------------------------------------------ */
+  .contenedor-slider-cursos {
+    float: left;
+  }
+  .slider-tipo-cursos {
+    margin-top: 10px;
+  }
+  .slider-curso-1,
+  .slider-curso-2,
+  .slider-curso-3,
+  .slider-curso-4 {
+    padding: 0 14px;
+  }
+  .imagen-slider-curso img {
+    margin: 0 auto;
+  }
+  .titulo-slider-curso {
+    font-family: 'Conv_MyriadPro-Semibold';
+    font-size: .863em;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 0.3em;
+  }
+  .descripcion-slider-curso {
+    font-size: .863em;
+    line-height: 23px;
+    text-align: center;
+  }
+  #boton-slider-cursos {
+    width: auto;
+    font-size: 13px;
+    padding: 3px 6px;
+    margin-top: 0.7em;
+  }
+  .sombra-slider-curso img {
+    width: 100%;
+    height: auto;
+  }
+  /*	Footer
+  	------------------------------------------ */
+  .footer1 {
+    background: #666666;
+    color: #fff;
+    font-family: 'Conv_MyriadPro-Regular';
+    text-align: left;
+  }
+  .menu-footer {
+    margin: 15px 0 15px 0;
+  }
+  .footer2 {
+    background: #504f4f;
+    color: #fff;
+    font-family: 'Conv_MyriadPro-Regular';
+    text-align: left;
+  }
+  .footer-social {
+    float: left;
+  }
+  .copyright {
+    font-size: 14px;
+    float: left;
+    text-align: left;
+  }
+  .copyright a:visited,
+  .copyright a:link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  #footer-interior1 a:visited,
+  #footer-interior1 a:link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .privacidad {
+    font-size: 14px;
+    float: right;
+    text-align: right;
+  }
+  .google-footer,
+  .twitter-footer,
+  .facebook-footer {
+    float: left;
+    margin-left: 10px;
+  }
+  #menu4 {
+    padding-left: 25px;
+  }
+  /*	Paginas Contacto
+  	------------------------------------------ */
+  /*** Botones Home ****/
+  .buton-home {
+    float: none;
+  }
+  .boton-trabajo .buton-home {
+    float: left;
+  }
+  /* Formulario Pagina Alumnos
+  		------------------------------------------ */
+  #formulario-alumnos {
+    height: auto;
+  }
+  #txtNombreAlumnos,
+  #txtCorreoAlumnos,
+  #txtLadaAlumnos,
+  #txtTelefonoAlumnos,
+  #cmbEstadosAlumnos,
+  #txtCelularAlumnos,
+  #cmbSucursalesAlumnos {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+    float: left;
+  }
+  #nombre1Alumnos {
+    position: relative;
+  }
+  #nombre1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #correo1Alumnos {
+    position: relative;
+  }
+  #correo1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #lada1Alumnos {
+    position: relative;
+  }
+  #lada1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 63px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #telefono1Alumnos {
+    position: relative;
+  }
+  #telefono1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 78px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #celular1Alumnos {
+    position: relative;
+  }
+  #celular1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #estado1Alumnos {
+    position: relative;
+    width: 100%;
+  }
+  #estado1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #sucursal1Alumnos {
+    position: relative;
+  }
+  #sucursal1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 195px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #politicas1Alumnos {
+    position: relative;
+  }
+  #politicas1Alumnos label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 201px;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 325px;
+    font-size: 12px;
+  }
+  #txtCorreoAlumnos {
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+  #txtLadaAlumnos {
+    width: 17%;
+    margin-top: 30px;
+  }
+  #txtTelefonoAlumnos {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtCelularAlumnos {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #cmbSucursaleAlumnos {
+    margin-left: 4%;
+  }
+  #btnEnviarAlumnos {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
+  }
+  #cmbEstadosAlumnos,
+  #cmbSucursalesAlumnos {
+    margin-top: 30px;
+  }
+  #cmbSucursalesAlumnos {
+    margin-left: 4%;
+  }
+  #politicas1Alumnos {
+    width: 80%;
+    margin-left: 20%;
+  }
+  #chkPoliticasAlumnos {
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+  #acepto1Alumnos {
+    width: 95%;
+    float: left;
+  }
+  #acepto1Alumnos a {
+    text-decoration: none;
+    color: #fff;
+  }
+  label.error {
+    z-index: 10000;
+  }
+  /** Pginas Contacto **/
+  .titulo-contacto {
+    text-align: left;
+  }
+  /*	Paginas Contacto
+  	------------------------------------------ */
+  #contenedor-contacto {
+    /*margin-top: 2em;*/
+  
+    background-color: #d1d1d1;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+    background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+    background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+    background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+  }
+  .contenedor-contacto-informacion {
+    font-family: 'Conv_MyriadPro-Semibold';
+  }
+  .titulo-contacto {
+    padding-top: 0.5em;
+    font-size: 3em;
+    color: #30aebc;
+    text-align: left;
+  }
+  .subtitulo-contacto {
+    font-size: 2.5em;
+    color: #30aebc;
+    text-align: left;
+  }
+  .subtitulo-resultado-test {
+    padding-top: 0.5em;
+    font-size: 1.875em;
+    color: #ed7213;
+    text-align: left;
+    margin-left: 4em;
+    margin-top: 1.5em;
+  }
+  .resultado-test {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 5.5em;
+    color: #30aebc;
+    margin-top: -0.5em;
+    margin-left: 2em;
+    line-height: 1.99em;
+    width: 100%;
+    text-align: left;
+  }
+  .descripcion-contacto {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 1.25em;
+    color: #989898;
+    margin-top: 0.8em;
+    margin-left: 0.25em;
+    line-height: 1.99em;
+    width: 100%;
+    text-align: left;
+  }
+  /*.descripcion-test {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 1.25em;
+    color: #989898;
+    margin-top: 0.8em;
+    margin-left: 0.25em;
+    line-height: 1.99em;
+    width: 66%;
+  }*/
+  .nota-contacto {
+    font-size: 2.45em;
+    color: #30aebc;
+    margin-top: 0.5em;
+    margin-bottom: 0.45em;
+    margin-left: 0.15em;
+    text-align: left;
+  }
+  .nota-test-fin{
+    margin-bottom: -7px;
+    margin-top: -140px;
+    margin-left: -100px;
+  }
+  .imagen-test-inicio {
+    margin-bottom: -20px;
+    margin-top: -296px;
+    margin-left: -100px;
+    position: relative;
+    z-index: -1;
+}
+  .contenedor-curso-formulario {
+    background: #30aebc;
+  }
+  .contenedor-curso-formulario {
+    background: #30aebc;
+  }
+  .titulo-formulario {
+    padding-top: 0.4em;
+    font-size: 1.35em;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+  }
+  .formulario-registro-cursos {
+    width: 80%;
+  }
+  .formulario-registro-cursos input,
+  .formulario-registro-cursos select,
+  #contacto-mensaje {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    padding: 12px 12px;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+  }
+  #curso-boton-enviar {
+    width: 100%;
+  }
+  #contacto-nombre-completo,
+  #contacto-correo-electronico,
+  #contacto-lada,
+  #contacto-telefono,
+  #contacto-mensaje,
+  #contacto-boton-enviar {
+    margin-top: 10px;
+  }
+  #contacto-mensaje {
+    margin-top: 25px;
+    height: 120px;
+  }
+  #contacto-lada {
+    float: left;
+    width: 30%;
+  }
+  #contacto-telefono {
+    float: right;
+    width: 65%;
+  }
+  .sombra-slider-curso img {
+    width: 100%;
+    height: auto;
+  }
+  #footer-interior2 p {
+    width: 50%;
+    float: left;
+  }
+  /* Formulario Pagina Empresas
+  		------------------------------------------ */
+  #formulario-empresas {
+    height: 460px;
+  }
+  #txtNombreEmpresas,
+  #txtCorreoEmpresas,
+  #txtEmpresaEmpresas,
+  #txtPuestoEmpresas,
+  #txtLadaEmpresas,
+  #txtTelefonoEmpresas,
+  #cmbEstadosEmpresas,
+  #txtCelularEmpresas,
+  #cmbSucursalesEmpresas,
+  #txtComentarioEmpresas {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+    float: left;
+  }
+  #nombre1Empresas {
+    position: relative;
+  }
+  #nombre1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #correo1Empresas {
+    position: relative;
+  }
+  #correo1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 40px;
+    font-size: 12px;
+  }
+  #empresa1Empresas {
+    position: relative;
+  }
+  #empresa1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #puesto1Empresas {
+    position: relative;
+  }
+  #puesto1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 110px;
+    font-size: 12px;
+  }
+  #lada1Empresas {
+    position: relative;
+  }
+  #lada1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 63px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    font-size: 12px;
+  }
+  #telefono1Empresas {
+    position: relative;
+  }
+  #telefono1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 21%;
+    top: 195px;
+    font-size: 12px;
+  }
+  #celular1Empresas {
+    position: relative;
+  }
+  #celular1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 195px;
+    font-size: 12px;
+  }
+  #estado1Empresas {
+    position: relative;
+    width: 100%;
+  }
+  #estado1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 275px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #sucursal1Empresas {
+    position: relative;
+  }
+  #sucursal1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 52%;
+    top: 275px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #comentario1Empresas {
+    position: relative;
+    width: 100%;
+  }
+  #comentario1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 365px;
+    font-size: 12px;
+  }
+  #politicas1Empresas {
+    position: relative;
+  }
+  #politicas1Empresas label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 201px;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 490px;
+    font-size: 12px;
+  }
+  #txtCorreoEmpresas {
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+  #txtEmpresaEmpresas {
+    margin-top: 30px;
+  }
+  #txtPuestoEmpresas {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtLadaEmpresas {
+    width: 17%;
+    margin-top: 30px;
+  }
+  #txtTelefonoEmpresas {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtCelularEmpresas {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #cmbSucursaleEmpresas {
+    margin-left: 4%;
+  }
+  #txtComentarioEmpresas {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #btnEnviarEmpresas {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
+  }
+  #cmbEstadosEmpresas,
+  #cmbSucursalesEmpresas {
+    margin-top: 30px;
+  }
+  #cmbSucursalesEmpresas {
+    margin-left: 4%;
+  }
+  #politicas1Empresas {
+    width: 80%;
+    margin-left: 20%;
+  }
+  #chkPoliticasEmpresas {
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+  #acepto1Empresas {
+    width: 95%;
+    float: left;
+  }
+  #acepto1Empresas a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+/*--- Formulario Test ---*/
+#formulario-test {
+    height: auto;
+  }
+#txtNombreTest,
+  #txtCorreoTest,
+  #txtEmpresaTest,
+  #txtPuestoTest,
+  #txtLadaTest,
+  #txtTelefonoTest,
+  #estado,
+  #txtCelularTest,
+  #plantel,
+  #txtComentarioTest {
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
+  
+    width: 48%;
+    float: left;
+  }
+  #frmReg {
+    margin-top: 55px;
+    margin-right: 80px;
+  }
+ #nombre1Test {
+    position: relative;
+  }
+  #nombre1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #correo1Test {
+    position: relative;
+  }
+  #correo1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 40px;
+    font-size: 12px;
+  }
+  #lada1Test {
+    position: relative;
+  }
+  #lada1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 63px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #telefono1Test {
+    position: relative;
+  }
+  #telefono1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 78px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #celular1Test {
+    position: relative;
+  }
+  #celular1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 110px;
+    font-size: 12px;
+  }
+  #estado1Test {
+    position: relative;
+    width: 100%;
+  }
+  #estado1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #sucursal1Test {
+    position: relative;
+  }
+  #sucursal1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 192px;
+    top: 195px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  #politicas1Test {
+    position: relative;
+  }
+  #politicas1Test label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 201px;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 290px;
+    font-size: 12px;
+  }
+  #txtCorreoTest {
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+  #txtLadaTest {
+    width: 17%;
+    margin-top: 30px;
+  }
+  #txtTelefonoTest {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #txtCelularTest {
+    margin-left: 4%;
+    margin-top: 30px;
+  }
+  #plantel {
+    margin-left: 4%;
+  }
+  #sendtest {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
+  }
+  #estado,
+  #plantel {
+    margin-top: 30px;
+  }
+  #plantel {
+    margin-left: 4%;
+  }
+  #politicas1Test {
+    width: 80%;
+    margin-left: 20%;
+  }
+  #chkPoliticasTest {
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+  #acepto1Test {
+    width: 95%;
+    float: left;
+  }
+  #acepto1Test a {
+    text-decoration: none;
+    color: #30aebc;
+  }
+  
+  /* Preguntas Test */
+.ctn-pre{
+	margin-top: -90px;
+	width: 670px;
+	float: left;
+	margin-left:-100px;
+}
+.ctn-pre > h1{
+	color: #30AEBC;
+	
+}
+#sendValidate{
+	background: #E56415;
+	color: #FFFFFF;
+	width:150px;
+	height: 50px;
+	font-weight:bold;
+	font-size:18px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+	border: none;
+	margin-left:520px;
+}
+#sendValidate:hover{
+	background: #E66516;
+}
+.item{
+	background: #F0F0F0;
+	width:100%;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
+	-moz-box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
+	-webkit-box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
+	padding-left:10px;
+	padding-bottom:30px; 
+	height:120px;
+	margin-top:15px;
+}
+.item > .preguntasIzq > input{
+	margin-left:10px;
+}
+.item > .preguntasIzq > h3{
+	color: #30AEBC;
+	font-weight:bold;
+	padding-top:10px;
+}
+.preguntasIzq{
+	float: left;
+	width: 500px;
+	height: 80px;
+}
+.imgItemTest{
+	display: block;
+	float: right;
+	padding-top:15px;
+	padding-right:15px;
+}
+.respuestas{
+	float: left;
+	text-align:left;	
+}
+input[type=radio]{
+	display: block;
+	float: left;
+	width:12px;
+	height:12px;	
+}
+.respuestas > label{
+	display: block;
+	float: left;	
+	padding-right:10px;
+	padding-left:5px;
+}
+
+/* Login Acceso Alumnos */
+#login_alumnos {
+	color: #FFFFFF;
+	background: rgba(51, 176, 190, 0.8);
+	margin-top: 60px;
+	z-index: 9999;
+	position:absolute;
+	margin-left: 800px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+	display: none;
+}
+.menu-fijo {
+    position: fixed !important;
+    top: 0px;
+}
+.lnk-acceso{
+	display:block;
+	background: rgb(51, 176, 190);	
+	width: 30px;
+	height: 25px; 
+	float:right;
+	padding: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.txt-acceso{
+	display: block;
+	float: left;
+	padding: 5px 15px 5px 15px;
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop. 
+  
+  ******************************************************************/
+}
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+}
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a:after,
+  a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  a abbr[title]:after,
+  a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

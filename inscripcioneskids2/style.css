@@ -1,0 +1,531 @@
+
+header{
+	width:940px;
+	height:95px;
+	margin: 30px auto;
+}
+
+body{
+	margin: 0px;
+}
+
+.placeholder
+{
+  color: #000;
+}
+
+		#logo{
+			background: url(images/logo.png) no-repeat;
+			width:253px;
+			height:95px;
+			float:left;
+		}
+		
+		#header-derecho{
+			width: 60%;
+			float: right;
+		}
+
+			#linea1{
+				width:450px;
+				height:18px;
+				float: right;			
+				text-align:right;
+				font-size:17px;
+				margin-top:0px;
+				color:#0098aa;
+				font-family: 'Cabin', sans-serif;
+			}
+			
+			#linea2{
+				width:450px;
+				text-align:right;
+				height:18px;
+				float: right;
+				margin-top:9px;
+				font-size:17px;
+				color:#989898;
+				font-family: 'Cabin', sans-serif;
+			}
+
+			#social{
+				margin-top:12px;
+				width: 200px;
+				height: auto;
+				float: right;
+			}						
+			
+				#interlingua{
+					width: 33px;
+					height: 33px;
+					margin-left:12px;
+					float: right;			
+				}
+				
+				#facebook{
+					width: 33px;
+					height: 33px;
+					margin-left:10px;	
+					float: right;		
+				}
+				
+				#twitter{
+					width:33px;
+					height: 33px;
+					float: right;											
+				}
+	
+
+
+#contenido{	
+	width: 100%;
+	background:url(images/textura.png) repeat;	
+	height:450px;
+	margin: 28px auto;		
+}
+
+	#wrap{	
+		width: 940px;	
+		height:500px;
+		margin: 0px auto;		
+	}
+
+		section{
+			background: url(images/ninos.jpg) no-repeat;
+			width:640px;
+			height:450px;
+			float: left;
+		}
+		
+			#slogan{
+				background:url(images/slogan.png)no-repeat;
+				width:580px;
+				margin-top:340px;
+				margin-left:-20px;
+				height:96px;
+				text-shadow: 3px 1px 2px #136c6e;
+        filter: dropshadow(color=#136c6e, offx=3, offy=1);				
+			}
+
+				#bueno{
+					width:190px;
+					height:60px;
+					float: left;					
+					margin-top: 17px;
+					margin-left: 20px;
+					color: #fff;
+					font-size: 15px;
+					font-family: 'Muli', sans-serif;					
+				}
+				
+				#malo{
+					width:210px;
+					height:60px;
+					float: left;
+					margin-top: 17px;
+					margin-left: 20px;
+					color: #fff;
+					font-size: 15px;
+					font-family: 'Muli', sans-serif;					
+				}
+				
+				#excelente{
+					width:140px;
+					height:60px;
+					float: left;
+					margin-left: -30px;
+					margin-top: 17px;
+					color: #fff;
+					font-size: 15px;
+					font-family: 'Muli', sans-serif;					
+				}
+
+			#bottom-slogan{
+				background:url(images/bottom-slogan.png)no-repeat;
+				width:20px;
+				height:10px;
+				margin-left: -20px;
+				
+			}	
+			
+
+aside{
+	background: url(images/aside.png) no-repeat;		
+	width:300px;
+	height:450px;
+	float: left;	
+}
+
+			/*#p3{
+				font-size: 26px;
+				font-family: 'Muli', sans-serif;
+				width:300px;
+				height:23px;
+				margin: 12px auto;
+				text-align: center;	
+				color: #fff;
+				font-weight:bold;
+				line-height: 23px;	
+				text-shadow: 1px 1px 1px #064e5c;
+       			 filter: dropshadow(color=#064e5c, offx=3, offy=1);			
+			}*/
+
+			#p3{
+				width: 220px;
+				height: 150px;
+				margin: 15px auto;
+
+			}	
+
+			#p4{
+				font-size: 20px;
+				font-family: 'Muli', sans-serif;
+
+				width:300px;
+				height:23px;
+				margin: 0px auto;
+				text-align: center;	
+				color: #fff;
+				margin-top: 70px;
+				text-shadow: 3px 1px 3px #136c6e;
+	        	filter: dropshadow(color=#136c6e, offx=3, offy=1);		
+				}
+			
+			#formulariodiv{
+				margin: 28px auto;
+				width:254px;
+				height:auto;				
+			}
+			
+			
+				#nombre1{
+					font-family: 'Cabin', sans-serif;
+					border: none;
+					width:254px;
+					height:42px;				
+					font-size: 11px;
+					float: left;					
+				}
+
+					#txtNombre{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:254px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;						
+					}
+			
+				#correo1{
+					border: none;
+					font-family: 'Cabin', sans-serif;
+					width:254px;
+					height: 60px;					
+					font-size: 11px;
+					float: left;						
+				}
+
+
+					#txtCorreo{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:254px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						margin-top: 15px;								
+					}
+						
+				#lada1{
+					
+					border: none;
+					font-family: 'Cabin', sans-serif;
+					width:72px;
+					font-size: 11px;				
+					float: left;
+					height: 60px;				
+				}
+									
+					#txtLada{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:72px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						margin-top: 15px;										
+					}
+								
+					
+			#telefono1{
+											
+				border: none;
+				font-family: 'Cabin', sans-serif;			
+				width:162px;								
+				font-size: 11px;	
+				margin-left: 20px;				
+				float: left;
+				height: 60px;
+				
+			}
+					
+						
+					#txtTelefono{														
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:162px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						margin-top: 15px;
+						
+							
+					}
+
+
+			#estado1{
+						
+				border: none;
+				font-family: 'Cabin', sans-serif;
+				width:168px;
+				height:38px;
+				margin-top: 12px;
+				font-size: 11px;
+				float: left;
+				
+			}
+
+					#cmbEstados{
+						font-family: 'Cabin', sans-serif;
+						border: none;
+						width:254px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #fff;
+						float: left;
+			}									
+			
+			
+				#politicas1{							
+				font-family: 'Cabin', sans-serif;
+				margin-left:32px;
+				width:200px;
+				height:40px;				
+				margin-top:-3px;					
+				font-size: 11px;
+			}
+
+				#acepto1{
+					font-family: 'Cabin', sans-serif;
+					margin-left: 30px;
+					margin-top: 7px;
+					color:#000;
+					
+				}
+
+							
+			
+				#errorpoliticas{
+						width:96px;
+						height:14px;
+						font-size:12px;
+						position:absolute;
+						margin-top:-5px;
+						margin-left:150px;
+					}
+
+	
+
+			#form1 label.error {
+			margin-top: 0px;
+			float: left;
+			clear: both;
+			position: relative;
+			color:  #064e5c;
+			display: block;			
+			padding: 2px;
+				
+			}
+		
+		
+
+			 #btnlightbox{
+			 	background: url(images/boton.png);	
+			 	border:none;
+				width:241px;
+			  	height:61px;
+			  	margin-top: 100px;
+				margin-left:30px;				
+			  	font-size: 18.73px;
+			  	font-family: 'Muli', sans-serif;
+			  	font-weight: bold;
+			  	color:#fff;
+			  	text-shadow: 1px 1px 3px #666666;
+
+			}
+			
+			#btnlightbox:hover {
+			  	background: url(images/botonh.png);				  	
+						
+			}  
+						
+#contenido1{
+		background:url(images/sombra.png)no-repeat;
+		width: 940px;
+		height: 30px;
+		margin: -30px auto;
+}
+
+#beneficios{
+		width: 810px;
+		height: 218px;
+		margin: 50px auto;
+		color: #fff;
+				
+}
+	#beneficios1{
+		cursor: pointer;
+		width: 223px;
+		height: 168px;
+		background: url(images/beneficio.png) no-repeat;
+		float: left;
+		font-family: 'Cabin', sans-serif;
+		font-size: 24px;
+		text-align: center;
+		padding-top: 60px;
+		text-shadow: 3px 1px 2px #136c6e;
+        filter: dropshadow(color=#136c6e, offx=3, offy=1);
+
+	}
+
+
+	#beneficios2{
+		cursor: pointer;
+		margin: 0px 70px 0px 70px;
+		width: 223px;
+		height: 175px;
+		background: url(images/beneficio.png) no-repeat;
+		float: left;
+		font-family: 'Cabin', sans-serif;
+		font-size: 32px;
+		text-align: center;
+		padding-top: 45px;
+		text-shadow: 3px 1px 2px #136c6e;
+        filter: dropshadow(color=#136c6e, offx=3, offy=1)
+	}
+
+	#beneficios3{
+		cursor: pointer;
+		width: 223px;
+		height: 184px;
+		background: url(images/beneficio.png) no-repeat;
+		float: left;
+		text-align: center;
+		font-family: 'Cabin', sans-serif;
+		font-size: 24px;
+		text-align: center;
+		padding-top: 34px;
+		text-shadow: 3px 1px 2px #136c6e;
+        filter: dropshadow(color=#136c6e, offx=3, offy=1)
+	}
+
+#sombras-beneficios{
+		width: 810px;
+		height: 100px;
+		margin: -30px auto;
+		
+}
+	#s-beneficios1{
+		width: 223px;
+		height: 45px;
+		background: url(images/sombra2.png) no-repeat;
+		float: left;
+		margin-left: 8px;
+	}
+
+	#s-beneficios2{
+		margin-left: 65px;
+		width: 223px;
+		height: 45px;
+		background: url(images/sombra2.png) no-repeat;
+		float: left;
+	}
+
+	#s-beneficios3{
+		margin-left: 68px;
+		width: 223px;
+		height: 45px;
+		background: url(images/sombra2.png) no-repeat;
+		float: left;
+	}
+	
+
+		
+		
+footer{
+	width: 100%;
+	margin: 0 auto;	
+	height: 47px;
+	background: #0096a7;
+	position: absolute;	
+	/*bottom: 0px;*/
+}
+
+	#pie{
+		width:940px;
+		height:47px;
+		margin: 0px auto;
+}
+
+		#copyright{
+			width:50%;
+			height:30px;
+			font-size: 13px;
+			font-family: 'Cabin', sans-serif;
+			color: #fff;
+			margin-top: 15px;
+			float: left;
+			text-align: left;
+		}
+
+			a:hover{
+				text-decoration:none;
+				color:#fff;
+			}
+			
+			a{
+				text-decoration:none;
+				color:#fff;
+			}
+
+
+		#aviso{
+			width:50%;
+			height:30px;
+			font-size: 13px;
+			font-family: 'Cabin', sans-serif;
+			color: #fff;
+			margin-top: 15px;
+			float: right;
+			text-align: right;
+			
+		}
+
+		#politicas1 label{
+			margin-top:10px;
+
+		}
+
+		#politicas1 input{
+			float:left;
+			margin-top: 1px;
+		}
+
+		#politicas1 a{
+			color:#064e5c;
+		}
+
+		@media only screen and (min-width: 680px) and (max-width: 979px) and (orientation : portrait) {
+
+		height	
+}

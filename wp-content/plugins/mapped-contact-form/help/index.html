@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Documentation &mdash; Mapped contact form pro WordPress</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		.container {width:850px;margin:0 auto;}
+		pre {margin-left: -60px;}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">Documentation &mdash; Mapped contact form pro WordPress</h3>
+		
+		<hr>
+		
+		<h1 class="center">Mapped contact form pro WordPress</h1>
+		
+		<hr>
+		
+		<img src="assets/images/preview-mapped-contact-wp.jpg" alt="Preview travelmap" style="margin:0 30px 1.5em 40px; float:right;position:relative;" />
+				
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#install">Installation</a></li>
+			<li><a href="#activate">Activate the plugin</li>
+			<li><a href="#shortcode">The shortcode</a></li>
+			<li><a href="#pickaplace">Pick a place</a></li>
+			<li><a href="#markers">Markers</a></li>
+			<li><a href="#link">Link to markers</a></li>
+			<li><a href="#custom">Form builder</a></li>
+			<li><a href="#psdandepsFiles">PSD and EPS Files</a></li>
+			<li><a href="#trouble">Troubleshooting</a></li>			
+			<li><a href="#releaseNotes">Release Notes</a></li>				
+		</ol>
+		<hr>
+		
+		<h3 id="install"><strong>A. Installation</strong> - <a href="#toc">top</a></h3>
+		<h4>1. Copy the files in your WordPress plugin folder</h4>
+		<p>
+			Copy the folder "mapped-contact-form" to the plugin folder of your WordPress installation. Usually the folder ist wp-content/plugins inside your main WordPress folder. Usually you will need an ftp-programm, that transfers the files to your webspace to do this.
+		</p>
+
+		<hr>
+		
+		<h3 id="activate"><strong>B. Activate the plugin</strong> - <a href="#toc">top</a></h3>
+		<h4>1. Activate the plugin in your WordPress admin area</h4>
+		<p>
+      Login to your WordPress installation. Click on the "Plugins" link. Activate the Plugin "Mapped contact form" by click on the link "Activate".
+		</p>
+		<img src="assets/images/plugin.png" alt="Plugin page" />
+		<hr>		
+
+		<h3 id="shortcode"><strong>C. The shortcode</strong> - <a href="#toc">top</a></h3>
+    
+    <p>
+    You can put the following shortcode in every post or page of your WordPress blog:
+    </p>
+    
+    <p>
+    [mcf id=&quot;map_canvas&quot; width=&quot;640px&quot; height=&quot;480px&quot;   map_center=&quot;52.50828085998653, 13.407783719238296&quot; map_zoom=&quot;13&quot; listener=&quot;mouseover&quot; locations=&quot;(Headquarter_Berlin, 52.5234051, 13.411399899999992, office_red, headquater@domain.xx);(Office_Kreuzberg, 52.4983717, 13.395979000000011, house_green, office@domain.xx);(Factory_Friedrichshein, 52.5127269, 13.445510000000013, factory_blue, factory@domain.xx)&quot;]
+    </p>
+    
+    <p>
+    The attributes in the shortcode are the following:
+    </p>
+    
+    <ul>
+      <li><b>id</b>: The id of the map div.</li>
+      <li><b>width</b>: Width of the map.</li>
+      <li><b>height</b>: Height of the map.</li>
+      <li><b>map_center</b>: Latitude and longditude of the map center. You can find out in chapter <a href="#pickaplace">Pick a place</a> how to find out this values for a specific place.</li> 
+      <li><b>map_zoom</b>: The initial zoom level of the map.</li>
+      <li><b>listener</b>: Configure when the info window opens use 'mouseover' or 'click'.</li>
+      <li><b>locations</b>: A list of the locations you wan't to display.</li>
+    </ul>
+    
+    <p>
+      Every location has 5 values in round brackets. The locations are seperated by semicolons. The values for every location are:
+      <ul>
+        <li>Name</li>
+        <li>Latitude. You can find out in chapter <a href="#pickaplace">Pick a place</a> how to find out this values for a specific place.</li>
+        <li>Longditude. You can find out in chapter <a href="#pickaplace">Pick a place</a> how to find out this values for a specific place.</li>
+        <li>Marker image. Please use on of the values from chapter <a href="#markers">Markers</a>.</li>
+        <li>Location Email</li>                        
+      </ul>
+    </p>
+    
+    <p>Don't put any newlines in the shortcode! This will break the shortcode. The easiest way to get started: Copy the shortcode above in your blog. Change the values you wan't.</p>
+    
+		<h3 id="pickaplace"><strong>D. Pick a place</strong> - <a href="#toc">top</a></h3>
+		
+		<h4>Geolocation or Click</h4>
+		<p>
+		Type a place in the form field to search on the map or click on the map on a specific place. Copy and paste latitude and longitude values from the popup.
+		</p>
+
+		<iframe src="assets/gmap/geocode_and_click.html" width="800" height="500" name="geocode_and_click"></iframe>
+		
+		
+		<h3 id="markers"><strong>E. Markers</strong> - <a href="#toc">top</a></h3>
+		
+		<h5>These building pictures are available</h5>
+		<p>
+		<table width="20%">
+			<tr>
+			<td><img src="assets/images/buildings/camper_blue.png" /></td>
+			<td><img src="assets/images/buildings/camper_green.png" /></td>
+			<td><img src="assets/images/buildings/camper_orange.png" /></td>
+			<td><img src="assets/images/buildings/camper_red.png" /></td>
+			<td><img src="assets/images/buildings/camper_violet.png" /> </td>
+			</tr>
+			<tr>
+			<td>camper_blue</td>
+			<td>camper_green</td>
+			<td>camper_orange</td>
+			<td>camper_red</td>
+			<td>camper_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/castle_blue.png" /></td>
+			<td><img src="assets/images/buildings/castle_green.png" /></td>
+			<td><img src="assets/images/buildings/castle_orange.png" /></td>
+			<td><img src="assets/images/buildings/castle_red.png" /></td>
+			<td><img src="assets/images/buildings/castle_violet.png" /></td>
+			</tr>
+			<tr>
+			<td>castle_blue</td>
+			<td>castle_green</td>
+			<td>castle_orange</td>
+			<td>castle_red</td>
+			<td>castle_violet</td>
+			</tr>
+		
+			<tr>
+			<td><img src="assets/images/buildings/church_blue.png" /></td>
+			<td><img src="assets/images/buildings/church_green.png" /></td>
+			<td><img src="assets/images/buildings/church_orange.png" /></td>
+			<td><img src="assets/images/buildings/church_red.png" /></td>
+			<td><img src="assets/images/buildings/church_violet.png" /></td>
+			</tr>
+			<tr>
+			<td>church_blue</td><td>church_green</td><td>church_orange</td><td>church_red</td><td>church_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/circus_blue.png" /></td>
+			<td><img src="assets/images/buildings/circus_green.png" /></td>
+			<td><img src="assets/images/buildings/circus_orange.png" /></td>
+			<td><img src="assets/images/buildings/circus_red.png" /></td>
+			<td><img src="assets/images/buildings/circus_violet.png" /></td>
+			</tr>
+			<tr>
+			<td>circus_blue</td><td>circus_green</td><td>circus_orange</td><td>circus_red</td><td>circus_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/factory_blue.png" /></td>
+			<td><img src="assets/images/buildings/factory_green.png" /></td>
+			<td><img src="assets/images/buildings/factory_orange.png" /></td>
+			<td><img src="assets/images/buildings/factory_red.png" /></td>
+			<td><img src="assets/images/buildings/factory_violet.png" /></td>
+			</tr>
+			<tr>
+			<td>factory_blue</td><td>factory_green</td><td>factory_orange</td><td>factory_red</td><td>factory_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/house-garage_blue.png" /></td>
+			<td><img src="assets/images/buildings/house-garage_green.png" /></td>
+			<td><img src="assets/images/buildings/house-garage_orange.png" /></td>
+			<td><img src="assets/images/buildings/house-garage_red.png" /></td>
+			<td><img src="assets/images/buildings/house-garage_violet.png" /></td>
+			</tr>
+			<tr>
+			<td>house-garage_blue</td><td>house-garage_green</td><td>house-garage_orange</td><td>house-garage_red</td><td>house-garage_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/house_blue.png" /></td>
+			<td><img src="assets/images/buildings/house_green.png" /></td>
+			<td><img src="assets/images/buildings/house_orange.png" /></td>
+			<td><img src="assets/images/buildings/house_red.png" /></td>
+			<td><img src="assets/images/buildings/house_violet.png" /></td>
+			</tr>
+
+			<tr>
+			<td>house_blue</td><td>house_green</td><td>house_orange</td><td>house_red</td><td>house_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/industry_blue.png" /></td>
+			<td><img src="assets/images/buildings/industry_green.png" /></td>
+			<td><img src="assets/images/buildings/industry_orange.png" /></td>
+			<td><img src="assets/images/buildings/industry_red.png" /></td>
+			<td><img src="assets/images/buildings/industry_violet.png" /></td>
+			</tr>
+
+			<tr>
+			<td>industry_blue</td><td>industry_green</td><td>industry_orange</td><td>industry_red</td><td>industry_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/lighthouse_blue.png" /></td>
+			<td><img src="assets/images/buildings/lighthouse_green.png" /></td>
+			<td><img src="assets/images/buildings/lighthouse_orange.png" /></td>
+			<td><img src="assets/images/buildings/lighthouse_red.png" /></td>
+			<td><img src="assets/images/buildings/lighthouse_violet.png" /></td>
+			</tr>
+
+			<tr>
+			<td>lighthouse_blue</td><td>lighthouse_green</td><td>lighthouse_orange</td><td>lighthouse_red</td><td>lighthouse_violet</td>
+			</tr>
+
+
+			 <tr>
+			<td><img src="assets/images/buildings/office_blue.png" /></td>
+			<td><img src="assets/images/buildings/office_green.png" /></td>
+			<td><img src="assets/images/buildings/office_orange.png" /></td>
+			<td><img src="assets/images/buildings/office_red.png" /></td>
+			<td><img src="assets/images/buildings/office_violet.png" /></td>
+			</tr>
+
+			<tr>
+			<td>office_blue</td><td>office_green</td><td>office_orange</td><td>office_red</td><td>office_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/temple_blue.png" /></td>
+			<td><img src="assets/images/buildings/temple_green.png" /></td>
+			<td><img src="assets/images/buildings/temple_orange.png" /></td>
+			<td><img src="assets/images/buildings/temple_red.png" /></td>
+			<td><img src="assets/images/buildings/temple_violet.png" /></td>
+			</tr>
+
+			<tr>
+			<td>temple_blue</td><td>temple_green</td><td>temple_orange</td><td>temple_red</td><td>temple_violet</td>
+			</tr>
+
+			<tr>
+			<td><img src="assets/images/buildings/tent_blue.png" /></td>
+			<td><img src="assets/images/buildings/tent_green.png" /></td>
+			<td><img src="assets/images/buildings/tent_orange.png" /></td>
+			<td><img src="assets/images/buildings/tent_red.png" /></td>
+			<td><img src="assets/images/buildings/tent_violet.png" /></td>
+			</tr>
+
+			<tr>
+			<td>tent_blue</td><td>tent_green</td><td>tent_orange</td><td>tent_red</td><td>tent_violet</td>
+			</tr>
+			
+						</table>
+			<p>		
+		
+		<hr>	
+
+		<h3 id="link"><strong>F. Link to markers</strong> - <a href="#toc">top</a></h3>
+		
+		<p>You can provide a link to a stop by calling the function mappedContactForm.openInfoWindow() with the given marker you want to open inside a html link.
+			The markers are stored in the mappedContactForm.markers array in the same order than the locations in your shortcode. Start count by zero.
+		</p>
+		<h5>Example which links to the first marker on your map:</h5>
+		<pre>
+        &lt;a href=&quot;#&quot; onclick=&quot;mappedContactForm.openInfoWindow(mappedContactForm.markers[0]);return false&quot;&gt;LINKED TEXT&lt;/a&gt;
+		</pre>
+		<hr/>
+
+
+		<h3 id="custom"><strong>G. Form builder</strong> - <a href="#toc">top</a></h3>
+		
+		<h4>Add more fields to the form</h4>
+		<p>To add more fields to the form just add another array to the function formElements() in line 12 of mapped-contact-form/mcfplib/mcfp.php. 
+		Each sub array must hava a name, label, placeholder, a html5 form type and if the value should be required in the form. You can add 
+		your arraya in line 20 of mapped-contact-form/mcfplib/mcfp.php.
+		
+			<h5>Example:</h5>
+
+		  <pre>
+       $formElements = array(
+           &#x27;formElements&#x27; =&gt; array(
+               array(&#x27;name&#x27; =&gt; &#x27;name&#x27;, &#x27;label&#x27; =&gt; &#x27;Your name&#x27;, &#x27;placeholder&#x27; =&gt; &#x27;Enter your name&#x27;, &#x27;type&#x27; =&gt; &#x27;text&#x27;, &#x27;required&#x27; =&gt; true), 
+               array(&#x27;name&#x27; =&gt; &#x27;email&#x27;, &#x27;label&#x27; =&gt; &#x27;Email&#x27;, &#x27;placeholder&#x27; =&gt; &#x27;Enter your email address&#x27;, &#x27;type&#x27; =&gt; &#x27;email&#x27;, &#x27;required&#x27; =&gt; true),
+               array(&#x27;name&#x27; =&gt; &#x27;phone&#x27;,&#x27;label&#x27; =&gt; &#x27;Phone &lt;small&gt;(optional)&lt;/small&gt;&#x27;, &#x27;placeholder&#x27; =&gt; &#x27;Enter your phone number&#x27;, &#x27;type&#x27; =&gt; &#x27;tel&#x27;, &#x27;required&#x27; =&gt; false),
+               //add more elements here.
+               array(&#x27;name&#x27; =&gt; &#x27;message&#x27;, &#x27;label&#x27; =&gt; &#x27;Message&#x27;, &#x27;placeholder&#x27; =&gt; &#x27;Your message&#x27;, &#x27;type&#x27; =&gt; &#x27;textarea&#x27;, &#x27;required&#x27; =&gt; true)
+           )
+       );
+       return $formElements;
+	     </pre>
+		</p>
+		
+		<p>
+		<hr>
+
+		<h3 id="psdandepsFiles"><strong>H. PSD and EPS Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>The marker Illustrator (CS4) and EPS files have been included in the Library folder.</p>
+
+		<hr>
+		
+		<h3 id="trouble"><strong>I. Troubleshooting</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Q.: The controls of the map doesn’t appear as they should and the info windows looking broken?</p>
+		
+		<p>A.: Please check if you have a general style on the &lt;img&gt; tag in your css. Which can break the images loaded by gmaps.<br />
+    Something similar to this:<br />
+    <br />
+    img { 
+      height: auto; 
+      max-width: 100%; 
+    }
+    <br />
+    <br/>
+    will break the google maps controls and info windows.</p>
+
+		<hr>		
+
+	  <h3 id="releaseNotes"><strong>J. Release Notes</strong> - <a href="#toc">top</a></h3>
+      <h5>
+      11. February 2013 - Release 1.5
+      </h5>
+      <p>
+      	<ul>
+      	  <li>Added a css reset to prevent google maps controlls to break in rare conditions.</li>
+      	</ul>
+      </p>	  
+      <h5>18. October 2012 - Release 1.4</h5>
+      <p>
+      <ul>
+        <li>Improved compatibility with other WordPress plugins and themes.</li>
+        <li>Improved performance by compressing javascript generated by the shortcode on the fly.</li>
+      </ul>
+      </p>	  
+	    <h5>01. October 2012 - Release 1.3</h5>
+	    <p>
+	    <ul>
+        <li>Improved documentation.</li>
+        <li>Better compatibility with other WordPress plugins and themes.</li>        
+	    </ul>
+	    </p>
+
+		  <h5>17. March 2012 - Release 1.2</h5>
+		  <p>
+		  <ul>
+        <li>Improved documentation.</li>
+		  </ul>
+		  </p>
+
+		  
+		  <h5>20. February 2012 - Release 1.1</h5>
+		  <p>
+		  <ul>
+        <li>Fixed a spelling mistake in the contact success message.</li>
+        <li>Added From and Reply to to email header. That makes it to answer to a contact message.</li>
+        <li>Bugfix due to new version of jquery.form.js.</li>
+        <li>Removed external reference to jquery.form.js.</li>
+        <li>Performance improvements.</li>
+		  </ul>
+		  </p>
+		  
+			<h5>23. July 2011 - Release 1.0</h5>
+			<p>
+			<ul>
+				<li>Initial Release.</li>
+			</ul>
+			</p>
+		<hr>
+		
+		<p>Thank you so much for purchasing our Mapped contact form pro WordPress.</p> 
+		
+		<p><a href="http://autobahn81.com" class="large">autobahn81.com</a></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

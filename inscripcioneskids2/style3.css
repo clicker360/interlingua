@@ -1,0 +1,52 @@
+
+header{
+	width:940px;
+	height:95px;
+	margin: 30px auto;
+}
+
+body{
+	margin: 0px;
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+
+}
+
+		#logo{
+			background: url(images/logo.png) no-repeat;
+			width:253px;
+			height:95px;
+			float:left;
+			cursor:pointer;
+		}
+		
+		#linea1{
+			width:450px;
+			height:18px;
+			float:right;
+			text-align:right;
+			font-size:17px;
+			margin-top:50px;
+			color:#0098aa;
+			font-family: 'Cabin', sans-serif;
+		}
+		
+		#linea2{
+			width:450px;
+			text-align:right;
+			height:18px;
+			float:right;
+			margin-top:9px;
+			font-size:17px;
+			color:#989898;
+			font-family: 'Cabin', sans-serif;
+		}
+
+
+	#contenido1{
+		width: 940px;
+		height: 1500px;
+		margin: -30px auto;
+		
+	}
+	

@@ -1,0 +1,11 @@
+[SCAP]
+HTTPServer=215.1.1.10
+SitioWeb=cgibin
+PaginaWeb=XMLSCAP.ndm
+Registrado=1
+DesplegarImagen=1
+[Impresoras]
+Tickets=Sin Impresión
+Facturas=Sin Impresión
+NotasCargo=Sin Impresión
+NotasCredito=Sin Impresión

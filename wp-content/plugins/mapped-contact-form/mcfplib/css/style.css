@@ -1,0 +1,142 @@
+/* Form style (fold) */
+.contact { 
+	display: block; 
+	width: 385px; 
+	background-color: #FFF;
+	filter:inherit;
+	opacity:inherit;
+	text-align: left;
+}
+
+.contact label {
+    font: 0.8em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;	
+	display: inline-block; 
+	float: left; 
+	height: 0.7em;
+	line-height: 0.7em; 
+	padding: 6px 0 0;
+	width: 80px; 
+	font-size: 0.7em; 
+	margin: 5px 5px 0 0; 
+	clear: both;
+}
+
+.contact label small {
+	font-size: 0.6em;
+	color: #ccc;
+}
+
+.contact input, .contact textarea { 
+	width: 230px; 
+	padding: 5px; 
+	color: #666; 
+	background: #f5f5f5; 
+	border: 1px solid #ccc; 
+	margin: 5px 0 0 0; 
+	font: 0.7em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; 
+	-webkit-border-radius:5px; 
+	-moz-border-radius:5px; 
+	border-radius:5px; 
+	vertical-align: top;
+	
+	transition: all 0.25s ease-in-out; 
+	-webkit-transition: all 0.25s ease-in-out; 
+	-moz-transition: all 0.25s ease-in-out; 
+	
+	box-shadow: 0 0 5px rgba(81, 203, 238, 0); 
+	-webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 0); 
+	-moz-box-shadow: 0 0 5px rgba(81, 203, 238, 0); 
+} 
+
+.contact input:focus, .contact textarea:focus { 
+	border: 1px solid #ddd; 
+	background-color: #fff; 
+	color:#333; 
+	outline: none;
+	position: relative;
+	z-index: 5;
+	
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	-webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	-moz-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	
+	transition: all 0.25s ease-in-out; 
+	-webkit-transition: all 0.25s ease-in-out; 
+	-moz-transition: all 0.25s ease-in-out; 
+}
+.contact input.error, .contact textarea.error {
+	box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+	border: 1px solid #faabab;
+	background: #fef3f3
+}
+
+.contact input.submit { 
+	width: auto; 
+	cursor: pointer; 
+	position: relative;
+	border: 1px solid #282828; 
+	color:#fff; 
+	padding: 6px 16px;
+	text-decoration: none;
+	font-size: 0.7em;
+	background:-webkit-gradient(
+	    linear,
+	    left bottom,
+    	left top,
+	    color-stop(0.12, rgb(60,60,60)),
+	    color-stop(1, rgb(85,85,85))
+	);
+	background:-moz-linear-gradient(
+	    center bottom,
+	    rgb(60,60,60) 12%,
+    	rgb(85,85,85) 100%
+	);
+	background:#555; 
+	box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+	
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+}
+.contact input.submit:hover { 
+	background: #282828 !important; 
+	transition: none;
+	-webkit-transition: none;
+	-moz-transition: none; 
+}
+
+.contact fieldset { padding:20px; border:1px solid #eee; -webkit-border-radius:8px; -moz-border-radius:8px;	border-radius:8px; margin:0; width: 340px;}
+.contact legend { padding:7px 10px; font-weight:bold; color:#000; border:1px solid #eee; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; margin-bottom:0 !important; margin-bottom:20px; width: 260px;}
+
+/* Form style (end) */
+
+/* Error label style (fold) */
+.error label {
+	font-size: 0.8em; 
+    color: #faabab;
+}
+/* Error label style (end) */
+
+/* Ajax result page style (fold) */
+#result {
+	font: 1em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+#result h1 {
+	font-size: 18px;
+}
+/* Ajax result page style (end) */
+
+/* gmap (fold) 
+ * google maps breaks when the max-width of img tag is set to 100%
+ */
+img {
+    max-width: none;
+}
+/* gmap (end) */

@@ -1,0 +1,1438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="SCAPCliente.exe" version="4.0.2.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SCAPSetup" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SCAPSetup.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAP_Estados.dll" size="23040">
+      <assemblyIdentity name="Interop.SCAP_Estados" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Oh781xo0FIeux8kyp0jz5GTokHc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPAjuste.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPAjuste" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>feGbcTm2AD7EENN8NVVyu1Zbzwg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPBanco.dll" size="23040">
+      <assemblyIdentity name="Interop.SCAPBanco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>KK4hffN9MNNKvdPNltYXBP7a5LQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPBusqueda.dll" size="11776">
+      <assemblyIdentity name="Interop.SCAPBusqueda" version="7.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>4/LRFBe/GY7jg3Ym3ZcNhOzN5dk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPBusquedaArticulos.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPBusquedaArticulos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>/TvxWa1L+RbOG+nLHda9gruz0e4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPBusquedaProfesor.dll" size="11776">
+      <assemblyIdentity name="Interop.SCAPBusquedaProfesor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>4qsRsh6g2/VEHBeH23rm3vaXQjw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPCaja.dll" size="14848">
+      <assemblyIdentity name="Interop.SCAPCaja" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>KorkQfRjIYgpXmdr3khjbWiHwBY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPCajaConfiguracion.dll" size="57344">
+      <assemblyIdentity name="Interop.SCAPCajaConfiguracion" version="9.4.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>2wUfBPGqg7L7D4OOnJTopfZrBY8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPCajaCorte.dll" size="19456">
+      <assemblyIdentity name="Interop.SCAPCajaCorte" version="4.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yIMm1QEFlaJjk8zZ7X7ATlPyt8U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPCategoria.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPCategoria" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>V8yda+v7qhO4mEQq+uAKgXcwwK8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPCFDError.dll" size="32768">
+      <assemblyIdentity name="Interop.SCAPCFDError" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>bZiUzoChihJ2uZNVYqfN8KpJc8A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPCia.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPCia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>7P5vmhaeAKR8eL1oD/LQLAUM+6g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPComision.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPComision" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>3LAEF0PEMZ44/k9bRBMdPzUHpGo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPComisionPago.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPComisionPago" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>caD44Q7AyM0LaTUb3Z1bO0hkDck=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPComisionPeriodo.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPComisionPeriodo" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OSeslVWRWR2T3Gd6F4aTnPFn96M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPConceptoContable.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPConceptoContable" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>X7k0FPIi+kYqGrz1kOXIFshtrvo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPConceptoVenta.dll" size="45056">
+      <assemblyIdentity name="Interop.SCAPConceptoVenta" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>pTyaHJD3ZZLgNnI9uaY2pR4+jmA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPConsultaAlumno.dll" size="16384">
+      <assemblyIdentity name="Interop.SCAPConsultaAlumno" version="1.5.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xGQ3CpA62ym0q1MdTgweHaIzjeA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPConsultaSCAP3.dll" size="12288">
+      <assemblyIdentity name="Interop.SCAPConsultaSCAP3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>cu/SrOjHFPEuebddR9rNpqWcqaU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPConsultaUniversal.dll" size="12288">
+      <assemblyIdentity name="Interop.SCAPConsultaUniversal" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>T1SL6/P57KXZn7Zt7nnIb8mm/qM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPConsultaVersion3.dll" size="10240">
+      <assemblyIdentity name="Interop.SCAPConsultaVersion3" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>UPKNkW7Kkd1ne5ZrzmX6CjUjlGU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPControlesAlumno.dll" size="61440">
+      <assemblyIdentity name="Interop.SCAPControlesAlumno" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>AWqZ6KaAUhyxc/I41gsoAqlW3jQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPDeposito.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPDeposito" version="8.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>6ucB6wK0p6AWo+MlMqwpW5/mQyE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPDepositoCorporativo.dll" size="32768">
+      <assemblyIdentity name="Interop.SCAPDepositoCorporativo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>CRCbNiCz0ivYOJU4XXD40vCIOT0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPDescarga.dll" size="7680">
+      <assemblyIdentity name="Interop.SCAPDescarga" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>UOffUzV3/KebkFvWWBCI7bwNrnM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPDocumento.dll" size="53248">
+      <assemblyIdentity name="Interop.SCAPDocumento" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>tKtWKcNS5lahYRBX2HHJ2a5m5D8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPEmpresa.dll" size="23040">
+      <assemblyIdentity name="Interop.SCAPEmpresa" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>oy5ffj6zVwx9oNEnlwuFMGPAWhc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPFactura.dll" size="53248">
+      <assemblyIdentity name="Interop.SCAPFactura" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>GZMpJiVebsmLz562O8vqdeV5ZaI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPFacturaManual.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPFacturaManual" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>6E9aAxR9CCo88uWF0URJwrfnljU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPFiltro.dll" size="8704">
+      <assemblyIdentity name="Interop.SCAPFiltro" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>kddAKhOsWy9cdRW60A+MBoAfjaA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPInfMovtosInterSAP.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPInfMovtosInterSAP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>fZGl8KV38P53zveGCUMMBWmkgLI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPInventario.dll" size="14848">
+      <assemblyIdentity name="Interop.SCAPInventario" version="28.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>neDTC4U4WLNZUg7uEV3ga7NUcjA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPMagazine.dll" size="32768">
+      <assemblyIdentity name="Interop.SCAPMagazine" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>+eXdchgOuOL95BbN90+SZjAMGjY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPMetodoPago.dll" size="32768">
+      <assemblyIdentity name="Interop.SCAPMetodoPago" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nGlLf2h4KkA+Bpk8ZkYmPjEqRLo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPModificaAsiento.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPModificaAsiento" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>jwhquAcuH0xUeLynpmi8qBcZaTE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPModifRegInter.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPModifRegInter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Eh9zn3KUnx64gapF73AqpMM044E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPModRegEmpI.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPModRegEmpI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>isXoSTVtHUN4Spq2EnaDg/irAms=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPModulo.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPModulo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>lnthb9mF5yQzcd6saTraHOB5ALo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPModuloSesion.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPModuloSesion" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>A8YWLmJPsRF87Luxf6Htgv0e5CQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPMonitor.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPMonitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>XLG8e57K9Zhhbczz48v7LgyCl0M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPMttoFiltro.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPMttoFiltro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Q/P2X/2j2dNYU+kMAuD/k7vBaUI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPPais.dll" size="32768">
+      <assemblyIdentity name="Interop.SCAPPais" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>exUxrR6dRzQgZDUirXPbwYSv7lU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPPeriodoAnticipo.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPPeriodoAnticipo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>FTn55PWKmo6+WFYInzQ3AY9owi4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPReporteCajas.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPReporteCajas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>oiRPhTvucH9JfBo3x/BlktgRvTQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPSaldos.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPSaldos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>T+yJ0aKkA3q4ek+fl7owtzaaKcA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPSalida.dll" size="24576">
+      <assemblyIdentity name="Interop.SCAPSalida" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>e8MrQ3Q5mBCj9jj2I8mv4tWXMls=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPSesion.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPSesion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qFnNhvjBCEwCwT0sv3km+sGxEmU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPSistema.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPSistema" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>mJpt66D/TF+p2AdoXJEzGj677ic=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPTercero.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPTercero" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qJj+MXZwo0Ssa9E9MpuMEL0ECUM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPTipoDeposito.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPTipoDeposito" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>b4rrOKfG/1OGtdrc507bUNBGjSE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>  
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPTipoDocumento.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPTipoDocumento" version="5.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Y+pTtieRC2i1BzddA9jh5PAFciI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPTipoPago.dll" size="69632">
+      <assemblyIdentity name="Interop.SCAPTipoPago" version="1.7.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dm1wh9uBrlGLos6/YSu8y3K7MRQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPTransformaCuenta.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPTransformaCuenta" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>sJpn3O51AmwyUw8pwCGKtz2E5Po=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPUnidadMedida.dll" size="23040">
+      <assemblyIdentity name="Interop.SCAPUnidadMedida" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>vrhK0IzZNHgC9Z8RfUet9Xai8SE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPUsuarios.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPUsuarios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>k5DVt+NWj1K7MLXkmmpz1FXJsp4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPUsuarioSesion.dll" size="36864">
+      <assemblyIdentity name="Interop.SCAPUsuarioSesion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>eu+XPORXlXtwix+0UdPaEX9NWN8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SCAPWeb.dll" size="11776">
+      <assemblyIdentity name="Interop.SCAPWeb" version="14.2.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>sFwe3ItZhhg5VyC21PDmUepCm2A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.toWord.dll" size="4096">
+      <assemblyIdentity name="Interop.toWord" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>FW1MjZH0Zk+BiquMgaK4FyAJE/4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SCAPSetup.exe" size="16384">
+      <assemblyIdentity name="SCAPSetup" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>t1gtkorjcZHVNEWOqaY9q2lX2DM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="SCAPAjuste.ocx" asmv2:size="385024" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ErcG74jeKhgwXsOfEjEA0j+fjdc=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{fea7654f-f160-4a0d-b7d9-5074becd8ada}" version="2.1" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{f5115b01-22c3-4917-ae14-af58e9a9126f}" threadingModel="Apartment" tlbid="{fea7654f-f160-4a0d-b7d9-5074becd8ada}" progid="SCAPAjuste.Registro" />
+    <comClass clsid="{3ee35b14-53b4-4184-a060-54232b1f7b12}" threadingModel="Apartment" tlbid="{fea7654f-f160-4a0d-b7d9-5074becd8ada}" progid="SCAPAjuste.Lista" />
+  </file>
+  <file name="SCAPBanco.ocx" asmv2:size="176128" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vd3kwnKPgmAsMi/Y2hzVpaAuy4I=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{78aee48d-e173-4b0d-8bff-b512a735edd0}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{97995533-a2f3-4e2e-9336-0ebbe667f7ac}" threadingModel="Apartment" tlbid="{78aee48d-e173-4b0d-8bff-b512a735edd0}" progid="SCAPBanco.Registro" />
+    <comClass clsid="{45dad04a-999c-4c89-88a4-464a65e42c5a}" threadingModel="Apartment" tlbid="{78aee48d-e173-4b0d-8bff-b512a735edd0}" progid="SCAPBanco.Lista" />
+  </file>
+  <file name="SCAPBusqueda.ocx" asmv2:size="102400" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q4NhtUUqk7B6R+mRMBmBIY33AKY=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{d0e07075-c5a2-4bd0-8104-faa44c8c3e4c}" version="7.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{03242931-2497-4130-93c2-899855a848d1}" threadingModel="Apartment" tlbid="{d0e07075-c5a2-4bd0-8104-faa44c8c3e4c}" progid="SCAPBusqueda.ctlBusqueda" />
+  </file>
+  <file name="SCAPBusquedaArticulo.ocx" asmv2:size="69632" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ihOuFVmowW1SBaVuxTJCvD+Kdbk=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{488c5247-2e39-4f8f-9682-e389eccea8bb}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{79dffec0-fd2e-49cf-8c61-457c91f53edb}" threadingModel="Apartment" tlbid="{488c5247-2e39-4f8f-9682-e389eccea8bb}" progid="SCAPBusquedaArticulos.ctlArticulos" />
+  </file>
+  <file name="SCAPBusquedaP.ocx" asmv2:size="90112" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oJKT3L3azKczv7glRy6bk6yyu5o=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{dd133a48-c1a6-4eb0-b772-b3d2346ca034}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{f18a0591-6556-476a-9f35-8afda06ea0a3}" threadingModel="Apartment" tlbid="{dd133a48-c1a6-4eb0-b772-b3d2346ca034}" progid="SCAPBusquedaProfesor.ctlBusquedaP" />
+  </file>
+  <file name="SCAPCaja.ocx" asmv2:size="815104" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vPAi+gjvaCcadtPXaLT4VuTYPvM=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c2dad9eb-d7cd-4d8c-96aa-4ecee10c857f}" version="8.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{564a04d4-75e8-4bf3-9240-835555a3a0fa}" threadingModel="Apartment" tlbid="{c2dad9eb-d7cd-4d8c-96aa-4ecee10c857f}" progid="SCAPCaja.Registro" />
+  </file>  
+  <file name="SCAPCajaConfiguracion.ocx" asmv2:size="688128" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QtHLOiySK+8sV1y2eHUAEMuskfU=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{b13e1585-4b36-4acf-bc36-6bd15277f8c2}" version="9.4" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{312f90c5-f7ba-4e6e-9565-8a5bef5fb746}" threadingModel="Apartment" tlbid="{b13e1585-4b36-4acf-bc36-6bd15277f8c2}" progid="SCAPCajaConfiguracion.Registro" />
+    <comClass clsid="{7f0d30d3-a56d-4d46-81ec-288a1a730824}" threadingModel="Apartment" tlbid="{b13e1585-4b36-4acf-bc36-6bd15277f8c2}" progid="SCAPCajaConfiguracion.Lista" />
+  </file>
+  <file name="SCAPCajaCorte.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>23PmlJm7uTVc97tOCGP79xlAuIE=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{5a245a68-ec70-4167-a6f2-60cf2d150f82}" version="4.1" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{b13a067b-af4d-4d32-ad26-f0f14a3b7b88}" threadingModel="Apartment" tlbid="{5a245a68-ec70-4167-a6f2-60cf2d150f82}" progid="SCAPCajaCorte.Movimientos" />
+    <comClass clsid="{4807ab38-c6da-40e2-9f7a-da7adcccc47f}" threadingModel="Apartment" tlbid="{5a245a68-ec70-4167-a6f2-60cf2d150f82}" progid="SCAPCajaCorte.Registro" />
+  </file>
+  <file name="SCAPCategoria.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>e0ITMnFgYiKAPj86inM8U9HP230=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{68fc2f25-2068-4910-98ba-7649ba2d1a55}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{8ce932a6-bcce-47a5-a299-98e2a0c1d040}" threadingModel="Apartment" tlbid="{68fc2f25-2068-4910-98ba-7649ba2d1a55}" progid="SCAPCategoria.Registro" />
+    <comClass clsid="{539c51d7-3bc9-416e-bbcb-61a1ae5ace12}" threadingModel="Apartment" tlbid="{68fc2f25-2068-4910-98ba-7649ba2d1a55}" progid="SCAPCategoria.Lista" />
+  </file>
+  <file name="SCAPCFDError.ocx" asmv2:size="266240" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KZ2DN1vhZ5RsrV/kwXSNhBxghvg=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{12a1d441-e253-4aa1-9a65-3f261e3d101e}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{0a501403-4123-445b-9ef8-d3d9b0ff86ca}" threadingModel="Apartment" tlbid="{12a1d441-e253-4aa1-9a65-3f261e3d101e}" progid="SCAPCFDError.Registro" />
+    <comClass clsid="{33a13d9d-493e-4cdf-a25e-41692fa5e9c6}" threadingModel="Apartment" tlbid="{12a1d441-e253-4aa1-9a65-3f261e3d101e}" progid="SCAPCFDError.Lista" />
+  </file>
+  <file name="SCAPCia.ocx" asmv2:size="204800" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6LneOG9zPz8RBDnlr0ky4h6BYl4=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c893fd42-3b72-4f85-a290-d4a23d9d61c4}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{04032e0c-55fa-48d4-a0ce-bb5b829552bc}" threadingModel="Apartment" tlbid="{c893fd42-3b72-4f85-a290-d4a23d9d61c4}" progid="SCAPCia.Registro" />
+    <comClass clsid="{734aa455-9d53-4117-a636-8e56ccdb80c9}" threadingModel="Apartment" tlbid="{c893fd42-3b72-4f85-a290-d4a23d9d61c4}" progid="SCAPCia.Lista" />
+  </file>
+  <file name="SCAPComision.ocx" asmv2:size="229376" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OWACx2UuJZISEV5bCFDN2x2zFFU=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{3549ead7-39e8-4ccc-9706-3aad62cd6b8f}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{617057a5-4d4d-4f59-a48f-a069d7ff6a5d}" threadingModel="Apartment" tlbid="{3549ead7-39e8-4ccc-9706-3aad62cd6b8f}" progid="SCAPComision.Lista" />
+  </file>
+  <file name="SCAPComisionPago.ocx" asmv2:size="253952" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>07z3+DWKTFdxS3ZoU0d0GqvSxtY=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{b459e6a9-29d3-4376-aebe-a3dd2777950d}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{d31373d0-a1a7-41bc-84eb-b53e0624d89a}" threadingModel="Apartment" tlbid="{b459e6a9-29d3-4376-aebe-a3dd2777950d}" progid="SCAPComisionPago.Lista" />
+  </file>
+  <file name="SCAPComisionPeriodo.ocx" asmv2:size="229376" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>AaqlPrrpud4a9nDbRXb9NJOEKHQ=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{0c5c519e-941d-44db-8dde-4fae73708a87}" version="1.2" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{4e075888-b4cb-41e1-b1ea-32ad1edbeb90}" threadingModel="Apartment" tlbid="{0c5c519e-941d-44db-8dde-4fae73708a87}" progid="SCAPComisionPeriodo.Registro" />
+    <comClass clsid="{bd035a36-e458-47b2-8f0a-046dcd04d402}" threadingModel="Apartment" tlbid="{0c5c519e-941d-44db-8dde-4fae73708a87}" progid="SCAPComisionPeriodo.Lista" />
+  </file>
+  <file name="SCAPConceptoContable.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>L3N3Ohs2qKfpfhAv7T3wvHY05KU=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{bbced4ad-5530-45c8-8636-7334d490bbdb}" version="1.1" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{3a1777c3-6c9c-4aa5-9df0-8900a87070ac}" threadingModel="Apartment" tlbid="{bbced4ad-5530-45c8-8636-7334d490bbdb}" progid="SCAPConceptoContable.Registro" />
+    <comClass clsid="{8e28a981-a251-4332-97f5-5835ae91f6e8}" threadingModel="Apartment" tlbid="{bbced4ad-5530-45c8-8636-7334d490bbdb}" progid="SCAPConceptoContable.Lista" />
+  </file>
+  <file name="SCAPConceptoVenta.ocx" asmv2:size="303104" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0m6jNZYvzJXkMQ1SR8jVdM0HrXY=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{bba0c8b0-ded7-4fed-9917-dbe1dc4418e6}" version="1.1" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{b315d03c-a872-475f-84b2-86434780a891}" threadingModel="Apartment" tlbid="{bba0c8b0-ded7-4fed-9917-dbe1dc4418e6}" progid="SCAPConceptoVenta.Registro" />
+    <comClass clsid="{f4434c1e-326e-4150-b4f8-58114320fc4e}" threadingModel="Apartment" tlbid="{bba0c8b0-ded7-4fed-9917-dbe1dc4418e6}" progid="SCAPConceptoVenta.Lista" />
+  </file>
+  <file name="SCAPConsultaAlumno.ocx" asmv2:size="122880" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QuVIEyRpqRJsi72Gs83p2UKzrus=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{43873275-7f8d-4553-b945-477afa10fdf1}" version="1.5" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{4fda1ec3-d9ba-4d97-a69c-cf0a77d047f5}" threadingModel="Apartment" tlbid="{43873275-7f8d-4553-b945-477afa10fdf1}" progid="SCAPConsultaAlumno.ConsultaAlumno" />
+  </file>
+  <file name="SCAPConsultaSCAP3.ocx" asmv2:size="45056" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RqtZVfeWeHuN8ZkRAXLshEvbma8=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{2db47e31-90d1-42ec-ab39-751e9c6263c9}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{c160c1d0-6dbc-438f-baea-966404af5ec1}" threadingModel="Apartment" tlbid="{2db47e31-90d1-42ec-ab39-751e9c6263c9}" progid="SCAPConsultaSCAP3.Lista" />
+  </file>
+  <file name="SCAPConsultaUniversal.ocx" asmv2:size="32768" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GcubdtzW4uiFXnLIh+xcXIy37I4=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{ded1aabe-9c04-4ed5-991f-9fee56d97f9b}" version="2.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{e1a518d7-e229-405e-842f-dea58ae3b10c}" threadingModel="Apartment" tlbid="{ded1aabe-9c04-4ed5-991f-9fee56d97f9b}" progid="SCAPConsultaUniversal.Lista" />
+  </file>
+  <file name="SCAPConsultaVersion3.ocx" asmv2:size="180224" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jWXaliN3P7cCd+uyCEWdR/S/EUk=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{b40f5843-7fa6-472b-b914-76c461e3b4a3}" version="1.1" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{b52d7f9b-510f-4a9a-be05-0712402e86c5}" threadingModel="Apartment" tlbid="{b40f5843-7fa6-472b-b914-76c461e3b4a3}" progid="SCAPConsultaVersion3.Version3" />
+  </file>
+  <file name="SCAPControlesAlumno.ocx" asmv2:size="335872" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bxZxD7sAR/qbCdenTGDxcXRYGo0=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" version="1.2" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{3053a232-b84c-4933-a64c-69f58024a746}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Generales" />
+    <comClass clsid="{9044ce57-2180-4cf9-a0b9-f68efff10c4d}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Empresariales" />
+    <comClass clsid="{1a3699b0-c8f5-4601-9860-c72f5a089641}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Terceros" />
+    <comClass clsid="{a6c35441-203b-44ac-a609-0fea6f482ba2}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Kardex" />
+    <comClass clsid="{b1d23f63-7234-45f2-ae9b-b97a9d099b53}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Pagos" />
+    <comClass clsid="{9f98bbdd-ae2a-48c8-80d0-094758227ca3}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Ventas" />
+    <comClass clsid="{8b3666af-540a-49c7-849c-52734fa438f7}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Documentos" />
+    <comClass clsid="{96ffb429-5285-43b3-9890-e596b675deb8}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.Saldos" />
+    <comClass clsid="{d782e346-6c62-41c8-a09a-1bb6f1734dd4}" threadingModel="Apartment" tlbid="{66e15041-2c25-4ca1-b5bb-ca4ec4ab3ca7}" progid="SCAPControlesAlumno.SaldosNew" />
+  </file>
+  <file name="SCAPDeposito.ocx" asmv2:size="397312" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OGkyztjLAc9dlX6iYNjUOmiw0go=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{5647dc79-51f4-4132-a0fe-ed56a0813e40}" version="8.1" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{563e970f-b081-451b-b3d3-c203971a0dd9}" threadingModel="Apartment" tlbid="{5647dc79-51f4-4132-a0fe-ed56a0813e40}" progid="SCAPDeposito.Registro" />
+    <comClass clsid="{8e1c88db-567a-410c-ba3f-b393b6a5cace}" threadingModel="Apartment" tlbid="{5647dc79-51f4-4132-a0fe-ed56a0813e40}" progid="SCAPDeposito.Lista" />
+  </file>
+  <file name="SCAPDepositoCorporativo.ocx" asmv2:size="204800" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nVgeq1LDAfexyGyRdtKtaeWhWsE=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{300f1923-ec3b-4435-a167-e83b578eca59}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{c5248850-e4de-4149-97f4-0769cd688419}" threadingModel="Apartment" tlbid="{300f1923-ec3b-4435-a167-e83b578eca59}" progid="SCAPDepositoCorporativo.Registro" />
+    <comClass clsid="{776cd27b-55e9-4a2c-a5cd-7fdda1ca31fd}" threadingModel="Apartment" tlbid="{300f1923-ec3b-4435-a167-e83b578eca59}" progid="SCAPDepositoCorporativo.Lista" />
+  </file>
+  <file name="SCAPDescarga.ocx" asmv2:size="28672" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>04mgm7PBKKtTcb6qeu4RfNLiTBk=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{2fe0b77f-0643-490f-8568-bdfcb3f957ab}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{85ad831d-e99f-44bc-a16a-475a94b947a5}" threadingModel="Apartment" tlbid="{2fe0b77f-0643-490f-8568-bdfcb3f957ab}" progid="SCAPDescarga.Descarga" />
+  </file>
+  <file name="SCAPDocumento.ocx" asmv2:size="692224" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Ob+UQIdfU33VQUWW28ar7x329Qg=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{566a3ba6-7b06-4ab9-962b-4f1219ccb7c0}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{4331ea14-81dc-4634-90c4-4530d6596cd2}" threadingModel="Apartment" tlbid="{566a3ba6-7b06-4ab9-962b-4f1219ccb7c0}" progid="SCAPDocumento.Registro" />
+    <comClass clsid="{380d172e-35fd-4dd9-884f-9449dd695110}" threadingModel="Apartment" tlbid="{566a3ba6-7b06-4ab9-962b-4f1219ccb7c0}" progid="SCAPDocumento.Lista" />
+    <comClass clsid="{6c98244e-f1c2-4b9f-ae51-ef0443863f87}" threadingModel="Apartment" tlbid="{566a3ba6-7b06-4ab9-962b-4f1219ccb7c0}" progid="SCAPDocumento.ctlConcepto" />
+    <comClass clsid="{0d8a673c-afbc-42b0-ad59-5f2200bec76e}" threadingModel="Apartment" tlbid="{566a3ba6-7b06-4ab9-962b-4f1219ccb7c0}" progid="SCAPDocumento.ctlSaldoCurso" />
+    <comClass clsid="{dc9183fe-2238-4b71-99ab-c30548b99641}" threadingModel="Apartment" tlbid="{566a3ba6-7b06-4ab9-962b-4f1219ccb7c0}" progid="SCAPDocumento.Movimientos" />
+  </file>
+  <file name="SCAPEmpresa.ocx" asmv2:size="245760" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ygbksH9M7w7iZeRaiGFFdXAyjts=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{8ad1cf8f-f590-4ee3-b9d6-e89194c182bf}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{bf3a3bd8-402a-46a8-a89a-6b440b1f4770}" threadingModel="Apartment" tlbid="{8ad1cf8f-f590-4ee3-b9d6-e89194c182bf}" progid="SCAPEmpresa.Registro" />
+    <comClass clsid="{d000daa5-2ae3-4b5f-89bb-07cfc511bc93}" threadingModel="Apartment" tlbid="{8ad1cf8f-f590-4ee3-b9d6-e89194c182bf}" progid="SCAPEmpresa.Lista" />
+  </file>
+  <file name="SCAPEstados.ocx" asmv2:size="180224" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z6xUi8+9XYyuMJRpI0/m+uII7ZY=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{499bc638-333c-44a1-a045-544a36716f30}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{1518fb79-1986-4da0-b561-eb977014dcc1}" threadingModel="Apartment" tlbid="{499bc638-333c-44a1-a045-544a36716f30}" progid="SCAP_Estados.Registro" />
+    <comClass clsid="{2c05ec33-3323-4b11-bf96-3a575c7ef7a3}" threadingModel="Apartment" tlbid="{499bc638-333c-44a1-a045-544a36716f30}" progid="SCAP_Estados.Lista" />
+  </file>
+  <file name="SCAPFactura.ocx" asmv2:size="688128" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vFdcv3nw+FVA/gXxkFDCXSLZ5ZU=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{2d4d2868-1feb-442b-bab4-5a2e7ed843de}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{f5497ffa-c516-4a66-925b-7f2e9b59ad05}" threadingModel="Apartment" tlbid="{2d4d2868-1feb-442b-bab4-5a2e7ed843de}" progid="SCAPFactura.Registro" />
+    <comClass clsid="{4cca8575-a09b-4bc2-8796-e4b7616878bb}" threadingModel="Apartment" tlbid="{2d4d2868-1feb-442b-bab4-5a2e7ed843de}" progid="SCAPFactura.Lista" />
+    <comClass clsid="{0d1cc2bf-ef08-4aa9-b699-017d00574327}" threadingModel="Apartment" tlbid="{2d4d2868-1feb-442b-bab4-5a2e7ed843de}" progid="SCAPFactura.RegistroAjuste" />
+    <comClass clsid="{f8dca25f-92ba-42f4-85db-e1af1fd6de88}" threadingModel="Apartment" tlbid="{2d4d2868-1feb-442b-bab4-5a2e7ed843de}" progid="SCAPFactura.ctlConcepto" />
+  </file>
+  <file name="SCAPFacturaManual.ocx" asmv2:size="303104" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/oqCHqGW8nC+pdeZBV2nKpHV0i0=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c362ecf0-ba12-4ff0-bc02-bc1ece8e9658}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{e9f90224-8d9c-4c5c-addc-b5c11a76f6e4}" threadingModel="Apartment" tlbid="{c362ecf0-ba12-4ff0-bc02-bc1ece8e9658}" progid="SCAPFacturaManual.Registro" />
+    <comClass clsid="{a3104f73-5279-455f-9bf8-c8c6699f3042}" threadingModel="Apartment" tlbid="{c362ecf0-ba12-4ff0-bc02-bc1ece8e9658}" progid="SCAPFacturaManual.Lista" />
+  </file>
+  <file name="SCAPFiltro.ocx" asmv2:size="200704" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zXTxurUgKBjdwzBjK6PvdaxdI2s=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{3208687c-812d-4b7b-a566-3308a47ad042}" version="2.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{ff6d200a-1d54-4f53-829f-99323e4aa278}" threadingModel="Apartment" tlbid="{3208687c-812d-4b7b-a566-3308a47ad042}" progid="SCAPFiltro.ctlFiltro" />
+  </file>
+  <file name="SCAPInfMovtosInterSAP.ocx" asmv2:size="126976" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7BRXH9oafpVHRsTZNaTTmq2EwuI=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{4f472c44-5a3c-4bbb-8aab-de620534a507}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{1e3c1c00-003f-49af-934b-410b91d46e41}" threadingModel="Apartment" tlbid="{4f472c44-5a3c-4bbb-8aab-de620534a507}" progid="SCAPInfMovtosInterSAP.InfMovtosSAP" />
+  </file>
+  <file name="SCAPInventario.ocx" asmv2:size="274432" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>J38pd1/2GKzFS4cuWiu+NZWa52E=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c80bc95a-ce19-4d9d-9a30-9351538b943f}" version="28.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{424d4614-7339-4885-96a1-1d31682843a0}" threadingModel="Apartment" tlbid="{c80bc95a-ce19-4d9d-9a30-9351538b943f}" progid="SCAPInventario.InventarioSAP" />
+  </file>
+  <file name="SCAPMagazine.ocx" asmv2:size="311296" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8rOBH5vWZU/6vl/TlBivCB6jUF4=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{1fab6338-e315-4015-ac2d-569751323d46}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{23c44caa-5ecd-41bb-aca4-7f12dcc4efa8}" threadingModel="Apartment" tlbid="{1fab6338-e315-4015-ac2d-569751323d46}" progid="SCAPMagazine.Registro" />
+    <comClass clsid="{8cea636f-3131-49d4-9fb2-5d3a2d85dafc}" threadingModel="Apartment" tlbid="{1fab6338-e315-4015-ac2d-569751323d46}" progid="SCAPMagazine.Lista" />
+  </file>
+  <file name="SCAPMetodoPago.ocx" asmv2:size="172032" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KQqycyvYVIBvq2J6hB6Faz2D8Cc=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{07a015b7-c2ad-4463-bbcf-906358323441}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{9958ac70-901e-4f16-bdfa-4bdd7978ac3e}" threadingModel="Apartment" tlbid="{07a015b7-c2ad-4463-bbcf-906358323441}" progid="SCAPMetodoPago.Registro" />
+    <comClass clsid="{4b0e240e-828b-40f7-a0fb-59a878d6e854}" threadingModel="Apartment" tlbid="{07a015b7-c2ad-4463-bbcf-906358323441}" progid="SCAPMetodoPago.Lista" />
+  </file>
+  <file name="SCAPModificaAsiento.ocx" asmv2:size="282624" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DOonneHATUC24m96usx6UsXllus=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{ddf23a9f-2c0e-4cd6-a6ee-a42f1679a90e}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{609bfd71-69c9-44e8-9095-9139d447dbcb}" threadingModel="Apartment" tlbid="{ddf23a9f-2c0e-4cd6-a6ee-a42f1679a90e}" progid="SCAPModificaAsiento.ModificaAsiento" />
+  </file>
+  <file name="SCAPModifRegInter.ocx" asmv2:size="335872" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bvx1PAItZSqxoAfJA6fkxhS5pNM=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{96528b1b-f41e-465e-86b5-99beedc7f65a}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{e3767840-972f-4680-8821-ecc0951cd3a0}" threadingModel="Apartment" tlbid="{96528b1b-f41e-465e-86b5-99beedc7f65a}" progid="SCAPModifRegInter.ModificaAsiento" />
+  </file>
+  <file name="SCAPModRegEmpI.ocx" asmv2:size="290816" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>rz9ny3M9TcOf80FWaWijj5ps/I0=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c1c1aa08-0e8d-4373-a1cc-4e66900b6a79}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{0ddc0741-e03d-4711-a3b0-c87d6d3fcc09}" threadingModel="Apartment" tlbid="{c1c1aa08-0e8d-4373-a1cc-4e66900b6a79}" progid="SCAPModRegEmpI.ModificaAsiento" />
+  </file>
+  <file name="SCAPModulo.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OlmME/Afu8VGzEMyaHZWD7nA/YM=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{69c431ce-01f7-4e54-895b-b1e3987a684e}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{756238d3-47c4-4910-b7a6-c2eaa486dd35}" threadingModel="Apartment" tlbid="{69c431ce-01f7-4e54-895b-b1e3987a684e}" progid="SCAPModulo.Registro" />
+    <comClass clsid="{b4f5d671-f643-490e-ad48-31b69169ceb0}" threadingModel="Apartment" tlbid="{69c431ce-01f7-4e54-895b-b1e3987a684e}" progid="SCAPModulo.Lista" />
+  </file>
+  <file name="SCAPModuloSesion.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z5yyxsZFtzk+ur0fMZxJORaaxTE=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{d2e5cd14-287a-4ac4-bbd7-38ba900fd0f0}" version="1.2" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{ebbbac55-39d9-4ea7-bd42-3732a7c875e5}" threadingModel="Apartment" tlbid="{d2e5cd14-287a-4ac4-bbd7-38ba900fd0f0}" progid="SCAPModuloSesion.Registro" />
+    <comClass clsid="{10c5a644-61de-40e3-8e92-bf895c377228}" threadingModel="Apartment" tlbid="{d2e5cd14-287a-4ac4-bbd7-38ba900fd0f0}" progid="SCAPModuloSesion.Lista" />
+  </file>
+  <file name="SCAPMonitor.ocx" asmv2:size="413696" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>x2Bv2j5ZDgrGgL8MrLKXE0rnfog=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{8a58d1b3-f4a1-4831-b56b-13017c7d9833}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{45355865-71e0-4b3c-936c-9252095e7866}" threadingModel="Apartment" tlbid="{8a58d1b3-f4a1-4831-b56b-13017c7d9833}" progid="SCAPMonitor.Monitor" />
+  </file>
+  <file name="SCAPMttoFiltro.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GfroiUkUz5H5C4p8+gSTDc02jCA=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{11067a17-0968-4d24-ab61-188732d7f85b}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{0e129226-61a0-4341-abd3-4abfe0a89c8b}" threadingModel="Apartment" tlbid="{11067a17-0968-4d24-ab61-188732d7f85b}" progid="SCAPMttoFiltro.Registro" />
+    <comClass clsid="{0b3c9fc5-0cf0-4b3e-8b77-f51f0c4372a1}" threadingModel="Apartment" tlbid="{11067a17-0968-4d24-ab61-188732d7f85b}" progid="SCAPMttoFiltro.Lista" />
+  </file>
+  <file name="SCAPPais.ocx" asmv2:size="172032" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VliEUcPha1yAw+h9lmwxjGsq3Oo=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{add1a52a-be87-43d1-ac1c-7838768d398e}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{c77a290f-a906-4456-900e-865d4e1b3365}" threadingModel="Apartment" tlbid="{add1a52a-be87-43d1-ac1c-7838768d398e}" progid="SCAPPais.Registro" />
+    <comClass clsid="{1e01cfef-d1f4-406c-8f60-60a3f038a7b3}" threadingModel="Apartment" tlbid="{add1a52a-be87-43d1-ac1c-7838768d398e}" progid="SCAPPais.Lista" />
+  </file>
+  <file name="SCAPPeriodoAnticipo.ocx" asmv2:size="192512" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>y2BCb7mLI/hu0bEjKvZifabHoJ8=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{af4c5e74-0fa4-4207-8d7d-5dab30c5363b}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{8c096725-7737-44cf-9e6a-c5dd87eb3e10}" threadingModel="Apartment" tlbid="{af4c5e74-0fa4-4207-8d7d-5dab30c5363b}" progid="SCAPPeriodoAnticipo.Registro" />
+    <comClass clsid="{b97317d7-010c-4371-b966-9c3dbad662cc}" threadingModel="Apartment" tlbid="{af4c5e74-0fa4-4207-8d7d-5dab30c5363b}" progid="SCAPPeriodoAnticipo.Lista" />
+  </file>
+  <file name="SCAPReporteCajas.ocx" asmv2:size="126976" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a5RvrmAi7yGm9tlWsp/NdjDlZIY=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{2c7c405c-ed0c-4f5d-8838-00899f333e47}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{f87ecc8b-12bf-4227-88d6-653f3d32f39b}" threadingModel="Apartment" tlbid="{2c7c405c-ed0c-4f5d-8838-00899f333e47}" progid="SCAPReporteCajas.Visor" />
+  </file>
+  <file name="SCAPSaldos.ocx" asmv2:size="143360" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nbFNDEBzlRH2pQMEKEpzVxpbt4k=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{d6cf3cab-4407-4015-91d1-65de8ae011d5}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{172fc716-3cbc-46ce-9f8b-b7ed89aedc4b}" threadingModel="Apartment" tlbid="{d6cf3cab-4407-4015-91d1-65de8ae011d5}" progid="SCAPSaldos.Lista" />
+  </file>
+  <file name="SCAPSalida.ocx" asmv2:size="278528" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qUxLacP2aAz34YeMwyLwuRq+Kt4=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c1322506-ac25-48f8-bf0b-3d21b590f71c}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{02311691-d41e-4117-8e75-bfe8bb6484a6}" threadingModel="Apartment" tlbid="{c1322506-ac25-48f8-bf0b-3d21b590f71c}" progid="SCAPSalida.Lista" />
+  </file>
+  <file name="SCAPSesion.ocx" asmv2:size="188416" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>I9LAhW/U6ObK2h7v5KB/zrMbtiM=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{2d61af0d-046d-464b-82aa-a9c6b568cb79}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{e6c0fe4e-6031-4eb8-aae8-6e910f5974c9}" threadingModel="Apartment" tlbid="{2d61af0d-046d-464b-82aa-a9c6b568cb79}" progid="SCAPSesion.Registro" />
+    <comClass clsid="{23237a91-6262-44a5-bb5b-4a55994846b4}" threadingModel="Apartment" tlbid="{2d61af0d-046d-464b-82aa-a9c6b568cb79}" progid="SCAPSesion.Lista" />
+  </file>
+  <file name="SCAPSistema.ocx" asmv2:size="180224" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LSECC9orKAzFO1/Dloq06KomIpQ=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{4efe3d5e-3b86-4c47-80a9-6885225eb7b5}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{7051796f-f25d-437a-a9d4-757cb2f790a3}" threadingModel="Apartment" tlbid="{4efe3d5e-3b86-4c47-80a9-6885225eb7b5}" progid="SCAPSistema.Registro" />
+    <comClass clsid="{6b5392d8-5673-4922-836f-7911014f11d5}" threadingModel="Apartment" tlbid="{4efe3d5e-3b86-4c47-80a9-6885225eb7b5}" progid="SCAPSistema.Lista" />
+  </file>
+  <file name="SCAPTercero.ocx" asmv2:size="266240" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TSCwV8e0ktoh8ZhW8eaJsggkEFg=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c1f05bdc-2190-41fb-8501-7cfde650da0d}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{51286738-bcb4-46a9-867a-7ad87cb1dd21}" threadingModel="Apartment" tlbid="{c1f05bdc-2190-41fb-8501-7cfde650da0d}" progid="SCAPTercero.Registro" />
+    <comClass clsid="{956bad53-a563-4b84-a0c3-8eb1facdf8cb}" threadingModel="Apartment" tlbid="{c1f05bdc-2190-41fb-8501-7cfde650da0d}" progid="SCAPTercero.Lista" />
+  </file>
+  <file name="SCAPTipoDeposito.ocx" asmv2:size="180224" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dO2ehCmeV3jKJsmo0UzPwgxdt0c=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c52efff4-562f-47f3-9c33-6abb9a1859b3}" version="2.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{b1789fe0-5fda-4b13-b087-b80053316b7d}" threadingModel="Apartment" tlbid="{c52efff4-562f-47f3-9c33-6abb9a1859b3}" progid="SCAPTipoDeposito.Registro" />
+    <comClass clsid="{20b047ce-663e-4614-8ade-44d32463cb52}" threadingModel="Apartment" tlbid="{c52efff4-562f-47f3-9c33-6abb9a1859b3}" progid="SCAPTipoDeposito.Lista" />
+  </file>
+  <file name="SCAPTipoDocumento.ocx" asmv2:size="180224" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GHqRdhCumnLzA+Wh4d7IjdADTMw=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{549e4805-d1c6-4551-84ed-20e3fb165197}" version="5.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{2042ee5d-0d18-464f-97d5-7cf0b4bb2a79}" threadingModel="Apartment" tlbid="{549e4805-d1c6-4551-84ed-20e3fb165197}" progid="SCAPTipoDocumento.Registro" />
+    <comClass clsid="{ba655a40-ada7-4a3d-8212-a86f744c9663}" threadingModel="Apartment" tlbid="{549e4805-d1c6-4551-84ed-20e3fb165197}" progid="SCAPTipoDocumento.Lista" />
+  </file>
+  <file name="SCAPTipoPago.ocx" asmv2:size="294912" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tIqGOQ2D4bTtV4b2M+ZB2my7I5Q=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{e1084dda-9b7b-446c-9176-1a93bb4f2512}" version="1.7" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{abe2b221-38dc-4a80-8e3d-c6b4dfc62f23}" threadingModel="Apartment" tlbid="{e1084dda-9b7b-446c-9176-1a93bb4f2512}" progid="SCAPTipoPago.Registro" />
+    <comClass clsid="{bbd96cd6-4e5b-469d-aef5-a2b7656cbb02}" threadingModel="Apartment" tlbid="{e1084dda-9b7b-446c-9176-1a93bb4f2512}" progid="SCAPTipoPago.Lista" />
+  </file>
+  <file name="SCAPTransformaCuenta.ocx" asmv2:size="184320" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>x2jZTt7rzHmIS7DJCbaZ732reoM=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{aa84c0e2-5485-4d67-aec0-c8fef6af9984}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{276826aa-a475-41d1-b68a-c0bd8126d4d8}" threadingModel="Apartment" tlbid="{aa84c0e2-5485-4d67-aec0-c8fef6af9984}" progid="SCAPTransformaCuenta.Registro" />
+    <comClass clsid="{bed1bd98-cea1-41d2-9ed2-87e2ee44d55b}" threadingModel="Apartment" tlbid="{aa84c0e2-5485-4d67-aec0-c8fef6af9984}" progid="SCAPTransformaCuenta.Lista" />
+  </file>
+  <file name="SCAPUnidadMedida.ocx" asmv2:size="172032" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>o+xKgUM9lc1yQAUTRJTf3kyY4ow=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c944505f-4617-400a-8ea6-e4148230cd2e}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{8c755e41-663c-4691-92ca-965c5cba4849}" threadingModel="Apartment" tlbid="{c944505f-4617-400a-8ea6-e4148230cd2e}" progid="SCAPUnidadMedida.Registro" />
+    <comClass clsid="{44110e9c-b053-4888-a808-f507697eab5c}" threadingModel="Apartment" tlbid="{c944505f-4617-400a-8ea6-e4148230cd2e}" progid="SCAPUnidadMedida.Lista" />
+  </file>  
+  <file name="SCAPUsuarios.ocx" asmv2:size="409600" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mwSPGVfHDjwsGICUXYdDshB+zso=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{5878fd6c-2c62-4f2b-9f72-d2e9b03e8372}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{20ecccfa-c4a9-4ca5-8f1f-962a106c3482}" threadingModel="Apartment" tlbid="{5878fd6c-2c62-4f2b-9f72-d2e9b03e8372}" progid="SCAPUsuarios.Registro" />
+    <comClass clsid="{2da9f822-e3fc-4fa6-8fad-0c722ac2c706}" threadingModel="Apartment" tlbid="{5878fd6c-2c62-4f2b-9f72-d2e9b03e8372}" progid="SCAPUsuarios.Lista" />
+  </file>
+  <file name="SCAPUsuarioSesion.ocx" asmv2:size="192512" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CPF0FPwBexPJ/Nh6XHOxJUUXcI0=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{b0cd5b97-deb7-4828-89ee-89ad2fb127ef}" version="1.0" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{f17ee124-d4aa-41b9-9d80-9dcc79577c3a}" threadingModel="Apartment" tlbid="{b0cd5b97-deb7-4828-89ee-89ad2fb127ef}" progid="SCAPUsuarioSesion.Registro" />
+    <comClass clsid="{37cfa742-86af-479f-864d-d8e9f04516a4}" threadingModel="Apartment" tlbid="{b0cd5b97-deb7-4828-89ee-89ad2fb127ef}" progid="SCAPUsuarioSesion.Lista" />
+  </file>
+  <file name="SCAPWeb.ocx" asmv2:size="278528" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mM/IyKLvmnoX8NH4QiryoyK87vE=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{3735c12e-2365-4edb-95a3-598b261af39c}" version="14.2" helpdir="" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{4d1d3e41-c6cf-4bfa-9b3d-33ce22376393}" threadingModel="Apartment" tlbid="{3735c12e-2365-4edb-95a3-598b261af39c}" progid="SCAPWeb.SCAP" />
+  </file>
+  <file name="toWord.dll" asmv2:size="36864" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>V7DXjUAJObZX71tO19QUb88SOjM=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{ad890f71-dcdf-484b-880d-a8e05553d66a}" version="1.0" helpdir="" resourceid="0" flags="HASDISKIMAGE" />
+    <comClass clsid="{5f800fdf-30ec-4963-aa4f-a26d65842702}" threadingModel="Apartment" tlbid="{ad890f71-dcdf-484b-880d-a8e05553d66a}" progid="toWord.CSpanish" />
+    <comClass clsid="{bcd8016e-28d3-49c3-9136-ead84329f8a6}" threadingModel="Apartment" tlbid="{ad890f71-dcdf-484b-880d-a8e05553d66a}" progid="toWord.CEnglish" />
+  </file>
+</asmv1:assembly>

@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /crm/app
+    RewriteRule    ^$    webroot/    [L]
+    RewriteRule    (.*) webroot/$1    [L]
+ </IfModule>
+php_value memory_limit 2048M
+php_value max_execution_time 60000
+php_value mysql.connect_timeout 24000
+php_value default_socket_timeout 24000
