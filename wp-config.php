@@ -19,10 +19,10 @@
 define('DB_NAME', 'interlingua_sitio');
 
 /** MySQL database username */
-define('DB_USER', 'clicker360');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'jBT3cwg5VJ04vwVm0v5r');
+define('DB_PASSWORD', 'huo0lpaw');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
