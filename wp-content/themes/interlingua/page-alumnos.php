@@ -61,7 +61,7 @@ Template Name: Alumnos
                   alert("Error, por favor intentalo mas tarde.");
               },
               success:function(data){
-                console.log(data);
+                jQuery("#tableAS400").html(data);
               }
           });
 				}
@@ -186,6 +186,8 @@ Template Name: Alumnos
                               <td>8.00</td>
                               <td>.00</td>
                             </tr>
+
+                            <div id="tableAS400"></div>
 
                           </table>
 
