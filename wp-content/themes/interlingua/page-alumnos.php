@@ -13,7 +13,7 @@ Template Name: Alumnos
 			<script type="text/javascript" charset="utf-8">
 				jQuery(document).on("ready",index);
 				function index(){
-					
+				  jQuery("#historial-calificaciones").show();
 				}
 			</script>
 

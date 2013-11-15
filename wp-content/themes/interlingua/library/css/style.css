@@ -7275,7 +7275,7 @@ input[type=radio]{
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	width:220px;
-	display: none;
+  display: block;
 }
 #toogleLogin{
 	color: #FFFFFF;

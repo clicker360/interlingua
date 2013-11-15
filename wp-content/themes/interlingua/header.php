@@ -199,7 +199,6 @@
 								<nav role="navigation">
 									<?php bones_main_nav(); ?>
 								</nav>
-								
 								<?php if (!isset($_SESSION["id_alumno"])) { ?>
 								<div id="login_alumnos">
 									<span class="txt-acceso">ACCESO A ALUMNOS</span>
@@ -226,7 +225,7 @@
 									<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
 									<div class="nombreSession">Jonathan Álvarez</div>
 									<div class="matriculaSession">09969869</div>
-									<a class="btnCuenta" href="http://localhost/hugo/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
+									<a class="btnCuenta" href="http://localhost/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
 									<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
 								</div>
 								<?php } ?>

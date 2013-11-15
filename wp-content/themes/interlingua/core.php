@@ -53,7 +53,7 @@ function login(){
 	if($usuario == $usuario_valid && $password == $password_valid){
 		$_SESSION['id_alumno'] = $id_valid;
 		$_SESSION['alumno'] = $usuario_valid;
-		$respuesta["url"] = "http://localhost/hugo/interlingua/acceso-a-alumnos/";
+		$respuesta["url"] = "http://localhost/interlingua/acceso-a-alumnos/";
 		$respuesta["error"] = False;
 	}else{
 		$respuesta["error"] = True;
