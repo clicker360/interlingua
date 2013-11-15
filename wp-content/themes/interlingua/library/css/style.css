@@ -4046,6 +4046,7 @@ label.error {
   color: #747373;
   padding: 7px 42px 0 30px;
   cursor: pointer;
+  width: 90px;
 }
 .inicio-calif:hover{
   color: #656565;
@@ -7280,7 +7281,7 @@ input[type=radio]{
 #toogleLogin{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
-	margin-top: 90px;
+	margin-top: 88px;
 	z-index: 9999;
 	position:absolute;
 	margin-left: 800px;
@@ -7381,7 +7382,7 @@ input[type=radio]{
 	padding:5px 12px 2px 12px;
 	float: right;
 	margin-right: 7px;
-	margin-top: -12px;
+	margin-top: -9px;
 	text-decoration: none;
 	width: 100px;
 	text-align:center;
@@ -7412,6 +7413,27 @@ input[type=radio]{
     float: right;
     text-align: center;
   }
+}
+.triangulo-der-1{
+  position:relative;
+  float: left;
+  border-bottom: 14px solid rgba(227, 227, 227, 0);
+  border-left: 15px solid #E3E3E3;
+  border-top: 14px solid rgba(227, 227, 227, 0);
+  height: 0;
+  width: 0;
+  z-index: 9999;
+}
+.triangulo-der{
+  float: left;
+  border-bottom: 14px solid rgba(3, 152, 169, 0);
+  border-left: 15px solid #0398A9;
+  border-top: 14px solid rgba(3, 152, 169, 0);
+  height: 0;
+  width: 0;
+}
+.moveizq{
+  margin-left: -15px;
 }
 /*
 DESKTOP

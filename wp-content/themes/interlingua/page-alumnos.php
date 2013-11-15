@@ -13,7 +13,16 @@ Template Name: Alumnos
 			<script type="text/javascript" charset="utf-8">
 				jQuery(document).on("ready",index);
 				function index(){
-				  jQuery("#historial-calificaciones").show();
+          jQuery(".calificaciones-alumnos").on("click",function(e){
+            e.preventDefault();
+            jQuery("#info-alumnos").hide();
+            jQuery(".historial-calificaciones").fadeIn("slow");
+          });
+          jQuery(".inicio-calif").on("click",function(e){
+            e.preventDefault();
+            jQuery(".historial-calificaciones").hide();
+            jQuery("#info-alumnos").fadeIn("slow");
+          });
 				}
 			</script>
 
@@ -39,7 +48,7 @@ Template Name: Alumnos
 
 								<!-- Comienza Seccion Alumnos -->
 
-
+        <div id="info-alumnos">
 
 					<div class="menu-alumnos">
 						<div class="inicio-alumnos">Inicio</div>
@@ -95,12 +104,14 @@ Template Name: Alumnos
 						</div>
 
 					</div>
+
+        </div>
 				<div class="historial-calificaciones">
-					<h1 class="page-title">Revisa tu historial académico</h1>
+					<!--h1 class="page-title">Revisa tu historial académico</h1-->
 
 					<div class="menu-calificaciones">
-						<div class="inicio-calif">Inicio</div>
-						<div class="calificaciones-calif">Calificaciones</div>
+						<div class="inicio-calif">Inicio</div><div class="triangulo-der-1"></div>
+						<div class="calificaciones-calif moveizq">Calificaciones</div><div class="triangulo-der"></div>
 					</div>
 
 					<div class="calificaciones-tabla">

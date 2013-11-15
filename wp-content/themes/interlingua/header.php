@@ -208,7 +208,7 @@
 									<form name="frmLogin" id="frmLogin" action="#" method="post">
 										<input type="hidden" name="action" value="login" id="action" />
 										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-										<label class="lblLog" for="usuario">Nombre de usuario</label>
+										<label class="lblLog" for="usuario">Matrícula</label>
 									    <input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
 									    <label class="lblLog" for="usuario">Contraseña</label>
 									    <input type="password" name="pass" value="" id="pass" class="inptLog" required/>

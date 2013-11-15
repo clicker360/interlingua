@@ -27,45 +27,45 @@ function login(){
 		session_regenerate_id();
 	}
 	
-	//Conexión AS-400
-	/*$server="Driver={Client Access ODBC Driver (32-bit)};System=xxx.xxx.xxx.xxx;
-	Uid=PROCESOS;Pwd=EISL;"; #the name of the iSeries
-	$user="user"; #a valid username that will connect to the DB
-	$pass="password"; #a password for the username
-	
-	$conn=odbc_connect($server,$user,$pass); #you may have to remove quotes
-	
-	#Check Connection
-	if ($conn == false) {
-		echo "Not able to connect to database...";
-	}*/
-	
 	//datos recuperados
 	$usuario = trim($_POST['usuario']);
 	$password = trim($_POST['pass']);	
-	
-	//usuarios simulados
-	$id_valid = "100";
-	$usuario_valid = "admin";
-	$password_valid = "admin";
-	
-	//verifica datos
-	if($usuario == $usuario_valid && $password == $password_valid){
-		$_SESSION['id_alumno'] = $id_valid;
-		$_SESSION['alumno'] = $usuario_valid;
-		$respuesta["url"] = "http://localhost/interlingua/acceso-a-alumnos/";
-		$respuesta["error"] = False;
-	}else{
+
+	//Verifica Login AS-400
+	try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+
+		$sql = "CALL SCAPAL.TALUM_PASSWORD('".$usuario."', ?)";
+		$stmt = $db->prepare($sql);    
+		$stmt->bindParam(1, $return_value, PDO::PARAM_STR, 10);
+		$stmt->execute();
+
+		//verifica datos
+		//if($usuario == $usuario_valid && $password == $password_valid){
+		if($return_value != "" && $password == $return_value){
+			$_SESSION['id_alumno'] = md5($usuario);
+			$_SESSION['alumno'] = $usuario;
+			$respuesta["url"] = "http://interlingua.com.mx/acceso-a-alumnos/";
+			$respuesta["error"] = False;
+		}else{
+			$respuesta["error"] = True;
+			$respuesta["mensaje"] = "El usuario o contraseña son incorrectos";
+		}
+
+		$bdh = null;
+
+	} catch (PDOException $e){
 		$respuesta["error"] = True;
-		$respuesta["mensaje"] = "El usuario o contraseña son incorrectos";
+		$respuesta["mensaje"] = "Failed: ".$e->getMessage();
 	}
+	
 	echo json_encode($respuesta);
 }
 
 function logout(){		
 	session_start();
 	session_destroy();
-	echo "http://localhost/hugo/interlingua";
+	echo "http://interlingua.com.mx/";
 }
 
 function getAlumno(){
