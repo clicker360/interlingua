@@ -42,7 +42,7 @@ function login(){
 
 		//verifica datos
 		//if($usuario == $usuario_valid && $password == $password_valid){
-		if($return_value != "" && $password == $return_value){
+		if(trim($return_value)!="" && $password==trim($return_value)){
 			$_SESSION['id_alumno'] = md5($usuario);
 			$_SESSION['alumno'] = $usuario;
 			$respuesta["url"] = "http://interlingua.com.mx/acceso-a-alumnos/";
@@ -51,7 +51,7 @@ function login(){
 			$respuesta["error"] = True;
 			$respuesta["mensaje"] = "El usuario o contraseña son incorrectos";
 			echo $return_value;
-			echo $sql;
+			echo $password;
 		}
 
 		$bdh = null;
