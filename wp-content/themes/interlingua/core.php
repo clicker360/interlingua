@@ -134,10 +134,10 @@ function getAlumno(){
 function getKardex(){
 	$matricula = $_POST['matricula'];
 	$kardex = array();
-	$htmlTable = '<table width="90%" class="tabla-calif">
+	$htmlTable = '<table width="100%" class="tabla-calif">
                     <tr class="top-labels">
                       <td colspan="7">Cursos</td>
-                      <td colspan="7">Calificaciones</td>
+                      <td colspan="3">Calificaciones</td>
                     </tr>
                     <tr class="bg-labels">
                         <td>Plantel</td>
@@ -162,7 +162,7 @@ function getKardex(){
 				foreach($rows as $value){
 					$htmlTable .= "<tr>";
 					foreach($value as $val){
-						$htmlTable .= "<td>".$val."<td>";
+						$htmlTable .= "<td>".$val."</td>";
 					}
 					$htmlTable .= "</tr>";
 				}
