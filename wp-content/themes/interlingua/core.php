@@ -134,6 +134,7 @@ function getAlumno(){
 function getKardex(){
 	$matricula = $_POST['matricula'];
 	$kardex = array();
+	$htmlTable = "";
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
 
@@ -143,15 +144,17 @@ function getKardex(){
 			$rows = $stmt->fetchAll(PDO::FETCH_NUM);
 			if($rows){
 				foreach($rows as $value){
-					echo "<br>";
+					$htmlTable .= "<tr>";
 					foreach($value as $val){
-						echo $val."|";
+						$htmlTable .= "<td>".$val."<td>";
 					}
+					$htmlTable .= "</tr>";
 				}
 			}
 		}while($stmt->nextRowset());
 
 		$bdh = null;
+		$kardex['table'] = $htmlTable;
 		$kardex['error'] = FALSE;
 
 	} catch (PDOException $e){
