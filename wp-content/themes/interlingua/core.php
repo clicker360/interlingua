@@ -11,6 +11,9 @@ switch ($action) {
 	case 'getAlumno':
 		getAlumno();
 		break;
+	case 'getKardex':
+		getKardex();
+		break;
 }
 
 
@@ -75,7 +78,7 @@ function getAlumno(){
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
 
-		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('OT17688',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('".$matricula."',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $db->prepare($sql);  
 		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
 		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
@@ -99,27 +102,6 @@ function getAlumno(){
 		$stmt->bindParam(20, $horario, PDO::PARAM_STR, 7);
 
 		$stmt->execute();
-		
-		/*print "Paterno : $paterno <br>";
-		print "Materno : $materno <br>";
-		print "Nombre : $nombre <br>";
-		print "Sexo : $sexo <br>";
-		print "Edad : $edad <br>";
-		print "Fecha Nacimiento : $fechanacimiento <br>";
-		print "Telefono 1 : $telefono1 <br>";
-		print "Telefono 2 : $telefono2 <br>";
-		print "Calle : $calle <br>";
-		print "Colonia : $colonia <br>";
-		print "Poblacion : $poblacion <br>";
-		print "CP : $cp <br>";
-		print "Ultimo Plantel : $ultimoplantel <br>";
-		print "Ultimo Curso : $ultimocurso <br>";
-		print "Ultimo Horario : $ultimoHorario <br>";
-		print "Ultimo Nivel : $ultimoNivel <br>";
-		print "Email : $email <br>";
-		print "Nombre Plantel : $nombrePlantel <br>";
-		print "Nombre Curso : $nombreCurso <br>";
-		print "Horario : $horario <br>";*/
 
 		$alumno['nombre'] = trim($nombre)." ".trim($paterno)." ".trim($materno);
 		$alumno['matricula'] = trim($matricula);
@@ -146,5 +128,35 @@ function getAlumno(){
 	}
 
 	echo json_encode($alumno);
+}
+
+
+function getKardex(){
+	$matricula = $_POST['matricula'];
+	$kardex = array();
+	try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+
+		$sql = "CALL SCAPAL.TALUM_KARDEX('".$matricula."')";
+		$stmt = $db->query($sql);
+		do {
+			$rows = $stmt->fetchAll(PDO::FETCH_NUM);
+			if($rows){
+				foreach($rows as $value){
+					echo "<br>";
+					foreach($value as $val){
+						echo $val."|";
+					}
+				}
+			}
+		}while($stmt->nextRowset());
+
+		$bdh = null;
+		$kardex['error'] = FALSE;
+
+	} catch (PDOException $e){
+		$kardex['error'] = "Failed: ".$e->getMessage();
+	}
+	echo json_encode($kardex);
 }
 ?>

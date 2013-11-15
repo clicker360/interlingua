@@ -1,9 +1,9 @@
 <?php
-session_start();
+/*session_start();
 if (!isset($_SESSION["id_alumno"])) {
 	header("Location: http://interlingua.com.mx/");
 	exit();
-}
+}*/
 /*
 Template Name: Alumnos
 */
@@ -50,6 +50,18 @@ Template Name: Alumnos
                 if(data.colonia!=null && data.colonia!=""){jQuery("#campo-colonia-alumno").html(data.colonia)}else{jQuery(".colonia-alumno").hide();jQuery("#campo-colonia-alumno").hide();}
                 if(data.poblacion!=null && data.poblacion!=""){jQuery("#campo-poblacion-alumno").html(data.poblacion)}else{jQuery(".poblacion-alumno").hide();jQuery("#campo-poblacion-alumno").hide();}
                 if(data.cp!=null && data.cp!=""){jQuery("#campo-cp-alumno").html(data.cp)}else{jQuery(".cp-alumno").hide();jQuery("#campo-cp-alumno").hide();}
+              }
+          });
+          jQuery.ajax({
+              type:"post",
+              url: ruta+"/core.php",
+              data: {action:"getKardex",matricula:"<?php echo $_SESSION['alumno']; ?>"},
+              dataType:"json",
+              error:function(){
+                  alert("Error, por favor intentalo mas tarde.");
+              },
+              success:function(data){
+                console.log(data);
               }
           });
 				}
@@ -150,18 +162,18 @@ Template Name: Alumnos
                               <td colspan="7">Calificaciones</td>
                             </tr>
                             <tr class="bg-labels">
-                              <td width="10%">Plantel</td>
-                              <td width="12%">Horario</td>
-                              <td width="7%">Curso</td>
-                              <td width="6%">Nivel</td>
-                              <td width="6%">Aula</td>
-                              <td width="7%">Faltas</td>
-                              <td width="25%">Periodo</td>
-                              <td width="8%">Escrita</td>
-                              <td width="7%">Oral</td>
-                              <td width="12%">Mak-Up</td>
-                          
+                                <td width="10%">Plantel</td>
+                                <td width="12%">Horario</td>
+                                <td width="7%">Curso</td>
+                                <td width="6%">Nivel</td>
+                                <td width="6%">Aula</td>
+                                <td width="7%">Faltas</td>
+                                <td width="25%">Periodo</td>
+                                <td width="8%">Escrita</td>
+                                <td width="7%">Oral</td>
+                                <td width="12%">Mak-Up</td>
                             </tr>
+
                             <tr>
                               <td>Queretaro</td>
                               <td>1810-1930</td>
@@ -174,138 +186,7 @@ Template Name: Alumnos
                               <td>8.00</td>
                               <td>.00</td>
                             </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                              <td>1810-1930</td>
-                              <td>S</td>
-                              <td>1</td>
-                              <td>10</td>
-                              <td>0</td>
-                              <td>20081006-20081028</td>
-                              <td>9.60</td>
-                              <td>8.00</td>
-                              <td>.00</td>
-                            </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                              <td>1810-1930</td>
-                              <td>S</td>
-                              <td>2</td>
-                              <td>03</td>
-                              <td>2</td>
-                              <td>20081029-20081121</td>
-                              <td>9.20</td>
-                              <td>10.00</td>
-                              <td>.00</td>
-                            </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                              <td>1810-1930</td>
-                              <td>S</td>
-                              <td>3</td>
-                              <td>03</td>
-                              <td>0</td>
-                              <td>20081124-20081216</td>
-                              <td>9.20</td>
-                              <td>8.00</td>
-                              <td>.00</td>
-                            </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                                    <td>1810-1930</td>
-                                    <td>S</td>
-                                    <td>4</td>
-                                    <td>13</td>
-                                    <td>2</td>
-                                    <td>20090107-20090129</td>
-                                    <td>9.20</td>
-                                    <td>8.00</td>
-                                    <td>.00</td>
-                            </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                              <td>1810-1930</td>
-                                    <td>S</td>
-                                    <td>5</td>
-                                    <td>04</td>
-                                    <td>1</td>
-                                    <td>20090130-20090224</td>
-                                    <td>9.40</td>
-                                    <td>8.00</td>
-                                    <td>.00</td>
-                            </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                              <td>1810-1930</td>
-                                    <td>S</td>
-                                    <td>6</td>
-                                    <td>01</td>
-                                    <td>1</td>
-                                    <td>20090225-20090320</td>
-                                    <td>8.60</td>
-                                    <td>8.00</td>
-                                    <td>.00</td>
-                            </tr> 
-                             <tr>
-                              <td>&nbsp;</td>
-                                    <td>1810-1930</td>
-                                    <td>S</td>
-                                    <td>7</td>
-                                    <td>14</td>
-                                    <td>4</td>
-                                    <td>20090323-20090421</td>
-                                    <td>8.80</td>
-                                    <td>8.00</td>
-                                    <td>.00</td
-                            ></tr>  
-                            <tr>
-                              <td>&nbsp;</td>
-                                    <td>1940-2100</td>
-                                    <td>S</td>
-                                    <td>8</td>
-                                    <td>08</td>
-                                    <td>4</td>
-                                    <td>20090422-20090526</td>
-                                    <td>9.40</td>
-                                    <td>8.00</td>
-                                    <td>.00</td>
-                            </tr>  
-                            <tr>
-                              <td>&nbsp;</td>
-                                    <td>1940-2100</td>
-                                    <td>S</td>
-                                    <td>9</td>
-                                    <td>09</td>
-                                    <td>0</td>
-                                    <td>20090527-20090617</td>
-                                    <td>8.60</td>
-                                    <td>6.00</td>
-                                    <td>.00</td>
-                            </tr>  
-                            <tr>
-                              <td>&nbsp;</td>
-                                    <td>1810-1930</td>
-                                    <td>S</td>
-                                    <td>10</td>
-                                    <td>17</td>
-                                    <td>3</td>
-                                    <td>20090618-20090709</td>
-                                    <td>9.40</td>
-                                    <td>8.00</td>
-                                    <td>.00</td>
-                            </tr>
-                            <tr>
-                              <td>&nbsp;</td>
-                                    <td>1810-1930</td>
-                                    <td>S</td>
-                                    <td>11</td>
-                                    <td>18</td>
-                                    <td>0</td>
-                                    <td>20090710-20090731</td>
-                                    <td>.00</td>
-                                    <td>.00</td>
-                                    <td>.00</td>
-                            </tr>
+
                           </table>
 
 					</div>
