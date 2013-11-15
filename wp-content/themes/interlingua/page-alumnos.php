@@ -61,7 +61,7 @@ Template Name: Alumnos
                   alert("Error, por favor intentalo mas tarde.");
               },
               success:function(data){
-                jQuery("#tableAS400").html(data);
+                jQuery("#tableAS400").html(data.table);
               }
           });
 				}
