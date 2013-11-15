@@ -1,9 +1,9 @@
 <?php
-/*session_start();
+session_start();
 if (!isset($_SESSION["id_alumno"])) {
 	header("Location: http://interlingua.com.mx/");
 	exit();
-}*/
+}
 /*
 Template Name: Alumnos
 */
