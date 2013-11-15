@@ -50,6 +50,8 @@ function login(){
 		}else{
 			$respuesta["error"] = True;
 			$respuesta["mensaje"] = "El usuario o contraseña son incorrectos";
+			echo $return_value;
+			echo $sql;
 		}
 
 		$bdh = null;
