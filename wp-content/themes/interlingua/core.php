@@ -131,8 +131,8 @@ function getAlumno(){
 		$alumno['sexo'] = trim($sexo);
 		$alumno['edad'] = trim($edad);
 		$alumno['fecha_nacimiento'] = trim($fechanacimiento);
-		$alumno['telefono_1'] = trim($telefono_1);
-		$alumno['telefono_2'] = trim($telefono_2);
+		$alumno['telefono_1'] = trim($telefono1);
+		$alumno['telefono_2'] = trim($telefono2);
 		$alumno['calle_num'] = trim($calle);
 		$alumno['colonia'] = trim($colonia);
 		$alumno['poblacion'] = trim($poblacion);
