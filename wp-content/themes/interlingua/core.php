@@ -69,23 +69,82 @@ function logout(){
 }
 
 function getAlumno(){
+	$matricula = $_POST['matricula'];
 	$alumno = array();
-	$alumno['nombre'] = "Hugo Espinosa";
-	$alumno['matricula'] = "206321896";
-	$alumno['plantel'] = "Polanco, DF.";
-	$alumno['curso'] = "Semi-Intensivo";
-	$alumno['horario'] = "08:00 - 10:00 am";
-	$alumno['nivel'] = "10";
-	$alumno['email'] = "vaporic@gmail.com";
-	$alumno['sexo'] = "Masculino";
-	$alumno['edad'] = "31 años";
-	$alumno['fecha_nacimiento'] = "28/06/1988";
-	$alumno['telefono_1'] = "(55)55555555";
-	$alumno['telefono_2'] = "(55)55555555";
-	$alumno['calle_num'] = "Platon 148";
-	$alumno['colonia'] = "Polanco";
-	$alumno['poblacion'] = "Ciudad De México. DF";
-	$alumno['cp'] = "011500";
+  
+	try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+
+		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('OT17688',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$stmt = $db->prepare($sql);  
+		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
+		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
+		$stmt->bindParam(3, $nombre, PDO::PARAM_STR, 100);
+		$stmt->bindParam(4, $sexo, PDO::PARAM_STR, 1);
+		$stmt->bindParam(5, $edad, PDO::PARAM_INT, 2);
+		$stmt->bindParam(6, $fechanacimiento, PDO::PARAM_INT, 8);
+		$stmt->bindParam(7, $telefono1, PDO::PARAM_STR, 15);
+		$stmt->bindParam(8, $telefono2, PDO::PARAM_STR, 15);
+		$stmt->bindParam(9, $calle, PDO::PARAM_STR, 40);
+		$stmt->bindParam(10, $colonia, PDO::PARAM_STR, 30);
+		$stmt->bindParam(11, $poblacion, PDO::PARAM_STR, 30);
+		$stmt->bindParam(12, $cp, PDO::PARAM_INT, 5);
+		$stmt->bindParam(13, $ultimoplantel, PDO::PARAM_STR, 2);
+		$stmt->bindParam(14, $ultimocurso, PDO::PARAM_STR, 20);
+		$stmt->bindParam(15, $ultimoHorario, PDO::PARAM_STR, 7);
+		$stmt->bindParam(16, $ultimoNivel, PDO::PARAM_STR, 5);
+		$stmt->bindParam(17, $email, PDO::PARAM_STR, 100);
+		$stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 150);
+		$stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 100);
+		$stmt->bindParam(20, $horario, PDO::PARAM_STR, 7);
+
+		$stmt->execute();
+		
+		/*print "Paterno : $paterno <br>";
+		print "Materno : $materno <br>";
+		print "Nombre : $nombre <br>";
+		print "Sexo : $sexo <br>";
+		print "Edad : $edad <br>";
+		print "Fecha Nacimiento : $fechanacimiento <br>";
+		print "Telefono 1 : $telefono1 <br>";
+		print "Telefono 2 : $telefono2 <br>";
+		print "Calle : $calle <br>";
+		print "Colonia : $colonia <br>";
+		print "Poblacion : $poblacion <br>";
+		print "CP : $cp <br>";
+		print "Ultimo Plantel : $ultimoplantel <br>";
+		print "Ultimo Curso : $ultimocurso <br>";
+		print "Ultimo Horario : $ultimoHorario <br>";
+		print "Ultimo Nivel : $ultimoNivel <br>";
+		print "Email : $email <br>";
+		print "Nombre Plantel : $nombrePlantel <br>";
+		print "Nombre Curso : $nombreCurso <br>";
+		print "Horario : $horario <br>";*/
+
+		$alumno['nombre'] = $nombre." ".$paterno." ".$materno;
+		$alumno['matricula'] = $matricula;
+		$alumno['plantel'] = $nombrePlantel;
+		$alumno['curso'] = $nombreCurso;
+		$alumno['horario'] = $horario;
+		$alumno['nivel'] = $ultimoNivel;
+		$alumno['email'] = $email;
+		$alumno['sexo'] = $sexo;
+		$alumno['edad'] = $edad;
+		$alumno['fecha_nacimiento'] = $fechanacimiento;
+		$alumno['telefono_1'] = $telefono_1;
+		$alumno['telefono_2'] = $telefono_2;
+		$alumno['calle_num'] = $calle;
+		$alumno['colonia'] = $colonia;
+		$alumno['poblacion'] = $poblacion;
+		$alumno['cp'] = $cp;
+		$alumno['error'] = FALSE;
+
+		$bdh = null;
+
+	} catch (PDOException $e){
+		$alumno['error'] = "Failed: ".$e->getMessage();
+	}
+
 	echo json_encode($alumno);
 }
 ?>

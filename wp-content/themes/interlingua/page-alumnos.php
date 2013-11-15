@@ -23,6 +23,35 @@ Template Name: Alumnos
             jQuery(".historial-calificaciones").hide();
             jQuery("#info-alumnos").fadeIn("slow");
           });
+          //get Alumno
+          ruta = jQuery("#ruta").val();
+          jQuery.ajax({
+              type:"post",
+              url: ruta+"/core.php",
+              data: {action:"getAlumno",matricula:$_SESSION["alumno"]},
+              dataType:"json",
+              error:function(){
+                  alert("Error, por favor intentalo mas tarde.");
+              },
+              success:function(data){
+                if(data.nombre!=""){jQuery("#nombre-alumno").html(data.nombre)}else{jQuery(".nombre-alumno").hide();jQuery("#nombre-alumno").hide()}
+                if(data.matricula!=""){jQuery("#matricula-alumno").html(data.matricula)}else{jQuery(".matricula-alumno").hide();jQuery("#matricula-alumno").hide();}
+                if(data.plantel!=""){jQuery("#ciudad-alumno").html(data.plantel)}else{jQuery(".ciudad-alumno").hide();jQuery("#ciudad-alumno").hide();}
+                if(data.curso!=""){jQuery("#curso-alumno").html(data.curso)}else{jQuery(".curso-alumno").hide();jQuery("#curso-alumno").hide();}
+                if(data.horario!=""){jQuery("#hora-alumno").html(data.horario)}else{jQuery(".hora-alumno").hide();jQuery("#hora-alumno").hide();}
+                if(data.nivel!=""){jQuery("#nivel-alumno").html(data.nivel)}else{jQuery(".nivel-alumno").hide();jQuery("#nivel-alumno").hide();}
+                if(data.email!=""){jQuery("#campo-correo-alumno").html(data.email)}else{jQuery(".correo-alumno").hide();jQuery("#campo-correo-alumno").hide();}
+                if(data.sexo!=""){jQuery("#campo-sexo-alumno").html(data.sexo)}else{jQuery(".sexo-alumno").hide();jQuery("#campo-sexo-alumno").hide();}
+                if(data.edad!=""){jQuery("#campo-edad-alumno").html(data.edad)}else{jQuery(".edad-alumno").hide();jQuery("#campo-edad-alumno").hide();}
+                if(data.fecha_nacimiento!=""){jQuery("#campo-nacimiento-alumno").html(data.fecha_nacimiento)}else{jQuery(".nacimiento-alumno").hide();jQuery("#campo-nacimiento-alumno").hide();}
+                if(data.telefono_1!=""){jQuery("#campo-telefono1-alumno").html(data.telefono_1)}else{jQuery(".telefono1-alumno").hide();jQuery("#campo-telefono1-alumno").hide();}
+                if(data.telefono_2!=""){jQuery("#campo-telefono2-alumno").html(data.telefono_2)}else{jQuery(".telefono2-alumno").hide();jQuery("#campo-telefono2-alumno").hide();}
+                if(data.calle_num!=""){jQuery("#campo-calle-numero-alumno").html(data.calle_num)}else{jQuery(".calle-numero-alumno").hide();jQuery("#campo-calle-numero-alumno").hide();}
+                if(data.colonia!=""){jQuery("#campo-colonia-alumno").html(data.colonia)}else{jQuery(".colonia-alumno").hide();jQuery("#campo-colonia-alumno").hide();}
+                if(data.poblacion!=""){jQuery("#campo-poblacion-alumno").html(data.poblacion)}else{jQuery(".poblacion-alumno").hide();jQuery("#campo-poblacion-alumno").hide();}
+                if(data.cp!=""){jQuery("#campo-cp-alumno").html(data.cp)}else{jQuery(".cp-alumno").hide();jQuery("#campo-cp-alumno").hide();}
+              }
+          });
 				}
 			</script>
 
@@ -64,12 +93,12 @@ Template Name: Alumnos
 							<div class="nivel-alumno">Nivel</div>
 						</div>
 						<div class="informacion-alumno">
-							<div class="nombre-alumno">Jonathan Álvarez</div>
-							<div class="matricula-alumno">09969869</div>
-							<div class="ciudad-alumno">Polanco, DF.</div>
-							<div class="curso-alumno">Semi-Intensivo</div>
-							<div class="hora-alumno">18:10 p.m.</div>
-							<div class="nivel-alumno">10</div>
+							<div id="nombre-alumno" class="nombre-alumno"></div>
+              <div id="matricula-alumno" class="matricula-alumno"></div>
+							<div id="ciudad-alumno" class="ciudad-alumno"></div>
+							<div id="curso-alumno" class="curso-alumno"></div>
+							<div id="hora-alumno" class="hora-alumno"></div>
+							<div id="nivel-alumno" class="nivel-alumno"></div>
 						</div>
 					</div>
 
@@ -91,16 +120,16 @@ Template Name: Alumnos
 						</div>
 
 						<div class="campos-datos-personales-alumno">
-							<div class="campo-correo-alumno">jonathan.alvarez@clicker360.com</div>
-							<div class="campo-sexo-alumno">Masculino</div>
-							<div class="campo-edad-alumno">31 años</div>
-							<div class="campo-nacimiento-alumno">09 / 09 / 1981</div>
-							<div class="campo-telefono1-alumno">(55) 55456511</div>
-							<div class="campo-telefono2-alumno">(55) 55456511</div>
-							<div class="campo-calle-numero-alumno">Platón 178</div>
-							<div class="campo-colonia-alumno">Polanco</div>
-							<div class="campo-poblacion-alumno">Ciudad de México, DF</div>
-							<div class="campo-cp-alumno">011500</div>
+							<div id="campo-correo-alumno" class="campo-correo-alumno"></div>
+							<div id="campo-sexo-alumno" class="campo-sexo-alumno"></div>
+							<div id="campo-edad-alumno" class="campo-edad-alumno"></div>
+							<div id="campo-nacimiento-alumno" class="campo-nacimiento-alumno"></div>
+							<div id="campo-telefono1-alumno" class="campo-telefono1-alumno"></div>
+							<div id="campo-telefono2-alumno" class="campo-telefono2-alumno"></div>
+							<div id="campo-calle-numero-alumno" class="campo-calle-numero-alumno"></div>
+							<div id="campo-colonia-alumno" class="campo-colonia-alumno"></div>
+							<div id="campo-poblacion-alumno" class="campo-poblacion-alumno"></div>
+							<div id="campo-cp-alumno" class="campo-cp-alumno"></div>
 						</div>
 
 					</div>
