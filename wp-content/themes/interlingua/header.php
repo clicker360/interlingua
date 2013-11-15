@@ -225,7 +225,7 @@
 									<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
 									<div class="nombreSession">Jonathan Álvarez</div>
 									<div class="matriculaSession">09969869</div>
-									<a class="btnCuenta" href="http://localhost/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
+									<a class="btnCuenta" href="http://interlingua.com.mx/acceso-a-alumnos/">Mi Cuenta</a> <br>
 									<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
 								</div>
 								<?php } ?>
