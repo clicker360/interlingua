@@ -34,22 +34,22 @@ Template Name: Alumnos
                   alert("Error, por favor intentalo mas tarde.");
               },
               success:function(data){
-                if(data.nombre!=null || data.nombre!=""){jQuery("#nombre-alumno").html(data.nombre)}else{jQuery(".nombre-alumno").hide();jQuery("#nombre-alumno").hide()}
-                if(data.matricula!=null || data.matricula!=""){jQuery("#matricula-alumno").html(data.matricula)}else{jQuery(".matricula-alumno").hide();jQuery("#matricula-alumno").hide();}
-                if(data.plantel!=null || data.plantel!=""){jQuery("#ciudad-alumno").html(data.plantel)}else{jQuery(".ciudad-alumno").hide();jQuery("#ciudad-alumno").hide();}
-                if(data.curso!=null || data.curso!=""){jQuery("#curso-alumno").html(data.curso)}else{jQuery(".curso-alumno").hide();jQuery("#curso-alumno").hide();}
-                if(data.horario!=null || data.horario!=""){jQuery("#hora-alumno").html(data.horario)}else{jQuery(".hora-alumno").hide();jQuery("#hora-alumno").hide();}
-                if(data.nivel!=null || data.nivel!=""){jQuery("#nivel-alumno").html(data.nivel)}else{jQuery(".nivel-alumno").hide();jQuery("#nivel-alumno").hide();}
-                if(data.email!=null || data.email!=""){jQuery("#campo-correo-alumno").html(data.email)}else{jQuery(".correo-alumno").hide();jQuery("#campo-correo-alumno").hide();}
-                if(data.sexo!=null || data.sexo!=""){jQuery("#campo-sexo-alumno").html(data.sexo)}else{jQuery(".sexo-alumno").hide();jQuery("#campo-sexo-alumno").hide();}
-                if(data.edad!=null || data.edad!=""){jQuery("#campo-edad-alumno").html(data.edad)}else{jQuery(".edad-alumno").hide();jQuery("#campo-edad-alumno").hide();}
-                if(data.fecha_nacimiento!=null || data.fecha_nacimiento!=""){jQuery("#campo-nacimiento-alumno").html(data.fecha_nacimiento)}else{jQuery(".nacimiento-alumno").hide();jQuery("#campo-nacimiento-alumno").hide();}
-                if(data.telefono_1!=null || data.telefono_1!=""){jQuery("#campo-telefono1-alumno").html(data.telefono_1)}else{jQuery(".telefono1-alumno").hide();jQuery("#campo-telefono1-alumno").hide();}
-                if(data.telefono_2!=null || data.telefono_2!=""){jQuery("#campo-telefono2-alumno").html(data.telefono_2)}else{jQuery(".telefono2-alumno").hide();jQuery("#campo-telefono2-alumno").hide();}
-                if(data.calle_num!=null || data.calle_num!=""){jQuery("#campo-calle-numero-alumno").html(data.calle_num)}else{jQuery(".calle-numero-alumno").hide();jQuery("#campo-calle-numero-alumno").hide();}
-                if(data.colonia!=null || data.colonia!=""){jQuery("#campo-colonia-alumno").html(data.colonia)}else{jQuery(".colonia-alumno").hide();jQuery("#campo-colonia-alumno").hide();}
-                if(data.poblacion!=null || data.poblacion!=""){jQuery("#campo-poblacion-alumno").html(data.poblacion)}else{jQuery(".poblacion-alumno").hide();jQuery("#campo-poblacion-alumno").hide();}
-                if(data.cp!=null || data.cp!=""){jQuery("#campo-cp-alumno").html(data.cp)}else{jQuery(".cp-alumno").hide();jQuery("#campo-cp-alumno").hide();}
+                if(data.nombre!=null && data.nombre!=""){jQuery("#nombre-alumno").html(data.nombre)}else{jQuery(".nombre-alumno").hide();jQuery("#nombre-alumno").hide()}
+                if(data.matricula!=null && data.matricula!=""){jQuery("#matricula-alumno").html(data.matricula)}else{jQuery(".matricula-alumno").hide();jQuery("#matricula-alumno").hide();}
+                if(data.plantel!=null && data.plantel!=""){jQuery("#ciudad-alumno").html(data.plantel)}else{jQuery(".ciudad-alumno").hide();jQuery("#ciudad-alumno").hide();}
+                if(data.curso!=null && data.curso!=""){jQuery("#curso-alumno").html(data.curso)}else{jQuery(".curso-alumno").hide();jQuery("#curso-alumno").hide();}
+                if(data.horario!=null && data.horario!=""){jQuery("#hora-alumno").html(data.horario)}else{jQuery(".hora-alumno").hide();jQuery("#hora-alumno").hide();}
+                if(data.nivel!=null && data.nivel!=""){jQuery("#nivel-alumno").html(data.nivel)}else{jQuery(".nivel-alumno").hide();jQuery("#nivel-alumno").hide();}
+                if(data.email!=null && data.email!=""){jQuery("#campo-correo-alumno").html(data.email)}else{jQuery(".correo-alumno").hide();jQuery("#campo-correo-alumno").hide();}
+                if(data.sexo!=null && data.sexo!=""){jQuery("#campo-sexo-alumno").html(data.sexo)}else{jQuery(".sexo-alumno").hide();jQuery("#campo-sexo-alumno").hide();}
+                if(data.edad!=null && data.edad!=""){jQuery("#campo-edad-alumno").html(data.edad)}else{jQuery(".edad-alumno").hide();jQuery("#campo-edad-alumno").hide();}
+                if(data.fecha_nacimiento!=null && data.fecha_nacimiento!=""){jQuery("#campo-nacimiento-alumno").html(data.fecha_nacimiento)}else{jQuery(".nacimiento-alumno").hide();jQuery("#campo-nacimiento-alumno").hide();}
+                if(data.telefono_1!=null && data.telefono_1!=""){jQuery("#campo-telefono1-alumno").html(data.telefono_1)}else{jQuery(".telefono1-alumno").hide();jQuery("#campo-telefono1-alumno").hide();}
+                if(data.telefono_2!=null && data.telefono_2!=""){jQuery("#campo-telefono2-alumno").html(data.telefono_2)}else{jQuery(".telefono2-alumno").hide();jQuery("#campo-telefono2-alumno").hide();}
+                if(data.calle_num!=null && data.calle_num!=""){jQuery("#campo-calle-numero-alumno").html(data.calle_num)}else{jQuery(".calle-numero-alumno").hide();jQuery("#campo-calle-numero-alumno").hide();}
+                if(data.colonia!=null && data.colonia!=""){jQuery("#campo-colonia-alumno").html(data.colonia)}else{jQuery(".colonia-alumno").hide();jQuery("#campo-colonia-alumno").hide();}
+                if(data.poblacion!=null && data.poblacion!=""){jQuery("#campo-poblacion-alumno").html(data.poblacion)}else{jQuery(".poblacion-alumno").hide();jQuery("#campo-poblacion-alumno").hide();}
+                if(data.cp!=null && data.cp!=""){jQuery("#campo-cp-alumno").html(data.cp)}else{jQuery(".cp-alumno").hide();jQuery("#campo-cp-alumno").hide();}
               }
           });
 				}
