@@ -134,7 +134,23 @@ function getAlumno(){
 function getKardex(){
 	$matricula = $_POST['matricula'];
 	$kardex = array();
-	$htmlTable = "";
+	$htmlTable = '<table width="90%" class="tabla-calif">
+                    <tr class="top-labels">
+                      <td colspan="7">Cursos</td>
+                      <td colspan="7">Calificaciones</td>
+                    </tr>
+                    <tr class="bg-labels">
+                        <td width="10%">Plantel</td>
+                        <td width="12%">Horario</td>
+                        <td width="7%">Curso</td>
+                        <td width="6%">Nivel</td>
+                        <td width="6%">Aula</td>
+                        <td width="7%">Faltas</td>
+                        <td width="25%">Periodo</td>
+                        <td width="8%">Escrita</td>
+                        <td width="7%">Oral</td>
+                        <td width="12%">Mak-Up</td>
+                    </tr>';
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
 
@@ -152,6 +168,8 @@ function getKardex(){
 				}
 			}
 		}while($stmt->nextRowset());
+
+		$htmlTable .= "</table>";
 
 		$bdh = null;
 		$kardex['table'] = $htmlTable;

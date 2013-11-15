@@ -156,6 +156,7 @@ Template Name: Alumnos
 					</div>
 
 					<div class="calificaciones-tabla">
+            <div id="tableAS400"></div>
 						<table width="90%" class="tabla-calif">
                             <tr class="top-labels">
                               <td colspan="7">Cursos</td>
@@ -187,7 +188,6 @@ Template Name: Alumnos
                               <td>.00</td>
                             </tr>
 
-                            <div id="tableAS400"></div>
 
                           </table>
 
