@@ -43,7 +43,7 @@ Template Name: Alumnos
                 if(data.email!=null || data.email!=""){jQuery("#campo-correo-alumno").html(data.email)}else{jQuery(".correo-alumno").hide();jQuery("#campo-correo-alumno").hide();}
                 if(data.sexo!=null || data.sexo!=""){jQuery("#campo-sexo-alumno").html(data.sexo)}else{jQuery(".sexo-alumno").hide();jQuery("#campo-sexo-alumno").hide();}
                 if(data.edad!=null || data.edad!=""){jQuery("#campo-edad-alumno").html(data.edad)}else{jQuery(".edad-alumno").hide();jQuery("#campo-edad-alumno").hide();}
-                if(data.fecha_nacimiento!=null data.fecha_nacimiento!=""){jQuery("#campo-nacimiento-alumno").html(data.fecha_nacimiento)}else{jQuery(".nacimiento-alumno").hide();jQuery("#campo-nacimiento-alumno").hide();}
+                if(data.fecha_nacimiento!=null || data.fecha_nacimiento!=""){jQuery("#campo-nacimiento-alumno").html(data.fecha_nacimiento)}else{jQuery(".nacimiento-alumno").hide();jQuery("#campo-nacimiento-alumno").hide();}
                 if(data.telefono_1!=null || data.telefono_1!=""){jQuery("#campo-telefono1-alumno").html(data.telefono_1)}else{jQuery(".telefono1-alumno").hide();jQuery("#campo-telefono1-alumno").hide();}
                 if(data.telefono_2!=null || data.telefono_2!=""){jQuery("#campo-telefono2-alumno").html(data.telefono_2)}else{jQuery(".telefono2-alumno").hide();jQuery("#campo-telefono2-alumno").hide();}
                 if(data.calle_num!=null || data.calle_num!=""){jQuery("#campo-calle-numero-alumno").html(data.calle_num)}else{jQuery(".calle-numero-alumno").hide();jQuery("#campo-calle-numero-alumno").hide();}
