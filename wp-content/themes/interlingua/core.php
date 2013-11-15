@@ -121,22 +121,22 @@ function getAlumno(){
 		print "Nombre Curso : $nombreCurso <br>";
 		print "Horario : $horario <br>";*/
 
-		$alumno['nombre'] = $nombre." ".$paterno." ".$materno;
-		$alumno['matricula'] = $matricula;
-		$alumno['plantel'] = $nombrePlantel;
-		$alumno['curso'] = $nombreCurso;
-		$alumno['horario'] = $horario;
-		$alumno['nivel'] = $ultimoNivel;
-		$alumno['email'] = $email;
-		$alumno['sexo'] = $sexo;
-		$alumno['edad'] = $edad;
-		$alumno['fecha_nacimiento'] = $fechanacimiento;
-		$alumno['telefono_1'] = $telefono_1;
-		$alumno['telefono_2'] = $telefono_2;
-		$alumno['calle_num'] = $calle;
-		$alumno['colonia'] = $colonia;
-		$alumno['poblacion'] = $poblacion;
-		$alumno['cp'] = $cp;
+		$alumno['nombre'] = trim($nombre)." ".trim($paterno)." ".trim($materno);
+		$alumno['matricula'] = trim($matricula);
+		$alumno['plantel'] = trim($nombrePlantel);
+		$alumno['curso'] = trim($nombreCurso);
+		$alumno['horario'] = trim($horario);
+		$alumno['nivel'] = trim($ultimoNivel);
+		$alumno['email'] = trim($email);
+		$alumno['sexo'] = trim($sexo);
+		$alumno['edad'] = trim($edad);
+		$alumno['fecha_nacimiento'] = trim($fechanacimiento);
+		$alumno['telefono_1'] = trim($telefono_1);
+		$alumno['telefono_2'] = trim($telefono_2);
+		$alumno['calle_num'] = trim($calle);
+		$alumno['colonia'] = trim($colonia);
+		$alumno['poblacion'] = trim($poblacion);
+		$alumno['cp'] = trim($cp);
 		$alumno['error'] = FALSE;
 
 		$bdh = null;
