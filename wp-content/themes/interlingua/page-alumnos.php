@@ -28,7 +28,7 @@ Template Name: Alumnos
           jQuery.ajax({
               type:"post",
               url: ruta+"/core.php",
-              data: {action:"getAlumno",matricula:$_SESSION["alumno"]},
+              data: {action:"getAlumno",matricula:<?php echo $_SESSION["alumno"]; ?>},
               dataType:"json",
               error:function(){
                   alert("Error, por favor intentalo mas tarde.");
