@@ -140,16 +140,16 @@ function getKardex(){
                       <td colspan="7">Calificaciones</td>
                     </tr>
                     <tr class="bg-labels">
-                        <td width="10%">Plantel</td>
-                        <td width="12%">Horario</td>
-                        <td width="7%">Curso</td>
-                        <td width="6%">Nivel</td>
-                        <td width="6%">Aula</td>
-                        <td width="7%">Faltas</td>
-                        <td width="25%">Periodo</td>
-                        <td width="8%">Escrita</td>
-                        <td width="7%">Oral</td>
-                        <td width="12%">Mak-Up</td>
+                        <td>Plantel</td>
+                        <td>Horario</td>
+                        <td>Curso</td>
+                        <td>Nivel</td>
+                        <td>Aula</td>
+                        <td>Faltas</td>
+                        <td>Periodo</td>
+                        <td>Escrita</td>
+                        <td>Oral</td>
+                        <td>Mak-Up</td>
                     </tr>';
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");

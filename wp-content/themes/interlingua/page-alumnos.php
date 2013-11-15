@@ -157,40 +157,6 @@ Template Name: Alumnos
 
 					<div class="calificaciones-tabla">
             <div id="tableAS400"></div>
-						<table width="90%" class="tabla-calif">
-                            <tr class="top-labels">
-                              <td colspan="7">Cursos</td>
-                              <td colspan="7">Calificaciones</td>
-                            </tr>
-                            <tr class="bg-labels">
-                                <td width="10%">Plantel</td>
-                                <td width="12%">Horario</td>
-                                <td width="7%">Curso</td>
-                                <td width="6%">Nivel</td>
-                                <td width="6%">Aula</td>
-                                <td width="7%">Faltas</td>
-                                <td width="25%">Periodo</td>
-                                <td width="8%">Escrita</td>
-                                <td width="7%">Oral</td>
-                                <td width="12%">Mak-Up</td>
-                            </tr>
-
-                            <tr>
-                              <td>Queretaro</td>
-                              <td>1810-1930</td>
-                              <td>S</td>
-                              <td>IN</td>
-                              <td>02</td>
-                              <td>1</td>
-                              <td>20080910-20081003</td>
-                              <td>9.40</td>
-                              <td>8.00</td>
-                              <td>.00</td>
-                            </tr>
-
-
-                          </table>
-
 					</div>
 				</div>
 
