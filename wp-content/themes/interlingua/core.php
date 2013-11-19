@@ -301,7 +301,7 @@ function getPass(){
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
 
 
-		$sql = "CALL SCAPAL.TALUM_GETPASSWORD('".$_POST["matinpt"]."',?,?,?,?,?)";
+		$sql = "CALL SCAPAL.TALUM_GETPASSWORD('".trim($_POST["matinpt"])."',?,?,?,?,?)";
 	    $stmt = $db->prepare($sql);
 	    $stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
 	    $stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
