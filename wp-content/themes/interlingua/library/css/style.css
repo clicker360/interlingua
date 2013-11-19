@@ -7264,6 +7264,18 @@ input[type=radio]{
 	padding-right:10px;
 	padding-left:5px;
 }
+#btnEnviarMagazine {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: none;
+  text-align: center;
+}
+#formulario-magazine {
+  height: 350px;
+  padding-top: 20px;
+}
 
 /* Login Acceso Alumnos */
 #login_alumnos {
