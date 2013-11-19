@@ -269,7 +269,7 @@ function saveMagazine(){
 										?,
 										?)";
 		$stmt = $db->prepare($sql);  
-		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,1);
+		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,2);
 		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
 
 		$stmt->execute();
