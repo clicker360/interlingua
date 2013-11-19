@@ -286,7 +286,7 @@ jQuery(document).ready(function() {
     });
 
     jQuery("#form1").on("submit",function(){
-        alert("submit");
+        alert(jQuery(this).validate());
     })
 
 });
