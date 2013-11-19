@@ -291,7 +291,8 @@ jQuery(document).ready(function() {
             jQuery.ajax({
               type:"post",
               url: "http://www.interlingua.com.mx/clicker360/interlingua/wp-content/themes/interlingua/core.php",
-              data: jQuery(this).serialize(),
+              //data: jQuery(this).serialize(),
+              data: {action:"saveMagazine"},
               dataType:"json",
               error:function(){
                 alert("Error, por favor intentalo mas tarde.");
