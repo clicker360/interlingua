@@ -160,7 +160,7 @@ jQuery(document).ready(function() {
 	});
     jQuery.validator.addMethod('selectcheck', function (value) {
         return (value != '0');
-    }, "year required");
+    }, "*Debes seleccionar un tipo de tel&eacute;fono");
     jQuery("form[name=frmReg]").validate({
         rules: {
             matricula: {
