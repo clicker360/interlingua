@@ -78,7 +78,7 @@ Template Name: Interlingua Magazine
 											<div class="formulario-registro-cursos wrap">
 												<div id="formulario-magazine">
 
-							<form action="http://interlingua.clicker360.com/registro" name="frmReg" id="frmReg" method="post">
+							<form action="http://interlingua.clicker360.com/registro" name="frmReg" id="form1" method="post">
                                 <!--<div style="" id="form1">-->
                                     <input type="hidden" name="origin_id" value="90" />
                                     <div id="matricula1Revista"><input type="text" name="matricula" id="txtMatriculaRevista" placeholder="Matrícula"></div>
@@ -158,7 +158,7 @@ jQuery(document).ready(function() {
     jQuery.validator.addMethod("accept", function(value, element, param) {
 	  return value.match(new RegExp("." + param + "$"));
 	});
-    jQuery("#frmReg").validate({
+    jQuery("form[name=frmReg]").validate({
         rules: {
             paterno: {
                 required: true,
