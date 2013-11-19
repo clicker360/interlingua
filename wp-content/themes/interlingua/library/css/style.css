@@ -6840,6 +6840,17 @@ label.error {
   z-index: 10000;
 }
 
+.olvidaste{
+  color: #FFFFFF;
+  display: block;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-left: 5px;
+  text-decoration: none;
+}
+#recuperafr{
+  display: none;
+}
   /*	Paginas Contacto
   	------------------------------------------ */
   #contenedor-contacto {

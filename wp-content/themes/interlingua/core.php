@@ -18,6 +18,9 @@ switch ($action) {
 	case 'saveMagazine':
 		saveMagazine();
 		break;
+	case 'getPass':
+		getPass();
+		break;
 }
 
 function saveMagazine(){	
@@ -290,4 +293,39 @@ function stripAccents($cadena){
     return utf8_encode($cadena);
 }
 
+function getPass(){		
+	$respuesta = array();
+
+
+    try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+
+
+		$sql = "CALL SCAPAL.TALUM_GETPASSWORD('".$_POST["matinpt"]."',?,?,?,?,?)";
+	    $stmt = $db->prepare($sql);
+	    $stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
+	    $stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
+	    $stmt->bindParam(3, $nombre, PDO::PARAM_STR, 100);
+	    $stmt->bindParam(4, $password, PDO::PARAM_STR, 10);
+	    $stmt->bindParam(5, $email, PDO::PARAM_STR, 100);
+	   
+	    $stmt->execute();
+	   
+	    echo $paterno."<br>";
+	    echo $materno."<br>";
+	    echo $nombre."<br>";
+	    echo $password."<br>";
+	    echo $email;
+	    $bdh = null;
+
+	    $respuesta["error"] = False;
+		$respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
+
+	} catch (PDOException $e){
+		$respuesta["error"] = True;
+		$respuesta["mensaje"] = "Failed: ".$e->getMessage();
+	}
+
+	echo json_encode($respuesta);
+}	
 ?>

@@ -109,6 +109,40 @@
 			  		window.location = data;
 			  	});
 			  });
+
+			  jQuery("#olvidaContrasena").on("click",function(e){
+			  	e.preventDefault();
+			  	jQuery("#loginfr").hide();
+			  	jQuery("#toogleLogin").css("height","106px");
+			  	jQuery(".txt-acceso").text("RECUPERAR CONTRASEÑA");
+			  	jQuery("#recuperafr").fadeIn("slow");
+
+			  	jQuery("#frmGetPass").on("submit",function(e){
+					e.preventDefault();
+					ruta = jQuery("#ruta").val();
+				
+					jQuery.ajax({
+		            	type:"post",
+		            	url: ruta+"/core.php",
+		            	data: jQuery(this).serialize(),
+		            	dataType:"json",
+		            	error:function(){
+		                	alert("Error, por favor intentalo mas tarde.");
+		            	},
+		            	success:function(data){
+		            		//success
+		            		if(data.error){
+		            			alert(data.mensaje);
+		            			location.reload();
+		            		}else{
+		            			alert(data.mensaje);
+		            			window.location = data.url;	
+		            		}
+		            	}
+		        	});
+			  	});
+			  });
+
 			});
 		</script>
 		<style>
@@ -209,15 +243,28 @@
 									<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
 								</div>
 								<div id="toogleLogin">
-									<form name="frmLogin" id="frmLogin" action="#" method="post">
-										<input type="hidden" name="action" value="login" id="action" />
-										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-										<label class="lblLog" for="usuario">Matrícula</label>
-									    <input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
-									    <label class="lblLog" for="usuario">Contraseña</label>
-									    <input type="password" name="pass" value="" id="pass" class="inptLog" required/>
-									   	<input type="submit" name="sendLogin" value="Entrar" id="sendLogin" />
-									</form>
+									<div id="loginfr">
+										<form name="frmLogin" id="frmLogin" action="#" method="post">
+											<input type="hidden" name="action" value="login" id="action" />
+											<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
+											<label class="lblLog" for="usuario">Matrícula</label>
+										    <input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
+										    <label class="lblLog" for="usuario">Contraseña</label>
+										    <input type="password" name="pass" value="" id="pass" class="inptLog" required/>
+										   	<input type="submit" name="sendLogin" value="Entrar" id="sendLogin" />
+										</form>
+										<a href="#" class="olvidaste" id="olvidaContrasena">¿Olvidaste tu contraseña?</a>
+									</div>
+									<div id="recuperafr">
+										<form name="frmGetPass" id="frmGetPass" action="#" method="post">
+											<input type="hidden" name="action" value="getPass" id="action" />
+											<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
+											<label class="lblLog" for="matinpt">Matrícula</label>
+										    <input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
+					
+										   	<input type="submit" name="sendLogin" value="Enviar" id="sendLogin" />
+										</form>
+									</div>
 								</div>
 								<?php }else{  ?>
 								<div id="login_alumnos">
