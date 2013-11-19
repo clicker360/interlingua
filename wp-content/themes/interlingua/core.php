@@ -311,11 +311,18 @@ function getPass(){
 	   
 	    $stmt->execute();
 	   
-	    echo $paterno."<br>";
-	    echo $materno."<br>";
-	    echo $nombre."<br>";
-	    echo $password."<br>";
-	    echo $email;
+
+	    if ($paterno=="" && $materno=="" && $nombre=="" && $password=="" && $email=="") {
+	    	$respuesta["error"] = True;
+			$respuesta["mensaje"] = "La matricula no existe";
+	    }else{
+	    	echo $paterno."<br>";
+		    echo $materno."<br>";
+		    echo $nombre."<br>";
+		    echo $password."<br>";
+		    echo $email;
+	    }
+
 	    $bdh = null;
 
 	    $respuesta["error"] = False;
