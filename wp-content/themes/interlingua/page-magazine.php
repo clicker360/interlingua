@@ -158,6 +158,9 @@ jQuery(document).ready(function() {
     jQuery.validator.addMethod("accept", function(value, element, param) {
 	  return value.match(new RegExp("." + param + "$"));
 	});
+    jQuery.validator.addMethod('selectcheck', function (value) {
+        return (value != '0');
+    }, "year required");
     jQuery("form[name=frmReg]").validate({
         rules: {
             matricula: {
@@ -203,7 +206,7 @@ jQuery(document).ready(function() {
                 maxlength: 10
             },
             tipotel: {
-                min:1
+                selectcheck: true
             },
             /*plantel: {
                 required: true
