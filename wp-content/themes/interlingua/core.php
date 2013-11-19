@@ -253,7 +253,7 @@ function saveMagazine(){
 
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-
+		print_r($db->errorInfo());
 		$sql = "CALL SCAPAL.TIMAG_ALTA( '".$matricula."',
 										'".$paterno."',
 										'".$materno."',
@@ -269,7 +269,8 @@ function saveMagazine(){
 										'".$registrado."',
 										?,
 										?)";
-		$stmt = $db->prepare($sql);  
+		$stmt = $db->prepare($sql);
+		print_r($db->errorInfo());  
 		$stmt->bindParam(14, $magazineId, PDO::PARAM_INT, 1);
 		$stmt->bindParam(15, $msgError, PDO::PARAM_STR, 100);
 		echo "ID: ".$magazineId."<br>";
