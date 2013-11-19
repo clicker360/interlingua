@@ -65,7 +65,7 @@ function login(){
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
 
-		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('".$matricula."',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('".$usuario."',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $db->prepare($sql);  
 		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
 		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
