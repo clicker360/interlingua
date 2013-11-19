@@ -14,6 +14,9 @@ switch ($action) {
 	case 'getKardex':
 		getKardex();
 		break;
+	case 'saveMagazine':
+		saveMagazine();
+		break;
 }
 
 
@@ -218,4 +221,7 @@ function getKardex(){
 	}
 	echo json_encode($kardex);
 }
-?>
+
+function saveMagazine(){		
+	echo "hola";
+}

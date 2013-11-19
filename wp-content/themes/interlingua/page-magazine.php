@@ -78,9 +78,10 @@ Template Name: Interlingua Magazine
 											<div class="formulario-registro-cursos wrap">
 												<div id="formulario-magazine">
 
-							<form action="http://interlingua.clicker360.com/registro" name="frmReg" id="form1" method="post">
+							<form action="http://www.interlingua.com.mx/clicker360/interlingua/wp-content/themes/interlingua/core.php" name="frmReg" id="form1" method="post">
                                 <!--<div style="" id="form1">-->
-                                    <input type="hidden" name="origin_id" value="90" />
+                                    <input type="hidden" name="action" value="90" />
+                                    <input type="hidden" name="origin_id" value="saveMagazine" />
                                     <div id="matricula1Revista"><input type="text" name="matricula" id="txtMatriculaRevista" placeholder="Matrícula"></div>
                                     <div id="paterno1Revista"><input type="text" name="paterno" id="txtPaternoRevista" placeholder="Apellido Paterno"></div>
                                     <div id="materno1Revista"><input type="text" name="materno" id="txtMaternoRevista" placeholder="Apellido Materno"></div>
