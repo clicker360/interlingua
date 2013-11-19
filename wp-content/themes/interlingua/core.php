@@ -238,7 +238,7 @@ function saveMagazine(){
 	$materno = ucfirst(stripAccents($_POST["materno"]));
 	$name = ucfirst(stripAccents($_POST["name"]));
 	$tipoTelefono = $_POST["tipotel"];
-	$telefono = $_POST["phone_number"]:
+	$telefono = $_POST["phone_number"];
 	$email = $_POST["email"];
 	$codigo = strtoupper($_POST["matricula"]);
 	$password = "";
@@ -248,7 +248,7 @@ function saveMagazine(){
 	$registrado = "N";
 
 	echo $matricula;
-	/*echo $paterno;
+	echo $paterno;
 	echo $materno;
 	echo $name;
 	echo $tipoTelefono;
@@ -259,5 +259,5 @@ function saveMagazine(){
 	echo $compania;
 	echo $tipo;
 	echo $registrado;
-	echo $estatus;*/
+	echo $estatus;
 }
