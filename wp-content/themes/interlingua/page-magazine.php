@@ -208,9 +208,9 @@ jQuery(document).ready(function() {
                 minlength: 10,
                 maxlength: 10
             },
-            tipotel: {
+            /*tipotel: {
                 required: true
-            },
+            },*/
             /*plantel: {
                 required: true
             },*/
@@ -263,9 +263,9 @@ jQuery(document).ready(function() {
             plantel: {
                 required: '*Debes seleccionar un plantel'
             },
-            tipotel: {
+            /*tipotel: {
                 required: '*Debes seleccionar un tipo de tel&eacute;fono'
-            },
+            },*/
             termino: {
                 required: '*Debes aceptar términos y condiciones'
             }
