@@ -6631,8 +6631,8 @@ you can add resource intensive styles.
   max-width: 350px;
   color: #fff;
   position: absolute;
-  left: 0px;
-  top: 40px;
+  left: 214px;
+  top: 65px;
   font-size: 12px;
 }
 #paterno1Revista {
@@ -6645,8 +6645,8 @@ you can add resource intensive styles.
   max-width: 350px;
   color: #fff;
   position: absolute;
-  left: 0px;
-  top: 40px;
+  left: 169px;
+  top: -13px;
   font-size: 12px;
 }
 #materno1Revista {
@@ -6659,8 +6659,8 @@ you can add resource intensive styles.
   max-width: 350px;
   color: #fff;
   position: absolute;
-  left: 0px;
-  top: 40px;
+  left: -4px;
+  top: 65px;
   font-size: 12px;
 }
 #matricula1Revista {
@@ -6673,8 +6673,8 @@ you can add resource intensive styles.
   max-width: 350px;
   color: #fff;
   position: absolute;
-  left: 0px;
-  top: 40px;
+  left: 37px;
+  top: -13px;
   font-size: 12px;
 }
 #correo1Revista {
@@ -6687,8 +6687,8 @@ you can add resource intensive styles.
   max-width: 350px;
   color: #fff;
   position: absolute;
-  left: 0px;
-  top: 112px;
+  left: 162px;
+  top: 221px;
   font-size: 12px;
 }
 #telefono1Revista {
@@ -6701,8 +6701,8 @@ you can add resource intensive styles.
   max-width: 60%;
   color: #fff;
   position: absolute;
-  left: 30%;
-  top: 185px;
+  left: 9px;
+  top: 221px;
   font-size: 12px;
 }
 #celular1Revista {
@@ -6726,11 +6726,11 @@ you can add resource intensive styles.
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
   text-align: center;
-  max-width: 175px;
+  max-width: 215px;
   color: #fff;
   position: absolute;
-  left: 0px;
-  top: 355px;
+  left: 114px;
+  top: 141px;
   font-size: 12px;
 }
 #sucursal1Revista {
@@ -6758,7 +6758,7 @@ you can add resource intensive styles.
   color: #fff;
   position: absolute;
   left: 7px;
-  top: 565px;
+  top: 386px;
   font-size: 12px;
 }
 #txtPaternoRevista {
