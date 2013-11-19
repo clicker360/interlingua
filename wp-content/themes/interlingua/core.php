@@ -232,10 +232,10 @@ function stripAccents($cadena){
 }
 
 function saveMagazine(){	
+	$response = array();
 	//error_reporting(E_ERROR);
 	//error_reporting(E_ALL);
 	//ini_set("display_errors", 1);	
-	$response = array();
 	
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
