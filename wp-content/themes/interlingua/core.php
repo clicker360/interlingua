@@ -237,8 +237,7 @@ function saveMagazine(){
 	ini_set("display_errors", 1);	
 	
 	//Global Values
-	//$matricula = strtoupper($_POST["matricula"]);
-	$matricula = "";
+	$matricula = strtoupper($_POST["matricula"]);
 	$paterno = ucfirst(stripAccents($_POST["paterno"]));
 	$materno = ucfirst(stripAccents($_POST["materno"]));
 	$name = ucfirst(stripAccents($_POST["name"]));
