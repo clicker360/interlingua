@@ -203,7 +203,7 @@ jQuery(document).ready(function() {
                 maxlength: 10
             },
             tipotel: {
-                required: true
+                min:1
             },
             /*plantel: {
                 required: true
