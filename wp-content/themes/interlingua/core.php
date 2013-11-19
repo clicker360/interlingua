@@ -312,7 +312,7 @@ function getPass(){
 	    $stmt->execute();
 	   
 
-	    if (trim($password)==null) {
+	    if (trim($password)=="") {
 	    	$respuesta["error"] = True;
 			$respuesta["mensaje"] = "La matricula no existe";
 	    }else{
@@ -321,12 +321,12 @@ function getPass(){
 		    echo $nombre."<br>";
 		    echo $password."<br>";
 		    echo $email;
+
+	    	$respuesta["error"] = False;
+			$respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
 	    }
 
 	    $bdh = null;
-
-	    $respuesta["error"] = False;
-		$respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
 
 	} catch (PDOException $e){
 		$respuesta["error"] = True;
