@@ -78,7 +78,7 @@ Template Name: Interlingua Magazine
 											<div class="formulario-registro-cursos wrap">
 												<div id="formulario-magazine">
 
-							<form action="http://www.interlingua.com.mx/clicker360/interlingua/wp-content/themes/interlingua/core.php" name="frmReg" id="form1" method="post">
+							<form action="#" name="frmReg" id="form1" method="post">
                                 <!--<div style="" id="form1">-->
                                     <input type="hidden" name="action" value="saveMagazine" />
                                     <input type="hidden" name="origin_id" value="90" />
@@ -290,7 +290,7 @@ jQuery(document).ready(function() {
         if (jQuery(this).valid() == true) {
             jQuery.ajax({
               type:"post",
-              url: jQuery(this).attr("action"),
+              url: "http://www.interlingua.com.mx/clicker360/interlingua/wp-content/themes/interlingua/core.php",
               data: jQuery(this).serialize(),
               dataType:"json",
               error:function(){
