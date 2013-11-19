@@ -223,5 +223,7 @@ function getKardex(){
 }
 
 function saveMagazine(){		
-	print_r($_POST);
+	//Global Values
+	$matricula = strtoupper($_POST["matricula"]);
+	echo $matricula;
 }
