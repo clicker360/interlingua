@@ -285,8 +285,9 @@ jQuery(document).ready(function() {
         });
     });
 
-    jQuery("#form1").on("submit",function(){
-        alert(jQuery(this).validate());
+    jQuery("#form1").on("submit",function(e){
+        e.preventDefault();
+        alert(jQuery(this).valid());
     })
 
 });
