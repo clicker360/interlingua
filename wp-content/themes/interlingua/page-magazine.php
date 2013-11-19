@@ -287,6 +287,8 @@ jQuery(document).ready(function() {
 
     jQuery("#form1").submit(function(e){
         e.preventDefault();
+        ruta = jQuery("#ruta").val();
+        alert(ruta);
         if (jQuery(this).valid() == true) {
             jQuery.ajax({
               type:"post",
