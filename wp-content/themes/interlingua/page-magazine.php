@@ -288,7 +288,7 @@ jQuery(document).ready(function() {
     jQuery("#form1").on("submit",function(e){
         e.preventDefault();
         if (jQuery(this).valid() == true) {
-            jQuery("#form1").submit();
+            alert("si es valido");
         }
     })
 
