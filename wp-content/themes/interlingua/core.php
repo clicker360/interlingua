@@ -312,7 +312,7 @@ function getPass(){
 	    $stmt->execute();
 	   
 
-	    if (trim($paterno)=="" && trim($materno)=="" && trim($nombre)=="" && trim($password)=="" && trim($email)=="") {
+	    if (trim($paterno)==null && trim($materno)==null && trim($nombre)==null && trim($password)==null && trim($email)==null) {
 	    	$respuesta["error"] = True;
 			$respuesta["mensaje"] = "La matricula no existe";
 	    }else{
