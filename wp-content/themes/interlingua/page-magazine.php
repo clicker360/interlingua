@@ -158,7 +158,7 @@ jQuery(document).ready(function() {
     jQuery.validator.addMethod("accept", function(value, element, param) {
 	  return value.match(new RegExp("." + param + "$"));
 	});
-    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+    jQuery.validator.addMethod("valueNotEquals", function(value, element, arg){
       return arg != value;
     }, "Value must not equal arg.");
     jQuery("form[name=frmReg]").validate({
