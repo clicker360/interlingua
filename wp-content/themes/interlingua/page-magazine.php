@@ -90,7 +90,7 @@ Template Name: Interlingua Magazine
                                         <option value="0" selected="selected">Tipo de tel&eacute;fono</option> 
                                         <option value="Particula">Particular</option>
                                         <option value="Trabajo">Trabajo</option>
-                                        <option value="Móvil">Móvil</option>
+                                        <option value="Movil">Móvil</option>
                                         <option value="Otro">Otro</option>
                                     </select></div>
                                     <div id="telefono1Revista"><input type="text" name="phone_number" id="txtTelefonoRevista" placeholder="Tel&eacute;fono"></div>
