@@ -234,6 +234,6 @@ function stripAccents($cadena){
 function saveMagazine(){		
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
-	$paterno = stripAccents($_POST["paterno"]);
+	$paterno = ucfirst(stripAccents($_POST["paterno"]));
 	echo $paterno;
 }
