@@ -231,7 +231,11 @@ function stripAccents($cadena){
     return utf8_encode($cadena);
 }
 
-function saveMagazine(){		
+function saveMagazine(){	
+	error_reporting(E_ERROR);
+	error_reporting(E_ALL);
+	ini_set("display_errors", 1);	
+	
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
 	$paterno = ucfirst(stripAccents($_POST["paterno"]));
