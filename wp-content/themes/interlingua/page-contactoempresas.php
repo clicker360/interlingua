@@ -54,7 +54,7 @@ Template Name: Contacto Empresas
 									                        email: {
 									                            required: true,
 									                            email: true,
-									                            remote: "http://crm.interlingua.com.mx/crm/prospects/checkUnique"
+									                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
 									                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
 									                        },
 
@@ -153,7 +153,7 @@ Template Name: Contacto Empresas
 									                        }
 									                    }
 									                });
-									                jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
+									                jQuery.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
 									                    estados = JSON.parse(estados);      
 									                    jQuery("#cmbEstadosEmpresas").html('<option value="">Elige tu estado</option>');
 									                    jQuery.each(estados,function(index,value){
@@ -161,7 +161,7 @@ Template Name: Contacto Empresas
 									                    });                        
 									                });
 									                jQuery("#cmbEstadosEmpresas").change(function(){
-									                    jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
+									                    jQuery.get("http://www.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
 									                        planteles = JSON.parse(planteles);      
 									                        jQuery("#cmbSucursalesEmpresas").html('<option value="">Elige tu plantel</option>');
 									                        jQuery.each(planteles,function(index,value){
@@ -232,7 +232,7 @@ Template Name: Contacto Empresas
 												<div class="formulario-registro-cursos wrap">
 
 													<div id="formulario-empresas">                           
-							                            <form id="form1" method="post" action="http://crm.interlingua.com.mx/crm/prospects/sendMailContact?tipo=empresas">
+							                            <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/prospects/sendMailContact?tipo=empresas">
 							                                <input type="hidden" name="origin_id" value="14" />
 							                                <div id="nombre1Empresas">
 							                                    <input type="text" id="txtNombreEmpresas" name="name"  placeholder="Nombre Completo"/>
@@ -264,7 +264,7 @@ Template Name: Contacto Empresas
 							                                
 							                                <div id="sucursal1Empresas">
 							                                    <select id="cmbSucursalesEmpresas" name="plantel">
-							                                        <option value="" selected="selected">Elige tu plante</option>
+							                                        <option value="" selected="selected">Elige tu plantel</option>
 							                                    </select>
 							                                </div>
 
