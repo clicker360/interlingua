@@ -316,11 +316,11 @@ function getPass(){
 	    	$respuesta["error"] = True;
 			$respuesta["mensaje"] = "La matricula no existe";
 	    }else{
-	    	echo $paterno."<br>";
+	    	/*echo $paterno."<br>";
 		    echo $materno."<br>";
 		    echo $nombre."<br>";
 		    echo $password."<br>";
-		    echo $email;
+		    echo $email;*/
 
 	    	$respuesta["error"] = False;
 			$respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
