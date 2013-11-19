@@ -86,11 +86,11 @@ Template Name: Interlingua Magazine
                                     <div id="materno1Revista"><input type="text" name="materno" id="txtMaternoRevista" placeholder="Apellido Materno"></div>
                                     <div id="nombre1Revista"><input type="text" name="name" id="txtNombreRevista" placeholder="Nombre Completo"></div>
                                     <div id="tipo1Revista"><select id="tipoRevista" name="tipotel">   
-                                        <option value="" selected="selected">Tipo de tel&eacute;fono</option> 
-                                        <option value="">Particular</option>
-                                        <option value="">Trabajo</option>
-                                        <option value="">Móvil</option>
-                                        <option value="">Otro</option>
+                                        <option value="0" selected="selected">Tipo de tel&eacute;fono</option> 
+                                        <option value="Particular">Particular</option>
+                                        <option value="Trabajo">Trabajo</option>
+                                        <option value="Movil">Móvil</option>
+                                        <option value="Otro">Otro</option>
                                     </select></div>
                                     <div id="telefono1Revista"><input type="text" name="phone_number" id="txtTelefonoRevista" placeholder="Tel&eacute;fono"></div>
                                     <div id="correo1Revista"><input type="text" name="email" id="txtCorreoRevista" placeholder="Correo Electrónico"></div>
