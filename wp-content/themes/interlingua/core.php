@@ -231,10 +231,11 @@ function stripAccents($cadena){
     return utf8_encode($cadena);
 }
 
-function saveMagazine(){	
-	error_reporting(E_ERROR);
-	error_reporting(E_ALL);
-	ini_set("display_errors", 1);	
+function saveMagazine(){
+	echo "string";	
+	//error_reporting(E_ERROR);
+	//error_reporting(E_ALL);
+	//ini_set("display_errors", 1);	
 	$response = array();
 	
 	//Global Values
