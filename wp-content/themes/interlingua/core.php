@@ -28,7 +28,7 @@ function saveMagazine(){
 	
 	//Global Values
 	//$matricula = trim(strtoupper($_POST["matricula"]));
-	$matricula = "OT17688";
+	$matricula = $_POST["matricula"];
 	$paterno = ucfirst(stripAccents($_POST["paterno"]));
 	$materno = ucfirst(stripAccents($_POST["materno"]));
 	$name = ucfirst(stripAccents($_POST["name"]));
