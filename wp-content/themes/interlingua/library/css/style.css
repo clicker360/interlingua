@@ -6593,6 +6593,238 @@ you can add resource intensive styles.
   .titulo-contacto {
     text-align: left;
   }
+
+  /* Formulario Pagina Magazine
+    ------------------------------------------ */
+#formulario-revista {
+  height: auto;
+}
+#txtNombreRevista,
+#txtPaternoRevista,
+#txtMaternoRevista,
+#txtCorreoRevista,
+#txtMatriculaRevista,
+#txtTelefonoRevista,
+#estado,
+#txtCelularRevista,
+#plantel {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 48%;
+  float: left;
+}
+#nombre1Revista {
+  position: relative;
+}
+#nombre1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#paterno1Revista {
+  position: relative;
+}
+#paterno1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#materno1Revista {
+  position: relative;
+}
+#materno1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#matricula1Revista {
+  position: relative;
+}
+#matricula1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Revista {
+  position: relative;
+}
+#correo1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 112px;
+  font-size: 12px;
+}
+#telefono1Revista {
+  position: relative;
+}
+#telefono1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 60%;
+  color: #fff;
+  position: absolute;
+  left: 30%;
+  top: 185px;
+  font-size: 12px;
+}
+#celular1Revista {
+  position: relative;
+}
+#celular1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  font-size: 12px;
+}
+#tipo1Revista {
+  position: relative;
+}
+#tipo1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 355px;
+  font-size: 12px;
+}
+#sucursal1Revista {
+  position: relative;
+}
+#sucursal1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 433px;
+  font-size: 12px;
+}
+#politicas1Revista {
+  position: relative;
+}
+#politicas1Revista label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100%;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 565px;
+  font-size: 12px;
+}
+#txtPaternoRevista {
+  margin-left: 4%;
+  margin-top: 0px;
+}
+#txtMaternoRevista {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtNombreRevista {
+  margin-left: 4%;
+  margin-top: 30px;
+}
+#txtMatriculaRevista {
+  margin-left: 0%;
+  margin-top: 0px;
+}
+#txtLadaRevista {
+  width: 25%;
+  margin-top: 30px;
+}
+#txtTelefonoRevista {
+  margin-left: 0%;
+  margin-top: 30px;
+}
+#txtCorreoRevista {
+  margin-left: 4%;
+  margin-top: 30px;
+}
+#cmbSucursaleRevista {
+  margin-left: 0%;
+}
+#sendRevista {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#tipoRevista,
+#plantel {
+  margin-top: 30px;
+}
+#plantel {
+  margin-left: 0%;
+}
+#politicas1Revista {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasRevista {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Revista {
+  width: 95%;
+  float: left;
+}
+#acepto1Revista a {
+  text-decoration: none;
+  color: #fff;
+}
+label.error {
+  z-index: 10000;
+}
+
   /*	Paginas Contacto
   	------------------------------------------ */
   #contenedor-contacto {
