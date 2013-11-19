@@ -2,7 +2,7 @@
 
 	try{
 		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-		$sql = "CALL SCAPAL.TIMAG_ALTA( 'bjhbj',
+		$sql = "CALL SCAPAL.TIMAG_ALTA( 'OT17688',
 										'Espinosa',
 										'Callejas',
 										'Hugo',
