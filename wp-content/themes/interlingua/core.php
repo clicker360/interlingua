@@ -247,17 +247,17 @@ function saveMagazine(){
 	$estatus = "A";
 	$registrado = "N";
 
-	echo $matricula
-		 ."--".$paterno
-		 ."--".$materno
-		 ."--".$name
-		 ."--".$tipoTelefono
-		 ."--".$telefono
-		 ."--".$email
-		 ."--".$codigo
-		 ."--".$password
-		 ."--".$compania
-		 ."--".$tipo
-		 ."--".$estatus
-		 ."--".$registrado;
+	echo $matricula;
+	echo $paterno;
+	echo $materno;
+	echo $name;
+	echo $tipoTelefono;
+	echo $telefono;
+	echo $email;
+	echo $codigo;
+	echo $password;
+	echo $compania;
+	echo $tipo;
+	echo $estatus;
+	echo $registrado;
 }
