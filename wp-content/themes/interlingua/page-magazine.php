@@ -287,7 +287,7 @@ jQuery(document).ready(function() {
 
     jQuery("#form1").submit(function(e){
         e.preventDefault();
-        if (jQuery(this).valid() == true) {
+        if (jQuery(this).valid() == "true") {
             jQuery.ajax({
               type:"post",
               url: "http://www.interlingua.com.mx/clicker360/interlingua/wp-content/themes/interlingua/core.php",

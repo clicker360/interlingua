@@ -19,6 +19,65 @@ switch ($action) {
 		break;
 }
 
+function saveMagazine(){	
+	echo "string";
+	//$response = array();
+	//error_reporting(E_ERROR);
+	//error_reporting(E_ALL);
+	//ini_set("display_errors", 1);	
+	
+	//Global Values
+	/*$matricula = strtoupper($_POST["matricula"]);
+	$paterno = ucfirst(stripAccents($_POST["paterno"]));
+	$materno = ucfirst(stripAccents($_POST["materno"]));
+	$name = ucfirst(stripAccents($_POST["name"]));
+	$tipoTelefono = $_POST["tipotel"];
+	$telefono = $_POST["phone_number"];
+	$email = $_POST["email"];
+	$codigo = strtoupper($_POST["matricula"]);
+	$password = "";
+	$compania = "";
+	$tipo = "A";
+	$estatus = "A";
+	$registrado = "N";
+
+	try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+		$sql = "CALL SCAPAL.TIMAG_ALTA( '".$matricula."',
+										'".$paterno."',
+										'".$materno."',
+										'".$name."',
+										'".$tipoTelefono."',
+										'".$telefono."',
+										'".$email."',
+										'".$codigo."',
+										'".$password."',
+										'".$compania."',
+										'".$tipo."',
+										'".$estatus."',
+										'".$registrado."',
+										?,
+										?)";
+		$stmt = $db->prepare($sql);  
+		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,2);
+		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
+
+		$stmt->execute();
+
+		if ($magazineId == 0) {
+			$response["error"] = true;
+			$response["mensaje"] = $msgError;	
+		}
+
+		$bdh = null;
+
+	} catch (PDOException $e){
+		$response["error"] = true;
+		$response["mensaje"] = "Failed: ".$e->getMessage();
+	}*/
+
+	//echo json_encode($response);
+}
 
 function login(){		
 	session_start();
@@ -229,66 +288,6 @@ function stripAccents($cadena){
     $cadena = strtr($cadena, utf8_decode($originales), $modificadas);
     $cadena = strtolower($cadena);
     return utf8_encode($cadena);
-}
-
-function saveMagazine(){	
-	echo "string";
-	$response = array();
-	//error_reporting(E_ERROR);
-	//error_reporting(E_ALL);
-	//ini_set("display_errors", 1);	
-	
-	//Global Values
-	/*$matricula = strtoupper($_POST["matricula"]);
-	$paterno = ucfirst(stripAccents($_POST["paterno"]));
-	$materno = ucfirst(stripAccents($_POST["materno"]));
-	$name = ucfirst(stripAccents($_POST["name"]));
-	$tipoTelefono = $_POST["tipotel"];
-	$telefono = $_POST["phone_number"];
-	$email = $_POST["email"];
-	$codigo = strtoupper($_POST["matricula"]);
-	$password = "";
-	$compania = "";
-	$tipo = "A";
-	$estatus = "A";
-	$registrado = "N";
-
-	try{
-		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-		$sql = "CALL SCAPAL.TIMAG_ALTA( '".$matricula."',
-										'".$paterno."',
-										'".$materno."',
-										'".$name."',
-										'".$tipoTelefono."',
-										'".$telefono."',
-										'".$email."',
-										'".$codigo."',
-										'".$password."',
-										'".$compania."',
-										'".$tipo."',
-										'".$estatus."',
-										'".$registrado."',
-										?,
-										?)";
-		$stmt = $db->prepare($sql);  
-		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,2);
-		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
-
-		$stmt->execute();
-
-		if ($magazineId == 0) {
-			$response["error"] = true;
-			$response["mensaje"] = $msgError;	
-		}
-
-		$bdh = null;
-
-	} catch (PDOException $e){
-		$response["error"] = true;
-		$response["mensaje"] = "Failed: ".$e->getMessage();
-	}*/
-
-	echo json_encode($response);
 }
 
 ?>
