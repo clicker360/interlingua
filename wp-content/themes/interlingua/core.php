@@ -270,8 +270,8 @@ function saveMagazine(){
 										?,
 										?)";
 		$stmt = $db->prepare($sql);  
-		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT, 1);
-		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
+		$stmt->bindParam(14, $magazineId, PDO::PARAM_INT, 1);
+		$stmt->bindParam(15, $msgError, PDO::PARAM_STR, 100);
 		echo "ID: ".$magazineId."<br>";
 		echo "Error: ".$msgError;
 
