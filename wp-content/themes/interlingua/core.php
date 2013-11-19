@@ -232,6 +232,7 @@ function stripAccents($cadena){
 }
 
 function saveMagazine(){	
+	echo "string";
 	$response = array();
 	//error_reporting(E_ERROR);
 	//error_reporting(E_ALL);
