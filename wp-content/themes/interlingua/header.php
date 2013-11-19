@@ -136,7 +136,7 @@
 		            			location.reload();
 		            		}else{
 		            			alert(data.mensaje);
-		            			window.location = data.url;	
+		            			location.reload();
 		            		}
 		            	}
 		        	});
