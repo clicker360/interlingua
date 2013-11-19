@@ -247,17 +247,35 @@ function saveMagazine(){
 	$estatus = "A";
 	$registrado = "N";
 
-	echo $matricula;
-	echo $paterno;
-	echo $materno;
-	echo $name;
-	echo $tipoTelefono;
-	echo $telefono;
-	echo $email;
-	echo $codigo;
-	echo $password;
-	echo $compania;
-	echo $tipo;
-	echo $registrado;
-	echo $estatus;
+	try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+
+		$sql = "CALL SCAPAL.TIMAG_ALTA( '".$matricula."',
+										'".$paterno."',
+										'".$materno."',
+										'".$name."',
+										'".$tipoTelefono."',
+										'".$telefono."',
+										'".$email."',
+										'".$codigo."',
+										'".$password."',
+										'".$compania."',
+										'".$tipo."',
+										'".$estatus."',
+										'".$registrado."',
+										?,
+										?)";
+		$stmt = $db->prepare($sql);  
+		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT, 1);
+		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
+		echo "ID: ".$magazineId."<br>";
+		echo "Error: ".$msgError;
+
+		$stmt->execute();
+
+		$bdh = null;
+
+	} catch (PDOException $e){
+		echo "Failed: ".$e->getMessage();
+	}
 }
