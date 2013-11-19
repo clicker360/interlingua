@@ -290,3 +290,5 @@ function saveMagazine(){
 
 	echo json_encode($response);
 }
+
+?>
