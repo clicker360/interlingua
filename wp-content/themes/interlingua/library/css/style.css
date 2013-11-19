@@ -689,6 +689,7 @@ BUTTONS
 #btnEnviarMagazine,
 #btnEnviarFranquicias,
 #sendtest,
+#sendRevista,
 #sendValidate {
   border: 1px solid #bc5311;
   border-top-color: #d85f14;
@@ -736,6 +737,7 @@ BUTTONS
 #btnEnviarFranquicias:hover,
 #btnEnviarMagazine:hover,
 #sendtest:hover,
+#sendRevista:hover,
 #sendValidate:hover,
 /*#btnEnviarHome:hover,*/
 .button:focus,
@@ -752,6 +754,7 @@ BUTTONS
 #btnEnviarFranquicias:focus,
 #btnEnviarMagazine:focus,
 #sendtest:focus,
+#sendRevista:focus,
 #sendValidate:focus
 /*#btnEnviarHome:focus*/ {
   color: #ffffff;
@@ -6800,6 +6803,18 @@ you can add resource intensive styles.
 #plantel {
   margin-top: 30px;
 }
+#tipoRevista{
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+  float: left;
+
+ }
 #plantel {
   margin-left: 0%;
 }
