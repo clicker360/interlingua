@@ -285,7 +285,7 @@ jQuery(document).ready(function() {
         });
     });
 
-    jQuery("#form1").on("submit",function(e){
+    jQuery("#form1").submit(function(e){
         e.preventDefault();
         if (jQuery(this).valid() == true) {
             alert("si es valido");
