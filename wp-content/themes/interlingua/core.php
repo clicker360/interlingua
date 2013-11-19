@@ -222,8 +222,14 @@ function getKardex(){
 	echo json_encode($kardex);
 }
 
+function stripAccents($string){
+	return strtr($string,'àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ',
+				'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+}
+
 function saveMagazine(){		
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
-	echo $matricula;
+	$paterno = stripAccents($_POST["paterno"]);
+	echo $paterno;
 }
