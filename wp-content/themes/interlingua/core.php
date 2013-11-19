@@ -229,6 +229,6 @@ function stripAccents($string){
 function saveMagazine(){		
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
-	$paterno = stripAccents($_POST["paterno"]);
+	$paterno = str_replace('àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ', 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY', $_POST["paterno"]);
 	echo $paterno;
 }
