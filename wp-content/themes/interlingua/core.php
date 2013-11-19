@@ -62,7 +62,7 @@ function saveMagazine(){
 		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
 
 		$stmt->execute();
-
+		$response["mensaje"] = $msgError;	
 		if ($magazineId == 0) {
 			$response["error"] = true;
 			$response["mensaje"] = $msgError;	
