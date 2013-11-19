@@ -248,7 +248,7 @@ function saveMagazine(){
 	$registrado = "N";
 
 	echo $matricula;
-	echo $paterno;
+	/*echo $paterno;
 	echo $materno;
 	echo $name;
 	echo $tipoTelefono;
@@ -258,6 +258,6 @@ function saveMagazine(){
 	echo $password;
 	echo $compania;
 	echo $tipo;
-	echo $estatus;
 	echo $registrado;
+	echo $estatus;*/
 }
