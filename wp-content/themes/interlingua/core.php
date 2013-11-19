@@ -223,5 +223,5 @@ function getKardex(){
 }
 
 function saveMagazine(){		
-	echo "hola";
+	print_r($_SESSION);
 }
