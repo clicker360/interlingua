@@ -1,4 +1,36 @@
 <?php  
+
+	try{
+		$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+		$sql = "CALL SCAPAL.TIMAG_ALTA( 'bjhbj',
+										'Espinosa',
+										'Callejas',
+										'Hugo',
+										'Otro',
+										'55555555',
+										'hugo@clicker360.com',
+										'bjhbj',
+										'',
+										'',
+										'A',
+										'A',
+										'N',
+										?,
+										?)";
+		$stmt = $db->prepare($sql);  
+		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,2);
+		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
+
+		$stmt->execute();
+		echo $msgError;
+
+		$bdh = null;
+
+	} catch (PDOException $e){
+		echo "Failed: ".$e->getMessage();
+	}
+
+
 $action = $_POST['action'];
 
 switch ($action) {
@@ -62,7 +94,7 @@ function saveMagazine(){
 		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
 
 		$stmt->execute();
-		$response["mensaje"] = $msgError;	
+
 		if ($magazineId == 0) {
 			$response["error"] = true;
 			$response["mensaje"] = $msgError;	
