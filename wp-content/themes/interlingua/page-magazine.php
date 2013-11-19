@@ -299,7 +299,11 @@ jQuery(document).ready(function() {
                 alert("Error, por favor intentalo mas tarde.");
               },
               success:function(data){
-                console.log(data);
+                if (data.error){
+                    alert(data.mensaje);
+                }else{
+                    window.location="http://www.interlingua.com.mx/magazine/";
+                }
               }
           });
         }
