@@ -288,7 +288,18 @@ jQuery(document).ready(function() {
     jQuery("#form1").submit(function(e){
         e.preventDefault();
         if (jQuery(this).valid() == true) {
-            alert("si es valido");
+            jQuery.ajax({
+              type:"post",
+              url: jQuery(this).attr("action"),
+              data: jQuery(this).serialize(),
+              dataType:"json",
+              error:function(){
+                alert("Error, por favor intentalo mas tarde.");
+              },
+              success:function(data){
+                console.log(data);
+              }
+          });
         }
     })
 
