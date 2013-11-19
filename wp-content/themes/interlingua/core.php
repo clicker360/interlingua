@@ -20,14 +20,13 @@ switch ($action) {
 }
 
 function saveMagazine(){	
-	echo "string";
-	//$response = array();
+	$response = array();
 	//error_reporting(E_ERROR);
 	//error_reporting(E_ALL);
 	//ini_set("display_errors", 1);	
 	
 	//Global Values
-	/*$matricula = strtoupper($_POST["matricula"]);
+	$matricula = strtoupper($_POST["matricula"]);
 	$paterno = ucfirst(stripAccents($_POST["paterno"]));
 	$materno = ucfirst(stripAccents($_POST["materno"]));
 	$name = ucfirst(stripAccents($_POST["name"]));
@@ -74,9 +73,9 @@ function saveMagazine(){
 	} catch (PDOException $e){
 		$response["error"] = true;
 		$response["mensaje"] = "Failed: ".$e->getMessage();
-	}*/
+	}
 
-	//echo json_encode($response);
+	echo json_encode($response);
 }
 
 function login(){		
