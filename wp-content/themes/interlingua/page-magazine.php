@@ -78,7 +78,7 @@ Template Name: Interlingua Magazine
 											<div class="formulario-registro-cursos wrap">
 												<div id="formulario-magazine">
 
-							<form action="http://interlingua.clicker360.com/registro" name="frmReg" id="form1" method="post">
+							<form action="http://interlingua.clicker360.com/registro" name="frmReg" id="frmReg" method="post">
                                 <!--<div style="" id="form1">-->
                                     <input type="hidden" name="origin_id" value="90" />
                                     <div id="matricula1Revista"><input type="text" name="matricula" id="txtMatriculaRevista" placeholder="Matrícula"></div>
