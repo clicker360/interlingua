@@ -158,8 +158,17 @@ jQuery(document).ready(function() {
     jQuery.validator.addMethod("accept", function(value, element, param) {
 	  return value.match(new RegExp("." + param + "$"));
 	});
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+      return arg != value;
+    }, "Value must not equal arg.");
     jQuery("form[name=frmReg]").validate({
         rules: {
+            tipotel: {
+                valueNotEquals: "default"
+            },
+            matricula: {
+                required: true
+            },
             paterno: {
                 required: true,
                 accept: "[a-zA-Z]+"
@@ -210,6 +219,12 @@ jQuery(document).ready(function() {
             }
         },
         messages: {
+            tipotel: {
+                valueNotEquals: "*Seleccione tipo de teléfono"
+            },
+            matricula: {
+                required: '*Ingresa tu matrícula'
+            },
             paterno: {
                 required: '*Ingresa tu apellido paterno',
                 accept: '*Solo letras para el apellido paterno'
