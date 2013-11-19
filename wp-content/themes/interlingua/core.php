@@ -235,5 +235,29 @@ function saveMagazine(){
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
 	$paterno = ucfirst(stripAccents($_POST["paterno"]));
-	echo $paterno;
+	$materno = ucfirst(stripAccents($_POST["materno"]));
+	$name = ucfirst(stripAccents($_POST["name"]));
+	$tipoTelefono = $_POST["tipotel"];
+	$telefono = $_POST["phone_number"]:
+	$email = $_POST["email"];
+	$codigo = strtoupper($_POST["matricula"]);
+	$password = "";
+	$compania = "";
+	$tipo = "A";
+	$estatus = "A";
+	$registrado = "N";
+
+	echo $matricula
+		 ."--".$paterno
+		 ."--".$materno
+		 ."--".$name
+		 ."--".$tipoTelefono
+		 ."--".$telefono
+		 ."--".$email
+		 ."--".$codigo
+		 ."--".$password
+		 ."--".$compania
+		 ."--".$tipo
+		 ."--".$estatus
+		 ."--".$registrado;
 }
