@@ -292,8 +292,8 @@ jQuery(document).ready(function() {
             jQuery.ajax({
               type:"post",
               url: ruta+"/core.php",
-              //data: jQuery(this).serialize(),
-              data: {action:"saveMagazine"},
+              data: jQuery(this).serialize()+"&action=saveMagazine",
+              //data: {action:"saveMagazine"},
               dataType:"json",
               error:function(){
                 alert("Error, por favor intentalo mas tarde.");
