@@ -1,6 +1,9 @@
 <?php
 	session_start();
-	print_r($_SESSION);
+	if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
+		$nombreAlumno = $_SESSION["nombre"];
+		$matriculaAlumno = $_SESSION["alumno"];
+	}
 ?>
 <!doctype html>
 
@@ -224,8 +227,8 @@
 								</div>
 								<div id="toogleLogin" class="heightlog">
 									<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-									<div class="nombreSession">Jonathan Álvarez</div>
-									<div class="matriculaSession">09969869</div>
+									<div class="nombreSession"><?php echo $nombreAlumno;?></div>
+									<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
 									<a class="btnCuenta" href="http://interlingua.com.mx/acceso-a-alumnos/">Mi Cuenta</a> <br>
 									<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
 								</div>
