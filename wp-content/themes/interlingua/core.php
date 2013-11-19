@@ -235,6 +235,7 @@ function saveMagazine(){
 	error_reporting(E_ERROR);
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);	
+	$response = array();
 	
 	//Global Values
 	$matricula = strtoupper($_POST["matricula"]);
@@ -274,12 +275,17 @@ function saveMagazine(){
 
 		$stmt->execute();
 
-		echo "ID: ".$magazineId."<br>";
-		echo "Error: ".$msgError;
+		if ($magazineId == 0) {
+			$response["error"] = true;
+			$response["mensaje"] = $msgError;	
+		}
 
 		$bdh = null;
 
 	} catch (PDOException $e){
-		echo "Failed: ".$e->getMessage();
+		$response["error"] = true;
+		$response["mensaje"] = "Failed: ".$e->getMessage();
 	}
+
+	echo json_encode($response);
 }
