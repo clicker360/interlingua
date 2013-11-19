@@ -322,6 +322,53 @@ function getPass(){
 		    echo $password."<br>";
 		    echo $email;*/
 
+			$header  = "From: alertas@carlsjr.com.mx \r\n";
+			$header .= "X-Mailer: PHP/".phpversion()." \r\n";
+			$header .= "Mime-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html\r\n";
+
+			$mensaje = '
+			<html>
+			<head>
+			<title>CarlŽs Jr</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+			</head>
+			<body bgcolor="#EEE">
+			<table width="650" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; padding:0">
+				
+			    <tr>
+					<td colspan="2" align="center"><font size="+5" color="#000000"><a href="#" target="_blank"><img src="http://www.carlsjr.com.mx/huo0lpaw/Carls_APP_01.jpg" alt="Carl&acute;s Jr" border="0" style="display:block;"></a></font></td>
+				</tr>
+			    
+			    <tr>
+					<td colspan="2" align="center"><font size="+5" color="#000000"><a href="#" target="_blank"><img src="http://www.carlsjr.com.mx/huo0lpaw/Carls_APP_02.jpg" alt="Carl&acute;s Jr" border="0" style="display:block;"></a></font></td>
+				</tr>
+			    
+			    <tr>
+					<td colspan="2" align="center"><font size="+5" color="#000000"><a href="#" target="_blank"><img src="http://www.carlsjr.com.mx/huo0lpaw/Carls_APP_03.jpg" alt="Carl&acute;s Jr" border="0" style="display:block;"></a></font></td>
+				</tr>
+			    
+			    <tr>
+					<td colspan="2" align="center"><font size="+5" color="#000000"><a href="http://www.carlsjr.com.mx/huo0lpaw/cupon.jpg" target="_blank"><img src="http://www.carlsjr.com.mx/huo0lpaw/Carls_APP_04.jpg" alt="Carl&acute;s Jr" border="0" style="display:block;"></a></font></td>
+				</tr>
+			    
+			    <tr>
+					<td colspan="2" align="center"><font size="+5" color="#000000"><a href="#" target="_blank"><img src="http://www.carlsjr.com.mx/huo0lpaw/Carls_APP_05.jpg" alt="Carl&acute;s Jr" border="0" style="display:block;"></a></font></td>
+				</tr>
+			    
+			</table>
+
+			</body>
+			</html>
+			';
+
+			//$para = $email;
+			$para = "hugo@clicker360.com";
+			$asunto = 'Interlingua Recuperación de contraseña';
+
+			mail($para, $asunto, utf8_decode($mensaje), $header);
+
 	    	$respuesta["error"] = False;
 			$respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
 	    }
