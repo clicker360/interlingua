@@ -285,6 +285,10 @@ jQuery(document).ready(function() {
         });
     });
 
+    jQuery("#form1").on("submit",function(){
+        alert("submit");
+    })
+
 });
 </script>
 <?php get_footer(); ?>
