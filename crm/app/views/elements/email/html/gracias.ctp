@@ -89,7 +89,7 @@ body{
                 <tr>
                 <td align="center" valign="top" style="font:Normal 14px Arial, Helvetica, sans-serif; color:#767171;   line-height:20px; padding:15px 0px 15px 0px; color:#000;"><p><strong>El equipo<em> INTERLINGUA®</em></strong>
                   <br />
-                  ATTENTAMENTE
+                  ATENTAMENTE
                 </td>
         </tr>
                         
