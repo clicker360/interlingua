@@ -67,6 +67,7 @@ function saveMagazine(){
 
 		$stmt->execute();
 
+		alert($magazineId);
 		if ($magazineId == 0) {
 			$response["error"] = true;
 			$response["mensaje"] = $msgError;	
