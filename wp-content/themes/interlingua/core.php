@@ -67,10 +67,13 @@ function saveMagazine(){
 
 		$stmt->execute();
 
-		echo $magazineId;
 		if ($magazineId == 0) {
 			$response["error"] = true;
-			$response["mensaje"] = $msgError;	
+			if ($msgError == null) {
+				$response["mensaje"] = "La matricula es incorrecta";	
+			}else{
+				$response["mensaje"] = $msgError;
+			}
 		}
 
 		$bdh = null;
