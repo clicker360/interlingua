@@ -52,7 +52,12 @@
 		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 		</script>
 		<!--End of Zopim Live Chat Script-->
-		
+		<script>
+			$zopim(function() {
+			    alert("Visitor's email: " + $zopim.livechat.getEmail());
+			}); 
+		</script>
+
 		<!-- end analytics -->
 		<script type="text/javascript" charset="utf-8">
 			jQuery(document).ready(function() {

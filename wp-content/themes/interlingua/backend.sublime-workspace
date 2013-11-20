@@ -1,0 +1,839 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"password"
+			],
+			[
+				"ma",
+				"materno"
+			],
+			[
+				"e",
+				"error"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"FFF",
+				"FFFFFF"
+			],
+			[
+				"a",
+				"action"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"me",
+				"mensaje"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"vali",
+				"validate"
+			],
+			[
+				"te",
+				"telefono"
+			],
+			[
+				"tipo",
+				"tipotel"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"ht",
+				"htmlTable"
+			],
+			[
+				"ret",
+				"return_value"
+			],
+			[
+				"name",
+				"nameU"
+			],
+			[
+				"co",
+				"conexion"
+			],
+			[
+				"json",
+				"json_encode  (function)"
+			],
+			[
+				"key",
+				"key_cupon  (variable)"
+			],
+			[
+				"mysql_row",
+				"mysql_num_rows"
+			],
+			[
+				"th",
+				"theId"
+			],
+			[
+				"padding",
+				"padding-top:   (property)"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"disp",
+				"display"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"time",
+				"setTimeout"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"seti",
+				"setTimeout  (function)"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"value",
+				"valueString"
+			],
+			[
+				"cli",
+				"Click"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"FON",
+				"font-weight"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"la",
+				"last-child  (pseudo-class)"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"ite",
+				"item-3"
+			],
+			[
+				"item",
+				"item-3"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"sucu",
+				"sucursal"
+			],
+			[
+				"con",
+				"cont"
+			],
+			[
+				"poli",
+				"politicasSel"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"sub",
+				"submit  (function)"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"inp",
+				"inptName"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"vl",
+				"valid"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"ea",
+				"each"
+			],
+			[
+				"ni",
+				"nivel"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"Pre",
+				"pregunta"
+			],
+			[
+				"ctn",
+				"ctn-registro"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"o",
+				"origen"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/var/www/html/hugo/backend/proyecto/app/templates/hora.html",
+			"settings":
+			{
+				"buffer_size": 62,
+				"line_ending": "Unix",
+				"name": "hora.html"
+			}
+		},
+		{
+			"file": "/var/www/html/hugo/backend/proyecto/app/views.py",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"For",
+				"Format Code"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax:ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/html/interlingua/crm/app/views/elements/email/html/gracias.ctp",
+		"/var/www/html/interlingua/wp-content/themes/interlingua/page-contactofranquicias.php",
+		"/var/www/html/interlingua/wp-content/themes/interlingua/page-contactoempresas.php",
+		"/var/www/html/test.php",
+		"/home/hugo/Descargas/style2.css",
+		"/var/www/html/interlingua/wp-content/themes/interlingua/style2.css",
+		"/var/www/html/interlingua/wp-content/themes/interlingua/library/css/style.css",
+		"/var/www/html/interlingua/wp-config.php",
+		"/var/www/html/interlingua/.gitignore",
+		"/var/www/html/interlingua/.htaccess",
+		"/home/hugo/migrate.sql",
+		"/var/www/html/ustorage/.htaccess",
+		"/var/www/html/interlingua/wp-cron.php",
+		"/var/www/hugo/git/interlingua/.gitignore",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/core.php",
+		"/var/www/hugo/git/ustorage/snippets/classes/Usuarios.php",
+		"/var/www/hugo/git/ustorage/snippets/classes/libs/Model/PDO/Model.php",
+		"/var/www/hugo/git/ustorage/snippets/classes/libs/Model/PDO/DataBase.php",
+		"/var/www/index.php",
+		"/var/www/hugo/carls/include/functions.php",
+		"/home/hugo/Escritorio/www/buenfin_cupon/js/main.js",
+		"/home/hugo/Escritorio/www/buenfin_cupon/include/functions.php",
+		"/home/hugo/Escritorio/www/buenfin_cupon/index.php",
+		"/home/hugo/Escritorio/www/buenfin_cupon/mail/templates/plantilla.php",
+		"/home/hugo/Escritorio/www/buenfin_cupon/mail/templates/plantilla.php.eje",
+		"/home/hugo/Escritorio/www/buenfin_cupon/mail/send.php",
+		"/var/www/hugo/mail/send.php",
+		"/home/hugo/Escritorio/www/buenfin_cupon/include/conexion.php",
+		"/var/www/hugo/buenfin_joven/registro.html",
+		"/var/www/hugo/buenfin_chica/include/conexion.php",
+		"/var/www/hugo/buenfin_chica/include/functions.php",
+		"/var/www/hugo/buenfin_chica/index.php",
+		"/home/hugo/Descargas/gracias_joven.ctp",
+		"/home/hugo/Descargas/prospects_controller.php",
+		"/home/hugo/Escritorio/query.sql",
+		"/home/hugo/Descargas/crm_interlingua.sql",
+		"/var/www/hugo/buenfin_chica/index.html",
+		"/home/hugo/Escritorio/prospects_controller.php",
+		"/var/www/hugo/mailer/examples/test_smtp_basic.php",
+		"/var/www/hugo/mailer/mail/send.php",
+		"/var/www/hugo/mailer/examples/test_smtp_gmail_basic.php",
+		"/var/www/hugo/mailer/examples/send.php",
+		"/var/www/hugo/mailer/examples/plantilla.html",
+		"/var/www/hugo/mailer/examples/test_mail_basic.php",
+		"/var/www/hugo/mailer/test_script/index.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/library/js/facilities.js",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/library/css/calculadora.css",
+		"/home/hugo/Escritorio/desarrollo.html",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/sidebar.php",
+		"/home/hugo/Escritorio/test-us.html",
+		"/home/hugo/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/hugo/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/hugo/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/hugo/Escritorio/jquery.customSelect-master/index.html",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/functions.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/library/bones.php",
+		"/home/hugo/Escritorio/desarrollo.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/library/js/libs/jquery.ui.progressbar.js",
+		"/home/hugo/Escritorio/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/library/css/jquery.ui.css",
+		"/var/www/hugo/u-storage/wp-content/themes/utorage/sidebar.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/library/js/libs/jquery.modal.js",
+		"/media/hugo/LaCie/Ustorage/Ejercicio.html",
+		"/var/www/hugo/ADT/prospectos11/index.html",
+		"/var/www/hugo/ADT/prospectos11/css/style.css",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/header.php",
+		"/var/www/hugo/git/ustorage/snippets/classes/Direcciones.php",
+		"/home/hugo/Descargas/controller(1).php",
+		"/var/www/hugo/git/ustorage/snippets/config/config.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/snippets/config/config.php",
+		"/home/hugo/Descargas/snippets/classes/libs/Model/PDO/DataBase.php",
+		"/home/hugo/Descargas/snippets/classes/libs/Model/PDO/Model.php",
+		"/home/hugo/Descargas/snippets/config/config.php",
+		"/home/hugo/Descargas/snippets/classes/Usuarios.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/snippets/info.php",
+		"/var/www/hugo/nib/index.html",
+		"/var/www/hugo/nib/estilos.styl",
+		"/var/www/hugo/nib/estilos.css",
+		"/var/www/hugo/index.html",
+		"/home/hugo/Descargas/controller.php",
+		"/tmp/controller-1.php",
+		"/tmp/controller.php",
+		"/var/www/hugo/git/ustorage/wp-content/themes/ustorage/page-sucursal.php",
+		"/home/hugo/Escritorio/projects/ustorage.sublime-project",
+		"/var/www/hugo/git/ustorage/index.php",
+		"/home/hugo/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
+		"/var/www/hugo/git/test/index.html",
+		"/home/hugo/Escritorio/test.jade",
+		"/var/www/hugo/uStorage/web-reservation/wp-content/plugins/StorageReservation/facilitypages.php",
+		"/var/www/hugo/uStorage/web-reservation/wp-content/themes/utorage/functions.php",
+		"/home/hugo/Escritorio/www/git/ustorage/hist",
+		"/var/www/hugo/cursosnino/gracias.html",
+		"/var/www/hugo/cursosgrupo/registro.html",
+		"/var/www/hugo/cursosnino/registro.html",
+		"/var/www/hugo/cursosnino/index.html",
+		"/var/www/hugo/cursosnino/style3.css",
+		"/var/www/hugo/cursosnino/style.css",
+		"/var/www/hugo/cursosnino/style2.css",
+		"/home/hugo/info",
+		"/home/hugo/Descargas/inscripcioneslightboxcopyinvertido/registro.html",
+		"/home/hugo/Descargas/inscripcioneslightboxcopyinvertido/style2.css",
+		"/home/hugo/Escritorio/www/git/ustorage/wp-content/themes/ustorage/library/js/facilities.js",
+		"/home/hugo/Escritorio/www/inter/single-test.php",
+		"/home/hugo/Escritorio/www/inter/single-plantel.php",
+		"/home/hugo/Escritorio/AS400/forma_prospecto.aspx",
+		"/home/hugo/Escritorio/AS400/procesacontacto.asp",
+		"/home/hugo/Escritorio/www/carls/include/conexion.php",
+		"/home/hugo/Escritorio/www/carls/include/functions.php",
+		"/home/hugo/Escritorio/www/carls/js/functions.js",
+		"/home/hugo/Escritorio/www/carls/reg.php",
+		"/home/hugo/Escritorio/www/carls/index.html",
+		"/home/hugo/Escritorio/Clicker/Hugo Interlingua/interlingua/wp-content/themes/interlingua/library/css/style.css",
+		"/home/hugo/Escritorio/www/crmInterlingua/app/views/elements/prospects/list_assigned_prospects.ctp",
+		"/home/hugo/Escritorio/www/interlingua/wp-content/themes/interlingua/single-test.php",
+		"/home/hugo/Escritorio/www/crmInterlingua/app/controllers/prospects_controller.php",
+		"/home/hugo/Descargas/InterlinguaApps.bak",
+		"/home/hugo/Escritorio/www/ADT/prospectos11/css/style.css",
+		"/home/hugo/Escritorio/www/ADT/prospectos11/index.html",
+		"/home/hugo/Escritorio/www/ADT/prospectos11/js/index.js",
+		"/home/hugo/Escritorio/www/ADT/prospectos11/js/jquery.modal.js",
+		"/home/hugo/Escritorio/www/valparaiso/css/style.css",
+		"/home/hugo/Escritorio/www/ADT/prospectos11/js/jquery.validate.js",
+		"/home/hugo/Escritorio/www/ADT/prospectos2/index.html",
+		"/home/hugo/Escritorio/www/mapa/js/distribuidores.js",
+		"/home/hugo/Escritorio/www/mapa/vista_mapa.php",
+		"/home/hugo/Escritorio/www/mapa/mapping.html",
+		"/home/hugo/Escritorio/www/mapa/css/distribuidores.css",
+		"/home/hugo/Escritorio/www/daily/salads/library/js/libs/grid.js"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/var/www/hugo/bk/Interlingua_hugo/interlingua/wp-content/themes/interlingua",
+			"/var/www/hugo/u-storage",
+			"/var/www/hugo/git/ustorage/wp-content/themes/ustorage",
+			"/home/hugo/Escritorio/www/u-storage",
+			"/home/hugo/Escritorio/www/uStorage",
+			"/home/hugo/Escritorio/www/interlingua",
+			"/home/hugo/Escritorio/www/crmInterlingua",
+			"/home/hugo/Escritorio/www/interlingua/wp-content/themes/interlingua",
+			"/home/hugo/Escritorio/www/crmInterlingua",
+			"/home/hugo/Escritorio/www/daily/salads",
+			"/home/hugo/Escritorio/www/interlingua/wp-content/themes/interlingua",
+			"/home/hugo/Escritorio/www/crmInterlingua",
+			"/home/hugo/Escritorio/www/interlingua/wp-content/themes/interlingua",
+			"/home/hugo/Escritorio/www/crmInterlingua/app",
+			"/home/hugo/Escritorio/www/crmInterlingua/app/models",
+			"/home/hugo/Escritorio/www/interlingua/wp-content/themes/interlingua",
+			"/home/hugo/Escritorio/www/interlingua",
+			"/home/hugo/Escritorio/www/crmInterlingua",
+			"/home/hugo/Escritorio/www/crmInterlingua/app/controllers",
+			"/home/hugo/Escritorio/www/interlingua/wp-content/themes/interlingua",
+			"/home/hugo/Escritorio/www/interlingua"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"pat",
+			"path",
+			"ruta",
+			"crm.interlingua.com.mx",
+			"INT",
+			"int",
+			"label",
+			">\n",
+			"core",
+			"matricula1Revista",
+			"tipoRevista",
+			"sendRevista",
+			"Alumnos",
+			"Tesy",
+			"slider",
+			"sendRevista",
+			"respuestas",
+			"magazine",
+			"Jon a",
+			"jona",
+			"||",
+			"Nivel",
+			"nivel",
+			"matri",
+			"localhost",
+			"valid",
+			"btnCerrar",
+			"toogleLogin",
+			"historial-calificaciones",
+			"lnk-acceso",
+			"dominionuevo.com",
+			"dominioantiguo.com",
+			"execQuery",
+			"Encarrerados",
+			"encarrerados",
+			"131106",
+			"cupon",
+			"http://interlingua.clicker360.com",
+			"http://dev.clicker360.com/interlingua_sitio",
+			"http://crm.interlingua.com.mx",
+			"selcciona",
+			"bodega",
+			"espacio \"",
+			"sugerido:  ",
+			"white",
+			"ui-progressbar",
+			"ui-progressbar-value",
+			"link-menu",
+			"+",
+			"'",
+			"+",
+			"'",
+			"+",
+			"'",
+			"+",
+			"'",
+			"+",
+			"'",
+			"+",
+			"'",
+			"+",
+			"'",
+			"+",
+			"'",
+			">'",
+			"totaldimensions",
+			"navigation_vert",
+			"updateSizeCalculator",
+			"storagebar",
+			"onchange=\"updateSizeCalculator()\"",
+			"#suggested",
+			"suggested",
+			"function clearAllFields(){\n        jQuery('#navigation_vert select').each(function(){\n            jQuery(this).val('0x0x0x0');\n        });\n         updateSizeCalculator();\n         jQuery( \"#suggested\").html(\"Tamaño de Bodegas\"); \n    }",
+			"clearAllFields",
+			"popo",
+			"generateOptions",
+			"show",
+			"modal",
+			"showSizeCalculator",
+			"naviDropDown",
+			"	\n\ntotalSize += (valueString.split('x')[0] * valueString.split('x')[1]);",
+			"	\n\nvalue: total1",
+			"$(",
+			"$",
+			"¿Qué tamaño de Bodega necesito?",
+			"Calculador de Espacios",
+			"modal",
+			"add",
+			"args",
+			"findEmail",
+			"getInstance",
+			"Usuarios",
+			"usua",
+			"new",
+			"Model",
+			"<?php\n\n\n\nerror_reporting(E_ERROR);\n\nerror_reporting(E_ALL);\n\nini_set(\"display_errors\", 1);\n\n\n\nif (file_exists('snippets/config/config.php')) {\n\n    define('CURRENT_PATH', dirname(__FILE__));\n\n    require_once 'snippets/config/config.php';\n\n} else {\n\n    exit('No fue posible localizar el archivo de configuración.');\n\n}\n\n\n\nrequire_once MODEL_PDO . 'DataBase.php';\n\nrequire_once MODEL_PDO . 'Model.php';\n\n\n\n\n\n$db = new DataBase();\n\n\n\nfunction __autoload($className) {\n\n\n\n    if (file_exists(CLASSES_PATH . \"/{$className}.php\")) {\n\n\n\n        require_once CLASSES_PATH . \"/{$className}.php\";\n\n    }\n\n}\n\n\n\nfunction checkValidMail($email) {\n\n    $expr = \"/^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)+$/\";\n\n    if (preg_match($expr, stripslashes($email)))\n\n        return true;\n\n    return false;\n\n}\n\n\n\n$args = ( strtoupper($_SERVER['REQUEST_METHOD']) == 'POST' ) ? $_POST : $_GET;\n\n\n\n$action = ( isset($args['action']) && !empty($args['action']) ) ? $args['action'] : NULL;\n\n\n\n\n\n\n\ntry {\n\n\n\n    switch ($action) {\n\n        case 'valid-mail-user':\n\n\n\n\n\n\n\n        $usuarios = new Usuarios($db->getInstance());\n\n        $response = $usuarios->findEmail($args);\n\n\n\n        if (!$response[\"success\"]) {\n\n\n\n            echo \"true\";\n\n        } else {\n\n\n\n            echo \"false\";\n\n        }\n\n\n\n\n\n        break;\n\n\n\n        case 'valid-mail-TextArea':\n\n\n\n        $args[\"correos\"] = trim($args[\"correos\"]);\n\n        $args[\"correos\"] = trim($args[\"correos\"],',');\n\n\n\n        $sustituye = array(\"\\r\\n\", \"\\n\\r\", \"\\n\", \"\\r\", \" \");\n\n\n\n        $args[\"correos\"] = str_replace($sustituye, \"\", $args[\"correos\"]);\n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n\n\n\n\n        $emails = explode(\",\", $args[\"correos\"]);\n\n\n\n\n\n        if (count($emails) != 5) {\n\n            exit(\"false\");\n\n        }\n\n\n\n        foreach ($emails as $email) {\n\n\n\n            if (!checkValidMail($email)) {\n\n                exit(\"false\");\n\n            }\n\n        }\n\n\n\n        $unique = array_unique($emails);\n\n        if (count($unique) != 5) {\n\n            exit(\"false\");\n\n        }\n\n\n\n\n\n        echo \"true\";\n\n\n\n        break;\n\n\n\n        case 'registro-1':\n\n\n\n\n\n\n\n        $usuarios = new Usuarios($db->getInstance());\n\n        $response = $usuarios->add($args);\n\n\n\n\n\n        if ($response[\"success\"]) {\n\n\n\n\n\n            $data[\"idUser\"] = $response[\"data\"][\"id\"];\n\n            $data[\"form\"] = $args['action'];\n\n\n\n\n\n            /*\n\n             * Sanatiza emails\n\n             */\n\n            $args[\"correos\"] = trim($args[\"correos\"]);\n\n            $args[\"correos\"] = trim($args[\"correos\"],',');\n\n\n\n            $sustituye = array(\"\\r\\n\", \"\\n\\r\", \"\\n\", \"\\r\", \" \");\n\n\n\n            $args[\"correos\"] = str_replace($sustituye, \"\", $args[\"correos\"]);\n\n\n\n\n\n            $correos = explode(\",\", $args[\"correos\"]);\n\n\n\n\n\n            $emails = new Emails($db->getInstance());\n\n\n\n            $success = true;\n\n            for ($index = 0; $index < count($correos); $index++) {\n\n\n\n                $data[\"email\"] = $correos[$index];\n\n\n\n                $response = $emails->add($data);\n\n\n\n                if (!$response[\"success\"]) {\n\n                    break;\n\n\n\n                    $success = false;\n\n                }\n\n            }\n\n\n\n            if ($success) {\n\n                \n\n                header(\"Location: \".$args['redirect_to'].\"?index=\". $data[\"idUser\"]);\n\n                \n\n                \n\n            } else {\n\n                header(\"Location: index.php\");\n\n            }\n\n        }\n\n\n\n\n\n\n\n        break;\n\n        case 'registro-2':\n\n        \n\n        \n\n\n\n\n\n\n\n        $data[\"idUser\"] = $args['idUser'];\n\n        $data[\"form\"] = $args['action'];\n\n\n\n\n\n            /*\n\n             * Sanatiza emails\n\n             */\n\n            $args[\"correos\"] = trim($args[\"correos\"]);\n\n\n\n            $sustituye = array(\"\\r\\n\", \"\\n\\r\", \"\\n\", \"\\r\", \" \");\n\n\n\n            $args[\"correos\"] = str_replace($sustituye, \"\", $args[\"correos\"]);\n\n\n\n\n\n            $correos = explode(\",\", $args[\"correos\"]);\n\n\n\n\n\n            $emails = new Emails($db->getInstance());\n\n\n\n            $success = true;\n\n            for ($index = 0; $index < count($correos); $index++) {\n\n\n\n                $data[\"email\"] = $correos[$index];\n\n\n\n                $response = $emails->add($data);\n\n\n\n                if (!$response[\"success\"]) {\n\n                    break;\n\n\n\n                    $success = false;\n\n                }\n\n            }\n\n\n\n            header(\"Location: index.php?complete=true\");\n\n//                if ($success) {\n\n//                    \n\n//                    header(\"Location: \".$args['redirect_to'].\"?index=\". $data[\"idUser\"]);\n\n//                    \n\n//                    \n\n//                } else {\n\n//                    header(\"Location: index.php\");\n\n//                }\n\n//            \n\n\n\n\n\n\n\n            break;\n\n\n\n\n\n            default:\n\n            $success = array('success' => FALSE, 'message' => utf8_encode('La opción seleccionada no es valida.'));\n\n            break;\n\n        }\n\n    } catch (AspelApiException $e) {\n\n\n\n        $success = (string) $e;\n\n\n\n//    $success = array('success' => FALSE, 'message' => utf8_encode('No fue posible enviar el correo .'));\n\n    }\n\n\n\n",
+			"salesforce",
+			"force",
+			"sales",
+			"h1",
+			"/>",
+			"btnEnviar",
+			"ibm",
+			"db2",
+			"56364",
+			"http://crm",
+			"http://crm.interlingua.com.mx",
+			"http://interlingua.clicker360.com",
+			"http://www.interlingua.com.mx",
+			"http://crm.interlingua.com.mx",
+			"http://dev.clicker360.com/interlingua_sitio",
+			"dominionuevo.com",
+			"diminionuevo.com",
+			"dominioantiguo.com",
+			"sys",
+			"sy",
+			"system",
+			"call",
+			"pass",
+			"usua",
+			"descripcion-test",
+			"img",
+			"library",
+			"Html",
+			"image",
+			"adt-logo.png",
+			"origin",
+			"result_examen"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"www.interlingua.com.mx",
+			"&&",
+			"http://localhost/interlingua",
+			"http://www.interlingua.com.mx",
+			"http://www.interlingua.com.mx/buenfin_cupon/mail/templates/131106",
+			"http://interlingua.clicker360.com",
+			"http://dev.clicker360.com/interlingua_sitio",
+			"espacio </strong>\"",
+			"espacio \"</strong>",
+			"sugerido:  <br><strong>",
+			"",
+			".txt-cal",
+			"jQuery(",
+			"jQuery",
+			"modal_per",
+			"http://www.interlingua.com.mx",
+			"http://www.interlingua.com.mx/crm",
+			"http://localhost/hugo/git/ustorage",
+			"http://localhost:8888/u-storage_dev",
+			"http://crm.interlingua.com.mx",
+			"http://dev.clicker360.com/interlingua_sitio",
+			"$",
+			"conexion"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/var/www/html/hugo/backend/proyecto/app/templates/hora.html",
+					"settings":
+					{
+						"buffer_size": 62,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"auto_name": "hora.html",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/var/www/html/hugo/backend/proyecto/app/views.py",
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.git":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/html/projects/interlingua.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true
+}

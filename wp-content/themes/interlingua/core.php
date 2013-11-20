@@ -119,7 +119,8 @@ function login(){
 		if(trim($return_value)!="" && $password==trim($return_value)){
 			$_SESSION['id_alumno'] = md5($usuario);
 			$_SESSION['alumno'] = $usuario;
-			$respuesta["url"] = "http://interlingua.com.mx/acceso-a-alumnos/";
+			//$respuesta["url"] = "http://interlingua.com.mx/acceso-a-alumnos/";
+			$respuesta["url"] = "http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/";
 			$respuesta["error"] = False;
 		}else{
 			$respuesta["error"] = True;
@@ -178,7 +179,8 @@ function login(){
 function logout(){		
 	session_start();
 	session_destroy();
-	echo "http://interlingua.com.mx/";
+	//echo "http://interlingua.com.mx/";
+	echo "http://interlingua.com.mx/clicker360/interlingua";
 }
 
 function getAlumno(){
