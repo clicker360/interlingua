@@ -105,7 +105,7 @@ body{
 
 aside{
 	/*background: url(images/backgroundform.png);*/
-	width:651px;
+	width:751px;
 	height:375px;
 	float: right;	
 	position: relative;
@@ -121,8 +121,8 @@ aside{
 
 .logobf{
 	float: left;
-	margin-top: 20px;
-	margin-right: 20px;
+	margin-top: 7em;
+	margin-left: 4em;
 }
 
 #formulario{
@@ -168,22 +168,23 @@ aside{
 filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
 			}
 			.p5amarillo{
-				font-size: 20px;
+				font-size: 30px;
 				font-family: 'Muli', sans-serif;
 				margin: 0px auto;
-				text-align: left;	
+				text-align: center;	
 				color: #fae124;
-				font-weight:normal;
+				font-weight:bold;
+				margin-top: 30px;
 				/*text-shadow: 3px 1px 3px #136c6e;
 filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
 			}
 			#p6{
 				font-size: 20px;
 				font-family: 'Muli', sans-serif;
-				width:531px;
+				width:605px;
 				margin: 0px auto;
 				text-align: center;	
-				margin-top:40px;
+				margin-top:30px;
 				margin-bottom: 20px;
 				color: #fff;
 				font-weight:normal;
@@ -207,7 +208,7 @@ filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
 				width:575px;
 				margin: 0px auto;
 				text-align: justify;	
-				margin-top:25px;
+				margin-top:20px;
 				margin-bottom: 12px;
 				margin-left: -110px;
 				color: #fff;
@@ -504,10 +505,10 @@ filter: dropshadow(color=#136c6e, offx=3, offy=1);*/
 			 	border:none;
 				width:306px;
 			  	height:61px;
-			  	margin-top: 27px;
+			  	margin-top: 10px;
 				margin-left:24px;				
 			  	font-family: Arial;
-			  	font-size: 19.73px;
+			  	font-size: 17.73px;
 			  	font-family: 'Muli', sans-serif;
 			  	font-weight: bold;
 			  	color:#fff;

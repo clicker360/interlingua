@@ -101,9 +101,9 @@ body{
 
 aside{
 	/*background: url(images/backgroundform.png);		*/
-	width:651px;
+	width:100%;
 	height:375px;
-	float: right;	
+	float: left;	
 	position: relative;
 	z-index: 1;
 }
