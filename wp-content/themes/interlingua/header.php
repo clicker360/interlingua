@@ -54,7 +54,7 @@
 		<!--End of Zopim Live Chat Script-->
 		<script>
 			$zopim(function() {
-			    alert("Visitor's email: " + $zopim.livechat.getEmail());
+			    //alert("Visitor's email: " + $zopim.livechat.getEmail());
 			}); 
 		</script>
 
