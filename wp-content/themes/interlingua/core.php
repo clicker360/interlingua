@@ -76,6 +76,7 @@ function saveMagazine(){
 			}
 		}else{
 			$response["error"] = false;
+			$response["mensaje"] = $msgError;
 		}
 
 		$bdh = null;

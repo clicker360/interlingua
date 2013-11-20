@@ -302,6 +302,7 @@ jQuery(document).ready(function() {
                 if (data.error){
                     alert(data.mensaje);
                 }else{
+                    alert(data.mensaje);
                     window.location="http://www.interlingua.com.mx/magazine/";
                 }
               }
