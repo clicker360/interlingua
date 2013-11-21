@@ -4352,7 +4352,7 @@ label.error {
 
   #login_alumnos,
   #toogleLogin {
-  display: none;
+  /*display: none;*/
 }
 
 .item{
@@ -5421,6 +5421,9 @@ you can add resource intensive styles.
   values are commented out on each line.
   
   ******************************************************************/
+  
+
+
   .onecol {
     width: 5.801104972%;
   }
@@ -7547,6 +7550,16 @@ input[type=radio]{
 	border-radius: 5px;
 	width:220px;
   display: block;
+} 
+@media (max-width: 768px) {
+  #login_alumnos {
+    margin-left: 532px;
+    margin-top: 122px;
+  }
+  #toogleLogin{
+    margin-left: 532px !important;
+    margin-top: 150px !important;
+  } 
 }
 #toogleLogin{
 	color: #FFFFFF;
