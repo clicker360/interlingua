@@ -4341,7 +4341,6 @@ label.error {
   color: #30AEBC;
   
 }
-
 #ctn-registro {
     background-color: #30AEBC;
     height:600px;
@@ -4350,10 +4349,163 @@ label.error {
     padding: 20px 40px 20px 40px;
   }
 
-  #login_alumnos,
-  #toogleLogin {
-  /*display: none;*/
+/* Login Alumnos Mobile */
+#login_alumnos {
+    color: #FFFFFF;
+    background: rgba(51, 176, 190, 0.8);
+    z-index: 9999;
+    position:absolute;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width:220px;
+    display: block;
+    margin-top: 38px;
+    margin-left: 40px;
 }
+.menu-fijo {
+    position: fixed !important;
+    top: 0px;
+}
+#toogleLogin{
+    color: #FFFFFF;
+    background: rgba(51, 176, 190, 0.8);
+    margin-top: 66px !important;
+    margin-left: 40px;
+    z-index: 9999;
+    position:absolute;
+    height:170px;
+    width:220px;
+    display: none;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+@-moz-document url-prefix() {
+    #toogleLogin { margin-top: 88px; }
+    .btnCerrar{
+        margin-top: -9px !important;
+    }
+    .nombreSession{
+        margin-top: 10px;
+    }   
+}
+
+#sendLogin{
+    background: #E66616;
+    border: 0;
+    color: #FFFFFF;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding:4px 12px 4px 12px;
+    float: right;
+    margin-right: 7px;
+    margin-top:15px;
+}
+.inptLog{
+    width: 207px;
+    padding:5px;
+    border:solid 1px #DEDEDE;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    margin-left:5px;
+}
+.inptLog:focus{
+     box-shadow:0 0 7px #C4C4C4;
+}
+.lblLog{
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left:5px;
+}
+#frmLogin{
+    padding-top: 5px;
+}
+.menu-fijo {
+    position: fixed !important;
+    top: 0px;
+}
+.lnk-acceso{
+    display:block;
+    background: rgb(51, 176, 190);  
+    width: 30px;
+    height: 28px; 
+    float:right;
+    padding: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.txt-acceso{
+    display:block;
+    float:left;
+    padding: 5px 15px 5px 15px;
+}
+.txt-acceso2{
+    margin-left:50px;
+}
+.btnCuenta{
+    background: #E66616;
+    border: 0;
+    color: #FFFFFF;
+    padding:5px 12px 2px 12px;
+    float: left;
+    margin-left: 7px;
+    margin-top:8px;
+    text-decoration: none;
+    width: 100px;
+    text-align:center;
+    font-size: 12px;
+}
+.btnCerrar{
+    background: #E66616;
+    border: 0;
+    color: #FFFFFF;
+    padding:5px 12px 2px 12px;
+    float: right;
+    margin-right: 7px;
+    margin-top: -9px;
+    text-decoration: none;
+    width: 100px;
+    text-align:center;
+    font-size: 12px;
+}
+.heightlog{
+    height: 88px !important;
+}
+.nombreSession{
+    font-size:18px;
+    padding-left: 15px;
+}
+.matriculaSession{
+    font-size:18px;
+    padding-left: 15px;
+}
+.ctn-pre {
+    width: 600px;
+    margin-top: -90px;
+    float: left;
+    margin-left: -100px;
+}
+#recuperafr{
+    display: none;
+}
+.olvidaste{
+  color: #FFFFFF;
+  display: block;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+
 
 .item{
   background: #F0F0F0;
