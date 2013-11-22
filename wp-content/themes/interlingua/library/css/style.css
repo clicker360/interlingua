@@ -7561,16 +7561,20 @@ input[type=radio]{
     margin-top: 150px !important;
   } 
 }
-@media (min-width: 769px) and (max-width: 980px) { 
+@media (min-width: 769px) and (max-width: 1024px) { 
     #login_alumnos {
         margin-left:730px;
-        margin-top: 115px;
+        margin-top: 60px;
     }
     #toogleLogin{
         margin-left: 730px !important;
-        margin-top: 143px !important;
+        margin-top: 88px !important;
     } 
+    #megaMenu > ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform.ubersearch-v2 input[type="text"] {
+        width: 125px !important;
+    }
 }
+
 #toogleLogin{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
