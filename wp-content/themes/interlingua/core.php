@@ -89,7 +89,7 @@ function saveMagazine(){
 				Tipo de teléfono: '.$tipoTelefono.'<br>
 				Teléfono: '.$telefono.'<br>
 				Email: '.$email.'<br>
-				Codigo: '.$codigo.'<br>
+				Codigo: '.$codigo.'
 			';
 
 			$para = "hugo@clicker360.com";
