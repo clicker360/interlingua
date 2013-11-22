@@ -7561,6 +7561,16 @@ input[type=radio]{
     margin-top: 150px !important;
   } 
 }
+@media (min-width: 769px) and (max-width: 980px) { 
+    #login_alumnos {
+        margin-left:730px;
+        margin-top: 115px;
+    }
+    #toogleLogin{
+        margin-left: 730px !important;
+        margin-top: 143px !important;
+    } 
+}
 #toogleLogin{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
