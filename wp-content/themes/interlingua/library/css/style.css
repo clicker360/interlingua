@@ -4353,7 +4353,7 @@ label.error {
 #login_alumnos {
     color: #FFFFFF;
     background: rgba(51, 176, 190, 0.8);
-    z-index: 9999;
+    z-index: 21;
     position:absolute;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -4371,7 +4371,7 @@ label.error {
     background: rgba(51, 176, 190, 0.8);
     margin-top: 66px !important;
     margin-left: 40px;
-    z-index: 9999;
+    z-index: 21;
     position:absolute;
     height:170px;
     width:220px;
@@ -7698,7 +7698,7 @@ input[type=radio]{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
 	margin-top: 60px;
-	z-index: 9999;
+	z-index: 21;
 	position:absolute;
 	margin-left: 800px;
 	-webkit-border-radius: 5px;
@@ -7734,7 +7734,7 @@ input[type=radio]{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
 	margin-top: 88px;
-	z-index: 9999;
+	z-index: 21;
 	position:absolute;
 	margin-left: 800px;
 	height:170px;
