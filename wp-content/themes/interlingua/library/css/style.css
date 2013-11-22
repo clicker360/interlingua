@@ -7698,7 +7698,7 @@ input[type=radio]{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
 	margin-top: 60px;
-	z-index: 21;
+	z-index: 9999;
 	position:absolute;
 	margin-left: 800px;
 	-webkit-border-radius: 5px;
@@ -7728,6 +7728,15 @@ input[type=radio]{
     #megaMenu > ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform.ubersearch-v2 input[type="text"] {
         width: 125px !important;
     }
+}
+
+@media (min-width: 1025px) {
+  #login_alumnos {
+    z-index: 9999;
+  }
+  #toogleLogin{
+    margin-top: 88px !important;
+  } 
 }
 
 #toogleLogin{
