@@ -285,7 +285,7 @@ jQuery(document).ready(function() {
         });
     });
 
-    jQuery("#form1").submit(function(e){
+    jQuery("#form1").live("submit",function(e){
         e.preventDefault();
         ruta = jQuery("#ruta").val();
         if (jQuery(this).valid() == true) {

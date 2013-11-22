@@ -75,8 +75,30 @@ function saveMagazine(){
 				$response["mensaje"] = $msgError;
 			}
 		}else{
+			$header  = "From: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
+			$header .= "X-Mailer: PHP/".phpversion()." \r\n";
+			$header .= "Mime-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html\r\n";
+
+			$mensaje = '
+				Se ha registrado un nuevo usuario en Interlingua Magazine <br>
+				Matrucula: '.$matricula.'<br>
+				Apellido Paterno: '.$paterno.'<br>
+				Apellido Materno: '.$materno.'<br>
+				Nombre: '.$name.'<br>
+				Tipo de teléfono: '.$tipoTelefono.'<br>
+				Teléfono: '.$telefono.'<br>
+				Email: '.$email.'<br>
+				Codigo: '.$codigo.'<br>
+			';
+
+			$para = "hugo@clicker360.com";
+			$asunto = 'Nuevo Registro Interlingua Magazine';
+
+			mail($para, $asunto, utf8_decode($mensaje), $header);
+
 			$response["error"] = false;
-			$response["mensaje"] = $msgError;
+			$response["mensaje"] = "El alumno fue registrado con éxito";
 		}
 
 		$bdh = null;
