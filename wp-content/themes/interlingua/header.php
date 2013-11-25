@@ -83,6 +83,17 @@
 			      login.removeClass('menu-fijo');
 			    }
 			  });
+		
+			  var menu = jQuery('#megaMenuToggle');
+			  var menu_offset = login.offset();
+			  
+			  jQuery(window).on('scroll', function() {
+			    if(jQuery(window).scrollTop() > menu_offset.top+100) {
+			      menu.addClass('menu-fijo');
+			    } else {
+			      menu.removeClass('menu-fijo');
+			    }
+			  });
 			  
 			  // action for login acceso alumnos
 			  jQuery(".lnk-acceso").on("click",function(e){
