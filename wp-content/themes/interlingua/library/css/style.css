@@ -4366,6 +4366,26 @@ label.error {
     position: fixed !important;
     top: 0px;
 }
+
+@media (max-width: 480px) {
+    .menu-fix{
+        height: 18px;
+        clear: both;
+        display: block !important;
+        width: 100% !important;
+        background: #33B0BE !important;
+        padding-bottom: 40px !important;
+        padding: 10px !important;
+    }
+    .fixIconMenu{
+        margin-right: 20px !important;
+    }
+    .fixUlMenu{
+        margin-top: 38px !important;
+    }
+}
+
+
 #toogleLogin{
     color: #FFFFFF;
     background: rgba(51, 176, 190, 0.8);
