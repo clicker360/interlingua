@@ -4362,13 +4362,13 @@ label.error {
     margin-top: 38px;
     margin-left: 40px;
 }
-.menu-fijo {
+/*.menu-fijo {
     position: fixed !important;
     top: 0px;
-}
+}*/
 
-/*@media (max-width: 480px) {
-    .menu-fix{
+@media (max-width: 480px) {
+   /* .menu-fix{
         height: 18px;
         clear: both;
         display: block !important;
@@ -4385,8 +4385,22 @@ label.error {
     .fixUlMenu{
         margin-top: 38px !important;
         z-index: 9000;
+    }*/
+    .menu-fijo {
+      position: absolute !important;   
+      top: 252 !important;
     }
-}*/
+
+    #login_alumnos {
+      z-index: 5 !important;
+    }
+    #toogleLogin{
+      z-index: 5 !important;
+    }
+    #megaMenu{
+      z-index: 9000;
+    }
+}
 
 
 #toogleLogin{
@@ -4448,7 +4462,7 @@ label.error {
     padding-top: 5px;
 }
 .menu-fijo {
-    position: fixed !important;
+    position: fixed;
     top: 0px;
 }
 .lnk-acceso{
@@ -7721,7 +7735,7 @@ input[type=radio]{
 	color: #FFFFFF;
 	background: rgba(51, 176, 190, 0.8);
 	margin-top: 60px;
-	z-index: 9999;
+	z-index: 21;
 	position:absolute;
 	margin-left: 800px;
 	-webkit-border-radius: 5px;
