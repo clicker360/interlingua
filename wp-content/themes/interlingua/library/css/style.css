@@ -4367,7 +4367,7 @@ label.error {
     top: 0px;
 }
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
     .menu-fix{
         height: 18px;
         clear: both;
@@ -4376,14 +4376,17 @@ label.error {
         background: #33B0BE !important;
         padding-bottom: 40px !important;
         padding: 10px !important;
+        padding-left: 0px !important;
+        z-index: 9999;
     }
     .fixIconMenu{
         margin-right: 20px !important;
     }
     .fixUlMenu{
         margin-top: 38px !important;
+        z-index: 9000;
     }
-}
+}*/
 
 
 #toogleLogin{
