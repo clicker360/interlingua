@@ -197,8 +197,8 @@ jQuery(document).ready(function() {
             phone_number: {
                 required: true,
                 number: true,
-                minlength: 7,
-                maxlength: 8,
+                minlength: 8,
+                maxlength: 10,
             },
             mobile_number: {
                 required: true,
@@ -246,7 +246,7 @@ jQuery(document).ready(function() {
             phone_number: {
                 required: '*Valida n&uacute;mero telef&oacute;nico',
                 number: '*Solo n&uacute;meros para el tel&eacute;fono',
-                minlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
+                minlength: '*El tel&eacute;fono tiene que ser de 8 n&uacute;meros',
                 maxlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
             },
             mobile_number: {
