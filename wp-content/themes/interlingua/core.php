@@ -92,7 +92,7 @@ function saveMagazine(){
 				Codigo: '.$codigo.'
 			';
 
-			$para = "hugo@clicker360.com";
+			$para = "hugo@clicker360.com,hrubio@interlingua.com.mx";
 			$asunto = 'Nuevo Registro Interlingua Magazine';
 
 			mail($para, $asunto, utf8_decode($mensaje), $header);
