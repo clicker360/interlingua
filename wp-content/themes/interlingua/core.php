@@ -62,8 +62,8 @@ function saveMagazine(){
 										?,
 										?)";
 		$stmt = $db->prepare($sql);  
-		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,2);
-		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 100);
+		$stmt->bindParam(1, $magazineId, PDO::PARAM_INT,200);
+		$stmt->bindParam(2, $msgError, PDO::PARAM_STR, 200);
 
 		$stmt->execute();
 
@@ -134,7 +134,7 @@ function login(){
 
 		$sql = "CALL SCAPAL.TALUM_PASSWORD('".$usuario."', ?)";
 		$stmt = $db->prepare($sql);    
-		$stmt->bindParam(1, $return_value, PDO::PARAM_STR, 10);
+		$stmt->bindParam(1, $return_value, PDO::PARAM_STR, 200);
 		$stmt->execute();
 
 		//verifica datos
@@ -162,26 +162,26 @@ function login(){
 
 		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('".$usuario."',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $db->prepare($sql);  
-		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
-		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
-		$stmt->bindParam(3, $nombre, PDO::PARAM_STR, 100);
-		$stmt->bindParam(4, $sexo, PDO::PARAM_STR, 1);
-		$stmt->bindParam(5, $edad, PDO::PARAM_INT, 2);
-		$stmt->bindParam(6, $fechanacimiento, PDO::PARAM_INT, 8);
-		$stmt->bindParam(7, $telefono1, PDO::PARAM_STR, 15);
-		$stmt->bindParam(8, $telefono2, PDO::PARAM_STR, 15);
-		$stmt->bindParam(9, $calle, PDO::PARAM_STR, 40);
-		$stmt->bindParam(10, $colonia, PDO::PARAM_STR, 30);
-		$stmt->bindParam(11, $poblacion, PDO::PARAM_STR, 30);
-		$stmt->bindParam(12, $cp, PDO::PARAM_INT, 5);
-		$stmt->bindParam(13, $ultimoplantel, PDO::PARAM_STR, 2);
-		$stmt->bindParam(14, $ultimocurso, PDO::PARAM_STR, 20);
-		$stmt->bindParam(15, $ultimoHorario, PDO::PARAM_STR, 7);
-		$stmt->bindParam(16, $ultimoNivel, PDO::PARAM_STR, 5);
-		$stmt->bindParam(17, $email, PDO::PARAM_STR, 100);
-		$stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 150);
-		$stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 100);
-		$stmt->bindParam(20, $horario, PDO::PARAM_STR, 7);
+		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 200);
+		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 200);
+		$stmt->bindParam(3, $nombre, PDO::PARAM_STR, 200);
+		$stmt->bindParam(4, $sexo, PDO::PARAM_STR, 200);
+		$stmt->bindParam(5, $edad, PDO::PARAM_INT, 200);
+		$stmt->bindParam(6, $fechanacimiento, PDO::PARAM_INT, 200);
+		$stmt->bindParam(7, $telefono1, PDO::PARAM_STR, 200);
+		$stmt->bindParam(8, $telefono2, PDO::PARAM_STR, 200);
+		$stmt->bindParam(9, $calle, PDO::PARAM_STR, 200);
+		$stmt->bindParam(10, $colonia, PDO::PARAM_STR, 200);
+		$stmt->bindParam(11, $poblacion, PDO::PARAM_STR, 200);
+		$stmt->bindParam(12, $cp, PDO::PARAM_INT, 200);
+		$stmt->bindParam(13, $ultimoplantel, PDO::PARAM_STR, 200);
+		$stmt->bindParam(14, $ultimocurso, PDO::PARAM_STR, 200);
+		$stmt->bindParam(15, $ultimoHorario, PDO::PARAM_STR, 200);
+		$stmt->bindParam(16, $ultimoNivel, PDO::PARAM_STR, 200);
+		$stmt->bindParam(17, $email, PDO::PARAM_STR, 200);
+		$stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 200);
+		$stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 200);
+		$stmt->bindParam(20, $horario, PDO::PARAM_STR, 200);
 
 		$stmt->execute();
 
@@ -214,26 +214,26 @@ function getAlumno(){
 
 		$sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('".$matricula."',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $db->prepare($sql);  
-		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
-		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
-		$stmt->bindParam(3, $nombre, PDO::PARAM_STR, 100);
-		$stmt->bindParam(4, $sexo, PDO::PARAM_STR, 1);
-		$stmt->bindParam(5, $edad, PDO::PARAM_INT, 2);
-		$stmt->bindParam(6, $fechanacimiento, PDO::PARAM_INT, 8);
-		$stmt->bindParam(7, $telefono1, PDO::PARAM_STR, 15);
-		$stmt->bindParam(8, $telefono2, PDO::PARAM_STR, 15);
-		$stmt->bindParam(9, $calle, PDO::PARAM_STR, 40);
-		$stmt->bindParam(10, $colonia, PDO::PARAM_STR, 30);
-		$stmt->bindParam(11, $poblacion, PDO::PARAM_STR, 30);
-		$stmt->bindParam(12, $cp, PDO::PARAM_INT, 5);
-		$stmt->bindParam(13, $ultimoplantel, PDO::PARAM_STR, 2);
-		$stmt->bindParam(14, $ultimocurso, PDO::PARAM_STR, 20);
-		$stmt->bindParam(15, $ultimoHorario, PDO::PARAM_STR, 7);
-		$stmt->bindParam(16, $ultimoNivel, PDO::PARAM_STR, 5);
-		$stmt->bindParam(17, $email, PDO::PARAM_STR, 100);
-		$stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 150);
-		$stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 100);
-		$stmt->bindParam(20, $horario, PDO::PARAM_STR, 7);
+		$stmt->bindParam(1, $paterno, PDO::PARAM_STR, 200);
+		$stmt->bindParam(2, $materno, PDO::PARAM_STR, 200);
+		$stmt->bindParam(3, $nombre, PDO::PARAM_STR, 200);
+		$stmt->bindParam(4, $sexo, PDO::PARAM_STR, 200);
+		$stmt->bindParam(5, $edad, PDO::PARAM_INT, 200);
+		$stmt->bindParam(6, $fechanacimiento, PDO::PARAM_INT, 200);
+		$stmt->bindParam(7, $telefono1, PDO::PARAM_STR, 200);
+		$stmt->bindParam(8, $telefono2, PDO::PARAM_STR, 200);
+		$stmt->bindParam(9, $calle, PDO::PARAM_STR, 200);
+		$stmt->bindParam(10, $colonia, PDO::PARAM_STR, 200);
+		$stmt->bindParam(11, $poblacion, PDO::PARAM_STR, 200);
+		$stmt->bindParam(12, $cp, PDO::PARAM_INT, 200);
+		$stmt->bindParam(13, $ultimoplantel, PDO::PARAM_STR, 200);
+		$stmt->bindParam(14, $ultimocurso, PDO::PARAM_STR, 200);
+		$stmt->bindParam(15, $ultimoHorario, PDO::PARAM_STR, 200);
+		$stmt->bindParam(16, $ultimoNivel, PDO::PARAM_STR, 200);
+		$stmt->bindParam(17, $email, PDO::PARAM_STR, 200);
+		$stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 200);
+		$stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 200);
+		$stmt->bindParam(20, $horario, PDO::PARAM_STR, 200);
 
 		$stmt->execute();
 
@@ -334,11 +334,11 @@ function getPass(){
 
 		$sql = "CALL SCAPAL.TALUM_GETPASSWORD('".trim($_POST["matinpt"])."',?,?,?,?,?)";
 	    $stmt = $db->prepare($sql);
-	    $stmt->bindParam(1, $paterno, PDO::PARAM_STR, 100);
-	    $stmt->bindParam(2, $materno, PDO::PARAM_STR, 20);
-	    $stmt->bindParam(3, $nombre, PDO::PARAM_STR, 100);
-	    $stmt->bindParam(4, $password, PDO::PARAM_STR, 10);
-	    $stmt->bindParam(5, $email, PDO::PARAM_STR, 100);
+	    $stmt->bindParam(1, $paterno, PDO::PARAM_STR, 200);
+	    $stmt->bindParam(2, $materno, PDO::PARAM_STR, 200);
+	    $stmt->bindParam(3, $nombre, PDO::PARAM_STR, 200);
+	    $stmt->bindParam(4, $password, PDO::PARAM_STR, 200);
+	    $stmt->bindParam(5, $email, PDO::PARAM_STR, 200);
 	   
 	    $stmt->execute();
 	   
