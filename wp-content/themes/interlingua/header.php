@@ -1,9 +1,9 @@
 <?php
-	session_start();
-	if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
-		$nombreAlumno = $_SESSION["nombre"];
-		$matriculaAlumno = $_SESSION["alumno"];
-	}
+session_start();
+if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
+	$nombreAlumno = $_SESSION["nombre"];
+	$matriculaAlumno = $_SESSION["alumno"];
+}
 ?>
 <!doctype html>
 
@@ -12,78 +12,78 @@
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<!-- Google Chrome Frame for IE -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Google Chrome Frame for IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(''); ?></title>
+	<title><?php wp_title(''); ?></title>
 
-		<!-- mobile meta (hooray!) -->
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- mobile meta (hooray!) -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<!-- or, set /favicon.ico for IE10 win -->
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+			<![endif]-->
+			<!-- or, set /favicon.ico for IE10 win -->
+			<meta name="msapplication-TileColor" content="#f01d4f">
+			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<!-- wordpress head functions -->
-		<?php wp_head(); ?>
-		<!-- end of wordpress head -->
+			<!-- wordpress head functions -->
+			<?php wp_head(); ?>
+			<!-- end of wordpress head -->
 
-		<!-- drop Google Analytics Here -->
+			<!-- drop Google Analytics Here -->
 
-		<!--Start of Zopim Live Chat Script-->
-		<script type="text/javascript">
-		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-		$.src='//cdn.zopim.com/?1g1vE7v5adkEtsV6o9kwO8Ec2cp8OIQF';z.t=+new Date;$.
-		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-		</script>
-		<!--End of Zopim Live Chat Script-->
-		<script>
-			$zopim(function() {
+			<!--Start of Zopim Live Chat Script-->
+			<script type="text/javascript">
+			window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+				d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+					_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+					$.src='//cdn.zopim.com/?1g1vE7v5adkEtsV6o9kwO8Ec2cp8OIQF';z.t=+new Date;$.
+					type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+					</script>
+					<!--End of Zopim Live Chat Script-->
+					<script>
+					$zopim(function() {
 			    //alert("Visitor's email: " + $zopim.livechat.getEmail());
 			}); 
-		</script>
+					</script>
 
-		<!-- end analytics -->
-		<script type="text/javascript" charset="utf-8">
-			jQuery(document).ready(function() {
+					<!-- end analytics -->
+					<script type="text/javascript" charset="utf-8">
+					jQuery(document).ready(function() {
 			  //scrollTop for login
 			  var menu = jQuery('#login_alumnos');
 			  var menu_offset = menu.offset();
 			  
 			  jQuery(window).on('scroll', function() {
-			    if(jQuery(window).scrollTop() > menu_offset.top-50) {
-			      menu.addClass('menu-fijo');
-			    } else {
-			      menu.removeClass('menu-fijo');
-			    }
+			  	if(jQuery(window).scrollTop() > menu_offset.top-50) {
+			  		menu.addClass('menu-fijo');
+			  	} else {
+			  		menu.removeClass('menu-fijo');
+			  	}
 			  });
 			  
 			  var login = jQuery('#toogleLogin');
 			  var login_offset = login.offset();
 			  
 			  jQuery(window).on('scroll', function() {
-			    if(jQuery(window).scrollTop() > login_offset.top+100) {
-			      login.addClass('menu-fijo');
-			    } else {
-			      login.removeClass('menu-fijo');
-			    }
+			  	if(jQuery(window).scrollTop() > login_offset.top+100) {
+			  		login.addClass('menu-fijo');
+			  	} else {
+			  		login.removeClass('menu-fijo');
+			  	}
 			  });
-		
+			  
 			  /*var menuAlt = jQuery('#megaMenuToggle');
 			  var menuAlt_offset = login.offset();
 			  
@@ -101,8 +101,8 @@
 			      jQuery(".megaMenuToggle-icon").removeClass("fixIconMenu");
 			      jQuery("#megaUber").removeClass("fixUlMenu");			  
 			    }
-			  });*/
-			  
+			});*/	
+
 			  // action for login acceso alumnos
 			  jQuery(".lnk-acceso").on("click",function(e){
 			  	e.preventDefault();
@@ -114,18 +114,18 @@
 			  });
 			  
 			  jQuery("#frmLogin").on("submit",function(e){
-				e.preventDefault();
-				ruta = jQuery("#ruta").val();
-				
-				jQuery.ajax({
-	            	type:"post",
-	            	url: ruta+"/core.php",
-	            	data: jQuery(this).serialize(),
-	            	dataType:"json",
-	            	error:function(){
-	                	alert("Error, por favor intentalo mas tarde.");
-	            	},
-	            	success:function(data){
+			  	e.preventDefault();
+			  	ruta = jQuery("#ruta").val();
+			  	
+			  	jQuery.ajax({
+			  		type:"post",
+			  		url: ruta+"/core.php",
+			  		data: jQuery(this).serialize(),
+			  		dataType:"json",
+			  		error:function(){
+			  			alert("Error, por favor intentalo mas tarde.");
+			  		},
+			  		success:function(data){
 	            		//success
 	            		if(data.error){
 	            			alert(data.mensaje);
@@ -134,7 +134,7 @@
 	            			window.location = data.url;	
 	            		}
 	            	}
-	        	});
+	            });
 			  });
 			  
 			  jQuery("#logout").on("click",function(e){
@@ -153,18 +153,18 @@
 			  	jQuery("#recuperafr").fadeIn("slow");
 
 			  	jQuery("#frmGetPass").on("submit",function(e){
-					e.preventDefault();
-					ruta = jQuery("#ruta").val();
-				
-					jQuery.ajax({
-		            	type:"post",
-		            	url: ruta+"/core.php",
-		            	data: jQuery(this).serialize(),
-		            	dataType:"json",
-		            	error:function(){
-		                	alert("Error, por favor intentalo mas tarde.");
-		            	},
-		            	success:function(data){
+			  		e.preventDefault();
+			  		ruta = jQuery("#ruta").val();
+			  		
+			  		jQuery.ajax({
+			  			type:"post",
+			  			url: ruta+"/core.php",
+			  			data: jQuery(this).serialize(),
+			  			dataType:"json",
+			  			error:function(){
+			  				alert("Error, por favor intentalo mas tarde.");
+			  			},
+			  			success:function(data){
 		            		//success
 		            		if(data.error){
 		            			alert(data.mensaje);
@@ -174,43 +174,43 @@
 		            			location.reload();
 		            		}
 		            	}
-		        	});
+		            });
 			  	});
 			  });
 
 			});
-		</script>
-		<style>
-		#megaMenu ul.megaMenu > li.menu-item {
-			margin-left : -2px;
+</script>
+<style>
+#megaMenu ul.megaMenu > li.menu-item {
+	margin-left : -2px;
 
-	}
-	</style>
-	
+}
+</style>
+
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-8156648-1']);
-  _gaq.push(['_setDomainName', 'interlingua.com.mx']);
-  _gaq.push(['_trackPageview']);
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-8156648-1']);
+_gaq.push(['_setDomainName', 'interlingua.com.mx']);
+_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 
 </script>
-	
-	</head>
 
-	<body <?php body_class(); ?>>
+</head>
 
-		<div id="container">
+<body <?php body_class(); ?>>
 
-			<header class="header" role="banner">
+	<div id="container">
 
-				<div id="inner-header" class="wrap clearfix">
+		<header class="header" role="banner">
+
+			<div id="inner-header" class="wrap clearfix">
 
 				<div id="contenedor-izquierdo"  class="sixcol clearfix">
 					<div class="logo-header" align="center">
@@ -221,10 +221,10 @@
 				<div id="contenedor-derecho"  class="sixcol clearfix">
 					<div class="logos-redes fullcol clearfix">
 						
-							<a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" ?></a>						
-							<a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" ?></a>
-							<a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" ?></a>
-										
+						<a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" ?></a>						
+						<a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" ?></a>
+						<a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" ?></a>
+						
 					</div>
 
 					<div class="logos-redes fullcol clearfix">
@@ -263,61 +263,61 @@
 							</div>
 						</div> -->
 
-						</div> <!-- end #inner-header -->
+					</div> <!-- end #inner-header -->
 
-						<div id="contenedor-menu">
+					<div id="contenedor-menu">
 
-							<div id="contenedor-menu-interior"  class="wrap clearfix">
-					
-								<nav role="navigation">
-									<?php bones_main_nav(); ?>
-								</nav>
-								<?php if (!isset($_SESSION["id_alumno"])) { ?>
-								<div id="login_alumnos">
-									<span class="txt-acceso">ACCESO A ALUMNOS</span>
-									<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
-								</div>
-								<div id="toogleLogin">
-									<div id="loginfr">
-										<form name="frmLogin" id="frmLogin" action="#" method="post">
-											<input type="hidden" name="action" value="login" id="action" />
-											<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-											<label class="lblLog" for="usuario">Matrícula</label>
-										    <input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
-										    <label class="lblLog" for="usuario">Contraseña</label>
-										    <input type="password" name="pass" value="" id="pass" class="inptLog" required/>
-										   	<input type="submit" name="sendLogin" value="Entrar" id="sendLogin" />
-										</form>
-										<a href="#" class="olvidaste" id="olvidaContrasena">¿Olvidaste tu contraseña?</a>
-									</div>
-									<div id="recuperafr">
-										<form name="frmGetPass" id="frmGetPass" action="#" method="post">
-											<input type="hidden" name="action" value="getPass" id="action" />
-											<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-											<label class="lblLog" for="matinpt">Matrícula</label>
-										    <input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
-					
-										   	<input type="submit" name="sendLogin" value="Enviar" id="sendLogin" />
-										</form>
-									</div>
-								</div>
-								<?php }else{  ?>
-								<div id="login_alumnos">
-									<!--span class="txt-acceso">BIENVENIDO <?php echo "<strong>".strtoupper($_SESSION["alumno"])."</strong>"; ?></span-->
-									<span class="txt-acceso txt-acceso2">BIENVENIDO</span>
-									<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
-								</div>
-								<div id="toogleLogin" class="heightlog">
-									<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-									<div class="nombreSession"><?php echo $nombreAlumno;?></div>
-									<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
-									<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
-									<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
-								</div>
-								<?php } ?>
+						<div id="contenedor-menu-interior"  class="wrap clearfix">
+							
+							<nav role="navigation">
+								<?php bones_main_nav(); ?>
+							</nav>
+							<?php if (!isset($_SESSION["id_alumno"])) { ?>
+							<div id="login_alumnos">
+								<span class="txt-acceso">ACCESO A ALUMNOS</span>
+								<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
 							</div>
-
+							<div id="toogleLogin">
+								<div id="loginfr">
+									<form name="frmLogin" id="frmLogin" action="#" method="post">
+										<input type="hidden" name="action" value="login" id="action" />
+										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
+										<label class="lblLog" for="usuario">Matrícula</label>
+										<input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
+										<label class="lblLog" for="usuario">Contraseña</label>
+										<input type="password" name="pass" value="" id="pass" class="inptLog" required/>
+										<input type="submit" name="sendLogin" value="Entrar" id="sendLogin" />
+									</form>
+									<a href="#" class="olvidaste" id="olvidaContrasena">¿Olvidaste tu contraseña?</a>
+								</div>
+								<div id="recuperafr">
+									<form name="frmGetPass" id="frmGetPass" action="#" method="post">
+										<input type="hidden" name="action" value="getPass" id="action" />
+										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
+										<label class="lblLog" for="matinpt">Matrícula</label>
+										<input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
+										
+										<input type="submit" name="sendLogin" value="Enviar" id="sendLogin" />
+									</form>
+								</div>
+							</div>
+							<?php }else{  ?>
+							<div id="login_alumnos">
+								<!--span class="txt-acceso">BIENVENIDO <?php echo "<strong>".strtoupper($_SESSION["alumno"])."</strong>"; ?></span-->
+								<span class="txt-acceso txt-acceso2">BIENVENIDO</span>
+								<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
+							</div>
+							<div id="toogleLogin" class="heightlog">
+								<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
+								<div class="nombreSession"><?php echo $nombreAlumno;?></div>
+								<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
+								<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
+								<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
+							</div>
+							<?php } ?>
 						</div>
 
-	
+					</div>
+
+					
 			</header> <!-- end header -->

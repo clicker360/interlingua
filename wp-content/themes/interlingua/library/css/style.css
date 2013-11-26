@@ -16,25 +16,25 @@ of the styles inside media queries.
 /*
  * Corrects `block` display not defined in IE6/7/8/9 & FF3.
  */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ nav,
+ section,
+ summary {
   display: block;
 }
 /*
  * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
  */
-audio,
-canvas,
-video {
+ audio,
+ canvas,
+ video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -43,7 +43,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS5 devices.
  */
-audio:not([controls]) {
+ audio:not([controls]) {
   display: none;
   height: 0;
 }
@@ -51,7 +51,7 @@ audio:not([controls]) {
  * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
  * Known issue: no IE6 support.
  */
-[hidden] {
+ [hidden] {
   display: none;
 }
 /* ==========================================================================
@@ -63,7 +63,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-html {
+ html {
   font-size: 100%;
   /* 1 */
 
@@ -76,17 +76,17 @@ html {
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-html,
-button,
-input,
-select,
-textarea {
+ html,
+ button,
+ input,
+ select,
+ textarea {
   font-family: sans-serif;
 }
 /*
  * Addresses margins handled incorrectly in IE6/7.
  */
-body {
+ body {
   margin: 0;
 }
 /* ==========================================================================
@@ -95,15 +95,15 @@ body {
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
-a:focus {
+ a:focus {
   outline: thin dotted;
 }
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-a:active,
-a:hover {
+ a:active,
+ a:hover {
   outline: 0;
 }
 /* ==========================================================================
@@ -113,7 +113,7 @@ a:hover {
  * Addresses font sizes and margins set differently in IE6/7.
  * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
  */
-h1 {
+ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -140,14 +140,14 @@ h6 {
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome.
  */
-abbr[title] {
+ abbr[title] {
   border-bottom: 1px dotted;
 }
 /*
  * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
  */
-b,
-strong {
+ b,
+ strong {
   font-weight: bold;
 }
 blockquote {
@@ -156,31 +156,31 @@ blockquote {
 /*
  * Addresses styling not present in S5, Chrome.
  */
-dfn {
+ dfn {
   font-style: italic;
 }
 /*
  * Addresses styling not present in IE6/7/8/9.
  */
-mark {
+ mark {
   background: #ff0;
   color: #000;
 }
 /*
  * Addresses margins set differently in IE6/7.
  */
-p,
-pre {
+ p,
+ pre {
   margin: 1em 0;
 }
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome.
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-code,
-kbd,
-pre,
-samp {
+ code,
+ kbd,
+ pre,
+ samp {
   font-family: monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em;
@@ -188,7 +188,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
-pre {
+ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -196,14 +196,14 @@ pre {
 /*
  * Addresses CSS quotes not supported in IE6/7.
  */
-q {
+ q {
   quotes: none;
 }
 /*
  * Addresses `quotes` property not supported in S4.
  */
-q:before,
-q:after {
+ q:before,
+ q:after {
   content: '';
   content: none;
 }
@@ -214,8 +214,8 @@ small {
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  * gist.github.com/413930
  */
-sub,
-sup {
+ sub,
+ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -233,10 +233,10 @@ sub {
 /*
  * Addresses margins set differently in IE6/7.
  */
-dl,
-menu,
-ol,
-ul {
+ dl,
+ menu,
+ ol,
+ ul {
   margin: 0em 0;
 }
 dd {
@@ -245,16 +245,16 @@ dd {
 /*
  * Addresses paddings set differently in IE6/7.
  */
-menu,
-ol,
-ul {
+ menu,
+ ol,
+ ul {
   padding: 0 0 0 40px;
 }
 /*
  * Corrects list images handled incorrectly in IE7.
  */
-nav ul,
-nav ol {
+ nav ul,
+ nav ol {
   list-style: none;
   list-style-image: none;
 }
@@ -266,7 +266,7 @@ nav ol {
  * 2. Improves image quality when scaled in IE7.
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-img {
+ img {
   border: 0;
   /* 1 */
 
@@ -277,7 +277,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9.
  */
-svg:not(:root) {
+ svg:not(:root) {
   overflow: hidden;
 }
 /* ==========================================================================
@@ -286,7 +286,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11.
  */
-figure {
+ figure {
   margin: 0;
 }
 /* ==========================================================================
@@ -295,13 +295,13 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7.
  */
-form {
+ form {
   margin: 0;
 }
 /*
  * Define consistent border, margin, and padding.
  */
-fieldset {
+ fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
@@ -311,7 +311,7 @@ fieldset {
  * 2. Corrects text not wrapping in FF3.
  * 3. Corrects alignment displayed oddly in IE6/7.
  */
-legend {
+ legend {
   border: 0;
   /* 1 */
 
@@ -328,10 +328,10 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
  * 3. Improves appearance and consistency in all browsers.
  */
-button,
-input,
-select,
-textarea {
+ button,
+ input,
+ select,
+ textarea {
   font-size: 100%;
   /* 1 */
 
@@ -347,8 +347,8 @@ textarea {
  * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
  * UA stylesheet.
  */
-button,
-input {
+ button,
+ input {
   line-height: normal;
 }
 /*
@@ -360,10 +360,10 @@ input {
  * 4. Removes inner spacing in IE7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE6.
  */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+ button,
+ html input[type="button"],
+ input[type="reset"],
+ input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
 
@@ -377,8 +377,8 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-button[disabled],
-input[disabled] {
+ button[disabled],
+ input[disabled] {
   cursor: default;
 }
 /*
@@ -387,8 +387,8 @@ input[disabled] {
  * 3. Removes excess padding in IE7.
  *    Known issue: excess padding remains in IE6.
  */
-input[type="checkbox"],
-input[type="radio"] {
+ input[type="checkbox"],
+ input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
 
@@ -404,7 +404,7 @@ input[type="radio"] {
  * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
  * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
  *    to future-proof).
- */
+*/
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -418,15 +418,15 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X.
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+ input[type="search"]::-webkit-search-cancel-button,
+ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 /*
  * Removes inner padding and border in FF3+.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+ button::-moz-focus-inner,
+ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -434,7 +434,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9.
  * 2. Improves readability and alignment in all browsers.
  */
-textarea {
+ textarea {
   overflow: auto;
   /* 1 */
 
@@ -448,7 +448,7 @@ textarea {
 /*
  * Remove most spacing between table cells.
  */
-table {
+ table {
   border-spacing: 0;
 }
 /******************************************************************
@@ -562,7 +562,7 @@ TYPOGRAPHY
 	on embedding fonts, go to:
 	http://www.fontsquirrel.com/
 	Be sure to remove the comment brackets.
-*/
+  */
 /*	@font-face {
     	font-family: 'Font Name';
     	src: url('../fonts/font-name.eot');
@@ -574,26 +574,26 @@ TYPOGRAPHY
     	font-style: normal;
 	}
 	*/
-@font-face {
-  font-family: 'Conv_MyriadPro-Regular';
-  src: url('../fonts/MyriadPro-Regular.eot');
-  src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  @font-face {
+    font-family: 'Conv_MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Conv_MyriadPro-Semibold';
-  src: url('../fonts/MyriadPro-Semibold.eot');
-  src: local('☺'), url('../fonts/MyriadPro-Semibold.woff') format('woff'), url('../fonts/MyriadPro-Semibold.ttf') format('truetype'), url('../fonts/MyriadPro-Semibold.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Conv_MyriadPro-Semibold';
+    src: url('../fonts/MyriadPro-Semibold.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Semibold.woff') format('woff'), url('../fonts/MyriadPro-Semibold.ttf') format('truetype'), url('../fonts/MyriadPro-Semibold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Conv_MyriadPro-Bold';
-  src: url('../fonts/MyriadPro-Bold.eot');
-  src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Conv_MyriadPro-Bold';
+    src: url('../fonts/MyriadPro-Bold.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 /* 
 use the best ampersand 
@@ -721,42 +721,42 @@ BUTTONS
   background-image: linear-gradient(to bottom, #eb7125, #e26315);
   /*&:active {
 		.css-gradient(darken(@bones-orange, 5%),@bones-pink);
-	}*/
-}
-.button:hover,
-.button:visited:hover,
-#curso-boton-enviar:hover,
-#boton-slider-cursos:hover,
-.boton-slider-cursos-type:hover,
-#bolsa-trabajo-enviar:hover,
-#localiza-ubicacion:hover,
-#btnEnviar:hover,
-#btnEnviarCursos:hover,
-#btnEnviarEmpresas:hover,
-#btnEnviarAlumnos:hover,
-#btnEnviarFranquicias:hover,
-#btnEnviarMagazine:hover,
-#sendtest:hover,
-#sendRevista:hover,
-#sendValidate:hover,
-/*#btnEnviarHome:hover,*/
-.button:focus,
-.button:visited:focus,
-#curso-boton-enviar:focus,
-#boton-slider-cursos:focus,
-.boton-slider-cursos-type:focus,
-#bolsa-trabajo-enviar:focus,
-#localiza-ubicacion:focus,
-#btnEnviar:focus,
-#btnEnviarCursos:focus,
-#btnEnviarEmpresas:focus,
-#btnEnviarAlumnos:focus,
-#btnEnviarFranquicias:focus,
-#btnEnviarMagazine:focus,
-#sendtest:focus,
-#sendRevista:focus,
-#sendValidate:focus
-/*#btnEnviarHome:focus*/ {
+     }*/
+ }
+ .button:hover,
+ .button:visited:hover,
+ #curso-boton-enviar:hover,
+ #boton-slider-cursos:hover,
+ .boton-slider-cursos-type:hover,
+ #bolsa-trabajo-enviar:hover,
+ #localiza-ubicacion:hover,
+ #btnEnviar:hover,
+ #btnEnviarCursos:hover,
+ #btnEnviarEmpresas:hover,
+ #btnEnviarAlumnos:hover,
+ #btnEnviarFranquicias:hover,
+ #btnEnviarMagazine:hover,
+ #sendtest:hover,
+ #sendRevista:hover,
+ #sendValidate:hover,
+ /*#btnEnviarHome:hover,*/
+ .button:focus,
+ .button:visited:focus,
+ #curso-boton-enviar:focus,
+ #boton-slider-cursos:focus,
+ .boton-slider-cursos-type:focus,
+ #bolsa-trabajo-enviar:focus,
+ #localiza-ubicacion:focus,
+ #btnEnviar:focus,
+ #btnEnviarCursos:focus,
+ #btnEnviarEmpresas:focus,
+ #btnEnviarAlumnos:focus,
+ #btnEnviarFranquicias:focus,
+ #btnEnviarMagazine:focus,
+ #sendtest:focus,
+ #sendRevista:focus,
+ #sendValidate:focus
+ /*#btnEnviarHome:focus*/ {
   color: #ffffff;
   border: 1px solid #bc5311;
   border-top-color: #d85f14;
@@ -791,13 +791,13 @@ BUTTONS
   box-shadow: inset 0 0 3px #f2a270;
   /*&:active {
 		.css-gradient( darken(@bones-orange, 5%), @bones-orange );
-	}*/
+     }*/
 
-}
-.blue-button:hover,
-.blue-button:visited:hover,
-.blue-button:focus,
-.blue-button:visited:focus {
+ }
+ .blue-button:hover,
+ .blue-button:visited:hover,
+ .blue-button:focus,
+ .blue-button:visited:focus {
   border-color: #b34f10;
   background-color: #ca5913;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e66515), to(#ca5913));
@@ -834,11 +834,11 @@ BUTTONS
   background-image: linear-gradient(to bottom, #eb7125, #e26315);
   /*&:active {
 		.css-gradient(darken(@bones-orange, 5%),@bones-pink);
-	}	*/
+     }	*/
 
-}
-.buton-widget:hover,
-.buton-widget:focus {
+ }
+ .buton-widget:hover,
+ .buton-widget:focus {
   color: #ffffff;
   border: 1px solid #bc5311;
   border-top-color: #d85f14;
@@ -864,11 +864,11 @@ BUTTONS
   box-shadow: inset 0 0 3px #f2a270;
   /*&:active {
 		.css-gradient( darken(@bones-orange, 5%), @bones-orange );
-	}*/
+     }*/
 
-}
-.buton-widget:visited:hover,
-.buton-widget:visited:focus {
+ }
+ .buton-widget:visited:hover,
+ .buton-widget:visited:focus {
   border-color: #b34f10;
   background-color: #ca5913;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e66515), to(#ca5913));
@@ -910,11 +910,11 @@ BUTTONS
   background-image: linear-gradient(to bottom, #eb7125, #e26315);
   /*&:active {
 		.css-gradient(darken(@bones-orange, 5%),@bones-pink);
-	}	*/
+     }	*/
 
-}
-.buton-home:hover,
-.buton-home:focus {
+ }
+ .buton-home:hover,
+ .buton-home:focus {
   color: #ffffff;
   border: 1px solid #bc5311;
   border-top-color: #d85f14;
@@ -940,11 +940,11 @@ BUTTONS
   box-shadow: inset 0 0 3px #f2a270;
   /*&:active {
 		.css-gradient( darken(@bones-orange, 5%), @bones-orange );
-	}*/
+     }*/
 
-}
-.buton-home:visited:hover,
-.buton-home:visited:focus {
+ }
+ .buton-home:visited:hover,
+ .buton-home:visited:focus {
   border-color: #b34f10;
   background-color: #ca5913;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e66515), to(#ca5913));
@@ -1092,42 +1092,42 @@ body {
 /********************
 02. WORDPRESS BODY CLASSES
     style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
+    ********************/
+    /* for sites that are read right to left (i.e. hebrew) */
+    /* home page */
+    /* blog template page */
+    /* archive page */
+    /* date archive page */
+    /* replace the number to the corresponding page number */
+    /* search page */
+    /* search result page */
+    /* no results search page */
+    /* individual paged search (i.e. body.search-paged-3) */
+    /* 404 page */
+    /* single post page */
+    /* individual post page by id (i.e. body.postid-73) */
+    /* individual paged single (i.e. body.single-paged-3) */
+    /* attatchment page */
+    /* individual attatchment page (i.e. body.attachmentid-763) */
+    /* style mime type pages */
+    /* author page */
+    /* user nicename (i.e. body.author-samueladams) */
+    /* paged author archives (i.e. body.author-paged-4) for page 4 */
+    /* category page */
+    /* individual category page (i.e. body.category-6) */
+    /* replace the number to the corresponding page number */
+    /* tag page */
+    /* individual tag page (i.e. body.tag-news) */
+    /* replace the number to the corresponding page number */
+    /* custom page template page */
+    /* individual page template (i.e. body.page-template-contact-php */
+      /* replace the number to the corresponding page number */
+      /* parent page template */
+      /* child page template */
+      /* replace the number to the corresponding page number */
+      /* if user is logged in */
+      /* paged items like search results or archives */
+      /* individual paged (i.e. body.paged-3) */
 /*********************
 03. LAYOUT & GRID STYLES
 *********************/
@@ -1257,13 +1257,13 @@ and more scalable.
 		http://www.alistapart.com/articles/organizing-mobile/
 		*/
 
-}
-.nav li a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 10px;
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
+  }
+  .nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1271,12 +1271,12 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 
-}
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 30px;
-}
-/* end .nav */
+        }
+        .nav li ul.sub-menu li a,
+        .nav li ul.children li a {
+          padding-left: 30px;
+      }
+      /* end .nav */
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
@@ -1307,50 +1307,50 @@ and more scalable.
 			but it's up to you. Feel free to change it up.
 			*/
 
-}
-.entry-content dd {
-  margin-left: 0;
-  font-size: 0.9em;
-  color: #787878;
-  margin-bottom: 1.5em;
-}
-.entry-content img {
-  margin: 0 0 1.5em 0;
-  max-width: 100%;
-  height: auto;
-}
-.entry-content video,
-.entry-content object {
-  max-width: 100%;
-  height: auto;
-}
-.entry-content pre {
-  background: #eee;
-  border: 1px solid #cecece;
-  padding: 10px;
-}
-/* end .entry-content */
-.wp-caption {
-  max-width: 100%;
-  background: #eee;
-  padding: 5px;
-  /* images inside wp-caption */
+        }
+        .entry-content dd {
+          margin-left: 0;
+          font-size: 0.9em;
+          color: #787878;
+          margin-bottom: 1.5em;
+      }
+      .entry-content img {
+          margin: 0 0 1.5em 0;
+          max-width: 100%;
+          height: auto;
+      }
+      .entry-content video,
+      .entry-content object {
+          max-width: 100%;
+          height: auto;
+      }
+      .entry-content pre {
+          background: #eee;
+          border: 1px solid #cecece;
+          padding: 10px;
+      }
+      /* end .entry-content */
+      .wp-caption {
+          max-width: 100%;
+          background: #eee;
+          padding: 5px;
+          /* images inside wp-caption */
 
-}
-.wp-caption img {
-  max-width: 100%;
-  margin-bottom: 0;
-  width: 100%;
-}
-.wp-caption p.wp-caption-text {
-  font-size: 0.85em;
-  margin: 4px 0 7px;
-  text-align: center;
-}
-/* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
+      }
+      .wp-caption img {
+          max-width: 100%;
+          margin-bottom: 0;
+          width: 100%;
+      }
+      .wp-caption p.wp-caption-text {
+          font-size: 0.85em;
+          margin: 4px 0 7px;
+          text-align: center;
+      }
+      /* end .wp-caption */
+      /* image gallery styles */
+      /* end .gallery */
+      /* gallery caption styles */
 /******************************************************************
 09. PAGE NAVI STYLES
 ******************************************************************/
@@ -1645,7 +1645,7 @@ and more scalable.
 	override these styles for the desktop
 	view.
 	*/
-/* end .footer-links */
+  /* end .footer-links */
 /****************	Estilos Peronalizados	****************
 ---------------------------------------------------------- */
 .prueba {
@@ -1693,7 +1693,7 @@ h2.current {
   color: #989898;
 }
 /*	Span
-	------------------------------------------ */
+------------------------------------------ */
 .telefono1 {
   color: #33b0be;
 }
@@ -1709,12 +1709,12 @@ h2.current {
   font-weight: bold;
 }
 /*	Slider
-	------------------------------------------ */
+------------------------------------------ */
 .slider-home {
   display: none;
 }
 /*	Header
-	------------------------------------------ */
+------------------------------------------ */
 .logo-header {
   margin: 15px 0 0px 0;
 }
@@ -1744,7 +1744,7 @@ h2.current {
   background: #33b0be;
 }
 /*	Pagina Home
-	------------------------------------------ */
+------------------------------------------ */
 .titulo-seccion-home {
   font-size: 4.375em;
   font-family: 'Conv_MyriadPro-Semibold';
@@ -1764,7 +1764,7 @@ h2.current {
   color: #30aebc;
 }
 /*	Seccion Metodo
-		------------------------------------------ */
+------------------------------------------ */
 .metodo-full {
   background: #0098aa;
   height: auto;
@@ -1811,7 +1811,7 @@ h2.current {
   text-shadow: 0 1px rgba(109, 109, 109, 0.75);
   cursor: pointer;
   /*margin-bottom: 10px;
-						margin-top:5px;*/
+  margin-top:5px;*/
 
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1843,7 +1843,7 @@ h2.current {
   background-image: linear-gradient(to bottom, #e26315, #ea6817);
 }
 /*	Pagina Cursos
-		------------------------------------------ */
+------------------------------------------ */
 .cursos-full {
   background-color: #d1d1d1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
@@ -1896,7 +1896,7 @@ h2.current {
   text-shadow: 0 1px rgba(109, 109, 109, 0.75);
   cursor: pointer;
   /*margin-bottom: 10px;
-						margin-top:5px;*/
+  margin-top:5px;*/
 
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1928,7 +1928,7 @@ h2.current {
   background-image: linear-gradient(to bottom, #e26315, #ea6817);
 }
 /*	Seccion Test
-		------------------------------------------ */
+------------------------------------------ */
 .test-full {
   background: #0098aa;
   height: auto;
@@ -1970,7 +1970,7 @@ h2.current {
   text-shadow: 0 1px rgba(109, 109, 109, 0.75);
   cursor: pointer;
   /*margin-bottom: 10px;
-					margin-top:5px;*/
+  margin-top:5px;*/
 
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2002,7 +2002,7 @@ h2.current {
   background-image: linear-gradient(to bottom, #e26315, #ea6817);
 }
 /*	Planteles
-		------------------------------------------ */
+------------------------------------------ */
 .planteles-full {
   background-color: #d1d1d1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
@@ -2072,7 +2072,7 @@ h2.current {
   border: none;
 }
 /*	Seccion Contacto
-		------------------------------------------ */
+------------------------------------------ */
 .contacto-full {
   background: #0098aa;
   height: auto;
@@ -2252,7 +2252,7 @@ h2.current {
   text-shadow: 0 1px rgba(109, 109, 109, 0.75);
   cursor: pointer;
   /*margin-bottom: 10px;
-						margin-top:5px;*/
+  margin-top:5px;*/
 
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2304,7 +2304,7 @@ h2.current {
   cursor: pointer;
   margin-top: 30px;
   /*margin-bottom: 10px;
-          margin-top:5px;*/
+  margin-top:5px;*/
 
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2337,7 +2337,7 @@ h2.current {
 }
 
 /*	Bolsa de Trabajo
-		------------------------------------------ */
+------------------------------------------ */
 .bolsa-trabajo-full {
   background-color: #d1d1d1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
@@ -2395,7 +2395,7 @@ h2.current {
   text-shadow: 0 1px rgba(109, 109, 109, 0.75);
   cursor: pointer;
   /*margin-bottom: 10px;
-					margin-top:5px;*/
+  margin-top:5px;*/
 
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2427,9 +2427,9 @@ h2.current {
   background-image: linear-gradient(to bottom, #e26315, #ea6817);
 }
 /*	Paginas	Generales
-	------------------------------------------ */
+------------------------------------------ */
 /*	Titulos	
-		------------------------------------------ */
+------------------------------------------ */
 .curso-titulo,
 .page-title {
   border-bottom: solid 1px #ececec;
@@ -2439,9 +2439,9 @@ h2.current {
   text-align: center;
 }
 /*	Paginas	Cursos
-	------------------------------------------ */
+------------------------------------------ */
 /*	Menu
-		------------------------------------------ */
+------------------------------------------ */
 .menu-cursos {
   margin-top: -20px;
 }
@@ -2465,7 +2465,7 @@ h2.current {
   background: none;
 }
 /*	Contenedor
-		------------------------------------------ */
+------------------------------------------ */
 #contenedor-curso {
   background-color: #d1d1d1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
@@ -2525,7 +2525,7 @@ h2.current {
   width: 80%;
 }
 /* Formulario Pagina Cursos
-		------------------------------------------ */
+------------------------------------------ */
 #formulario-cursos {
   height: 600px;
 }
@@ -2708,7 +2708,7 @@ h2.current {
   color: #fff;
 }
 /* Formulario Pagina Empresas
-		------------------------------------------ */
+------------------------------------------ */
 #formulario-empresas {
   height: 820px;
 }
@@ -2954,7 +2954,7 @@ h2.current {
   color: #fff;
 }
 /* Formulario Pagina Franquicias
-		------------------------------------------ */
+------------------------------------------ */
 #formulario-franquicias {
   height: 777px;
 }
@@ -3188,7 +3188,7 @@ label.error {
   z-index: 10000;
 }
 /* Formulario Pagina Alumnos
-		------------------------------------------ */
+------------------------------------------ */
 #formulario-alumnos {
   height: 600px;
   padding-top: 20px;
@@ -3379,7 +3379,7 @@ label.error {
   z-index: 10000;
 }
 /* Formulario Pagina Test
-    ------------------------------------------ */
+------------------------------------------ */
 #formulario-test {
   height: auto;
 }
@@ -3569,7 +3569,7 @@ label.error {
 }
 
 /*	Slider
-		------------------------------------------ */
+------------------------------------------ */
 .contenedor-slider-cursos {
   float: left;
 }
@@ -3604,7 +3604,7 @@ label.error {
   margin-top: 0.7em;
 }
 /*	Paginas Contacto
-	------------------------------------------ */
+------------------------------------------ */
 #contenedor-contacto {
   /*margin-top: 2em;*/
 
@@ -3630,22 +3630,22 @@ label.error {
   text-align: center;
 }
 .resultado-test {
-    font-family: 'Conv_MyriadPro-Regular';
-    font-size: 3.5em;
-    color: #30aebc;
-    margin-top: -0.5em;
-    margin-left: 0em;
-    line-height: 1.99em;
-    width: 100%;
-    text-align: center;
-  }
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 3.5em;
+  color: #30aebc;
+  margin-top: -0.5em;
+  margin-left: 0em;
+  line-height: 1.99em;
+  width: 100%;
+  text-align: center;
+}
 .subtitulo-resultado-test {
-    padding-top: 0.5em;
-    font-size: 1.875em;
-    color: #ed7213;
-    text-align: center;
-    margin-left: 0em;
-  }
+  padding-top: 0.5em;
+  font-size: 1.875em;
+  color: #ed7213;
+  text-align: center;
+  margin-left: 0em;
+}
 .descripcion-contacto {
   font-family: 'Conv_MyriadPro-Regular';
   font-size: 1.25em;
@@ -3675,11 +3675,11 @@ label.error {
   text-align: center;
 }
 .imagen-test-inicio {
-    margin-bottom: 0px;
-    margin-top: -120px;
-    margin-left: 0px;
-    position: relative;
-    z-index: -1;
+  margin-bottom: 0px;
+  margin-top: -120px;
+  margin-left: 0px;
+  position: relative;
+  z-index: -1;
 }
 .contenedor-curso-formulario {
   background: #30aebc;
@@ -3739,7 +3739,7 @@ label.error {
   height: auto;
 }
 /*	Paginas	Planteles
-	------------------------------------------ */
+------------------------------------------ */
 .encabezado-planteles,
 .nombre-plantel {
   font-family: 'Conv_MyriadPro-Semibold';
@@ -3825,7 +3825,7 @@ label.error {
   margin-left: 100px;
 }
 /*	Paginas Contacto
-	------------------------------------------ */
+------------------------------------------ */
 /*	.formulario-contacto-home{
 				margin-top: 40px;
 				width: 80%;
@@ -3873,39 +3873,39 @@ label.error {
 
 	/* Seccion Alumnos
 	------------------------------------------ */
-/* Menu Inicio Alumnos */
-.menu-alumnos {
-  width: 100%;
-  float: left;
-  margin: 0px 0 0 10px;
+  /* Menu Inicio Alumnos */
+  .menu-alumnos {
+    width: 100%;
+    float: left;
+    margin: 0px 0 0 10px;
 }
 .inicio-alumnos,
 .calificaciones-alumnos,
 .magazine-alumnos {
-  float: left;
-  height: 28px;
+    float: left;
+    height: 28px;
 }
 .inicio-alumnos {
-  background: #0398a9 url(../images/arrow-azul.png) no-repeat right;
-  color: #fff;
-  padding: 7px 42px 0 30px;
+    background: #0398a9 url(../images/arrow-azul.png) no-repeat right;
+    color: #fff;
+    padding: 7px 42px 0 30px;
 }
 .calificaciones-alumnos,
 .magazine-alumnos {
-  background: #e3e3e3 url(../images/arrow-gray.png) no-repeat right;
-  color: #747373;
-  padding: 7px 42px 0 30px;
-  cursor: pointer;
+    background: #e3e3e3 url(../images/arrow-gray.png) no-repeat right;
+    color: #747373;
+    padding: 7px 42px 0 30px;
+    cursor: pointer;
 }
 .calificaciones-alumnos,
 .magazine-alumnos {
-  background: #e3e3e3 url(../images/arrow-gray2.png) no-repeat right;
+    background: #e3e3e3 url(../images/arrow-gray2.png) no-repeat right;
 }
 .calificaciones-alumnos:hover{
-  color: #656565;
+    color: #656565;
 }
 .historial-calificaciones{
-	display:none;
+ display:none;
 }
 .datos-escuela-alumno {
   float: left;
@@ -4071,7 +4071,7 @@ label.error {
 .top-labels {
   font-size: 16px;
   color: #30aebc;
-/*  border: 1px solid #30aebc;*/
+  /*  border: 1px solid #30aebc;*/
   text-align: center;
   position: relative;
 }
@@ -4082,7 +4082,7 @@ label.error {
 
 
 /*	Paginas Bolsa de Trabajo
-	------------------------------------------ */
+------------------------------------------ */
 #bolsa-trabajo-apellidos,
 #bolsa-trabajo-nombre,
 #bolsa-trabajo-email,
@@ -4143,7 +4143,7 @@ label.error {
   height: auto;
 }
 /*	Footer
-	------------------------------------------ */
+------------------------------------------ */
 .footer1 {
   background: #666666;
   color: #fff;
@@ -4283,7 +4283,7 @@ label.error {
   text-shadow: 0 1px rgba(109, 109, 109, 0.75);
   cursor: pointer;
   /*margin-bottom: 10px;
-		margin-top:5px;*/
+  margin-top:5px;*/
 /*
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -4300,7 +4300,7 @@ label.error {
   background-image: -moz-linear-gradient(top, #eb7125, #e26315);
   background-image: -o-linear-gradient(top, #eb7125, #e26315);
   background-image: linear-gradient(to bottom, #eb7125, #e26315);
-}*/
+  }*/
 /*#btnEnviarHome:hover,
 #btnEnviarHome:focus {
   color: #ffffff;
@@ -4313,33 +4313,33 @@ label.error {
   background-image: -moz-linear-gradient(top, #e26315, #ea6817);
   background-image: -o-linear-gradient(top, #e26315, #ea6817);
   background-image: linear-gradient(to bottom, #e26315, #ea6817);
-}*/
-#cmbEstadosHome,
-#cmbSucursalesHome {
-  margin-top: 30px;
+  }*/
+  #cmbEstadosHome,
+  #cmbSucursalesHome {
+    margin-top: 30px;
 }
 #chkPoliticasHome {
-  float: left;
-  margin: 3px 10px 20px 2%;
+    float: left;
+    margin: 3px 10px 20px 2%;
 }
 #acepto1Home {
-  float: left;
+    float: left;
 }
 #acepto1Home a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
- /* Preguntas Test */
+/* Preguntas Test */
 .ctn-pre{
-  margin-top: 0px;
-  width: 330px;
-  float: left;
-  margin-left:-38px;
+    margin-top: 0px;
+    width: 330px;
+    float: left;
+    margin-left:-38px;
 }
 .ctn-pre > h1{
-  color: #30AEBC;
-  
+    color: #30AEBC;
+
 }
 #ctn-registro {
     background-color: #30AEBC;
@@ -4347,7 +4347,7 @@ label.error {
     width: 125%;
     margin: -20px 0px 0px -30px;
     padding: 20px 40px 20px 40px;
-  }
+}
 
 /* Login Alumnos Mobile */
 #login_alumnos {
@@ -4365,9 +4365,9 @@ label.error {
 /*.menu-fijo {
     position: fixed !important;
     top: 0px;
-}*/
+    }*/
 
-@media (max-width: 480px) {
+    @media (max-width: 480px) {
    /* .menu-fix{
         height: 18px;
         clear: both;
@@ -4385,25 +4385,42 @@ label.error {
     .fixUlMenu{
         margin-top: 38px !important;
         z-index: 9000;
-    }*/
+        }*/
     .menu-fijo {
-      position: absolute !important;   
-      top: 252 !important;
-    }
+          position: absolute !important;   
+          top: 252 !important;
+      }
 
-    #login_alumnos {
-      z-index: 5 !important;
-    }
-    #toogleLogin{
-      z-index: 5 !important;
-    }
-    #megaMenu{
-      z-index: 9000;
-    }
-}
+      #login_alumnos {
+          z-index: 5 !important;
+      }
+      #toogleLogin{
+          z-index: 5 !important;
+      }
+      #megaMenu{
+          z-index: 9000;
+      }
+
+      /* Botones */
+      #btnEnviarCursos{
+          font-size: 14px;
+      }
+      #btnEnviarFranquicias{
+        font-size: 14px;
+      }
+      #btnEnviarAlumnos{
+        font-size: 14px;
+      }
+      #btnEnviarEmpresas{
+        font-size: 14px;
+      }
+      #btnEnviar{
+        font-size: 14px;
+      }
+  }
 
 
-#toogleLogin{
+  #toogleLogin{
     color: #FFFFFF;
     background: rgba(51, 176, 190, 0.8);
     margin-top: 66px !important;
@@ -4423,11 +4440,11 @@ label.error {
 @-moz-document url-prefix() {
     #toogleLogin { margin-top: 88px; }
     .btnCerrar{
-        margin-top: -9px !important;
-    }
-    .nombreSession{
-        margin-top: 10px;
-    }   
+      margin-top: -9px !important;
+  }
+  .nombreSession{
+      margin-top: 10px;
+  }   
 }
 
 #sendLogin{
@@ -4450,88 +4467,88 @@ label.error {
     margin-left:5px;
 }
 .inptLog:focus{
-     box-shadow:0 0 7px #C4C4C4;
+ box-shadow:0 0 7px #C4C4C4;
 }
 .lblLog{
-    display: block;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left:5px;
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left:5px;
 }
 #frmLogin{
-    padding-top: 5px;
+  padding-top: 5px;
 }
 .menu-fijo {
-    position: fixed;
-    top: 0px;
+  position: fixed;
+  top: 0px;
 }
 .lnk-acceso{
-    display:block;
-    background: rgb(51, 176, 190);  
-    width: 30px;
-    height: 28px; 
-    float:right;
-    padding: 5px;
-    -moz-border-radius-topright: 5px;
-    -webkit-border-top-right-radius: 5px;
-    border-top-right-radius: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  display:block;
+  background: rgb(51, 176, 190);  
+  width: 30px;
+  height: 28px; 
+  float:right;
+  padding: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .txt-acceso{
-    display:block;
-    float:left;
-    padding: 5px 15px 5px 15px;
+  display:block;
+  float:left;
+  padding: 5px 15px 5px 15px;
 }
 .txt-acceso2{
-    margin-left:50px;
+  margin-left:50px;
 }
 .btnCuenta{
-    background: #E66616;
-    border: 0;
-    color: #FFFFFF;
-    padding:5px 12px 2px 12px;
-    float: left;
-    margin-left: 7px;
-    margin-top:8px;
-    text-decoration: none;
-    width: 100px;
-    text-align:center;
-    font-size: 12px;
+  background: #E66616;
+  border: 0;
+  color: #FFFFFF;
+  padding:5px 12px 2px 12px;
+  float: left;
+  margin-left: 7px;
+  margin-top:8px;
+  text-decoration: none;
+  width: 100px;
+  text-align:center;
+  font-size: 12px;
 }
 .btnCerrar{
-    background: #E66616;
-    border: 0;
-    color: #FFFFFF;
-    padding:5px 12px 2px 12px;
-    float: right;
-    margin-right: 7px;
-    margin-top: -9px;
-    text-decoration: none;
-    width: 100px;
-    text-align:center;
-    font-size: 12px;
+  background: #E66616;
+  border: 0;
+  color: #FFFFFF;
+  padding:5px 12px 2px 12px;
+  float: right;
+  margin-right: 7px;
+  margin-top: -9px;
+  text-decoration: none;
+  width: 100px;
+  text-align:center;
+  font-size: 12px;
 }
 .heightlog{
-    height: 88px !important;
+  height: 88px !important;
 }
 .nombreSession{
-    font-size:18px;
-    padding-left: 15px;
+  font-size:18px;
+  padding-left: 15px;
 }
 .matriculaSession{
-    font-size:18px;
-    padding-left: 15px;
+  font-size:18px;
+  padding-left: 15px;
 }
 .ctn-pre {
-    width: 600px;
-    margin-top: -90px;
-    float: left;
-    margin-left: -100px;
+  width: 600px;
+  margin-top: -90px;
+  float: left;
+  margin-left: -100px;
 }
 #recuperafr{
-    display: none;
+  display: none;
 }
 .olvidaste{
   color: #FFFFFF;
@@ -4542,7 +4559,7 @@ label.error {
   text-decoration: none;
 }
 .triangulo-der-1{
-    z-index: 9000 !important;
+  z-index: 9000 !important;
 }
 
 
@@ -4637,58 +4654,58 @@ tweeners.
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */
-  
-  }
-  .menu ul {
+
+}
+.menu ul {
     /* end .menu ul li */
-  
+
     /* highlight current page */
-  
+
     /* end current highlighters */
-  
-  }
-  .menu ul li {
+
+}
+.menu ul li {
     /*
   				plan your menus and drop-downs wisely.
   				*/
-  
-  }
-  .menu ul li a {
+
+            }
+            .menu ul li a {
     /*
   					you can use hover styles here even though this size
   					has the possibility of being a mobile device.
   					*/
-  
-  }
-  /* end .menu */
+
+                  }
+                  /* end .menu */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */
-  
-  }
-  .entry-content .alignleft,
-  .entry-content img.alignleft {
+
+}
+.entry-content .alignleft,
+.entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
-  }
-  .entry-content .alignright,
-  .entry-content img.alignright {
+}
+.entry-content .alignright,
+.entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
-  }
-  .entry-content .aligncenter,
-  .entry-content img.aligncenter {
+}
+.entry-content .aligncenter,
+.entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
     display: block;
     clear: both;
-  }
-  /* end .entry-content */
+}
+/* end .entry-content */
   /*********************
   FOOTER STYLES
   *********************/
@@ -4700,29 +4717,29 @@ tweeners.
   /****************	Estilos Peronalizados	****************
   ---------------------------------------------------------- */
   /*	Slider
-  	------------------------------------------ */
+  ------------------------------------------ */
   .slider-home {
     display: block;
-  }
+}
   /*	Header
-  	------------------------------------------ */
+  ------------------------------------------ */
   .logo-header {
     margin: 15px 0 0px 0;
-  }
-  .logo-header img {
+}
+.logo-header img {
     max-width: 80%;
     height: auto;
     float: none;
-  }
-  #contenedor-derecho {
+}
+#contenedor-derecho {
     text-align: center;
     line-height: 25px;
-  }
-  .logos-redes img {
+}
+.logos-redes img {
     margin-left: 10px;
     margin-top: 20px;
-  }
-  .telefonos {
+}
+.telefonos {
     color: #33b0be;
     float: right;
     font-size: 1.125em;
@@ -4730,160 +4747,160 @@ tweeners.
     margin-top: 2px;
     margin-bottom: 0px;
     width: 100%;
-  }
-  #contenedor-menu {
+}
+#contenedor-menu {
     background: #33b0be;
-  }
+}
   /*	Pagina Home
-  	------------------------------------------ */
+  ------------------------------------------ */
   /*	Seccion Metodo
-  		------------------------------------------ */
+  ------------------------------------------ */
   .metodo-segmento {
     margin-top: 10px;
     float: left;
     width: 50%;
-  }
-  .metodo-segmento img {
+}
+.metodo-segmento img {
     max-width: 100%;
-  }
-  #metodo1 {
+}
+#metodo1 {
     margin-top: 50px;
-  }
-  #metodo2 {
+}
+#metodo2 {
     margin-top: 80px;
-  }
-  .titulo-seccion-metodo {
+}
+.titulo-seccion-metodo {
     font-size: 3.375em;
-  }
-  .descripcion-metodo {
+}
+.descripcion-metodo {
     font-size: 1.5em;
     width: 50%;
-  }
-  .boton-metodo {
+}
+.boton-metodo {
     padding: 20px 35px;
     font-size: 1.875em;
-  }
+}
   /*	Seccion Cursos
-  		------------------------------------------ */
+  ------------------------------------------ */
   .curso-segmento {
     float: left;
     width: 50%;
-  }
-  #curso2 {
+}
+#curso2 {
     margin-top: 31px;
-  }
-  .curso-segmento img {
+}
+.curso-segmento img {
     max-width: 80%;
     height: auto;
-  }
-  .titulo-seccion-cursos {
+}
+.titulo-seccion-cursos {
     font-size: 3.375em;
-  }
-  .descripcion-curso {
+}
+.descripcion-curso {
     font-size: 1.8em;
-  }
-  .boton-cursos {
+}
+.boton-cursos {
     padding: 20px 35px;
     font-size: 1.875em;
-  }
+}
   /*	Seccion Test
-  		------------------------------------------ */
+  ------------------------------------------ */
   .test-segmento {
     margin-top: 50px;
-  }
-  .test-segmento img {
+}
+.test-segmento img {
     max-width: 30%;
-  }
-  .titulo-seccion-test {
+}
+.titulo-seccion-test {
     font-size: 3.375em;
-  }
-  .descripcion-test {
+}
+.descripcion-test {
     font-size: 2.2em;
-  }
-  .boton-test {
+}
+.boton-test {
     padding: 20px 35px;
     font-size: 1.875em;
-  }
+}
   /*	Planteles
-  		------------------------------------------ */.plantel-segmento {
+  ------------------------------------------ */.plantel-segmento {
     margin-top: 20px;
-  }
-  .titulo-seccion-planteles {
+}
+.titulo-seccion-planteles {
     font-size: 3.375em;
-  }
-  .descripcion-planteles {
+}
+.descripcion-planteles {
     font-size: 2.2em;
-  }
-  .planteles-form-home {
+}
+.planteles-form-home {
     width: 80%;
     margin-bottom: 35px;
-  }
-  #chkPoliticasHome {
+}
+#chkPoliticasHome {
     float: left;
     margin: 3px 10px 20px 35%;
-  }
-  #btnEnviarHome {
+}
+#btnEnviarHome {
     padding: 20px 35px;
     font-size: 1.875em;
-  }
+}
   /*	Seccion Contacto
-  		------------------------------------------ */.contacto-segmento {
+  ------------------------------------------ */.contacto-segmento {
     margin-top: 20px;
-  }
-  .titulo-seccion-contacto {
+}
+.titulo-seccion-contacto {
     font-size: 3.375em;
-  }
-  #nombre-completo-home,
-  #correo-electronico-home,
-  #telefono-home,
-  #estado-contacto-home,
-  #lada-home {
+}
+#nombre-completo-home,
+#correo-electronico-home,
+#telefono-home,
+#estado-contacto-home,
+#lada-home {
     padding: 18px 12px;
-  }
-  #formulario-contacto-home {
+}
+#formulario-contacto-home {
     margin-left: 10px;
     margin-top: 30px;
-  }
-  #boton-enviar-contacto-home {
+}
+#boton-enviar-contacto-home {
     padding: 20px 30px;
-  }
+}
   /*	Bolsa de Trabajo
-  		------------------------------------------ */
+  ------------------------------------------ */
   .titulo-seccion-bolsa-trabajo {
     font-size: 3.375em;
     font-family: 'Conv_MyriadPro-Semibold';
     text-align: center;
     padding-top: 50px;
-  }
-  .subtitulo-seccion-bolsa-trabajo {
+}
+.subtitulo-seccion-bolsa-trabajo {
     font-size: 2em;
     font-family: 'Conv_MyriadPro-Semibold';
     text-align: center;
     margin-bottom: 15px;
-  }
-  .plantel-segmento {
+}
+.plantel-segmento {
     margin-top: 20px;
-  }
-  .bolsa-trabajo-interior img {
+}
+.bolsa-trabajo-interior img {
     margin-bottom: 20px;
     width: 40%;
     height: auto;
-  }
-  .bolsa-trabajo-requisitos,
-  .bolsa-trabajo-ofrecemos {
+}
+.bolsa-trabajo-requisitos,
+.bolsa-trabajo-ofrecemos {
     font-family: 'Conv_MyriadPro-Semibold';
     text-align: center;
     font-size: 1.8em;
     margin-bottom: 40px;
     margin-top: 10px;
-  }
-  .bolsa-trabajo-ofrecemos {
+}
+.bolsa-trabajo-ofrecemos {
     margin-top: 0px;
-  }
-  .boton-trabajo {
+}
+.boton-trabajo {
     margin-bottom: 30px;
-  }
-  .boton-bolsa {
+}
+.boton-bolsa {
     font-family: 'Conv_MyriadPro-Bold';
     border: 1px solid #bc5311;
     border-top-color: #d85f14;
@@ -4896,8 +4913,8 @@ tweeners.
     text-shadow: 0 1px rgba(109, 109, 109, 0.75);
     cursor: pointer;
     /*margin-bottom: 10px;
-  					margin-top:5px;*/
-  
+    margin-top:5px;*/
+
     line-height: 25px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -4913,9 +4930,9 @@ tweeners.
     background-image: -moz-linear-gradient(top, #eb7125, #e26315);
     background-image: -o-linear-gradient(top, #eb7125, #e26315);
     background-image: linear-gradient(to bottom, #eb7125, #e26315);
-  }
-  .boton-bolsa:hover,
-  .boton-bolsa:focus {
+}
+.boton-bolsa:hover,
+.boton-bolsa:focus {
     color: #ffffff;
     border: 1px solid #bc5311;
     border-top-color: #d85f14;
@@ -4926,49 +4943,49 @@ tweeners.
     background-image: -moz-linear-gradient(top, #e26315, #ea6817);
     background-image: -o-linear-gradient(top, #e26315, #ea6817);
     background-image: linear-gradient(to bottom, #e26315, #ea6817);
-  }
+}
   /*	Footer
-  	------------------------------------------ */
+  ------------------------------------------ */
   .footer1 {
     background: #666666;
     color: #fff;
     font-family: 'Conv_MyriadPro-Regular';
     text-align: center;
-  }
-  .menu-footer {
+}
+.menu-footer {
     margin: 15px 0 15px 0;
-  }
-  .footer2 {
+}
+.footer2 {
     background: #504f4f;
     color: #fff;
     font-family: 'Conv_MyriadPro-Regular';
     text-align: center;
-  }
-  .footer-social {
+}
+.footer-social {
     float: left;
-  }
-  .copyright {
+}
+.copyright {
     font-size: 14px;
     float: left;
     text-align: center;
-  }
-  .copyright a:visited {
+}
+.copyright a:visited {
     text-decoration: none;
     color: #ffffff;
-  }
-  .privacidad {
+}
+.privacidad {
     font-size: 14px;
     float: right;
     text-align: center;
-  }
-  .google-footer,
-  .twitter-footer,
-  .facebook-footer {
+}
+.google-footer,
+.twitter-footer,
+.facebook-footer {
     float: left;
     margin-left: 10px;
-  }
+}
   /*	Paginas Contacto
-  	------------------------------------------ */
+  ------------------------------------------ */
   /*	.formulario-contacto-home{
   				margin-top: 40px;
   			}
@@ -5013,47 +5030,47 @@ tweeners.
   			}
   
   
-  /*** Botones Home ****/
-  .buton-home {
-    float: none;
-  }
+            /*** Botones Home ****/
+            .buton-home {
+              float: none;
+          }
   /*	Paginas	Planteles
-  	------------------------------------------ */
+  ------------------------------------------ */
   .encabezado-planteles,
   .nombre-plantel {
     font-family: 'Conv_MyriadPro-Semibold';
-  }
-  .nombre-plantel {
+}
+.nombre-plantel {
     margin-top: 0px;
-  }
+}
   /* Formulario Pagina Franquicias
-  		------------------------------------------ */
+  ------------------------------------------ */
   #formulario-franquicias {
     height: 520px;
-  }
-  #txtNombreFranquicias,
-  #txtCorreoFranquicias,
-  #txtMedioFranquicias,
-  #txtLadaFranquicias,
-  #txtTelefonoFranquicias,
-  #cmbEstadosFranquicias,
-  #txtCelularFranquicias,
-  #cmbSucursalesFranquicias,
-  #txtComentarioFranquicias {
+}
+#txtNombreFranquicias,
+#txtCorreoFranquicias,
+#txtMedioFranquicias,
+#txtLadaFranquicias,
+#txtTelefonoFranquicias,
+#cmbEstadosFranquicias,
+#txtCelularFranquicias,
+#cmbSucursalesFranquicias,
+#txtComentarioFranquicias {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
     border: solid 4px #f1f1f1;
     color: #989898;
     /*.border-radius(10px);*/
-  
+
     width: 48%;
     float: left;
-  }
-  #nombre1Franquicias {
+}
+#nombre1Franquicias {
     position: relative;
-  }
-  #nombre1Franquicias label.error {
+}
+#nombre1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5063,11 +5080,11 @@ tweeners.
     left: 0px;
     top: 40px;
     font-size: 12px;
-  }
-  #correo1Franquicias {
+}
+#correo1Franquicias {
     position: relative;
-  }
-  #correo1Franquicias label.error {
+}
+#correo1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5077,11 +5094,11 @@ tweeners.
     left: 52%;
     top: 40px;
     font-size: 12px;
-  }
-  #nacionalidad1Franquicias {
+}
+#nacionalidad1Franquicias {
     position: relative;
-  }
-  #nacionalidad1Franquicias label.error {
+}
+#nacionalidad1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5091,11 +5108,11 @@ tweeners.
     left: 0px;
     top: 198px;
     font-size: 12px;
-  }
-  #medio1Franquicias {
+}
+#medio1Franquicias {
     position: relative;
-  }
-  #medio1Franquicias label.error {
+}
+#medio1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5105,11 +5122,11 @@ tweeners.
     left: 0px;
     top: 275px;
     font-size: 12px;
-  }
-  #lada1Franquicias {
+}
+#lada1Franquicias {
     position: relative;
-  }
-  #lada1Franquicias label.error {
+}
+#lada1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5119,11 +5136,11 @@ tweeners.
     left: 0px;
     top: 110px;
     font-size: 12px;
-  }
-  #telefono1Franquicias {
+}
+#telefono1Franquicias {
     position: relative;
-  }
-  #telefono1Franquicias label.error {
+}
+#telefono1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5133,11 +5150,11 @@ tweeners.
     left: 78px;
     top: 110px;
     font-size: 12px;
-  }
-  #celular1Franquicias {
+}
+#celular1Franquicias {
     position: relative;
-  }
-  #celular1Franquicias label.error {
+}
+#celular1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5147,12 +5164,12 @@ tweeners.
     left: 52%;
     top: 110px;
     font-size: 12px;
-  }
-  #estado1Franquicias {
+}
+#estado1Franquicias {
     position: relative;
     width: 100%;
-  }
-  #estado1Franquicias label.error {
+}
+#estado1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5163,11 +5180,11 @@ tweeners.
     top: 195px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #sucursal1Franquicias {
+}
+#sucursal1Franquicias {
     position: relative;
-  }
-  #sucursal1Franquicias label.error {
+}
+#sucursal1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5178,12 +5195,12 @@ tweeners.
     top: 195px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #comentario1Franquicias {
+}
+#comentario1Franquicias {
     position: relative;
     width: 100%;
-  }
-  #comentario1Franquicias label.error {
+}
+#comentario1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5193,11 +5210,11 @@ tweeners.
     left: 0px;
     top: 365px;
     font-size: 12px;
-  }
-  #politicas1Franquicias {
+}
+#politicas1Franquicias {
     position: relative;
-  }
-  #politicas1Franquicias label.error {
+}
+#politicas1Franquicias label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5207,103 +5224,103 @@ tweeners.
     left: 7px;
     top: 490px;
     font-size: 12px;
-  }
-  #txtCorreoFranquicias {
+}
+#txtCorreoFranquicias {
     margin-left: 4%;
     margin-top: 0px;
-  }
-  #txtMedioFranquicias {
+}
+#txtMedioFranquicias {
     margin-top: 30px;
     width: 100%;
-  }
-  #txtNacionalidadFranquicias {
+}
+#txtNacionalidadFranquicias {
     margin-top: 30px;
     width: 100%;
-  }
-  #txtLadaFranquicias {
+}
+#txtLadaFranquicias {
     width: 17%;
     margin-top: 30px;
-  }
-  #txtTelefonoFranquicias {
+}
+#txtTelefonoFranquicias {
     width: 27%;
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtCelularFranquicias {
+}
+#txtCelularFranquicias {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #cmbSucursaleFranquicias {
+}
+#cmbSucursaleFranquicias {
     margin-left: 4%;
-  }
-  #txtComentarioFranquicias {
+}
+#txtComentarioFranquicias {
     margin-top: 30px;
     width: 100%;
-  }
-  #btnEnviarFranquicias {
+}
+#btnEnviarFranquicias {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
     padding: 13px;
     float: right;
-  }
-  #cmbEstadosFranquicias,
-  #cmbSucursalesFranquicias {
+}
+#cmbEstadosFranquicias,
+#cmbSucursalesFranquicias {
     margin-top: 30px;
-  }
-  #cmbSucursalesFranquicias {
+}
+#cmbSucursalesFranquicias {
     margin-left: 4%;
-  }
-  #politicas1Franquicias {
+}
+#politicas1Franquicias {
     width: 80%;
     margin-left: 20%;
-  }
-  #chkPoliticasFranquicias {
+}
+#chkPoliticasFranquicias {
     width: 5%;
     float: left;
     margin-top: 3px;
     margin-bottom: 20px;
-  }
-  #acepto1Franquicias {
+}
+#acepto1Franquicias {
     width: 95%;
     float: left;
-  }
-  #acepto1Franquicias a {
+}
+#acepto1Franquicias a {
     text-decoration: none;
     color: #fff;
-  }
-  label.error {
+}
+label.error {
     z-index: 10000;
-  }
+}
   /* Formulario Pagina Empresas
-  		------------------------------------------ */
+  ------------------------------------------ */
   #formulario-empresas {
     height: 521px;
-  }
-  #txtNombreEmpresas,
-  #txtCorreoEmpresas,
-  #txtEmpresaEmpresas,
-  #txtPuestoEmpresas,
-  #txtLadaEmpresas,
-  #txtTelefonoEmpresas,
-  #cmbEstadosEmpresas,
-  #txtCelularEmpresas,
-  #cmbSucursalesEmpresas,
-  #txtComentarioEmpresas {
+}
+#txtNombreEmpresas,
+#txtCorreoEmpresas,
+#txtEmpresaEmpresas,
+#txtPuestoEmpresas,
+#txtLadaEmpresas,
+#txtTelefonoEmpresas,
+#cmbEstadosEmpresas,
+#txtCelularEmpresas,
+#cmbSucursalesEmpresas,
+#txtComentarioEmpresas {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
     border: solid 4px #f1f1f1;
     color: #989898;
     /*.border-radius(10px);*/
-  
+
     width: 48%;
     float: left;
-  }
-  #nombre1Empresas {
+}
+#nombre1Empresas {
     position: relative;
-  }
-  #nombre1Empresas label.error {
+}
+#nombre1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5313,11 +5330,11 @@ tweeners.
     left: 0px;
     top: 40px;
     font-size: 12px;
-  }
-  #correo1Empresas {
+}
+#correo1Empresas {
     position: relative;
-  }
-  #correo1Empresas label.error {
+}
+#correo1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5327,11 +5344,11 @@ tweeners.
     left: 52%;
     top: 40px;
     font-size: 12px;
-  }
-  #empresa1Empresas {
+}
+#empresa1Empresas {
     position: relative;
-  }
-  #empresa1Empresas label.error {
+}
+#empresa1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5341,11 +5358,11 @@ tweeners.
     left: 0px;
     top: 110px;
     font-size: 12px;
-  }
-  #puesto1Empresas {
+}
+#puesto1Empresas {
     position: relative;
-  }
-  #puesto1Empresas label.error {
+}
+#puesto1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5355,11 +5372,11 @@ tweeners.
     left: 52%;
     top: 110px;
     font-size: 12px;
-  }
-  #lada1Empresas {
+}
+#lada1Empresas {
     position: relative;
-  }
-  #lada1Empresas label.error {
+}
+#lada1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5369,11 +5386,11 @@ tweeners.
     left: 0px;
     top: 195px;
     font-size: 12px;
-  }
-  #telefono1Empresas {
+}
+#telefono1Empresas {
     position: relative;
-  }
-  #telefono1Empresas label.error {
+}
+#telefono1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5383,11 +5400,11 @@ tweeners.
     left: 21%;
     top: 195px;
     font-size: 12px;
-  }
-  #celular1Empresas {
+}
+#celular1Empresas {
     position: relative;
-  }
-  #celular1Empresas label.error {
+}
+#celular1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5397,12 +5414,12 @@ tweeners.
     left: 52%;
     top: 195px;
     font-size: 12px;
-  }
-  #estado1Empresas {
+}
+#estado1Empresas {
     position: relative;
     width: 100%;
-  }
-  #estado1Empresas label.error {
+}
+#estado1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5413,11 +5430,11 @@ tweeners.
     top: 275px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #sucursal1Empresas {
+}
+#sucursal1Empresas {
     position: relative;
-  }
-  #sucursal1Empresas label.error {
+}
+#sucursal1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5428,12 +5445,12 @@ tweeners.
     top: 275px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #comentario1Empresas {
+}
+#comentario1Empresas {
     position: relative;
     width: 100%;
-  }
-  #comentario1Empresas label.error {
+}
+#comentario1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5443,11 +5460,11 @@ tweeners.
     left: 0px;
     top: 365px;
     font-size: 12px;
-  }
-  #politicas1Empresas {
+}
+#politicas1Empresas {
     position: relative;
-  }
-  #politicas1Empresas label.error {
+}
+#politicas1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5457,71 +5474,71 @@ tweeners.
     left: 7px;
     top: 490px;
     font-size: 12px;
-  }
-  #txtCorreoEmpresas {
+}
+#txtCorreoEmpresas {
     margin-left: 4%;
     margin-top: 0px;
-  }
-  #txtEmpresaEmpresas {
+}
+#txtEmpresaEmpresas {
     margin-top: 30px;
-  }
-  #txtPuestoEmpresas {
+}
+#txtPuestoEmpresas {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtLadaEmpresas {
+}
+#txtLadaEmpresas {
     width: 17%;
     margin-top: 30px;
-  }
-  #txtTelefonoEmpresas {
+}
+#txtTelefonoEmpresas {
     width: 27%;
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtCelularEmpresas {
+}
+#txtCelularEmpresas {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #cmbSucursaleEmpresas {
+}
+#cmbSucursaleEmpresas {
     margin-left: 4%;
-  }
-  #txtComentarioEmpresas {
+}
+#txtComentarioEmpresas {
     margin-top: 30px;
     width: 100%;
-  }
-  #btnEnviarEmpresas {
+}
+#btnEnviarEmpresas {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
     padding: 13px;
     float: right;
-  }
-  #cmbEstadosEmpresas,
-  #cmbSucursalesEmpresas {
+}
+#cmbEstadosEmpresas,
+#cmbSucursalesEmpresas {
     margin-top: 30px;
-  }
-  #cmbSucursalesEmpresas {
+}
+#cmbSucursalesEmpresas {
     margin-left: 4%;
-  }
-  #politicas1Empresas {
+}
+#politicas1Empresas {
     width: 80%;
     margin-left: 30%;
-  }
-  #chkPoliticasEmpresas {
+}
+#chkPoliticasEmpresas {
     width: 5%;
     float: left;
     margin-top: 3px;
     margin-bottom: 20px;
-  }
-  #acepto1Empresas {
+}
+#acepto1Empresas {
     width: 95%;
     float: left;
-  }
-  #acepto1Empresas a {
+}
+#acepto1Empresas a {
     text-decoration: none;
     color: #fff;
-  }
-  /*  Formulario Test  */
+}
+/*  Formulario Test  */
 
 
 
@@ -5530,55 +5547,55 @@ tweeners.
 }
 
 .item{
-  background: #F0F0F0;
-  width:100%;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
-  -moz-box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
-  -webkit-box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
-  padding-left:10px;
-  padding-bottom:30px; 
-  height:120px;
-  margin-top:15px;
+    background: #F0F0F0;
+    width:100%;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
+    -moz-box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
+    -webkit-box-shadow: 6px 0 4px  -3px #A7A7A7, -6px 0 4px  -3px #A7A7A7;
+    padding-left:10px;
+    padding-bottom:30px; 
+    height:120px;
+    margin-top:15px;
 }
 .item > .preguntasIzq > input{
-  margin-left:10px;
+    margin-left:10px;
 }
 .item > .preguntasIzq > h3{
-  color: #30AEBC;
-  font-weight:bold;
-  padding-top:10px;
+    color: #30AEBC;
+    font-weight:bold;
+    padding-top:10px;
 }
 .preguntasIzq{
-  float: left;
-  width: 500px;
-  height: 80px;
-  margin-top: 0px;
+    float: left;
+    width: 500px;
+    height: 80px;
+    margin-top: 0px;
 }
 .imgItemTest{
-  display: block;
-  float: right;
-  padding-top:15px;
-  padding-right:15px;
-  margin-top: -80px !important;
-  width: 27%;
+    display: block;
+    float: right;
+    padding-top:15px;
+    padding-right:15px;
+    margin-top: -80px !important;
+    width: 27%;
 }
 .respuestas{
-  float: left;
-  text-align:left;  
+    float: left;
+    text-align:left;  
 }
 input[type=radio]{
-  display: block;
-  float: left;
-  width:12px;
-  height:12px;  
+    display: block;
+    float: left;
+    width:12px;
+    height:12px;  
 }
 .respuestas > label{
-  display: block;
-  float: left;  
-  padding-right:10px;
-  padding-left:5px;
+    display: block;
+    float: left;  
+    padding-right:10px;
+    padding-left:5px;
 }
 
 }
@@ -5618,102 +5635,102 @@ you can add resource intensive styles.
 
   .onecol {
     width: 5.801104972%;
-  }
-  /* 4.85%;  } /* grid_1  */
-  .twocol {
+}
+/* 4.85%;  } /* grid_1  */
+.twocol {
     width: 14.364640883%;
-  }
-  /* 13.45%; } /* grid_2  */
-  .threecol {
+}
+/* 13.45%; } /* grid_2  */
+.threecol {
     width: 22.928176794%;
-  }
-  /* 22.05%; } /* grid_3  */
-  .fourcol {
+}
+/* 22.05%; } /* grid_3  */
+.fourcol {
     width: 31.491712705%;
-  }
-  /* 30.75%; } /* grid_4  */
-  .fivecol {
+}
+/* 30.75%; } /* grid_4  */
+.fivecol {
     width: 40.055248616%;
-  }
-  /* 39.45%; } /* grid_5  */
-  .sixcol {
+}
+/* 39.45%; } /* grid_5  */
+.sixcol {
     width: 48.618784527%;
-  }
-  /* 48%;    } /* grid_6  */
-  .sevencol {
+}
+/* 48%;    } /* grid_6  */
+.sevencol {
     width: 57.182320438000005%;
-  }
-  /* 56.75%; } /* grid_7  */
-  .eightcol {
+}
+/* 56.75%; } /* grid_7  */
+.eightcol {
     width: 65.74585634900001%;
-  }
-  /* 65.4%;  } /* grid_8  */
-  .ninecol {
+}
+/* 65.4%;  } /* grid_8  */
+.ninecol {
     width: 74.30939226%;
-  }
-  /* 74.05%; } /* grid_9  */
-  .tencol {
+}
+/* 74.05%; } /* grid_9  */
+.tencol {
     width: 82.87292817100001%;
-  }
-  /* 82.7%;  } /* grid_10 */
-  .elevencol {
+}
+/* 82.7%;  } /* grid_10 */
+.elevencol {
     width: 91.436464082%;
-  }
-  /* 91.35%; } /* grid_11 */
-  .twelvecol {
+}
+/* 91.35%; } /* grid_11 */
+.twelvecol {
     width: 99.999999993%;
-  }
-  /* 100%;   } /* grid_12 */
-  .fullcol {
+}
+/* 100%;   } /* grid_12 */
+.fullcol {
     width: 100%;
-  }
-  /* 100%;   } /* grid_13 */
-  .cursocol {
+}
+/* 100%;   } /* grid_13 */
+.cursocol {
     width: 25%;
-  }
-  /* 25%;    } /* grid_14 */
-  .cincocol {
+}
+/* 25%;    } /* grid_14 */
+.cincocol {
     width: 20%;
-  }
-  .formthreecol {
+}
+.formthreecol {
     width: 22.928176794%;
-  }
-  /* 22.05%; } /* grid_3  */
-  .onecol,
-  .twocol,
-  .threecol,
-  .fourcol,
-  .fivecol,
-  .sixcol,
-  .sevencol,
-  .eightcol,
-  .ninecol,
-  .tencol,
-  .elevencol,
-  .twelvecol {
+}
+/* 22.05%; } /* grid_3  */
+.onecol,
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
     position: relative;
     float: left;
     /* margin-left: 2.762430939%;*/
-  
-  }
-  .formthreecol,
-  .threecol {
+
+}
+.formthreecol,
+.threecol {
     position: relative;
     float: left;
     margin-left: 2.762430939%;
-  }
-  .cincocol,
-  .fullcol,
-  .cursocol {
+}
+.cincocol,
+.fullcol,
+.cursocol {
     position: relative;
     float: left;
-  }
-  .first {
+}
+.first {
     margin-left: 100;
-  }
-  .last {
+}
+.last {
     float: right;
-  }
+}
   /******************************************************************
   Site Name:
   Author:
@@ -5735,7 +5752,7 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     max-width: 1020px;
-  }
+}
   /*********************
   HEADER STYLES
   *********************/
@@ -5746,113 +5763,113 @@ you can add resource intensive styles.
     background: #eee;
     border: 0;
     /* end .menu ul li */
-  
+
     /* highlight current page */
-  
+
     /* end current highlighters */
-  
-  }
-  .nav li {
+
+}
+.nav li {
     float: left;
     position: relative;
     /*
   		plan your menus and drop-downs wisely.
   		*/
-  
-    /* showing sub-menus */
-  
-  }
-  .nav li a {
-    border-bottom: 0;
+
+          /* showing sub-menus */
+
+      }
+      .nav li a {
+          border-bottom: 0;
     /*
   			you can use hover styles here even though this size
   			has the possibility of being a mobile device.
   			*/
-  
-  }
-  .nav li a:hover,
-  .nav li a:focus {
-    background-color: #dedede;
-  }
-  .nav li ul.sub-menu,
-  .nav li ul.children {
-    margin-top: 0;
-    border: 1px solid #ccc;
-    border-top: 0;
-    position: absolute;
-    display: none;
-    z-index: 8999;
-    /* highlight sub-menu current page */
-  
-  }
-  .nav li ul.sub-menu li,
-  .nav li ul.children li {
+
+          }
+          .nav li a:hover,
+          .nav li a:focus {
+            background-color: #dedede;
+        }
+        .nav li ul.sub-menu,
+        .nav li ul.children {
+            margin-top: 0;
+            border: 1px solid #ccc;
+            border-top: 0;
+            position: absolute;
+            display: none;
+            z-index: 8999;
+            /* highlight sub-menu current page */
+
+        }
+        .nav li ul.sub-menu li,
+        .nav li ul.children li {
     /*
   				if you need to go deeper, go nuts
   				just remember deeper menus suck
   				for usability. k, bai.
   				*/
-  
-  }
-  .nav li ul.sub-menu li a,
-  .nav li ul.children li a {
-    padding-left: 10px;
-    border-right: 0;
-    display: block;
-    width: 180px;
-    border-bottom: 1px solid #ccc;
-  }
-  .nav li ul.sub-menu li:last-child a,
-  .nav li ul.children li:last-child a {
-    border-bottom: 0;
-  }
-  .nav li:hover ul {
-    top: auto;
-    display: block;
-  }
-  /* end .nav */
+
+            }
+            .nav li ul.sub-menu li a,
+            .nav li ul.children li a {
+              padding-left: 10px;
+              border-right: 0;
+              display: block;
+              width: 180px;
+              border-bottom: 1px solid #ccc;
+          }
+          .nav li ul.sub-menu li:last-child a,
+          .nav li ul.children li:last-child a {
+              border-bottom: 0;
+          }
+          .nav li:hover ul {
+              top: auto;
+              display: block;
+          }
+          /* end .nav */
   /*********************
   SIDEBARS & ASIDES
   *********************/
   .sidebar {
     margin-top: 0.5em;
     border-left: solid 1px #ececec;
-  }
-  .widgettitle {
+}
+.widgettitle {
     font-family: 'Conv_MyriadPro-Regular';
     font-weight: normal;
     border-bottom: solid 1px #ececec;
     color: #30aebc;
     margin-bottom: 0.75em;
     padding-bottom: 8px;
-  }
-  .widget {
+}
+.widget {
     padding: 0 10px;
     margin: 2.2em 0;
-  }
-  .widget ul li {
+}
+.widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
-  
-  }
-  .widget ul li a {
+
+}
+.widget ul li a {
     color: #989898;
-  }
-  .widget ul li ul {
+}
+.widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
-  }
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
+}
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
   /*********************
   FOOTER STYLES
   *********************/
@@ -5867,35 +5884,35 @@ you can add resource intensive styles.
   			it's very rare to have multi-depth menus in
   			the footer.
   			*/
-  
-  }
-  /* end .footer-links */
+
+          }
+          /* end .footer-links */
   /****************	Estilos Peronalizados	****************
   ---------------------------------------------------------- */
   /*	Slider
-  	------------------------------------------ */
+  ------------------------------------------ */
   .slider-home {
     display: block;
-  }
+}
   /*	Header
-  	------------------------------------------ */
+  ------------------------------------------ */
   .logo-header {
     margin: 15px 0 20px 0;
-  }
-  .logo-header img {
+}
+.logo-header img {
     width: 298px;
     height: 112px;
     float: left;
-  }
-  #contenedor-derecho {
+}
+#contenedor-derecho {
     text-align: right;
     line-height: 25px;
-  }
-  .logos-redes img {
+}
+.logos-redes img {
     margin-left: 10px;
     margin-top: 20px;
-  }
-  .telefonos {
+}
+.telefonos {
     color: #33b0be;
     float: right;
     font-size: 1.125em;
@@ -5903,117 +5920,117 @@ you can add resource intensive styles.
     margin-top: 2px;
     margin-bottom: 5px;
     width: 100%;
-  }
-  #contenedor-menu {
+}
+#contenedor-menu {
     background: #33b0be;
-  }
+}
   /*	Pagina Home
   	------------------------------------------ *//*	Seccion Metodo
-  		------------------------------------------ */
-  .metodo-segmento {
-    margin-top: 80px;
-    float: block;
+    ------------------------------------------ */
+    .metodo-segmento {
+      margin-top: 80px;
+      float: block;
   }
   .metodo-segmento img {
-    max-width: 100%;
-    height: auto;
+      max-width: 100%;
+      height: auto;
   }
   #metodo1,
   #metodo2 {
-    margin-top: 80px;
+      margin-top: 80px;
   }
   .titulo-seccion-metodo {
-    font-size: 4.375em;
-    padding-top: 90px;
+      font-size: 4.375em;
+      padding-top: 90px;
   }
   .descripcion-metodo {
-    font-size: 1.8em;
+      font-size: 1.8em;
   }
   #boton-metodo {
-    margin-top: 45px;
-    margin-bottom: 30px;
+      margin-top: 45px;
+      margin-bottom: 30px;
   }
   /*	Seccion Cursos
-  		------------------------------------------ */.curso-segmento {
+  ------------------------------------------ */.curso-segmento {
     margin-top: 30px;
     float: block;
-  }
-  .titulo-seccion-cursos {
+}
+.titulo-seccion-cursos {
     font-size: 4.375em;
     padding-top: 90px;
-  }
+}
   /*	Seccion Test
-  		------------------------------------------ */.test-segmento {
+  ------------------------------------------ */.test-segmento {
     margin-top: 60px;
-  }
-  .titulo-seccion-test {
+}
+.titulo-seccion-test {
     font-size: 4.375em;
     padding-top: 90px;
-  }
-  .descripcion-test {
+}
+.descripcion-test {
     font-size: 2.5em;
     margin-top: 50px;
-  }
+}
   /*	Planteles
-  		------------------------------------------ */.plantel-segmento {
+  ------------------------------------------ */.plantel-segmento {
     margin-top: 60px;
-  }
-  .nombre-plantel {
+}
+.nombre-plantel {
     margin-top: 25px;
-  }
-  .planteles-interior img {
+}
+.planteles-interior img {
     max-width: 450px;
-  }
-  .titulo-seccion-planteles {
+}
+.titulo-seccion-planteles {
     font-size: 4.375em;
     padding-top: 90px;
-  }
-  .descripcion-planteles {
+}
+.descripcion-planteles {
     font-size: 2.5em;
     margin-bottom: 40px;
     margin-top: 20px;
-  }
-  .descripcion-planteles-interior {
+}
+.descripcion-planteles-interior {
     font-size: 14px;
     margin-bottom: 40px;
     margin-top: 20px;
     text-align: left;
-  }
-  #estado-form-home,
-  #plantel-form-home,
-  #country,
-  #state {
+}
+#estado-form-home,
+#plantel-form-home,
+#country,
+#state {
     font-size: 1.1em;
     padding: 18px 12px;
     width: 40%;
     margin-top: 0px;
-  }
-  .planteles-form-home #country,
-  .planteles-form-home #state {
+}
+.planteles-form-home #country,
+.planteles-form-home #state {
     width: 46%;
     margin-left: 4%;
-  }
-  .formulario-planteles #state {
+}
+.formulario-planteles #state {
     margin-left: 20px;
-  }
-  #enviar-form-home {
+}
+#enviar-form-home {
     width: 64px;
     height: 64px;
     background: #30aebc url(../images/send.png) center no-repeat;
     margin-top: 0px;
-  }
-  #enviar-form-home:hover {
+}
+#enviar-form-home:hover {
     background: #30aebc url(../images/send.png) center no-repeat;
-  }
+}
   /*	Seccion Contacto
-  		------------------------------------------ */.contacto-segmento {
+  ------------------------------------------ */.contacto-segmento {
     margin-top: 60px;
-  }
-  .titulo-seccion-contacto {
+}
+.titulo-seccion-contacto {
     font-size: 4.375em;
     padding-top: 76px;
-  }
-  .descripcion-contacto {
+}
+.descripcion-contacto {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 1.25em;
     color: #989898;
@@ -6021,7 +6038,7 @@ you can add resource intensive styles.
     margin-left: 0.25em;
     line-height: 1.99em;
     width: 85%;
-  }
+}
   /*.descripcion-test {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 1.25em;
@@ -6030,55 +6047,55 @@ you can add resource intensive styles.
     margin-left: 0.25em;
     line-height: 1.99em;
     width: 66%;
-  }*/
-  .formulario-contacto-home {
-    margin-top: 40px;
-    margin-bottom: 30px;
+    }*/
+    .formulario-contacto-home {
+      margin-top: 40px;
+      margin-bottom: 30px;
   }
   #nombre-completo-home,
   #correo-electronico-home,
   #telefono-home,
   #estado-contacto-home,
   #lada-home {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    width: 45%;
-    float: left;
-    margin-left: 20px;
-    margin-top: 0px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      width: 45%;
+      float: left;
+      margin-left: 20px;
+      margin-top: 0px;
   }
   #telefono-home {
-    width: 33%;
-    margin-left: 20px;
-    margin-top: 30px;
+      width: 33%;
+      margin-left: 20px;
+      margin-top: 30px;
   }
   #lada-home {
-    width: 10%;
-    margin-top: 30px;
+      width: 10%;
+      margin-top: 30px;
   }
   #formulario-contacto-home {
-    margin-left: 10px;
-    margin-top: 30px;
+      margin-left: 10px;
+      margin-top: 30px;
   }
   #estado-contacto-home {
-    margin-top: 30px;
+      margin-top: 30px;
   }
   #boton-enviar-contacto-home {
-    font-family: 'Conv_MyriadPro-Bold';
-    border: 1px solid #bc5311;
-    border-top-color: #d85f14;
-    border-left-color: #d85f14;
-    padding: 20px 30px;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 1.875em;
-    text-decoration: none;
-    text-shadow: 0 1px rgba(109, 109, 109, 0.75);
-    cursor: pointer;
+      font-family: 'Conv_MyriadPro-Bold';
+      border: 1px solid #bc5311;
+      border-top-color: #d85f14;
+      border-left-color: #d85f14;
+      padding: 20px 30px;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 1.875em;
+      text-decoration: none;
+      text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+      cursor: pointer;
     /*margin-bottom: 10px;
-  					margin-top:5px;*/
-  
+    margin-top:5px;*/
+
     line-height: 25px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -6094,9 +6111,9 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #eb7125, #e26315);
     background-image: -o-linear-gradient(top, #eb7125, #e26315);
     background-image: linear-gradient(to bottom, #eb7125, #e26315);
-  }
-  #boton-enviar-contacto-home:hover,
-  #boton-enviar-contacto-home:focus {
+}
+#boton-enviar-contacto-home:hover,
+#boton-enviar-contacto-home:focus {
     color: #ffffff;
     border: 1px solid #bc5311;
     border-top-color: #d85f14;
@@ -6107,43 +6124,43 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #e26315, #ea6817);
     background-image: -o-linear-gradient(top, #e26315, #ea6817);
     background-image: linear-gradient(to bottom, #e26315, #ea6817);
-  }
+}
   /*	Bolsa de Trabajo
-  		------------------------------------------ */
+  ------------------------------------------ */
   .titulo-seccion-bolsa-trabajo {
     font-size: 4.375em;
     font-family: 'Conv_MyriadPro-Semibold';
     text-align: center;
     padding-top: 60px;
-  }
-  .subtitulo-seccion-bolsa-trabajo {
+}
+.subtitulo-seccion-bolsa-trabajo {
     font-size: 3em;
     font-family: 'Conv_MyriadPro-Semibold';
     text-align: center;
     margin-bottom: 15px;
-  }
-  .bolsa-trabajo-segmento {
+}
+.bolsa-trabajo-segmento {
     margin-top: 20px;
-  }
-  .bolsa-trabajo-interior img {
+}
+.bolsa-trabajo-interior img {
     margin-bottom: 30px;
     width: auto;
     height: auto;
     margin-left: none;
-  }
-  .bolsa-trabajo-requisitos,
-  .bolsa-trabajo-ofrecemos {
+}
+.bolsa-trabajo-requisitos,
+.bolsa-trabajo-ofrecemos {
     font-family: 'Conv_MyriadPro-Semibold';
     text-align: left;
     font-size: 2em;
     margin-bottom: 40px;
     margin-top: 60px;
     width: 80%;
-  }
-  .bolsa-trabajo-ofrecemos {
+}
+.bolsa-trabajo-ofrecemos {
     margin-top: 10px;
-  }
-  .boton-bolsa {
+}
+.boton-bolsa {
     float: left;
     font-family: 'Conv_MyriadPro-Bold';
     border: 1px solid #bc5311;
@@ -6157,8 +6174,8 @@ you can add resource intensive styles.
     text-shadow: 0 1px rgba(109, 109, 109, 0.75);
     cursor: pointer;
     /*margin-bottom: 10px;
-  					margin-top:5px;*/
-  
+    margin-top:5px;*/
+
     line-height: 25px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -6174,9 +6191,9 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #eb7125, #e26315);
     background-image: -o-linear-gradient(top, #eb7125, #e26315);
     background-image: linear-gradient(to bottom, #eb7125, #e26315);
-  }
-  .boton-bolsa:hover,
-  .boton-bolsa:focus {
+}
+.boton-bolsa:hover,
+.boton-bolsa:focus {
     color: #ffffff;
     border: 1px solid #bc5311;
     border-top-color: #d85f14;
@@ -6187,11 +6204,11 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #e26315, #ea6817);
     background-image: -o-linear-gradient(top, #e26315, #ea6817);
     background-image: linear-gradient(to bottom, #e26315, #ea6817);
-  }
+}
   /*	Paginas	Cursos
-  	------------------------------------------ */
+  ------------------------------------------ */
   /*	Menu Paginas	Cursos
-  		------------------------------------------ */
+  ------------------------------------------ */
   .curso-titulo,
   .page-title {
     border-bottom: solid 1px #ececec;
@@ -6199,52 +6216,52 @@ you can add resource intensive styles.
     font-size: 1.875em;
     padding-bottom: 0.938em;
     text-align: left;
-  }
-  .menu-cursos a:link {
+}
+.menu-cursos a:link {
     text-decoration: none;
     color: #989898;
-  }
-  .menu-cursos a:visited {
+}
+.menu-cursos a:visited {
     color: #989898;
-  }
-  .menu-cursos a:hover {
+}
+.menu-cursos a:hover {
     color: #30aebc;
-  }
-  .menu-cursos a:active {
+}
+.menu-cursos a:active {
     color: #30aebc;
-  }
-  .menu-cursos ul li {
+}
+.menu-cursos ul li {
     list-style: none;
     float: left;
     padding: 0 30px 0 0;
-  }
+}
   /*	Contenedor Paginas	Cursos
-  		------------------------------------------ */
+  ------------------------------------------ */
   #contenedor-curso {
     /*margin-top: 2em;*/
-  
+
     background-color: #d1d1d1;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
     background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
     background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
     background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
     background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
-  }
-  .contenedor-curso-informacion {
+}
+.contenedor-curso-informacion {
     font-family: 'Conv_MyriadPro-Semibold';
-  }
-  .titulo-del-curso {
+}
+.titulo-del-curso {
     padding-top: 0.5em;
     font-size: 3em;
     color: #30aebc;
     text-align: left;
-  }
-  .subtitulo-del-curso {
+}
+.subtitulo-del-curso {
     font-size: 2.5em;
     color: #30aebc;
     text-align: left;
-  }
-  .descripcion-del-curso {
+}
+.descripcion-del-curso {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 1.25em;
     color: #989898;
@@ -6253,31 +6270,31 @@ you can add resource intensive styles.
     line-height: 1.99em;
     width: 85%;
     text-align: left;
-  }
-  .nota-del-curso {
+}
+.nota-del-curso {
     font-size: 2.45em;
     color: #30aebc;
     margin-top: 0.5em;
     margin-bottom: 0.45em;
     margin-left: 0.15em;
     text-align: left;
-  }
-  .contenedor-curso-formulario {
+}
+.contenedor-curso-formulario {
     background: #30aebc;
-  }
-  .titulo-formulario {
+}
+.titulo-formulario {
     padding-top: 0;
     font-size: 1.35em;
     color: #ffffff;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 0.4em;
-  }
-  .formulario-registro-cursos {
+}
+.formulario-registro-cursos {
     width: 90%;
-  }
-  .formulario-registro-cursos input[type=text],
-  .formulario-registro-cursos select {
+}
+.formulario-registro-cursos input[type=text],
+.formulario-registro-cursos select {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
@@ -6285,61 +6302,61 @@ you can add resource intensive styles.
     padding: 12px 12px;
     color: #989898;
     /*.border-radius(0px);*/
-  
+
     width: 100%;
-  }
-  #curso-boton-enviar {
+}
+#curso-boton-enviar {
     width: 100%;
-  }
-  #curso-nombre-completo,
-  #curso-correo-electronico,
-  #curso-lada,
-  #curso-telefono,
-  #curso-seleccion-estado,
-  #curso-boton-enviar {
+}
+#curso-nombre-completo,
+#curso-correo-electronico,
+#curso-lada,
+#curso-telefono,
+#curso-seleccion-estado,
+#curso-boton-enviar {
     margin-top: 10px;
-  }
-  #curso-seleccion-estado {
+}
+#curso-seleccion-estado {
     margin-top: 25px;
-  }
-  #curso-lada {
+}
+#curso-lada {
     float: left;
     width: 30%;
-  }
-  #curso-telefono {
+}
+#curso-telefono {
     float: right;
     width: 65%;
-  }
-  .sombra-slider-curso img {
+}
+.sombra-slider-curso img {
     width: 100%;
     height: auto;
-  }
+}
   /* Formulario Pagina Cursos
-  		------------------------------------------ */
+  ------------------------------------------ */
   #formulario-cursos {
     height: auto;
-  }
-  #txtNombreCursos,
-  #txtCorreoCursos,
-  #txtLadaCursos,
-  #txtTelefonoCursos,
-  #cmbEstadosCursos,
-  #txtCelularCursos,
-  #cmbSucursalesCursos {
+}
+#txtNombreCursos,
+#txtCorreoCursos,
+#txtLadaCursos,
+#txtTelefonoCursos,
+#cmbEstadosCursos,
+#txtCelularCursos,
+#cmbSucursalesCursos {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
     border: solid 4px #f1f1f1;
     color: #989898;
     /*.border-radius(10px);*/
-  
+
     width: 48%;
     float: left;
-  }
-  #nombre1Cursos {
+}
+#nombre1Cursos {
     position: relative;
-  }
-  #nombre1Cursos label.error {
+}
+#nombre1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6349,11 +6366,11 @@ you can add resource intensive styles.
     left: 0px;
     top: 40px;
     font-size: 12px;
-  }
-  #correo1Cursos {
+}
+#correo1Cursos {
     position: relative;
-  }
-  #correo1Cursos label.error {
+}
+#correo1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6363,11 +6380,11 @@ you can add resource intensive styles.
     left: 192px;
     top: 40px;
     font-size: 12px;
-  }
-  #lada1Cursos {
+}
+#lada1Cursos {
     position: relative;
-  }
-  #lada1Cursos label.error {
+}
+#lada1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6377,11 +6394,11 @@ you can add resource intensive styles.
     left: 0px;
     top: 110px;
     font-size: 12px;
-  }
-  #telefono1Cursos {
+}
+#telefono1Cursos {
     position: relative;
-  }
-  #telefono1Cursos label.error {
+}
+#telefono1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6391,11 +6408,11 @@ you can add resource intensive styles.
     left: 78px;
     top: 110px;
     font-size: 12px;
-  }
-  #celular1Cursos {
+}
+#celular1Cursos {
     position: relative;
-  }
-  #celular1Cursos label.error {
+}
+#celular1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6405,11 +6422,11 @@ you can add resource intensive styles.
     left: 192px;
     top: 110px;
     font-size: 12px;
-  }
-  #estado1Cursos {
+}
+#estado1Cursos {
     position: relative;
-  }
-  #estado1Cursos label.error {
+}
+#estado1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6419,11 +6436,11 @@ you can add resource intensive styles.
     left: 0px;
     top: 195px;
     font-size: 12px;
-  }
-  #sucursal1Cursos {
+}
+#sucursal1Cursos {
     position: relative;
-  }
-  #sucursal1Cursos label.error {
+}
+#sucursal1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6433,11 +6450,11 @@ you can add resource intensive styles.
     left: 192px;
     top: 195px;
     font-size: 12px;
-  }
-  #politicas1Cursos {
+}
+#politicas1Cursos {
     position: relative;
-  }
-  #politicas1Cursos label.error {
+}
+#politicas1Cursos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6447,180 +6464,180 @@ you can add resource intensive styles.
     left: 7px;
     top: 277px;
     font-size: 12px;
-  }
-  #txtCorreoCursos {
+}
+#txtCorreoCursos {
     margin-left: 4%;
     margin-top: 0px;
-  }
-  #txtLadaCursos {
+}
+#txtLadaCursos {
     width: 17%;
     margin-top: 30px;
-  }
-  #txtTelefonoCursos {
+}
+#txtTelefonoCursos {
     width: 27%;
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtCelularCursos {
+}
+#txtCelularCursos {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #cmbSucursalesCursos {
+}
+#cmbSucursalesCursos {
     margin-left: 4%;
-  }
-  #btnEnviarCursos {
+}
+#btnEnviarCursos {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
     padding: 13px;
     float: right;
-  }
-  #cmbEstadosCursos,
-  #cmbSucursalesCursos {
+}
+#cmbEstadosCursos,
+#cmbSucursalesCursos {
     margin-top: 30px;
-  }
-  #politicas1Cursos {
+}
+#politicas1Cursos {
     width: 80%;
     margin-left: 20%;
-  }
-  #chkPoliticasCursos {
+}
+#chkPoliticasCursos {
     width: 5%;
     float: left;
     margin-top: 3px;
     margin-bottom: 20px;
-  }
-  #acepto1Cursos {
+}
+#acepto1Cursos {
     width: 95%;
     float: left;
-  }
-  #acepto1Cursos a {
+}
+#acepto1Cursos a {
     text-decoration: none;
     color: #fff;
-  }
+}
   /*	Slider Tipo	Cursos
-  		------------------------------------------ */
+  ------------------------------------------ */
   .contenedor-slider-cursos {
     float: left;
-  }
-  .slider-tipo-cursos {
+}
+.slider-tipo-cursos {
     margin-top: 10px;
-  }
-  .slider-curso-1,
-  .slider-curso-2,
-  .slider-curso-3,
-  .slider-curso-4 {
+}
+.slider-curso-1,
+.slider-curso-2,
+.slider-curso-3,
+.slider-curso-4 {
     padding: 0 14px;
-  }
-  .imagen-slider-curso img {
+}
+.imagen-slider-curso img {
     margin: 0 auto;
-  }
-  .titulo-slider-curso {
+}
+.titulo-slider-curso {
     font-family: 'Conv_MyriadPro-Semibold';
     font-size: .863em;
     line-height: 30px;
     text-align: center;
     margin-top: 0.3em;
-  }
-  .descripcion-slider-curso {
+}
+.descripcion-slider-curso {
     font-size: .863em;
     line-height: 23px;
     text-align: center;
-  }
-  #boton-slider-cursos {
+}
+#boton-slider-cursos {
     width: auto;
     font-size: 13px;
     padding: 3px 6px;
     margin-top: 0.7em;
-  }
-  .sombra-slider-curso img {
+}
+.sombra-slider-curso img {
     width: 100%;
     height: auto;
-  }
+}
   /*	Footer
-  	------------------------------------------ */
+  ------------------------------------------ */
   .footer1 {
     background: #666666;
     color: #fff;
     font-family: 'Conv_MyriadPro-Regular';
     text-align: left;
-  }
-  .menu-footer {
+}
+.menu-footer {
     margin: 15px 0 15px 0;
-  }
-  .footer2 {
+}
+.footer2 {
     background: #504f4f;
     color: #fff;
     font-family: 'Conv_MyriadPro-Regular';
     text-align: left;
-  }
-  .footer-social {
+}
+.footer-social {
     float: left;
-  }
-  .copyright {
+}
+.copyright {
     font-size: 14px;
     float: left;
     text-align: left;
-  }
-  .copyright a:visited,
-  .copyright a:link {
+}
+.copyright a:visited,
+.copyright a:link {
     text-decoration: none;
     color: #ffffff;
-  }
-  #footer-interior1 a:visited,
-  #footer-interior1 a:link {
+}
+#footer-interior1 a:visited,
+#footer-interior1 a:link {
     text-decoration: none;
     color: #ffffff;
-  }
-  .privacidad {
+}
+.privacidad {
     font-size: 14px;
     float: right;
     text-align: right;
-  }
-  .google-footer,
-  .twitter-footer,
-  .facebook-footer {
+}
+.google-footer,
+.twitter-footer,
+.facebook-footer {
     float: left;
     margin-left: 10px;
-  }
-  #menu4 {
+}
+#menu4 {
     padding-left: 25px;
-  }
+}
   /*	Paginas Contacto
-  	------------------------------------------ */
+  ------------------------------------------ */
   /*** Botones Home ****/
   .buton-home {
     float: none;
-  }
-  .boton-trabajo .buton-home {
+}
+.boton-trabajo .buton-home {
     float: left;
-  }
+}
   /* Formulario Pagina Alumnos
-  		------------------------------------------ */
+  ------------------------------------------ */
   #formulario-alumnos {
     height: auto;
-  }
-  #txtNombreAlumnos,
-  #txtCorreoAlumnos,
-  #txtLadaAlumnos,
-  #txtTelefonoAlumnos,
-  #cmbEstadosAlumnos select > option,
-  #cmbEstadosAlumnos,
-  #txtCelularAlumnos,
-  #cmbSucursalesAlumnos {
+}
+#txtNombreAlumnos,
+#txtCorreoAlumnos,
+#txtLadaAlumnos,
+#txtTelefonoAlumnos,
+#cmbEstadosAlumnos select > option,
+#cmbEstadosAlumnos,
+#txtCelularAlumnos,
+#cmbSucursalesAlumnos {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
     border: solid 4px #f1f1f1;
     color: #989898;
     /*.border-radius(10px);*/
-  
+
     width: 48%;
     float: left;
-  }
-  #nombre1Alumnos {
+}
+#nombre1Alumnos {
     position: relative;
-  }
-  #nombre1Alumnos label.error {
+}
+#nombre1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6630,11 +6647,11 @@ you can add resource intensive styles.
     left: 0px;
     top: 40px;
     font-size: 12px;
-  }
-  #correo1Alumnos {
+}
+#correo1Alumnos {
     position: relative;
-  }
-  #correo1Alumnos label.error {
+}
+#correo1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6644,11 +6661,11 @@ you can add resource intensive styles.
     left: 192px;
     top: 40px;
     font-size: 12px;
-  }
-  #lada1Alumnos {
+}
+#lada1Alumnos {
     position: relative;
-  }
-  #lada1Alumnos label.error {
+}
+#lada1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6658,11 +6675,11 @@ you can add resource intensive styles.
     left: 0px;
     top: 110px;
     font-size: 12px;
-  }
-  #telefono1Alumnos {
+}
+#telefono1Alumnos {
     position: relative;
-  }
-  #telefono1Alumnos label.error {
+}
+#telefono1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6672,11 +6689,11 @@ you can add resource intensive styles.
     left: 78px;
     top: 110px;
     font-size: 12px;
-  }
-  #celular1Alumnos {
+}
+#celular1Alumnos {
     position: relative;
-  }
-  #celular1Alumnos label.error {
+}
+#celular1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6686,12 +6703,12 @@ you can add resource intensive styles.
     left: 192px;
     top: 110px;
     font-size: 12px;
-  }
-  #estado1Alumnos {
+}
+#estado1Alumnos {
     position: relative;
     width: 100%;
-  }
-  #estado1Alumnos label.error {
+}
+#estado1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6702,11 +6719,11 @@ you can add resource intensive styles.
     top: 195px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #sucursal1Alumnos {
+}
+#sucursal1Alumnos {
     position: relative;
-  }
-  #sucursal1Alumnos label.error {
+}
+#sucursal1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6717,11 +6734,11 @@ you can add resource intensive styles.
     top: 195px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #politicas1Alumnos {
+}
+#politicas1Alumnos {
     position: relative;
-  }
-  #politicas1Alumnos label.error {
+}
+#politicas1Alumnos label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -6731,71 +6748,71 @@ you can add resource intensive styles.
     left: 7px;
     top: 325px;
     font-size: 12px;
-  }
-  #txtCorreoAlumnos {
+}
+#txtCorreoAlumnos {
     margin-left: 4%;
     margin-top: 0px;
-  }
-  #txtLadaAlumnos {
+}
+#txtLadaAlumnos {
     width: 17%;
     margin-top: 30px;
-  }
-  #txtTelefonoAlumnos {
+}
+#txtTelefonoAlumnos {
     width: 27%;
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtCelularAlumnos {
+}
+#txtCelularAlumnos {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #cmbSucursaleAlumnos {
+}
+#cmbSucursaleAlumnos {
     margin-left: 4%;
-  }
-  #btnEnviarAlumnos {
+}
+#btnEnviarAlumnos {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
     padding: 13px;
     float: right;
-  }
-  #cmbEstadosAlumnos,
-  #cmbSucursalesAlumnos {
+}
+#cmbEstadosAlumnos,
+#cmbSucursalesAlumnos {
     margin-top: 30px;
-  }
-  #cmbSucursalesAlumnos {
+}
+#cmbSucursalesAlumnos {
     margin-left: 4%;
-  }
-  #politicas1Alumnos {
+}
+#politicas1Alumnos {
     width: 80%;
     margin-left: 20%;
-  }
-  #chkPoliticasAlumnos {
+}
+#chkPoliticasAlumnos {
     width: 5%;
     float: left;
     margin-top: 3px;
     margin-bottom: 20px;
-  }
-  #acepto1Alumnos {
+}
+#acepto1Alumnos {
     width: 95%;
     float: left;
-  }
-  #acepto1Alumnos a {
+}
+#acepto1Alumnos a {
     text-decoration: none;
     color: #fff;
-  }
-  label.error {
+}
+label.error {
     z-index: 10000;
-  }
-  /** Pginas Contacto **/
-  .titulo-contacto {
+}
+/** Pginas Contacto **/
+.titulo-contacto {
     text-align: left;
-  }
+}
 
   /* Formulario Pagina Magazine
-    ------------------------------------------ */
-#formulario-revista {
-  height: auto;
+  ------------------------------------------ */
+  #formulario-revista {
+    height: auto;
 }
 #txtNombreRevista,
 #txtPaternoRevista,
@@ -6806,281 +6823,281 @@ you can add resource intensive styles.
 #estado,
 #txtCelularRevista,
 #plantel {
-  font-family: 'Conv_MyriadPro-Regular';
-  font-size: 0.875em;
-  background: #fff;
-  border: solid 4px #f1f1f1;
-  color: #989898;
-  /*.border-radius(10px);*/
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
 
-  width: 48%;
-  float: left;
+    width: 48%;
+    float: left;
 }
 #nombre1Revista {
-  position: relative;
+    position: relative;
 }
 #nombre1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 350px;
-  color: #fff;
-  position: absolute;
-  left: 214px;
-  top: 65px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 214px;
+    top: 65px;
+    font-size: 12px;
 }
 #paterno1Revista {
-  position: relative;
+    position: relative;
 }
 #paterno1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 350px;
-  color: #fff;
-  position: absolute;
-  left: 169px;
-  top: -13px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 169px;
+    top: -13px;
+    font-size: 12px;
 }
 #materno1Revista {
-  position: relative;
+    position: relative;
 }
 #materno1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 350px;
-  color: #fff;
-  position: absolute;
-  left: -4px;
-  top: 65px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: -4px;
+    top: 65px;
+    font-size: 12px;
 }
 #matricula1Revista {
-  position: relative;
+    position: relative;
 }
 #matricula1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 350px;
-  color: #fff;
-  position: absolute;
-  left: 37px;
-  top: -13px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 37px;
+    top: -13px;
+    font-size: 12px;
 }
 #correo1Revista {
-  position: relative;
+    position: relative;
 }
 #correo1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 350px;
-  color: #fff;
-  position: absolute;
-  left: 162px;
-  top: 221px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 162px;
+    top: 221px;
+    font-size: 12px;
 }
 #telefono1Revista {
-  position: relative;
+    position: relative;
 }
 #telefono1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 60%;
-  color: #fff;
-  position: absolute;
-  left: 9px;
-  top: 221px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 60%;
+    color: #fff;
+    position: absolute;
+    left: 9px;
+    top: 221px;
+    font-size: 12px;
 }
 #celular1Revista {
-  position: relative;
+    position: relative;
 }
 #celular1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 100%;
-  color: #fff;
-  position: absolute;
-  left: 0px;
-  top: 260px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100%;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 260px;
+    font-size: 12px;
 }
 #tipo1Revista {
-  position: relative;
+    position: relative;
 }
 #tipo1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 215px;
-  color: #fff;
-  position: absolute;
-  left: 114px;
-  top: 141px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 215px;
+    color: #fff;
+    position: absolute;
+    left: 114px;
+    top: 141px;
+    font-size: 12px;
 }
 #sucursal1Revista {
-  position: relative;
+    position: relative;
 }
 #sucursal1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 175px;
-  color: #fff;
-  position: absolute;
-  left: 0px;
-  top: 433px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 175px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 433px;
+    font-size: 12px;
 }
 #politicas1Revista {
-  position: relative;
+    position: relative;
 }
 #politicas1Revista label.error {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  text-align: center;
-  max-width: 100%;
-  color: #fff;
-  position: absolute;
-  left: 7px;
-  top: 386px;
-  font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 100%;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 386px;
+    font-size: 12px;
 }
 #txtPaternoRevista {
-  margin-left: 4%;
-  margin-top: 0px;
+    margin-left: 4%;
+    margin-top: 0px;
 }
 #txtMaternoRevista {
-  margin-left: 0%;
-  margin-top: 30px;
+    margin-left: 0%;
+    margin-top: 30px;
 }
 #txtNombreRevista {
-  margin-left: 4%;
-  margin-top: 30px;
+    margin-left: 4%;
+    margin-top: 30px;
 }
 #txtMatriculaRevista {
-  margin-left: 0%;
-  margin-top: 0px;
+    margin-left: 0%;
+    margin-top: 0px;
 }
 #txtLadaRevista {
-  width: 25%;
-  margin-top: 30px;
+    width: 25%;
+    margin-top: 30px;
 }
 #txtTelefonoRevista {
-  margin-left: 0%;
-  margin-top: 30px;
+    margin-left: 0%;
+    margin-top: 30px;
 }
 #txtCorreoRevista {
-  margin-left: 4%;
-  margin-top: 30px;
+    margin-left: 4%;
+    margin-top: 30px;
 }
 #cmbSucursaleRevista {
-  margin-left: 0%;
+    margin-left: 0%;
 }
 #sendRevista {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 13px;
-  float: right;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 13px;
+    float: right;
 }
 #tipoRevista,
 #plantel {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 #tipoRevista{
-  font-family: 'Conv_MyriadPro-Regular';
-  font-size: 0.875em;
-  background: #fff;
-  border: solid 4px #f1f1f1;
-  color: #989898;
-  /*.border-radius(10px);*/
+    font-family: 'Conv_MyriadPro-Regular';
+    font-size: 0.875em;
+    background: #fff;
+    border: solid 4px #f1f1f1;
+    color: #989898;
+    /*.border-radius(10px);*/
 
-  width: 100%;
-  float: left;
+    width: 100%;
+    float: left;
 
- }
+}
 #plantel {
-  margin-left: 0%;
+    margin-left: 0%;
 }
 #politicas1Revista {
-  width: 80%;
-  margin-left: 20%;
+    width: 80%;
+    margin-left: 20%;
 }
 #chkPoliticasRevista {
-  width: 5%;
-  float: left;
-  margin-top: 3px;
-  margin-bottom: 20px;
+    width: 5%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 20px;
 }
 #acepto1Revista {
-  width: 95%;
-  float: left;
+    width: 95%;
+    float: left;
 }
 #acepto1Revista a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 label.error {
-  z-index: 10000;
+    z-index: 10000;
 }
 
 .olvidaste{
-  color: #FFFFFF;
-  display: block;
-  font-size: 13px;
-  margin-top: 20px;
-  margin-left: 5px;
-  text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-decoration: none;
 }
 #recuperafr{
-  display: none;
+    display: none;
 }
   /*	Paginas Contacto
-  	------------------------------------------ */
+  ------------------------------------------ */
   #contenedor-contacto {
     /*margin-top: 2em;*/
-  
+
     background-color: #d1d1d1;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
     background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
     background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
     background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
     background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
-  }
-  .contenedor-contacto-informacion {
+}
+.contenedor-contacto-informacion {
     font-family: 'Conv_MyriadPro-Semibold';
-  }
-  .titulo-contacto {
+}
+.titulo-contacto {
     padding-top: 0.5em;
     font-size: 3em;
     color: #30aebc;
     text-align: left;
-  }
-  .subtitulo-contacto {
+}
+.subtitulo-contacto {
     font-size: 2.5em;
     color: #30aebc;
     text-align: left;
-  }
-  .subtitulo-resultado-test {
+}
+.subtitulo-resultado-test {
     padding-top: 0.5em;
     font-size: 1.875em;
     color: #ed7213;
     text-align: left;
     margin-left: 9em;
     margin-top: 1.5em;
-  }
-  .resultado-test {
+}
+.resultado-test {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 5.5em;
     color: #30aebc;
@@ -7089,8 +7106,8 @@ label.error {
     line-height: 1.99em;
     width: 100%;
     text-align: right;
-  }
-  .descripcion-contacto {
+}
+.descripcion-contacto {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 1.25em;
     color: #989898;
@@ -7099,7 +7116,7 @@ label.error {
     line-height: 1.99em;
     width: 100%;
     text-align: left;
-  }
+}
   /*.descripcion-test {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 1.25em;
@@ -7108,59 +7125,59 @@ label.error {
     margin-left: 0.25em;
     line-height: 1.99em;
     width: 66%;
-  }*/
-  .nota-contacto {
-    font-size: 2.45em;
-    color: #30aebc;
-    margin-top: 0.5em;
-    margin-bottom: 0.45em;
-    margin-left: 0.15em;
-    text-align: left;
+    }*/
+    .nota-contacto {
+      font-size: 2.45em;
+      color: #30aebc;
+      margin-top: 0.5em;
+      margin-bottom: 0.45em;
+      margin-left: 0.15em;
+      text-align: left;
   }
   .nota-test-fin{
-    margin-bottom: -7px;
-    margin-top: -140px;
-    margin-left: -50px;
+      margin-bottom: -7px;
+      margin-top: -140px;
+      margin-left: -50px;
   }
   .imagen-test-inicio {
-    margin-bottom: -20px;
-    margin-top: -296px;
-    margin-left: -100px;
-    position: relative;
-    z-index: -1;
-}
-  .contenedor-curso-formulario {
-    background: #30aebc;
+      margin-bottom: -20px;
+      margin-top: -296px;
+      margin-left: -100px;
+      position: relative;
+      z-index: -1;
   }
   .contenedor-curso-formulario {
-    background: #30aebc;
+      background: #30aebc;
+  }
+  .contenedor-curso-formulario {
+      background: #30aebc;
   }
   .titulo-formulario {
-    padding-top: 0.4em;
-    font-size: 1.35em;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 0.4em;
+      padding-top: 0.4em;
+      font-size: 1.35em;
+      color: #ffffff;
+      text-align: center;
+      margin-top: 1em;
+      margin-bottom: 0.4em;
   }
   .formulario-registro-cursos {
-    width: 80%;
+      width: 80%;
   }
   .formulario-registro-cursos input[type=text],
   .formulario-registro-cursos select,
   #contacto-mensaje {
-    font-family: 'Conv_MyriadPro-Regular';
-    font-size: 0.875em;
-    background: #fff;
-    border: solid 4px #f1f1f1;
-    padding: 12px 12px;
-    color: #989898;
-    /*.border-radius(10px);*/
-  
-    width: 48%;
+      font-family: 'Conv_MyriadPro-Regular';
+      font-size: 0.875em;
+      background: #fff;
+      border: solid 4px #f1f1f1;
+      padding: 12px 12px;
+      color: #989898;
+      /*.border-radius(10px);*/
+
+      width: 48%;
   }
   #curso-boton-enviar {
-    width: 100%;
+      width: 100%;
   }
   #contacto-nombre-completo,
   #contacto-correo-electronico,
@@ -7168,57 +7185,57 @@ label.error {
   #contacto-telefono,
   #contacto-mensaje,
   #contacto-boton-enviar {
-    margin-top: 10px;
+      margin-top: 10px;
   }
   #contacto-mensaje {
-    margin-top: 25px;
-    height: 120px;
+      margin-top: 25px;
+      height: 120px;
   }
   #contacto-lada {
-    float: left;
-    width: 30%;
+      float: left;
+      width: 30%;
   }
   #contacto-telefono {
-    float: right;
-    width: 65%;
+      float: right;
+      width: 65%;
   }
   .sombra-slider-curso img {
-    width: 100%;
-    height: auto;
+      width: 100%;
+      height: auto;
   }
   #footer-interior2 p {
-    width: 50%;
-    float: left;
+      width: 50%;
+      float: left;
   }
   /* Formulario Pagina Empresas
-  		------------------------------------------ */
+  ------------------------------------------ */
   #formulario-empresas {
     height: 460px;
-  }
-  #txtNombreEmpresas,
-  #txtCorreoEmpresas,
-  #txtEmpresaEmpresas,
-  #txtPuestoEmpresas,
-  #txtLadaEmpresas,
-  #txtTelefonoEmpresas,
-  #cmbEstadosEmpresas,
-  #txtCelularEmpresas,
-  #cmbSucursalesEmpresas,
-  #txtComentarioEmpresas {
+}
+#txtNombreEmpresas,
+#txtCorreoEmpresas,
+#txtEmpresaEmpresas,
+#txtPuestoEmpresas,
+#txtLadaEmpresas,
+#txtTelefonoEmpresas,
+#cmbEstadosEmpresas,
+#txtCelularEmpresas,
+#cmbSucursalesEmpresas,
+#txtComentarioEmpresas {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
     border: solid 4px #f1f1f1;
     color: #989898;
     /*.border-radius(10px);*/
-  
+
     width: 48%;
     float: left;
-  }
-  #nombre1Empresas {
+}
+#nombre1Empresas {
     position: relative;
-  }
-  #nombre1Empresas label.error {
+}
+#nombre1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7228,11 +7245,11 @@ label.error {
     left: 0px;
     top: 40px;
     font-size: 12px;
-  }
-  #correo1Empresas {
+}
+#correo1Empresas {
     position: relative;
-  }
-  #correo1Empresas label.error {
+}
+#correo1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7242,11 +7259,11 @@ label.error {
     left: 52%;
     top: 40px;
     font-size: 12px;
-  }
-  #empresa1Empresas {
+}
+#empresa1Empresas {
     position: relative;
-  }
-  #empresa1Empresas label.error {
+}
+#empresa1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7256,11 +7273,11 @@ label.error {
     left: 0px;
     top: 110px;
     font-size: 12px;
-  }
-  #puesto1Empresas {
+}
+#puesto1Empresas {
     position: relative;
-  }
-  #puesto1Empresas label.error {
+}
+#puesto1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7270,11 +7287,11 @@ label.error {
     left: 52%;
     top: 110px;
     font-size: 12px;
-  }
-  #lada1Empresas {
+}
+#lada1Empresas {
     position: relative;
-  }
-  #lada1Empresas label.error {
+}
+#lada1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7284,11 +7301,11 @@ label.error {
     left: 0px;
     top: 195px;
     font-size: 12px;
-  }
-  #telefono1Empresas {
+}
+#telefono1Empresas {
     position: relative;
-  }
-  #telefono1Empresas label.error {
+}
+#telefono1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7298,11 +7315,11 @@ label.error {
     left: 21%;
     top: 195px;
     font-size: 12px;
-  }
-  #celular1Empresas {
+}
+#celular1Empresas {
     position: relative;
-  }
-  #celular1Empresas label.error {
+}
+#celular1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7312,12 +7329,12 @@ label.error {
     left: 52%;
     top: 195px;
     font-size: 12px;
-  }
-  #estado1Empresas {
+}
+#estado1Empresas {
     position: relative;
     width: 100%;
-  }
-  #estado1Empresas label.error {
+}
+#estado1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7328,11 +7345,11 @@ label.error {
     top: 275px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #sucursal1Empresas {
+}
+#sucursal1Empresas {
     position: relative;
-  }
-  #sucursal1Empresas label.error {
+}
+#sucursal1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7343,12 +7360,12 @@ label.error {
     top: 275px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #comentario1Empresas {
+}
+#comentario1Empresas {
     position: relative;
     width: 100%;
-  }
-  #comentario1Empresas label.error {
+}
+#comentario1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7358,11 +7375,11 @@ label.error {
     left: 0px;
     top: 365px;
     font-size: 12px;
-  }
-  #politicas1Empresas {
+}
+#politicas1Empresas {
     position: relative;
-  }
-  #politicas1Empresas label.error {
+}
+#politicas1Empresas label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7372,102 +7389,102 @@ label.error {
     left: 7px;
     top: 490px;
     font-size: 12px;
-  }
-  #txtCorreoEmpresas {
+}
+#txtCorreoEmpresas {
     margin-left: 4%;
     margin-top: 0px;
-  }
-  #txtEmpresaEmpresas {
+}
+#txtEmpresaEmpresas {
     margin-top: 30px;
-  }
-  #txtPuestoEmpresas {
+}
+#txtPuestoEmpresas {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtLadaEmpresas {
+}
+#txtLadaEmpresas {
     width: 17%;
     margin-top: 30px;
-  }
-  #txtTelefonoEmpresas {
+}
+#txtTelefonoEmpresas {
     width: 27%;
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtCelularEmpresas {
+}
+#txtCelularEmpresas {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #cmbSucursaleEmpresas {
+}
+#cmbSucursaleEmpresas {
     margin-left: 4%;
-  }
-  #txtComentarioEmpresas {
+}
+#txtComentarioEmpresas {
     margin-top: 30px;
     width: 100%;
-  }
-  #btnEnviarEmpresas {
+}
+#btnEnviarEmpresas {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
     padding: 13px;
     float: right;
-  }
-  #cmbEstadosEmpresas,
-  #cmbSucursalesEmpresas {
+}
+#cmbEstadosEmpresas,
+#cmbSucursalesEmpresas {
     margin-top: 30px;
-  }
-  #cmbSucursalesEmpresas {
+}
+#cmbSucursalesEmpresas {
     margin-left: 4%;
-  }
-  #politicas1Empresas {
+}
+#politicas1Empresas {
     width: 80%;
     margin-left: 20%;
-  }
-  #chkPoliticasEmpresas {
+}
+#chkPoliticasEmpresas {
     width: 5%;
     float: left;
     margin-top: 3px;
     margin-bottom: 20px;
-  }
-  #acepto1Empresas {
+}
+#acepto1Empresas {
     width: 95%;
     float: left;
-  }
-  #acepto1Empresas a {
+}
+#acepto1Empresas a {
     text-decoration: none;
     color: #fff;
-  }
+}
 /*--- Formulario Test ---*/
 #formulario-test {
     height: auto;
-  }
+}
 #txtNombreTest,
-  #txtCorreoTest,
-  #txtEmpresaTest,
-  #txtPuestoTest,
-  #txtLadaTest,
-  #txtTelefonoTest,
-  #estado,
-  #txtCelularTest,
-  #plantel,
-  #txtComentarioTest {
+#txtCorreoTest,
+#txtEmpresaTest,
+#txtPuestoTest,
+#txtLadaTest,
+#txtTelefonoTest,
+#estado,
+#txtCelularTest,
+#plantel,
+#txtComentarioTest {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 0.875em;
     background: #fff;
     border: solid 4px #f1f1f1;
     color: #989898;
     /*.border-radius(10px);*/
-  
+
     width: 48%;
     float: left;
-  }
-  #frmReg {
+}
+#frmReg {
     margin-top: 55px;
     margin-right: 80px;
-  }
- #nombre1Test {
+}
+#nombre1Test {
     position: relative;
-  }
-  #nombre1Test label.error {
+}
+#nombre1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7477,11 +7494,11 @@ label.error {
     left: 0px;
     top: 40px;
     font-size: 12px;
-  }
-  #correo1Test {
+}
+#correo1Test {
     position: relative;
-  }
-  #correo1Test label.error {
+}
+#correo1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7491,11 +7508,11 @@ label.error {
     left: 302px;
     top: 40px;
     font-size: 12px;
-  }
-  #lada1Test {
+}
+#lada1Test {
     position: relative;
-  }
-  #lada1Test label.error {
+}
+#lada1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7505,11 +7522,11 @@ label.error {
     left: 0px;
     top: 110px;
     font-size: 12px;
-  }
-  #telefono1Test {
+}
+#telefono1Test {
     position: relative;
-  }
-  #telefono1Test label.error {
+}
+#telefono1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7519,11 +7536,11 @@ label.error {
     left: 122px;
     top: 110px;
     font-size: 12px;
-  }
-  #celular1Test {
+}
+#celular1Test {
     position: relative;
-  }
-  #celular1Test label.error {
+}
+#celular1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7533,12 +7550,12 @@ label.error {
     left: 302px;
     top: 110px;
     font-size: 12px;
-  }
-  #estado1Test {
+}
+#estado1Test {
     position: relative;
     width: 100%;
-  }
-  #estado1Test label.error {
+}
+#estado1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7549,11 +7566,11 @@ label.error {
     top: 195px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #sucursal1Test {
+}
+#sucursal1Test {
     position: relative;
-  }
-  #sucursal1Test label.error {
+}
+#sucursal1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7564,11 +7581,11 @@ label.error {
     top: 195px;
     font-size: 12px;
     z-index: 1000;
-  }
-  #politicas1Test {
+}
+#politicas1Test {
     position: relative;
-  }
-  #politicas1Test label.error {
+}
+#politicas1Test label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -7578,67 +7595,67 @@ label.error {
     left: 7px;
     top: 290px;
     font-size: 12px;
-  }
-  #txtCorreoTest {
+}
+#txtCorreoTest {
     margin-left: 4%;
     margin-top: 0px;
-  }
-  #txtLadaTest {
+}
+#txtLadaTest {
     width: 17%;
     margin-top: 30px;
-  }
-  #txtTelefonoTest {
+}
+#txtTelefonoTest {
     width: 27%;
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #txtCelularTest {
+}
+#txtCelularTest {
     margin-left: 4%;
     margin-top: 30px;
-  }
-  #plantel {
+}
+#plantel {
     margin-left: 4%;
-  }
-  #sendtest {
+}
+#sendtest {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
     padding: 13px;
     float: right;
-  }
-  #estado,
-  #plantel {
+}
+#estado,
+#plantel {
     margin-top: 30px;
-  }
-  #plantel {
+}
+#plantel {
     margin-left: 4%;
-  }
-  #politicas1Test {
+}
+#politicas1Test {
     width: 80%;
     margin-left: 20%;
-  }
-  #chkPoliticasTest {
+}
+#chkPoliticasTest {
     width: 5%;
     float: left;
     margin-top: 3px;
     margin-bottom: 20px;
-  }
-  #acepto1Test {
+}
+#acepto1Test {
     width: 95%;
     float: left;
-  }
-  #acepto1Test a {
+}
+#acepto1Test a {
     text-decoration: none;
     color: #fff;
-  }
-  
-  #ctn-registro {
+}
+
+#ctn-registro {
     background-color: #30AEBC;
     height:350px;
     width: 179%;
     margin: -61px -192px 0px -100px;
     padding: 20px 40px 20px 40px;
-  }
+}
 /* .resultado-test {
     font-family: 'Conv_MyriadPro-Regular';
     font-size: 3.5em;
@@ -7648,10 +7665,10 @@ label.error {
     line-height: 1.99em;
     width: 100%;
     text-align: left;
-  }*/
+    }*/
 
- 
-#sendValidate{
+
+    #sendValidate{
 /*	background: #E56415;
 	color: #FFFFFF;
 	width:150px;
@@ -7741,39 +7758,64 @@ input[type=radio]{
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	width:220px;
-  display: block;
+    display: block;
 } 
 @media (max-width: 768px) {
-  #login_alumnos {
-    margin-left: 532px;
-    margin-top: 122px;
-  }
-  #toogleLogin{
-    margin-left: 532px !important;
-    margin-top: 150px !important;
-  } 
-}
-@media (min-width: 769px) and (max-width: 1024px) { 
     #login_alumnos {
-        margin-left:730px;
-        margin-top: 60px;
+        margin-left: 532px;
+        margin-top: 122px;
     }
     #toogleLogin{
-        margin-left: 730px !important;
-        margin-top: 88px !important;
-    } 
-    #megaMenu > ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform.ubersearch-v2 input[type="text"] {
-        width: 125px !important;
+        margin-left: 532px !important;
+        margin-top: 150px !important;
     }
+
+    /* Botones */
+    #btnEnviarCursos{
+        font-size: 14px;
+    } 
+    #btnEnviarFranquicias{
+        font-size: 14px;
+    }
+    #btnEnviarAlumnos{
+        font-size: 14px;
+    }
+    #btnEnviarEmpresas{
+        font-size: 14px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) { 
+  #login_alumnos {
+    margin-left:730px;
+    margin-top: 60px;
+}
+#toogleLogin{
+    margin-left: 730px !important;
+    margin-top: 88px !important;
+} 
+#megaMenu > ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform.ubersearch-v2 input[type="text"] {
+    width: 125px !important;
+}
+
+    /* Botones */
+    #btnEnviarCursos{
+        font-size: 14px;
+    }
+    #btnEnviarFranquicias{
+        font-size: 18px;
+    }
+    #btnEnviarAlumnos{
+        font-size: 18px;
+      }
 }
 
 @media (min-width: 1025px) {
   #login_alumnos {
     z-index: 9999;
-  }
-  #toogleLogin{
+}
+#toogleLogin{
     margin-top: 88px !important;
-  } 
+} 
 }
 
 #toogleLogin{
@@ -7794,13 +7836,13 @@ input[type=radio]{
 	border-bottom-left-radius: 5px;
 }
 @-moz-document url-prefix() {
-  	#toogleLogin { margin-top: 88px; }
-  	.btnCerrar{
-		margin-top: -9px !important;
-	}
-	.nombreSession{
-		margin-top: 10px;
-	}	
+   #toogleLogin { margin-top: 88px; }
+   .btnCerrar{
+      margin-top: -9px !important;
+  }
+  .nombreSession{
+      margin-top: 10px;
+  }	
 }
 
 #sendLogin{
@@ -7823,7 +7865,7 @@ input[type=radio]{
 	margin-left:5px;
 }
 .inptLog:focus{
-	 box-shadow:0 0 7px #C4C4C4;
+  box-shadow:0 0 7px #C4C4C4;
 }
 .lblLog{
 	display: block;
@@ -7835,8 +7877,8 @@ input[type=radio]{
 	padding-top: 5px;
 }
 .menu-fijo {
-    position: fixed !important;
-    top: 0px;
+  position: fixed !important;
+  top: 0px;
 }
 .lnk-acceso{
 	display:block;
@@ -7898,19 +7940,19 @@ input[type=radio]{
 	padding-left: 15px;
 }
 .ctn-pre {
-    width: 600px;
-    margin-top: -90px;
-    float: left;
-    margin-left: -100px;
+  width: 600px;
+  margin-top: -90px;
+  float: left;
+  margin-left: -100px;
 }
 #btnEnviarMagazine {
-    margin-top: 30px;
-    margin-bottom: 22px;
-    width: 40%;
-    padding: 13px;
-    float: right;
-    text-align: center;
-  }
+  margin-top: 30px;
+  margin-bottom: 22px;
+  width: 40%;
+  padding: 13px;
+  float: right;
+  text-align: center;
+}
 }
 .triangulo-der-1{
   position:relative;
@@ -8020,7 +8062,7 @@ iPHONE 5 MEDIA QUERY
 Want to get fancy for no good reason? Knock yourself out.
 */
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  
+
 }
 /*
 PRINT STYLESHEET
@@ -8046,58 +8088,58 @@ be set to display none.
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
-  }
-  a,
-  a:visited {
+}
+a,
+a:visited {
     color: #444 !important;
     text-decoration: underline;
-  }
-  a:after,
-  a:visited:after {
+}
+a:after,
+a:visited:after {
     content: " (" attr(href) ")";
-  }
-  a abbr[title]:after,
-  a:visited abbr[title]:after {
+}
+a abbr[title]:after,
+a:visited abbr[title]:after {
     content: " (" attr(title) ")";
-  }
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+}
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
     content: "";
-  }
-  pre,
-  blockquote {
+}
+pre,
+blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
-  }
-  thead {
+}
+thead {
     display: table-header-group;
-  }
-  tr,
-  img {
+}
+tr,
+img {
     page-break-inside: avoid;
-  }
-  img {
+}
+img {
     max-width: 100% !important;
-  }
-  @page  {
+}
+@page  {
     margin: 0.5cm;
-  }
-  p,
-  h2,
-  h3 {
+}
+p,
+h2,
+h3 {
     orphans: 3;
     widows: 3;
-  }
-  h2,
-  h3 {
+}
+h2,
+h3 {
     page-break-after: avoid;
-  }
-  .sidebar,
-  .page-navigation,
-  .wp-prev-next,
-  .respond-form,
-  nav {
+}
+.sidebar,
+.page-navigation,
+.wp-prev-next,
+.respond-form,
+nav {
     display: none;
-  }
+}
 }
