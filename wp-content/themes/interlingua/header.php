@@ -43,21 +43,6 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 			<!-- drop Google Analytics Here -->
 
-			<!--Start of Zopim Live Chat Script-->
-			<script type="text/javascript">
-			window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-				d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-					_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-					$.src='//cdn.zopim.com/?1g1vE7v5adkEtsV6o9kwO8Ec2cp8OIQF';z.t=+new Date;$.
-					type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-					</script>
-					<!--End of Zopim Live Chat Script-->
-					<script>
-					$zopim(function() {
-			    //alert("Visitor's email: " + $zopim.livechat.getEmail());
-			}); 
-					</script>
-
 					<!-- end analytics -->
 					<script type="text/javascript" charset="utf-8">
 					jQuery(document).ready(function() {
@@ -83,7 +68,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  		login.removeClass('menu-fijo');
 			  	}
 			  });
-			  
+
 			  /*var menuAlt = jQuery('#megaMenuToggle');
 			  var menuAlt_offset = login.offset();
 			  
@@ -116,7 +101,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  jQuery("#frmLogin").on("submit",function(e){
 			  	e.preventDefault();
 			  	ruta = jQuery("#ruta").val();
-			  	
+
 			  	jQuery.ajax({
 			  		type:"post",
 			  		url: ruta+"/core.php",
@@ -155,7 +140,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  	jQuery("#frmGetPass").on("submit",function(e){
 			  		e.preventDefault();
 			  		ruta = jQuery("#ruta").val();
-			  		
+
 			  		jQuery.ajax({
 			  			type:"post",
 			  			url: ruta+"/core.php",
@@ -224,7 +209,7 @@ _gaq.push(['_trackPageview']);
 						<a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" ?></a>						
 						<a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" ?></a>
 						<a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" ?></a>
-						
+
 					</div>
 
 					<div class="logos-redes fullcol clearfix">
@@ -268,7 +253,7 @@ _gaq.push(['_trackPageview']);
 					<div id="contenedor-menu">
 
 						<div id="contenedor-menu-interior"  class="wrap clearfix">
-							
+
 							<nav role="navigation">
 								<?php bones_main_nav(); ?>
 							</nav>
@@ -296,7 +281,7 @@ _gaq.push(['_trackPageview']);
 										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
 										<label class="lblLog" for="matinpt">Matrícula</label>
 										<input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
-										
+
 										<input type="submit" name="sendLogin" value="Enviar" id="sendLogin" />
 									</form>
 								</div>
@@ -319,5 +304,5 @@ _gaq.push(['_trackPageview']);
 
 					</div>
 
-					
+
 			</header> <!-- end header -->
