@@ -1,0 +1,421 @@
+* {
+margin:0;
+}
+
+/* General Style Info */
+body {
+	background-color: #CCCCCC;
+	color: #333333;
+	font-family:verdana,helvetica,arial,sans-serif;
+	font-size:10px;
+	margin: 0;
+}
+a img {
+	border:none;
+}
+
+h1 {
+	color: #95C042;
+	font-size: 130%;
+	margin: 0.1em 0;
+}
+h2{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	margin: 5px;
+	padding:4px 0px 4px 2px;
+	background: #0098aa;
+}
+h3 {
+	color: #993;
+	font-family:'Gill Sans','lucida grande',helvetica, arial, sans-serif;
+	font-size: 165%;
+	padding-top: 1.5em;
+}
+h4 {
+	color: #993;
+	font-weight: normal;
+	padding-top: 0.5em;
+}
+
+/* Layout */
+#container {
+	text-align: left;
+	width: 100%;
+	background: #ED6528;
+}
+
+#header{
+	background:#F7F7F7 url('../img/logo.png') no-repeat;
+	height: 100px;
+}
+#header h1 {
+	color: #ffffff;
+	font-size: 110%;
+}
+#content{
+	background-color: #fff;
+	color: #333;
+	padding: 10px 10px 40px 10px;
+}
+#sidebar{
+	background-color: #EEEEEE;
+    width:200px;
+}
+#footer {
+	clear: both;
+	padding: 6px 10px;
+	text-align: right;
+}
+.bienvenida {
+    color: #000000;
+    float: right;
+    margin-right: 0px;
+    margin-top: 0px; 
+    text-align: right;
+}
+
+/** Tables */
+table tr.altrow td {
+	background: #f4f4f4;
+}
+
+.cake-sql-log table {
+	background: #f4f4f4;
+}
+.cake-sql-log td {
+	padding: 4px 8px;
+	text-align: left;
+}
+
+/* Paging */
+div.paging {
+	color: #ccc;
+	margin-bottom: 2em;
+}
+div.paging div.disabled {
+	color: #ddd;
+	display: inline;
+}
+div.paging span {
+}
+div.paging span.current {
+	color: #000;
+}
+div.paging span a {
+}
+
+/* Scaffold View */
+dl {
+	line-height: 2em;
+	margin: 0em 0em;
+	width: 60%;
+}
+dl.altrow {
+	background: #f4f4f4;
+}
+dt {
+	font-weight: bold;
+	padding-left: 4px;
+	vertical-align: top;
+}
+dd {
+	margin-left: 10em;
+	margin-top: -2em;
+	vertical-align: top;
+}
+
+/* Notices and Errors */
+div.message {
+	clear: both;
+	color: #FF0000;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 1em 0;
+}
+div.error-message {
+	clear: both;
+	color: #FF0000;
+	font-weight: bold;
+}
+p.error {
+	background-color: #e32;
+	color: #fff;
+	font-family: Courier, monospace;
+	font-size: 120%;
+	line-height: 140%;
+	padding: 0.8em;
+	margin: 1em 0;
+}
+p.error em {
+	color: #000;
+	font-weight: normal;
+}
+.notice {
+	background-color: #ffcc00;
+	color: #000;
+	display: block;
+	font-family: Courier, monospace;
+	font-size: 120%;
+	line-height: 140%;
+	padding: 0.8em;
+	margin: 1em 0;
+}
+.success {
+	background-color: green;
+	color: #FFF;
+}
+
+/* Debugging */
+pre {
+	color: #000;
+	background: #f0f0f0;
+	padding: 1em;
+}
+pre.cake-debug {
+	background: #ffcc00;
+	font-size: 120%;
+	line-height: 140%;
+	margin-top: 1em;
+	overflow: auto;
+	position: relative;
+}
+div.cake-stack-trace {
+	background: #fff;
+	border: 4px dotted #ffcc00;
+	color: #333;
+	margin: 0px;
+	padding: 6px;
+	font-size: 120%;
+	line-height: 140%;
+	overflow: auto;
+	position: relative;
+}
+div.cake-code-dump pre {
+	position: relative;
+	overflow: auto;
+}
+div.cake-stack-trace pre, div.cake-code-dump pre {
+	color: #000000;
+	background-color: #F0F0F0;
+	margin: 0px;
+	padding: 1em;
+	overflow: auto;
+}
+div.cake-code-dump pre, div.cake-code-dump pre code {
+	clear: both;
+	font-size: 12px;
+	line-height: 15px;
+	margin: 4px 2px;
+	padding: 4px;
+	overflow: auto;
+}
+div.cake-code-dump span.code-highlight {
+	background-color: #FFFF00;
+	padding: 4px;
+}
+
+#menu1{
+	text-align:center;
+	background:#0098aa;
+	color:#FFFFFF;
+	}
+
+
+#menu1 td a {
+    color: #FFFFFF;
+  	height: 18px;
+	text-decoration: none;
+	}
+
+#menu1 td a:link, #menu li a:visited {
+	color: #FFFFFF;
+	display: block;
+	padding: 0px 0px 0px 0px;
+	}
+
+#menu1 td a:hover {
+	color: #FFFFFF;
+    text-decoration: underline;
+	padding: 0px 0px 0px 0px;
+	}
+
+#menu1 td a:active {
+	color: #FFFFFF;
+	padding: 0px 0px 0px 0px;
+	}
+
+th {
+	font-family: Verdana;
+	font-size: 10px;
+	text-align:left;
+	height:20px;
+	color: #666666;
+	background: url(../img/fondo_header.jpg) repeat-x;
+	border-top:#666666 1px solid;
+	border-bottom:#666666 1px solid;
+}
+
+a{
+	color:#0098aa;
+	font-weight: bold;
+}
+
+a:hover{
+	color:#FF6600;
+	text-decoration:underline;
+
+}
+
+.disabled{
+	color:#CCCCCC;
+}
+
+.ajax-loading {
+ 	background: #EFEFEF url(../img/spinner.gif) no-repeat center;
+	height: 100px;
+}
+
+.alert_window{
+		position:absolute;
+		/*overflow:hidden;*/
+		width: 200px;
+		height: 115px;
+		background:#CCCCCC;
+		background-image: url(../img/alerts/alert.jpg);
+	}
+.alert_title{
+		background-image:url(../img/alerts/alert_title_back.gif);
+		background-repeat:repeat-x;
+		height: 23px;
+
+	}
+
+	.alert_title_space{
+		float: left;
+		width: 100px;
+	}
+
+	.alert_content{
+		margin: 2px;
+		text-align:center;
+		vertical-align:middle;
+		height: 92px;
+		clear: both;
+	}
+
+#prospectos_no_asignados{
+	height: 100px;
+	border: 2px;
+	overflow:auto;
+}
+#prospectos_pendientes{
+	height: 100px;
+	border: 2px;
+	overflow:auto;
+}
+
+div#content td{
+	border-bottom:#CCCCCC solid 1px;
+}
+.table_form{
+	background: #EEEEEE;
+	width: 100%;
+	border:#CCCCCC solid 1px;
+}
+
+.table_form td{
+	border-bottom: none;
+        width: 25%;
+}
+
+
+.toolBar{
+	background: #EBEBEB;
+	border-top:#666666 1px solid;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align:right;
+}
+.dateField {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #666666;
+	border:solid 1px;
+	background:#FFFFFF url(../img/icons/date.png) no-repeat scroll right center;
+}
+
+.hourField {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #666666;
+	border:solid 1px;
+	background:#FFFFFF url(../img/icons/clock.png) no-repeat scroll right center;
+}
+
+.clear{
+    clear:both;
+}
+
+.#0098aa_message{
+    color: #0098aa;
+}
+
+.prospect_details_table{
+    width: 100%;
+    border:0px;
+    border: 1px;
+    border-color: '#CCCCCC';
+}
+
+.prospect_details_table td{
+    width: 25%;
+}
+
+.table_title_cells{
+    font-weight: bold;
+    background: #EEEEEE;
+    height: 20px;
+}
+
+.common_table{
+    width: 100%;
+    border:0px;
+    border: 1px;
+    border-color: '#CCCCCC';
+}
+.common_table a{
+    color: #0098aa;
+}
+.common_table th{
+    background-color:#0098aa;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 20px;
+}
+.nota_historial{
+    float:right;
+    color:#FFFFFF;
+}
+
+.historial_event_title_cell{
+    font-weight: bold;
+    background: #EEEEEE;
+    height: 20px;
+}
+
+.assigned_header {
+    background: white;
+    border:     0;
+    cursor:     pointer;
+}
+.cargando{
+    width: 100%;
+    font-size: 23px;
+    text-align: center;
+}
+.alarma{
+    padding: 10px;
+    background-color: white;
+}
