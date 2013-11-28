@@ -280,7 +280,7 @@ Template Name: Contacto Bolsa de Trabajo
 							                               	<div id="nacionalidad1Franquicias">
 							                                    <input type="text" id="txtNacionalidadFranquicias" name="nacionalidad"  placeholder="Nacionalidad"/>
 							                                </div>
-							                                <div id="medio1Franquicias">
+							                                <div id="medio1Bolsa">
 							                                    <input type="text" id="txtMedioFranquicias" name="medio" placeholder="¿Cómo te enteresaste de INTERLINGUA?"/>
 							                                </div>
 
@@ -288,7 +288,7 @@ Template Name: Contacto Bolsa de Trabajo
 							                                    <input type="text" id="txtMedioFranquicias" name="medio_contacto"  placeholder="¿Por qué medio enteró de nuestra Franquicia?"/>
 							                                </div>	-->
 
-							                                <div id="comentario1Franquicias">
+							                                <div id="comentario1Bolsa">
 							                                    <textarea cols=20 rows 10 id="txtComentarioFranquicias" name="comments"  placeholder="Escribe tu Comentario"/></textarea>
 							                                </div>
 

@@ -3018,7 +3018,7 @@ h2.current {
   color: #fff;
   position: absolute;
   left: 0px;
-  top: 510px;
+  top: 215px;
   font-size: 12px;
 }
 #lada1Franquicias {
@@ -3092,11 +3092,11 @@ h2.current {
   top: 433px;
   font-size: 12px;
 }
-#comentario1Franquicias {
+#comentario1Bolsa {
   position: relative;
   width: 100%;
 }
-#comentario1Franquicias label.error {
+#comentario1Bolsa label.error {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
   text-align: center;
@@ -3104,7 +3104,7 @@ h2.current {
   color: #fff;
   position: absolute;
   left: 0px;
-  top: 446px;
+  top: 445px;
   font-size: 12px;
 }
 #politicas1Franquicias {
@@ -5130,10 +5130,10 @@ tweeners.
     top: 291px;
     font-size: 12px;
 }
-#medio1Franquicias {
+#medio1Bolsa {
     position: relative;
 }
-#medio1Franquicias label.error {
+#medio1Bolsa label.error {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     text-align: center;
@@ -5141,7 +5141,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 214px;
+    top: 368px;
     font-size: 12px;
 }
 #lada1Franquicias {
@@ -5229,7 +5229,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 292px;
+    top: 293px;
     font-size: 12px;
 }
 #politicas1Franquicias {
