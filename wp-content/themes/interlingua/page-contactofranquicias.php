@@ -34,7 +34,7 @@ Template Name: Contacto Franquicias
 								<!-- Comienza Script Contacto -->
 
 											<script>
-									            jQuery(document).ready(function() {
+									            jQuery(document).ready(function() {									        
 									                if (document.location.hash.indexOf("#error=") != '-1') {
 									                    var errores = document.location.hash.replace('#error=', '');
 									                    errores = JSON.parse(errores);
@@ -49,12 +49,12 @@ Template Name: Contacto Franquicias
 									                    rules: {
 									                        name: {
 									                            required: true,
-									                            lettersonly: true,
+									                            //lettersonly: true,
 									                        },
 									                        email: {
 									                            required: true,
 									                            email: true,
-									                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
+									                            //remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
 									                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
 									                        },
 
@@ -161,6 +161,11 @@ Template Name: Contacto Franquicias
 									                        });                        
 									                    });
 									                });
+									       //          jQuery("#form1").live('submit', function(e){
+									       //          	e.preventDefault();
+												    //     var isvalidate = jQuery("#form1").valid();
+												    //     alert("test");											        
+												    // });
 									            });
 									        </script>
 

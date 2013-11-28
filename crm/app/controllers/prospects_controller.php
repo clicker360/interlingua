@@ -26,7 +26,7 @@ class ProspectsController extends AppController{
             $this->set(compact('openEvents'));
         }
         //Se permite que se acceda al método sin estar logeado.
-        $this->Auth->allow(array('store_prospect','kpi','envio_email','graciasProspect','checkUnique','getPlanteles','getEstados','sendMailContact','getRutaPlantel','randomQuestion','validaTest'));
+        $this->Auth->allow(array('store_prospect','kpi','envio_email','graciasProspect','checkUnique','getPlanteles','getEstados','sendMailContact','getRutaPlantel','randomQuestion','validaTest','saveAS400'));
     }
 
     /**************************************************************************
@@ -583,7 +583,10 @@ class ProspectsController extends AppController{
                     Lada: ".$_POST["lada"]."<br>
                     Teléfono: ".$_POST["phone_number"]."<br>
                     Celular: ".$_POST["mobile_number"]."<br>
-                    Nacionalidad: ".$_POST["nacionalidad"]."<br>
+                    Estado: ".$_POST["mobile_number"]."<br>
+                    Celular: ".$_POST["estado"]."<br>
+                    Plantel: ".$_POST["plantel"]."<br>
+                    Puesto deseado: ".$_POST["puestodeseado"]."<br>
                     ¿Como te enteraste de INTERLINGUA?: ".$_POST["medio"]."<br>
                     Comentarios: ".$_POST["comments"];
                     
@@ -898,6 +901,102 @@ class ProspectsController extends AppController{
         sleep(1);
         echo(json_encode($resultado));
     }
+
+    /**
+    * Guarda en AS400 :: Status = {Interesado en visitar,Cita programada,Inscrito}
+    */
+    public function saveAS400(){   
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST');  
+        $this->autoRender = false;
+
+        $response = array();
+        //error_reporting(E_ERROR);
+        //error_reporting(E_ALL);
+        //ini_set("display_errors", 1); 
+        
+        //Global Values
+        $matricula = strtoupper($_POST["matricula"]);
+        $paterno = ucfirst(stripAccents($_POST["paterno"]));
+        $materno = ucfirst(stripAccents($_POST["materno"]));
+        $name = ucfirst(stripAccents($_POST["name"]));
+        $tipoTelefono = $_POST["tipotel"];
+        $telefono = $_POST["phone_number"];
+        $email = $_POST["email"];
+        $codigo = strtoupper($_POST["matricula"]);
+        $password = "";
+        $compania = "";
+        $tipo = "A";
+        $estatus = "A";
+        $registrado = "N";
+
+        try{
+            $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+            $sql = "CALL SCAPAL.TIMAG_ALTA( '".$matricula."',
+                                            '".$paterno."',
+                                            '".$materno."',
+                                            '".$name."',
+                                            '".$tipoTelefono."',
+                                            '".$telefono."',
+                                            '".$email."',
+                                            '".$codigo."',
+                                            '".$password."',
+                                            '".$compania."',
+                                            '".$tipo."',
+                                            '".$estatus."',
+                                            '".$registrado."',
+                                            ?,
+                                            ?)";
+            $stmt = $db->prepare($sql);  
+            $stmt->bindParam(1, $magazineId, PDO::PARAM_INT,200);
+            $stmt->bindParam(2, $msgError, PDO::PARAM_STR, 200);
+
+            $stmt->execute();
+
+            if ($magazineId == 0) {
+                $response["error"] = true;
+                if ($msgError == null) {
+                    $response["mensaje"] = "La matricula es incorrecta";    
+                }else{
+                    $response["mensaje"] = $msgError;
+                }
+            }else{
+                $header  = "From: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
+                $header .= "X-Mailer: PHP/".phpversion()." \r\n";
+                $header .= "Mime-Version: 1.0 \r\n";
+                $header .= "Content-type: text/html\r\n";
+
+                $mensaje = '
+                    Se ha registrado un nuevo usuario en Interlingua Magazine <br>
+                    Matrucula: '.$matricula.'<br>
+                    Apellido Paterno: '.$paterno.'<br>
+                    Apellido Materno: '.$materno.'<br>
+                    Nombre: '.$name.'<br>
+                    Tipo de teléfono: '.$tipoTelefono.'<br>
+                    Teléfono: '.$telefono.'<br>
+                    Email: '.$email.'<br>
+                    Codigo: '.$codigo.'
+                ';
+
+                $para = "hugo@clicker360.com,hrubio@interlingua.com.mx";
+                $asunto = 'Nuevo Registro Interlingua Magazine';
+
+                mail($para, $asunto, utf8_decode($mensaje), $header);
+
+                $response["error"] = false;
+                $response["mensaje"] = "El alumno fue registrado con éxito";
+            }
+
+            $bdh = null;
+
+        } catch (PDOException $e){
+            $response["error"] = true;
+            $response["mensaje"] = "Failed: ".$e->getMessage();
+        }
+
+        echo json_encode($response);
+    }
+
 
     /**
     * Valida test

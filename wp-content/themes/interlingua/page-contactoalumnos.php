@@ -49,7 +49,7 @@ Template Name: Contacto Alumnos
 									                    rules: {
 									                        name: {
 									                            required: true,
-									                            lettersonly: true,
+									                            //lettersonly: true,
 									                        },
 									                        email: {
 									                            required: true,

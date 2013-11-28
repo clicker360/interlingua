@@ -49,7 +49,7 @@ Template Name: Contacto Empresas
 									                    rules: {
 									                        name: {
 									                            required: true,
-									                            lettersonly: true,
+									                            //lettersonly: true,
 									                        },
 									                        email: {
 									                            required: true,

@@ -9,6 +9,15 @@
     echo $form->input('Prospect.id', array(
         'id'    => 'prospect_id','type'  =>'hidden','value' => $prospect['id']
     ));
+    echo $form->input('Prospect.id', array(
+        'id'    => 'verifySave','type'  =>'hidden','value' => $prospect['save_AS400']
+    ));
+    echo $form->input('Prospect.id', array(
+        'id'    => 'prospPlantel','type'  =>'hidden','value' => $prospect['plantel']
+    ));
+    echo $form->input('Prospect.id', array(
+        'id'    => 'propsEdo','type'  =>'hidden','value' => $prospect['estado']
+    ));
 ?>
 <?php
     echo $this->Html->script('prospects/view_prospect_details');
@@ -26,7 +35,7 @@
         array('id'=>'1','label'=>'Clave AS400','model'=>'Prospect','keys'=>'clave_as_400','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_as400')),
         array('id'=>'1','label'=>'Fecha de cita','model'=>'Prospect','keys'=>'fecha_cita','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospects_fecha_cita')),
         array('id'=>'3','label'=>'Plantel','model'=>'Prospect','keys'=>array('plantel'),'editable'=>false, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_plantel')),
-        array('id'=>'5','label'=>'Estado','model'=>'Prospect','keys'=>'estado','editable'=>false),
+        array('id'=>'5','label'=>'Estado','model'=>'Prospect','keys'=>'estado','editable'=>false,'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_edo')),
         array('id'=>'6','label'=>'Usuario','model'=>'User','keys'=>'name','editable'=>false),
         array('id'=>'12','label'=>'Fecha Registro','model'=>'Prospect','keys'=>array('created'),'join'=>'','editable'=>false),
         array('id'=>'13','label'=>'Fecha de Asignación','model'=>'Prospect','keys'=>array('assignation_date'),'join'=>'','editable'=>false),

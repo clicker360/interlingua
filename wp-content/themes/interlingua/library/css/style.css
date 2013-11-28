@@ -2967,7 +2967,8 @@ h2.current {
 #txtCelularFranquicias,
 #cmbSucursalesFranquicias,
 #txtComentarioFranquicias,
-#txtNacionalidadFranquicias {
+#txtNacionalidadFranquicias,
+#txtPuestodeseadoFranquicias {
   font-family: 'Conv_MyriadPro-Regular';
   font-size: 0.875em;
   background: #fff;
@@ -2989,7 +2990,7 @@ h2.current {
   color: #fff;
   position: absolute;
   left: 0px;
-  top: 40px;
+  top: -19px;
   font-size: 12px;
 }
 #correo1Franquicias {
@@ -3103,7 +3104,7 @@ h2.current {
   color: #fff;
   position: absolute;
   left: 0px;
-  top: 600px;
+  top: 446px;
   font-size: 12px;
 }
 #politicas1Franquicias {
@@ -3129,6 +3130,10 @@ h2.current {
   width: 100%;
 }
 #txtNacionalidadFranquicias {
+  margin-top: 30px;
+  width: 100%;
+}
+#txtPuestodeseadoFranquicias {
   margin-top: 30px;
   width: 100%;
 }
@@ -5078,7 +5083,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 40px;
+    top: -19px;
     font-size: 12px;
 }
 #correo1Franquicias {
@@ -5092,9 +5097,25 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 52%;
-    top: 40px;
+    top: -32px;
     font-size: 12px;
 }
+
+#puestodeseado1Franquicias {
+    position: relative;
+}
+#puestodeseado1Franquicias label.error {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 214px;
+    font-size: 12px;
+}
+
 #nacionalidad1Franquicias {
     position: relative;
 }
@@ -5106,7 +5127,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 198px;
+    top: 291px;
     font-size: 12px;
 }
 #medio1Franquicias {
@@ -5120,7 +5141,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 275px;
+    top: 368px;
     font-size: 12px;
 }
 #lada1Franquicias {
@@ -5134,7 +5155,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 110px;
+    top: 45px;
     font-size: 12px;
 }
 #telefono1Franquicias {
@@ -5147,8 +5168,8 @@ tweeners.
     max-width: 100px;
     color: #fff;
     position: absolute;
-    left: 78px;
-    top: 110px;
+    left: 66px;
+    top: 45px;
     font-size: 12px;
 }
 #celular1Franquicias {
@@ -5162,7 +5183,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 52%;
-    top: 110px;
+    top: 45px;
     font-size: 12px;
 }
 #estado1Franquicias {
@@ -5177,7 +5198,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 195px;
+    top: 135px;
     font-size: 12px;
     z-index: 1000;
 }
@@ -5192,7 +5213,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 192px;
-    top: 195px;
+    top: 121px;
     font-size: 12px;
     z-index: 1000;
 }
@@ -5208,7 +5229,7 @@ tweeners.
     color: #fff;
     position: absolute;
     left: 0px;
-    top: 365px;
+    top: 445px;
     font-size: 12px;
 }
 #politicas1Franquicias {
@@ -5234,6 +5255,10 @@ tweeners.
     width: 100%;
 }
 #txtNacionalidadFranquicias {
+    margin-top: 30px;
+    width: 100%;
+}
+#txtPuestodeseadoFranquicias {
     margin-top: 30px;
     width: 100%;
 }

@@ -49,12 +49,12 @@ Template Name: Contacto Bolsa de Trabajo
 									                    rules: {
 									                        name: {
 									                            required: true,
-									                            lettersonly: true,
+									                            //lettersonly: true,
 									                        },
 									                        email: {
 									                            required: true,
 									                            email: true,
-									                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
+									                            //remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
 									                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
 									                        },
 
@@ -90,7 +90,9 @@ Template Name: Contacto Bolsa de Trabajo
 									                        plantel: {
 									                            required: true
 									                        },
-
+									                        puestodeseado: {
+									                        	required: true
+									                        },
 									                        comments: {
 									                            required: true
 									                        },
@@ -144,7 +146,9 @@ Template Name: Contacto Bolsa de Trabajo
 									                        estado: {
 									                            required: '*Debes seleccionar un estado'
 									                        },
-
+									                        puestodeseado : {
+									                        	required: '*Escribe puesto deseado'
+									                        },
 									                        comments: {
 									                            required: '*Escribe tu comentario'
 									                        },
@@ -257,7 +261,7 @@ Template Name: Contacto Bolsa de Trabajo
 							                                <div id="celular1Franquicias">
 							                                    <input type="text" id="txtCelularFranquicias" name="mobile_number" maxlength="10" placeholder="Celular"/>
 							                                </div>
-							                               <!-- <div id="estado1Franquicias">
+							                               <div id="estado1Franquicias">
 							                                    <select id="cmbEstadosFranquicias" name="estado">   
 							                                    <option value="" selected="selected">Elige tu estado</option>                                     
 							                                    </select>
@@ -267,9 +271,13 @@ Template Name: Contacto Bolsa de Trabajo
 							                                    <select id="cmbSucursalesFranquicias" name="plantel">
 							                                        <option value="" selected="selected">Elige tu plantel</option>
 							                                    </select>
-							                                </div>-->
+							                                </div>
 
-							                                   <div id="nacionalidad1Franquicias">
+															<div id="puestodeseado1Franquicias">
+							                                    <input type="text" id="txtPuestodeseadoFranquicias" name="puestodeseado"  placeholder="Puesto Deseado"/>
+							                                </div>							                                
+
+							                               	<div id="nacionalidad1Franquicias">
 							                                    <input type="text" id="txtNacionalidadFranquicias" name="nacionalidad"  placeholder="Nacionalidad"/>
 							                                </div>
 							                                <div id="medio1Franquicias">

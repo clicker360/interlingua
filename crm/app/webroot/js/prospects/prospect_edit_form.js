@@ -10,11 +10,64 @@ $(document).ready(function(){
         }
     });
     if (guardar_as400){
-        $("#btn-as400").html('<input style="border:0px;color:white;background:#EB7126;padding:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" type="button" value="Guardar en AS400" />');
-        $("#btnSaveAS400").live("click", function(e){
-            e.preventDefault();
-            alert("verificar bandera para guardar");
-        });
+        var verifySaveAS400 = $("#verifySave").val();
+        if (verifySaveAS400 == 0){
+            $("#btn-as400").html('<input style="border:0px;color:white;background:#EB7126;padding:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" type="button" value="Guardar en AS400" />');
+            $("#btnSaveAS400").live("click", function(e){
+                e.preventDefault();
+                
+                // Modal Save AS400
+                var params = {
+                    name : $("#prospect_name").val(),
+                    apellido_paterno : $("#prospect_ap_paterno").val(),
+                    apellido_materno : $("#prospect_ap_materno").val(),
+                    email : $("#prospect_email").val(),
+                    lada : $("#prospect_lada").val(),
+                    telefono : $("#prospect_phone_number").val(),
+                    celular : $("#prospect_mobile_number").val(),
+                    medio_contacto : $("#prospect_medio_contacto").val(),
+                    medio_publibidad : $("#prospect_medio_publicidad").val(),
+                    fecha_nacimiento : $("#prospect_fecha_nacimiento").val(),
+                    clave_AS400 : $("#prospect_as400").val(),
+                    fecha_cita : $("#prospects_fecha_cita").val(),
+                    plantel : $("#prospPlantel").val(),
+                    estado : $("#propsEdo").val()
+                };
+                console.log(params);
+                $.ajax({
+                    type:"post",
+                    url: "http://localhost/www/interlingua/crm/prospects/saveAS400",
+                    data: params,
+                    dataType:"json",
+                    error:function(){
+                        alert("Error, por favor intentalo mas tarde.");
+                    },
+                    success:function(data){
+                        if (data.error){
+                            alert(data.mensaje);
+                        }else{
+                            alert(data.mensaje);
+                            window.location="http://localhost/www/interlingua/";
+                        }
+                    }
+                });
+
+                // Save CRM True -> Save AS400
+                // var params = {
+                //      'data[Prospect][id]': $('#prospect_id').val(),
+                //      'data[Prospect][save_AS400]': '1'
+                // };
+                // $.post(
+                //     Crm.basePath+'store-prospect-ajax',
+                //     params,
+                //     function(data){
+                //         $('#store_prospect_message').html(data);
+                //     },
+                //     ''
+                // );
+
+            });   
+        }
     }
 
     //$('#ProspectStoreProspectForm').validate();
@@ -40,7 +93,9 @@ $(document).ready(function(){
         monthNamesShort : ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         closeText       : 'Listo',
         currentText     : 'Hoy',
-        dateFormat      : 'dd-mm-yy'
+        dateFormat      : 'dd-mm-yy',
+        changeYear: true,
+        yearRange: "-100:+0"        
     });
 
 
