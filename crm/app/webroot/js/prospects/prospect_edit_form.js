@@ -47,7 +47,7 @@ $(document).ready(function(){
                             alert(data.mensaje);
                         }else{
                             alert(data.mensaje);
-                            window.location="http://localhost/www/interlingua/";
+                            //window.location="http://localhost/www/interlingua/";
                         }
                     }
                 });

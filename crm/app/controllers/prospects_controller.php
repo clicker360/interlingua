@@ -902,6 +902,7 @@ class ProspectsController extends AppController{
         echo(json_encode($resultado));
     }
 
+
     /**
     * Guarda en AS400 :: Status = {Interesado en visitar,Cita programada,Inscrito}
     */
@@ -910,13 +911,60 @@ class ProspectsController extends AppController{
         header('Access-Control-Allow-Methods: GET, POST');  
         $this->autoRender = false;
 
+        // Variables de configuración
+        $originales = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
+        $modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
         $response = array();
-        //error_reporting(E_ERROR);
-        //error_reporting(E_ALL);
-        //ini_set("display_errors", 1); 
         
         //Global Values
-        $matricula = strtoupper($_POST["matricula"]);
+        $RFCLETRAS = strtoupper("eich");
+        $RFCFECHA = "880628";
+        $RFCHOMO = "9B5";
+        $RFCDIGITO = 8;
+        // Nombre
+        $NOMBRE = "Húgoó";
+        $NOMBRE = utf8_decode($NOMBRE);
+        $NOMBRE = strtr($NOMBRE, utf8_decode($originales), $modificadas);
+        $NOMBRE = strtolower($NOMBRE);
+        $NOMBRE = utf8_encode($NOMBRE);
+        $NOMBRE = ucfirst($NOMBRE);
+        // Paterno
+        $PATERNO = "Espínosa";
+        $PATERNO = utf8_decode($PATERNO);
+        $PATERNO = strtr($PATERNO, utf8_decode($originales), $modificadas);
+        $PATERNO = strtolower($PATERNO);
+        $PATERNO = utf8_encode($PATERNO);
+        $PATERNO = ucfirst($PATERNO);
+        // Materno
+        $MATERNO = "Callejás";
+        $MATERNO = utf8_decode($MATERNO);
+        $MATERNO = strtr($MATERNO, utf8_decode($originales), $modificadas);
+        $MATERNO = strtolower($MATERNO);
+        $MATERNO = utf8_encode($MATERNO);
+        $MATERNO = ucfirst($MATERNO);
+        $ESTADO = "Monterrey";
+        $LOCALIDAD = "Sendero";
+        $LADA = ($_POST["lada"]!=""):"55"?"";
+        $TELEFONO = "55555555";
+        $EMAIL = "vaporic@gmail.com";
+        $GENERO = ($_POST["genero"]!=""):"M"?"";
+        $FAX = ($_POST["fax"]!=""):"5555555555"?"";
+        $PERFIL = "test";
+        $ASUNTO = "test";
+        $INTERES = ($_POST["interes"]!=""):"test"?"";
+        $TIEMPO = ($_POST["tiempo"]!=""):"test"?"";
+        $CONTACTADO = ($_POST["contactado"]!=""):"test"?"";
+        $AUTORIZA = "S";
+        $COMENTARIOS1 = "";
+        $COMENTARIOS2 = "";
+        $COMENTARIOS3 = "";
+        $COMENTARIOS4 = "";
+        $COMENTARIOS5 = "";
+        $NACIMIENTO = 19880628;
+
+
+
+        /*$matricula = strtoupper($_POST["matricula"]);
         $paterno = ucfirst(stripAccents($_POST["paterno"]));
         $materno = ucfirst(stripAccents($_POST["materno"]));
         $name = ucfirst(stripAccents($_POST["name"]));
@@ -992,7 +1040,7 @@ class ProspectsController extends AppController{
         } catch (PDOException $e){
             $response["error"] = true;
             $response["mensaje"] = "Failed: ".$e->getMessage();
-        }
+        }*/
 
         echo json_encode($response);
     }
