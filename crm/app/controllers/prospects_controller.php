@@ -912,135 +912,101 @@ class ProspectsController extends AppController{
         $this->autoRender = false;
 
         // Variables de configuración
-        $originales = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
+        $originales  = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
         $modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
-        $response = array();
+        $response    = array();
         
         //Global Values
-        $RFCLETRAS = strtoupper("eich");
-        $RFCFECHA = "880628";
-        $RFCHOMO = "9B5";
-        $RFCDIGITO = 8;
-        // Nombre
-        $NOMBRE = "Húgoó";
-        $NOMBRE = utf8_decode($NOMBRE);
-        $NOMBRE = strtr($NOMBRE, utf8_decode($originales), $modificadas);
-        $NOMBRE = strtolower($NOMBRE);
-        $NOMBRE = utf8_encode($NOMBRE);
-        $NOMBRE = ucfirst($NOMBRE);
-        // Paterno
-        $PATERNO = "Espínosa";
-        $PATERNO = utf8_decode($PATERNO);
-        $PATERNO = strtr($PATERNO, utf8_decode($originales), $modificadas);
-        $PATERNO = strtolower($PATERNO);
-        $PATERNO = utf8_encode($PATERNO);
-        $PATERNO = ucfirst($PATERNO);
-        // Materno
-        $MATERNO = "Callejás";
-        $MATERNO = utf8_decode($MATERNO);
-        $MATERNO = strtr($MATERNO, utf8_decode($originales), $modificadas);
-        $MATERNO = strtolower($MATERNO);
-        $MATERNO = utf8_encode($MATERNO);
-        $MATERNO = ucfirst($MATERNO);
-        $ESTADO = "Monterrey";
-        $LOCALIDAD = "Sendero";
-        $LADA = ($_POST["lada"]!=""):"55"?"";
-        $TELEFONO = "55555555";
-        $EMAIL = "vaporic@gmail.com";
-        $GENERO = ($_POST["genero"]!=""):"M"?"";
-        $FAX = ($_POST["fax"]!=""):"5555555555"?"";
-        $PERFIL = "test";
-        $ASUNTO = "test";
-        $INTERES = ($_POST["interes"]!=""):"test"?"";
-        $TIEMPO = ($_POST["tiempo"]!=""):"test"?"";
-        $CONTACTADO = ($_POST["contactado"]!=""):"test"?"";
-        $AUTORIZA = "S";
-        $COMENTARIOS1 = "";
-        $COMENTARIOS2 = "";
-        $COMENTARIOS3 = "";
-        $COMENTARIOS4 = "";
-        $COMENTARIOS5 = "";
-        $NACIMIENTO = 19880628;
+        $RFCLETRAS    = strtoupper("eich");
+        $RFCFECHA     = "880628";
+        $RFCHOMO      = "9B5";
+        $RFCDIGITO    = 8;
+        # Nombre
+        $NOMBRE       = "Húgoó";
+        $NOMBRE       = utf8_decode($NOMBRE);
+        $NOMBRE       = strtr($NOMBRE, utf8_decode($originales), $modificadas);
+        $NOMBRE       = strtolower($NOMBRE);
+        $NOMBRE       = utf8_encode($NOMBRE);
+        $NOMBRE       = ucfirst($NOMBRE);
+        # Paterno
+        $PATERNO      = "Espínosa";
+        $PATERNO      = utf8_decode($PATERNO);
+        $PATERNO      = strtr($PATERNO, utf8_decode($originales), $modificadas);
+        $PATERNO      = strtolower($PATERNO);
+        $PATERNO      = utf8_encode($PATERNO);
+        $PATERNO      = ucfirst($PATERNO);
+        # Materno
+        $MATERNO      = "Callejás";
+        $MATERNO      = utf8_decode($MATERNO);
+        $MATERNO      = strtr($MATERNO, utf8_decode($originales), $modificadas);
+        $MATERNO      = strtolower($MATERNO);
+        $MATERNO      = utf8_encode($MATERNO);
+        $MATERNO      = ucfirst($MATERNO);
+        $ESTADO       = "Monterrey";
+        $LOCALIDAD    = "Sendero";
+        $LADA         = ($_POST["lada"]!="")?"55":""; # No obligatorio
+        $TELEFONO     = "55555555";
+        $EMAIL        = "vaporic@gmail.com";
+        $GENERO       = ($_POST["genero"]!="")?"M":""; # No obligatorio
+        $FAX          = ($_POST["fax"]!="")?"5555555555":""; # No obligatorio
+        $PERFIL       = "test";
+        $ASUNTO       = "test";
+        $INTERES      = ($_POST["interes"]!="")?"test":""; # No obligatorio
+        $TIEMPO       = ($_POST["tiempo"]!="")?"test":""; # No obligatorio
+        $CONTACTADO   = ($_POST["contactado"]!="")?"test":""; # No obligatorio
+        $AUTORIZA     = "S";
+        $COMENTARIOS1 = ""; # No obligatorio
+        $COMENTARIOS2 = ""; # No obligatorio
+        $COMENTARIOS3 = ""; # No obligatorio
+        $COMENTARIOS4 = ""; # No obligatorio
+        $COMENTARIOS5 = ""; # No obligatorio
+        $NACIMIENTO   = 19880628;
 
-
-
-        /*$matricula = strtoupper($_POST["matricula"]);
-        $paterno = ucfirst(stripAccents($_POST["paterno"]));
-        $materno = ucfirst(stripAccents($_POST["materno"]));
-        $name = ucfirst(stripAccents($_POST["name"]));
-        $tipoTelefono = $_POST["tipotel"];
-        $telefono = $_POST["phone_number"];
-        $email = $_POST["email"];
-        $codigo = strtoupper($_POST["matricula"]);
-        $password = "";
-        $compania = "";
-        $tipo = "A";
-        $estatus = "A";
-        $registrado = "N";
-
+        # Conexion con AS400
         try{
             $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-            $sql = "CALL SCAPAL.TIMAG_ALTA( '".$matricula."',
-                                            '".$paterno."',
-                                            '".$materno."',
-                                            '".$name."',
-                                            '".$tipoTelefono."',
-                                            '".$telefono."',
-                                            '".$email."',
-                                            '".$codigo."',
-                                            '".$password."',
-                                            '".$compania."',
-                                            '".$tipo."',
-                                            '".$estatus."',
-                                            '".$registrado."',
-                                            ?,
-                                            ?)";
+            $sql = "CALL SCAPAL.DA3080PRSP( ?,
+                                            ?,           
+                                            '".$RFCLETRAS."',
+                                            '".$RFCFECHA."',
+                                            '".$RFCHOMO."',
+                                            '".$RFCDIGITO."',
+                                            '".$NOMBRE."',
+                                            '".$PATERNO."',
+                                            '".$MATERNO."',
+                                            '".$ESTADO."',
+                                            '".$LOCALIDAD."',
+                                            '".$LADA."',
+                                            '".$EMAIL."',
+                                            '".$GENERO."',
+                                            '".$FAX."',
+                                            '".$PERFIL."',
+                                            '".$ASUNTO."',
+                                            '".$INTERES."',
+                                            '".$TIEMPO."',
+                                            '".$CONTACTADO."',
+                                            '".$AUTORIZA."',
+                                            '".$COMENTARIOS1."',
+                                            '".$COMENTARIOS2."',
+                                            '".$COMENTARIOS3."',
+                                            '".$COMENTARIOS4."',
+                                            '".$COMENTARIOS5."',
+                                            '".$NACIMIENTO."')";
             $stmt = $db->prepare($sql);  
-            $stmt->bindParam(1, $magazineId, PDO::PARAM_INT,200);
-            $stmt->bindParam(2, $msgError, PDO::PARAM_STR, 200);
+            $stmt->bindParam(1, $msgError, PDO::PARAM_INT,200);
+            $stmt->bindParam(2, $matricula, PDO::PARAM_STR, 200);
 
             $stmt->execute();
 
-            if ($magazineId == 0) {
-                $response["error"] = true;
-                if ($msgError == null) {
-                    $response["mensaje"] = "La matricula es incorrecta";    
-                }else{
-                    $response["mensaje"] = $msgError;
-                }
-            }else{
-                $header  = "From: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
-                $header .= "X-Mailer: PHP/".phpversion()." \r\n";
-                $header .= "Mime-Version: 1.0 \r\n";
-                $header .= "Content-type: text/html\r\n";
-
-                $mensaje = '
-                    Se ha registrado un nuevo usuario en Interlingua Magazine <br>
-                    Matrucula: '.$matricula.'<br>
-                    Apellido Paterno: '.$paterno.'<br>
-                    Apellido Materno: '.$materno.'<br>
-                    Nombre: '.$name.'<br>
-                    Tipo de teléfono: '.$tipoTelefono.'<br>
-                    Teléfono: '.$telefono.'<br>
-                    Email: '.$email.'<br>
-                    Codigo: '.$codigo.'
-                ';
-
-                $para = "hugo@clicker360.com,hrubio@interlingua.com.mx";
-                $asunto = 'Nuevo Registro Interlingua Magazine';
-
-                mail($para, $asunto, utf8_decode($mensaje), $header);
-
-                $response["error"] = false;
-                $response["mensaje"] = "El alumno fue registrado con éxito";
-            }
+            $response["error"]   = false;
+            $response["mensaje"] = $msgError." -- ".$matricula;
 
             $bdh = null;
 
-        } catch (PDOException $e){
-            $response["error"] = true;
+        } catch (PDOException $e) {
+            $response["error"]   = true;
             $response["mensaje"] = "Failed: ".$e->getMessage();
-        }*/
+        }
 
         echo json_encode($response);
     }
