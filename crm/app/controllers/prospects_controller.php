@@ -915,7 +915,17 @@ class ProspectsController extends AppController{
         $originales  = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
         $modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
         $response    = array();
+        $item_force  = array( 'frm_rfcletras',
+                              'frm_rfcfecha');
         
+        // Valida Campos
+        foreach ($_POST as $key => $value) {
+            echo $key;
+            if (in_array($key, $item_force)) {
+                echo $key;
+            }
+        }
+
         //Global Values
         $RFCLETRAS    = strtoupper("eich");
         $RFCFECHA     = "880628";
@@ -963,7 +973,7 @@ class ProspectsController extends AppController{
         $NACIMIENTO   = 19880628;
 
         # Conexion con AS400
-        try{
+        /*try{
             $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
             $sql = "CALL SCAPAL.DA3080PRSP( ?,
                                             ?,           
@@ -1006,7 +1016,7 @@ class ProspectsController extends AppController{
         } catch (PDOException $e) {
             $response["error"]   = true;
             $response["mensaje"] = "Failed: ".$e->getMessage();
-        }
+        }*/
 
         echo json_encode($response);
     }

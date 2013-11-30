@@ -1,6 +1,20 @@
 $(document).ready(function(){
 
-    // Acción para guardar en AS400
+    // Acción para guardar en AS400 //
+    $( "#frm_nacimiento" ).datepicker({
+        showButtonPanel : true,
+        dayNames        : ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+        dayNamesMin     : ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+        dayNamesShort   : ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        monthNames      : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthNamesShort : ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        closeText       : 'Listo',
+        currentText     : 'Hoy',
+        dateFormat      : 'yymmdd',
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0"        
+    });
     var guardar_as400 = false;
     $(".statusName").each(function(){
         var status = $(this).text();
@@ -12,7 +26,7 @@ $(document).ready(function(){
     if (guardar_as400){
         var verifySaveAS400 = $("#verifySave").val();
         if (verifySaveAS400 == 0){
-            $("#btn-as400").html('<input style="border:0px;color:white;background:#EB7126;padding:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" type="button" value="Guardar en AS400" />');
+            $("#btn-as400").html('<a style="text-decoration:none;border:0px;color:white;background:#EB7126;padding:7px;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" data-reveal-id="myModal">Guardar en AS400</a>');
             $("#btnSaveAS400").live("click", function(e){
                 e.preventDefault();
                 
@@ -33,23 +47,48 @@ $(document).ready(function(){
                     plantel : $("#prospPlantel").val(),
                     estado : $("#propsEdo").val()
                 };
-                console.log(params);
-                $.ajax({
-                    type:"post",
-                    url: "http://localhost/www/interlingua/crm/prospects/saveAS400",
-                    data: params,
-                    dataType:"json",
-                    error:function(){
-                        alert("Error, por favor intentalo mas tarde.");
-                    },
-                    success:function(data){
-                        if (data.error){
-                            alert(data.mensaje);
-                        }else{
-                            alert(data.mensaje);
-                            //window.location="http://localhost/www/interlingua/";
+
+                // Load datos a modal
+                $("#frm_nombre").val(params.name);
+                $("#frm_apmat").val(params.apellido_materno);
+                $("#frm_appat").val(params.apellido_paterno);
+                $("#frm_estado").val(params.estado);
+                $("#frm_localidad").val(params.plantel);
+                $("#frm_lada").val(params.lada);
+                $("#frm_telefono").val(params.telefono);
+                $("#frm_email").val(params.email);
+                $("#frm_fax").val(params.celular);
+                fecha_format = params.fecha_nacimiento.split("-");
+                $("#frm_nacimiento").val(fecha_format[2]+fecha_format[1]+fecha_format[0]);
+
+                // Save AS400
+                var params_modal = {};
+                $(".tbl_modal").each(function(){
+                    name_field = $(this).attr("name");
+                    val_field = $(this).val();
+                    params_modal.name_field = val_field;
+                });
+                console.log(params_modal);
+                $("#savefrmmodal").live("click",function(e){
+                    e.preventDefault();
+
+                    $.ajax({
+                        type:"post",
+                        url: "http://localhost/www/interlingua/crm/prospects/saveAS400", //cambiar url
+                        data: params,
+                        dataType:"json",
+                        error:function(){
+                            alert("Error, por favor intentalo mas tarde.");
+                        },
+                        success:function(data){
+                            if (data.error){
+                                alert(data.mensaje);
+                            }else{
+                                alert(data.mensaje);
+                                //window.location="http://localhost/www/interlingua/";
+                            }
                         }
-                    }
+                    });
                 });
 
                 // Save CRM True -> Save AS400
@@ -65,7 +104,6 @@ $(document).ready(function(){
                 //     },
                 //     ''
                 // );
-
             });   
         }
     }
@@ -81,7 +119,9 @@ $(document).ready(function(){
         monthNamesShort : ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         closeText       : 'Listo',
         currentText     : 'Hoy',
-        dateFormat      : 'dd-mm-yy'
+        dateFormat      : 'dd-mm-yy',
+        changeMonth: true,
+        changeYear: true   
     });
 
     $( "#prospect_fecha_nacimiento" ).datepicker({
@@ -94,6 +134,7 @@ $(document).ready(function(){
         closeText       : 'Listo',
         currentText     : 'Hoy',
         dateFormat      : 'dd-mm-yy',
+        changeMonth: true,
         changeYear: true,
         yearRange: "-100:+0"        
     });
