@@ -55,183 +55,180 @@
                 echo "</div>";?>
                 <div id="btn-as400" style='display:inline-block;'></div>
                 <div id="store_prospect_message"></div>
-                
-                <!-- modal -->
-                <div id="myModal" class="reveal-modal">
-                    <h1 style="color:#0098AA;">GUARDAR PROSPECTO EN AS400</h1>
-                    <p>
-
-                    <table class="common_table">
-                        <tbody>
-                            <tr>
-                                <td  align="left" class="table_title_cells">RFC Letras:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_rfcletras" name="frm_rfcletras">
-                                    </div>                        
-                                </td>
-                                <td  align="left" class="table_title_cells">RFC Fecha:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_rfcfecha" name="frm_rfcfecha">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">RFC Homoclave:</td>
-                                <td>
-                                     <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_rfchomo" name="frm_rfchomo">
-                                    </div> 
-                                </td> 
-                                <td  align="left" class="table_title_cells">RFC Digito:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_rfcdig" name="frm_rfcdig">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                               <td  align="left" class="table_title_cells">Nombre:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_nombre" name="frm_nombre">
-                                    </div> 
-                                </td>
-                                <td align="left" class="table_title_cells">Apellido Paterno:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_appat" name="frm_appat">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Apellido Materno:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_apmat" name="frm_apmat">
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Estado:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_estado" name="frm_estado">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Localidad (Plantel):</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_localidad" name="frm_localidad">
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Lada:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_lada" name="frm_lada">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Teléfono:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_telefono" name="frm_telefono">
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Email:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_email" name="frm_email">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Genero:</td>
-                                <td>
-                                    <div class="input text">                            
-                                        <select name="frm_genero" class="tbl_modal" id="frm_genero" style="float:left;">
-                                            <option value="M">Masculino</option>
-                                            <option value="F">Femenino</option>
-                                        </select>
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Fax (Celular):</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_fax" name="frm_fax">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Perfil:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_pefil" name="frm_pefil">
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Asunto:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_asunto" name="frm_asunto">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Interes:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_interes" name="frm_interes">
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Tiempo:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_tiempo" name="frm_tiempo">
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Contactado:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="65" id="frm_contactado" name="frm_contactado">
-                                    </div> 
-                                </td>
-                                <td  align="left" class="table_title_cells">Autoriza:</td>
-                                <td>
-                                    <div class="input text">                                
-                                        <select name="frm_autoriza" class="tbl_modal" id="frm_autoriza" style="float:left;">
-                                            <option value="S">Si</option>
-                                            <option value="N">No</option>
-                                        </select>
-                                    </div> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  align="left" class="table_title_cells">Fecha de Nacimiento:</td>
-                                <td>
-                                    <div class="input text">
-                                        <input type="text" class="tbl_modal" maxlength="8" id="frm_nacimiento" name="frm_nacimiento">
-                                    </div> 
-                                </td>
-                                <td class="table_title_cells"></td>
-                                <td>
-                                    <input type="button" id="savefrmmodal" name="savefrmmodal" value="Guardar" style="border:0px;color:white;background:#0098AA;padding:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;margin-right:5px;">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table><br>
-                    <div id="msj_error" style="color:#C11A17;font-size:12px;font-weight:bold;">Mensaje de error</div>
-
-                    </p>
-                    <a class="close-reveal-modal">&#215;</a>
-                </div>
-
+                </tbody>
             </div>
         </td>
     </tr></table>
 <?php 
 echo $form->end(); 
 ?>
+
+<!-- modal -->
+<div id="myModal" class="reveal-modal">
+    <h1 style="color:#0098AA;">GUARDAR PROSPECTO EN AS400</h1>
+    <form action="#" id="frm_mo" name="frm_mo">
+    <table class="common_table">
+        <tbody>
+            <tr>
+                <td  align="left" class="table_title_cells">RFC Letras:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="4" id="frm_rfcletras" name="frm_rfcletras">
+                    </div>                        
+                </td>
+                <td  align="left" class="table_title_cells">RFC Fecha:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_rfcfecha" name="frm_rfcfecha">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">RFC Homoclave:</td>
+                <td>
+                     <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="2" id="frm_rfchomo" name="frm_rfchomo">
+                    </div> 
+                </td> 
+                <td  align="left" class="table_title_cells">RFC Digito:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="1" id="frm_rfcdig" name="frm_rfcdig">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+               <td  align="left" class="table_title_cells">Nombre:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_nombre" name="frm_nombre">
+                    </div> 
+                </td>
+                <td align="left" class="table_title_cells">Apellido Paterno:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_appat" name="frm_appat">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Apellido Materno:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_apmat" name="frm_apmat">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Estado:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_estado" name="frm_estado">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Localidad (Plantel):</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_localidad" name="frm_localidad">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Lada:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_lada" name="frm_lada">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Teléfono:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="10" id="frm_telefono" name="frm_telefono">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Email:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_email" name="frm_email">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Genero:</td>
+                <td>
+                    <div class="input text">                            
+                        <select name="frm_genero" class="tbl_modal" id="frm_genero" style="float:left;">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Fax (Celular):</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_fax" name="frm_fax">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Perfil:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_pefil" name="frm_pefil">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Asunto:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_asunto" name="frm_asunto">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Interes:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_interes" name="frm_interes">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Tiempo:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_tiempo" name="frm_tiempo">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Contactado:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_contactado" name="frm_contactado">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Autoriza:</td>
+                <td>
+                    <div class="input text">                                
+                        <select name="frm_autoriza" class="tbl_modal" id="frm_autoriza" style="float:left;">
+                            <option value="S">Si</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Fecha de Nacimiento:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="8" id="frm_nacimiento" name="frm_nacimiento">
+                    </div> 
+                </td>
+                <td class="table_title_cells"></td>
+                <td>
+                    <input type="button" id="savefrmmodal" name="savefrmmodal" value="Guardar" style="border:0px;color:white;background:#0098AA;padding:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;margin-right:5px;">
+                </td>
+            </tr>
+        </tbody>
+    </table></form><br>
+    <div id="msj_error" style="color:#C11A17;font-size:12px;font-weight:bold;display:none;"></div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>

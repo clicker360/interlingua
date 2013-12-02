@@ -15,6 +15,20 @@ $(document).ready(function(){
         changeYear: true,
         yearRange: "-100:+0"        
     });
+    $( "#frm_rfcfecha" ).datepicker({
+        showButtonPanel : true,
+        dayNames        : ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+        dayNamesMin     : ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+        dayNamesShort   : ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        monthNames      : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthNamesShort : ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        closeText       : 'Listo',
+        currentText     : 'Hoy',
+        dateFormat      : 'ymmdd',
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+100"     
+    });
     var guardar_as400 = false;
     $(".statusName").each(function(){
         var status = $(this).text();
@@ -62,29 +76,31 @@ $(document).ready(function(){
                 $("#frm_nacimiento").val(fecha_format[2]+fecha_format[1]+fecha_format[0]);
 
                 // Save AS400
-                var params_modal = {};
-                $(".tbl_modal").each(function(){
-                    name_field = $(this).attr("name");
-                    val_field = $(this).val();
-                    params_modal.name_field = val_field;
-                });
-                console.log(params_modal);
                 $("#savefrmmodal").live("click",function(e){
                     e.preventDefault();
 
                     $.ajax({
                         type:"post",
                         url: "http://localhost/www/interlingua/crm/prospects/saveAS400", //cambiar url
-                        data: params,
+                        data: $("#frm_mo").serialize(),
                         dataType:"json",
                         error:function(){
                             alert("Error, por favor intentalo mas tarde.");
                         },
                         success:function(data){
                             if (data.error){
-                                alert(data.mensaje);
+                                $("#frm_mo").find("input[type=text],select").css( "border", "" );
+                                $.each(data.focus, function( index, value ) {
+                                    $("#"+value).css({
+                                        "border":"1px solid #DD4B39"
+                                    });
+                                });
+                                $("#msj_error").html(data.mensaje);
+                                $("#msj_error").fadeIn("slow");
                             }else{
-                                alert(data.mensaje);
+                                $("#frm_mo").find("input[type=text],select").css( "border", "" );
+                                $("#msj_error").html(data.mensaje);
+                                $("#msj_error").fadeIn("slow");
                                 //window.location="http://localhost/www/interlingua/";
                             }
                         }
