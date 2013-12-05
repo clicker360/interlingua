@@ -976,6 +976,13 @@ class ProspectsController extends AppController{
             $mensaje = "Es necesario dar autorización";
         }
 
+        # Valida digito
+        if (!$error && !is_numeric($_POST["frm_rfcdig"])) {
+            $error   = true;
+            $focus[] = "frm_rfcdig";
+            $mensaje = "El campo debe ser numérico";
+        }        
+
         if (!$error) {
             //Global Values
             $RFCLETRAS    = strtoupper(trim($_POST["frm_rfcletras"]));
@@ -1078,10 +1085,7 @@ class ProspectsController extends AppController{
                 $stmt->bindParam(1, $msgError, PDO::PARAM_STR,100);
                 $stmt->bindParam(2, $matricula, PDO::PARAM_STR,100);
 
-                $stmt->execute();            
-
-                echo trim($msgError);
-                echo $matricula;
+                $stmt->execute();
                 
                 if (trim($msgError)=="") {
                     $error   = false;
