@@ -1076,10 +1076,13 @@ class ProspectsController extends AppController{
                                             ".$NACIMIENTO.")";
                 $stmt = $db->prepare($sql);  
                 $stmt->bindParam(1, $msgError, PDO::PARAM_STR,100);
-                $stmt->bindParam(2, $matricula, PDO::PARAM_STR, 100);
+                $stmt->bindParam(2, $matricula, PDO::PARAM_STR,100);
 
                 $stmt->execute();            
 
+                echo $msgError;
+                echo $matricula;
+                
                 if (trim($msgError)=="") {
                     $error   = false;
                     $mensaje = $msgError." -- ".$matricula;
@@ -1088,7 +1091,7 @@ class ProspectsController extends AppController{
                     $mensaje = $msgError." -- ".$matricula;    
                 }
                 
-                $bdh     = null;
+                $bdh = null;
 
             } catch (PDOException $e) {
                 $error   = true;
