@@ -32,7 +32,7 @@ $(document).ready(function(){
     var guardar_as400 = false;
     $(".statusName").each(function(){
         var status = $(this).text();
-        if (status == "Interesado en visitar" || status == "Cita programada" || status == "Inscrito"){
+        if (status == "Interesado en visitar" || status == "Cita programada"){
             //alert("Guarda en AS400");
             guardar_as400 = true;
         }
@@ -99,9 +99,10 @@ $(document).ready(function(){
                                 $("#msj_error").fadeIn("slow");
                             }else{
                                 $("#frm_mo").find("input[type=text],select").css( "border", "" );
-                                $("#msj_error").html(data.mensaje);
-                                $("#msj_error").fadeIn("slow");
-                                //window.location="http://localhost/www/interlingua/";
+                                //$("#msj_error").html(data.mensaje);
+                                //$("#msj_error").fadeIn("slow");
+                                alert("El prospecto se registro correctamente en el sistema AS400");
+                                window.location=data.mensaje;
                             }
                         }
                     });

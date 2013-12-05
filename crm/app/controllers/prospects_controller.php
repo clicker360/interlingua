@@ -1089,7 +1089,8 @@ class ProspectsController extends AppController{
                 
                 if (trim($msgError)=="") {
                     $error   = false;
-                    $mensaje = trim($msgError)." -- ".$matricula;
+                    //$mensaje = trim($msgError)." -- ".$matricula;
+                    $mensaje = "http://interlingua.com.mx/clicker360/interlingua/crm/prospectos"
                 }else{
                     $error   = true;
                     $mensaje = utf8_encode(trim($msgError));    
