@@ -1048,36 +1048,35 @@ class ProspectsController extends AppController{
             # Conexion con AS400
             try{
                 $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-                $sql = "CALL SCAPAL.DA3080PRSP( ?,
-                                                ?,           
-                                                '".$RFCLETRAS."',
-                                                '".$RFCFECHA."',
-                                                '".$RFCHOMO."',
-                                                '".$RFCDIGITO."',
-                                                '".$NOMBRE."',
-                                                '".$PATERNO."',
-                                                '".$MATERNO."',
-                                                '".$ESTADO."',
-                                                '".$LOCALIDAD."',
-                                                '".$LADA."',
-                                                '".$EMAIL."',
-                                                '".$GENERO."',
-                                                '".$FAX."',
-                                                '".$PERFIL."',
-                                                '".$ASUNTO."',
-                                                '".$INTERES."',
-                                                '".$TIEMPO."',
-                                                '".$CONTACTADO."',
-                                                '".$AUTORIZA."',
-                                                '".$COMENTARIOS1."',
-                                                '".$COMENTARIOS2."',
-                                                '".$COMENTARIOS3."',
-                                                '".$COMENTARIOS4."',
-                                                '".$COMENTARIOS5."',
-                                                '".$NACIMIENTO."')";
+                $sql = "CALL SCAPAL.DA3080PRSP(?,?,'".$RFCLETRAS."',
+                                            ".$RFCFECHA.",
+                                            '".$RFCHOMO."',
+                                            ".$RFCDIGITO.",
+                                            '".$NOMBRE."',
+                                            '".$PATERNO."',
+                                            '".$MATERNO."',
+                                            '".$ESTADO."',
+                                            '".$LOCALIDAD."',
+                                            '".$LADA."',
+                                            '".$TELEFONO."',
+                                            '".$EMAIL."',
+                                            '".$GENERO."',
+                                            '".$FAX."',
+                                            '".$PERFIL."',
+                                            '".$ASUNTO."',
+                                            '".$INTERES."',
+                                            '".$TIEMPO."',
+                                            '".$CONTACTADO."',
+                                            '".$AUTORIZA."',
+                                            '".$COMENTARIOS1."',
+                                            '".$COMENTARIOS2."',
+                                            '".$COMENTARIOS3."',
+                                            '".$COMENTARIOS4."',
+                                            '".$COMENTARIOS5."',
+                                            ".$NACIMIENTO.")";
                 $stmt = $db->prepare($sql);  
-                $stmt->bindParam(1, $msgError, PDO::PARAM_STR,200);
-                $stmt->bindParam(2, $matricula, PDO::PARAM_STR, 200);
+                $stmt->bindParam(1, $msgError, PDO::PARAM_STR,100);
+                $stmt->bindParam(2, $matricula, PDO::PARAM_STR, 100);
 
                 $stmt->execute();
 
