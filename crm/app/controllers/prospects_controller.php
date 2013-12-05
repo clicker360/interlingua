@@ -1078,17 +1078,15 @@ class ProspectsController extends AppController{
                 $stmt->bindParam(1, $msgError, PDO::PARAM_STR,100);
                 $stmt->bindParam(2, $matricula, PDO::PARAM_STR, 100);
 
-                $stmt->execute();
+                $stmt->execute();            
 
-                $mensaje = $msgError." -- ".$matricula;
-
-                /*if (trim($msgError) == "") {
+                if (trim($msgError)=="") {
                     $error   = false;
                     $mensaje = $msgError." -- ".$matricula;
                 }else{
                     $error   = true;
                     $mensaje = $msgError." -- ".$matricula;    
-                }*/
+                }
                 
                 $bdh     = null;
 
