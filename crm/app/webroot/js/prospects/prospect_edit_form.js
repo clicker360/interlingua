@@ -88,7 +88,7 @@ $(document).ready(function(){
                             alert("Error, por favor intentalo mas tarde.");
                         },
                         success:function(data){
-                            if (data.error){
+                            if (!data.error){
                                 $("#frm_mo").find("input[type=text],select").css( "border", "" );
                                 $.each(data.focus, function( index, value ) {
                                     $("#"+value).css({
@@ -101,26 +101,25 @@ $(document).ready(function(){
                                 $("#frm_mo").find("input[type=text],select").css( "border", "" );
                                 //$("#msj_error").html(data.mensaje);
                                 //$("#msj_error").fadeIn("slow");
+                                // Save CRM True -> Save AS400
+                                var params = {
+                                     'data[Prospect][id]': $('#prospect_id').val(),
+                                     'data[Prospect][save_AS400]': '1'
+                                };
+                                $.post(
+                                    Crm.basePath+'store-prospect-ajax',
+                                    params,
+                                    function(data){
+                                        $('#store_prospect_message').html(data);
+                                    },
+                                    ''
+                                );
                                 alert("El prospecto se registro correctamente en el sistema AS400");
                                 window.location=data.mensaje;
                             }
                         }
                     });
                 });
-
-                // Save CRM True -> Save AS400
-                // var params = {
-                //      'data[Prospect][id]': $('#prospect_id').val(),
-                //      'data[Prospect][save_AS400]': '1'
-                // };
-                // $.post(
-                //     Crm.basePath+'store-prospect-ajax',
-                //     params,
-                //     function(data){
-                //         $('#store_prospect_message').html(data);
-                //     },
-                //     ''
-                // );
             });   
         }
     }
