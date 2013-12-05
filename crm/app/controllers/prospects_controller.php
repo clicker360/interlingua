@@ -917,6 +917,7 @@ class ProspectsController extends AppController{
         $error       = false;
         $focus       = array();
         $mensaje     = "";
+        $mat         = "";
         $originales  = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
         $modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
         $item_force  = array( 'frm_rfcletras',
@@ -1090,6 +1091,7 @@ class ProspectsController extends AppController{
                 if (trim($msgError)=="") {
                     $error   = false;
                     //$mensaje = trim($msgError)." -- ".$matricula;
+                    $mat = $matricula;
                     $mensaje = "http://interlingua.com.mx/clicker360/interlingua/crm/prospectos";
                 }else{
                     $error   = true;
@@ -1107,6 +1109,7 @@ class ProspectsController extends AppController{
         $response["error"]   = $error;
         $response["focus"]   = $focus;
         $response["mensaje"] = $mensaje;
+        $response["mat"] = $mat;
         echo json_encode($response);
     }
 

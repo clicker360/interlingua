@@ -39,7 +39,7 @@ $(document).ready(function(){
     });
     if (guardar_as400){
         var verifySaveAS400 = $("#verifySave").val();
-        if (verifySaveAS400 == 0){
+        if (verifySaveAS400 == 0){  
             $("#btn-as400").html('<a style="text-decoration:none;border:0px;color:white;background:#EB7126;padding:7px;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" data-reveal-id="myModal">Guardar en AS400</a>');
             $("#btnSaveAS400").live("click", function(e){
                 e.preventDefault();
@@ -88,7 +88,7 @@ $(document).ready(function(){
                             alert("Error, por favor intentalo mas tarde.");
                         },
                         success:function(data){
-                            if (!data.error){
+                            if (data.error){
                                 $("#frm_mo").find("input[type=text],select").css( "border", "" );
                                 $.each(data.focus, function( index, value ) {
                                     $("#"+value).css({
@@ -115,6 +115,7 @@ $(document).ready(function(){
                                     ''
                                 );
                                 alert("El prospecto se registro correctamente en el sistema AS400");
+                                console.log(data.mat);
                                 window.location=data.mensaje;
                             }
                         }
