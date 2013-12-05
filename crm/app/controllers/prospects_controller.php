@@ -1080,7 +1080,7 @@ class ProspectsController extends AppController{
 
                 $stmt->execute();
 
-                if ($msgError == "") {
+                if (trim($msgError) == "") {
                     $error   = false;
                     $mensaje = $msgError." -- ".$matricula;
                 }else{
