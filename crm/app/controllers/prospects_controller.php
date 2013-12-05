@@ -981,7 +981,7 @@ class ProspectsController extends AppController{
             $RFCLETRAS    = strtoupper(trim($_POST["frm_rfcletras"]));
             $RFCFECHA     = trim($_POST["frm_rfcfecha"]);
             $RFCHOMO      = trim($_POST["frm_rfchomo"]);
-            $RFCDIGITO    = trim($_POST["frm_rfcdig "]);
+            $RFCDIGITO    = trim($_POST["frm_rfcdig"]);
             # Nombre
             $NOMBRE       = trim($_POST["frm_nombre"]);
             $NOMBRE       = utf8_decode($NOMBRE);
