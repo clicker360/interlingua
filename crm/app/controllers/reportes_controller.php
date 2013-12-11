@@ -23,7 +23,11 @@ class ReportesController extends AppController {
         if($this->Session->read('Auth.User.level')>2){
             $this->set('places',$this->Places->find('list'));
         }
+
+        $places = $this->Places->find('all',array('order'=>array('Places.name')));
+        $this->set('places',$places);
     }
+
     public function beforeFilter() {
         ini_set('memory_limit', '2048M');
         set_time_limit(5000);
@@ -500,8 +504,12 @@ class ReportesController extends AppController {
         return true;
     }
 
-    function detalle_plantel() {
-	Configure::write('debug',2);
+    function detalle_plantel() {  
+        $lugar_id = $this->data['lugar'];
+        $lugar_id = explode("|", $lugar_id);
+
+        //print_r($this->data['lugar']);
+	    //Configure::write('debug',2);
         if(!$this->detallesVariables()) exit();
         // Se buscan los prospectos y categorías que se utilizarán.
 		$status = $this->Statuses->find('all',array('order'=>array('Statuses.status_category_id')));
@@ -537,7 +545,7 @@ class ReportesController extends AppController {
 		)
 	));
         $usuarios = $this->User->find('all',array('conditions'=>$conditions));
-        //$usuarios = $this->User->find('all');	
+        //$usuarios = $this->User->find('all');	    
 
         foreach($statusCategories as $statusCategorie){
             $arrCategories[$statusCategorie['StatusCategories']['id']] = $statusCategorie['StatusCategories']['name'];
@@ -548,21 +556,44 @@ class ReportesController extends AppController {
         $nameCategorie = '';
         $antCat = '';
         $l = 0;
-        foreach ($usuarios as $usuario) {
-            foreach ($status as $s) {
-                if($nameCategorie != $s['Statuses']['status_category_id']){
-                    $cntCategories[$antCat] = $l;
-                    $nameCategorie = $s['Statuses']['status_category_id'];
-                    $antCat = $s['Statuses']['status_category_id'];
-                    $l = 1;
-                }else{
-                    $l += 1;
+
+        if($lugar_id[0] == "true"){
+            foreach ($usuarios as $usuario) {
+                foreach ($status as $s) {
+                    if($nameCategorie != $s['Statuses']['status_category_id']){
+                        $cntCategories[$antCat] = $l;
+                        $nameCategorie = $s['Statuses']['status_category_id'];
+                        $antCat = $s['Statuses']['status_category_id'];
+                        $l = 1;
+                    }else{
+                        $l += 1;
+                    }
+                    for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                        $totalpds[$s['Statuses']['status_category_id']][$k] = 0;
+                    }
+                    $totalpp[$usuario['User']['id']][$s['Statuses']['id']] = 0;
+                    $totalps[$s['Statuses']['id']] = 0;
                 }
-                for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
-                    $totalpds[$s['Statuses']['status_category_id']][$k] = 0;
+            }
+        }else{
+            foreach ($usuarios as $usuario) {
+                if ($usuario['User']['place_id']==$lugar_id[0]) {
+                    foreach ($status as $s) {
+                        if($nameCategorie != $s['Statuses']['status_category_id']){
+                            $cntCategories[$antCat] = $l;
+                            $nameCategorie = $s['Statuses']['status_category_id'];
+                            $antCat = $s['Statuses']['status_category_id'];
+                            $l = 1;
+                        }else{
+                            $l += 1;
+                        }
+                        for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                            $totalpds[$s['Statuses']['status_category_id']][$k] = 0;
+                        }
+                        $totalpp[$usuario['User']['id']][$s['Statuses']['id']] = 0;
+                        $totalps[$s['Statuses']['id']] = 0;
+                    }
                 }
-                $totalpp[$usuario['User']['id']][$s['Statuses']['id']] = 0;
-                $totalps[$s['Statuses']['id']] = 0;
             }
         }
 
@@ -577,86 +608,173 @@ class ReportesController extends AppController {
         $totalsa = 0;
         $totalsat = 0;
         $totalas = 0;	
-        foreach ($usuarios as $usuario) {
-            foreach ($status as $s) {
-                for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
-		    $this->Prospect->unBindModel(array(
-			'belongsTo' => array(
-				'User',
-				'Place',
-				'Origin',
-				'Status',
-				'Medium',
-				'State',
-				'City',
-				'Gender'	
-			)
-		    ));
-                    $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.status_id' => $s['Statuses']['id'], 'Prospect.user_id' => $usuario['User']['id']))));
-                    if ($s['Statuses']['status_category_id'] != 37) {
-                        $totalpp[$usuario['User']['id']][$s['Statuses']['id']]+=$datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+        if($lugar_id[0] == "true"){
+
+            foreach ($usuarios as $usuario) {
+                foreach ($status as $s) {
+                    for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+    		    $this->Prospect->unBindModel(array(
+    			'belongsTo' => array(
+    				'User',
+    				'Place',
+    				'Origin',
+    				'Status',
+    				'Medium',
+    				'State',
+    				'City',
+    				'Gender'	
+    			)
+    		    ));
+                        $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.status_id' => $s['Statuses']['id'], 'Prospect.user_id' => $usuario['User']['id']))));
+                        if ($s['Statuses']['status_category_id'] != 37) {
+                            $totalpp[$usuario['User']['id']][$s['Statuses']['id']]+=$datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                        }
                     }
+                    $totalps[$s['Statuses']['id']]+=$totalpp[$usuario['User']['id']][$s['Statuses']['id']];
                 }
-                $totalps[$s['Statuses']['id']]+=$totalpp[$usuario['User']['id']][$s['Statuses']['id']];
+    $this->Prospect->unBindModel(array(
+    			'belongsTo' => array(
+    				'User',
+    				'Place',
+    				'Origin',
+    				'Status',
+    				'Medium',
+    				'State',
+    				'City',
+    				'Gender'	
+    			)
+    		    ));
+                $sinstatus[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'AND' => array('OR' => array(array('Prospect.status_id' => null), array('Prospect.status_id' => 0)), 'AND' => array('Prospect.user_id' => $usuario['User']['id'], 'Prospect.user_id !=' => null))))));
+    $this->Prospect->unBindModel(array(
+    			'belongsTo' => array(
+    				'User',
+    				'Place',
+    				'Origin',
+    				'Status',
+    				'Medium',
+    				'State',
+    				'City',
+    				'Gender'	
+    			)
+    		    ));            
+    	$sinasignar[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                //$totalsata[$i]=$sinstatus[$i]+$sinasignar[$i];
+    		$this->Prospect->unBindModel(array(
+    			'belongsTo' => array(
+    				'User',
+    				'Place',
+    				'Origin',
+    				'Status',
+    				'Medium',
+    				'State',
+    				'City',
+    				'Gender'	
+    			)
+    		    ));
+                $totalsata[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => $usuario['User']['id'], 'OR' => array(array('Prospect.status_id' => null), 'Prospect.status_id' => 0)))));
+                $totalss+=$sinstatus[$usuario['User']['id']];
+                $totalsa+=$sinasignar[$usuario['User']['id']];
+                $totalsat+=$totalsata[$usuario['User']['id']];
+    		$this->Prospect->unBindModel(array(
+    			'belongsTo' => array(
+    				'User',
+    				'Place',
+    				'Origin',
+    				'Status',
+    				'Medium',
+    				'State',
+    				'City',
+    				'Gender'	
+    			)
+    		    ));
+                $asignados[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id !=' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                $totalas+=$asignados[$usuario['User']['id']];
             }
-$this->Prospect->unBindModel(array(
-			'belongsTo' => array(
-				'User',
-				'Place',
-				'Origin',
-				'Status',
-				'Medium',
-				'State',
-				'City',
-				'Gender'	
-			)
-		    ));
-            $sinstatus[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'AND' => array('OR' => array(array('Prospect.status_id' => null), array('Prospect.status_id' => 0)), 'AND' => array('Prospect.user_id' => $usuario['User']['id'], 'Prospect.user_id !=' => null))))));
-$this->Prospect->unBindModel(array(
-			'belongsTo' => array(
-				'User',
-				'Place',
-				'Origin',
-				'Status',
-				'Medium',
-				'State',
-				'City',
-				'Gender'	
-			)
-		    ));            
-	$sinasignar[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => null, 'Prospect.user_id' => $usuario['User']['id']))));
-            //$totalsata[$i]=$sinstatus[$i]+$sinasignar[$i];
-		$this->Prospect->unBindModel(array(
-			'belongsTo' => array(
-				'User',
-				'Place',
-				'Origin',
-				'Status',
-				'Medium',
-				'State',
-				'City',
-				'Gender'	
-			)
-		    ));
-            $totalsata[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => $usuario['User']['id'], 'OR' => array(array('Prospect.status_id' => null), 'Prospect.status_id' => 0)))));
-            $totalss+=$sinstatus[$usuario['User']['id']];
-            $totalsa+=$sinasignar[$usuario['User']['id']];
-            $totalsat+=$totalsata[$usuario['User']['id']];
-		$this->Prospect->unBindModel(array(
-			'belongsTo' => array(
-				'User',
-				'Place',
-				'Origin',
-				'Status',
-				'Medium',
-				'State',
-				'City',
-				'Gender'	
-			)
-		    ));
-            $asignados[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id !=' => null, 'Prospect.user_id' => $usuario['User']['id']))));
-            $totalas+=$asignados[$usuario['User']['id']];
+        }else{
+            foreach ($usuarios as $usuario) {
+                if ($usuario['User']['place_id']==$lugar_id[0]) {
+                    foreach ($status as $s) {
+                        for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                    $this->Prospect->unBindModel(array(
+                    'belongsTo' => array(
+                        'User',
+                        'Place',
+                        'Origin',
+                        'Status',
+                        'Medium',
+                        'State',
+                        'City',
+                        'Gender'    
+                    )
+                    ));
+                            $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.status_id' => $s['Statuses']['id'], 'Prospect.user_id' => $usuario['User']['id']))));
+                            if ($s['Statuses']['status_category_id'] != 37) {
+                                $totalpp[$usuario['User']['id']][$s['Statuses']['id']]+=$datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                            }
+                        }
+                        $totalps[$s['Statuses']['id']]+=$totalpp[$usuario['User']['id']][$s['Statuses']['id']];
+                    }
+        $this->Prospect->unBindModel(array(
+                    'belongsTo' => array(
+                        'User',
+                        'Place',
+                        'Origin',
+                        'Status',
+                        'Medium',
+                        'State',
+                        'City',
+                        'Gender'    
+                    )
+                    ));
+                    $sinstatus[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'AND' => array('OR' => array(array('Prospect.status_id' => null), array('Prospect.status_id' => 0)), 'AND' => array('Prospect.user_id' => $usuario['User']['id'], 'Prospect.user_id !=' => null))))));
+        $this->Prospect->unBindModel(array(
+                    'belongsTo' => array(
+                        'User',
+                        'Place',
+                        'Origin',
+                        'Status',
+                        'Medium',
+                        'State',
+                        'City',
+                        'Gender'    
+                    )
+                    ));            
+            $sinasignar[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                    //$totalsata[$i]=$sinstatus[$i]+$sinasignar[$i];
+                $this->Prospect->unBindModel(array(
+                    'belongsTo' => array(
+                        'User',
+                        'Place',
+                        'Origin',
+                        'Status',
+                        'Medium',
+                        'State',
+                        'City',
+                        'Gender'    
+                    )
+                    ));
+                    $totalsata[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => $usuario['User']['id'], 'OR' => array(array('Prospect.status_id' => null), 'Prospect.status_id' => 0)))));
+                    $totalss+=$sinstatus[$usuario['User']['id']];
+                    $totalsa+=$sinasignar[$usuario['User']['id']];
+                    $totalsat+=$totalsata[$usuario['User']['id']];
+                $this->Prospect->unBindModel(array(
+                    'belongsTo' => array(
+                        'User',
+                        'Place',
+                        'Origin',
+                        'Status',
+                        'Medium',
+                        'State',
+                        'City',
+                        'Gender'    
+                    )
+                    ));
+                    $asignados[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id !=' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                    $totalas+=$asignados[$usuario['User']['id']];
+                }
+            }
         }
+
         
         $this->set('status', $status);
         $this->set('datos', $datos);
@@ -674,6 +792,9 @@ $this->Prospect->unBindModel(array(
     }
 
     function detalleplantelxls() {
+        $lugar_id = $this->data['lugar'];
+        $lugar_id = explode("|", $lugar_id);
+
         $this->layout = 'xls';
         if(!$this->detallesVariables()) exit();
         // Se buscan los prospectos y categorías que se utilizarán.
@@ -715,21 +836,43 @@ $this->Prospect->unBindModel(array(
         $nameCategorie = '';
         $antCat = '';
         $l = 0;
-        foreach ($usuarios as $usuario) {
-            foreach ($status as $s) {
-                if($nameCategorie != $s['Statuses']['status_category_id']){
-                    $cntCategories[$antCat] = $l;
-                    $nameCategorie = $s['Statuses']['status_category_id'];
-                    $antCat = $s['Statuses']['status_category_id'];
-                    $l = 1;
-                }else{
-                    $l += 1;
+        if($lugar_id[0] == "true"){
+            foreach ($usuarios as $usuario) {
+                foreach ($status as $s) {
+                    if($nameCategorie != $s['Statuses']['status_category_id']){
+                        $cntCategories[$antCat] = $l;
+                        $nameCategorie = $s['Statuses']['status_category_id'];
+                        $antCat = $s['Statuses']['status_category_id'];
+                        $l = 1;
+                    }else{
+                        $l += 1;
+                    }
+                    for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                        $totalpds[$s['Statuses']['status_category_id']][$k] = 0;
+                    }
+                    $totalpp[$usuario['User']['id']][$s['Statuses']['id']] = 0;
+                    $totalps[$s['Statuses']['id']] = 0;
                 }
-                for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
-                    $totalpds[$s['Statuses']['status_category_id']][$k] = 0;
+            }
+        }else{
+            foreach ($usuarios as $usuario) {
+                if ($usuario['User']['place_id']==$lugar_id[0]) {
+                    foreach ($status as $s) {
+                        if($nameCategorie != $s['Statuses']['status_category_id']){
+                            $cntCategories[$antCat] = $l;
+                            $nameCategorie = $s['Statuses']['status_category_id'];
+                            $antCat = $s['Statuses']['status_category_id'];
+                            $l = 1;
+                        }else{
+                            $l += 1;
+                        }
+                        for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                            $totalpds[$s['Statuses']['status_category_id']][$k] = 0;
+                        }
+                        $totalpp[$usuario['User']['id']][$s['Statuses']['id']] = 0;
+                        $totalps[$s['Statuses']['id']] = 0;
+                    }
                 }
-                $totalpp[$usuario['User']['id']][$s['Statuses']['id']] = 0;
-                $totalps[$s['Statuses']['id']] = 0;
             }
         }
 
@@ -744,26 +887,52 @@ $this->Prospect->unBindModel(array(
         $totalsa = 0;
         $totalsat = 0;
         $totalas = 0;
-        foreach ($usuarios as $usuario) {
-            foreach ($status as $s) {
-                for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
-                    $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.status_id' => $s['Statuses']['id'], 'Prospect.user_id' => $usuario['User']['id']))));
+        if($lugar_id[0] == "true"){
+            foreach ($usuarios as $usuario) {
+                foreach ($status as $s) {
+                    for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                        $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.status_id' => $s['Statuses']['id'], 'Prospect.user_id' => $usuario['User']['id']))));
 
-                    if ($s['Statuses']['status_category_id'] != 37) {
-                        $totalpp[$usuario['User']['id']][$s['Statuses']['id']]+=$datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                        if ($s['Statuses']['status_category_id'] != 37) {
+                            $totalpp[$usuario['User']['id']][$s['Statuses']['id']]+=$datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                        }
                     }
+                    $totalps[$s['Statuses']['id']]+=$totalpp[$usuario['User']['id']][$s['Statuses']['id']];
                 }
-                $totalps[$s['Statuses']['id']]+=$totalpp[$usuario['User']['id']][$s['Statuses']['id']];
+                $sinstatus[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'AND' => array('OR' => array(array('Prospect.status_id' => null), array('Prospect.status_id' => 0)), 'AND' => array('Prospect.user_id' => $usuario['User']['id'], 'Prospect.user_id !=' => null))))));
+                $sinasignar[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                //$totalsata[$i]=$sinstatus[$i]+$sinasignar[$i];
+                $totalsata[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => $usuario['User']['id'], 'OR' => array(array('Prospect.status_id' => null), 'Prospect.status_id' => 0)))));
+                $totalss+=$sinstatus[$usuario['User']['id']];
+                $totalsa+=$sinasignar[$usuario['User']['id']];
+                $totalsat+=$totalsata[$usuario['User']['id']];
+                $asignados[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id !=' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                $totalas+=$asignados[$usuario['User']['id']];
             }
-            $sinstatus[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'AND' => array('OR' => array(array('Prospect.status_id' => null), array('Prospect.status_id' => 0)), 'AND' => array('Prospect.user_id' => $usuario['User']['id'], 'Prospect.user_id !=' => null))))));
-            $sinasignar[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => null, 'Prospect.user_id' => $usuario['User']['id']))));
-            //$totalsata[$i]=$sinstatus[$i]+$sinasignar[$i];
-            $totalsata[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => $usuario['User']['id'], 'OR' => array(array('Prospect.status_id' => null), 'Prospect.status_id' => 0)))));
-            $totalss+=$sinstatus[$usuario['User']['id']];
-            $totalsa+=$sinasignar[$usuario['User']['id']];
-            $totalsat+=$totalsata[$usuario['User']['id']];
-            $asignados[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id !=' => null, 'Prospect.user_id' => $usuario['User']['id']))));
-            $totalas+=$asignados[$usuario['User']['id']];
+        }else{
+            foreach ($usuarios as $usuario) {
+                if ($usuario['User']['place_id']==$lugar_id[0]) {
+                    foreach ($status as $s) {
+                        for ($k = 0; $k < count($s['Statuses']['status_category_id']); $k++) {
+                            $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.status_id' => $s['Statuses']['id'], 'Prospect.user_id' => $usuario['User']['id']))));
+
+                            if ($s['Statuses']['status_category_id'] != 37) {
+                                $totalpp[$usuario['User']['id']][$s['Statuses']['id']]+=$datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                            }
+                        }
+                        $totalps[$s['Statuses']['id']]+=$totalpp[$usuario['User']['id']][$s['Statuses']['id']];
+                    }
+                    $sinstatus[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'AND' => array('OR' => array(array('Prospect.status_id' => null), array('Prospect.status_id' => 0)), 'AND' => array('Prospect.user_id' => $usuario['User']['id'], 'Prospect.user_id !=' => null))))));
+                    $sinasignar[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                    //$totalsata[$i]=$sinstatus[$i]+$sinasignar[$i];
+                    $totalsata[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id' => $usuario['User']['id'], 'OR' => array(array('Prospect.status_id' => null), 'Prospect.status_id' => 0)))));
+                    $totalss+=$sinstatus[$usuario['User']['id']];
+                    $totalsa+=$sinasignar[$usuario['User']['id']];
+                    $totalsat+=$totalsata[$usuario['User']['id']];
+                    $asignados[$usuario['User']['id']] = $this->Prospect->find('count', array('conditions' => array('AND' => array($this->cdt, 'Prospect.user_id !=' => null, 'Prospect.user_id' => $usuario['User']['id']))));
+                    $totalas+=$asignados[$usuario['User']['id']];
+                }
+            }
         }
         
         $this->set('status', $status);

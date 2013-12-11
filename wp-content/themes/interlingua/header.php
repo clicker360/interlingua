@@ -93,9 +93,19 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  	e.preventDefault();
 			  	jQuery("#login_alumnos").css("-webkit-border-radius","0px");
 			  	jQuery("#login_alumnos").css("border-radius","0px");
-			  	jQuery("#toogleLogin").fadeToggle("slow",function(){
-			  		//termina
+			  	jQuery("#toogleLogin").fadeToggle("slow",function(){			  		
+                    //termina
 			  	});
+			  	// Gira flecha	
+			  	state = jQuery(".lnk-acceso > img").attr("data-valid");
+			  	
+			  	if(state == undefined || state == "false"){             
+			  		jQuery(".lnk-acceso > img").attr("data-valid","true");  
+                	jQuery(".lnk-acceso > img").css("transform","rotate(180deg)");                    	
+                }else{                                 
+                	jQuery(".lnk-acceso > img").attr("data-valid","false");  
+                	jQuery(".lnk-acceso > img").css("transform","rotate(360deg) !important");
+                }
 			  });
 			  
 			  jQuery("#frmLogin").on("submit",function(e){

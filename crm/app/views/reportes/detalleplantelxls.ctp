@@ -1,11 +1,32 @@
+<?php 
+    $lugar_id = $this->data['lugar'];
+    $lugar_id = explode("|", $lugar_id);
+    //print_r($this->data);
+    //echo "<br>";
+    //print_r($usuarios);
+?>
 
 <table border="1" cellspacing="0" cellpadding="2px">
     <!--usuarios-->
     <tr>
+        <h2>Lugar : <?php echo $lugar_id[1]?></h2>
+    </tr>
+    <tr>
         <td colspan="2"><?php echo $titulo ?></td>
-        <?php foreach ($usuarios as $usuario) {
-            echo '<td>' . $usuario['User']['name'] . '</td>';
-        } ?>
+        <?php 
+            if($lugar_id[0] == "true"){
+                foreach ($usuarios as $usuario) {
+                    echo '<td>' . $usuario['User']['name'] . '</td>';
+                }  
+            }else{
+                foreach ($usuarios as $usuario) {
+                    if ($usuario['User']['place_id']==$lugar_id[0]) {
+                        echo '<td>' . $usuario['User']['name'] . '</td>';
+                    }
+                }
+            }
+            
+        ?>
         <td>Total</td>
     </tr>
     <?php
@@ -31,10 +52,20 @@
                 /**/
                 echo '<tr>';
                 echo '<td><b>Total</b></td>';
-                foreach ($usuarios as $usuario) {
-                    echo '<td><b>' . $totalPC[$usuario['User']['id']] . '</b></td>';
-                    $totalPCP = $totalPCP + $totalPC[$usuario['User']['id']];
-                    $totalPC[$usuario['User']['id']] = 0;
+                if($lugar_id[0] == "true"){
+                    foreach ($usuarios as $usuario) {
+                        echo '<td><b>' . $totalPC[$usuario['User']['id']] . '</b></td>';
+                        $totalPCP = $totalPCP + $totalPC[$usuario['User']['id']];
+                        $totalPC[$usuario['User']['id']] = 0;
+                    }
+                }else{
+                    foreach ($usuarios as $usuario) {
+                        if ($usuario['User']['place_id']==$lugar_id[0]) {
+                            echo '<td><b>' . $totalPC[$usuario['User']['id']] . '</b></td>';
+                            $totalPCP = $totalPCP + $totalPC[$usuario['User']['id']];
+                            $totalPC[$usuario['User']['id']] = 0;
+                        }
+                    }
                 }
                 echo '<td><b>' . $totalPCP . '</b></td>';
                 $totalPCP = 0;
@@ -55,10 +86,20 @@
                     $first = $first - 1;
                 }
                 echo '<td>' . $s['Statuses']['name'] . '</td>';
-                foreach ($usuarios as $usuario) {
-                    echo '<td>' . $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] . '</td>';
-                    if(!isset($totalPC[$usuario['User']['id']])) $totalPC[$usuario['User']['id']] = 0;
-                    $totalPC[$usuario['User']['id']] = $totalPC[$usuario['User']['id']] + $datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                if($lugar_id[0] == "true"){                    
+                    foreach ($usuarios as $usuario) {
+                        echo '<td>' . $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] . '</td>';
+                        if(!isset($totalPC[$usuario['User']['id']])) $totalPC[$usuario['User']['id']] = 0;
+                        $totalPC[$usuario['User']['id']] = $totalPC[$usuario['User']['id']] + $datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                    }
+                }else{
+                    foreach ($usuarios as $usuario) {
+                        if ($usuario['User']['place_id']==$lugar_id[0]) {
+                            echo '<td>' . $datos[$usuario['User']['id']][$s['Statuses']['id']][$k] . '</td>';
+                            if(!isset($totalPC[$usuario['User']['id']])) $totalPC[$usuario['User']['id']] = 0;
+                            $totalPC[$usuario['User']['id']] = $totalPC[$usuario['User']['id']] + $datos[$usuario['User']['id']][$s['Statuses']['id']][$k];
+                        }
+                    }
                 }
                 echo '<td>' . $totalps[$s['Statuses']['id']] . '</td>';
                 echo '</tr>';
@@ -66,14 +107,23 @@
         }
         echo '<tr>';
         echo '<td><b>Total</b></td>';
-        foreach ($usuarios as $usuario) {
-            echo '<td><b>' . $totalPC[$usuario['User']['id']] . '</b></td>';
-            $totalPCP = $totalPCP + $totalPC[$usuario['User']['id']];
-            $totalPC[$usuario['User']['id']] = 0;
+        if($lugar_id[0] == "true"){                    
+            foreach ($usuarios as $usuario) {
+                echo '<td><b>' . $totalPC[$usuario['User']['id']] . '</b></td>';
+                $totalPCP = $totalPCP + $totalPC[$usuario['User']['id']];
+                $totalPC[$usuario['User']['id']] = 0;
+            }
+        }else{
+            foreach ($usuarios as $usuario) {
+                if ($usuario['User']['place_id']==$lugar_id[0]) {
+                    echo '<td><b>' . $totalPC[$usuario['User']['id']] . '</b></td>';
+                    $totalPCP = $totalPCP + $totalPC[$usuario['User']['id']];
+                    $totalPC[$usuario['User']['id']] = 0;
+                }
+            }
         }
         echo '<td><b>' . $totalPCP . '</b></td>';
         $totalPCP = 0;
         echo '</tr>';
     ?>
 </table>
-
