@@ -985,7 +985,7 @@ class ProspectsController extends AppController{
             }
         }
         # Valida digito
-        if (!$error && !is_numeric($_POST["frm_rfcdig"])) {
+        if (!$error && !is_numeric($_POST["frm_rfcdig"]) && $_POST["frm_rfcdig"]!="") {
             $error   = true;
             $focus[] = "frm_rfcdig";
             $mensaje = "El campo debe ser numérico";
