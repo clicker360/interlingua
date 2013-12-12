@@ -79,7 +79,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">RFC Fecha:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_rfcfecha" name="frm_rfcfecha">
+                        <input type="text" class="tbl_modal" maxlength="6" id="frm_rfcfecha" name="frm_rfcfecha">
                     </div> 
                 </td>
             </tr>
@@ -121,7 +121,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Lada Particular:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_lada" name="frm_lada">
+                        <input type="text" class="tbl_modal" maxlength="3" id="frm_lada" name="frm_lada">
                     </div> 
                 </td>
             </tr>
@@ -135,7 +135,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Lada Oficina:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="10" id="frm_lada_oficina" name="frm_lada_oficina">
+                        <input type="text" class="tbl_modal" maxlength="3" id="frm_lada_oficina" name="frm_lada_oficina">
                     </div> 
                 </td>
             </tr>
@@ -149,7 +149,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Extención Oficina:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="10" id="frm_ext_oficina" name="frm_ext_oficina">
+                        <input type="text" class="tbl_modal" maxlength="5" id="frm_ext_oficina" name="frm_ext_oficina">
                     </div> 
                 </td>
             </tr>
@@ -157,7 +157,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Celular:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_cel" name="frm_cel">
+                        <input type="text" class="tbl_modal" maxlength="10" id="frm_cel" name="frm_cel">
                     </div> 
                 </td>
                 <td  align="left" class="table_title_cells">Email:</td>
@@ -203,7 +203,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Usuario ID:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_user_id" name="frm_user_id">
+                        <input type="text" class="tbl_modal" maxlength="20" id="frm_user_id" name="frm_user_id">
                     </div> 
                 </td>
                  <td class="table_title_cells"></td>
