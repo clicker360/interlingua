@@ -182,9 +182,19 @@ echo $form->end();
                 <td>
                     <div class="input text">                            
                         <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
-                            <option value="TTT">Chat</option>
-                            <option value="TTT">Email</option>
-                            <option value="TTT">Llamada</option>
+                            <?php                                 
+                                $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+                                $sql = "CALL SCAPAL.TMEDI_LISTA()";
+                                $stmt = $db->query($sql);
+                                do {
+                                  $rows = $stmt->fetchAll(PDO::FETCH_NUM);
+                                  if($rows){
+                                    foreach($rows as $value){
+                                       echo '<option value="'.$value[0].'">'.$value[1].'</option>';                                      
+                                    }
+                                  }
+                                }while($stmt->nextRowset());
+                            ?>
                         </select>
                     </div> 
                 </td>

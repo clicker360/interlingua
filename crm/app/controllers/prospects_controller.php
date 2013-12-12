@@ -1054,8 +1054,8 @@ class ProspectsController extends AppController{
                                             '?')";
                 print_r($sql);
                 $stmt = $db->prepare($sql);  
-                $stmt->bindParam(1, $matricula, PDO::PARAM_STR,100);
-                $stmt->bindParam(2, $msgError, PDO::PARAM_STR,100);
+                $stmt->bindParam(1, $matricula, PDO::PARAM_STR,200);
+                $stmt->bindParam(2, $msgError, PDO::PARAM_STR,200);
 
                 $stmt->execute();
                 
