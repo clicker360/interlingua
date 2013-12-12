@@ -1032,6 +1032,7 @@ class ProspectsController extends AppController{
             # Conexion con AS400
             try{
                 $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+                $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                 $sql = "CALL SCAPAL.TPRSP_ALTATELEMARKETING('".$RFCLETRAS."',
                                             ".$RFCFECHA.",
                                             '".$RFCHOMO."',
