@@ -118,21 +118,7 @@ echo $form->end();
                         <input type="text" class="tbl_modal" maxlength="65" id="frm_apmat" name="frm_apmat">
                     </div> 
                 </td>
-                <td  align="left" class="table_title_cells">Estado:</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_estado" name="frm_estado">
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td  align="left" class="table_title_cells">Localidad (Plantel):</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_localidad" name="frm_localidad">
-                    </div> 
-                </td>
-                <td  align="left" class="table_title_cells">Lada:</td>
+                <td  align="left" class="table_title_cells">Lada Particular:</td>
                 <td>
                     <div class="input text">
                         <input type="text" class="tbl_modal" maxlength="65" id="frm_lada" name="frm_lada">
@@ -140,10 +126,38 @@ echo $form->end();
                 </td>
             </tr>
             <tr>
-                <td  align="left" class="table_title_cells">Teléfono:</td>
+                <td  align="left" class="table_title_cells">Teléfono Particular:</td>
                 <td>
                     <div class="input text">
                         <input type="text" class="tbl_modal" maxlength="10" id="frm_telefono" name="frm_telefono">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Lada Oficina:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="10" id="frm_lada_oficina" name="frm_lada_oficina">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Teléfono Oficina:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="10" id="frm_telefono_oficina" name="frm_telefono_oficina">
+                    </div> 
+                </td>
+                <td  align="left" class="table_title_cells">Extención Oficina:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="10" id="frm_ext_oficina" name="frm_ext_oficina">
+                    </div> 
+                </td>
+            </tr>
+            <tr>
+                <td  align="left" class="table_title_cells">Celular:</td>
+                <td>
+                    <div class="input text">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_cel" name="frm_cel">
                     </div> 
                 </td>
                 <td  align="left" class="table_title_cells">Email:</td>
@@ -154,75 +168,35 @@ echo $form->end();
                 </td>
             </tr>
             <tr>
-                <td  align="left" class="table_title_cells">Genero:</td>
+                <td  align="left" class="table_title_cells">Método de contacto:</td>
                 <td>
                     <div class="input text">                            
-                        <select name="frm_genero" class="tbl_modal" id="frm_genero" style="float:left;">
-                            <option value="M">Masculino</option>
-                            <option value="F">Femenino</option>
+                        <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
+                            <option value="CHAT">Chat</option>
+                            <option value="EMAIL">Email</option>
+                            <option value="LLAMADA">Llamada</option>
                         </select>
                     </div> 
                 </td>
-                <td  align="left" class="table_title_cells">Fax (Celular):</td>
+                <td  align="left" class="table_title_cells">Medio de contacto:</td>
                 <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_fax" name="frm_fax">
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td  align="left" class="table_title_cells">Perfil:</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_pefil" name="frm_pefil">
-                    </div> 
-                </td>
-                <td  align="left" class="table_title_cells">Asunto:</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_asunto" name="frm_asunto">
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td  align="left" class="table_title_cells">Interes:</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_interes" name="frm_interes">
-                    </div> 
-                </td>
-                <td  align="left" class="table_title_cells">Tiempo:</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_tiempo" name="frm_tiempo">
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td  align="left" class="table_title_cells">Contactado:</td>
-                <td>
-                    <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="65" id="frm_contactado" name="frm_contactado">
-                    </div> 
-                </td>
-                <td  align="left" class="table_title_cells">Autoriza:</td>
-                <td>
-                    <div class="input text">                                
-                        <select name="frm_autoriza" class="tbl_modal" id="frm_autoriza" style="float:left;">
-                            <option value="S">Si</option>
-                            <option value="N">No</option>
+                    <div class="input text">                            
+                        <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
+                            <option value="CHAT">Chat</option>
+                            <option value="EMAIL">Email</option>
+                            <option value="LLAMADA">Llamada</option>
                         </select>
                     </div> 
                 </td>
             </tr>
             <tr>
-                <td  align="left" class="table_title_cells">Fecha de Nacimiento:</td>
+                <td  align="left" class="table_title_cells">Usuario ID:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="8" id="frm_nacimiento" name="frm_nacimiento">
+                        <input type="text" class="tbl_modal" maxlength="65" id="frm_user_id" name="frm_user_id">
                     </div> 
                 </td>
-                <td class="table_title_cells"></td>
+                 <td class="table_title_cells"></td>
                 <td>
                     <input type="button" id="savefrmmodal" name="savefrmmodal" value="Guardar" style="border:0px;color:white;background:#0098AA;padding:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;margin-right:5px;">
                 </td>

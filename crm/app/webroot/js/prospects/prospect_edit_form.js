@@ -87,7 +87,7 @@ $(document).ready(function() {
                             alert('Error, por favor intentalo mas tarde.');
                         },
                         success: function(data) {
-                            if (Jdata.error) {
+                            if (data.error) {
                                 $('#frm_mo').find('input[type=text],select').css('border', '');
                                 $.each(data.focus, function(index, value) {
                                     $('#' + value).css({
