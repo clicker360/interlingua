@@ -190,7 +190,7 @@ echo $form->end();
                                   $rows = $stmt->fetchAll(PDO::FETCH_NUM);
                                   if($rows){
                                     foreach($rows as $value){
-                                       echo '<option value="'.$value[0].'">'.utf8_decode($value[1]).'</option>';                                      
+                                       echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';                                      
                                     }
                                   }
                                 }while($stmt->nextRowset());
