@@ -203,7 +203,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Usuario ID:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="20" id="frm_user_id" name="frm_user_id">
+                        <input type="text" class="tbl_modal" maxlength="10" id="frm_user_id" name="frm_user_id">
                     </div> 
                 </td>
                  <td class="table_title_cells"></td>
