@@ -930,7 +930,7 @@ class ProspectsController extends AppController{
                               'frm_email',
                               'frm_metodo',
                               'frm_medio',
-                              'frm_usuario_id');
+                              'frm_user_id');
         
         # Valida campos obligatorios
         foreach ($_POST as $key => $value) {

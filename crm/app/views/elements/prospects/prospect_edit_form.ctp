@@ -182,9 +182,9 @@ echo $form->end();
                 <td>
                     <div class="input text">                            
                         <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
-                            <option value="CHAT">Chat</option>
-                            <option value="EMAIL">Email</option>
-                            <option value="LLAMADA">Llamada</option>
+                            <option value="TTT">Chat</option>
+                            <option value="TTT">Email</option>
+                            <option value="TTT">Llamada</option>
                         </select>
                     </div> 
                 </td>
