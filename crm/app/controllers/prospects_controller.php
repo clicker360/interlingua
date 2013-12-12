@@ -1052,6 +1052,7 @@ class ProspectsController extends AppController{
                                             '".$USUARIO_ID."',
                                             '?',
                                             '?')";
+                print_r($sql);
                 $stmt = $db->prepare($sql);  
                 $stmt->bindParam(1, $matricula, PDO::PARAM_STR,100);
                 $stmt->bindParam(2, $msgError, PDO::PARAM_STR,100);
