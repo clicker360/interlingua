@@ -605,7 +605,7 @@ class ProspectsController extends AppController{
 		  $this->Email->template =  'gracias_bt';
 		  $this->Email->send();
 		  //debug($this->Email->smtpError);
-		  $this->redirect(Configure::read('host').'/gracias');
+		  $this->redirect(Configure::read('host').'/gracias_teachers');
                 break;
             default:
                 $mail = "";

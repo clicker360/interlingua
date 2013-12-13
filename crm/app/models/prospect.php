@@ -395,6 +395,10 @@ class Prospect extends AppModel {
             $conditions['AND']['Prospect.asesor LIKE'] = '%' . $filters['asesor'] . '%';
             unset($filters['asesor']);
         }
+        if (key_exists('origin_id', $filters)) {
+            $conditions['AND']['Prospect.origin_id'] = $filters['origin_id'];
+            unset($filters['origin_id']);
+        }
 
         if (key_exists('ORCondition', $filters)) {
             $conditions['OR'] = $filters['ORCondition'];

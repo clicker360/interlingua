@@ -63,8 +63,10 @@ echo $form->create('');
         </td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td>Origen:</td>
+        <td>
+            <?php echo $form->input('Prospect.origin_id', array('id' => 'search_prospect_origin_id', 'label' => false, 'type' => 'text')); ?>
+        </td>
         <td colspan="2" align="right">
             <input type="button" id="add_prospect_button" value="Agregar Contacto" class="button" />
             <input type="reset" class="button" />&nbsp;
