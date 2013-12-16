@@ -44,11 +44,26 @@
 ?>
     <table class="prospect_details_table">
             <?php echo $this->Crm->columnedFields($prospects,$fields)?>
-            <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
-                <option value="CHAT">Chat</option>
-                <option value="EMAIL">Email</option>
-                <option value="LLAMADA">Llamada</option>
-            </select>
+                <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
+                    <option value="CHAT">Chat</option>
+                    <option value="EMAIL">Email</option>
+                    <option value="LLAMADA">Llamada</option>
+                </select>
+                <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
+                    <?php                                 
+                        $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+                        $sql = "CALL SCAPAL.TMEDI_LISTA()";
+                        $stmt = $db->query($sql);
+                        do {
+                          $rows = $stmt->fetchAll(PDO::FETCH_NUM);
+                          if($rows){
+                            foreach($rows as $value){
+                               echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';                                      
+                            }
+                          }
+                        }while($stmt->nextRowset());
+                    ?>
+                </select>
     </table>
     <table width="100%"><tr>
         <td colspan="4" style="text-align:center;">
@@ -176,32 +191,14 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Medio de contacto:</td>
                 <td>
                     <div class="input text">                            
-                        <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
-                            <option value="CHAT">Chat</option>
-                            <option value="EMAIL">Email</option>
-                            <option value="LLAMADA">Llamada</option>
-                        </select>
+                    
                         <input type="text" class="tbl_modal" maxlength="30" id="frm_metodo" name="frm_metodo" disabled>
                     </div> 
                 </td>
                 <td  align="left" class="table_title_cells">Medio de publicidad:</td>
                 <td>
                     <div class="input text">                            
-                        <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
-                            <?php                                 
-                                $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-                                $sql = "CALL SCAPAL.TMEDI_LISTA()";
-                                $stmt = $db->query($sql);
-                                do {
-                                  $rows = $stmt->fetchAll(PDO::FETCH_NUM);
-                                  if($rows){
-                                    foreach($rows as $value){
-                                       echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';                                      
-                                    }
-                                  }
-                                }while($stmt->nextRowset());
-                            ?>
-                        </select>
+                        
                         <input type="text" class="tbl_modal" maxlength="30" id="frm_medio" name="frm_medio" disabled>
                     </div> 
                 </td>
