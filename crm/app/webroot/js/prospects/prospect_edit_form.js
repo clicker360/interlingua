@@ -73,7 +73,7 @@ $(document).ready(function() {
                 $('#frm_fax').val(params.celular);
                 //fecha_format = params.fecha_nacimiento.split('-');
                 //$('#frm_nacimiento').val(fecha_format[2] + fecha_format[1] + fecha_format[0]);
-                $('#frm_fax').val('hola');
+                $('#frm_rfcfecha').val('hola');
 
                 // Save AS400
                 $('#savefrmmodal').live('click', function(e) {
