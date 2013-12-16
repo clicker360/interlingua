@@ -34,7 +34,7 @@
         array('id'=>'1','label'=>'Fecha de nacimiento','model'=>'Prospect','keys'=>'fecha_nacimiento','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_fecha_nacimiento')),
         array('id'=>'1','label'=>'Clave AS400','model'=>'Prospect','keys'=>'clave_as_400','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_as400')),
         array('id'=>'1','label'=>'Fecha de cita','model'=>'Prospect','keys'=>'fecha_cita','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospects_fecha_cita')),
-        array('id'=>'3','label'=>'Plantel','model'=>'Prospect','keys'=>array('plantel'),'editable'=>false, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_plantel')),
+        array('id'=>'3','label'=>'Plantel','model'=>'Prospect','keys'=>array('plantel'),'editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_plantel')),
         array('id'=>'5','label'=>'Estado','model'=>'Prospect','keys'=>'estado','editable'=>false,'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_edo')),
         array('id'=>'6','label'=>'Usuario','model'=>'User','keys'=>'name','editable'=>false),
         array('id'=>'12','label'=>'Fecha Registro','model'=>'Prospect','keys'=>array('created'),'join'=>'','editable'=>false),

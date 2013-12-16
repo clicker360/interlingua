@@ -149,7 +149,7 @@ $(document).ready(function() {
         monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         closeText: 'Listo',
         currentText: 'Hoy',
-        dateFormat: 'dd-mm-yy',
+        dateFormat: 'ymmdd',
         changeMonth: true,
         changeYear: true,
         yearRange: '-100:+0'
