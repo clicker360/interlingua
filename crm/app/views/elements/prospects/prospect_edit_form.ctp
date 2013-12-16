@@ -20,7 +20,7 @@
     ));
 ?>
 <?php      
-    $optionsPublicidad = "";                           
+    $optionsPublicidad = array('test');                           
     /*$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
     $sql = "CALL SCAPAL.TMEDI_LISTA()";
     $stmt = $db->query($sql);
