@@ -54,7 +54,7 @@ $(document).ready(function() {
                     celular: $('#prospect_mobile_number').val(),
                     medio_contacto: $('#prospect_medio_contacto').val(),
                     medio_publicidad: $('#prospect_medio_publicidad').val(),
-                    medio_publicidad_fls: $('#prospect_medio_publicidad').val().text(),
+                    medio_publicidad_fls: $('#prospect_medio_publicidad:select').text(),
                     fecha_nacimiento: $('#prospect_fecha_nacimiento').val(),
                     clave_AS400: $('#prospect_as400').val(),
                     fecha_cita: $('#prospects_fecha_cita').val(),
