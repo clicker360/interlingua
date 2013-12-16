@@ -19,6 +19,21 @@
         'id'    => 'propsEdo','type'  =>'hidden','value' => $prospect['estado']
     ));
 ?>
+<?php                                 
+    $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+    $sql = "CALL SCAPAL.TMEDI_LISTA()";
+    $stmt = $db->query($sql);
+    $optionsPublicidad = array();
+    do {
+      $rows = $stmt->fetchAll(PDO::FETCH_NUM);
+      if($rows){
+        foreach($rows as $value){
+           //echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';        
+           $optionsPublicidad[$value[0]] = utf8_encode($value[1]);
+        }
+      }
+    }while($stmt->nextRowset());
+?>
 <?php
     echo $this->Html->script('prospects/view_prospect_details');
     $fields =array(
@@ -30,7 +45,7 @@
         array('id'=>'3','label'=>'Telefono','model'=>'Prospect','keys'=>array('phone_number'),'editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_phone_number')),
         array('id'=>'3','label'=>'Celular','model'=>'Prospect','keys'=>array('mobile_number'),'editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_mobile_number')),
         array('id'=>'1','label'=>'Medio de contacto','model'=>'Prospect','keys'=>'medio_contacto','editable'=>true, 'options'=>array('id' => 'prospect_medio_contacto', 'label' => false, 'type' => 'select', 'options' => array('CHAT'=>'Chat','EMAIL'=>'Email','LLAMADA'=>'Llamada'), 'empty' => 'Selecciona medio de contacto')),
-        array('id'=>'1','label'=>'Medio de publicidad','model'=>'Prospect','keys'=>'medio_publicidad','editable'=>true, 'options'=>array('id' => 'prospect_medio_publicidad', 'label' => false, 'type' => 'select', 'options' => array('CHAT'=>'Chat','EMAIL'=>'Email','LLAMADA'=>'Llamada'), 'empty' => 'Selecciona medio de contacto')),
+        array('id'=>'1','label'=>'Medio de publicidad','model'=>'Prospect','keys'=>'medio_publicidad','editable'=>true, 'options'=>array('id' => 'prospect_medio_publicidad', 'label' => false, 'type' => 'select', 'options' => $optionsPublicidad, 'empty' => 'Selecciona medio de publicidad')),
         array('id'=>'1','label'=>'Fecha de nacimiento','model'=>'Prospect','keys'=>'fecha_nacimiento','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_fecha_nacimiento')),
         array('id'=>'1','label'=>'Clave AS400','model'=>'Prospect','keys'=>'clave_as_400','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospect_as400')),
         array('id'=>'1','label'=>'Fecha de cita','model'=>'Prospect','keys'=>'fecha_cita','editable'=>true, 'options'=>array('label'=>false,'type'=>'text','id'=>'prospects_fecha_cita')),
@@ -44,26 +59,6 @@
 ?>
     <table class="prospect_details_table">
             <?php echo $this->Crm->columnedFields($prospects,$fields)?>
-            <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
-                <option value="CHAT">Chat</option>
-                <option value="EMAIL">Email</option>
-                <option value="LLAMADA">Llamada</option>
-            </select>
-            <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
-                <?php                                 
-                    $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-                    $sql = "CALL SCAPAL.TMEDI_LISTA()";
-                    $stmt = $db->query($sql);
-                    do {
-                      $rows = $stmt->fetchAll(PDO::FETCH_NUM);
-                      if($rows){
-                        foreach($rows as $value){
-                           echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';                                      
-                        }
-                      }
-                    }while($stmt->nextRowset());
-                ?>
-            </select>
     </table>
     <table width="100%"><tr>
         <td colspan="4" style="text-align:center;">
