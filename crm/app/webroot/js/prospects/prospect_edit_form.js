@@ -71,8 +71,9 @@ $(document).ready(function() {
                 $('#frm_telefono').val(params.telefono);
                 $('#frm_email').val(params.email);
                 $('#frm_fax').val(params.celular);
-                fecha_format = params.fecha_nacimiento.split('-');
-                $('#frm_nacimiento').val(fecha_format[2] + fecha_format[1] + fecha_format[0]);
+                //fecha_format = params.fecha_nacimiento.split('-');
+                //$('#frm_nacimiento').val(fecha_format[2] + fecha_format[1] + fecha_format[0]);
+                $('#frm_fax').val('hola');
 
                 // Save AS400
                 $('#savefrmmodal').live('click', function(e) {
