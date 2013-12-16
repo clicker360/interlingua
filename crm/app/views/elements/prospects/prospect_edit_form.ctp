@@ -19,8 +19,9 @@
         'id'    => 'propsEdo','type'  =>'hidden','value' => $prospect['estado']
     ));
 ?>
-<?php                                 
-    $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+<?php      
+    $optionsPublicidad = "";                           
+    /*$db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
     $sql = "CALL SCAPAL.TMEDI_LISTA()";
     $stmt = $db->query($sql);
     $optionsPublicidad = array();
@@ -29,10 +30,10 @@
       if($rows){
         foreach($rows as $value){
            //echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';        
-           $optionsPublicidad[trim($value[0])] = utf8_encode($value[1]);
+           $optionsPublicidad[$value[0]] = utf8_encode($value[1]);
         }
       }
-    }while($stmt->nextRowset());
+    }while($stmt->nextRowset());*/
 ?>
 <?php
     echo $this->Html->script('prospects/view_prospect_details');

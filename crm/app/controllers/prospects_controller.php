@@ -910,7 +910,7 @@ class ProspectsController extends AppController{
         header('Access-Control-Allow-Methods: GET, POST');  
         $this->autoRender = false;
         Configure::write('debug', '2');
-
+        
         // Variables de configuración
         $response    = array();
         $error       = false;
@@ -1028,26 +1028,6 @@ class ProspectsController extends AppController{
             $MEDIOCONTACTO      = trim($_POST["frm_medio"]);
             $USUARIO_ID         = trim($_POST["frm_user_id"]);
 
-            $sql = "CALL SCAPAL.TPRSP_ALTATELEMARKETING('".$RFCLETRAS."',
-                                            ".$RFCFECHA.",
-                                            '".$RFCHOMO."',
-                                            '".$RFCDIGITO."',
-                                            '".$NOMBRE."',
-                                            '".$PATERNO."',
-                                            '".$MATERNO."',                                            
-                                            '".$LADAPARTICULAR."',
-                                            '".$TELEFONOPARTICULAR."',
-                                            '".$LADAOFICINA."',
-                                            '".$TELEFONOOFICINA."',
-                                            '".$EXTENCIONOFICINA."',
-                                            '".$CELULAR."',
-                                            '".$EMAIL."',
-                                            '".$METODOCONTACTO."',
-                                            '".$MEDIOCONTACTO."',
-                                            '".$USUARIO_ID."',
-                                            ?,
-                                            ?)";
-            echo $sql;
             # Conexion con AS400
             try{
                 $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
