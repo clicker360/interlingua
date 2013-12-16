@@ -44,6 +44,11 @@
 ?>
     <table class="prospect_details_table">
             <?php echo $this->Crm->columnedFields($prospects,$fields)?>
+            <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
+                <option value="CHAT">Chat</option>
+                <option value="EMAIL">Email</option>
+                <option value="LLAMADA">Llamada</option>
+            </select>
     </table>
     <table width="100%"><tr>
         <td colspan="4" style="text-align:center;">
@@ -176,6 +181,7 @@ echo $form->end();
                             <option value="EMAIL">Email</option>
                             <option value="LLAMADA">Llamada</option>
                         </select>
+                        <input type="text" class="tbl_modal" maxlength="30" id="frm_metodo" name="frm_metodo" disabled>
                     </div> 
                 </td>
                 <td  align="left" class="table_title_cells">Medio de publicidad:</td>
@@ -196,6 +202,7 @@ echo $form->end();
                                 }while($stmt->nextRowset());
                             ?>
                         </select>
+                        <input type="text" class="tbl_modal" maxlength="30" id="frm_medio" name="frm_medio" disabled>
                     </div> 
                 </td>
             </tr>
