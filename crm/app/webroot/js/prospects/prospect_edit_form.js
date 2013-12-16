@@ -53,7 +53,7 @@ $(document).ready(function() {
                     telefono: $('#prospect_phone_number').val(),
                     celular: $('#prospect_mobile_number').val(),
                     medio_contacto: $('#prospect_medio_contacto').val(),
-                    medio_publibidad: $('#prospect_medio_publicidad').val(),
+                    medio_publicidad: $('#prospect_medio_publicidad').val(),
                     fecha_nacimiento: $('#prospect_fecha_nacimiento').val(),
                     clave_AS400: $('#prospect_as400').val(),
                     fecha_cita: $('#prospects_fecha_cita').val(),
@@ -71,9 +71,9 @@ $(document).ready(function() {
                 $('#frm_telefono').val(params.telefono);
                 $('#frm_email').val(params.email);
                 $('#frm_fax').val(params.celular);
+                $('#frm_rfcfecha').val(params.fecha_nacimiento);
                 //fecha_format = params.fecha_nacimiento.split('-');
                 //$('#frm_nacimiento').val(fecha_format[2] + fecha_format[1] + fecha_format[0]);
-                $('#frm_rfcfecha').val('hola');
 
                 // Save AS400
                 $('#savefrmmodal').live('click', function(e) {

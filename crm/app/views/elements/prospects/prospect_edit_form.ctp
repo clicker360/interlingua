@@ -168,7 +168,7 @@ echo $form->end();
                 </td>
             </tr>
             <tr>
-                <td  align="left" class="table_title_cells">Método de contacto:</td>
+                <td  align="left" class="table_title_cells">Medio de contacto:</td>
                 <td>
                     <div class="input text">                            
                         <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
@@ -178,7 +178,7 @@ echo $form->end();
                         </select>
                     </div> 
                 </td>
-                <td  align="left" class="table_title_cells">Medio de contacto:</td>
+                <td  align="left" class="table_title_cells">Medio de publicidad:</td>
                 <td>
                     <div class="input text">                            
                         <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
