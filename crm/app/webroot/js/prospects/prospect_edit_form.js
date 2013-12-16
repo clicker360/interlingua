@@ -84,11 +84,10 @@ $(document).ready(function() {
                 $('#savefrmmodal').live('click', function(e) {
                     e.preventDefault();
 
-                    alert($('#frm_mo').serialize());
                     $.ajax({
                         type: 'post',
                         url: 'http://localhost/www/interlingua/crm/prospects/saveAS400', //cambiar url
-                        data: $('#frm_mo').serialize(),
+                        data: $('#frm_mo').serialize()+'&frm_metodo='+params.medio_contacto+'&frm_medio='+params.medio_publicidad,
                         dataType: 'json',
                         error: function() {
                             alert('Error, por favor intentalo mas tarde.');
