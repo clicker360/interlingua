@@ -54,15 +54,13 @@ $(document).ready(function() {
                     celular: $('#prospect_mobile_number').val(),
                     medio_contacto: $('#prospect_medio_contacto').val(),
                     medio_publicidad: $('#prospect_medio_publicidad').val(),
-                    medio_publicidad_fls: $('#prospect_medio_publicidad:selected').val(),
+                    medio_publicidad_fls: $('#prospect_medio_publicidad option:selected').text(),
                     fecha_nacimiento: $('#prospect_fecha_nacimiento').val(),
                     clave_AS400: $('#prospect_as400').val(),
                     fecha_cita: $('#prospects_fecha_cita').val(),
                     plantel: $('#prospPlantel').val(),
                     estado: $('#propsEdo').val()
                 };
-
-                alert($('#prospect_medio_publicidad:selected').html());
 
                 // Load datos a modal
                 $('#frm_nombre').val(params.name);
