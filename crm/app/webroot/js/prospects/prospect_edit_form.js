@@ -54,6 +54,7 @@ $(document).ready(function() {
                     celular: $('#prospect_mobile_number').val(),
                     medio_contacto: $('#prospect_medio_contacto').val(),
                     medio_publicidad: $('#prospect_medio_publicidad').val(),
+                    medio_publicidad_fls: $('#prospect_medio_publicidad').attr("value"),
                     fecha_nacimiento: $('#prospect_fecha_nacimiento').val(),
                     clave_AS400: $('#prospect_as400').val(),
                     fecha_cita: $('#prospects_fecha_cita').val(),
@@ -74,6 +75,8 @@ $(document).ready(function() {
                 $('#frm_rfcfecha').val(params.fecha_nacimiento);
                 $('#frm_metodo').val(params.medio_contacto);
                 $('#frm_medio').val(params.medio_publicidad);
+                $('#frm_medio_fls').val(params.medio_publicidad_fls);
+                $('#frm_cel').val(params.celular);
                 //fecha_format = params.fecha_nacimiento.split('-');
                 //$('#frm_nacimiento').val(fecha_format[2] + fecha_format[1] + fecha_format[0]);
 
