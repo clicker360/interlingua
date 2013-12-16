@@ -84,6 +84,7 @@ $(document).ready(function() {
                 $('#savefrmmodal').live('click', function(e) {
                     e.preventDefault();
 
+                    alert($('#frm_mo').serialize());
                     $.ajax({
                         type: 'post',
                         url: 'http://localhost/www/interlingua/crm/prospects/saveAS400', //cambiar url

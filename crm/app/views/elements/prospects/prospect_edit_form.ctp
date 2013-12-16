@@ -186,7 +186,6 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Medio de contacto:</td>
                 <td>
                     <div class="input text">                            
-                    
                         <input type="text" class="tbl_modal" maxlength="30" id="frm_metodo" name="frm_metodo" disabled>
                     </div> 
                 </td>
