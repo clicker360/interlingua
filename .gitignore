@@ -1,3 +1,4 @@
 ###### Ignore Files Config ######
 .htaccess
 wp-config.php
+database.php
