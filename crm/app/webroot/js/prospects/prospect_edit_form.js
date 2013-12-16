@@ -53,6 +53,7 @@ $(document).ready(function() {
                     telefono: $('#prospect_phone_number').val(),
                     celular: $('#prospect_mobile_number').val(),
                     medio_contacto: $('#prospect_medio_contacto').val(),
+                    medio_contacto_fls: $('#prospect_medio_contacto option:selected').text(),
                     medio_publicidad: $('#prospect_medio_publicidad').val(),
                     medio_publicidad_fls: $('#prospect_medio_publicidad option:selected').text(),
                     fecha_nacimiento: $('#prospect_fecha_nacimiento').val(),
@@ -74,6 +75,7 @@ $(document).ready(function() {
                 $('#frm_fax').val(params.celular);
                 $('#frm_rfcfecha').val(params.fecha_nacimiento);
                 $('#frm_metodo').val(params.medio_contacto);
+                $('#frm_metodo_fls').val(params.medio_contacto_fls);
                 $('#frm_medio').val(params.medio_publicidad);
                 $('#frm_medio_fls').val(params.medio_publicidad_fls);
                 $('#frm_cel').val(params.celular);
@@ -87,7 +89,7 @@ $(document).ready(function() {
                     $.ajax({
                         type: 'post',
                         url: 'http://localhost/www/interlingua/crm/prospects/saveAS400', //cambiar url
-                        data: $('#frm_mo').serialize()+'&frm_metodo='+params.medio_contacto+'&frm_medio='+params.medio_publicidad,
+                        data: $('#frm_mo').serialize(),
                         dataType: 'json',
                         error: function() {
                             alert('Error, por favor intentalo mas tarde.');

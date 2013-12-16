@@ -186,14 +186,15 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">Medio de contacto:</td>
                 <td>
                     <div class="input text">                            
-                        <input type="text" class="tbl_modal" maxlength="30" id="frm_metodo" name="frm_metodo" disabled>
+                        <input type="text" class="tbl_modal" maxlength="30" id="frm_metodo_fls" name="frm_metodo_fls" disabled>
+                        <input type="hidden" class="tbl_modal" maxlength="30" id="frm_metodo" name="frm_metodo">
                     </div> 
                 </td>
                 <td  align="left" class="table_title_cells">Medio de publicidad:</td>
                 <td>
                     <div class="input text">                            
                         <input type="text" class="tbl_modal" maxlength="30" id="frm_medio_fls" name="frm_medio_fls" disabled>
-                        <input type="hidden" class="tbl_modal" maxlength="30" id="frm_medio" name="frm_medio" disabled>
+                        <input type="hidden" class="tbl_modal" maxlength="30" id="frm_medio" name="frm_medio">
                     </div> 
                 </td>
             </tr>
