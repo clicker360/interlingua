@@ -29,7 +29,7 @@
       if($rows){
         foreach($rows as $value){
            //echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';        
-           $optionsPublicidad[$value[0]] = utf8_encode($value[1]);
+           $optionsPublicidad[trim($value[0])] = utf8_encode($value[1]);
         }
       }
     }while($stmt->nextRowset());
