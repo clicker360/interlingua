@@ -44,26 +44,28 @@
 ?>
     <table class="prospect_details_table">
             <?php echo $this->Crm->columnedFields($prospects,$fields)?>
-                <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
-                    <option value="CHAT">Chat</option>
-                    <option value="EMAIL">Email</option>
-                    <option value="LLAMADA">Llamada</option>
-                </select>
-                <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
-                    <?php                                 
-                        $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
-                        $sql = "CALL SCAPAL.TMEDI_LISTA()";
-                        $stmt = $db->query($sql);
-                        do {
-                          $rows = $stmt->fetchAll(PDO::FETCH_NUM);
-                          if($rows){
-                            foreach($rows as $value){
-                               echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';                                      
-                            }
-                          }
-                        }while($stmt->nextRowset());
-                    ?>
-                </select>
+            <tr>
+            <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
+                <option value="CHAT">Chat</option>
+                <option value="EMAIL">Email</option>
+                <option value="LLAMADA">Llamada</option>
+            </select>
+            <select name="frm_medio" class="tbl_modal" id="frm_medio" style="float:left;">
+                <?php                                 
+                    $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP","CLICKER","CLICKER");
+                    $sql = "CALL SCAPAL.TMEDI_LISTA()";
+                    $stmt = $db->query($sql);
+                    do {
+                      $rows = $stmt->fetchAll(PDO::FETCH_NUM);
+                      if($rows){
+                        foreach($rows as $value){
+                           echo '<option value="'.$value[0].'">'.utf8_encode($value[1]).'</option>';                                      
+                        }
+                      }
+                    }while($stmt->nextRowset());
+                ?>
+            </select>
+            </tr>
     </table>
     <table width="100%"><tr>
         <td colspan="4" style="text-align:center;">
