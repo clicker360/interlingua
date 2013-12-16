@@ -1,6 +1,5 @@
 <?php
 class ProspectsController extends AppController{
-
     public $name = 'Prospects';
     public $uses = array(
         'Prospect',
@@ -184,7 +183,7 @@ class ProspectsController extends AppController{
         //echo $plantel;
     }
     public function kpi(){
-	$mes = date('m');
+    $mes = date('m');
          if(isset($_GET['mes'])){
              if($_GET['mes'])
                  $mes = $_GET['mes'];
@@ -204,7 +203,7 @@ class ProspectsController extends AppController{
    public function envio_email($template = null, $datos = array()){
        
                 $this->autoRender = false;
-	if($template && $datos != array()){            
+    if($template && $datos != array()){            
                 /*$this->Email->smtpOptions = array(
                 'port'=>'465',
                 'timeout'=>'30',
@@ -213,14 +212,14 @@ class ProspectsController extends AppController{
                 'password'=>'pocagente'
                 );
                 $this->Email->delivery = 'smtp';*/
-		$this->set(compact('datos'));
-		$this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+        $this->set(compact('datos'));
+        $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
                 $this->Email->to = $datos['email'];
                 $this->Email->subject = 'Gracias';
                 $this->Email->sendAs = 'html';
                 $this->Email->template =  $template;
                 $this->Email->send();
-	}
+    }
 }
     public function add(){
         
@@ -296,14 +295,14 @@ class ProspectsController extends AppController{
                             /*else if($this->data['origin_id'] == '6')
                                 $this->redirect(Configure::read('host').'cursosdeverano/gracias.html'); */                   
                     }else if($prospect['origin_id'] == '7'){
-			//$this->redirect('http://dev.clicker360.com/interlingua/regresoaclases1/gracias.html');
-			 $this->envio_email('gracias_joven',$datos);
-			 echo "<script>parent.window.location='http://www.interlingua.com.mx/buenfin/gracias.html';</script>";
-		    }else if($prospect['origin_id'] == '8'){
-			$this->redirect('http://dev.clicker360.com/interlingua/regresoaclases2/gracias.html');
-		    }else if($prospect['origin_id'] >= 9 && $prospect['origin_id'] <= 89){
+            //$this->redirect('http://dev.clicker360.com/interlingua/regresoaclases1/gracias.html');
+             $this->envio_email('gracias_joven',$datos);
+             echo "<script>parent.window.location='http://www.interlingua.com.mx/buenfin/gracias.html';</script>";
+            }else if($prospect['origin_id'] == '8'){
+            $this->redirect('http://dev.clicker360.com/interlingua/regresoaclases2/gracias.html');
+            }else if($prospect['origin_id'] >= 9 && $prospect['origin_id'] <= 89){
                 $this->redirect('http://www.interlingua.com.mx/gracias/');
-	        }else if($prospect['origin_id'] == 90){
+            }else if($prospect['origin_id'] == 90){
                 $this->redirect('http://www.interlingua.com.mx/gracias-test?niv='.$_POST['niv_test']);
             }
                 }
@@ -327,8 +326,8 @@ class ProspectsController extends AppController{
 
     public function list_unassigned_prospects($place = null){
         $this->layout = 'ajax';
-	if($this->Session->read('Auth.User.level')<3){
-		    $unassigned_prospects = $this->Prospect->getUnassignedProspects($this->Session->read('Auth.User.place_id'));
+    if($this->Session->read('Auth.User.level')<3){
+            $unassigned_prospects = $this->Prospect->getUnassignedProspects($this->Session->read('Auth.User.place_id'));
         } else {
             $unassigned_prospects = $this->Prospect->getUnassignedProspects();
         }
@@ -526,21 +525,21 @@ class ProspectsController extends AppController{
                     Comentarios: ".$_POST["comments"];
                    
                    //envia email a interlingua
-		  $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
-		  $this->Email->to = $mail;
-		  $this->Email->subject = 'Contacto';
-		  $this->Email->sendAs = 'html';
-		  $this->Email->send($msjMail);
-		  
-		   //envia email de respuesta
-		  $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
-		  $this->Email->to = $_POST["email"];
-		  $this->Email->subject = 'Gracias';
-		  $this->Email->sendAs = 'html';
-		  $this->Email->template =  'gracias_franq';
-		  $this->Email->send();
-		  //debug($this->Email->smtpError);
-		  $this->redirect(Configure::read('host').'/gracias');
+          $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+          $this->Email->to = $mail;
+          $this->Email->subject = 'Contacto';
+          $this->Email->sendAs = 'html';
+          $this->Email->send($msjMail);
+          
+           //envia email de respuesta
+          $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+          $this->Email->to = $_POST["email"];
+          $this->Email->subject = 'Gracias';
+          $this->Email->sendAs = 'html';
+          $this->Email->template =  'gracias_franq';
+          $this->Email->send();
+          //debug($this->Email->smtpError);
+          $this->redirect(Configure::read('host').'/gracias');
                 break;
             case 'empresas':
                 $mail = "informacion@interlingua.com.mx";
@@ -558,21 +557,21 @@ class ProspectsController extends AppController{
                     Comentarios: ".$_POST["comentario"];  
                     
                     //envia email a interlingua
-		  $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
-		  $this->Email->to = $mail;
-		  $this->Email->subject = 'Contacto';
-		  $this->Email->sendAs = 'html';
-		  $this->Email->send($msjMail);
-		  
-		   //envia email de respuesta
-		  $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
-		  $this->Email->to = $_POST["email"];
-		  $this->Email->subject = 'Gracias';
-		  $this->Email->sendAs = 'html';
-		  $this->Email->template =  'gracias_emp';
-		  $this->Email->send();
-		  //debug($this->Email->smtpError);
-		  $this->redirect(Configure::read('host').'/gracias');
+          $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+          $this->Email->to = $mail;
+          $this->Email->subject = 'Contacto';
+          $this->Email->sendAs = 'html';
+          $this->Email->send($msjMail);
+          
+           //envia email de respuesta
+          $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+          $this->Email->to = $_POST["email"];
+          $this->Email->subject = 'Gracias';
+          $this->Email->sendAs = 'html';
+          $this->Email->template =  'gracias_emp';
+          $this->Email->send();
+          //debug($this->Email->smtpError);
+          $this->redirect(Configure::read('host').'/gracias');
                 break;
             case 'bolsaTrabajo':
                 $mail = "acarranza@interlingua.com.mx";
@@ -591,34 +590,34 @@ class ProspectsController extends AppController{
                     Comentarios: ".$_POST["comments"];
                     
                     //envia email a interlingua
-		  $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
-		  $this->Email->to = $mail;
-		  $this->Email->subject = 'Contacto';
-		  $this->Email->sendAs = 'html';
-		  $this->Email->send($msjMail);
-		  
-		   //envia email de respuesta
-		  $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
-		  $this->Email->to = $_POST["email"];
-		  $this->Email->subject = 'Gracias';
-		  $this->Email->sendAs = 'html';
-		  $this->Email->template =  'gracias_bt';
-		  $this->Email->send();
-		  //debug($this->Email->smtpError);
-		  $this->redirect(Configure::read('host').'/gracias_teachers');
+          $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+          $this->Email->to = $mail;
+          $this->Email->subject = 'Contacto';
+          $this->Email->sendAs = 'html';
+          $this->Email->send($msjMail);
+          
+           //envia email de respuesta
+          $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+          $this->Email->to = $_POST["email"];
+          $this->Email->subject = 'Gracias';
+          $this->Email->sendAs = 'html';
+          $this->Email->template =  'gracias_bt';
+          $this->Email->send();
+          //debug($this->Email->smtpError);
+          $this->redirect(Configure::read('host').'/gracias_teachers');
                 break;
             default:
                 $mail = "";
                 break;
         }
-	/*$this->Email->smtpOptions = array(
+    /*$this->Email->smtpOptions = array(
                 'port'=>'25',
                 'timeout'=>'30',
                 'host'=>'smtp.emailsrvr.com',
                 'username'=>'send@ingeniagroup.com.mx',
                 'password'=>"qwerty"
                 );
-	$this->Email->delivery = 'smtp';*/
+    $this->Email->delivery = 'smtp';*/
         
 
        
@@ -856,38 +855,38 @@ class ProspectsController extends AppController{
         $html_tx = "<div class='ctn-pre' id='ctn-preg".$nivel."'><h1>Nivel ".$nivelTxt."</h1>";
         foreach ($preguntas as $value) {
             foreach ($value as $key => $val) {
-            	if( $val["imagen"] != ""){
-            		$imgTest = "<img class='imgItemTest' src='http://www.interlingua.com.mx/wp-content/themes/interlingua/library/images/images_test/".$val["imagen"]."' />";
-            	}else{
-            		$imgTest = "";
-            	}
+                if( $val["imagen"] != ""){
+                    $imgTest = "<img class='imgItemTest' src='http://www.interlingua.com.mx/wp-content/themes/interlingua/library/images/images_test/".$val["imagen"]."' />";
+                }else{
+                    $imgTest = "";
+                }
                  $html_tx .= "<div class='item'>
-                 				<div class='preguntasIzq'>
-	                                <h3>".$val["pregunta"]."</h3>
-	                                <div class='respuestas'>
-	                                	<input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='1' checked> 
-	                                	<label for='resp".$val["id"]."'>
-	                                		".$val["opcion_1"]."
-	                                	</label>
-	                                </div>
-	                                <div class='respuestas'>
-	                                	<input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='2'>
-	                                	<label for='resp".$val["id"]."'>
-	                                		".$val["opcion_2"]."
-	                                	</label>
-	                                </div>
-	                                <div class='respuestas'>
-	                                	<input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='3'>
-	                                	<label for='resp".$val["id"]."'>
-	                                		".$val["opcion_3"]."
-	                                	</label>
-	                                </div>
-	                                <div class='respuestas'>
-										<input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='4'>
-										<label for='resp".$val["id"]."'>
-	                                		".$val["opcion_4"]."
-	                                	</label>
-                                	</div>
+                                <div class='preguntasIzq'>
+                                    <h3>".$val["pregunta"]."</h3>
+                                    <div class='respuestas'>
+                                        <input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='1' checked> 
+                                        <label for='resp".$val["id"]."'>
+                                            ".$val["opcion_1"]."
+                                        </label>
+                                    </div>
+                                    <div class='respuestas'>
+                                        <input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='2'>
+                                        <label for='resp".$val["id"]."'>
+                                            ".$val["opcion_2"]."
+                                        </label>
+                                    </div>
+                                    <div class='respuestas'>
+                                        <input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='3'>
+                                        <label for='resp".$val["id"]."'>
+                                            ".$val["opcion_3"]."
+                                        </label>
+                                    </div>
+                                    <div class='respuestas'>
+                                        <input type='radio' name='resp".$val["id"]."' data-sel='inpt".$nivel."' data-id='".$val["id"]."' value='4'>
+                                        <label for='resp".$val["id"]."'>
+                                            ".$val["opcion_4"]."
+                                        </label>
+                                    </div>
                                 </div>
                                  ".$imgTest."
                             </div>";
@@ -910,7 +909,7 @@ class ProspectsController extends AppController{
         header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: GET, POST');  
         $this->autoRender = false;
-        //Configure::write('debug', '2');
+        Configure::write('debug', '2');
 
         // Variables de configuración
         $response    = array();
@@ -1097,7 +1096,7 @@ class ProspectsController extends AppController{
         $flag = $_POST["fla"];
         $nivel = (isset($_POST["nivel"]))?$_POST["nivel"]:-1;
         
-      	switch ($nivel) {
+        switch ($nivel) {
             case -1:
                 $nivelTxt = "Preliminar";
                 break;
@@ -1136,7 +1135,7 @@ class ProspectsController extends AppController{
                 $resultado['nivel'] = $_POST["niv"];
                 $resultado['flag'] = $flag+1;
                 $resultado['respuesta'] = $respValid;
-				$resultado['nivelTxt'] = $nivelTxt;    
+                $resultado['nivelTxt'] = $nivelTxt;    
             }
         }else{
             if ($_POST["niv"] == 10) {
@@ -1144,13 +1143,13 @@ class ProspectsController extends AppController{
                 $resultado['nivel'] = 11;
                 $resultado['flag'] = 0;
                 $resultado['respuesta'] = $respValid;
-				$resultado['nivelTxt'] = $nivelTxt;  
+                $resultado['nivelTxt'] = $nivelTxt;  
             }else{
                 $resultado['option'] = "random";
                 $resultado['nivel'] = $_POST["niv"]+1;
                 $resultado['flag'] = 0;
                 $resultado['respuesta'] = $respValid;
-				$resultado['nivelTxt'] = $nivelTxt;
+                $resultado['nivelTxt'] = $nivelTxt;
             }          
         }
         sleep(1);
