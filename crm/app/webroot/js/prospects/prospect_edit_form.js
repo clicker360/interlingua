@@ -72,6 +72,8 @@ $(document).ready(function() {
                 $('#frm_email').val(params.email);
                 $('#frm_fax').val(params.celular);
                 $('#frm_rfcfecha').val(params.fecha_nacimiento);
+                $('#frm_metodo').val(params.medio_contacto);
+                $('#frm_medio').val(params.medio_publicidad);
                 //fecha_format = params.fecha_nacimiento.split('-');
                 //$('#frm_nacimiento').val(fecha_format[2] + fecha_format[1] + fecha_format[0]);
 
