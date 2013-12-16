@@ -39,16 +39,16 @@
         array('id'=>'6','label'=>'Usuario','model'=>'User','keys'=>'name','editable'=>false),
         array('id'=>'12','label'=>'Fecha Registro','model'=>'Prospect','keys'=>array('created'),'join'=>'','editable'=>false),
         array('id'=>'13','label'=>'Fecha de Asignación','model'=>'Prospect','keys'=>array('assignation_date'),'join'=>'','editable'=>false),
-        array('id'=>'14','label'=>'Fecha de Última Atención','model'=>'Prospect','keys'=>array('Prospect.last_contact_date'),'join'=>'','editable'=>false),
-        '<select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
-                <option value="CHAT">Chat</option>
-                <option value="EMAIL">Email</option>
-                <option value="LLAMADA">Llamada</option>
-            </select>'
+        array('id'=>'14','label'=>'Fecha de Última Atención','model'=>'Prospect','keys'=>array('Prospect.last_contact_date'),'join'=>'','editable'=>false)
     );
 ?>
     <table class="prospect_details_table">
             <?php echo $this->Crm->columnedFields($prospects,$fields)?>
+            <select name="frm_metodo" class="tbl_modal" id="frm_metodo" style="float:left;">
+                <option value="CHAT">Chat</option>
+                <option value="EMAIL">Email</option>
+                <option value="LLAMADA">Llamada</option>
+            </select>
     </table>
     <table width="100%"><tr>
         <td colspan="4" style="text-align:center;">
