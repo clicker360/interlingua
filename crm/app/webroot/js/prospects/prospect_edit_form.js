@@ -88,7 +88,7 @@ $(document).ready(function() {
 
                     $.ajax({
                         type: 'post',
-                        url: 'http://interlibngua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
+                        url: 'http://interlingua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
                         data: $('#frm_mo').serialize(),
                         dataType: 'json',
                         error: function() {
