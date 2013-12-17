@@ -37,7 +37,7 @@ $(document).ready(function() {
             guardar_as400 = true;
         }
     });
-    if (guardar_as400) {
+    if (guardar_as400) {    
         var verifySaveAS400 = $('#verifySave').val();
         if (verifySaveAS400 == 0) {
             $('#btn-as400').html('<a style="text-decoration:none;border:0px;color:white;background:#EB7126;padding:7px;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" data-reveal-id="myModal">Guardar en AS400</a>');
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
                     $.ajax({
                         type: 'post',
-                        url: 'http://localhost/www/interlingua/crm/prospects/saveAS400', //cambiar url
+                        url: 'http://interlibngua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
                         data: $('#frm_mo').serialize(),
                         dataType: 'json',
                         error: function() {
