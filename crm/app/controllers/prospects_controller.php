@@ -910,7 +910,7 @@ class ProspectsController extends AppController{
         header('Access-Control-Allow-Methods: GET, POST');  
         $this->autoRender = false;
         Configure::write('debug', '2');
-        
+
         // Variables de configuración
         $response    = array();
         $error       = false;
