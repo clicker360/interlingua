@@ -2,6 +2,12 @@
     echo $this->Html->script('prospects/prospect_edit_form');
 ?>
 
+<script>
+     function aMays(e, elemento) {
+            tecla=(document.all) ? e.keyCode : e.which; 
+            elemento.value = elemento.value.toUpperCase();
+    }
+</script>
 
 <h2>Datos de Prospecto</h2>
 <?php echo $form->create('Prospect', array('action'=>'store_prospect')); ?>

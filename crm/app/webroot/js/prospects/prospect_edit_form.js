@@ -223,9 +223,4 @@ $(document).ready(function() {
         );
         return false;
     });
-
-            function aMays(e, elemento) {
-                tecla=(document.all) ? e.keyCode : e.which; 
-                elemento.value = elemento.value.toUpperCase();
-            }
 });
