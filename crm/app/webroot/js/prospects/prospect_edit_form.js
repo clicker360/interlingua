@@ -48,9 +48,8 @@ $(document).ready(function() {
                 v02 = jQuery("#prospect_medio_contacto").val();
                 if(v01=="" || v02==""){
                     alert("Asegúrate de seleccionar medio de publicidad y medio de contacto");
-                    jQuery("#myModal").reveal();
                 }else{
-
+                jQuery("#myModal").reveal();
                 // Modal Save AS400
                 var params = {
                     name: $('#prospect_name').val(),
