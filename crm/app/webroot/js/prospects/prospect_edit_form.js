@@ -43,6 +43,9 @@ $(document).ready(function() {
             $('#btn-as400').html('<a style="text-decoration:none;border:0px;color:white;background:#EB7126;padding:7px;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" data-reveal-id="myModal">Guardar en AS400</a>');
             $('#btnSaveAS400').live('click', function(e) {
                 e.preventDefault();
+
+                alert("tttt");
+
                 // Modal Save AS400
                 var params = {
                     name: $('#prospect_name').val(),
@@ -85,7 +88,7 @@ $(document).ready(function() {
                 // Save AS400
                 $('#savefrmmodal').live('click', function(e) {
                     e.preventDefault();
-                    alert("tes");
+
                     $.ajax({
                         type: 'post',
                         url: 'http://interlingua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
