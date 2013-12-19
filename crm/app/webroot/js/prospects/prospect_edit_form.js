@@ -1,10 +1,4 @@
 $(document).ready(function() {
-
-    function aMays(e, elemento) {
-        tecla=(document.all) ? e.keyCode : e.which; 
-        elemento.value = elemento.value.toUpperCase();
-    }
-
     // Acción para guardar en AS400 //
     $('#frm_nacimiento').datepicker({
         showButtonPanel: true,
@@ -229,4 +223,9 @@ $(document).ready(function() {
         );
         return false;
     });
+
+            function aMays(e, elemento) {
+                tecla=(document.all) ? e.keyCode : e.which; 
+                elemento.value = elemento.value.toUpperCase();
+            }
 });
