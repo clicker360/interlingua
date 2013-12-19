@@ -40,14 +40,14 @@ $(document).ready(function() {
     if (guardar_as400) {    
         var verifySaveAS400 = $('#verifySave').val();
         if (verifySaveAS400 == 0) {
-            $('#btn-as400').html('<a style="text-decoration:none;border:0px;color:white;background:#EB7126;padding:7px;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400" data-reveal-id="myModal">Guardar en AS400</a>');
+            $('#btn-as400').html('<a style="text-decoration:none;border:0px;color:white;background:#EB7126;padding:7px;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight:bold;cursor:pointer;" id="btnSaveAS400">Guardar en AS400</a>');
             $('#btnSaveAS400').live('click', function(e) {
                 e.preventDefault();
 
                 v01 = jQuery("#prospect_medio_publicidad").val();
                 v02 = jQuery("#prospect_medio_contacto").val();
                 if(v01=="" || v02==""){
-                    alert("Asegurate de seleccionar medio de publicidad y medio de contacto");
+                    alert("Asegúrate de seleccionar medio de publicidad y medio de contacto");
                     location.reload(); 
                 }else{
 
