@@ -1026,8 +1026,8 @@ class ProspectsController extends AppController{
             $EXTENCIONOFICINA   = ($_POST["frm_ext_oficina"]!="")?trim($_POST["frm_ext_oficina"]):""; # No obligatorio
             $CELULAR            = trim($_POST["frm_cel"]);
             $EMAIL              = trim($_POST["frm_email"]);
-            $METODOCONTACTO     = trim($_POST["frm_metodo"]);
-            $MEDIOCONTACTO      = trim($_POST["frm_medio"]);
+            $METODOCONTACTO     = ($_POST["frm_metodo"]!="")?trim($_POST["frm_metodo"]):"";
+            $MEDIOCONTACTO      = ($_POST["frm_medio"]!="")?trim($_POST["frm_medio"]):"";
             $USUARIO_ID         = trim($_POST["frm_user_id"]);
 
             # Conexion con AS400
