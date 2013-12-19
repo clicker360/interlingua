@@ -6,84 +6,15 @@ Template Name: Pagina Cursos
 
 <?php get_header(); ?>
 		
-		<style>
-			.tablahorarios {
-				border:8px #33b0be solid;
-				font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-				box-shadow:#000;
-				padding: 5px;
-				-webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.39);
-				-moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.39);
-				box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.39);
-			}
-			#tablita>tr:nth-child(odd) {background: #efefef;}
-			.texto{
-				font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-				font-size:18px;
-				font-weight:bold;
-				color:#33b0be;
-			}
-		</style>
+
 		<?php
 			// Get Horarios Plantel
-			$tabla_horarios= '<div id="test-modal" class="mfp-hide white-popup-block eightcol clearfix"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="tablahorarios">';
 			$idHorarios = types_render_field( "id-horarios", array( "raw" => "true"  ) );
-			$data = wp_excel_cms_get("horarios");
-			$tabla_horarios.='<thead class="texto" valign="middle">
-						          <th align="center">Curso</th>
-								  <th align="center">Precio de contado</th>
-							 	  <th align="center">Pagos parciales</th>
-								  <th align="center">Horario</th>
-							  <thead>
-							  <tbody id="tablita">
-								';
-			if($idHorarios != ""){
-				$restricciones = "";
-				foreach($data as $horario){
-					$tabla_horarios.="<tr>";
-					$cont = 0;
-					foreach ($horario as $key => $value) {
-						if($horario[0]==$idHorarios && $value != ""){
-							if($value != $idHorarios && $cont <= 4){
-								if($cont == 2 || $cont == 3 && strstr($value, '$')==""){
-									$value = "$ ".$value;
-								}
-								
-								$tabla_horarios.="<td align='center'>".$value."</td>";
-							}	
-						
-							if($horario[5] != "" && $cont == 5){
-								$restricciones.=$value."<br>";
-							}
-						
-						}
-						$cont++;
-					}
-					$tabla_horarios.="</tr>";
-				}
-			}else{
-				$tabla_horarios.="<tr><td colspan='4' align='center'><h3>No hay horarios disponibles para esta sucursal</h3></td></tr>";
-			}
-			$tabla_horarios.='</tbody></table><p class="texto">'.$restricciones.'</p></div>';
+			
+			$horarios = wp_excel_cms_get("horarios");
 
-			echo $tabla_horarios;
-
+			print_r($horarios);
 		?>
-			<a class="popup-modal" href="#test-modal">Open modal</a>
-			<script type="text/javascript">
-			     /* jQuery(function () {
-				  		jQuery('.popup-modal').magnificPopup({
-							type: 'inline',
-							preloader: false,
-							focus: '#username',
-							modal: true
-						});
-						jQuery(document).on('click', '.popup-modal-dismiss', function (e) {
-							e.preventDefault();
-							jQuery.magnificPopup.close();
-						});
-					});*/
-			</script>
 
 			<div id="content">
 

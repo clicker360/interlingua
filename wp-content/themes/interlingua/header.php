@@ -24,6 +24,10 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/js/jquery.magnific-popup.js">
+	<script src="<?php echo get_template_directory_uri(); ?>/library/css/magnific-popup.css"></script>
+	
 
 	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
