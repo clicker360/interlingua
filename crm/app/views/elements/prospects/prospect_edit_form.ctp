@@ -88,7 +88,7 @@ echo $form->end();
                 <td  align="left" class="table_title_cells">RFC Letras:</td>
                 <td>
                     <div class="input text">
-                        <input type="text" class="tbl_modal" maxlength="4" id="frm_rfcletras" name="frm_rfcletras">
+                        <input type="text" class="tbl_modal" maxlength="4" id="frm_rfcletras" name="frm_rfcletras" onkeyup="aMays(event, this)">
                     </div>                        
                 </td>
                 <td  align="left" class="table_title_cells">RFC Fecha:</td>
