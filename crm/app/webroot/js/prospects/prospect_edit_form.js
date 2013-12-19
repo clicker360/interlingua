@@ -48,6 +48,7 @@ $(document).ready(function() {
                 v02 = jQuery("#prospect_medio_contacto").val();
                 if(v01=="" || v02==""){
                     alert("Asegurate de seleccionar medio de publicidad y medio de contacto");
+                    location.reload(); 
                 }else{
 
                 // Modal Save AS400
