@@ -929,8 +929,6 @@ class ProspectsController extends AppController{
                               'frm_telefono',                                                                    
                               'frm_cel',
                               'frm_email',
-                              //'frm_metodo_fls',
-                              //'frm_medio_fls',
                               'frm_user_id');
         
         # Valida campos obligatorios
@@ -968,7 +966,7 @@ class ProspectsController extends AppController{
             }
         }
         # Valida telefono oficina
-        if (!$error) {
+       /* if (!$error) {
             $telefono = trim($_POST["frm_telefono_oficina"]);
             $telefono = str_replace("(","",$telefono);
             $telefono = str_replace(")","",$telefono);
@@ -984,7 +982,7 @@ class ProspectsController extends AppController{
                 $focus[] = "frm_telefono_oficina";
                 $mensaje = "El numero de teléfono es incorrecto";
             }
-        }
+        }*/
         # Valida digito
         if (!$error && !is_numeric($_POST["frm_rfcdig"]) && $_POST["frm_rfcdig"]!="") {
             $error   = true;
@@ -1020,7 +1018,7 @@ class ProspectsController extends AppController{
             $MATERNO            = utf8_encode($MATERNO);
             $MATERNO            = ucfirst($MATERNO);
             $LADAPARTICULAR     = ($_POST["frm_lada"]!="")?trim($_POST["frm_lada"]):""; # No obligatorio
-            $TELEFONOPARTICULAR = trim($_POST["frm_telefono"]);
+            $TELEFONOPARTICULAR = ($_POST["frm_telefono"]!="")?trim($_POST["frm_telefono"]):"";
             $LADAOFICINA        = ($_POST["frm_lada_oficina"]!="")?trim($_POST["frm_lada_oficina"]):""; # No obligatorio
             $TELEFONOOFICINA    = trim($_POST["frm_telefono_oficina"]);
             $EXTENCIONOFICINA   = ($_POST["frm_ext_oficina"]!="")?trim($_POST["frm_ext_oficina"]):""; # No obligatorio
