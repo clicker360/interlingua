@@ -44,7 +44,11 @@ $(document).ready(function() {
             $('#btnSaveAS400').live('click', function(e) {
                 e.preventDefault();
 
-                alert("tttt");
+                v01 = jQuery("#prospect_medio_publicidad").val();
+                v02 = jQuery("#prospect_medio_contacto").val();
+                if(v01=="" || v02==""){
+                    alert("Asegurate de seleccionar medio de publicidad y medio de contacto");
+                }else{
 
                 // Modal Save AS400
                 var params = {
@@ -132,6 +136,7 @@ $(document).ready(function() {
                     });
                 });
             });
+            }
         }
     }
 
