@@ -135,8 +135,8 @@ $(document).ready(function() {
                         }
                     });
                 });
+                }
             });
-            }
         }
     }
 
