@@ -85,7 +85,7 @@ $(document).ready(function() {
                 // Save AS400
                 $('#savefrmmodal').live('click', function(e) {
                     e.preventDefault();
-
+                    alert("tes");
                     $.ajax({
                         type: 'post',
                         url: 'http://interlingua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
