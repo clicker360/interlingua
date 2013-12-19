@@ -934,7 +934,7 @@ class ProspectsController extends AppController{
         # Valida campos obligatorios
         foreach ($_POST as $key => $value) {
             if (in_array($key, $item_force)) {
-                if (empty($_POST[$key])) {
+                if (empty($_POST[$key]) && $_POST[$key]!="frm_telefono_oficina") {
                     $error   = true;
                     $focus[] = $key;
                     $mensaje = "Los campos marcados son obligatorios";
