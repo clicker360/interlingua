@@ -929,8 +929,8 @@ class ProspectsController extends AppController{
                               'frm_telefono',                                                                    
                               'frm_cel',
                               'frm_email',
-                              'frm_metodo_fls',
-                              'frm_medio_fls',
+                              //'frm_metodo_fls',
+                              //'frm_medio_fls',
                               'frm_user_id');
         
         # Valida campos obligatorios
