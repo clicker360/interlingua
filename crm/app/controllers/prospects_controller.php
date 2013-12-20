@@ -975,7 +975,7 @@ class ProspectsController extends AppController{
             $is_phone = true;
             $cadena = "/^[0-9]{7,15}?/";
             if(gettype($telefono)!="integer") settype($telefono,"integer");
-            if(!preg_match($cadena,$telefono)) $is_phone = false;
+                        if(!preg_match($cadena,$telefono)) $is_phone = false;
 
             if(!$is_phone) {
                 $error   = true;

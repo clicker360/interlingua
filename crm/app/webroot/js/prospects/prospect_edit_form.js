@@ -94,7 +94,7 @@ $(document).ready(function() {
 
                     $.ajax({
                         type: 'post',
-                        url: 'http://interlingua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
+                        url: 'http://www.interlingua.com.mx/clicker360/interlingua/crm/prospects/saveAS400', //cambiar url
                         data: $('#frm_mo').serialize(),
                         dataType: 'json',
                         error: function() {
