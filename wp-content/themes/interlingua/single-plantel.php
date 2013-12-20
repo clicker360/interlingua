@@ -15,7 +15,8 @@ Template Name: Pagina Cursos
 				-webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.39);
 				-moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.39);
 				box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.39);
-			}
+				width: 100%;
+			 }
 			#tablita>tr:nth-child(odd) {background: #efefef;}
 			.texto{
 				font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
@@ -26,8 +27,8 @@ Template Name: Pagina Cursos
 		</style>
 		<?php
 			// Get Horarios Plantel
-			$tabla_horarios= '<div id="test-modal" class="mfp-hide white-popup-block eightcol clearfix"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="tablahorarios">';
 			$idHorarios = types_render_field( "id-horarios", array( "raw" => "true"  ) );
+			$tabla_horarios= '<div id="myModal" class="reveal-modal"><p class="texto">Plantel '.$idHorarios.'</p><table  border="0" cellpadding="0" cellspacing="0" class="tablahorarios">';
 			$data = wp_excel_cms_get("horarios");
 			$tabla_horarios.='<thead class="texto" valign="middle">
 						          <th align="center">Curso</th>
@@ -64,27 +65,13 @@ Template Name: Pagina Cursos
 			}else{
 				$tabla_horarios.="<tr><td colspan='4' align='center'><h3>No hay horarios disponibles para esta sucursal</h3></td></tr>";
 			}
-			$tabla_horarios.='</tbody></table><p class="texto">'.$restricciones.'</p></div>';
+			$tabla_horarios.='</tbody></table><p class="texto">'.$restricciones.'</p><a class="close-reveal-modal">&#215;</a></div>';
 
 			echo $tabla_horarios;
 
 		?>
-			<a class="popup-modal" href="#test-modal">Open modal</a>
-			<script type="text/javascript">
-			     /* jQuery(function () {
-				  		jQuery('.popup-modal').magnificPopup({
-							type: 'inline',
-							preloader: false,
-							focus: '#username',
-							modal: true
-						});
-						jQuery(document).on('click', '.popup-modal-dismiss', function (e) {
-							e.preventDefault();
-							jQuery.magnificPopup.close();
-						});
-					});*/
-			</script>
-
+			
+		
 			<div id="content">
 
 				<div id="inner-content" class="clearfix">
@@ -319,6 +306,8 @@ Template Name: Pagina Cursos
 									</div>
 
 									<!--<?php echo(types_render_field( "boton-plantel", array( 'class' => 'boton-contacto-plantel', 'title' => 'Contactar' ) ));?> -->
+									<br>
+									<a href="#" style="padding:5px;font-size:15px;"  id="btnMod" data-reveal-id="myModal">Consulta los precios y horarios</a>
 								</div>
 								
 								<div class="planteles-mapa fullcol">

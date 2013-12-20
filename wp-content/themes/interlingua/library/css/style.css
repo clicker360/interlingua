@@ -690,7 +690,8 @@ BUTTONS
 #btnEnviarFranquicias,
 #sendtest,
 #sendRevista,
-#sendValidate {
+#sendValidate,
+#btnMod{
   border: 1px solid #bc5311;
   border-top-color: #d85f14;
   border-left-color: #d85f14;
@@ -7836,7 +7837,7 @@ input[type=radio]{
 
 @media (min-width: 1025px) {
   #login_alumnos {
-    z-index: 9999;
+    z-index: 8000;
 }
 #toogleLogin{
     margin-top: 88px !important;

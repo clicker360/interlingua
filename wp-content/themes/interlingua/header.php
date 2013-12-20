@@ -25,8 +25,6 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/js/jquery.magnific-popup.js">
-	<script src="<?php echo get_template_directory_uri(); ?>/library/css/magnific-popup.css"></script>
 	
 
 	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
@@ -201,6 +199,10 @@ _gaq.push(['_trackPageview']);
 
 </script>
 
+
+
+	<script src="<?php echo get_template_directory_uri(); ?>/library/reveal/jquery.reveal.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/reveal/reveal.css">
 </head>
 
 <body <?php body_class(); ?>>
