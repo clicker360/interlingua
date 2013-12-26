@@ -160,7 +160,7 @@ Template Name: Contacto Bolsa de Trabajo
 									                });
 									                jQuery.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
 									                    estados = JSON.parse(estados);      
-									                    jQuery("#cmbEstadosFranquicias").html('<option value="">Elige tu estado</option>');
+									                    //jQuery("#cmbEstadosFranquicias").html('<option value="">Elige tu estado</option>');
 									                    jQuery.each(estados,function(index,value){
 									                        jQuery("#cmbEstadosFranquicias").append('<option value="'+value+'">'+value+'</option>');
 									                    });                        
@@ -244,61 +244,134 @@ Template Name: Contacto Bolsa de Trabajo
 													<div id="formulario-franquicias">                           
 							                            <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/prospects/sendMailContact?tipo=bolsaTrabajo">
 							                                <input type="hidden" name="origin_id" value="14" />
+
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="nombre1Franquicias">
 							                                    <input type="text" id="txtNombreFranquicias" name="name"  placeholder="Nombre Completo"/>
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="nombre1Franquicias">
+							                                    <input type="text" id="txtNombreFranquicias" name="name"  placeholder="Full name"/>
+							                                </div>
+															<?php } ?>
+
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="correo1Franquicias">
 							                                    <input type="text" id="txtCorreoFranquicias" name="email" placeholder="Correo Electrónico"/>
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="correo1Franquicias">
+							                                    <input type="text" id="txtCorreoFranquicias" name="email" placeholder="Email address"/>
+							                                </div>
+															<?php } ?>
 
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="lada1Franquicias">
 							                                    <input type="text" id="txtLadaFranquicias" name="lada" maxlength="3" placeholder="LADA" />
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="lada1Franquicias">
+							                                    <input type="text" id="txtLadaFranquicias" name="lada" maxlength="3" placeholder="Area Code" />
+							                                </div>
+															<?php } ?>
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="telefono1Franquicias">
 							                                    <input type="text" id="txtTelefonoFranquicias" name="phone_number" maxlength="8" placeholder="Teléfono" />
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="telefono1Franquicias">
+							                                    <input type="text" id="txtTelefonoFranquicias" name="phone_number" maxlength="8" placeholder="Phone Number" />
+							                                </div>
+															<?php } ?>
 
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="celular1Franquicias">
 							                                    <input type="text" id="txtCelularFranquicias" name="mobile_number" maxlength="10" placeholder="Celular"/>
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="celular1Franquicias">
+							                                    <input type="text" id="txtCelularFranquicias" name="mobile_number" maxlength="10" placeholder="Mobile phone"/>
+							                                </div>
+															<?php } ?>
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                               <div id="estado1Franquicias">
 							                                    <select id="cmbEstadosFranquicias" name="estado">   
 							                                    <option value="" selected="selected">Elige tu estado</option>                                     
 							                                    </select>
 							                                </div>							                               
+															<?php }else{ ?>
+							                               <div id="estado1Franquicias">
+							                                    <select id="cmbEstadosFranquicias" name="estado">   
+							                                    <option value="" selected="selected">What state do you want to work in?</option>                                     
+							                                    </select>
+							                                </div>							                               
+															<?php } ?>
 							                                
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="sucursal1Franquicias">
 							                                    <select id="cmbSucursalesFranquicias" name="plantel">
 							                                        <option value="" selected="selected">Elige tu plantel</option>
 							                                    </select>
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="sucursal1Franquicias">
+							                                    <select id="cmbSucursalesFranquicias" name="plantel">
+							                                        <option value="" selected="selected">What school do you want to work in?</option>
+							                                    </select>
+							                                </div>
+															<?php } ?>
 
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 															<div id="puestodeseado1Franquicias">
 							                                    <input type="text" id="txtPuestodeseadoFranquicias" name="puestodeseado"  placeholder="Puesto Deseado"/>
 							                                </div>							                                
-
+															<?php } ?>
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                               	<div id="nacionalidad1Franquicias">
 							                                    <input type="text" id="txtNacionalidadFranquicias" name="nacionalidad"  placeholder="Nacionalidad"/>
 							                                </div>
+															<?php }else{ ?>
+							                               	<div id="nacionalidad1Franquicias">
+							                                    <input type="text" id="txtNacionalidadFranquicias" name="nacionalidad"  placeholder="Nationality"/>
+							                                </div>
+															<?php } ?>
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="medio1Bolsa">
 							                                    <input type="text" id="txtMedioFranquicias" name="medio" placeholder="¿Cómo te enteresaste de INTERLINGUA?"/>
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="medio1Bolsa">
+							                                    <input type="text" id="txtMedioFranquicias" name="medio" placeholder="How did you find out about Interlingua®?"/>
+							                                </div>
+															<?php } ?>
 
 							                                 <!--<div id="medio1Franquicias">
 							                                    <input type="text" id="txtMedioFranquicias" name="medio_contacto"  placeholder="¿Por qué medio enteró de nuestra Franquicia?"/>
 							                                </div>	-->
-
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="comentario1Bolsa">
 							                                    <textarea cols=20 rows 10 id="txtComentarioFranquicias" name="comments"  placeholder="Escribe tu Comentario"/></textarea>
 							                                </div>
+															<?php }else{ ?>
+							                                <div id="comentario1Bolsa">
+							                                    <textarea cols=20 rows 10 id="txtComentarioFranquicias" name="comments"  placeholder="Additional comments or questions"/></textarea>
+							                                </div>
+															<?php } ?>
 
 							                              
-
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <input type="submit" id="btnEnviarFranquicias" value="¡Quiero informaci&oacute;n!" style="cursor:pointer" />
+															<?php }else{ ?>
+							                                <input type="submit" id="btnEnviarFranquicias" value="Join Now!" style="cursor:pointer" />
+															<?php } ?>
 							                                <div id="politicas1Franquicias">                                    
 							                                    <input type="checkbox" id="chkPoliticasFranquicias" name="termino" checked />
 							                                    <div id="acepto1Franquicias">
+															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                        <a href="http://www.interlingua.com.mx/politicas-de-privacidad/" target="_blank">Acepto las políticas de privacidad</a>
+															<?php }else{ ?>
+							                                        <a href="http://www.interlingua.com.mx/politicas-de-privacidad/" target="_blank">I agree to Interlingua´s privacy policy.</a>
+															<?php } ?>
 							                                    </div>
 							                                </div>                                
 							                            </form>

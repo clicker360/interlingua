@@ -390,36 +390,32 @@
 			<div id="bolsa-trabajo" class="bolsa-trabajo-full">
 				<div class="bolsa-trabajo-interior wrap clearfix">
 					<div class="titulo-seccion-bolsa-trabajo wrap clearfix">
-							We need you!
+We are looking for English Teachers
 					</div>
 					<div class="subtitulo-seccion-bolsa-trabajo wrap clearfix">
-							We are looking for English Teachers
+Work in a fun and rewarding field!
 					</div>
 					
-						<div class="bolsa-trabajo-segmento sevencol clearfix" align="center">				
+						<div class="bolsa-trabajo-segmento fullcol clearfix" align="center">				
 							<img src="<?php echo get_template_directory_uri(); ?>/library/images/maestros.png"?>								
 						</div>
 
-						<div class="bolsa-trabajo-segmento1 fivecol clearfix">
-							<div class="bolsa-trabajo-requisitos clearfix">ARE YOU...<br>*Fully bilingual<br>*Service oriented</div>
+						<div class="bolsa-trabajo-segmento1 fullcol clearfix" align="center">
+							<div class="descripcion-planteles wrap clearfix">Interact and network with all kinds of people while you make a significant difference in their lives. </div>
 						</div>
 
 						<div class="bolsa-trabajo-segmento2 fivecol clearfix">
-							<div class="bolsa-trabajo-ofrecemos   clearfix">WE OFFER<br>*Ongoing training<br>*Variety in your classes<br>*Professional development </div>
+							<div class="bolsa-trabajo-ofrecemos   clearfix"> </div>
 						</div>
 
 						<div class="boton-trabajo clearfix" align="center">
-						<button type="button" class="boton-bolsa" onclick="location.href=' http://www.interlingua.com.mx/bolsa-de-trabajo-2/'">Join us!</button>
+						<button type="button" class="boton-bolsa" onclick="location.href=' http://www.interlingua.com.mx/bolsa-de-trabajo-2/'">Join our team!</button>
 					</div>
 						
 
 
 					</div>
 			</div>
-
-
-
-		
 
 
 

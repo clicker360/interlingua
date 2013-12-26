@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["id_alumno"])) {
-	header("Location: http://interlingua.com.mx/");
+	header("Location: http://www.interlingua.com.mx/");
 	exit();
 }
 /*

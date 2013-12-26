@@ -142,7 +142,7 @@ function login(){
 			$_SESSION['id_alumno'] = md5($usuario);
 			$_SESSION['alumno'] = $usuario;
 			//$respuesta["url"] = "http://interlingua.com.mx/acceso-a-alumnos/";
-			$respuesta["url"] = "http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/";
+			$respuesta["url"] = "http://www.interlingua.com.mx/acceso-a-alumnos/";
 			$respuesta["error"] = False;
 		}else{
 			$respuesta["error"] = True;
@@ -201,8 +201,7 @@ function login(){
 function logout(){		
 	session_start();
 	session_destroy();
-	//echo "http://interlingua.com.mx/";
-	echo "http://interlingua.com.mx/clicker360/interlingua";
+	echo "http://www.interlingua.com.mx/";
 }
 
 function getAlumno(){
@@ -408,8 +407,8 @@ function getPass(){
 				<area shape="rect" coords="46,18,225,40" href="http://www.interlingua.com.mx/" target="_blank" alt="Interlingua" />
 				</map>';
 
-			//$para = $email;
-			$para = "hugo@clicker360.com";
+			$para = $email;
+			//$para = "hugo@clicker360.com,eric@clicker360.com,mmucino@interlingua.com.mx";
 			$asunto = 'Recuperación de contraseña';
 
 			mail($para, $asunto, utf8_decode($mensaje), $header);
