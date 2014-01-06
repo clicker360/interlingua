@@ -536,10 +536,10 @@ Template Name: Pagina Cursos
 											$origen = "82";
 											$plantel = "Culiacán";
 											break;
-										case 'INTERLINGUA® Hermosillo Satélite':
+										/*case 'INTERLINGUA® Hermosillo Satélite':
 											$origen = "83";
 											$plantel = "Hermosillo";
-											break;
+											break;*/
 										case 'INTERLINGUA® Villahermosa, Tab.':
 											$origen = "84";
 											$plantel = "Villahermosa";

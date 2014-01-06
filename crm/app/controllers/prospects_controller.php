@@ -796,9 +796,9 @@ class ProspectsController extends AppController{
             case 'Culiacan':
                 $resultado['rutaPlantel'] = "interlingua-culiacan-sin/"; 
                 break;
-            case 'Hermosillo':
+            /*case 'Hermosillo':
                 $resultado['rutaPlantel'] = "interlingua-hermosillo-satelite/"; 
-                break;
+                break;*/
             case 'Villahermosa':
                 $resultado['rutaPlantel'] = "interlingua-villahermosa-tab/";
                 break;
