@@ -206,7 +206,49 @@ _gaq.push(['_trackPageview']);
 </head>
 
 <body <?php body_class(); ?>>
+	<?php if(is_page('gracias')){ ?>
+		<!-- Google Code for Registro del Sitio Conversion Page -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1045194190;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "ffffff";
+		var google_conversion_label = "DK2lCOyyiwkQzsux8gM";
+		var google_conversion_value = 0;
+		var google_remarketing_only = false;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1045194190/?value=0&amp;label=DK2lCOyyiwkQzsux8gM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+	<?php } ?>
 
+	<?php if(is_page('gracias_teachers')){ ?>
+		<!-- Google Code for Registro de Bolsa de Trabajo Conversion Page -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1045194190;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "ffffff";
+		var google_conversion_label = "K2kmCITXiAkQzsux8gM";
+		var google_conversion_value = 0;
+		var google_remarketing_only = false;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1045194190/?value=0&amp;label=K2kmCITXiAkQzsux8gM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+	<?php } ?>
 	<div id="container">
 
 		<header class="header" role="banner">
