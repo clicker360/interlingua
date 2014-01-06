@@ -280,7 +280,7 @@ Template Name: Contacto Bolsa de Trabajo
 							                                </div>
 															<?php }else{ ?>
 							                                <div id="telefono1Franquicias">
-							                                    <input type="text" id="txtTelefonoFranquicias" name="phone_number" maxlength="8" placeholder="Phone Number" />
+							                                    <input type="text" id="txtTelefonoFranquicias" name="phone_number" maxlength="8" placeholder="Phone number" />
 							                                </div>
 															<?php } ?>
 
