@@ -1065,7 +1065,7 @@ class ProspectsController extends AppController{
                 }else{
                     $error   = true;
                     $mat = $matricula;
-                    $mensaje = utf8_encode(trim($msgError));    
+                    $mensaje = utf8_encode(trim($msgError))." Matricula: ".$mat;    
                 }
                 
                 $bdh = null;
