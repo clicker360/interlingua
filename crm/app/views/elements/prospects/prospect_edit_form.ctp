@@ -205,8 +205,8 @@ echo $form->end();
                 </td>
             </tr>
             <tr>
-                <td  align="left" class="table_title_cells">Usuario ID:</td>
-                <td>
+                <td  style="display:none;" align="left" class="table_title_cells">Usuario ID:</td>
+                <td style="display:none;">
                     <div class="input text">
                         <input type="text" class="tbl_modal" maxlength="10" id="frm_user_id" name="frm_user_id" value="<?php print_r($this->Session->read('Auth.User.id_scap')); ?>">
                     </div> 
