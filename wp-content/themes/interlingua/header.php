@@ -214,6 +214,21 @@ _gaq.push(['_trackPageview']);
 	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	</script>
 	<!--End of Zopim Live Chat Script-->
+<script>
+$zopim(function() {
+	$zopim.livechat.setOnConnected(function() {
+		var zopim_ele = document.getElementsByClassName('zopim');
+		for (var i=0; i<zopim_ele.length; i++) {
+			//zopim_ele[i].style.display='none';
+			//console.log(zopim_ele[i]);
+			console.log(zopim_ele[i].contentDocument.getElementByClass('submit'));
+		}		
+		//console.log(jQuery("iframe").html());
+		//console.log(jQuery("div.zopim").html());
+		//console.log(jQuery("form#frmLogin").html());
+	});
+}); 
+</script>
 </head>
 
 <body <?php body_class(); ?>>
