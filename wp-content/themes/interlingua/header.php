@@ -216,16 +216,39 @@ _gaq.push(['_trackPageview']);
 	<!--End of Zopim Live Chat Script-->
 <script>
 $zopim(function() {
-	$zopim.livechat.setOnConnected(function() {
+	$zopim.livechat.setOnStatus(function(data) {
 		var zopim_ele = document.getElementsByClassName('zopim');
-		for (var i=0; i<zopim_ele.length; i++) {
-			//zopim_ele[i].style.display='none';
-			//console.log(zopim_ele[i]);
-			console.log(zopim_ele[i].contentDocument.getElementByClass('submit'));
-		}		
-		//console.log(jQuery("iframe").html());
-		//console.log(jQuery("div.zopim").html());
-		//console.log(jQuery("form#frmLogin").html());
+		var iframe = document.getElementsByTagName('iframe');
+		var zopim_form = document.getElementsByClassName('form_container');
+		var button_send = jQuery(iframe).contents().find('form').children("div.bottom").children(".submit");
+		var input_name = jQuery(iframe).contents().find('form').children(".meshim_widget_widgets_ScrollableFrame");
+		var form = jQuery(iframe).contents().find('form');
+		var iframe_content = jQuery(iframe).contents();
+
+		if(button_send.attr("value")=="Empezar a chatear"){
+			jQuery(button_send).on("click",function(){				
+				setTimeout(function(){
+					var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_PreChatOfflineForm").css("display");
+					console.log(status);
+					if(status == "none"){
+						var name = jQuery(form).find(".input_name").attr("value");
+						var email = jQuery(form).find(".input_email").attr("value");
+						var phone_number = jQuery(form).find(".input_phone").attr("value");	
+						var origin_id = 91;			
+						
+						jQuery.ajax({
+				            type:"post",
+				            url: "http://www.interlingua.com.mx/crm/registro",
+				            data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
+				            dataType:"json",				            
+				            success:function(data){
+				            	console.log("success");
+				            }
+				        });
+					}				
+				},1000);
+			});
+		}
 	});
 }); 
 </script>

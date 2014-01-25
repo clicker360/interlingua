@@ -48,7 +48,7 @@ class Prospect extends AppModel {
         ),
         'lada' => array(            
             'notEmpty' => array(
-                'rule' => 'notEmpty',
+                //'rule' => 'notEmpty',
                 'message' => 'Por favor ingresa la clave lada.',
                 'last' => true
              ),
@@ -82,14 +82,14 @@ class Prospect extends AppModel {
         ),
         'estado' => array(
             'notEmpty' => array(
-                'rule' => 'notEmpty',
+                //'rule' => 'notEmpty',
                 'message' => 'Por favor ingresa tu estado.',
                 'last' => true,
              )
         ),
         'termino' => array(
             'notEmpty' => array(
-                'rule' => 'notEmpty',
+                //'rule' => 'notEmpty',
                 'message' => 'Debes aceptar las políticas de privacidad.',
                 'last' => true,
                 'required' => true

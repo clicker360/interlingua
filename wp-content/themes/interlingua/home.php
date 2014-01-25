@@ -1,6 +1,4 @@
-<div id="inicio">
-	<?php get_header(); ?>
-</div>
+<?php get_header(); ?>
 
 		<div class="slider-home">
 			<?php putRevSlider( "home" ) ?>
