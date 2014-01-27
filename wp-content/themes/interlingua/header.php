@@ -204,33 +204,58 @@ _gaq.push(['_trackPageview']);
 	<script src="<?php echo get_template_directory_uri(); ?>/library/reveal/jquery.reveal.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/reveal/reveal.css">
 
-	<!-- chat -->
-	<!--Start of Zopim Live Chat Script-->
-	<script type="text/javascript">
-	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-	$.src='//v2.zopim.com/?1qdTKWEfbdERJo2vkOeZvkwDidMTesBF';z.t=+new Date;$.
-	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-	</script>
-	<!--End of Zopim Live Chat Script-->
+<!-- chat -->
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//v2.zopim.com/?1qdTKWEfbdERJo2vkOeZvkwDidMTesBF';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
 <script>
+jQuery(document).ready(function(){
+
+var status = new Array();
+var logStatus = "";
+var count = 0;
+var count2 = 0;
 $zopim(function() {
-	$zopim.livechat.setOnStatus(function(data) {
-		var zopim_ele = document.getElementsByClassName('zopim');
-		var iframe = document.getElementsByTagName('iframe');
-		var zopim_form = document.getElementsByClassName('form_container');
-		var input_name = jQuery(iframe).contents().find('form').children(".meshim_widget_widgets_ScrollableFrame");
-		var form = jQuery(iframe).contents().find('form');
+	$zopim.livechat.window.show(); 
+	$zopim.livechat.setOnStatus(function() {
+		var iframe = document.getElementsByTagName('iframe'); 
 		var iframe_content = jQuery(iframe).contents();
+		var form = jQuery(iframe).contents().find('form');
+		
+		var button_send = jQuery(iframe).contents().find('form').children("div.bottom").children(".submit");
+		var input_name = jQuery(iframe).contents().find('form').children(".meshim_widget_widgets_ScrollableFrame");
+		var zopim_ele = document.getElementsByClassName('zopim');
+		var zopim_form = document.getElementsByClassName('form_container');
 
-		setTimeout(function(){
-			var button_send = jQuery(iframe).contents().find('form').children("div.bottom").children(".submit");
+		//console.log(button_send.attr('value'));
+		status.push(button_send.attr('value'));
+		jQuery.each(status, function( index, value ) {
+			if(value != undefined && value != logStatus){
+				logStatus = value;
+			}else if( value == logStatus) {
+				count++;
+			}
+		});
 
-			console.log(button_send.attr("value"));
+		// Init
+		count2++;
+		if(count2 == 1){
+			console.log("save");
+			saveChat(logStatus);
+		}else{
+			count2 = 0;
+		}
 
-			if(button_send.attr("value")=="Empezar a chatear"){
-				jQuery(button_send).on("click",function(){				
+		function saveChat(logStatus){
+			//online
+			//if(button_send.attr("value")=="Start Chatting"){
+				jQuery(button_send.attr("value",logStatus)).on("click",function(){				
 					setTimeout(function(){
 						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_PreChatOfflineForm").css("display");
 						console.log(status);
@@ -252,9 +277,10 @@ $zopim(function() {
 						}				
 					},1000);
 				});
-			}
+			//}
 
-			if(button_send.attr("value")=="Enviar mensaje"){
+			//offline
+			/*if(button_send.attr("value")=="Send Message"){
 				jQuery(button_send).on("click",function(){				
 					setTimeout(function(){
 						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
@@ -277,11 +303,11 @@ $zopim(function() {
 						}				
 					},1000);
 				});
-			}
-		},1000);
-
+			}*/
+		}// Fin saveChat()
 	});
 }); 
+});
 </script>
 </head>
 
