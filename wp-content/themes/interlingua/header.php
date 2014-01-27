@@ -233,7 +233,7 @@ $zopim(function() {
 		var zopim_ele = document.getElementsByClassName('zopim');
 		var zopim_form = document.getElementsByClassName('form_container');
 
-		//console.log(button_send.attr('value'));
+		console.log(button_send.attr('value'));
 		status.push(button_send.attr('value'));
 		jQuery.each(status, function( index, value ) {
 			if(value != undefined && value != logStatus){
@@ -244,21 +244,25 @@ $zopim(function() {
 		});
 
 		// Init
-		// count2++;
-		// if(count2 == 1){
-		// 	console.log("save");
-		// 	saveChat();
-		// }else{
-		// 	count2 = 0;
-		// }
-		saveChat();
+		count2++;
+		if(count2 == 1){
+			console.log("save");
+			saveChat(logStatus);
+		}else{
+			count2 = 0;
+		}
 
-		function saveChat(){
+		function saveChat(logStatus){
 			//online
-			if(button_send.attr("value")=="Start Chatting"){
-				jQuery(button_send).on("click",function(){				
+			//if(button_send.attr("value")=="Start Chatting"){
+				jQuery(button_send.attr("value",logStatus)).on("click",function(){				
+					if(logStatus=="Send Message" || logStatus == "Enviar mensaje " ){
+						dir = ".meshim_widget_components_chatWindow_preChatOfflineForm_Form";
+					}else{
+						dir = ".meshim_widget_components_chatWindow_PreChatOfflineForm";
+					}
 					setTimeout(function(){
-						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_PreChatOfflineForm").css("display");
+						var status = jQuery(iframe_content).find(dir).css("display");
 						console.log(status);
 						if(status == "none"){
 							var name = jQuery(form).find(".input_name").attr("value");
@@ -278,10 +282,10 @@ $zopim(function() {
 						}				
 					},1000);
 				});
-			}
+			//}
 
 			//offline
-			if(button_send.attr("value")=="Send Message"){
+			/*if(button_send.attr("value")=="Send Message"){
 				jQuery(button_send).on("click",function(){				
 					setTimeout(function(){
 						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
@@ -304,7 +308,7 @@ $zopim(function() {
 						}				
 					},1000);
 				});
-			}
+			}*/
 		}// Fin saveChat()
 	});
 }); 
