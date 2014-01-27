@@ -227,7 +227,7 @@ $zopim(function() {
 
 		console.log(button_send.attr("value"));
 
-		if(button_send.attr("value")=="Empezar a chatear"){
+		if(button_send.attr("value")=="Empezar a chatear" || button_send.attr("value")=="Start Chatting"){
 			jQuery(button_send).on("click",function(){				
 				setTimeout(function(){
 					var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_PreChatOfflineForm").css("display");
@@ -252,7 +252,7 @@ $zopim(function() {
 			});
 		}
 
-		if(button_send.attr("value")=="Enviar mensaje"){
+		if(button_send.attr("value")=="Enviar mensaje" || button_send.attr("value")=="Send Message"){
 			jQuery(button_send).on("click",function(){				
 				setTimeout(function(){
 					var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
