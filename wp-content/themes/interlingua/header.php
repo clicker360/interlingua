@@ -249,6 +249,31 @@ $zopim(function() {
 				},1000);
 			});
 		}
+
+		if(button_send.attr("value")=="Enviar mensaje"){
+			jQuery(button_send).on("click",function(){				
+				setTimeout(function(){
+					var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
+					console.log(status);
+					if(status == "none"){
+						var name = jQuery(form).find(".input_name").attr("value");
+						var email = jQuery(form).find(".input_email").attr("value");
+						var phone_number = jQuery(form).find(".input_phone").attr("value");	
+						var origin_id = 91;			
+						
+						jQuery.ajax({
+				            type:"post",
+				            url: "http://www.interlingua.com.mx/crm/registro",
+				            data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
+				            dataType:"json",				            
+				            success:function(data){
+				            	console.log("success");
+				            }
+				        });
+					}				
+				},1000);
+			});
+		}
 	});
 }); 
 </script>
