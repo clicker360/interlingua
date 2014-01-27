@@ -233,6 +233,7 @@ class ProspectsController extends AppController{
     }
 
     public function store_prospect(){   
+        header('Access-Control-Allow-Origin: *');
         $this->autoRender = false;
         if( !isset($this->data) ){
             //Agregamos una validación para saber si viene de otra página
