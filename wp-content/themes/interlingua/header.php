@@ -225,6 +225,8 @@ $zopim(function() {
 		var form = jQuery(iframe).contents().find('form');
 		var iframe_content = jQuery(iframe).contents();
 
+		console.log(button_send.attr("value"));
+
 		if(button_send.attr("value")=="Empezar a chatear"){
 			jQuery(button_send).on("click",function(){				
 				setTimeout(function(){
