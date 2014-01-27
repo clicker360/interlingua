@@ -244,18 +244,19 @@ $zopim(function() {
 		});
 
 		// Init
-		count2++;
-		if(count2 == 1){
-			console.log("save");
-			saveChat(logStatus);
-		}else{
-			count2 = 0;
-		}
+		// count2++;
+		// if(count2 == 1){
+		// 	console.log("save");
+		// 	saveChat();
+		// }else{
+		// 	count2 = 0;
+		// }
+		saveChat();
 
-		function saveChat(logStatus){
+		function saveChat(){
 			//online
-			//if(button_send.attr("value")=="Start Chatting"){
-				jQuery(button_send.attr("value",logStatus)).on("click",function(){				
+			if(button_send.attr("value")=="Start Chatting"){
+				jQuery(button_send).on("click",function(){				
 					setTimeout(function(){
 						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_PreChatOfflineForm").css("display");
 						console.log(status);
@@ -277,10 +278,10 @@ $zopim(function() {
 						}				
 					},1000);
 				});
-			//}
+			}
 
 			//offline
-			/*if(button_send.attr("value")=="Send Message"){
+			if(button_send.attr("value")=="Send Message"){
 				jQuery(button_send).on("click",function(){				
 					setTimeout(function(){
 						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
@@ -303,7 +304,7 @@ $zopim(function() {
 						}				
 					},1000);
 				});
-			}*/
+			}
 		}// Fin saveChat()
 	});
 }); 
