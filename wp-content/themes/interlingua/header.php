@@ -16,13 +16,13 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 	<meta charset="utf-8">
 
 	<!-- Google Chrome Frame for IE -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 
 	<title><?php wp_title(''); ?></title>
 
 	<!-- mobile meta (hooray!) -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
+	<!-- <meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	
 	
@@ -46,7 +46,8 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			<!-- drop Google Analytics Here -->
 
 					<!-- end analytics -->
-					<script type="text/javascript" charset="utf-8">
+
+					<script type="text/javascript">
 					jQuery(document).ready(function() {
 			  //scrollTop for login
 			  var menu = jQuery('#login_alumnos');
@@ -204,7 +205,7 @@ _gaq.push(['_trackPageview']);
 	<script src="<?php echo get_template_directory_uri(); ?>/library/reveal/jquery.reveal.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/reveal/reveal.css">
 
-<!-- chat -->
+	<!-- chat -->
 <!--Start of Zopim Live Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -222,95 +223,92 @@ var logStatus = "";
 var count = 0;
 var count2 = 0;
 $zopim(function() {
-	$zopim.livechat.window.show(); 
-	$zopim.livechat.setOnStatus(function() {
-		var iframe = document.getElementsByTagName('iframe'); 
-		var iframe_content = jQuery(iframe).contents();
-		var form = jQuery(iframe).contents().find('form');
-		
-		var button_send = jQuery(iframe).contents().find('form').children("div.bottom").children(".submit");
-		var input_name = jQuery(iframe).contents().find('form').children(".meshim_widget_widgets_ScrollableFrame");
-		var zopim_ele = document.getElementsByClassName('zopim');
-		var zopim_form = document.getElementsByClassName('form_container');
+$zopim.livechat.window.show(); 
+$zopim.livechat.setOnStatus(function() {
+var iframe = document.getElementsByTagName('iframe'); 
+var iframe_content = jQuery(iframe).contents();
+var form = jQuery(iframe).contents().find('form');
+var button_send = jQuery(iframe).contents().find('form').children("div.bottom").children(".submit");
+var input_name = jQuery(iframe).contents().find('form').children(".meshim_widget_widgets_ScrollableFrame");
+var zopim_ele = document.getElementsByClassName('zopim');
+var zopim_form = document.getElementsByClassName('form_container');
 
-		console.log(button_send.attr('value'));
-		status.push(button_send.attr('value'));
-		jQuery.each(status, function( index, value ) {
-			if(value != undefined && value != logStatus){
-				logStatus = value;
-			}else if( value == logStatus) {
-				count++;
-			}
-		});
+console.log(button_send.attr('value'));
+status.push(button_send.attr('value'));
+jQuery.each(status, function( index, value ) {
+if(value != undefined && value != logStatus){
+logStatus = value;
+}else if( value == logStatus) {
+count++;
+}
+});
 
-		// Init
-		count2++;
-		if(count2 == 1){
-			console.log("save");
-			saveChat(logStatus);
-		}else{
-			count2 = 0;
-		}
+// Init
+count2++;
+if(count2 == 1){
+console.log("save");
+saveChat(logStatus);
+}else{
+count2 = 0;
+}
 
-		function saveChat(logStatus){
-			//online
-			//if(button_send.attr("value")=="Start Chatting"){
-				jQuery(button_send.attr("value",logStatus)).on("click",function(){				
-					if(logStatus=="Send Message" || logStatus == "Enviar mensaje " ){
-						dir = ".meshim_widget_components_chatWindow_preChatOfflineForm_Form";
-					}else{
-						dir = ".meshim_widget_components_chatWindow_PreChatOfflineForm";
-					}
-					setTimeout(function(){
-						var status = jQuery(iframe_content).find(dir).css("display");
-						console.log(status);
-						if(status == "none"){
-							var name = jQuery(form).find(".input_name").attr("value");
-							var email = jQuery(form).find(".input_email").attr("value");
-							var phone_number = jQuery(form).find(".input_phone").attr("value");	
-							var origin_id = 91;			
-							
-							jQuery.ajax({
-					            type:"post",
-					            url: "http://www.interlingua.com.mx/crm/registro",
-					            data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
-					            dataType:"json",				            
-					            success:function(data){
-					            	console.log("success");
-					            }
-					        });
-						}				
-					},1000);
-				});
-			//}
+function saveChat(logStatus){
+//online
+//if(button_send.attr("value")=="Start Chatting"){
+jQuery(button_send.attr("value",logStatus)).on("click",function(){	
+if(logStatus=="Send Message" || logStatus == "Enviar mensaje " ){
+dir = ".meshim_widget_components_chatWindow_preChatOfflineForm_Form";
+}else{
+dir = ".meshim_widget_components_chatWindow_PreChatOfflineForm";
+}
+setTimeout(function(){
+var status = jQuery(iframe_content).find(dir).css("display");
+console.log(status);
+if(status == "none"){
+var name = jQuery(form).find(".input_name").attr("value");
+var email = jQuery(form).find(".input_email").attr("value");
+var phone_number = jQuery(form).find(".input_phone").attr("value");	
+var origin_id = 91;	
+jQuery.ajax({
+           type:"post",
+           url: "http://www.interlingua.com.mx/crm/registro",
+           data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
+           dataType:"json",	           
+           success:function(data){
+           	console.log("success");
+           }
+       });
+}	
+},1000);
+});
+//}
 
-			//offline
-			/*if(button_send.attr("value")=="Send Message"){
-				jQuery(button_send).on("click",function(){				
-					setTimeout(function(){
-						var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
-						console.log(status);
-						if(status == "none"){
-							var name = jQuery(form).find(".input_name").attr("value");
-							var email = jQuery(form).find(".input_email").attr("value");
-							var phone_number = jQuery(form).find(".input_phone").attr("value");	
-							var origin_id = 91;			
-							
-							jQuery.ajax({
-					            type:"post",
-					            url: "http://www.interlingua.com.mx/crm/registro",
-					            data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
-					            dataType:"json",				            
-					            success:function(data){
-					            	console.log("success");
-					            }
-					        });
-						}				
-					},1000);
-				});
-			}*/
-		}// Fin saveChat()
-	});
+//offline
+/*if(button_send.attr("value")=="Send Message"){
+jQuery(button_send).on("click",function(){	
+setTimeout(function(){
+var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
+console.log(status);
+if(status == "none"){
+var name = jQuery(form).find(".input_name").attr("value");
+var email = jQuery(form).find(".input_email").attr("value");
+var phone_number = jQuery(form).find(".input_phone").attr("value");	
+var origin_id = 91;	
+jQuery.ajax({
+           type:"post",
+           url: "http://www.interlingua.com.mx/crm/registro",
+           data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
+           dataType:"json",	           
+           success:function(data){
+           	console.log("success");
+           }
+       });
+}	
+},1000);
+});
+}*/
+}// Fin saveChat()
+});
 }); 
 });
 </script>
@@ -363,115 +361,73 @@ $zopim(function() {
 	<div id="container">
 
 		<header class="header" role="banner">
-
 			<div id="inner-header" class="wrap clearfix">
-
 				<div id="contenedor-izquierdo"  class="sixcol clearfix">
-					<div class="logo-header" align="center">
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" ?></a>
+					<div class="logo-header ctr">
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Logo Interlingua"></a>
 					</div>
 				</div>
-
 				<div id="contenedor-derecho"  class="sixcol clearfix">
-					<div class="logos-redes fullcol clearfix">
-						
-						<a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" ?></a>						
-						<a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" ?></a>
-						<a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" ?></a>
-
+					<div class="logos-redes fullcol clearfix">	
+						<a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" alt="Logo Twitter"></a>						
+						<a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="Logo Facebook"></a>
+						<a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" alt="Logo Google Plus"></a>
 					</div>
-
 					<div class="logos-redes fullcol clearfix">
 						<div class="twitter-heade clearfix">
 							<span class="telefono1">Línea de atención al cliente <strong>01 800 1INGLES (464537)</strong></span><br><span class="telefono2">Centro de información Cd. de México <strong>500 500 50</strong></span>
 						</div>					
 					</div>
 				</div>
-
-					<!-- <div id="contenedor-izquierdo"  class="sixcol first clearfix">
-							<div class="logo-header">
-								<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>../library/images/logo.png" ?></a>
-							</div>
-						</div> -->
-
-						<!-- div id="contenedor-derecho" class="sixcol last clearfix">
-							<div class="redes-header">								
-								<div class="google-header fourcol">
-									<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>../library/images/google.png" ?></a>
-								</div>
-								<div class="twitter-header fourcol">
-									<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>../library/images/twitter.png" ?></a>
-								</div>
-								<div class="facebook-header fourcol">
-									<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>../library/images/facebook.png" ?></a>
-								</div>								
-								<!--<div class="arrow-header">									
-									<div class="flecha">
-										<a  rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>../library/images/arrow.png" ?></a>
-									</div>
-									<div class="siguenos">¡Síguenos!</div>
-								</div> 
-							</div>
-							<div class="telefonos-header">
-								<span class="telefono1">Línea de atención al cliente <strong>01 800 1INGLES (434537)</strong></span><br><span class="telefono2">Centro de información Cd. de México <strong>500 500 50</strong></span>
-							</div>
-						</div> -->
-
-					</div> <!-- end #inner-header -->
-
-					<div id="contenedor-menu">
-
-						<div id="contenedor-menu-interior"  class="wrap clearfix">
-
-							<nav role="navigation">
-								<?php bones_main_nav(); ?>
-							</nav>
-							<?php if (!isset($_SESSION["id_alumno"])) { ?>
-							<div id="login_alumnos">
-								<span class="txt-acceso">ACCESO A ALUMNOS</span>
-								<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
-							</div>
-							<div id="toogleLogin">
-								<div id="loginfr">
-									<form name="frmLogin" id="frmLogin" action="#" method="post">
-										<input type="hidden" name="action" value="login" id="action" />
-										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-										<label class="lblLog" for="usuario">Matrícula</label>
-										<input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
-										<label class="lblLog" for="usuario">Contraseña</label>
-										<input type="password" name="pass" value="" id="pass" class="inptLog" required/>
-										<input type="submit" name="sendLogin" value="Entrar" id="sendLogin" />
-									</form>
-									<a href="#" class="olvidaste" id="olvidaContrasena">¿Olvidaste tu contraseña?</a>
-								</div>
-								<div id="recuperafr">
-									<form name="frmGetPass" id="frmGetPass" action="#" method="post">
-										<input type="hidden" name="action" value="getPass" id="action" />
-										<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-										<label class="lblLog" for="matinpt">Matrícula</label>
-										<input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
-
-										<input type="submit" name="sendLogin" value="Enviar" id="sendLogin" />
-									</form>
-								</div>
-							</div>
-							<?php }else{  ?>
-							<div id="login_alumnos">
-								<!--span class="txt-acceso">BIENVENIDO <?php echo "<strong>".strtoupper($_SESSION["alumno"])."</strong>"; ?></span-->
-								<span class="txt-acceso txt-acceso2">BIENVENIDO</span>
-								<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"></a>
-							</div>
-							<div id="toogleLogin" class="heightlog">
-								<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>" id="ruta" />
-								<div class="nombreSession"><?php echo $nombreAlumno;?></div>
-								<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
-								<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
-								<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
-							</div>
-							<?php } ?>
-						</div>
-
+			</div> <!-- end #inner-header -->
+			<div id="contenedor-menu">
+				<div id="contenedor-menu-interior"  class="wrap clearfix">
+					<nav role="navigation">
+						<?php bones_main_nav(); ?>
+					</nav>
+					<?php if (!isset($_SESSION["id_alumno"])) { ?>
+					<div id="login_alumnos">
+						<span class="txt-acceso">ACCESO A ALUMNOS</span>
+						<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png"  alt="Flecha Abajo"></a>
 					</div>
+					<div id="toogleLogin">
+						<div id="loginfr">
+							<form name="frmLogin" id="frmLogin" action="#" method="post">
+								<input type="hidden" name="action" value="login"/>
+								<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>"/>
+								<label class="lblLog" for="usuario">Matrícula</label>
+								<input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
+								<label class="lblLog" for="usuario">Contraseña</label>
+								<input type="password" name="pass" value="" id="pass" class="inptLog" required/>
+								<input type="submit" name="sendLogin" value="Entrar"/>
+							</form>
+							<a href="#" class="olvidaste" id="olvidaContrasena">¿Olvidaste tu contraseña?</a>
+						</div>
+						<div id="recuperafr">
+							<form name="frmGetPass" id="frmGetPass" action="#" method="post">
+								<input type="hidden" name="action" value="getPass"/>
+								<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>"/>
+								<label class="lblLog" for="matinpt">Matrícula</label>
+								<input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
 
-
-			</header> <!-- end header -->
+								<input type="submit" name="sendLogin" value="Enviar"/>
+							</form>
+						</div>
+					</div>
+					<?php }else{  ?>
+					<div id="login_alumnos">
+						<!--span class="txt-acceso">BIENVENIDO <?php echo "<strong>".strtoupper($_SESSION["alumno"])."</strong>"; ?></span-->
+						<span class="txt-acceso txt-acceso2">BIENVENIDO</span>
+						<a class="lnk-acceso" href="#"><img src="<?php echo get_template_directory_uri(); ?>/library/images/down.png" alt="Flecha Abajo"></a>
+					</div>
+					<div id="toogleLogin" class="heightlog">
+						<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>"/>
+						<div class="nombreSession"><?php echo $nombreAlumno;?></div>
+						<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
+						<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
+						<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
+					</div>
+					<?php } ?>
+				</div>
+			</div>
+		</header> <!-- end header -->

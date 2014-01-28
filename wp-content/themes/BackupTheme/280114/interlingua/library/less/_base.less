@@ -1,0 +1,3444 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+------------ MAP ------------
+
+01. GENERAL STYLES
+02. WORDPRESS BODY CLASSES
+03. LAYOUT & GRID STYLES
+04. LINK STYLES
+05. H1, H2, H3, H4, H5 STYLES
+06. HEADER STYLES
+07. NAVIGATION STYLES
+08. POSTS & CONTENT STYLES
+09. PAGE NAVI STYLES
+10. COMMENT STYLES
+11. COMMENT FORM STYLES
+12. SIDEBARS & ASIDES
+13. FOOTER STYLES
+
+******************************************************************/
+
+
+
+
+/*********************
+01. GENERAL STYLES
+*********************/
+
+
+html, body {
+	/* height: 100%; */
+}
+body {
+	font-family: @myriad-regular;
+	font-size: 14px;
+/*	line-height: 1.5;*/
+	color: #797979;
+}
+
+/********************
+02. WORDPRESS BODY CLASSES
+    style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+03. LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+#container {}
+
+/*********************
+04. LINK STYLES
+*********************/
+
+/* a, a:visited {
+	color: @link-color;
+
+	/* on hover */
+/*	&:hover, &:focus {
+		color: @link-hover;
+	}
+
+	/* on click */
+/*	&:active {
+
+	}
+
+	/* mobile tap color */
+/*	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+/*		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+05. H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family:@myriad-regular;
+	text-rendering: optimizelegibility;
+	font-weight: 400;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+06. HEADER STYLES
+*********************/
+
+.header {
+	#inner-header {}
+
+	#logo {}
+
+	nav {
+		ul.nav {
+			li {
+				a {}
+
+				&:first-child {}
+
+				&:last-child {}
+			}
+		}
+	}
+}
+
+/*********************
+07. NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+
+	li {
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 10px;
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+/*********************
+08. POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	/*margin-top: 1em;*/
+
+	#inner-content {}
+}
+
+		.hentry {
+
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+
+		.single-title,
+		.page-title {}
+
+		.single-title {}
+
+		.page-title {}
+
+		.archive-title { }
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: #999;
+
+			time {}
+		}
+
+		/* entry content */
+		.entry-content {
+
+			p {}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				margin: 0 0 1.5em 0;
+				max-width: 100%;
+				height: auto;
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+
+		.wp-caption {
+			max-width: 100%;
+			background: #eee;
+			padding: 5px;
+
+			/* images inside wp-caption */
+			img {
+				max-width: 100%;
+				margin-bottom: 0;
+				width: 100%;
+			}
+
+			p.wp-caption-text {
+				font-size: 0.85em;
+				margin: 4px 0 7px;
+				text-align: center;
+			}
+
+		} /* end .wp-caption */
+
+		/* image gallery styles */
+		.gallery {
+
+			dl {
+
+				a {}
+
+				img {}
+
+			}
+
+			dt {}
+
+			dd {}
+
+		} /* end .gallery */
+
+		/* gallery caption styles */
+		.gallery-caption {}
+
+		.size-full {}
+		.size-large {}
+		.size-medium {}
+		.size-thumbnail {}
+
+/******************************************************************
+09. PAGE NAVI STYLES
+******************************************************************/
+
+.page-navigation,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+	.bones_page_navi {
+
+		li {
+			float: left;
+			margin-left: 10px;
+
+			a {
+				padding: 3px 6px;
+				display: block;
+				text-decoration: none;
+				position: relative;
+
+				&:hover,
+				&:focus {
+					color: #f01d4f;
+					text-decoration: underline;
+				}
+			}
+
+		}
+
+		/* current page link */
+		li.bpn-current {
+			padding: 3px 6px;
+			border-bottom: 0px solid #f01d4f;
+			position: relative;
+
+			a {
+				/* hovering on current page link */
+				&:hover,
+				&:focus {}
+
+			}
+
+		} /* end .bones_page_navi .bpn-current */
+
+		/* common styles for page-navi links */
+		li.bpn-prev-link,
+		li.bpn-next-link {
+			font-weight: 700;
+
+			a {
+				padding: 0;
+			}
+		}
+
+		/* remove the bg on end links */
+		li.bpn-prev-link a:hover,
+		li.bpn-next-link a:hover,
+		li.bpn-first-page-link a:hover,
+		li.bpn-last-page-link a:hover {
+			background: none;
+		}
+
+		/* previous link */
+		li.bpn-prev-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* next page link */
+		li.bpn-next-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* first page link */
+		li.bpn-first-page-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* last page link */
+		li.bpn-last-page-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+	} /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+
+/******************************************************************
+10. COMMENT STYLES
+******************************************************************/
+
+/* h3 comment title */
+#comments {
+
+	/* number of comments span */
+	span {}
+
+}
+
+.comment-nav {
+
+	ul {
+
+		li {}
+
+	}
+}
+
+
+.commentlist {
+
+	li {
+		position: relative;
+		clear: both;
+		overflow: hidden;
+		list-style-type: background;
+		margin-bottom: 1.5em;
+		padding: 0.7335em 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		ul.children {
+			margin: 0;
+			list-style: square;
+
+			li {}
+
+			/* variations */
+			.comment {}
+			.alt {}
+			.odd {}
+			.even {}
+			.depth-1 {}           /* change number for different depth */
+			.byuser {}
+			.bypostauthor {}
+			.comment-author-admin {}
+
+		} /* end .commentlist li ul.children */
+	}
+
+	li[class*=depth-] {
+		margin-top: 1.1em;
+	}
+
+	li.depth-1 {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	li:not(.depth-1) {
+		margin-right: -10px;
+		margin-left: -10px;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+
+	li.depth-2 {}
+	li.depth-3 {}
+	li.depth-4 {}
+	li.depth-5 {}
+
+	/* general comment classes */
+	.alt {}
+	.odd {
+		background: #eee;
+	}
+	.even {
+		background: #fefefe;
+	}
+	.parent {}
+	.comment {}
+	.children {}
+	.pingback {}
+	.bypostauthor {}
+	.comment-author {}
+	.comment-author-admin {}
+	.thread-alt {}
+	.thread-odd {}
+	.thread-even {}
+
+	/* vcard */
+	.vcard {
+		margin-left: 50px;
+
+		cite.fn {
+			font-weight: 700;
+			font-style: normal;
+
+			a.url {}
+
+		}
+
+		time {
+			float: right;
+
+			a {
+				color: #999;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+		}
+
+		img.photo {}
+
+		img.avatar {
+			position: absolute;
+			left: 10px;
+			padding: 2px;
+			border: 1px solid #cecece;
+			background: #fff;
+		}
+
+	} /* end .commentlist .vcard */
+
+
+	/* comment meta */
+	.comment-meta {
+
+		a {}
+
+	}
+
+	.commentmetadata {
+
+		a {}
+
+	}
+
+	/* comment content */
+	.comment_content {
+		margin-left: 50px;
+
+		p {
+			margin: 0.7335em 0 1.5em;
+			font-size: 1em;
+			line-height: 1.5em;
+		}
+
+	} /* end .commentlist .comment_content */
+
+	/* comment reply link */
+	.comment-reply-link {
+		text-decoration: none;
+		float: right;
+		background: #4598bb;
+		padding: 3px 5px;
+		color: #fff;
+		opacity: 0.65;
+		margin-bottom: 10px;
+		font-weight: 700;
+		font-size: 0.9em;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+
+	} /* end .commentlist .comment-reply-link */
+
+} /* end .commentlist */
+
+/******************************************************************
+11. COMMENT FORM STYLES
+******************************************************************/
+
+.respond-form {
+	margin: 1.5em 10px;
+	padding-bottom: 2.2em;
+
+	form {
+		margin: 0.75em 0;
+
+		li {
+			list-style-type: square;
+			clear: both;
+			margin-bottom: 0.7335em;
+
+			label,
+			small {
+				display: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		textarea {
+			padding: 3px 6px;
+			background: #efefef;
+			border: 2px solid #cecece;
+			line-height: 1.5em;
+
+			&:focus {
+				background: #fff;
+			}
+
+			/* form validation */
+			&:invalid {
+				outline: none;
+				border-color: #fbc2c4;
+				background-color: #f6e7eb;
+				-webkit-box-shadow: none;
+				   -moz-box-shadow: none;
+				    -ms-box-shadow: none;
+						box-shadow: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url] {
+			max-width: 400px;
+			min-width: 250px;
+		}
+
+		textarea {
+			resize: none;
+			width: 97.3%;
+			height: 150px;
+		}
+
+	}
+}
+
+	/* comment submit button */
+	#submit {}
+
+	/* comment form title */
+	#comment-form-title {
+		margin: 0 0 1.1em;
+	}
+
+	/* cancel comment reply link */
+	#cancel-comment-reply {
+		a {}
+	}
+
+	/* logged in comments */
+	.comments-logged-in-as {}
+
+	/* allowed tags */
+	#allowed_tags {
+		margin: 1.5em 10px 0.7335em 0;
+	}
+
+	/* no comments */
+	.nocomments {
+		margin: 0 20px 1.1em;
+	}
+
+/*********************
+12. SIDEBARS & ASIDES
+*********************/
+
+.sidebar {}
+
+	.widgettitle {}
+
+	.widget {
+
+
+		ul {
+
+			li {
+
+				&:first-child {}
+
+				&:last-child {}
+
+				a {}
+
+				/* deep nesting */
+				ul {}
+
+			}
+
+		}
+
+	}
+
+	.widget ul li a{
+		text-decoration: none;
+		padding-left: 0px;
+	}
+
+	.widget ul li a:hover{
+		color:000;
+	}
+
+	.widget ul li{
+	     background: none;
+	     padding-left: 25px;
+	     margin-top: 0px;
+	}
+
+/*********************
+13. FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	#inner-footer {
+	}
+	nav {
+		ul.nav {
+			li {
+				a {}
+
+				&:first-child {}
+
+				&:last-child {}
+			}
+		}
+	}
+}
+
+	/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+	.footer-links {
+
+		ul {
+
+			li {}
+
+		}
+
+	} /* end .footer-links */
+
+
+	.copyright {}
+
+/****************	Estilos Peronalizados	****************
+---------------------------------------------------------- */
+.prueba{
+	background: #ccc;
+}
+
+/*** Acordeon ***/
+
+	#accordion {
+				/*background:@valores-verde;*/
+				width: 100%;			
+				margin: 0 auto;
+				text-align: left;		
+				/* accordion header */
+				> h2 {				
+					
+				// background: lighten(@gray, 50%);
+				line-height: 14px;
+				margin:0;
+				padding:5px 0px;
+				font-size:10px;
+				font-weight:normal;
+				cursor:pointer;
+				text-align: left;
+				border-bottom: 1px solid @white;
+				
+					span {
+						cursor:pointer;
+						color:@color-interlingua;
+						padding: 10px;
+						background: @fondo-faq;
+						font-size: 2em;
+						display:block;
+						width:100%;
+						height:auto;					
+						line-height: 30px;
+					}
+				}
+			}
+	 
+				/* currently active header */
+				h2.current {
+					cursor:default;				
+				}
+	 
+				/* accordion pane */
+				.pane {				
+					display:none;
+					padding:15px;
+					color:@texto-gris;
+					}		
+				
+
+/*	Span
+	------------------------------------------ */
+
+		.telefono1{
+			color:#33b0be;
+		}
+		
+		.telefono2{
+			color:#595959;
+		}
+
+		.alumnos-header{
+			color: #33b0be;				
+			text-decoration: none;					
+		}	
+
+		.titulos-footer{
+			font-family: @myriad-regular;
+			font-weight: bold;		
+		}
+
+
+/*	Slider
+	------------------------------------------ */
+
+	.slider-home{
+		display:none;
+	}
+
+/*	Header
+	------------------------------------------ */
+		
+		.logo-header{
+			margin: 15px 0 0px 0;
+			
+			img{
+				max-width: 90%;
+				height: auto;
+				float: none;
+			}
+		}		
+
+		#contenedor-derecho{	
+			text-align: center;			
+			line-height: 25px;
+			
+		}
+
+			.logos-redes img{			
+				margin-left: 10px;
+				margin-top: 20px;
+			}
+			
+			.telefonos{
+				color:#33b0be;
+				float: right;
+				font-size: 1em;
+				font-family: @myriad-semibold;
+				margin-top: 5px;
+				margin-bottom: 0px;
+				width: 100%;
+			}
+
+		#contenedor-menu{
+				background: #33b0be;	
+			}
+
+	/*	Pagina Home
+	------------------------------------------ */
+
+		.titulo-seccion-home{
+			font-size: 4.375em;			
+			font-family: @myriad-semibold;
+			text-align: center;
+			padding-top: 65px;
+		}
+
+		
+
+		.cursos-full, .planteles-full, .trabajo-full{
+			.css-gradient(#f6f6f6,#d1d1d1); 
+			height: auto;
+			color:@color-interlingua;
+		}
+
+
+		/*	Seccion Metodo
+		------------------------------------------ */
+
+				.metodo-full{
+					background: @color-interlingua2;
+					height: auto;
+					overflow: hidden;
+					color:@white;
+				}
+
+				.metodo-segmento{
+					margin-top: 10px;																
+				}
+
+					.metodo-segmento img{
+						max-width: 50%;
+						height: auto;
+					}
+
+					#metodo1{
+						margin-top: 30px;
+					}
+
+					.titulo-seccion-metodo{
+						font-size: 2em;			
+						font-family: @myriad-semibold;
+						text-align: center;
+						padding-top: 50px;
+					}
+
+					.descripcion-metodo{
+						font-family: @myriad-semibold;
+						text-align: center;
+						font-size: 1.6em;
+						margin-bottom: 20px;
+						width: 100%;
+					}
+
+					#boton-metodo{
+						margin-top: 15px;
+						padding-bottom: 30px;						
+					}
+
+					.boton-metodo{						
+						font-family: @myriad-bold;
+						border: 1px solid darken(@bones-orange, 13%);
+						border-top-color: darken(@bones-orange, 7%);
+						border-left-color: darken(@bones-orange, 7%);
+						padding:10px 10px;
+						color: @white;
+						display: inline-block;
+						font-size:1.5em;	
+						text-decoration: none;
+						text-shadow: 0 1px rgba(109,109,109, .75);
+						cursor: pointer;
+						/*margin-bottom: 10px;
+						margin-top:5px;*/
+						line-height: 25px;
+						.transition();	
+						.border-radius(10px);
+						.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+							&:hover, &:focus {
+								color: @white;
+								border: 1px solid darken(@bones-orange, 13%);
+							    border-top-color: darken(@bones-orange, 7%);
+								border-left-color: darken(@bones-orange, 7%);
+								.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+							}
+					}
+
+		/*	Pagina Cursos
+		------------------------------------------ */
+
+			.cursos-full{
+				.css-gradient(#f6f6f6,#d1d1d1); 
+				height: auto;				
+			}
+
+			.curso-segmento{
+				margin-top: 10px;				
+			}
+
+				#curso1{
+					margin-top: 30px;
+				}
+
+				#curso2{
+					margin-top: -31px;
+				}
+
+				.curso-segmento img{
+					max-width: 40%;
+					height: auto;
+				}
+
+				.titulo-seccion-cursos{
+					font-size: 2em;			
+					font-family: @myriad-semibold;
+					text-align: center;
+					padding-top: 50px;
+				}
+
+				.descripcion-curso{
+					font-family: @myriad-semibold;
+					text-align: center;
+					font-size: 1.6em;
+					margin-bottom: 20px;
+					width: 100%;
+				}
+
+				#boton-cursos{
+					margin-top: 20px;
+					margin-bottom: 30px;
+					
+				}
+
+				.boton-cursos{						
+						font-family: @myriad-bold;
+						border: 1px solid darken(@bones-orange, 13%);
+						border-top-color: darken(@bones-orange, 7%);
+						border-left-color: darken(@bones-orange, 7%);
+						padding:10px 10px;
+						color: @white;
+						display: inline-block;
+						font-size:1.5em;	
+						text-decoration: none;
+						text-shadow: 0 1px rgba(109,109,109, .75);
+						cursor: pointer;
+						/*margin-bottom: 10px;
+						margin-top:5px;*/
+						line-height: 25px;
+						.transition();	
+						.border-radius(10px);
+						.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+							&:hover, &:focus {
+								color: @white;
+								border: 1px solid darken(@bones-orange, 13%);
+							    border-top-color: darken(@bones-orange, 7%);
+								border-left-color: darken(@bones-orange, 7%);
+								.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+							}
+					}
+
+		/*	Seccion Test
+		------------------------------------------ */
+
+			.test-full{
+				background: @color-interlingua2;
+				height: auto;
+				color:@white;
+			}
+
+			.test-segmento{
+				margin-top: 10px;				
+			}
+
+			.test-segmento img{
+				max-width: 40%;					
+			}
+				.titulo-seccion-test{
+					font-size: 2em;			
+					font-family: @myriad-semibold;
+					text-align: center;
+					padding-top: 50px;
+				}
+
+				.descripcion-test{
+					font-family: @myriad-semibold;
+					text-align: center;
+					font-size: 1.4em;
+					margin-bottom: 20px;
+					margin-top: 20px;	
+					width: 80%;
+				}
+
+				#boton-test{
+					margin-bottom: 30px;
+				}
+
+				.boton-test{						
+					font-family: @myriad-bold;
+					border: 1px solid darken(@bones-orange, 13%);
+					border-top-color: darken(@bones-orange, 7%);
+					border-left-color: darken(@bones-orange, 7%);
+					padding:10px 10px;
+					color: @white;
+					display: inline-block;
+					font-size:1.5em;	
+					text-decoration: none;
+					text-shadow: 0 1px rgba(109,109,109, .75);
+					cursor: pointer;
+					/*margin-bottom: 10px;
+					margin-top:5px;*/
+					line-height: 25px;
+					.transition();	
+					.border-radius(10px);
+					.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+						&:hover, &:focus {
+							color: @white;
+							border: 1px solid darken(@bones-orange, 13%);
+						    border-top-color: darken(@bones-orange, 7%);
+							border-left-color: darken(@bones-orange, 7%);
+							.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+						}
+				}	
+
+		/*	Planteles
+		------------------------------------------ */
+
+			.planteles-full{
+				.css-gradient(#f6f6f6,#d1d1d1); 
+				height: auto;				
+			}
+
+			.plantel-segmento{
+				margin-top: 10px;				
+			}
+
+			.planteles-interior img{				
+				max-width: 70%;
+				height: auto;
+			}
+
+				.titulo-seccion-planteles{
+					font-size: 2em;			
+					font-family: @myriad-semibold;
+					text-align: center;
+					padding-top: 50px;
+				}
+
+				.descripcion-planteles{
+					font-family: @myriad-semibold;
+					text-align: center;
+					font-size: 1.6em;
+					margin-bottom: 20px;
+					margin-top: 10px;	
+					width: 80%;
+				}
+
+			.planteles-form-home{				
+				width: 80%;					
+				margin-bottom: 35px;
+			}
+
+				#estado-form-home, #plantel-form-home, #country, #state{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					padding: 14px 12px;
+					color:@texto-gris;
+					.border-radius(10px);					
+					float: left;
+					width: 100%;
+					margin-left: 0px;
+					margin-top: 20px;
+				}
+
+				#enviar-form-home{
+					width: 136px;
+					height: 47px;					
+					border:none;
+					.border-radius(10px);		
+					background: @color-interlingua url(../images/enviar.png) no-repeat;
+					background-position: center;
+					margin-top: 20px;
+				}
+
+				#enviar-form-home:hover{
+					background: @color-interlingua url(../images/enviar.png) no-repeat;
+					background-position: center;
+					border:none;
+				}			
+		
+		/*	Seccion Contacto
+		------------------------------------------ */
+
+			.contacto-full{
+					background: #0098aa;
+					height: auto;
+					color:@white;
+				}		
+
+				.contacto-segmento{
+					margin-top: 10px;				
+				}
+
+					.titulo-seccion-contacto{
+						font-size: 2em;			
+						font-family: @myriad-semibold;
+						text-align: center;
+						padding-top: 50px;
+					}				
+
+					.formulario-contacto-home{
+						margin-left: 10px;
+						margin: 0 auto;
+						margin-top: 0px;
+						margin-bottom: 30px;
+						width: 80%;
+					}
+
+					#nombre-completo-home, #correo-electronico-home,
+					#telefono-home, #estado-contacto-home, #lada-home{
+						font-family: @myriad-regular;
+						font-size: 0.875em;
+						background: #fff;
+						border: solid 4px #f1f1f1;
+						padding: 14px 12px;
+						color:@texto-gris;
+						.border-radius(10px);
+						width: 100%;
+						float: left;
+						margin-left: 0px;
+						margin-top: 20px;
+					}
+
+					#nombre1Home{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Home{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:407px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+
+					#lada1Home{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Home{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 212px;								
+								color:#fff;								
+								position: absolute;
+								left:164px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Home{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 200px;								
+								color:#fff;								
+								position: absolute;
+								left:407px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Home{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#sucursal1Home{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:407px;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Home{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 226px;
+								color: #fff;
+								position: absolute;
+								left: 280px;
+								top: 23px;
+								font-size: 12px;
+							}
+						}
+
+
+					#telefono-home{
+						width: 65%;
+						margin-left: 5%;
+						margin-top: 20px;
+					}
+
+					#lada-home{
+						width: 30%;
+						margin-top: 20px;
+					}				
+
+					#estado-contacto-home{
+						margin-top: 20px;
+					}
+
+					#boton-enviar-contacto-home{	
+						margin-top: 20px;
+						width: auto;							
+						font-family: @myriad-bold;
+						border: 1px solid darken(@bones-orange, 13%);
+						border-top-color: darken(@bones-orange, 7%);
+						border-left-color: darken(@bones-orange, 7%);
+						padding:10px 10px;
+						color: @white;
+						display: inline-block;
+						font-size:1.5em;	
+						text-decoration: none;
+						text-shadow: 0 1px rgba(109,109,109, .75);
+						cursor: pointer;
+						/*margin-bottom: 10px;
+						margin-top:5px;*/
+						line-height: 25px;
+						.transition();	
+						.border-radius(10px);
+						.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+							&:hover, &:focus {
+								color: @white;
+								border: 1px solid darken(@bones-orange, 13%);
+							    border-top-color: darken(@bones-orange, 7%);
+								border-left-color: darken(@bones-orange, 7%);
+								.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+							}
+					}
+
+					.formulario-contacto-home .wpcf7-validation-errors{
+						margin-top: 5px;
+					}	
+		
+		/*	Bolsa de Trabajo
+		------------------------------------------ */
+
+			.bolsa-trabajo-full{
+				.css-gradient(#f6f6f6,#d1d1d1); 
+				height: auto;
+				color:@color-interlingua;				
+			}
+
+			.titulo-seccion-bolsa-trabajo,{
+				font-size: 2em;			
+				font-family: @myriad-semibold;
+				text-align: center;	
+				padding-top: 50px;			
+			}
+
+			.subtitulo-seccion-bolsa-trabajo{
+				font-size: 2em;			
+				font-family: @myriad-semibold;
+				text-align: center;					
+				margin-bottom: 15px;
+			}
+
+			.plantel-segmento{
+				margin-top: 20px;				
+			}
+
+			.bolsa-trabajo-interior img{
+				margin-bottom: 20px;
+				width: 50%;
+				height: auto;							
+			}
+
+			.bolsa-trabajo-segmento{
+
+			}			
+
+				.bolsa-trabajo-requisitos,
+				.bolsa-trabajo-ofrecemos{
+					font-family: @myriad-semibold;
+					text-align: center;
+					font-size: 1.48em;
+					margin-bottom: 40px;
+					margin-top: 10px;						
+				}
+
+				.bolsa-trabajo-ofrecemos{
+					margin-top: 0px;
+				}
+
+			.boton-trabajo{
+				margin-bottom: 30px;
+			}
+
+			.boton-bolsa{											
+					font-family: @myriad-bold;
+					border: 1px solid darken(@bones-orange, 13%);
+					border-top-color: darken(@bones-orange, 7%);
+					border-left-color: darken(@bones-orange, 7%);
+					padding:10px 10px;
+					color: @white;
+					display: inline-block;
+					font-size:1.5em;	
+					text-decoration: none;
+					text-shadow: 0 1px rgba(109,109,109, .75);
+					cursor: pointer;
+					/*margin-bottom: 10px;
+					margin-top:5px;*/
+					line-height: 25px;
+					.transition();	
+					.border-radius(10px);
+					.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+						&:hover, &:focus {
+							color: @white;
+							border: 1px solid darken(@bones-orange, 13%);
+						    border-top-color: darken(@bones-orange, 7%);
+							border-left-color: darken(@bones-orange, 7%);
+							.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+						}
+				}
+
+	/*	Paginas	Generales
+	------------------------------------------ */
+
+		/*	Titulos	
+		------------------------------------------ */
+			.curso-titulo, .page-title{
+				border-bottom: solid 1px @border;
+				color:@color-interlingua;
+				font-size: 1.875em;
+				padding-bottom: 0.5em;
+				text-align: center;
+			}
+
+	/*	Paginas	Cursos
+	------------------------------------------ */
+		
+		/*	Menu
+		------------------------------------------ */
+
+			.menu-cursos{
+				margin-top: -20px;
+			}
+			
+				.menu-cursos a:link{			
+					text-decoration: none;
+					color:@texto-gris;
+				}
+					.menu-cursos a:visited{
+						color:@texto-gris;
+					}
+
+					.menu-cursos a:hover{
+						color:@color-interlingua;
+					}
+
+					.menu-cursos a:active{
+						color:@color-interlingua;
+					}
+						
+				.menu-cursos ul li{			
+					list-style: none;
+					float: left;
+					padding: 0 30px 0 0;
+					background: none;			
+				}
+
+		/*	Contenedor
+		------------------------------------------ */
+
+			#contenedor-curso{			
+				.css-gradient(#f6f6f6,#d1d1d1);			
+			}
+
+			.contenedor-curso-interior{}
+
+				.contenedor-curso-informacion{
+					font-family: @myriad-semibold;
+				}
+
+					.titulo-del-curso{
+						padding-top: 0.5em;
+						font-size: 4em;								
+						color: @color-interlingua;
+						text-align: center;
+					}
+
+					.subtitulo-del-curso{
+						font-size: 2.8em;
+						color: @color-interlingua;
+						text-align: center;
+					}
+
+					.descripcion-del-curso{
+						font-family: @myriad-regular;
+						font-size: 1.25em;
+						color:@texto-gris;
+						margin-top: 0.8em;
+						margin-left: 0.25em;
+						line-height: 1.99em;
+						width: 100%;
+						text-align: center;
+					}
+
+					.nota-del-curso{
+						font-size: 2.45em;
+						color:@color-interlingua;
+						margin-top: 0.5em;
+						margin-bottom: 0.45em;
+						margin-left: 0.15em;
+						text-align: center;									
+					}
+
+				.contenedor-curso-formulario{				
+					background: @color-interlingua;				
+				}
+
+			.contenedor-curso-formulario{
+				background: @color-interlingua;			
+			}
+				.titulo-formulario{
+					padding-top: 1em;	
+					font-size: 1.35em;
+					color:@white;
+					text-align: center;
+					margin-top: 1em;
+					margin-bottom: 1em;													
+				}
+
+				.formulario-registro-cursos{
+					width: 95%;
+				}
+			
+
+		/* Formulario Pagina Cursos
+		------------------------------------------ */
+			#formulario-cursos{
+				height: 600px;
+			}
+
+				#txtNombreCursos, #txtCorreoCursos, #txtLadaCursos,
+				#txtTelefonoCursos, #cmbEstadosCursos, #txtCelularCursos,
+				#cmbSucursalesCursos{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 100%;
+					float: left;							
+				}	
+
+					#nombre1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 112px;
+								font-size: 12px;
+							}
+						}
+
+
+					#lada1Cursos{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 300%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Cursos{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 60%;								
+								color:#fff;								
+								position: absolute;
+								left:30%;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 260px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 355px;
+								font-size: 12px;
+							}
+						}
+
+					#sucursal1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:0px;
+								top: 433px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 565px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoCursos{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#txtLadaCursos{
+					width: 25%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoCursos{
+					width: 70%;
+					margin-left: 5%;
+					margin-top: 30px;
+				}
+
+				#txtCelularCursos{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesCursos{
+					margin-left: 0%;
+				}
+
+				#btnEnviarCursos{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosCursos, #cmbSucursalesCursos{
+					margin-top: 30px;
+				}
+
+				#politicas1Cursos{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasCursos{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Cursos{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Cursos a{
+						text-decoration: none;
+						color:#fff;
+					}
+
+		/* Formulario Pagina Empresas
+		------------------------------------------ */
+			#formulario-empresas{
+				height: 820px;
+			}
+
+				#txtNombreEmpresas, #txtCorreoEmpresas, #txtEmpresaEmpresas,
+				#txtPuestoEmpresas, #txtLadaEmpresas, #txtTelefonoEmpresas,
+				#cmbEstadosEmpresas, #txtCelularEmpresas, #cmbSucursalesEmpresas,
+				#txtComentarioEmpresas{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 100%;
+					float: left;							
+				}	
+
+					#nombre1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#empresa1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#puesto1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 260px;
+								font-size: 12px;
+							}
+						}
+
+
+
+					#lada1Empresas{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 50%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 347px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Empresas{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 60%;								
+								color:#fff;								
+								position: absolute;
+								left:30%;
+								top: 347px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 425px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Empresas{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 508px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#sucursal1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:0px;
+								top: 588px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#comentario1Empresas{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 680px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 810px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoEmpresas{
+					margin-left: 0%;
+					margin-top: 30px;					
+				}
+
+				#txtEmpresaEmpresas{				
+					margin-top: 30px;
+				}
+
+				#txtPuestoEmpresas{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#txtLadaEmpresas{
+					width: 25%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoEmpresas{
+					width: 70%;
+					margin-left: 5%;
+					margin-top: 30px;
+				}
+
+				#txtCelularEmpresas{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursaleEmpresas{
+					margin-left: 4%;
+				}
+
+				#txtComentarioEmpresas{					
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				#btnEnviarEmpresas{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosEmpresas, #cmbSucursalesEmpresas{
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesEmpresas{
+					margin-left: 0%;
+				}
+
+				#politicas1Empresas{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasEmpresas{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Empresas{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Empresas a{
+						text-decoration: none;
+						color:#fff;
+					}
+
+		/* Formulario Pagina Franquicias
+		------------------------------------------ */
+			#formulario-franquicias{
+				height: 777px;
+			}
+
+				#txtNombreFranquicias, #txtCorreoFranquicias, #txtMedioFranquicias,
+				#txtLadaFranquicias, #txtTelefonoFranquicias, #cmbEstadosFranquicias,
+				#txtCelularFranquicias, #cmbSucursalesFranquicias, #txtComentarioFranquicias, #txtNacionalidadFranquicias{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 100%;
+					float: left;							
+				}	
+
+					#nombre1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 112px;
+								font-size: 12px;
+							}
+						}
+
+					#medio1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 510px;
+								font-size: 12px;
+							}
+						}				
+
+
+
+					#lada1Franquicias{						
+						position: relative;
+						
+							label.error{								
+							background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 300%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Franquicias{					
+						position: relative;
+						
+							label.error{
+							background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 60%;								
+								color:#fff;								
+								position: absolute;
+								left:30%;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Franquicias{						
+						position: relative;
+						
+							label.error{
+							background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 260px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Franquicias{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+							background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 355px;
+								font-size: 12px;
+							}
+						}
+
+					#sucursal1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:0px;
+								top: 433px;
+								font-size: 12px;
+							}
+						}
+
+					#comentario1Franquicias{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 600px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 730px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoFranquicias{
+					margin-left: 0%;					
+					margin-top: 30px;
+				}
+
+				#txtMedioFranquicias{				
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				#txtNacionalidadFranquicias{
+					margin-top: 30px;
+					width: 100%;
+				}
+			
+
+				#txtLadaFranquicias{
+					width: 25%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoFranquicias{
+					width: 70%;
+					margin-left: 5%;
+					margin-top: 30px;
+				}
+
+				#txtCelularFranquicias{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursaleFranquicias{
+					margin-left: 4%;
+				}
+
+				#txtComentarioFranquicias{					
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				#btnEnviarFranquicias{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosFranquicias, #cmbSucursalesFranquicias{
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesFranquicias{
+					margin-left: 0%;
+				}
+
+				#politicas1Franquicias{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasFranquicias{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Franquicias{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Franquicias a{
+						text-decoration: none;
+						color:#fff;
+					}
+
+					label.error{
+						z-index:10000;
+					}
+
+
+		/* Formulario Pagina Alumnos
+		------------------------------------------ */
+			#formulario-alumnos{
+				height: 600px;
+				padding-top: 20px;
+			}
+
+				#txtNombreAlumnos, #txtCorreoAlumnos, 
+				#txtLadaAlumnos, #txtTelefonoAlumnos, #cmbEstadosAlumnos,
+				#txtCelularAlumnos, #cmbSucursalesAlumnos, {
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 100%;
+					float: left;							
+				}	
+
+					#nombre1Alumnos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Alumnos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 112px;
+								font-size: 12px;
+							}
+						}
+
+					#lada1Alumnos{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 300%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Alumnos{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 60%;								
+								color:#fff;								
+								position: absolute;
+								left:30%;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Alumnos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 260px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Alumnos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 355px;
+								font-size: 12px;
+							}
+						}
+
+					#sucursal1Alumnos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:0px;
+								top: 433px;
+								font-size: 12px;
+							}
+						}
+				
+
+					#politicas1Alumnos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 565px;
+								font-size: 12px;
+							}
+						}
+
+
+					
+				#txtCorreoAlumnos{
+					margin-left: 0%;
+					margin-top: 30px;					
+				}			
+
+				#txtLadaAlumnos{
+					width: 25%;
+					margin-top: 30px
+				}
+
+				#txtTelefonoAlumnos{
+					width: 70%;
+					margin-left: 5%;
+					margin-top: 30px;
+				}
+
+				#txtCelularAlumnos{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursaleAlumnos{
+					margin-left: 0%;
+				}
+
+				#btnEnviarAlumnos{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosAlumnos, #cmbSucursalesAlumnos{
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesAlumnos{
+					margin-left: 0%;
+				}
+
+				#politicas1Alumnos{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasAlumnos{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Alumnos{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Alumnos a{
+						text-decoration: none;
+						color:#fff;
+					}
+
+					label.error{
+						z-index:10000;
+					}
+
+
+		/*	Slider
+		------------------------------------------ */
+
+			.contenedor-slider-cursos{
+				float: left;
+			}
+
+			.slider-tipo-cursos{
+				margin-top: 10px;
+			}
+
+				.slider-curso-1,.slider-curso-2,
+				.slider-curso-3, .slider-curso-4{
+					padding: 0 14px;				
+				}
+
+				.imagen-slider-curso img{
+					margin: 0 auto;
+				}
+
+					.titulo-slider-curso{
+						font-family: @myriad-semibold;
+						font-size: .863em;
+						line-height: 30px;
+						text-align: center;
+						margin-top: 0.3em;
+					}
+
+					.descripcion-slider-curso{
+						font-size: .863em;
+						line-height: 30px;
+						text-align: center;
+					}
+
+				#boton-slider-cursos{
+					width: auto;
+					font-size: 1.2em;
+					padding: 8px 20px;
+					margin-top: 0.7em;				
+				}
+
+	
+
+	/*	Paginas Contacto
+	------------------------------------------ */
+
+		#contenedor-contacto{
+			/*margin-top: 2em;*/
+			.css-gradient(#f6f6f6,#d1d1d1);			
+		}
+
+		.contenedor-contacto-interior{}
+
+			.contenedor-contacto-informacion{
+				font-family: @myriad-semibold;
+			}
+
+				.titulo-contacto{
+						padding-top: 0.5em;
+						font-size: 3em;								
+						color: @color-interlingua;
+						text-align: center;
+					}
+
+					.subtitulo-contacto{
+						font-size: 2.5em;
+						color: @color-interlingua;
+						text-align: center;
+					}
+
+					.descripcion-contacto{
+						font-family: @myriad-regular;
+						font-size: 1.25em;
+						color:@texto-gris;
+						margin-top: 0.8em;
+						margin-left: 0.25em;
+						line-height: 1.99em;
+						width: 100%;
+						text-align: center;
+					}
+
+					.nota-contacto{
+						font-size: 2.45em;
+						color:@color-interlingua;
+						margin-top: 0.5em;
+						margin-bottom: 0.45em;
+						margin-left: 0.15em;
+						text-align: center;									
+					}
+
+			.contenedor-curso-formulario{				
+				background: @color-interlingua;				
+			}
+
+		.contenedor-curso-formulario{
+			background: @color-interlingua;			
+		}
+			.titulo-formulario{
+				padding-top: 0.4em;	
+				font-size: 1.35em;
+				color:@white;
+				text-align: center;
+				margin-top: 1em;
+				margin-bottom: 0.4em;													
+			}
+
+			.formulario-registro-cursos{
+				width: 80%;
+			}
+
+				.formulario-registro-cursos input,
+				.formulario-registro-cursos select, #contacto-mensaje{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					padding: 12px 12px;
+					color:@texto-gris;
+					/*.border-radius(10px);*/
+					width: 100%;
+				}
+
+				#curso-boton-enviar{
+					width: 100%;				
+				}
+
+				#contacto-nombre-completo, #contacto-correo-electronico,
+				#contacto-lada, #contacto-telefono, #contacto-mensaje,
+				#contacto-boton-enviar{
+					margin-top: 10px;
+				}
+
+				#contacto-mensaje{
+					margin-top: 25px;
+					height: 120px;
+				}
+
+				#contacto-lada{
+					float: left;
+					width: 30%;
+				}
+
+				#contacto-telefono{
+					float: right;
+					width: 65%;
+				}
+
+			.sombra-slider-curso img{
+				width: 100%;
+				height: auto;
+
+			}
+		
+	/*	Paginas	Planteles
+	------------------------------------------ */
+
+		.encabezado-planteles, .nombre-plantel{
+			font-family: @myriad-semibold;
+		}
+
+		.descripcion-planteles, .telefono-plantel{
+			margin-top: 10px;
+		}
+
+		.correo-plantel{}
+
+		.direccion-plantel{
+			margin-top: 10px;
+			font-size: 0.850em;
+		}
+
+		.planteles-mapa{
+			margin-top: 30px;
+		}
+
+			.formulario-estado{
+				margin-top: 20px;
+			}
+
+			#estado-form, #plantel-form{
+				font-family: @myriad-regular;
+				font-size: 0.875em;
+				background: #fff;
+				border: solid 4px #f1f1f1;
+				padding: 12px 12px;
+				color:@texto-gris;
+				.border-radius(10px);
+				width: 40%;
+				float: left;
+			}
+
+			#plantel-form{
+				margin-left: 10px;
+			}
+
+			/*** Formulario Pagina Plantel ***/
+
+				#formulariodiv{
+					max-width: 350px;
+					width: 350px;	
+				}
+
+					.firstHeading{
+						text-align: center;
+						font-size: 20px;		
+					}
+
+					#txtNombre, #txtCorreo, #txtLada,
+					#txtTelefono, #cmbEstados, #txtCelular,
+					#cmbSucursales{
+						font-family: @myriad-regular;
+						font-size: 0.875em;
+						background: #fff;
+						border: solid 4px #f1f1f1;
+						padding: 8px 8px;
+						color:@texto-gris;
+						/*.border-radius(10px);*/
+						width: 95%;
+						float: right;		
+						margin-top: 15px;			
+					}
+
+					#btnEnviar{		
+						margin-top: 15px;
+						width: 95%;
+						padding: 10px;
+						float: right;		
+					}
+
+					#politicas1{
+						float: right;
+						width: 100%;
+						margin-top: 5px;
+						margin-left: 100px;		
+						margin-bottom: 10px;
+					}
+
+						#chkPoliticas{
+							float: left;
+							margin-top:4px;
+							margin-left: 80px;
+
+						}
+
+						#acepto1{
+							margin-left: 100px;
+						}
+
+	/*	Paginas Contacto
+	------------------------------------------ */
+
+/*	.formulario-contacto-home{
+				margin-top: 40px;
+				width: 80%;
+			}
+
+			#nombre-completo-home, #correo-electronico-home,
+			#telefono-home, #estado-contacto-home, #lada-home{
+				font-family: @myriad-regular;
+				font-size: 1.1em;
+				background: #fff;
+				border: solid 4px #f1f1f1;
+				padding: 12px 12px;
+				color:@texto-gris;
+				.border-radius(10px);
+				width: 100%;
+				float: left;
+				margin-left: 0px;
+				margin-top: 20px;
+			}
+
+			#telefono-home{
+				width: 55%;
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			#lada-home{
+				width: 39%;
+				margin-top: 30px;
+			}
+
+			#formulario-contacto-home{
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			#estado-contacto-home{
+				margin-top: 30px;
+			}
+
+			#boton-enviar-contacto-home{
+				margin-top: 30px;
+			}
+
+
+	/* Seccion Alumnos
+	------------------------------------------ */
+
+		/* Menu Inicio Alumnos */
+
+		.menu-alumnos{
+			width: 100%;
+			float: left;
+			margin: 0px 0 0 10px;
+		}
+
+			.inicio-alumnos, .calificaciones-alumnos, .magazine-alumnos{
+				float: left;		
+				height: 28px;
+				
+			}
+
+			.inicio-alumnos{		
+				background: #0398a9 url(../images/arrow-azul.png) no-repeat right;	
+				color: #fff;
+				padding: 7px 42px 0 30px;	
+			}
+
+			.calificaciones-alumnos, .magazine-alumnos{		
+				background: #e3e3e3 url(../images/arrow-gray.png) no-repeat right;	
+				color: #747373;
+				padding: 7px 42px 0 30px;
+				cursor: pointer;	
+			}
+
+			.magazine-alumnos{		
+				background: #e3e3e3 url(../images/arrow-gray2.png) no-repeat right;			
+			}
+
+		.datos-escuela-alumno{
+			float: left;
+			margin: 25px 0 0 10px;
+			width: 100%;
+		}
+
+			.foto-alumno{
+				float: left;
+				background: url(../images/alumno.jpg) no-repeat;
+				width: 155px;
+				height: 155px;
+			}
+
+			.informacion-alumno{
+				float: left;
+				margin-left: 30px;
+			}
+
+				.nombre-alumno, .matricula-alumno{
+					font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+					font-size: 30px;
+					line-height: 35px;
+				}
+
+				.ciudad-alumno, .curso-alumno, .hora-alumno, .nivel-alumno{			
+					font-size: 16px;
+					line-height: 20px;
+				}
+
+		.datos-personales-titulo{
+			float: left;
+			width: 100%;
+			margin: 20px 0 0 10px;
+			font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+			font-size: 30px;
+		}
+
+		.informacion-del-alumno{
+			width: 100%;
+			float: left;
+		}
+
+			.datos-personales-alumno{
+				float: left;
+				margin: 20px 0 0 10px;
+			}
+
+				.correo-alumno, .sexo-alumno, .edad-alumno,
+				.nacimiento-alumno, .telefono1-alumno, .telefono2-alumno,
+				.calle-numero-alumno, .colonia-alumno, .poblacion-alumno, .cp-alumno{	
+					font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;	
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+			.campos-datos-personales-alumno{
+				float: left;
+				margin: 20px 0 0 10px;
+			}
+
+				.campo-correo-alumno, .campo-sexo-alumno, .campo-edad-alumno,
+				.campo-nacimiento-alumno, .campo-telefono1-alumno, .campo-telefono2-alumno,
+				.campo-calle-numero-alumno, .campo-colonia-alumno, .campo-poblacion-alumno, .campo-cp-alumno{	
+					font-family: 'Conv_MyriadPro-Regular_0', Helvetica, Arial, sans-serif;	
+					font-size: 14px;
+					line-height: 20px;
+					margin-left: 10px;
+				}
+
+		.informacion-importante{
+			float: left;
+			width: 95%;
+			border-bottom: solid 1px #ccc;
+			margin-top: 35px;
+			font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+			font-size: 20px;
+			padding-bottom: 15px;	
+		}
+
+			.informacion1, .informacion2{
+				float: left;
+				width: 45%;
+				margin-top: 20px;
+			}
+
+				.imagen-informacion1{
+					width:100%;
+					height: 105px;
+					background: url(../images/info1.jpg) no-repeat;
+					float: left;
+				}
+
+				.imagen-informacion2{
+					width:100%; 
+					height: 105px;
+					background: url(../images/info2.jpg) no-repeat;
+					float: left;
+				}
+
+				.titulo-informacion1, .titulo-informacion2{
+					float: left;
+					width: 95%;			
+					font-family: 'Conv_MyriadPro-Semibold_0', Helvetica, Arial, sans-serif;
+					font-size: 20px;
+					margin: 7px 0 7px 0;			
+				}
+
+				.contenido-informacion1, .contenido-informacion2{
+					width: 75%;
+				}
+
+
+	/*	Paginas Bolsa de Trabajo
+	------------------------------------------ */
+
+				#bolsa-trabajo-apellidos, #bolsa-trabajo-nombre,
+				#bolsa-trabajo-email,#bolsa-trabajo-telefono,
+				#bolsa-trabajo-nacionalidad, #bolsa-trabajo-fuente, #bolsa-trabajo-comentarios {
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					padding: 12px 12px;
+					color:@texto-gris;
+					/*.border-radius(10px);*/
+					width: 45%;
+					float: left;
+					margin-right: 20px;
+					margin-top: 15px;					
+				}
+
+				#bolsa-trabajo-fuente,
+				#bolsa-trabajo-nacionalidad{
+					height: 42px;
+				}
+
+				#bolsa-trabajo-enviar{	
+					font-family: @myriad-regular;				
+					border-radius: 0px;
+					font-weight: normal;
+					margin-top: 15px;
+					padding: 3px 6px;			
+				}
+
+				#bolsa-trabajo-comentarios {
+					width: 93%;
+					height: 110px;
+				}
+
+				#contacto-nombre-completo, #contacto-correo-electronico,
+				#contacto-lada, #contacto-telefono, #contacto-mensaje,
+				#contacto-boton-enviar{
+					margin-top: 10px;
+				}
+
+				#contacto-mensaje{
+					margin-top: 25px;
+					height: 120px;
+				}
+
+				#contacto-lada{
+					float: left;
+					width: 30%;
+				}
+
+				#contacto-telefono{
+					float: right;
+					width: 65%;
+				}
+
+			.sombra-slider-curso img{
+				width: 100%;
+				height: auto;
+
+			}
+
+	/*	Footer
+	------------------------------------------ */
+
+		.footer1{	
+			background: #666666;	
+			color:#fff;
+			font-family: @myriad-regular;
+			text-align: center;	
+		}
+
+		.menu-footer{
+			margin: 15px 0 15px 0;
+		}
+
+
+		.footer2{
+			background: #504f4f;	
+			color:#fff;
+			font-family: @myriad-regular;
+			text-align: center;	
+		}
+
+		.footer-social{
+			float: left;
+		}
+
+
+
+		.copyright{
+			font-size: 14px;
+			float: left;	
+			text-align: center;
+		}
+
+		.copyright a:visited{
+			text-decoration: none;
+			color:@white;
+		}
+
+		.privacidad{
+			font-size: 14px;
+			float: right;
+			text-align: center;
+		}
+
+		
+
+		.google-footer, .twitter-footer, .facebook-footer{
+			float: left;
+			margin-left: 10px;
+			
+		}
+
+		#footer-interior1 a:visited, #footer-interior1 a:link{
+			text-decoration: none;
+			color:@white;
+		}
+
+		#footer-interior2 p{
+			width: 100%;
+			float: left;
+		}
+
+		.footer-centrado-social{
+			background:#ccc;
+		}
+
+
+/*** Botones Home ****/
+
+.buton-home{
+	float: none;
+}
+
+.buton-test{
+	float: none;
+}
+
+/*** Hojas FAQ ***/
+
+	.titulo-faq{
+		padding-top: 0.5em;
+		font-size: 3em;								
+		color: @color-interlingua;
+	}
+
+	.menu-faq{
+			margin-top: -20px;
+			border-bottom: solid 1px #e7e7e7;
+		}
+		
+			.menu-faq a:link{			
+				text-decoration: none;
+				color:@texto-gris;
+			}
+				.menu-faq a:visited{
+					color:@texto-gris;
+				}
+
+				.menu-faq a:hover{
+					color:@color-interlingua;
+				}
+
+				.menu-faq a:active{
+					color:@color-interlingua;
+				}
+					
+			.menu-faq ul li{			
+				list-style: none;
+				float: left;
+				padding: 0 30px 0 0;
+				background: none;			
+			}
+						
+
+
+
+
+/*** Formulario Pagina Home ***/
+
+#formulario-home{
+
+}
+
+	#txtNombreHome, #txtCorreoHome, #txtLadaHome,
+	#txtTelefonoHome, #cmbEstadosHome, #txtCelularHome,
+	#cmbSucursalesHome{
+		font-family: @myriad-regular;
+		font-size: 0.875em;
+		background: #fff;
+		border: solid 4px #f1f1f1;
+		padding: 14px 12px;
+		color:@texto-gris;
+		.border-radius(10px);
+		width: 48%;
+		float: left;		
+	}
+
+		#txtCorreoHome{
+			margin-left: 4%;
+		}
+
+		#txtLadaHome{
+			width: 17%;
+			margin-top: 30px;
+		}
+
+			#txtTelefonoHome{
+				width: 27%;
+				margin-left: 4%;
+				margin-top: 30px;
+			}
+
+		#txtCelularHome{
+			margin-left: 4%;
+			margin-top: 30px;
+		}
+
+	#cmbSucursalesHome{
+		margin-left: 4%;
+	}
+
+	#btnEnviarHome{		
+		font-family: @myriad-bold;
+		border: 1px solid darken(@bones-orange, 13%);
+		border-top-color: darken(@bones-orange, 7%);
+		border-left-color: darken(@bones-orange, 7%);
+		padding:20px 35px;
+		margin-top: 25px;
+		color: @white;
+		display: inline-block;
+		font-size:1.875em;	
+		text-decoration: none;
+		text-shadow: 0 1px rgba(109,109,109, .75);
+		cursor: pointer;
+		/*margin-bottom: 10px;
+		margin-top:5px;*/
+		line-height: 25px;
+		.transition();	
+		.border-radius(10px);
+		.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+			&:hover, &:focus {
+				color: @white;
+				border: 1px solid darken(@bones-orange, 13%);
+			    border-top-color: darken(@bones-orange, 7%);
+				border-left-color: darken(@bones-orange, 7%);
+				.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+			}
+	}	
+	
+
+	#cmbEstadosHome, #cmbSucursalesHome{
+		margin-top: 30px;
+	}
+
+	#politicas1Home{	
+			
+	}
+		#chkPoliticasHome{
+			
+			float: left;
+			margin-top:3px;	
+			margin-bottom: 20px;
+			margin-left: 35%;
+			margin-right: 10px;
+		}
+
+		#acepto1Home{	
+		float: left;		
+			
+		}
+		#acepto1Home a{
+			text-decoration: none;
+			color:#fff;
+		}
+
+		

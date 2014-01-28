@@ -8169,3 +8169,22 @@ nav {
     display: none;
 }
 }
+
+/** Estilo Personalizados **/
+
+.logo-header img, .ctr{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.planteles-full{
+  padding-bottom: 30px;
+}
+
+.mrgn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+

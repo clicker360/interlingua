@@ -1,0 +1,1060 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+
+
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {}
+
+	/* .menu is clearfixed inside mixins.scss */
+	.menu {
+		ul {
+			li {
+				a {
+					
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {
+					
+					}
+				}
+				
+				&:first-child {}
+				&:last-child {}
+				
+				/*
+				plan your menus and drop-downs wisely.
+				*/
+				ul.sub-menu,
+				ul.children {
+					li {
+						a {
+							&:hover,
+							&:focus {}
+							&:link {}
+						}
+						&:first-child {}
+						&:last-child {}
+					}
+				}
+			} /* end .menu ul li */
+			
+			/* highlight current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .menu ul */
+	} /* end .menu */
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+/* entry content */
+.entry-content {
+			
+	
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+			
+} /* end .entry-content */
+
+/*********************
+FOOTER STYLES
+*********************/
+	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+
+
+
+/****************	Estilos Peronalizados	****************
+---------------------------------------------------------- */
+
+/*	Slider
+	------------------------------------------ */
+
+	.slider-home{
+		display:block;
+	}
+
+
+/*	Header
+	------------------------------------------ */
+		
+		.logo-header{
+			margin: 15px 0 0px 0;
+			
+			img{
+				max-width: 80%;
+				height: auto;
+				float: none;
+			}
+		}		
+
+		#contenedor-derecho{	
+			text-align: center;			
+			line-height: 25px;
+			
+		}
+
+			.logos-redes img{			
+				margin-left: 10px;
+				margin-top: 20px;
+			}
+			
+			.telefonos{
+				color:#33b0be;
+				float: right;
+				font-size: 1.125em;
+				font-family: @myriad-semibold;
+				margin-top: 2px;
+				margin-bottom: 0px;
+				width: 100%;
+			}
+
+		#contenedor-menu{
+				background: #33b0be;	
+			}
+			
+/*	Pagina Home
+	------------------------------------------ */
+
+		/*	Seccion Metodo
+		------------------------------------------ */
+
+				.metodo-segmento{
+					margin-top: 10px;
+					float: left;
+					width: 50%;				
+				}				
+
+				.metodo-segmento img{
+					max-width: 100%;					
+				}
+
+				#metodo1{
+					margin-top: 50px;
+				}
+
+				#metodo2{
+					margin-top: 80px;
+				}
+
+				.titulo-seccion-metodo{
+					font-size: 3.375em;							
+				}
+
+				.descripcion-metodo{						
+					font-size: 1.5em;					
+					width: 50%;
+				}					
+
+				.boton-metodo{						
+					padding:20px 35px;
+					font-size:1.875em									
+				}	
+	
+		/*	Seccion Cursos
+		------------------------------------------ */
+
+			.curso-segmento{			
+				float: left;
+				width: 50%;				
+			}				
+
+				#curso2{
+					margin-top: 31px;
+				}
+
+				.curso-segmento img{
+					max-width: 80%;
+					height: auto;
+				}
+
+				.titulo-seccion-cursos{
+					font-size: 3.375em;						
+				}
+
+				.descripcion-curso{					
+					font-size: 1.8em;				
+				}				
+
+				.boton-cursos{						
+					padding:20px 35px;					
+					font-size:1.875em;	
+				}	
+
+		/*	Seccion Test
+		------------------------------------------ */
+			
+			.test-segmento{
+				margin-top: 50px;				
+			}
+
+			.test-segmento img{
+				max-width: 30%;					
+			}
+			
+				.titulo-seccion-test{
+					font-size: 3.375em;					
+				}
+
+				.descripcion-test{				
+					font-size: 2.2em;					
+				}
+
+				.boton-test{				
+					padding:20px 35px;				
+					font-size:1.875em;					
+				}		
+			
+		/*	Planteles
+		------------------------------------------ */			
+
+			.plantel-segmento{
+				margin-top: 20px;				
+			}			
+
+				.titulo-seccion-planteles{
+					font-size: 3.375em;					
+				}
+
+				.descripcion-planteles{					
+					font-size: 2.2em;				
+				}
+
+			.planteles-form-home{				
+				width: 80%;					
+				margin-bottom: 35px;
+			}
+
+		/*	Seccion Contacto
+		------------------------------------------ */			
+
+			.contacto-segmento{
+				margin-top: 20px;				
+			}
+
+				.titulo-seccion-contacto{
+					font-size: 3.375em;	
+				}		
+
+				#nombre-completo-home, #correo-electronico-home,
+				#telefono-home, #estado-contacto-home, #lada-home{					
+					padding: 18px 12px;					
+				}
+				
+				#formulario-contacto-home{
+					margin-left: 10px;
+					margin-top: 30px;
+				}				
+
+				#boton-enviar-contacto-home{	
+					padding:20px 30px;				
+				}			
+		
+		/*	Bolsa de Trabajo
+		------------------------------------------ */
+		
+			.titulo-seccion-bolsa-trabajo,{
+				font-size: 3.375em;			
+				font-family: @myriad-semibold;
+				text-align: center;	
+				padding-top: 50px;			
+			}
+
+			.subtitulo-seccion-bolsa-trabajo{
+				font-size: 2em;			
+				font-family: @myriad-semibold;
+				text-align: center;					
+				margin-bottom: 15px;
+			}
+
+			.plantel-segmento{
+				margin-top: 20px;				
+			}
+
+			.bolsa-trabajo-interior img{
+				margin-bottom: 20px;
+				width: 40%;
+				height: auto;							
+			}
+
+			.bolsa-trabajo-segmento{
+
+			}			
+
+				.bolsa-trabajo-requisitos,
+				.bolsa-trabajo-ofrecemos{
+					font-family: @myriad-semibold;
+					text-align: center;
+					font-size: 1.8em;
+					margin-bottom: 40px;
+					margin-top: 10px;						
+				}
+
+				.bolsa-trabajo-ofrecemos{
+					margin-top: 0px;
+				}
+
+			.boton-trabajo{
+				margin-bottom: 30px;
+			}
+
+			.boton-bolsa{											
+					font-family: @myriad-bold;
+					border: 1px solid darken(@bones-orange, 13%);
+					border-top-color: darken(@bones-orange, 7%);
+					border-left-color: darken(@bones-orange, 7%);
+					padding:10px 10px;
+					color: @white;
+					display: inline-block;
+					font-size:1.5em;	
+					text-decoration: none;
+					text-shadow: 0 1px rgba(109,109,109, .75);
+					cursor: pointer;
+					/*margin-bottom: 10px;
+					margin-top:5px;*/
+					line-height: 25px;
+					.transition();	
+					.border-radius(10px);
+					.css-gradient(@bones-orange,darken(@bones-orange, 5%));	
+
+						&:hover, &:focus {
+							color: @white;
+							border: 1px solid darken(@bones-orange, 13%);
+						    border-top-color: darken(@bones-orange, 7%);
+							border-left-color: darken(@bones-orange, 7%);
+							.css-gradient(darken(@bones-orange, 5%),darken(@bones-orange, 3%));
+						}
+				}
+
+/*	Footer
+	------------------------------------------ */
+
+		.footer1{	
+			background: #666666;	
+			color:#fff;
+			font-family: @myriad-regular;
+			text-align: center;	
+		}
+
+		.menu-footer{
+			margin: 15px 0 15px 0;
+		}
+
+
+		.footer2{
+			background: #504f4f;	
+			color:#fff;
+			font-family: @myriad-regular;	
+			text-align: center;
+		}
+
+		.footer-social{
+			float: left;
+		}
+
+
+
+		.copyright{
+			font-size: 14px;
+			float: left;	
+			text-align: center;
+		}
+
+		.copyright a:visited{
+			text-decoration: none;
+			color:@white;
+		}
+
+		.privacidad{
+			font-size: 14px;
+			float: right;
+			text-align: center;
+		}
+
+		
+
+		.google-footer, .twitter-footer, .facebook-footer{
+			float: left;
+			margin-left: 10px;
+		}
+
+/*	Paginas Contacto
+	------------------------------------------ */
+
+/*	.formulario-contacto-home{
+				margin-top: 40px;
+			}
+
+			#nombre-completo-home, #correo-electronico-home,
+			#telefono-home, #estado-contacto-home, #lada-home{
+				font-family: @myriad-regular;
+				font-size: 1.1em;
+				background: #fff;
+				border: solid 4px #f1f1f1;
+				padding: 12px 12px;
+				color:@texto-gris;
+				.border-radius(10px);
+				width: 100%;
+				float: left;
+				margin-left: 0px;
+				margin-top: 20px;
+			}
+
+			#telefono-home{
+				width: 68%;
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			#lada-home{
+				width: 28%;
+				margin-top: 30px;
+			}
+
+			#formulario-contacto-home{
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			#estado-contacto-home{
+				margin-top: 30px;
+			}
+
+			#boton-enviar-contacto-home{
+				margin-top: 30px;
+			}
+
+
+/*** Botones Home ****/
+
+.buton-home{
+	float: none;
+}
+
+		
+	/*	Paginas	Planteles
+	------------------------------------------ */
+
+		.encabezado-planteles, .nombre-plantel{
+			font-family: @myriad-semibold;
+		}
+
+		.nombre-plantel{
+				margin-top: 0px;
+			}
+
+/* Formulario Pagina Franquicias
+		------------------------------------------ */
+			#formulario-franquicias{
+				height: 520px;
+			}
+
+				#txtNombreFranquicias, #txtCorreoFranquicias, #txtMedioFranquicias,
+				#txtLadaFranquicias, #txtTelefonoFranquicias, #cmbEstadosFranquicias,
+				#txtCelularFranquicias, #cmbSucursalesFranquicias, #txtComentarioFranquicias{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 48%;
+					float: left;							
+				}	
+
+					#nombre1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:52%;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#nacionalidad1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 198px;
+								font-size: 12px;
+							}
+						}
+
+					#medio1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 275px;
+								font-size: 12px;
+							}
+						}				
+
+
+
+					#lada1Franquicias{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 63px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Franquicias{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:78px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:52%;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Franquicias{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 195px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#sucursal1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:192px;
+								top: 195px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#comentario1Franquicias{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 365px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Franquicias{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 201px;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 490px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoFranquicias{
+					margin-left: 4%;	
+					margin-top: 0px;				
+				}
+
+				#txtMedioFranquicias{				
+					margin-top: 30px;
+					width: 100%;
+				}
+
+
+				#txtNacionalidadFranquicias{				
+					margin-top: 30px;
+					width: 100%;
+				}
+			
+
+				#txtLadaFranquicias{
+					width: 17%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoFranquicias{
+					width: 27%;
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#txtCelularFranquicias{
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursaleFranquicias{
+					margin-left: 4%;
+				}
+
+				#txtComentarioFranquicias{					
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				#btnEnviarFranquicias{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosFranquicias, #cmbSucursalesFranquicias{
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesFranquicias{
+					margin-left: 4%;
+				}
+
+				#politicas1Franquicias{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasFranquicias{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Franquicias{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Franquicias a{
+						text-decoration: none;
+						color:#fff;
+					}
+
+					label.error{
+						z-index:10000;
+					}
+
+
+/* Formulario Pagina Empresas
+		------------------------------------------ */
+			#formulario-empresas{
+				height: 521px;
+			}
+
+				#txtNombreEmpresas, #txtCorreoEmpresas, #txtEmpresaEmpresas,
+				#txtPuestoEmpresas, #txtLadaEmpresas, #txtTelefonoEmpresas,
+				#cmbEstadosEmpresas, #txtCelularEmpresas, #cmbSucursalesEmpresas,
+				#txtComentarioEmpresas{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 48%;
+					float: left;							
+				}	
+
+					#nombre1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:52%;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#empresa1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#puesto1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:52%;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+
+
+					#lada1Empresas{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 63px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Empresas{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:21%;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:52%;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Empresas{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 275px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#sucursal1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:52%;
+								top: 275px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#comentario1Empresas{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 365px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 201px;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 490px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoEmpresas{
+					margin-left: 4%;	
+					margin-top: 0px;				
+				}
+
+				#txtEmpresaEmpresas{				
+					margin-top: 30px;
+				}
+
+				#txtPuestoEmpresas{
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#txtLadaEmpresas{
+					width: 17%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoEmpresas{
+					width: 27%;
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#txtCelularEmpresas{
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursaleEmpresas{
+					margin-left: 4%;
+				}
+
+				#txtComentarioEmpresas{					
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				#btnEnviarEmpresas{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosEmpresas, #cmbSucursalesEmpresas{
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesEmpresas{
+					margin-left: 4%;
+				}
+
+				#politicas1Empresas{		
+					width: 80%;		
+					margin-left: 30%;		
+					
+				}
+
+					#chkPoliticasEmpresas{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Empresas{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Empresas a{
+						text-decoration: none;
+						color:#fff;
+					}

@@ -1,0 +1,486 @@
+		#formulario-cursos{
+				height: 600px;
+			}
+
+				#txtNombreCursos, #txtCorreoCursos, #txtLadaCursos,
+				#txtTelefonoCursos, #cmbEstadosCursos, #txtCelularCursos,
+				#cmbSucursalesCursos{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 100%;
+					float: left;							
+				}	
+
+					#nombre1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 112px;
+								font-size: 12px;
+							}
+						}
+
+
+					#lada1Cursos{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 300%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Cursos{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 60%;								
+								color:#fff;								
+								position: absolute;
+								left:30%;
+								top: 185px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 260px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 355px;
+								font-size: 12px;
+							}
+						}
+
+					#sucursal1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:0px;
+								top: 433px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Cursos{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100%;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 565px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoCursos{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#txtLadaCursos{
+					width: 25%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoCursos{
+					width: 70%;
+					margin-left: 5%;
+					margin-top: 30px;
+				}
+
+				#txtCelularCursos{
+					margin-left: 0%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesCursos{
+					margin-left: 0%;
+				}
+
+				#btnEnviarCursos{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosCursos, #cmbSucursalesCursos{
+					margin-top: 30px;
+				}
+
+				#politicas1Cursos{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasCursos{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Cursos{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Cursos a{
+						text-decoration: none;
+						color:#fff;
+					}
+
+	/* Formulario Pagina Empresas
+		------------------------------------------ */
+			#formulario-empresas{
+
+			}
+
+				#txtNombreEmpresas, #txtCorreoEmpresas, #txtEmpresaEmpresas,
+				#txtPuestoEmpresas, #txtLadaEmpresas, #txtTelefonoEmpresas,
+				#cmbEstadosEmpresas, #txtCelularEmpresas, #cmbSucursalesEmpresas,
+				#txtComentarioEmpresas{
+					font-family: @myriad-regular;
+					font-size: 0.875em;
+					background: #fff;
+					border: solid 4px #f1f1f1;
+					color:@texto-gris;					
+					/*.border-radius(10px);*/
+					width: 48%;
+					float: left;							
+				}	
+
+					#nombre1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#correo1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:192px;
+								top: 40px;
+								font-size: 12px;
+							}
+						}
+
+					#empresa1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+					#puesto1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:192px;
+								top: 110px;
+								font-size: 12px;
+							}
+						}
+
+
+
+					#lada1Empresas{						
+						position: relative;
+						
+							label.error{								
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;								
+								max-width: 63px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#telefono1Empresas{					
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:78px;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#celular1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 100px;								
+								color:#fff;								
+								position: absolute;
+								left:192px;
+								top: 195px;
+								font-size: 12px;
+							}
+						}
+
+					#estado1Empresas{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left: 0px;
+								top: 275px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#sucursal1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 175px;
+								color: #fff;
+								position: absolute;
+								left:192px;
+								top: 275px;
+								font-size: 12px;
+								z-index: 1000;
+							}
+						}
+
+					#comentario1Empresas{						
+						position: relative;
+						width: 100%;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;														
+								text-align: center;
+								max-width: 350px;								
+								color:#fff;								
+								position: absolute;
+								left:0px;
+								top: 365px;
+								font-size: 12px;
+							}
+						}
+
+					#politicas1Empresas{						
+						position: relative;
+						
+							label.error{
+								background-color: rgba(0, 0, 0, 0.5);
+								padding: 5px;
+								text-align: center;
+								max-width: 201px;
+								color: #fff;
+								position: absolute;
+								left: 7px;
+								top: 490px;
+								font-size: 12px;
+							}
+						}
+
+					
+				#txtCorreoEmpresas{
+					margin-left: 4%;					
+				}
+
+				#txtEmpresaEmpresas{				
+					margin-top: 30px;
+				}
+
+				#txtPuestoEmpresas{
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#txtLadaEmpresas{
+					width: 17%;
+					margin-top: 30px;
+				}
+
+				#txtTelefonoEmpresas{
+					width: 27%;
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#txtCelularEmpresas{
+					margin-left: 4%;
+					margin-top: 30px;
+				}
+
+				#cmbSucursaleEmpresas{
+					margin-left: 4%;
+				}
+
+				#txtComentarioEmpresas{					
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				#btnEnviarEmpresas{		
+					margin-top: 30px;
+					margin-bottom: 10px;
+					width: 100%;
+					padding: 13px;
+					float: right;		
+				}
+
+				#cmbEstadosEmpresas, #cmbSucursalesEmpresas{
+					margin-top: 30px;
+				}
+
+				#cmbSucursalesEmpresas{
+					margin-left: 4%;
+				}
+
+				#politicas1Empresas{		
+					width: 80%;		
+					margin-left: 20%;		
+					
+				}
+
+					#chkPoliticasEmpresas{
+						width: 5%;
+						float: left;
+						margin-top:3px;	
+						margin-bottom: 20px;
+					}
+
+					#acepto1Empresas{
+					width: 95%;		
+						float: left;
+					}
+
+					#acepto1Empresas a{
+						text-decoration: none;
+						color:#fff;
+					}
