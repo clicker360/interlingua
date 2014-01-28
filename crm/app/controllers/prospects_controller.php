@@ -1003,7 +1003,7 @@ class ProspectsController extends AppController{
             $NOMBRE             = strtr($NOMBRE, utf8_decode($originales), $modificadas);
             $NOMBRE             = strtolower($NOMBRE);
             $NOMBRE             = utf8_encode($NOMBRE);
-            $NOMBRE             = ucfirst($NOMBRE);
+            $NOMBRE             = ucwords($NOMBRE);
             # Paterno
             $PATERNO            = trim($_POST["frm_appat"]);
             $PATERNO            = utf8_decode($PATERNO);
@@ -1059,10 +1059,11 @@ class ProspectsController extends AppController{
                 $stmt->execute();
                 
                 if (trim($msgError)=="") {
+                    #$mensaje = trim($msgError)." -- ".$matricula;
+                    #$mensaje = "http://interlingua.com.mx/clicker360/interlingua/crm/prospectos";
                     $error   = false;
-                    //$mensaje = trim($msgError)." -- ".$matricula;
                     $mat = $matricula;
-                    $mensaje = "http://interlingua.com.mx/clicker360/interlingua/crm/prospectos";
+                    header("Refresh:0");
                 }else{
                     $error   = true;
                     $mat = $matricula;
