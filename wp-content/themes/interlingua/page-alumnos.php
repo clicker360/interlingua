@@ -24,7 +24,7 @@ Template Name: Alumnos
             jQuery("#info-alumnos").fadeIn("slow");
           });
           //get Alumno
-          ruta = jQuery("#ruta").val();
+          ruta = jQuery("input[name=ruta]").val();
           jQuery.ajax({
               type:"post",
               url: ruta+"/core.php",
