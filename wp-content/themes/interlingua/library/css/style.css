@@ -1799,7 +1799,7 @@ h2.current {
   margin-top: 15px;
   padding-bottom: 30px;
 }
-.boton-metodo {
+.boton-metodo{
   font-family: 'Conv_MyriadPro-Bold';
   border: 1px solid #bc5311;
   border-top-color: #d85f14;
@@ -4433,7 +4433,7 @@ label.error {
     margin-left: 40px;
     z-index: 21;
     position:absolute;
-    height:170px;
+    height:185px;
     width:220px;
     display: none;
     -moz-border-radius-bottomright: 5px;
@@ -7851,7 +7851,7 @@ input[type=radio]{
 	z-index: 21;
 	position:absolute;
 	margin-left: 800px;
-	height:170px;
+	height:185px;
 	width:220px;
 	display: none;
 	-moz-border-radius-bottomright: 5px;
@@ -8187,4 +8187,85 @@ nav {
   margin-bottom: 20px;
 }
 
+.header #inner-header .logo-header h1 a p {
+  text-indent: -999999em;
+  float: left;
+}
+
+.header #inner-header #contenedor-derecho ul.logos-redes li {
+  display: inline;
+  background: none;
+}
+
+.header #inner-header #contenedor-derecho .telefonos-list ul li{
+  background: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.header #inner-header #contenedor-derecho .telefonos-list ul>:first-child{
+  margin-top: 10px;
+}
+
+p.textoSlider {
+  text-indent: -999999em;
+}
+
+p.textoind{
+   text-indent: -999999em;
+}
+
+/** Metodo **/
+
+.metodo-interior ul li{
+  padding: 0;
+}
+
+.metodo-interior ul li p{
+  width: 70%;
+}
+
+/** Cursos **/
+
+.cursos-interior ul li{
+  background: none;
+}
+
+.menu-footer ul li {
+  background: none;
+  padding-left: 0;
+}
+
+/** Acceso Alumnos **/
+
+.btn-form {
+  font-family: 'Conv_MyriadPro-Bold';
+  border: 1px solid #bc5311;
+  border-top-color: #d85f14;
+  border-left-color: #d85f14;
+  padding: 3px 8px;
+  color: #ffffff;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(109, 109, 109, 0.75);
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top:5px;
+
+  line-height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e26315;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb7125), to(#e26315));
+  background-image: -webkit-linear-gradient(top, #eb7125, #e26315);
+  background-image: -moz-linear-gradient(top, #eb7125, #e26315);
+  background-image: -o-linear-gradient(top, #eb7125, #e26315);
+  background-image: linear-gradient(to bottom, #eb7125, #e26315);
+}
 

@@ -113,7 +113,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  
 			  jQuery("#frmLogin").on("submit",function(e){
 			  	e.preventDefault();
-			  	ruta = jQuery("#ruta").val();
+			  	ruta = jQuery("input[name=ruta]").val();
 
 			  	jQuery.ajax({
 			  		type:"post",
@@ -137,7 +137,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  
 			  jQuery("#logout").on("click",function(e){
 			  	e.preventDefault();
-			  	ruta = jQuery("#ruta").val();
+			  	ruta = jQuery("input[name=ruta]").val();
 			  	jQuery.post(ruta+"/core.php",{action:"logout"},function(data){
 			  		window.location = data;
 			  	});
@@ -152,7 +152,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 			  	jQuery("#frmGetPass").on("submit",function(e){
 			  		e.preventDefault();
-			  		ruta = jQuery("#ruta").val();
+			  		ruta = jQuery("input[name=ruta]").val();
 
 			  		jQuery.ajax({
 			  			type:"post",
@@ -364,19 +364,25 @@ jQuery.ajax({
 			<div id="inner-header" class="wrap clearfix">
 				<div id="contenedor-izquierdo"  class="sixcol clearfix">
 					<div class="logo-header ctr">
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Logo Interlingua"></a>
+						<h1>
+							<a href="<?php echo home_url(); ?>" rel="nofollow">
+								<p> Interlingua </p>
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Logo Interlingua">
+							</a>
+						<h1>
 					</div>
 				</div>
 				<div id="contenedor-derecho"  class="sixcol clearfix">
-					<div class="logos-redes fullcol clearfix">	
-						<a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" alt="Logo Twitter"></a>						
-						<a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="Logo Facebook"></a>
-						<a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" alt="Logo Google Plus"></a>
-					</div>
-					<div class="logos-redes fullcol clearfix">
-						<div class="twitter-heade clearfix">
-							<span class="telefono1">Línea de atención al cliente <strong>01 800 1INGLES (464537)</strong></span><br><span class="telefono2">Centro de información Cd. de México <strong>500 500 50</strong></span>
-						</div>					
+					<ul class="logos-redes fullcol clearfix">	
+						<li><a href="https://twitter.com/Interlinguamx" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" alt="Logo Twitter"></a></li>						
+						<li><a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="Logo Facebook"></a></li>
+						<li><a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" alt="Logo Google Plus"></a></li>
+					</ul>
+					<div class="telefonos-list fullcol clearfix">
+						<ul>
+							<li class="telefono1">Línea de atención al cliente <strong>01 800 1INGLES (464537)</strong></li>
+							<li class="telefono2">Centro de información Cd. de México <strong>500 500 50</strong></li>
+						</ul>				
 					</div>
 				</div>
 			</div> <!-- end #inner-header -->
@@ -399,7 +405,7 @@ jQuery.ajax({
 								<input type="text" name="usuario" value="" id="usuario" class="inptLog" required/>
 								<label class="lblLog" for="usuario">Contraseña</label>
 								<input type="password" name="pass" value="" id="pass" class="inptLog" required/>
-								<input type="submit" name="sendLogin" value="Entrar"/>
+								<input type="submit" class="btn-form ctr" name="sendLogin" value="Entrar"/>
 							</form>
 							<a href="#" class="olvidaste" id="olvidaContrasena">¿Olvidaste tu contraseña?</a>
 						</div>
@@ -410,7 +416,7 @@ jQuery.ajax({
 								<label class="lblLog" for="matinpt">Matrícula</label>
 								<input type="text" name="matinpt" value="" id="matinpt" class="inptLog" required/>
 
-								<input type="submit" name="sendLogin" value="Enviar"/>
+								<input type="submit" class="btn-form ctr"  name="sendLogin" value="Enviar"/>
 							</form>
 						</div>
 					</div>
