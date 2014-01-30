@@ -430,7 +430,7 @@ jQuery.ajax({
 						<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>"/>
 						<div class="nombreSession"><?php echo $nombreAlumno;?></div>
 						<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
-						<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
+						<a class="btnCuenta" href="http://www.interlingua.com.mx/acceso-a-alumnos/">Mi Cuenta</a> <br>
 						<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
 					</div>
 					<?php } ?>

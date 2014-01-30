@@ -37,30 +37,32 @@ Template Name: Pagina Cursos
 								  <th align="center">Horario</th>
 							  <thead>
 							  <tbody id="tablita">
-								';
+								';								
 			if($idHorarios != ""){
 				$restricciones = "";
-				foreach($data as $horario){
-					$tabla_horarios.="<tr>";
-					$cont = 0;
-					foreach ($horario as $key => $value) {
-						if($horario[0]==$idHorarios && $value != ""){
-							if($value != $idHorarios && $cont <= 4){
-								if($cont == 2 || $cont == 3 && strstr($value, '$')==""){
-									$value = "$ ".$value;
+				foreach($data as $i => $horario){
+					if($horario[0]==$idHorarios){
+						$tabla_horarios.="<tr>";
+						$cont = 0;
+						foreach ($horario as $key => $value) {
+							if($horario[0]==$idHorarios && $value != ""){
+								if($value != $idHorarios && $cont <= 4){
+									if($cont == 2 || $cont == 3 && strstr($value, '$')==""){
+										$value = "$ ".$value;
+									}
+									
+									$tabla_horarios.="<td align='center'>".$value."</td>";
+								}	
+							
+								if($horario[5] != "" && $cont == 5){
+									$restricciones.=$value."<br>";
 								}
-								
-								$tabla_horarios.="<td align='center'>".$value."</td>";
-							}	
-						
-							if($horario[5] != "" && $cont == 5){
-								$restricciones.=$value."<br>";
+							
 							}
-						
+							$cont++;
 						}
-						$cont++;
+						$tabla_horarios.="</tr>";
 					}
-					$tabla_horarios.="</tr>";
 				}
 			}else{
 				$tabla_horarios.="<tr><td colspan='4' align='center'><h3>No hay horarios disponibles para esta sucursal</h3></td></tr>";
