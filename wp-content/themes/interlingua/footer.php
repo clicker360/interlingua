@@ -11,49 +11,57 @@
 
 			<div id="menu1" class="cincocol menu-footer clearfix">
 				<span class="titulos-footer">Cursos</span><br><br>
-				<a href="http://www.interlingua.com.mx/?cursosregulares=semi-intensivo"> Regulares </a><br>
-				<a href="http://www.interlingua.com.mx/?cursosjovenes=kids"> Niños / Jóvenes</a><br>
-				<a href="http://www.interlingua.com.mx/empresas-2/">Empresas</a><br>
-				<a href="http://www.interlingua.com.mx/?cursosdiversos=market-leader">Especiales</a><br>
-				<a href="http://www.interlingua.com.mx/f-a-q/cursos/">F.A.Q.</a>
+				<ul class="lista-footer">
+					<li><a href="http://www.interlingua.com.mx/?cursosregulares=semi-intensivo"> Regulares </a></li>
+					<li><a href="http://www.interlingua.com.mx/?cursosjovenes=kids"> Niños / Jóvenes</a></li>
+					<li><a href="http://www.interlingua.com.mx/empresas-2/">Empresas</a></li>
+					<li><a href="http://www.interlingua.com.mx/?cursosdiversos=market-leader">Especiales</a></li>
+					<li><a href="http://www.interlingua.com.mx/f-a-q/cursos/">F.A.Q.</a></li>
+				</ul>
 			</div>
 
 			<div id="menu2" class="cincocol menu-footer clearfix">
 				<span class="titulos-footer">Método</span><br><br>
-				<a href="http://www.interlingua.com.mx/?page_id=46">Nuestro Método</a><br>
-				<a href="http://www.interlingua.com.mx/?page_id=52">Materiales y Certificaciones</a><br>
-				<a href="http://www.interlingua.com.mx/f-a-q/metodo/">F.A.Q.</a>
+				<ul class="lista-footer">
+					<li><a href="http://www.interlingua.com.mx/?page_id=46">Nuestro Método</a></li>
+					<li><a href="http://www.interlingua.com.mx/?page_id=52">Materiales y Certificaciones</a></li>
+					<li><a href="http://www.interlingua.com.mx/f-a-q/metodo/">F.A.Q.</a></li>
+				</ul>
 			</div>
 
 			<div id="menu3" class="cincocol menu-footer clearfix">
 				<span class="titulos-footer">Interlingua</span><br><br>
-				<a href="http://www.interlingua.com.mx/?page_id=296">Filosofía</a><br>
-				<a href="http://www.interlingua.com.mx/?page_id=32">Acceso a Alumnos</a><br>
-				<a href="http://www.interlingua.com.mx/?page_id=304">Misión y Visión</a><br>
-				<a href="http://www.interlingua.com.mx/?page_id=38">Obtén una Franquicia</a><br>
-				<a href="http://www.interlingua.com.mx/?page_id=372">Facturación</a><br>
-				<a href="http://www.interlingua.com.mx/?page_id=321">Responsabilidad Social</a><br>
-				<a href="http://www.interlingua.com.mx/f-a-q/inscripciones/">F.A.Q.</a>
+				<ul class="lista-footer">
+					<li><a href="http://www.interlingua.com.mx/?page_id=296">Filosofía</a></li>
+					<li><a href="http://www.interlingua.com.mx/?page_id=32">Acceso a Alumnos</a></li>
+					<li><a href="http://www.interlingua.com.mx/?page_id=304">Misión y Visión</a></li>
+					<li><a href="http://www.interlingua.com.mx/?page_id=38">Obtén una Franquicia</a></li>
+					<li><a href="http://www.interlingua.com.mx/?page_id=372">Facturación</a></li>
+					<li><a href="http://www.interlingua.com.mx/?page_id=321">Responsabilidad Social</a></li>
+					<li><a href="http://www.interlingua.com.mx/f-a-q/inscripciones/">F.A.Q.</a></li>
+				</ul>
 			</div>
 			<div id="menu4" class="cincocol menu-footer clearfix">
 				<span class="titulos-footer">Contacto</span><br><br>
-				<a href="http://www.interlingua.com.mx/alumnos/">Alumnos</a><br>
-				<a href="http://www.interlingua.com.mx/empresas-2/">Empresas</a><br>
-				<a href="http://www.interlingua.com.mx/franquicias/">Franquicias</a>
+				<ul class="lista-footer">
+					<li><a href="http://www.interlingua.com.mx/alumnos/">Alumnos</a></li>
+					<li><a href="http://www.interlingua.com.mx/empresas-2/">Empresas</a></li>
+					<li><a href="http://www.interlingua.com.mx/franquicias/">Franquicias</a></li>
+				</ul>
 			</div>		
 			<div id="social-footer" class="cincocol menu-footer clearfix">
 				<span class="titulos-footer">Síguenos</span><br><br>
-				<div class="footer-centrado-social wrap">
-					<div class="twitter-footer">
+				<ul class="footer-centrado-social wrap">
+					<li class="twitter-footer">
 						<a href="https://twitter.com/Interlinguamx" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" alt="Logo Twitter"></a>
-					</div>							
-					<div class="facebook-footer">
+					</li>							
+					<li class="facebook-footer">
 						<a href="https://www.facebook.com/interlingua.mx?fref=ts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="Logo Facebookr"></a>
-					</div>	
-					<div class="google-footer">
+					</li>	
+					<li class="google-footer">
 						<a href="https://plus.google.com/u/0/102755391403241662820/posts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" alt="Logo Google Plus"></a>
-					</div>							
-				</div>
+					</li>							
+				</ul>
 			</div>
 		</div>
 	</div> <!-- end #inner-footer -->

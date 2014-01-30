@@ -6,66 +6,50 @@ Template Name: Pagina Cursos
 
 <?php get_header(); ?>
 		
-		<style>
-			.tablahorarios {
-				border:8px #33b0be solid;
-				font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-				box-shadow:#000;
-				padding: 5px;
-				-webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.39);
-				-moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.39);
-				box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.39);
-				width: 100%;
-			 }
-			#tablita>tr:nth-child(odd) {background: #efefef;}
-			.texto{
-				font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-				font-size:18px;
-				font-weight:bold;
-				color:#33b0be;
-			}
-		</style>
+		
 		<?php
 			// Get Horarios Plantel
 			$idHorarios = types_render_field( "id-horarios", array( "raw" => "true"  ) );
-			$tabla_horarios= '<div id="myModal" class="reveal-modal"><p class="texto">Plantel '.$idHorarios.'</p><table  border="0" cellpadding="0" cellspacing="0" class="tablahorarios">';
+			$tabla_horarios= '<div id="myModal" class="reveal-modal"><p class="texto">Plantel '.$idHorarios.'</p><table class="tablahorarios">';
 			$data = wp_excel_cms_get("horarios");
-			$tabla_horarios.='<thead class="texto" valign="middle">
-						          <th align="center">Curso</th>
-								  <th align="center">Precio de contado</th>
-							 	  <th align="center">Pagos parciales</th>
-								  <th align="center">Horario</th>
-							  <thead>
+			$tabla_horarios.='<thead class="texto">
+						          <tr>
+						          <th>Curso</th>
+								  <th>Precio de contado</th>
+							 	  <th>Pagos parciales</th>
+								  <th>Horario</th>
+								  </tr>
+							  </thead>
 							  <tbody id="tablita">
-								';								
+								';
 			if($idHorarios != ""){
 				$restricciones = "";
-				foreach($data as $i => $horario){
+				foreach($data as $horario){
 					if($horario[0]==$idHorarios){
-						$tabla_horarios.="<tr>";
-						$cont = 0;
-						foreach ($horario as $key => $value) {
-							if($horario[0]==$idHorarios && $value != ""){
-								if($value != $idHorarios && $cont <= 4){
-									if($cont == 2 || $cont == 3 && strstr($value, '$')==""){
-										$value = "$ ".$value;
-									}
-									
-									$tabla_horarios.="<td align='center'>".$value."</td>";
-								}	
-							
-								if($horario[5] != "" && $cont == 5){
-									$restricciones.=$value."<br>";
+					$tabla_horarios.="<tr>";
+					$cont = 0;
+					foreach ($horario as $key => $value) {
+						if($horario[0]==$idHorarios && $value != ""){
+							if($value != $idHorarios && $cont <= 4){
+								if($cont == 2 || $cont == 3 && strstr($value, '$')==""){
+									$value = "$ ".$value;
 								}
-							
+								
+								$tabla_horarios.="<td>".$value."</td>";
+							}	
+						
+							if($horario[5] != "" && $cont == 5){
+								$restricciones.=$value."<br>";
 							}
-							$cont++;
+						
 						}
-						$tabla_horarios.="</tr>";
+						$cont++;
 					}
+					$tabla_horarios.="</tr>";
+				}
 				}
 			}else{
-				$tabla_horarios.="<tr><td colspan='4' align='center'><h3>No hay horarios disponibles para esta sucursal</h3></td></tr>";
+				$tabla_horarios.="<tr><td colspan='4'><h3>No hay horarios disponibles para esta sucursal</h3></td></tr>";
 			}
 			$tabla_horarios.='</tbody></table><p class="texto">'.$restricciones.'</p><a class="close-reveal-modal">&#215;</a></div>';
 
@@ -284,8 +268,8 @@ Template Name: Pagina Cursos
 										
 
 									<div class="planteles-formulario eightcol clearfix">
-									<div class="encabezado-planteles">¡Encuentra aquí tu INTERLINGUA® más cercano!</div>
-									<div class="descripcion-planteles-interior">Contamos con más de 60 planteles a nivel nacional.</div>
+									<h3 class="encabezado-planteles">¡Encuentra aquí tu INTERLINGUA® más cercano!</h3>
+									<p class="descripcion-planteles-interior">Contamos con más de 60 planteles a nivel nacional.</p>
 									
 								<div class="formulario-planteles">										
 										<select  id="country" class="country" name ="country"></select>															
@@ -296,23 +280,23 @@ Template Name: Pagina Cursos
 								</div>
 
 								<div class="planteles-informacion fourcol clearfix">
-									<div class="nombre-plantel">
+									<h2 class="nombre-plantel">
 										<?php echo(types_render_field( "nombre-del-plantel", array( 'raw' => 'true'  ) ));?>
-									</div>
-									<div class="direccion-plantel">
+									</h2>
+									<p class="direccion-plantel">
 										<?php echo(types_render_field( "direccion-del-plantel", array( 'raw' => 'true'  ) ));?>
-									</div>
-									<div class="telefono-plantel">
+									</p>
+									<p class="telefono-plantel">
 										<?php echo(types_render_field( "telefono-plantel", array( 'raw' => 'true'  ) ));?>										
-									</div>
+									</p>
 
-									<div class="correo-plantel">										
+									<p class="correo-plantel">										
 										<?php echo(types_render_field( "correo-plantel", array( 'raw' => 'true'  ) ));?>
-									</div>
+									</p>
 
 									<!--<?php echo(types_render_field( "boton-plantel", array( 'class' => 'boton-contacto-plantel', 'title' => 'Contactar' ) ));?> -->
 									<br>
-									<a href="#" style="padding:5px;font-size:15px;"  id="btnMod" data-reveal-id="myModal">Consulta los precios y horarios</a>
+									<a href="#" id="btnMod" data-reveal-id="myModal">Consulta los precios y horarios</a>
 								</div>
 								
 								<div class="planteles-mapa fullcol">
@@ -667,16 +651,19 @@ Template Name: Pagina Cursos
 												infowindow.open(map,companyMarker);
 
 											});*/
-									}</script>
-								</head>
-								<body onload="initialize()">
-									<div id="map_canvas" style="width:100%; height:700px"></div>
-								</body>
+									}
+
+									jQuery(document).ready(function(){
+										initialize();
+									});
+
+									</script>
+								
+									<div id="map_canvas"></div>
+								
 								</div>
 
-								
-
-								
+							</div>	
 
 								</section>
 								<!-- Terminaa Template Planteles -->							

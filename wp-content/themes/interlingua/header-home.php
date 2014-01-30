@@ -364,11 +364,11 @@ jQuery.ajax({
 			<div id="inner-header" class="wrap clearfix">
 				<div id="contenedor-izquierdo"  class="sixcol clearfix">
 					<div class="logo-header ctr">
-						<h2 id="logo">
+						<h1 id="logo">
 							<a href="<?php echo home_url(); ?>" rel="nofollow" title="logo interlingua">
 								Mi logotipo
 							</a>
-						</h2>
+						</h1>
 					</div>
 				</div>
 				<div id="contenedor-derecho"  class="sixcol clearfix">

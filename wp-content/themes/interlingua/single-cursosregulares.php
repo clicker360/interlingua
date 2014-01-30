@@ -18,7 +18,7 @@ Template Name: Pagina Cursos
 
 								<header class="article-header wrap">
 
-									<h1 class="curso-titulo">
+									<h2 class="curso-titulo">
 										<?php
 											$category = get_the_category();
 											if($category[0]){
@@ -26,7 +26,7 @@ Template Name: Pagina Cursos
 											}
 										?>	
 
-									</h1>
+									</h2>
 								<!--	<p class="byline vcard"><?php
 										printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link());
 									?></p> -->
@@ -176,31 +176,31 @@ Template Name: Pagina Cursos
 									<div id="contenedor-curso" class="degradado-gris fullcol">
 										<div class="contenedor-curso-interior wrap">
 											<div class="contenedor-curso-informacion sevencol first">
-												<div class="titulo-del-curso">
-													<?php echo get_the_title(); ?>
-												</div>
-												<div class="subtitulo-del-curso">
-													<?php
-														echo(types_render_field( "subtitulo-curso", array( 'raw' => 'true'  ) ));
-													?>
-												</div>
-												<div class="descripcion-del-curso">
+												<h1 class="titulo-del-curso">
+													<?php echo get_the_title(); ?><br>
+													<span class="subtitulo-del-curso">
+														<?php
+															echo(types_render_field( "subtitulo-curso", array( 'raw' => 'true'  ) ));
+														?>
+													</span>
+												</h1>
+												<p class="descripcion-del-curso">
 													<?php
 														echo(types_render_field( "descripcion-curso", array( 'raw' => 'true'  ) ));
 													?>
-												</div>
-												<div class="nota-del-curso">
+												</p>
+												<p class="nota-del-curso">
 													<?php
 														echo(types_render_field( "nota-curso", array( 'raw' => 'true'  ) ));
 													?>
-												</div>
+												</p>
 											</div>
 											<div class="contenedor-curso-formulario fivecol last">
-												<div class="titulo-formulario">
+												<h3 class="titulo-formulario">
 													<?php
 														echo(types_render_field( "titulo-formulario", array( 'raw' => 'true'  ) ));
 													?>
-												</div>
+												</h3>
 												<div class="formulario-registro-cursos wrap">
 													<?php 
 														//selecciona origen de form
@@ -286,23 +286,23 @@ Template Name: Pagina Cursos
 									<div class="slider-tipo-cursos wrap">
 										
 										<div class="slider-curso-1 cursocol clearfix">
-											<div class="imagen-slider-curso" align="center">
+											<div class="imagen-slider-curso">
 												<?php
-														echo(types_render_field( "imagen-curso-1-slider", array( 'size' => 'full' ) ));
+														echo(types_render_field( "imagen-curso-1-slider", array( 'class' => 'ctr', 'size' => 'full' ) ));
 													?>
 												<!-- <img src="<?php bloginfo('template_directory'); ?>/library/images/curso-regular-color.png" title="" alt="" /> -->
 											</div>
-											<div class="titulo-slider-curso">
+											<h4 class="titulo-slider-curso">
 												<?php
 														echo(types_render_field( "titulo-curso-1-slider", array( 'raw' => 'true' ) ));
 													?>
-											</div>
-											<div class="descripcion-slider-curso">
+											</h4>
+											<p class="descripcion-slider-curso">
 												<?php
 														echo(types_render_field( "descripcion-curso-1-slider", array( 'raw' => 'true'  ) ));
 													?>
-											</div>
-											<div class="boton-slider-curso" align="center">
+											</p>
+											<div class="boton-slider-curso">
 												<!--<input type="button" id="boton-slider-cursos" value="Leer más">-->
 												<?php
 														echo(types_render_field( "boton-curso-1-slider", array( 'class' => 'boton-slider-cursos-type', 'title' => 'Conócelo' ) ));
@@ -311,24 +311,24 @@ Template Name: Pagina Cursos
 										</div>									
 
 										<div class="slider-curso-2 cursocol clearfix">
-											<div class="imagen-slider-curso" align="center">
+											<div class="imagen-slider-curso">
 												<?php
-														echo(types_render_field( "imagen-curso-2-slider", array( 'size' => 'full' ) ));
+														echo(types_render_field( "imagen-curso-2-slider", array( 'class' => 'ctr', 'size' => 'full' ) ));
 													?>
 												
 												<!-- <img src="<?php bloginfo('template_directory'); ?>/library/images/curso-regular-color.png" title="" alt="" /> -->
 											</div>
-											<div class="titulo-slider-curso">
+											<h4 class="titulo-slider-curso">
 												<?php
 														echo(types_render_field( "titulo-curso-2-slider", array( 'raw' => 'true' ) ));
 													?>
-											</div>
-											<div class="descripcion-slider-curso">
+											</h4>
+											<p class="descripcion-slider-curso">
 												<?php
 														echo(types_render_field( "descripcion-curso-2-slider", array( 'raw' => 'true'  ) ));
 													?>
-											</div>
-											<div class="boton-slider-curso" align="center">
+											</p>
+											<div class="boton-slider-curso">
 												<!--<input type="button" id="boton-slider-cursos" value="Leer más">-->
 												<?php
 														echo(types_render_field( "boton-curso-2-slider", array( 'class' => 'boton-slider-cursos-type', 'title' => 'Conócelo' ) ));
@@ -337,23 +337,23 @@ Template Name: Pagina Cursos
 										</div>		
 									
 										<div class="slider-curso-3 cursocol clearfix">
-											<div class="imagen-slider-curso" align="center">
+											<div class="imagen-slider-curso">
 												<?php
-														echo(types_render_field( "imagen-curso-3-slider", array( 'size' => 'full' ) ));
+														echo(types_render_field( "imagen-curso-3-slider", array( 'class' => 'ctr', 'size' => 'full' ) ));
 													?>
 												<!-- <img src="<?php bloginfo('template_directory'); ?>/library/images/curso-regular-color.png" title="" alt="" /> -->
 											</div>
-											<div class="titulo-slider-curso">
+											<h4 class="titulo-slider-curso">
 												<?php
 														echo(types_render_field( "titulo-curso-3-slider", array( 'raw' => 'true' ) ));
 													?>
-											</div>
-											<div class="descripcion-slider-curso">
+											</h4>
+											<p class="descripcion-slider-curso">
 												<?php
 														echo(types_render_field( "descripcion-curso-3-slider", array( 'raw' => 'true'  ) ));
 													?>
-											</div>
-											<div class="boton-slider-curso" align="center">
+											</p>
+											<div class="boton-slider-curso">
 												<!--<input type="button" id="boton-slider-cursos" value="Leer más">-->
 												<?php
 														echo(types_render_field( "boton-curso-3-slider", array( 'class' => 'boton-slider-cursos-type', 'title' => 'Conócelo' ) ));
@@ -362,23 +362,23 @@ Template Name: Pagina Cursos
 										</div>
 
 										<div class="slider-curso-4 cursocol clearfix">
-											<div class="imagen-slider-curso" align="center">
+											<div class="imagen-slider-curso">
 												<?php
-														echo(types_render_field( "imagen-curso-4-slider", array( 'size' => 'full' ) ));
+														echo(types_render_field( "imagen-curso-4-slider", array( 'class' => 'ctr', 'size' => 'full' ) ));
 													?>
 												<!-- <img src="<?php bloginfo('template_directory'); ?>/library/images/curso-regular-color.png" title="" alt="" /> -->
 											</div>
-											<div class="titulo-slider-curso">
+											<h4 class="titulo-slider-curso">
 												<?php
 														echo(types_render_field( "titulo-curso-4-slider", array( 'raw' => 'true' ) ));
 													?>
-											</div>
-											<div class="descripcion-slider-curso">
+											</h4>
+											<p class="descripcion-slider-curso">
 												<?php
 														echo(types_render_field( "descripcion-curso-4-slider", array( 'raw' => 'true'  ) ));
 													?>
-											</div>
-											<div class="boton-slider-curso" align="center">
+											</p>
+											<div class="boton-slider-curso ctr">
 												<!--<input type="button" id="boton-slider-cursos" value="Leer más">-->
 												<?php
 														echo(types_render_field( "boton-curso-4-slider", array( 'class' => 'boton-slider-cursos-type', 'title' => 'Conócelo' ) ));

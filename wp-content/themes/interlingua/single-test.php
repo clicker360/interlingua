@@ -1,55 +1,41 @@
-<div class="loader"><img class="img-loader" src="<?php echo get_template_directory_uri(); ?>/library/images/ajax-loader.gif"></div>
 <?php
 /*
 Template Name: Test Online
 */
 ?>
 <?php get_header(); ?>
-<style>
-	.invisible{
-		display: none;
-	}
-    .loader{
-    	background: rgba(255,255,255,0.4);
-        position: fixed; 
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        display: none;
-    }
-    .img-loader{
-        position: absolute;
-        left: 50%;
-        top: 48%;
-    }
-</style>
+
 <div id="content">
+
+    <div class="loader"><img class="img-loader" src="<?php echo get_template_directory_uri(); ?>/library/images/ajax-loader.gif" alt="Imagen Cargador"></div>
+
 	<div id="inner-content" class="wrap clearfix">
 		<div id="main" class="sevencol first clearfix " role="main">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 					<header class="article-header wrap">
-						<h1 class="curso-titulo">
+						<h2 class="curso-titulo">
 							<?php
 								$category = get_the_category();
 								if($category[0]){
 								echo $category[0]->cat_name.'';
 								}
 							?>
-						</h1>
+						</h2>
 					</header>
                 <!--<div id="contenedor-curso" class="degradado-gris fullcol">-->
 					<section class="entry-content wrap clearfix" itemprop="articleBody">
 						<div class="planteles-formulario twelvecol clearfix ">
-							<div class="titulo-contacto">Test</div>
-                            <div class="subtitulo-contacto">
+							<h1 class="titulo-del-curso">Test<br>
+                            <span class="subtitulo-del-curso">
                                 ¿Conoces tu nivel de ingl&eacute;s?
-                            </div>
-							<div class="descripcion-test-int">
+                            </span>
+                            </h1>
+							<p class="descripcion-test-int">
 								Registra tu nombre, correo electrónico y teléfonos, así como el plantel de tu preferencia. Una vez terminado el Test, un ejecutivo te contactará para brindarte la información necesaria para inscribirte.
-							</div>
+							</p>
                             <div class="imagen-test-inicio">
-                                <img src="http://dev.clicker360.com/interlingua_sitio/wp-content/uploads/2013/10/maestra-fondo.jpg">
+                                <img src="http://dev.clicker360.com/interlingua_sitio/wp-content/uploads/2013/10/maestra-fondo.jpg" alt="Maestra Ingles">
                             </div>
 						</div>
 						

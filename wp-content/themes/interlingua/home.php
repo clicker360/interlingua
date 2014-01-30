@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('home'); ?>
 
 		<div class="slider-home">
 			<?php putRevSlider( "home" ) ?>
@@ -170,25 +170,29 @@
 
 			<div id="metodo" class="metodo-full">
 				<div class="metodo-interior wrap">
-					<div class="titulo-seccion-metodo wrap clearfix">
+					<h2 class="titulo-seccion-metodo wrap clearfix">
 						Beneficios de estudiar en INTERLINGUA®
-					</div>
-					<div id="metodo1" class="metodo-segmento cursocol clearfix">						
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/metodo.png" alt="Imagen Metodo de Aprendizaje">									
-						<div class="descripcion-metodo ctr clearfix">Método de Aprendizaje</div>				
-					</div>
-					<div id="metodo2" class="metodo-segmento cursocol clearfix">										
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/horarios.png" alt="Imagen Horarios Flexibles">										
-						<div class="descripcion-metodo ctr clearfix">Horarios Flexibles</div>				
-					</div>
-					<div id="metodo3" class="metodo-segmento cursocol clearfix">										
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/resultados.png" alt="Imagen Resultados Comprobables">					
-						<div class="descripcion-metodo ctr clearfix">Resultados Comprobables</div>				
-					</div>
-					<div id="metodo4" class="metodo-segmento cursocol clearfix">										
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/experiencia.png" alt="Imagen Experiencia Agradable">			
-						<div class="descripcion-metodo ctr clearfix">Experiencia Agradable</div>				
-					</div>
+					</h2>
+
+					<ul>
+						<li id="metodo1" class="metodo-segmento cursocol clearfix">						
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/metodo.png" alt="Imagen Metodo de Aprendizaje">									
+							<p class="descripcion-metodo ctr clearfix">Método de Aprendizaje</p>				
+						</li>
+						<li id="metodo2" class="metodo-segmento cursocol clearfix">										
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/horarios.png" alt="Imagen Horarios Flexibles">										
+							<p class="descripcion-metodo ctr clearfix">Horarios Flexibles</p>				
+						</li>
+						<li id="metodo3" class="metodo-segmento cursocol clearfix">										
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/resultados.png" alt="Imagen Resultados Comprobables">					
+							<p class="descripcion-metodo ctr clearfix">Resultados Comprobables</p>				
+						</li>
+						<li id="metodo4" class="metodo-segmento cursocol clearfix">										
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/experiencia.png" alt="Imagen Experiencia Agradable">			
+							<p class="descripcion-metodo ctr clearfix">Experiencia Agradable</p>				
+						</li>
+					</ul>
+
 					<div id="boton-metodo" class="fullcol ctr clearfix">
 						<button type="button" class="boton-metodo ctr"  onclick="location.href='http://www.interlingua.com.mx/nuestro-metodo/'">¡Conoce nuestro método!</button>
 					</div>
@@ -199,28 +203,32 @@
 
 			<div id="cursos" class="cursos-full color1">
 				<div class="cursos-interior wrap clearfix">
-					<div class="titulo-seccion-cursos wrap clearfix">
+					<h2 class="titulo-seccion-cursos wrap clearfix">
 						Tenemos el curso ideal para ti
-					</div>
-					<div id="curso1" class="curso-segmento cursocol clearfix">				
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/regulares.png" alt="Imagen Cursos Regulares">
-						<div class="descripcion-curso fullcol clearfix">Regulares</div>				
-					</div>
-					<div id="curso2" class="curso-segmento cursocol clearfix">				
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/ninos.png" alt="Imagen Cursos Niños y Jovenes">
-						<div class="descripcion-curso fullcol clearfix">Niños / Jóvenes</div>				
-					</div>
-					<div id="curso3" class="curso-segmento cursocol clearfix">						
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/empresas.png" alt="Imagen Cursos Empresas">				
-						<div class="descripcion-curso fullcol clearfix">Empresas</div>				
-					</div>
-					<div id="curso4" class="curso-segmento cursocol clearfix">				
-						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/especiales.png" alt="Imagen Cursos Especiales">
-						<div class="descripcion-curso fullcol clearfix">Especiales</div>				
-					</div>
+					</h2>
+					<ul>
+						<li id="curso1" class="curso-segmento cursocol clearfix">				
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/regulares.png" alt="Imagen Cursos Regulares">
+							<p class="descripcion-curso fullcol clearfix">Regulares</p>				
+						</li>
+						<li id="curso2" class="curso-segmento cursocol clearfix">				
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/ninos.png" alt="Imagen Cursos Niños y Jovenes">
+							<p class="descripcion-curso fullcol clearfix">Niños / Jóvenes</p>				
+						</li>
+						<li id="curso3" class="curso-segmento cursocol clearfix">						
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/empresas.png" alt="Imagen Cursos Empresas">				
+							<p class="descripcion-curso fullcol clearfix">Empresas</p>				
+						</li>
+						<li id="curso4" class="curso-segmento cursocol clearfix">				
+							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/especiales.png" alt="Imagen Cursos Especiales">
+							<p class="descripcion-curso fullcol clearfix">Especiales</p>				
+						</li>
+					</ul>
+
 					<div id="boton-cursos" class="fullcol clearfix">
 						<button type="button" class="boton-cursos ctr"  onclick="location.href='http://www.interlingua.com.mx/cursosregulares/semi-intensivo/'">¡Inscríbete a uno de nuestros cursos!</button>
 					</div>
+				
 				</div>
 			</div>
 
@@ -228,13 +236,11 @@
 
 			<div id="test" class="test-full">
 				<div class="test-interior wrap clearfix">
-					<div class="titulo-seccion-test wrap clearfix">
+					<h2 class="titulo-seccion-test wrap clearfix">
 						¿Qué tanto hablas inglés?
-					</div>
-					<div class="test-segmento fullcol clearfix">										
-							<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/test.png" alt="Imagen Test">						
-						<div class="descripcion-test ctr clearfix">Te invitamos a realizar el siguiente test gratuito para que conozcas tu nivel del idioma inglés.</div>				
-					</div>				
+					</h2>							
+					<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/test.png" alt="Imagen Test">						
+					<p class="descripcion-test ctr clearfix">Te invitamos a realizar el siguiente test gratuito para que conozcas tu nivel del idioma inglés.</p>							
 					<div id="boton-test" class="fullcol clearfix">
 						<button type="button" class="boton-test ctr"  onclick="location.href='http://www.interlingua.com.mx/?page_id=124'">¡Conoce tu nivel de inglés!</button>
 					</div>
@@ -245,15 +251,13 @@
 
 			<div id="planteles" class="planteles-full">
 				<div class="planteles-interior wrap clearfix">
-					<div class="titulo-seccion-planteles wrap clearfix">
+					<h2 class="titulo-seccion-planteles wrap clearfix">
 						Encuentra tu plantel más cercano:
-					</div>
-						<div class="plantel-segmento fullcol clearfix">				
-							<a href="<?php echo home_url(); ?>" rel="nofollow">
-								<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/mapa-planteles.png" alt="Imagen Mapa Planteles">
-							</a>										
-						</div>
-						<div class="descripcion-planteles wrap clearfix">Te invitamos a localizar el plantel mas cercano. Visítanos y aprende inglés</div>				
+					</h2>
+					<a href="<?php echo home_url(); ?>" rel="nofollow">
+						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/mapa-planteles.png" alt="Imagen Mapa Planteles">
+					</a>										
+					<p class="descripcion-planteles wrap clearfix">Te invitamos a localizar el plantel mas cercano. Visítanos y aprende inglés</p>				
 						<div class="planteles-form-home wrap">
 							<!-- <select id="estado-form-home"  name="carlist" form="carform">
 							 <option value="volvo">Elige tu Estado</option>
@@ -281,9 +285,9 @@
 
 			<div id="contacto" class="contacto-full">
 				<div class="trabajo-interior wrap clearfix">
-					<div class="titulo-seccion-contacto wrap clearfix">
+					<h2 class="titulo-seccion-contacto wrap clearfix">
 						Contáctanos y obtén una clase muestra  ¡GRATIS!
-					</div>
+					</h2>
 					<div class="formulario-contacto-home ctr wrap">
 						<!--	<?php echo do_shortcode('[contact-form-7 id="129" title="contacto home"]'); ?> -->
 						<div class="formulario-registro-Home wrap">
@@ -339,17 +343,17 @@
 
 			<div id="bolsa-trabajo" class="bolsa-trabajo-full">
 				<div class="bolsa-trabajo-interior wrap clearfix">
-					<div class="titulo-seccion-bolsa-trabajo wrap clearfix">
+					<h2 class="titulo-seccion-bolsa-trabajo wrap clearfix">
 						We are looking for English Teachers
-					</div>
-					<div class="subtitulo-seccion-bolsa-trabajo wrap clearfix">
+					</h2>
+					<h3 class="subtitulo-seccion-bolsa-trabajo wrap clearfix">
 						Work in a fun and rewarding field!
-					</div>
-					<div class="bolsa-trabajo-segmento fullcol clearfix">				
+					</h3>
+									
 						<img class="ctr" src="<?php echo get_template_directory_uri(); ?>/library/images/maestros.png" alt="Imagen Maestros">								
-					</div>
+					
 					<div class="bolsa-trabajo-segmento1 fullcol clearfix">
-						<div class="descripcion-planteles ctr wrap clearfix">Interact and network with all kinds of people while you make a significant difference in their lives. </div>
+						<p class="descripcion-planteles ctr wrap clearfix">Interact and network with all kinds of people while you make a significant difference in their lives. </p>
 					</div>
 					<div class="bolsa-trabajo-segmento2 fivecol clearfix">
 						<div class="bolsa-trabajo-ofrecemos  clearfix"> </div>

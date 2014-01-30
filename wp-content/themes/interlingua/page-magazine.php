@@ -32,17 +32,17 @@ Template Name: Interlingua Magazine
 									<div class="contenedor-curso-interior wrap">
 										<div class="contenedor-curso-informacion sevencol first">
 											<div>
-												<img src="http://dev.clicker360.com/interlingua_sitio/wp-content/themes/interlingua/library/images/logomagazine.png">
+												<img src="http://dev.clicker360.com/interlingua_sitio/wp-content/themes/interlingua/library/images/logomagazine.png" alt="Logo Interlingua Magazine">
 											</div>
-											<div class="subtitulo-contacto">
+											<span class="subtitulo-contacto">
 												¿Qué es INTERLINGUA Magazine?
-											</div>
-											<div class="descripcion-contacto">
+											</span>
+											<p class="descripcion-contacto">
 												Es la nueva herramienta interactiva que te ayudará a practicar, reforzar y mejorar lo aprendido en clase.
-											</div>
-											<div class="subtitulo-contacto">
+											</p>
+											<span class="subtitulo-contacto">
 												INTERLINGUA Magazine tiene para ti diversas actividades:
-											</div>
+											</span>
 											<div class="descripcion-contacto">
 												<ul style="font-size: 14px;line-height: normal;color: #797979;">
 													<li>Artículos y videos que se actualizan de forma semanal</li>
@@ -52,12 +52,12 @@ Template Name: Interlingua Magazine
   													<li>Revisa y mejora estructuras gramaticales</li>
 												</ul>
 											</div>
-											<div class="descripcion-contacto" style="font-size: 24px;">
+											<p class="descripcion-contacto" style="font-size: 24px;">
 												INTERLINGUA Magazine ¡Es para todos!... No importa tu nivel actual de inglés.
-											</div>
-											<div class="subtitulo-contacto">
+											</p>
+											<span class="subtitulo-contacto">
 												¿Por qué INTERLINGUA Magazine?
-											</div>
+											</span>
 											<div class="descripcion-contacto"> 
 												<ul style="font-size: 14px;line-height: normal;color: #797979;">
 													<li>En cualquier momento, cualquier lugar: en tu computadora o laptop, ajustándose a tu agenda cotidiana</li>
@@ -65,16 +65,16 @@ Template Name: Interlingua Magazine
 													<li>¡Aprenderás de forma sencilla, interactiva y eficaz!</li>
 												</ul>
 											</div>
-											<div class="subtitulo-contacto">
+											<span class="subtitulo-contacto">
 												Por ser miembro de la comunidad INTERLINGUA podrás acceder a esta novedosa plataforma.
-											</div>
+											</span>
 
 										</div>
                                         <a href="http://interlingua.ispeakuspeak.com/security/login" target="_blank"><div id="btnEnviarMagazine" style="font-size: 22px;">Si ya estás registrado haz click aquí</div></a>
 										<div class="contenedor-curso-formulario fivecol last">
-											<div class="titulo-formulario" style="margin-bottom: 0;">
+											<h3 class="titulo-formulario" style="margin-bottom: 0;">
                                                 ¡Regístrate ahora!
-											</div>
+											</h3>
 											<div class="formulario-registro-cursos wrap">
 												<div id="formulario-magazine">
 
