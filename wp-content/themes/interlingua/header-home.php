@@ -113,7 +113,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  
 			  jQuery("#frmLogin").on("submit",function(e){
 			  	e.preventDefault();
-			  	ruta = jQuery("input[name=ruta]").val();
+			  	ruta = jQuery("#ruta").val();
 
 			  	jQuery.ajax({
 			  		type:"post",
@@ -137,7 +137,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  
 			  jQuery("#logout").on("click",function(e){
 			  	e.preventDefault();
-			  	ruta = jQuery("input[name=ruta]").val();
+			  	ruta = jQuery("#ruta").val();
 			  	jQuery.post(ruta+"/core.php",{action:"logout"},function(data){
 			  		window.location = data;
 			  	});
@@ -152,7 +152,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 			  	jQuery("#frmGetPass").on("submit",function(e){
 			  		e.preventDefault();
-			  		ruta = jQuery("input[name=ruta]").val();
+			  		ruta = jQuery("#ruta").val();
 
 			  		jQuery.ajax({
 			  			type:"post",
@@ -178,12 +178,6 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 			});
 </script>
-<style>
-#megaMenu ul.megaMenu > li.menu-item {
-	margin-left : -2px;
-
-}
-</style>
 
 <script type="text/javascript">
 
@@ -366,7 +360,7 @@ jQuery.ajax({
 					<div class="logo-header ctr">
 						<h1 id="logo">
 							<a href="<?php echo home_url(); ?>" rel="nofollow" title="logo interlingua">
-								Mi logotipo
+								Logo Interlingua
 							</a>
 						</h1>
 					</div>
@@ -377,12 +371,12 @@ jQuery.ajax({
 						<li><a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="Logo Facebook"></a></li>
 						<li><a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" alt="Logo Google Plus"></a></li>
 					</ul>
-					<div class="telefonos-list fullcol clearfix">
-						<ul>
-							<li class="telefono1">Línea de atención al cliente <strong>01 800 1INGLES (464537)</strong></li>
-							<li class="telefono2">Centro de información Cd. de México <strong>500 500 50</strong></li>
-						</ul>				
-					</div>
+					<div class="telefonos h-card fullcol clearfix">
+						<span itemscope itemtype="http://schema.org/Organization">
+							<span class="telefono1">Línea de atención al cliente<span class="p-tel" itemprop="telephone">01 800 1INGLES (464537)</span></span><br>
+							<span class="telefono2">Centro de información Cd. de México<span class="p-tel" itemprop="telephone">500 500 50</span></span>
+						</span>
+					</div>	
 				</div>
 			</div> <!-- end #inner-header -->
 			<div id="contenedor-menu">
@@ -429,7 +423,7 @@ jQuery.ajax({
 						<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>"/>
 						<div class="nombreSession"><?php echo $nombreAlumno;?></div>
 						<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
-						<a class="btnCuenta" href="http://www.interlingua.com.mx/acceso-a-alumnos/">Mi Cuenta</a> <br>
+						<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
 						<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
 					</div>
 					<?php } ?>

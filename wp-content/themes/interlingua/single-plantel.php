@@ -279,26 +279,16 @@ Template Name: Pagina Cursos
 
 								</div>
 
-								<div class="planteles-informacion fourcol clearfix">
-									<h2 class="nombre-plantel">
-										<?php echo(types_render_field( "nombre-del-plantel", array( 'raw' => 'true'  ) ));?>
-									</h2>
-									<p class="direccion-plantel">
-										<?php echo(types_render_field( "direccion-del-plantel", array( 'raw' => 'true'  ) ));?>
-									</p>
-									<p class="telefono-plantel">
-										<?php echo(types_render_field( "telefono-plantel", array( 'raw' => 'true'  ) ));?>										
-									</p>
+								<div class="planteles-informacion h-card fourcol clearfix">
+									<span itemscope itemtype="http://schema.org/Organization">
+										<span class="p-name" itemprop="name"><?php echo(types_render_field( "nombre-del-plantel", array( 'raw' => 'true'  ) ));?></span><br><br>
+										<span class="p-adr" itemprop="name"><?php echo(types_render_field( "direccion-del-plantel", array( 'raw' => 'true'  ) ));?></span><br>
+										<span class="p-tel" itemprop="name"><?php echo(types_render_field( "telefono-plantel", array( 'raw' => 'true'  ) ));?></span><br>
+										<span class="u-email" itemprop="name"><?php echo(types_render_field( "correo-plantel", array( 'raw' => 'true'  ) ));?></span><br><br>
+										<a href="#" id="btnMod" data-reveal-id="myModal">Consulta los precios y horarios</a>
+									</span>
+								</div>	
 
-									<p class="correo-plantel">										
-										<?php echo(types_render_field( "correo-plantel", array( 'raw' => 'true'  ) ));?>
-									</p>
-
-									<!--<?php echo(types_render_field( "boton-plantel", array( 'class' => 'boton-contacto-plantel', 'title' => 'Contactar' ) ));?> -->
-									<br>
-									<a href="#" id="btnMod" data-reveal-id="myModal">Consulta los precios y horarios</a>
-								</div>
-								
 								<div class="planteles-mapa fullcol">
 
 

@@ -69,17 +69,23 @@
 
 		<footer class="footer2" role="contentinfo">
 
-			<div class="wrap clearfix">
+			<div id="footer-interior2" class="wrap clearfix">
 
-				<nav role="navigation">
-				</nav>
-
-				<div id="footer-interior2" class="wrap clearfix">
-					<p class="copyright">Todos los derechos reservados © Interlingua 2013<br><a href="http://www.interlingua.com.mx/?page_id=71">Aviso de Privacidad</a> / <a href="http://www.interlingua.com.mx/aviso-legal/">Aviso Legal</a></p>
-					<p class="privacidad">Centro de información Cd. de México 500 500 50<br>Línea de atención al cliente 01 800 1 INGLÉS (464537)</p>
+				<div class="color-bco h-card sixcol first clearfix">
+					<span itemscope itemtype="http://schema.org/Organization">
+						Línea de atención al cliente<span class="p-tel" itemprop="telephone">01 800 1INGLES (464537)</span><br>
+						Centro de información Cd. de México<span class="p-tel" itemprop="telephone">500 500 50</span>
+					</span>
 				</div>
 
-			</div> <!-- end #inner-footer -->
+				<div class="color-bco h-card sixcol last clearfix">
+					<span itemscope itemtype="http://schema.org/Organization">
+						Línea de atención al cliente<span class="p-tel" itemprop="telephone">01 800 1INGLES (464537)</span><br>
+						Centro de información Cd. de México<span class="p-tel" itemprop="telephone">500 500 50</span>
+					</span>
+				</div>
+
+			</div>
 
 		</footer>
 
