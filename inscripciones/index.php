@@ -1,5 +1,5 @@
 <?php
-    header('Location: http://www.interlingua.com.mx/buenfin');
+    //header('Location: http://www.interlingua.com.mx/buenfin');
 ?>
 <!DOCTYPE>
 <html lang="es">
