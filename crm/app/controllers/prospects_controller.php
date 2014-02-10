@@ -713,7 +713,7 @@ class ProspectsController extends AppController{
             case 'Interlomas':
                 $resultado['rutaPlantel'] = "interlingua-interlomas/"; 
                 break;
-            case 'Ixtapaluca':$
+            case 'Ixtapaluca':
                 $resultado['rutaPlantel'] = "interlingua-ixtapaluca/"; 
                 break;
             case 'Metepec':
@@ -728,7 +728,7 @@ class ProspectsController extends AppController{
             case 'Patio Ecatepec':
                 $resultado['rutaPlantel'] = "interlingua-patio-ecatepec/"; 
                 break;
-            case 'Satelite':$
+            case 'Satelite':
                 $resultado['rutaPlantel'] = "interlingua-satelite-2/"; 
                 break;
             case 'Tecamac':
@@ -774,7 +774,7 @@ class ProspectsController extends AppController{
                 $resultado['rutaPlantel'] = "interlingua-monterrey-linda-vista/"; 
                 break;
             case 'Sendero':
-                $resultado['rutaPlantel'] = "interlingua-mo$nterrey-sendero/"; 
+                $resultado['rutaPlantel'] = "interlingua-monterrey-sendero/"; 
                 break;
             case 'Huexotitla':
                 $resultado['rutaPlantel'] = "interlingua-puebla-huexotitla/"; 
