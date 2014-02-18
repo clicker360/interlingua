@@ -966,6 +966,24 @@ class ProspectsController extends AppController{
                 $mensaje = "El numero de teléfono es incorrecto";
             }
         }
+        # Valida celular
+        if (!$error) {
+            $cel = trim($_POST["frm_cel"]);
+            $cel = str_replace("(","",$cel);
+            $cel = str_replace(")","",$cel);
+            $cel = str_replace("-","",$cel);
+            $cel = str_replace(" ","",$cel);
+            $is_phone = true;
+            $cadena = "/^[0-9]{7,15}?/";
+            if(gettype($telefono)!="integer") settype($telefono,"integer");
+            if(!preg_match($cadena,$telefono)) $is_phone = false;
+
+            if(!$is_phone) {
+                $error   = true;
+                $focus[] = "frm_cel";
+                $mensaje = "El numero de celular es incorrecto";
+            }
+        }
         # Valida telefono oficina
        /* if (!$error) {
             $telefono = trim($_POST["frm_telefono_oficina"]);
@@ -1018,12 +1036,47 @@ class ProspectsController extends AppController{
             $MATERNO            = strtolower($MATERNO);
             $MATERNO            = utf8_encode($MATERNO);
             $MATERNO            = ucfirst($MATERNO);
-            $LADAPARTICULAR     = ($_POST["frm_lada"]!="")?trim($_POST["frm_lada"]):""; # No obligatorio
-            $TELEFONOPARTICULAR = ($_POST["frm_telefono"]!="")?trim($_POST["frm_telefono"]):"";
-            $LADAOFICINA        = ($_POST["frm_lada_oficina"]!="")?trim($_POST["frm_lada_oficina"]):""; # No obligatorio
-            $TELEFONOOFICINA    = trim($_POST["frm_telefono_oficina"]);
-            $EXTENCIONOFICINA   = ($_POST["frm_ext_oficina"]!="")?trim($_POST["frm_ext_oficina"]):""; # No obligatorio
-            $CELULAR            = trim($_POST["frm_cel"]);
+            # Lada
+            $LADAPARTICULAR = trim($_POST["frm_lada"]);
+            $LADAPARTICULAR = str_replace("(","",$LADAPARTICULAR);
+            $LADAPARTICULAR = str_replace(")","",$LADAPARTICULAR);
+            $LADAPARTICULAR = str_replace("-","",$LADAPARTICULAR);
+            $LADAPARTICULAR = str_replace(" ","",$LADAPARTICULAR);
+            $LADAPARTICULAR     = ($LADAPARTICULAR!="")?$LADAPARTICULAR:""; # No obligatorio
+            # Telefono Particular
+            $TELEFONOPARTICULAR = trim($_POST["frm_telefono"]);
+            $TELEFONOPARTICULAR = str_replace("(","",$TELEFONOPARTICULAR);
+            $TELEFONOPARTICULAR = str_replace(")","",$TELEFONOPARTICULAR);
+            $TELEFONOPARTICULAR = str_replace("-","",$TELEFONOPARTICULAR);
+            $TELEFONOPARTICULAR = str_replace(" ","",$TELEFONOPARTICULAR);
+            $TELEFONOPARTICULAR = ($TELEFONOPARTICULAR!="")?$TELEFONOPARTICULAR:"";
+            # Lada Oficina
+            $LADAOFICINA = trim($_POST["frm_lada_oficina"]);
+            $LADAOFICINA = str_replace("(","",$LADAOFICINA);
+            $LADAOFICINA = str_replace(")","",$LADAOFICINA);
+            $LADAOFICINA = str_replace("-","",$LADAOFICINA);
+            $LADAOFICINA = str_replace(" ","",$LADAOFICINA);
+            $LADAOFICINA        = ($LADAOFICINA!="")?$LADAOFICINA:""; # No obligatorio
+            # Telefono Oficina
+            $TELEFONOOFICINA = trim($_POST["frm_telefono_oficina"]);
+            $TELEFONOOFICINA = str_replace("(","",$TELEFONOOFICINA);
+            $TELEFONOOFICINA = str_replace(")","",$TELEFONOOFICINA);
+            $TELEFONOOFICINA = str_replace("-","",$TELEFONOOFICINA);
+            $TELEFONOOFICINA = str_replace(" ","",$TELEFONOOFICINA);
+            # Extencion Oficina
+            $EXTENCIONOFICINA = trim($_POST["frm_ext_oficina"]);
+            $EXTENCIONOFICINA = str_replace("(","",$EXTENCIONOFICINA);
+            $EXTENCIONOFICINA = str_replace(")","",$EXTENCIONOFICINA);
+            $EXTENCIONOFICINA = str_replace("-","",$EXTENCIONOFICINA);
+            $EXTENCIONOFICINA = str_replace(" ","",$EXTENCIONOFICINA);
+            $EXTENCIONOFICINA   = ($EXTENCIONOFICINA!="")?$EXTENCIONOFICINA:""; # No obligatorio
+            # Celular
+            $CELULAR = trim($_POST["frm_cel"]);
+            $CELULAR = str_replace("(","",$CELULAR);
+            $CELULAR = str_replace(")","",$CELULAR);
+            $CELULAR = str_replace("-","",$CELULAR);
+            $CELULAR = str_replace(" ","",$CELULAR);
+
             $EMAIL              = trim($_POST["frm_email"]);
             $METODOCONTACTO     = ($_POST["frm_metodo"]!="")?trim($_POST["frm_metodo"]):"";
             $MEDIOCONTACTO      = ($_POST["frm_medio"]!="")?trim($_POST["frm_medio"]):"";
