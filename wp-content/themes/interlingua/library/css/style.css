@@ -1716,8 +1716,8 @@ h2.current {
 }
 /*	Header
 ------------------------------------------ */
-.logo-header h1 a {
-  margin: 0px 0 15px 0;
+.logo-header {
+  margin: 15px 0 0px 0;
 }
 .logo-header img {
   max-width: 90%;
@@ -5933,7 +5933,6 @@ you can add resource intensive styles.
 #contenedor-derecho {
     text-align: right;
     line-height: 25px;
-    margin-top: 17px;
 }
 .logos-redes img {
     margin-left: 10px;
@@ -7810,10 +7809,7 @@ input[type=radio]{
     #btnEnviarEmpresas{
         font-size: 14px;
     }
-
 }
-
-
 @media (min-width: 769px) and (max-width: 1024px) { 
   #login_alumnos {
     margin-left:730px;
@@ -8176,17 +8172,7 @@ nav {
 
 /** Estilo Personalizados **/
 
-.color-bco{
-  color:@white;
-}
-
-.footer2{
-  padding: 10px 0;
-}
-
-/** Header **/
-
-.ctr{
+.logo-header img, .ctr{
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -8201,30 +8187,14 @@ nav {
   margin-bottom: 20px;
 }
 
-.logo-header h1 a {
-  display: block; 
-  width: 318px; 
-  height: 123px; 
-  background: url(../images/logo.png);
+.header #inner-header .logo-header h1 a p {
   text-indent: -999999em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.logo-header h2 a {
-  display: block; 
-  width: 318px; 
-  height: 123px; 
-  background: url(../images/logo.png);
-  text-indent: -999999em;
-  margin-left: auto;
-  margin-right: auto;t: left;
+  float: left;
 }
 
 .header #inner-header #contenedor-derecho ul.logos-redes li {
   display: inline;
   background: none;
-  padding-left: 10px;
 }
 
 .header #inner-header #contenedor-derecho .telefonos-list ul li{
@@ -8298,101 +8268,4 @@ p.textoind{
   background-image: -o-linear-gradient(top, #eb7125, #e26315);
   background-image: linear-gradient(to bottom, #eb7125, #e26315);
 }
-
-/** Cursos Regulare **/
-
-.wpcf-field-url{
-  text-align: center;
-}
-
-h1.titulo-del-curso{
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: -10px
-}
-
-span.subtitulo-del-curso{
-  font-size: 30px;
-  font-weight: normal;
-}
-
-p.descripcion-del-curso{
-  line-height: 22px;
-}
-
-/** Pagina Test **/
-
-    .invisible{
-      display: none;
-    }
-
-    .loader{
-      background: rgba(255,255,255,0.4);
-        position: fixed; 
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        display: none;
-    }
-    .img-loader{
-        position: absolute;
-        left: 50%;
-        top: 48%;
-    }
-
-/** Pagina Planteles **/
-
-
-      .tablahorarios {
-        border:8px #33b0be solid;
-        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-        box-shadow:#000;
-        padding: 5px;
-        -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.39);
-        -moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.39);
-        box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.39);
-        width: 100%;
-       }
-      #tablita>tr:nth-child(odd) {background: #efefef;}
-      .texto{
-        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-        font-size:18px;
-        font-weight:bold;
-        color:#33b0be;
-      }
-
-      .planteles-informacion a#btnMod{
-        padding: 5px;
-        font-size: 15px;
-      }
-
-      #map_canvas{
-        width: 100%;
-        height: 700px;
-      }
-
-
-      thead.texto{
-        text-align: center;
-      }
-
-      thead.texto th{
-        text-align: center;
-      }
-
-      tbody#tablita tr{
-        text-align: center;
-      }
-
-      .planteles-informacion h2{
-        margin-top: 0;
-      }
-
-      .planteles-informacion p{
-        margin-bottom: -10px;
-      }
-
-
-      
-
 

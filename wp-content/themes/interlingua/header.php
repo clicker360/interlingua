@@ -113,7 +113,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  
 			  jQuery("#frmLogin").on("submit",function(e){
 			  	e.preventDefault();
-			  	ruta = jQuery("#ruta").val();
+			  	ruta = jQuery("input[name=ruta]").val();
 
 			  	jQuery.ajax({
 			  		type:"post",
@@ -137,7 +137,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 			  
 			  jQuery("#logout").on("click",function(e){
 			  	e.preventDefault();
-			  	ruta = jQuery("#ruta").val();
+			  	ruta = jQuery("input[name=ruta]").val();
 			  	jQuery.post(ruta+"/core.php",{action:"logout"},function(data){
 			  		window.location = data;
 			  	});
@@ -152,7 +152,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 			  	jQuery("#frmGetPass").on("submit",function(e){
 			  		e.preventDefault();
-			  		ruta = jQuery("#ruta").val();
+			  		ruta = jQuery("input[name=ruta]").val();
 
 			  		jQuery.ajax({
 			  			type:"post",
@@ -178,6 +178,12 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 			});
 </script>
+<style>
+#megaMenu ul.megaMenu > li.menu-item {
+	margin-left : -2px;
+
+}
+</style>
 
 <script type="text/javascript">
 
@@ -198,114 +204,6 @@ _gaq.push(['_trackPageview']);
 
 	<script src="<?php echo get_template_directory_uri(); ?>/library/reveal/jquery.reveal.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/reveal/reveal.css">
-
-	<!-- chat -->
-<!--Start of Zopim Live Chat Script-->
-<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-$.src='//v2.zopim.com/?1qdTKWEfbdERJo2vkOeZvkwDidMTesBF';z.t=+new Date;$.
-type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-</script>
-<!--End of Zopim Live Chat Script-->
-<script>
-jQuery(document).ready(function(){
-
-var status = new Array();
-var logStatus = "";
-var count = 0;
-var count2 = 0;
-$zopim(function() {
-$zopim.livechat.window.show(); 
-$zopim.livechat.setOnStatus(function() {
-var iframe = document.getElementsByTagName('iframe'); 
-var iframe_content = jQuery(iframe).contents();
-var form = jQuery(iframe).contents().find('form');
-var button_send = jQuery(iframe).contents().find('form').children("div.bottom").children(".submit");
-var input_name = jQuery(iframe).contents().find('form').children(".meshim_widget_widgets_ScrollableFrame");
-var zopim_ele = document.getElementsByClassName('zopim');
-var zopim_form = document.getElementsByClassName('form_container');
-
-console.log(button_send.attr('value'));
-status.push(button_send.attr('value'));
-jQuery.each(status, function( index, value ) {
-if(value != undefined && value != logStatus){
-logStatus = value;
-}else if( value == logStatus) {
-count++;
-}
-});
-
-// Init
-count2++;
-if(count2 == 1){
-console.log("save");
-saveChat(logStatus);
-}else{
-count2 = 0;
-}
-
-function saveChat(logStatus){
-//online
-//if(button_send.attr("value")=="Start Chatting"){
-jQuery(button_send.attr("value",logStatus)).on("click",function(){	
-if(logStatus=="Send Message" || logStatus == "Enviar mensaje " ){
-dir = ".meshim_widget_components_chatWindow_preChatOfflineForm_Form";
-}else{
-dir = ".meshim_widget_components_chatWindow_PreChatOfflineForm";
-}
-setTimeout(function(){
-var status = jQuery(iframe_content).find(dir).css("display");
-console.log(status);
-if(status == "none"){
-var name = jQuery(form).find(".input_name").attr("value");
-var email = jQuery(form).find(".input_email").attr("value");
-var phone_number = jQuery(form).find(".input_phone").attr("value");	
-var origin_id = 91;	
-jQuery.ajax({
-           type:"post",
-           url: "http://www.interlingua.com.mx/crm/registro",
-           data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
-           dataType:"json",	           
-           success:function(data){
-           	console.log("success");
-           }
-       });
-}	
-},1000);
-});
-//}
-
-//offline
-/*if(button_send.attr("value")=="Send Message"){
-jQuery(button_send).on("click",function(){	
-setTimeout(function(){
-var status = jQuery(iframe_content).find(".meshim_widget_components_chatWindow_preChatOfflineForm_Form").css("display");
-console.log(status);
-if(status == "none"){
-var name = jQuery(form).find(".input_name").attr("value");
-var email = jQuery(form).find(".input_email").attr("value");
-var phone_number = jQuery(form).find(".input_phone").attr("value");	
-var origin_id = 91;	
-jQuery.ajax({
-           type:"post",
-           url: "http://www.interlingua.com.mx/crm/registro",
-           data:{origin_id:origin_id,email:email, phone_number:phone_number, name:name},
-           dataType:"json",	           
-           success:function(data){
-           	console.log("success");
-           }
-       });
-}	
-},1000);
-});
-}*/
-}// Fin saveChat()
-});
-}); 
-});
-</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -358,11 +256,12 @@ jQuery.ajax({
 			<div id="inner-header" class="wrap clearfix">
 				<div id="contenedor-izquierdo"  class="sixcol clearfix">
 					<div class="logo-header ctr">
-						<h2 id="logo">
-							<a href="<?php echo home_url(); ?>" rel="nofollow" title="logo interlingua">
-								Logo Interlingua
+						<h1>
+							<a href="<?php echo home_url(); ?>" rel="nofollow">
+								<p> Interlingua </p>
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Logo Interlingua">
 							</a>
-						</h2>
+						<h1>
 					</div>
 				</div>
 				<div id="contenedor-derecho"  class="sixcol clearfix">
@@ -371,13 +270,12 @@ jQuery.ajax({
 						<li><a href="https://www.facebook.com/interlingua.mx?ref=hl" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="Logo Facebook"></a></li>
 						<li><a href="https://plus.google.com/u/2/102048105295600879797/posts" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/google.png" alt="Logo Google Plus"></a></li>
 					</ul>
-
-					<div class="telefonos h-card fullcol clearfix">
-						<span itemscope itemtype="http://schema.org/Organization">
-							<span class="telefono1">Línea de atención al cliente<span class="p-tel" itemprop="telephone">01 800 1INGLES (464537)</span></span><br>
-							<span class="telefono2">Centro de información Cd. de México<span class="p-tel" itemprop="telephone">500 500 50</span></span>
-						</span>
-					</div>	
+					<div class="telefonos-list fullcol clearfix">
+						<ul>
+							<li class="telefono1">Línea de atención al cliente <strong>01 800 1INGLES (464537)</strong></li>
+							<li class="telefono2">Centro de información Cd. de México <strong>500 500 50</strong></li>
+						</ul>				
+					</div>
 				</div>
 			</div> <!-- end #inner-header -->
 			<div id="contenedor-menu">
@@ -424,7 +322,7 @@ jQuery.ajax({
 						<input type="hidden" name="ruta" value="<?php echo get_template_directory_uri(); ?>"/>
 						<div class="nombreSession"><?php echo $nombreAlumno;?></div>
 						<div class="matriculaSession"><?php echo $matriculaAlumno;?></div>
-						<a class="btnCuenta" href="http://interlingua.com.mx/clicker360/interlingua/acceso-a-alumnos/">Mi Cuenta</a> <br>
+						<a class="btnCuenta" href="http://www.interlingua.com.mx/acceso-a-alumnos/">Mi Cuenta</a> <br>
 						<a class="btnCerrar" href="#" id="logout"> Cerrar Sesión</a>
 					</div>
 					<?php } ?>
