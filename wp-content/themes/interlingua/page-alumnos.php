@@ -94,6 +94,7 @@ Template Name: Alumnos
 					<div class="menu-alumnos">
 						<div class="inicio-alumnos">Inicio</div>
 						<div class="calificaciones-alumnos">Calificaciones</div>
+						<div class="calificaciones-alumnos">Audios</div>
 					</div>
 						<div class="datos-escuela-alumno">
 						<div class="informacion-alumno">
