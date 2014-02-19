@@ -231,7 +231,7 @@ Template Name: Alumnos
 						<?php the_content(); ?>
 					</div>
 
-            		<table style="width:100%;border:solid 2px #33B0BE;">
+            		<!-- <table style="width:100%;border:solid 2px #33B0BE;">
             			<thead>
             				<th width="80%">Audio</th>
             				<th width="20%">Descargar</th>
@@ -262,7 +262,7 @@ Template Name: Alumnos
             					</td>	
             				</tr>      
             			</tbody>
-            		</table>
+            		</table> -->
 				</div>
 			</div>
 								</section> <!-- end article section -->
