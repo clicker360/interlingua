@@ -7982,6 +7982,7 @@ input[type=radio]{
 }
 .gbg{
   background: #E3E3E3 !important;
+  color: #666666 !important;
 }
 .triangulo-der-1{
   position:relative;
