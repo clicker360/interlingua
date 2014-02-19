@@ -81,32 +81,30 @@
 	</div> <!-- Container -->
 
 	 <?php if(is_home()){ ?> 
-               <script type="text/javascript">
-                jQuery(document).ready(function(){
-                    jQuery(".menu-item").children('a').click(function(e){
-                        e.preventDefault();
-                        var href = jQuery(this).attr('href');
-                        if(href.substring(0,1) == '#'){
-                            var top = jQuery(href).offset().top;
-                            jQuery('body,html').animate({
-                                'scrollTop' : top 
-                            },1000);
-                        }else{
-                            window.location = href;
-                        }                        
-                    });
-                });
-                </script>
-                <script type="text/javascript">
-				setTimeout(function(){var a=document.createElement("script");
-				var b=document.getElementsByTagName("script")[0];
-				a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/1455.js?"+Math.floor(new Date().getTime()/3600000);
-				a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-				</script>
-	</body>
+	   <script type="text/javascript">
+	    jQuery(document).ready(function(){
+	        jQuery(".menu-item").children('a').click(function(e){
+	            e.preventDefault();
+	            var href = jQuery(this).attr('href');
+	            if(href.substring(0,1) == '#'){
+	                var top = jQuery(href).offset().top;
+	                jQuery('body,html').animate({
+	                    'scrollTop' : top 
+	                },1000);
+	            }else{
+	                window.location = href;
+	            }                        
+	        });
+	    });
+	    </script>
+	    <script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/1455.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+		</script>
 
-
-                <?php } ?>
-
-                </html> <!-- end page. what a ride! -->
+	    <?php } ?>
+</body>
+</html> <!-- end page. what a ride! -->
 
