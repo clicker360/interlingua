@@ -101,7 +101,7 @@ Template Name: Alumnos
 
 					<div class="menu-alumnos">
 						<div class="inicio-alumnos">Inicio</div>
-						<div class="calificaciones-alumnos">Calificaciones</div><div class="triangulo-der"></div>
+						<div class="calificaciones-alumnos">Calificaciones</div>
 						<div class="audios gbg calificaciones-calif moveizq">Audios</div><div class="triangulo-der-1"></div>
 					</div>
 						<div class="datos-escuela-alumno">
