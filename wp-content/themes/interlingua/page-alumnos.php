@@ -179,6 +179,18 @@ Template Name: Alumnos
 				</div>
 
 				<div class="audios-tabla">
+					<?php 
+						$directorio = opendir("/var/www/InterlinguaAudios/");
+						while ($archivo = readdir($directorio)) {
+						    if (is_dir($archivo)) {
+						        echo "[".$archivo . "]<br />";
+						    }else {
+						        echo $archivo . "<br />";
+						    }
+						}
+					?>
+
+
             		<table style="width:100%;border:solid 2px #33B0BE;">
             			<thead>
             				<th width="80%">Audio</th>
