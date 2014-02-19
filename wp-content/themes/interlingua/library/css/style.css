@@ -4045,6 +4045,7 @@ label.error {
   width: 100%;
   float: left;
   margin: 0px 0 0 10px;
+  background: #E3E3E3;
 }
 .inicio-calif,
 .calificaciones-calif{
