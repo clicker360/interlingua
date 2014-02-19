@@ -174,8 +174,8 @@ Template Name: Alumnos
 			<div class="content-audios">
 				<div class="menu-audios">
 					<div class="inicio-calif">Inicio</div>
-					<div class="calificaciones-alumnos">Calificaciones</div><div class="triangulo-der-1"></div>
-					<div class="audios calificaciones-calif moveizq-aud">Audios</div><div class="moveizq-aud triangulo-der"></div>
+					<div class="calificaciones-alumnos">Calificaciones</div><div class="moveizq-aud  triangulo-der-1"></div>
+					<div class="audios calificaciones-calif moveizq-aud">Audios</div><div class="triangulo-der"></div>
 				</div>
 
 				<div class="audios-tabla">
