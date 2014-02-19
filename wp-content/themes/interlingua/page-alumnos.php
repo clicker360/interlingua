@@ -173,7 +173,7 @@ Template Name: Alumnos
 			<!-- audios -->
 			<div class="content-audios">
 				<div class="menu-audios">
-					<div class="inicio-calif">Inicio</div><div class="triangulo-der"></div>
+					<div class="inicio-calif">Inicio</div>
 					<div class="calificaciones-alumnos">Calificaciones</div>
 					<div class="audios calificaciones-calif moveizq">Audios</div><div class="triangulo-der"></div>
 				</div>
