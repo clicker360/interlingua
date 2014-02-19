@@ -22,11 +22,13 @@ Template Name: Alumnos
           jQuery(".calificaciones-alumnos").on("click",function(e){
             e.preventDefault();
             jQuery("#info-alumnos").hide();
+            jQuery(".content-audios").hide();
             jQuery(".historial-calificaciones").fadeIn("slow");
           });
           jQuery(".inicio-calif").on("click",function(e){
             e.preventDefault();
             jQuery(".historial-calificaciones").hide();
+            jQuery(".content-audios").hide();
             jQuery("#info-alumnos").fadeIn("slow");
           });
           //get Alumno
