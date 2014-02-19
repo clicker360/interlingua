@@ -7980,6 +7980,8 @@ input[type=radio]{
   float: right;
   text-align: center;
 }
+.gbg{
+  background: #E3E3E3 !important;
 }
 .triangulo-der-1{
   position:relative;
