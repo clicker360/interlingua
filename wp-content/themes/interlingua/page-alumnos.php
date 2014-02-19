@@ -94,7 +94,7 @@ Template Name: Alumnos
 					<div class="menu-alumnos">
 						<div class="inicio-alumnos">Inicio</div>
 						<div class="calificaciones-alumnos">Calificaciones</div>
-						<div id="audios" style="text-align:center;pading-top:2px;height:26px;width:90px;float:right;background:#E3E3E3;"><br>Audios</div>
+						<div class="audios">Audios</div>
 					</div>
 						<div class="datos-escuela-alumno">
 						<div class="informacion-alumno">
@@ -154,6 +154,7 @@ Template Name: Alumnos
 					<div class="menu-calificaciones">
 						<div class="inicio-calif">Inicio</div><div class="triangulo-der-1"></div>
 						<div class="calificaciones-calif moveizq">Calificaciones</div><div class="triangulo-der"></div>
+						<div class="calificaciones-calif moveizq">Audios</div><div class="triangulo-der"></div>
 					</div>
 
 					<div class="calificaciones-tabla">

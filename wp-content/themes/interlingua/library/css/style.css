@@ -3885,6 +3885,7 @@ label.error {
     float: left;
     margin: 0px 0 0 10px;
 }
+
 .inicio-alumnos,
 .calificaciones-alumnos,
 .magazine-alumnos {
@@ -3910,7 +3911,7 @@ label.error {
 .calificaciones-alumnos:hover{
     color: #656565;
 }
-.historial-calificaciones{
+.historial-calificaciones{  
  display:none;
 }
 .datos-escuela-alumno {
