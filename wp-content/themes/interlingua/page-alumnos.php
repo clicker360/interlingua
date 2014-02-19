@@ -18,6 +18,11 @@ Template Name: Alumnos
             jQuery("#info-alumnos").hide();
             jQuery(".historial-calificaciones").fadeIn("slow");
           });
+          jQuery(".calificaciones-alumnos").on("click",function(e){
+            e.preventDefault();
+            jQuery("#info-alumnos").hide();
+            jQuery(".historial-calificaciones").fadeIn("slow");
+          });
           jQuery(".inicio-calif").on("click",function(e){
             e.preventDefault();
             jQuery(".historial-calificaciones").hide();
@@ -94,7 +99,7 @@ Template Name: Alumnos
 					<div class="menu-alumnos">
 						<div class="inicio-alumnos">Inicio</div>
 						<div class="calificaciones-alumnos">Calificaciones</div>
-						<div class="gbg calificaciones-calif moveizq">Audios</div><div class="triangulo-der-1"></div>
+						<div class="audios gbg calificaciones-calif moveizq">Audios</div><div class="triangulo-der-1"></div>
 					</div>
 						<div class="datos-escuela-alumno">
 						<div class="informacion-alumno">
@@ -154,13 +159,26 @@ Template Name: Alumnos
 					<div class="menu-calificaciones">
 						<div class="inicio-calif">Inicio</div><div class="triangulo-der-1"></div>
 						<div class="calificaciones-calif moveizq">Calificaciones</div><div class="triangulo-der"></div>
-						<div class="gbg calificaciones-calif moveizq">Audios</div><div class="triangulo-der-1"></div>
+						<div class="audios gbg calificaciones-calif moveizq">Audios</div><div class="triangulo-der-1"></div>
 					</div>
 
 					<div class="calificaciones-tabla">
             <div id="tableAS400"></div>
 					</div>
 				</div>
+			
+			<!-- audios -->
+			<div class="content-audios">
+				<div class="menu-calificaciones">
+					<div class="inicio-calif">Inicio</div><div class="triangulo-der-1"></div>
+					<div class="calificaciones-alumnos">Calificaciones</div>
+					<div class="audios calificaciones-calif moveizq">Audios</div><div class="triangulo-der"></div>
+				</div>
+
+				<div class="audios-tabla">
+            		audios
+				</div>
+			</div>
 
 					<?php the_content(); ?>
 								</section> <!-- end article section -->
