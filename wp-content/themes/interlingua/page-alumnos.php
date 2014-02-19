@@ -227,8 +227,9 @@ Template Name: Alumnos
 						// $ruta = "/var/www/InterlinguaAudios/";
 					 //   	leer_archivos_y_directorios($ruta);
 					?>
-
-					<?php the_content(); ?>
+					<div style="float:left; width:40%;">
+						<?php the_content(); ?>
+					</div>
 
             		<table style="width:100%;border:solid 2px #33B0BE;">
             			<thead>
