@@ -13,10 +13,11 @@ Template Name: Alumnos
 			<script type="text/javascript" charset="utf-8">
 				jQuery(document).on("ready",index);
 				function index(){
-          jQuery(".calificaciones-alumnos").on("click",function(e){
+          jQuery(".audios").on("click",function(e){
             e.preventDefault();
             jQuery("#info-alumnos").hide();
-            jQuery(".historial-calificaciones").fadeIn("slow");
+            jQuery(".historial-calificaciones").hide();
+            jQuery(".content-audios").fadeIn("slow");
           });
           jQuery(".calificaciones-alumnos").on("click",function(e){
             e.preventDefault();
