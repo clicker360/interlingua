@@ -7998,7 +7998,7 @@ input[type=radio]{
   cursor: pointer;
 }
 .content-audios{
-  display: none !important;
+  display: none;
 }
 .triangulo-der-1{
   position:relative;
