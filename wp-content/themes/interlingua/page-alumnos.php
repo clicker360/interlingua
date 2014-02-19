@@ -179,7 +179,22 @@ Template Name: Alumnos
 				</div>
 
 				<div class="audios-tabla">
-            		audios
+            		<table>
+            			<thead>
+            				<th>Audio</th>
+            				<th>Descargar</th>
+            			</thead>
+            			<tbody>
+            				<tr>
+            					<td>sss</td>
+            					<td>sss</td>	
+            				</tr>
+            				<tr>
+            					<td>sss</td>
+            					<td>sss</td>	
+            				</tr>      
+            			</tbody>
+            		</table>
 				</div>
 			</div>
 
