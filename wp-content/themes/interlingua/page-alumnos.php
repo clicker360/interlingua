@@ -187,6 +187,7 @@ Template Name: Alumnos
             			<tbody>
             				<tr>
             					<td>
+            						<br>
             						<audio controls>									 
 									  	<source src="horse.mp3" type="audio/mpeg">
 										Your browser does not support the audio element.
@@ -198,6 +199,7 @@ Template Name: Alumnos
             				</tr>
             				<tr>
             					<td>
+            						<br>
             						<audio controls>									 
 									  	<source src="horse.mp3" type="audio/mpeg">
 										Your browser does not support the audio element.
