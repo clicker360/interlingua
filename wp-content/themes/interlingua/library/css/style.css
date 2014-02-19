@@ -4041,6 +4041,11 @@ label.error {
   float: left;
   margin: 0px 0 0 10px;
 }
+.menu-audios {
+  width: 100%;
+  float: left;
+  margin: 0px 0 0 10px;
+}
 .inicio-calif,
 .calificaciones-calif{
   float: left;
@@ -4062,6 +4067,11 @@ label.error {
   color: #656565;
 }
 .calificaciones-tabla {
+  width: 100%;
+  float: left;
+  margin: 25px 0 0 10px;
+}
+.audios-tabla {
   width: 100%;
   float: left;
   margin: 25px 0 0 10px;
