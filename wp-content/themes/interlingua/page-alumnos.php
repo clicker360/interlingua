@@ -193,7 +193,7 @@ Template Name: Alumnos
             				</tr>
             				<tr>
             					<td>sss</td>
-            					<td>
+            					<td align="center">
             						<a href="#">Descargar</a>
             					</td>	
             				</tr>      
