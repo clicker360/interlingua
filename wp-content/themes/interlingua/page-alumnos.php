@@ -181,17 +181,21 @@ Template Name: Alumnos
 				<div class="audios-tabla">
             		<table style="width:100%;border:solid 2px #33B0BE;">
             			<thead>
-            				<th>Audio</th>
-            				<th>Descargar</th>
+            				<th width="80%">Audio</th>
+            				<th width="20%">Descargar</th>
             			</thead>
             			<tbody>
-            				<tr style="border:solid 2px #33B0BE;">
-            					<td>sss</td>
-            					<td>sss</td>	
-            				</tr style="border:solid 2px #33B0BE;">
             				<tr>
             					<td>sss</td>
-            					<td>sss</td>	
+            					<td>
+            						<a href="#">Descargar</a>
+            					</td>	
+            				</tr>
+            				<tr>
+            					<td>sss</td>
+            					<td>
+            						<a href="#">Descargar</a>
+            					</td>	
             				</tr>      
             			</tbody>
             		</table>
