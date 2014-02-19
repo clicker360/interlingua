@@ -161,7 +161,7 @@ Template Name: Alumnos
 
 					<div class="menu-calificaciones">
 						<div class="inicio-calif">Inicio</div><div class="triangulo-der-1"></div>
-						<div class="calificaciones-calif moveizq">Calificaciones</div><div class="triangulo-der-1"></div>
+						<div class="calificaciones-calif moveizq">Calificaciones</div><div class="triangulo-der"></div>
 						<div class="audios gbg calificaciones-calif moveizq">Audios</div><div class="triangulo-der-1"></div>
 					</div>
 
@@ -174,7 +174,7 @@ Template Name: Alumnos
 			<div class="content-audios">
 				<div class="menu-audios">
 					<div class="inicio-calif">Inicio</div>
-					<div class="calificaciones-alumnos">Calificaciones</div>
+					<div class="calificaciones-alumnos">Calificaciones</div><div class="triangulo-der-1"></div>
 					<div class="audios calificaciones-calif moveizq">Audios</div><div class="triangulo-der"></div>
 				</div>
 
