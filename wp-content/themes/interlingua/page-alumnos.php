@@ -188,7 +188,7 @@ Template Name: Alumnos
 						//         echo $archivo . "<br />";
 						//     }
 						// }
-  						$directorio = "/var/www/InterlinguaAudios/";
+  						$ruta = "/var/www/InterlinguaAudios/";
 					    if (is_dir($ruta))
 					    {
 					        // Abrimos el directorio y comprobamos que
