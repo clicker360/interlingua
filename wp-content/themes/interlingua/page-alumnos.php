@@ -186,13 +186,23 @@ Template Name: Alumnos
             			</thead>
             			<tbody>
             				<tr>
-            					<td>sss</td>
+            					<td>
+            						<audio controls>									 
+									  	<source src="horse.mp3" type="audio/mpeg">
+										Your browser does not support the audio element.
+									</audio>             			
+            					</td>
             					<td align="center">
             						<a href="#">Descargar</a>
             					</td>	
             				</tr>
             				<tr>
-            					<td>sss</td>
+            					<td>
+            						<audio controls>									 
+									  	<source src="horse.mp3" type="audio/mpeg">
+										Your browser does not support the audio element.
+									</audio>
+            					</td>
             					<td align="center">
             						<a href="#">Descargar</a>
             					</td>	
