@@ -180,15 +180,15 @@ Template Name: Alumnos
 
 				<div class="audios-tabla">
             		<table style="width:100%;border:solid 2px #33B0BE;">
-            			<thead style="width:100%;border:solid 2px #33B0BE;">
+            			<thead>
             				<th>Audio</th>
             				<th>Descargar</th>
             			</thead>
-            			<tbody style="width:100%;border:solid 2px #33B0BE;">
-            				<tr>
+            			<tbody>
+            				<tr style="border:solid 2px #33B0BE;">
             					<td>sss</td>
             					<td>sss</td>	
-            				</tr>
+            				</tr style="border:solid 2px #33B0BE;">
             				<tr>
             					<td>sss</td>
             					<td>sss</td>	
