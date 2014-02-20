@@ -218,6 +218,7 @@
                             <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro">
                             <!--<form id="form1" method="post" action="../crm/registro">-->
                                 <input type="hidden" name="origin_id" value="3" />
+                                <input type="hidden" name="gclid" id="gclid" value="<?php echo $_GET['gclid']?>">
 
                                 <div id="nombre1">
                                     <input type="text" id="txtNombre" name="name"  placeholder="Nombre Completo"/>
