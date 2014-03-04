@@ -98,7 +98,9 @@ class ProspectsController extends AppController{
         Configure::write('debug',0);
         $email = $_GET['email'];
         $this->autoRender = false;
-        $prospect = $this->Prospect->find('count',array('conditions'=>array('Prospect.email'=>$email,'DATE_SUB(Prospect.created, INTERVAL -30 SECOND) > NOW()')));
+        //$prospect = $this->Prospect->find('count',array('conditions'=>array('Prospect.email'=>$email,'DATE_SUB(Prospect.created, INTERVAL -30 SECOND) > NOW()')));
+        $prospect = $this->Prospect->find('count',array('conditions'=>array('Prospect.email'=>$email)));
+        echo $prospect;
         if(!$prospect)
             echo 'true';
     }
