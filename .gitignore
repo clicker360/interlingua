@@ -2,3 +2,4 @@
 .htaccess
 wp-config.php
 database.php
+/nbproject/private/
