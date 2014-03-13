@@ -123,23 +123,23 @@ function login() {
     }
 
     //datos recuperados
-    $usuario = trim($_POST['usuario']);
-    $password = trim($_POST['pass']);
+    $usuario = strtoupper(trim($_POST['usuario']));
+    $password = strtoupper(trim($_POST['pass']));
 
     //Verifica Login AS-400
     try {
         $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP", "CLICKER", "CLICKER");
 
-        $sql = "CALL SCAPAL.TALUM_PASSWORD('" . $usuario . "', ?)";
+        $sql = "CALL SCAPAL.TALUM_PASSWORD('" . $usuario . "','" . $password . "', ?)";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(1, $return_value, PDO::PARAM_STR, 200);
         $stmt->execute();
 
         //verifica datos
-        if (trim($return_value) != "" && $password == trim($return_value)) {
+        //if (trim($return_value) != "" && $password == trim($return_value)) {
+        if (trim($return_value) == "S") {
             $_SESSION['id_alumno'] = md5($usuario);
-            $_SESSION['alumno'] = $usuario;
-            //$respuesta["url"] = "http://interlingua.com.mx/acceso-a-alumnos/";
+            $_SESSION['alumno'] = $usuario;            
             $respuesta["url"] = "http://www.interlingua.com.mx/acceso-a-alumnos/";
             $respuesta["error"] = False;
         } else {
@@ -157,7 +157,7 @@ function login() {
     try {
         $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP", "CLICKER", "CLICKER");
 
-        $sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('" . $usuario . "',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('" . $usuario . "',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(1, $paterno, PDO::PARAM_STR, 200);
         $stmt->bindParam(2, $materno, PDO::PARAM_STR, 200);
@@ -179,6 +179,7 @@ function login() {
         $stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 200);
         $stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 200);
         $stmt->bindParam(20, $horario, PDO::PARAM_STR, 200);
+        $stmt->bindParam(21, $registrado, PDO::PARAM_STR, 200);
 
         $stmt->execute();
 
@@ -207,7 +208,7 @@ function getAlumno() {
     try {
         $db = new PDO("odbc:DRIVER={iSeries Access ODBC Driver};SYSTEM=215.1.1.10;PROTOCOL=TCPIP", "CLICKER", "CLICKER");
 
-        $sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('" . $matricula . "',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "CALL SCAPAL.TALUM_ACCESOALUMNOS('" . $matricula . "',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(1, $paterno, PDO::PARAM_STR, 200);
         $stmt->bindParam(2, $materno, PDO::PARAM_STR, 200);
@@ -229,26 +230,38 @@ function getAlumno() {
         $stmt->bindParam(18, $nombrePlantel, PDO::PARAM_STR, 200);
         $stmt->bindParam(19, $nombreCurso, PDO::PARAM_STR, 200);
         $stmt->bindParam(20, $horario, PDO::PARAM_STR, 200);
+        $stmt->bindParam(21, $registrado, PDO::PARAM_STR, 200);
 
         $stmt->execute();
-
-        $alumno['nombre'] = trim($nombre) . " " . trim($paterno) . " " . trim($materno);
-        $alumno['matricula'] = trim($matricula);
-        $alumno['plantel'] = trim($nombrePlantel);
-        $alumno['curso'] = trim($nombreCurso);
-        $alumno['horario'] = trim($horario);
-        $alumno['nivel'] = trim($ultimoNivel);
-        $alumno['email'] = trim($email);
-        $alumno['sexo'] = trim($sexo);
-        $alumno['edad'] = trim($edad);
-        $alumno['fecha_nacimiento'] = trim($fechanacimiento);
-        $alumno['telefono_1'] = trim($telefono1);
-        $alumno['telefono_2'] = trim($telefono2);
-        $alumno['calle_num'] = trim($calle);
-        $alumno['colonia'] = trim($colonia);
-        $alumno['poblacion'] = trim($poblacion);
-        $alumno['cp'] = trim($cp);
-        $alumno['error'] = FALSE;
+        
+        if($registrado == 'Magazine'){
+            $alumno['nombre'] = trim($nombre) . " " . trim($paterno) . " " . trim($materno);
+            $alumno['matricula'] = trim($matricula);
+            $alumno['nombrePlantel'] = trim($nombrePlantel);
+            $alumno['plantel'] = trim($registrado);                        
+            $alumno['email'] = trim($email);                       
+            $alumno['telefono_1'] = trim($telefono1);            
+            $alumno['error'] = FALSE;
+        }else{
+            $alumno['nombre'] = trim($nombre) . " " . trim($paterno) . " " . trim($materno);
+            $alumno['matricula'] = trim($matricula);
+            $alumno['nombrePlantel'] = trim($nombrePlantel);
+            $alumno['plantel'] = trim($registrado);
+            $alumno['curso'] = trim($nombreCurso);
+            $alumno['horario'] = trim($horario);
+            $alumno['nivel'] = trim($ultimoNivel);
+            $alumno['email'] = trim($email);
+            $alumno['sexo'] = trim($sexo);
+            $alumno['edad'] = trim($edad);
+            $alumno['fecha_nacimiento'] = trim($fechanacimiento);
+            $alumno['telefono_1'] = trim($telefono1);
+            $alumno['telefono_2'] = trim($telefono2);
+            $alumno['calle_num'] = trim($calle);
+            $alumno['colonia'] = trim($colonia);
+            $alumno['poblacion'] = trim($poblacion);
+            $alumno['cp'] = trim($cp);
+            $alumno['error'] = FALSE;
+        }                
 
         $bdh = null;
     } catch (PDOException $e) {

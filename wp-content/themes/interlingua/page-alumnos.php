@@ -45,6 +45,7 @@ Template Name: Alumnos
                 if(data.nombre!=null && data.nombre!=""){jQuery("#nombre-alumno").html(data.nombre)}else{jQuery(".nombre-alumno").hide();jQuery("#nombre-alumno").hide()}
                 if(data.matricula!=null && data.matricula!=""){jQuery("#matricula-alumno").html(data.matricula)}else{jQuery(".matricula-alumno").hide();jQuery("#matricula-alumno").hide();}
                 if(data.plantel!=null && data.plantel!=""){jQuery("#ciudad-alumno").html(data.plantel)}else{jQuery(".ciudad-alumno").hide();jQuery("#ciudad-alumno").hide();}
+                if(data.nombrePlantel!=null && data.nombrePlantel!=""){jQuery("#nombre-plantel").html(data.nombrePlantel)}else{jQuery(".nombre-plantel").hide();jQuery("#nombre-plantel").hide();}
                 if(data.curso!=null && data.curso!=""){jQuery("#curso-alumno").html(data.curso)}else{jQuery(".curso-alumno").hide();jQuery("#curso-alumno").hide();}
                 if(data.horario!=null && data.horario!=""){jQuery("#hora-alumno").html(data.horario)}else{jQuery(".hora-alumno").hide();jQuery("#hora-alumno").hide();}
                 if(data.nivel!=null && data.nivel!=""){jQuery("#nivel-alumno").html(data.nivel)}else{jQuery(".nivel-alumno").hide();jQuery("#nivel-alumno").hide();}
@@ -57,7 +58,7 @@ Template Name: Alumnos
                 if(data.calle_num!=null && data.calle_num!=""){jQuery("#campo-calle-numero-alumno").html(data.calle_num)}else{jQuery(".calle-numero-alumno").hide();jQuery("#campo-calle-numero-alumno").hide();}
                 if(data.colonia!=null && data.colonia!=""){jQuery("#campo-colonia-alumno").html(data.colonia)}else{jQuery(".colonia-alumno").hide();jQuery("#campo-colonia-alumno").hide();}
                 if(data.poblacion!=null && data.poblacion!=""){jQuery("#campo-poblacion-alumno").html(data.poblacion)}else{jQuery(".poblacion-alumno").hide();jQuery("#campo-poblacion-alumno").hide();}
-                if(data.cp!=null && data.cp!=""){jQuery("#campo-cp-alumno").html(data.cp)}else{jQuery(".cp-alumno").hide();jQuery("#campo-cp-alumno").hide();}
+                if(data.cp!=null && data.cp!=""){jQuery("#campo-cp-alumno").html(data.cp)}else{jQuery(".cp-alumno").hide();jQuery("#campo-cp-alumno").hide();}                
               }
           });
           jQuery.ajax({
@@ -109,14 +110,16 @@ Template Name: Alumnos
 							<div class="nombre-alumno">Nombre</div>
 							<div class="matricula-alumno">Matrícula</div>
 							<div class="ciudad-alumno">Plantel</div>
+                                                        <div class="nombre-plantel">Nombre de Plantel</div>
 							<div class="curso-alumno">Curso</div>
 							<div class="hora-alumno">Horario</div>
 							<div class="nivel-alumno">Nivel</div>
 						</div>
 						<div class="informacion-alumno">
 							<div id="nombre-alumno" class="nombre-alumno"></div>
-              <div id="matricula-alumno" class="matricula-alumno"></div>
+                                                        <div id="matricula-alumno" class="matricula-alumno"></div>
 							<div id="ciudad-alumno" class="ciudad-alumno"></div>
+                                                        <div id="nombre-plantel" class="nombre-plantel"></div>
 							<div id="curso-alumno" class="curso-alumno"></div>
 							<div id="hora-alumno" class="hora-alumno"></div>
 							<div id="nivel-alumno" class="nivel-alumno"></div>
