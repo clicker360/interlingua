@@ -7823,7 +7823,7 @@ input[type=radio]{
 }
 
 @media (min-width: 1010px) and (max-width: 1024px) { 
- #login_alumnos {
+#login_alumnos {
     right: 0;
     margin-top: 61px;
 }
@@ -7831,6 +7831,9 @@ input[type=radio]{
     right: 0 !important;
     margin-top: 89px !important;
 } 
+.wpmega-nonlink {
+    padding: 12px 0 !important;
+}
 }
 @media (min-width: 769px) and (max-width: 1009px) { 
   #login_alumnos {
