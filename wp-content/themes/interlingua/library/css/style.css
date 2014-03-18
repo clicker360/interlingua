@@ -7823,12 +7823,12 @@ input[type=radio]{
 }
 @media (min-width: 769px) and (max-width: 1024px) { 
   #login_alumnos {
-    margin-left:730px;
-    margin-top: 60px;
+    right: 0;
+    margin-top: 122px;
 }
 #toogleLogin{
-    margin-left: 730px !important;
-    margin-top: 88px !important;
+    right: 0 !important;
+    margin-top: 150px !important;
 } 
 #megaMenu > ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform.ubersearch-v2 input[type="text"] {
     width: 125px !important;
