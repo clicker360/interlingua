@@ -17,7 +17,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 	</script>
 	<style>
 		#container{display:none;}
-		body{background:url('http://www.interlingua.com.mx/wp-content/uploads/2014/03/navegadores.jpg');background-position:center;background-repeat:no-repeat;}		
+		body{background:url('http://www.interlingua.com.mx/wp-content/uploads/2014/03/navegadores.jpg');background-position:center center;background-repeat:no-repeat;}		
 	</style>
 <![endif]-->
 
