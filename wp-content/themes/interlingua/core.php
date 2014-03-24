@@ -235,6 +235,7 @@ function getAlumno() {
         $stmt->execute();
         
         if($registrado == 'Magazine'){
+            echo $nombre;
             $alumno['nombre'] = trim($nombre) . " " . trim($paterno) . " " . trim($materno);
             $alumno['matricula'] = trim($matricula);
             $alumno['nombrePlantel'] = trim($nombrePlantel);
