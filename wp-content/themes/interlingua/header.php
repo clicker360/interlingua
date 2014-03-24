@@ -11,6 +11,14 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if lte IE 8]>
+	<script>
+		document.getElementsByTagName("body").innerHTML("");
+	</script>
+	<style>
+		body{background:url('http://www.interlingua.com.mx/wp-content/uploads/2014/03/navegadores.jpg');background-position:center;}
+	</style>
+<![endif]-->
 
 <head>
 	<meta charset="utf-8">
