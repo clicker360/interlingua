@@ -5687,6 +5687,13 @@ input[type=radio]{
   #megaMenu{
     position: fixed !important;
     top:0 !important;
+    margin-left: -6px !important;
+  }
+  #login_alumnos {
+    top: 0px !important;
+  }
+  #toogleLogin{
+    top: 0px !important; 
   }
 }
 
