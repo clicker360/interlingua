@@ -74,7 +74,7 @@ switch ($nivel) {
 												</div>
 											</div>
 											<div class="contenedor-curso-formulario fivecol last">
-												<section class="entry-content  wrap clearfix" itemprop="articleBody">
+												<section class="entry-content  wrap clearfix" itemprop="articleBody" style="padding:20px;">
 													<?php the_content(); ?>
 												</section>
 											</div>
@@ -83,10 +83,7 @@ switch ($nivel) {
 									<div class="sombra-slider-curso wrap"><img src="<?php bloginfo('template_directory'); ?>/library/images/sombra.png" title="" alt="" /></div>									
 								<!-- Termina Contenedor de Curso -->
 								
-										
-								<section class="entry-content  wrap clearfix" itemprop="articleBody">
-									<?php the_content(); ?>
-								</section> <!-- end article section -->
+								 <!-- end article section -->
 
 								<footer class="article-footer">
 									<p class="clearfix"><?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>

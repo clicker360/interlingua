@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8156648-1']);
+      _gaq.push(['_setDomainName', 'interlingua.com.mx']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+
+
+  <title>Interlingua - Inglés para la vida</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    
+</head>
+<body>
+
+<script>
+
+
+$(document).ready(function(){
+$("#form1").validate({
+           rules:{
+               name:{
+                   required: true,
+                   lettersonly:true,
+
+               },
+               email:{
+                   required: true,
+                   email: true
+               },
+               lada:{
+                   required: true,
+                   number: true,
+                   minlength: 2,
+                   maxlength: 3,
+               },
+               phone_number:{
+                   required: true,
+                   number: true,
+                   minlength: 7,
+                   maxlength: 8,
+               },
+               mobile_number: {
+                   required: true,
+                   number: true,
+                   minlength: 10,
+                   maxlength: 10
+               },
+               estado:{
+                   required: true
+               },
+               plantel: {
+                   required: true
+               },
+               termino:{
+                   required: true
+               }
+           },
+           messages:{
+               name:{
+                  required: '*Ingresa tu nombre',
+                  lettersonly:'*Solo letras para el nombre'
+               },
+               email:{
+                   required: '*Ingresa tu correo electr&oacute;nico',
+                   email: '*Ingresa un correo electr&oacute;nico correcto',
+               },
+               lada:{
+                   required: '*Valida LADA',
+                   number: '*Solo n&uacute;meros',
+                   minlength: '*Solo 2 o 3 n&uacute;meros',
+                   maxlength: '*Solo 3 o 3 n&uacute;meros',
+               },
+               phone_number:{
+                   required: '*Valida n&uacute;mero telef&oacute;nico',
+                   number: '*Solo n&uacute;meros para el tel&eacute;fono',
+                   minlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
+                   maxlength: '*El tel&eacute; tiene que ser de 10 n&uacute;meros',
+               },
+               mobile_number:{
+                   required: '*Valida n&uacute;mero de celular',
+                   number: '*Solo n&uacute;meros para el tel&eacute;fono',
+                   minlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
+                   maxlength: '*El tel&eacute; tiene que ser de 10 n&uacute;meros',
+               },
+               estado:{
+                   required: '*Debes seleccionar un estado'
+               },
+               plantel:{
+                   required: '*Debes seleccionar un plantel'
+               },
+               termino:{
+                   required: '*Debes aceptar términos y condiciones'
+               }
+           }
+         });
+                $.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
+                    estados = JSON.parse(estados);      
+                    $("#cmbEstados").html('<option value="">Elige tu estado</option>');
+                    $.each(estados,function(index,value){
+                        $("#cmbEstados").append('<option value="'+value+'">'+value+'</option>');
+                    });                        
+                });
+                $("#cmbEstados").change(function(){
+                    $.get("http://www.interlingua.com.mx/crm/prospects/getPlanteles/"+$(this).val(),function(planteles){
+                        planteles = JSON.parse(planteles);      
+                        $("#cmbSucursales").html('<option value="">Elige tu plantel</option>');
+                        $.each(planteles,function(index,value){
+                            $("#cmbSucursales").append('<option value="'+value+'">'+value+'</option>');
+                        });                        
+                    });
+                });
+});
+</script>
+
+  <div id="pt1"></div>
+
+  <div id="pagewrap">
+
+  <div id="formulario">
+
+ 
+      <div class="aside2" id="sidebar">  
+        <!--<div id="p3">No dejes pasar la oportunidad</div>-->
+          <div id="p4">¡Regístrate y solicita <strong>tu cupón!</strong></div>
+        <div id="formulariodiv"> 
+
+
+
+<form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro">
+<input type="hidden" name="origin_id" value="7" />
+
+<div id="nombre1">
+<input type="text" id="txtNombre" name="name"  placeholder="Nombre Completo"/>
+</div>
+
+<div id="correo1">
+<input type="text" id="txtCorreo" name="email" placeholder="Correo Electrónico"/>
+</div>
+
+<div id="lada1">
+<input type="text" id="txtLada" name="lada" maxlength="3" placeholder="LADA" />
+</div>
+
+<div id="telefono1">
+<input type="text" id="txtTelefono" name="phone_number" maxlength="8" placeholder="Teléfono" />
+</div>
+
+<div id="celular1">
+    <input type="text" id="txtCelular" name="mobile_number" maxlength="10" placeholder="Celular">
+</div>
+
+<div id="estado1">
+<select id="cmbEstados" name="estado" >
+    <!--<option value="" selected="selected">Elige tu estado</option>
+    <option value="Aguascalientes">Aguascalientes</option>
+    <option value="Baja California">Baja California</option>
+    <option value="Baja California Sur">Baja California Sur</option>
+    <option value="Campeche">Campeche</option>
+    <option value="Coahuila">Coahuila</option>
+    <option value="Colima">Colima</option>
+    <option value="Chiapas">Chiapas</option>
+    <option value="Chihuahua">Chihuahua</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="Durango">Durango</option>
+    <option value="Guanajuato">Guanajuato</option>
+    <option value="Guerrero">Guerrero</option>
+    <option value="Hidalgo">Hidalgo</option>
+    <option value="Jalisco">Jalisco</option>
+    <option value="México">México</option>
+    <option value="Michoacán">Michoacán</option>
+    <option value="Morelos">Morelos</option>
+    <option value="Nayarit">Nayarit</option>
+    <option value="Nuevo León">Nuevo León</option>
+    <option value="Oaxaca">Oaxaca</option>
+    <option value="Puebla">Puebla</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="Quintana Roo">Quintana Roo</option>
+    <option value="San Luis Potosí">San Luis Potosí</option>
+    <option value="Sinaloa">Sinaloa</option>
+    <option value="Sonora">Sonora</option>
+    <option value="Tabasco">Tabasco</option>
+    <option value="Tamaulipas">Tamaulipas</option>
+    <option value="Tlaxcala">Tlaxcala</option>
+    <option value="Veracruz">Veracruz</option>
+    <option value="Yucatán">Yucatán</option>
+    <option value="Zacatecas">Zacatecas</option>-->
+</select>
+</div>
+
+
+
+<div id="sucursal1">
+  <select id="cmbSucursales" name="plantel">
+    <option value="" selected="selected">Elige tu plantel</option>
+  </select>
+</div>
+
+<input type="submit" id="btnEnviar" value="¡Enviar mi cupón!" style="cursor:pointer" />
+
+<div id="politicas1">
+<!--<div id="acepto1"><a href="politicas.html" target="_blank">Acepto las políticas de privacidad</a></div>-->
+<input type="checkbox" id="chkPoliticas" name="termino" checked ></input>
+ <div id="acepto1">
+  <a href="politicas.html" target="_blank">Acepto las políticas de privacidad</a>
+ </div>
+</div>

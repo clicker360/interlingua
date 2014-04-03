@@ -47,7 +47,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 
 					<!-- end analytics -->
 
-					<script type="text/javascript">
+			<script type="text/javascript">
 					jQuery(document).ready(function() {
 			  //scrollTop for login
 			  var menu = jQuery('#login_alumnos');

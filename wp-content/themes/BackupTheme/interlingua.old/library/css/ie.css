@@ -2121,7 +2121,7 @@ mobile. Make sure to double check these!
 .formulario-registro-cursos {
   width: 90%;
 }
-.formulario-registro-cursos input,
+.formulario-registro-cursos input [type=text],
 .formulario-registro-cursos select {
   font-family: 'Conv_MyriadPro-Regular';
   font-size: 0.875em;
@@ -2449,7 +2449,9 @@ mobile. Make sure to double check these!
 #txtLadaAlumnos,
 #txtTelefonoAlumnos,
 #cmbEstadosAlumnos,
+#cmbEstadosAlumnos select > option,
 #txtCelularAlumnos,
+#cmbSucursalesAlumnos select > option,
 #cmbSucursalesAlumnos {
   font-family: 'Conv_MyriadPro-Regular';
   font-size: 0.875em;
@@ -2696,7 +2698,7 @@ label.error {
 .formulario-registro-cursos {
   width: 80%;
 }
-.formulario-registro-cursos input,
+.formulario-registro-cursos input [type=text],
 .formulario-registro-cursos select,
 #contacto-mensaje {
   font-family: 'Conv_MyriadPro-Regular';
@@ -2986,6 +2988,325 @@ label.error {
   text-decoration: none;
   color: #fff;
 }
+
+/* Formulario Pagina Test
+    ------------------------------------------ */
+#formulario-test {
+  height: auto;
+}
+#txtNombreTest,
+#txtCorreoTest,
+#txtEmpresaTest,
+#txtPuestoTest,
+#txtLadaTest,
+#txtTelefonoTest,
+#estado,
+#txtCelularTest,
+#plantel,
+#txtComentarioTest {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 48%;
+  float: left;
+  margin-top: 0px;
+}
+#frmReg {
+    margin-top: 0px;
+    margin-right: 0px;
+    width: 104%;
+  }
+#nombre1Test {
+  position: relative;
+}
+#nombre1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  font-size: 12px;
+}
+#correo1Test {
+  position: relative;
+}
+#correo1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 350px;
+  color: #fff;
+  position: absolute;
+  left: 302px;
+  top: 40px;
+  font-size: 12px;
+}
+#lada1Test {
+  position: relative;
+}
+#lada1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 63px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 110px;
+  font-size: 12px;
+}
+#telefono1Test {
+  position: relative;
+}
+#telefono1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100px;
+  color: #fff;
+  position: absolute;
+  left: 122px;
+  top: 110px;
+  font-size: 12px;
+}
+#celular1Test {
+  position: relative;
+}
+#celular1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 100px;
+  color: #fff;
+  position: absolute;
+  left: 302px;
+  top: 110px;
+  font-size: 12px;
+}
+#estado1Test {
+  position: relative;
+  width: 100%;
+}
+#estado1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 195px;
+  font-size: 12px;
+  z-index: 1000;
+}
+#sucursal1Test {
+  position: relative;
+}
+#sucursal1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 175px;
+  color: #fff;
+  position: absolute;
+  left: 302px;
+  top: 195px;
+  font-size: 12px;
+  z-index: 1000;
+}
+#politicas1Test {
+  position: relative;
+}
+#politicas1Test label.error {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  text-align: center;
+  max-width: 201px;
+  color: #fff;
+  position: absolute;
+  left: 7px;
+  top: 325px;
+  font-size: 12px;
+}
+#txtCorreoTest {
+  margin-left: 4%;
+  margin-top: 0px;
+}
+#txtLadaTest {
+  width: 17%;
+  margin-top: 30px;
+}
+#txtTelefonoTest {
+  width: 27%;
+  margin-left: 4%;
+  margin-top: 30px;
+}
+#txtCelularTest {
+  margin-left: 4%;
+  margin-top: 30px;
+}
+#plantel {
+  margin-left: 4%;
+}
+#sendtest {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 13px;
+  float: right;
+}
+#estado,
+#plantel {
+  margin-top: 30px;
+}
+#politicas1Test {
+  width: 80%;
+  margin-left: 20%;
+}
+#chkPoliticasTest {
+  width: 5%;
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+#acepto1Test {
+  width: 95%;
+  float: left;
+}
+#acepto1Test a {
+  text-decoration: none;
+  color: #fff;
+}
+label.error {
+  z-index: 10000;
+}
+#ctn-registro {
+    background-color: #30AEBC;
+    height:350px;
+    margin: -50px 0px 0px 0px;
+    padding: 20px 40px 20px 40px;
+  }
+/** Pginas Contacto **/
+.titulo-contacto {
+  text-align: left;
+}
+/*  Paginas Contacto
+  ------------------------------------------ */
+#contenedor-contacto {
+  /*margin-top: 2em;*/
+
+  background-color: #d1d1d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+  background-image: linear-gradient(to bottom, #f6f6f6, #d1d1d1);
+}
+.contenedor-contacto-informacion {
+  font-family: 'Conv_MyriadPro-Semibold';
+}
+.titulo-contacto {
+  padding-top: 0.5em;
+  font-size: 3em;
+  color: #30aebc;
+  text-align: left;
+}
+.subtitulo-contacto {
+  font-size: 2.5em;
+  color: #30aebc;
+  text-align: left;
+}
+.descripcion-contacto {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 1.25em;
+  color: #989898;
+  margin-top: 0.8em;
+  margin-left: 0.25em;
+  line-height: 1.99em;
+  width: 100%;
+  text-align: left;
+}
+.nota-contacto {
+  font-size: 2.45em;
+  color: #30aebc;
+  margin-top: 0.5em;
+  margin-bottom: 0.45em;
+  margin-left: 0.15em;
+  text-align: left;
+}
+.contenedor-curso-formulario {
+  background: #30aebc;
+}
+.contenedor-curso-formulario {
+  background: #30aebc;
+}
+.titulo-formulario {
+  padding-top: 0.4em;
+  font-size: 1.35em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+.formulario-registro-cursos {
+  width: 80%;
+}
+.formulario-registro-cursos input[type=text],
+.formulario-registro-cursos select,
+#contacto-mensaje {
+  font-family: 'Conv_MyriadPro-Regular';
+  font-size: 0.875em;
+  background: #fff;
+  border: solid 4px #f1f1f1;
+  padding: 12px 12px;
+  color: #989898;
+  /*.border-radius(10px);*/
+
+  width: 100%;
+}
+#curso-boton-enviar {
+  width: 100%;
+}
+#contacto-nombre-completo,
+#contacto-correo-electronico,
+#contacto-lada,
+#contacto-telefono,
+#contacto-mensaje,
+#contacto-boton-enviar {
+  margin-top: 10px;
+}
+#contacto-mensaje {
+  margin-top: 25px;
+  height: 120px;
+}
+#contacto-lada {
+  float: left;
+  width: 30%;
+}
+#contacto-telefono {
+  float: right;
+  width: 65%;
+}
+.sombra-slider-curso img {
+  width: 100%;
+  height: auto;
+}
+#footer-interior2 p {
+  width: 50%;
+  float: left;
+}
+
+.menu {
+  font-family: 'Conv_MyriadPro-Regular';
+}
+
 /******************************************************************
 Site Name: 
 Author: 

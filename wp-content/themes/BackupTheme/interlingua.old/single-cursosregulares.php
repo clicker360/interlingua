@@ -54,7 +54,7 @@ Template Name: Pagina Cursos
 									                        email: {
 									                            required: true,
 									                            email: true,
-									                            remote: "http://crm.interlingua.com.mx/crm/prospects/checkUnique"
+									                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
 									                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
 
 									                        },
@@ -126,7 +126,7 @@ Template Name: Pagina Cursos
 									                        }
 									                    }
 									                });
-									                jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
+									                jQuery.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
 									                    estados = JSON.parse(estados);      
 									                    jQuery("#cmbEstadosCursos").html('<option value="">Elige tu estado</option>');
 									                    jQuery.each(estados,function(index,value){
@@ -134,7 +134,7 @@ Template Name: Pagina Cursos
 									                    });                        
 									                });
 									                jQuery("#cmbEstadosCursos").change(function(){
-									                    jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
+									                    jQuery.get("http://www.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
 									                        planteles = JSON.parse(planteles);      
 									                        jQuery("#cmbSucursalesCursos").html('<option value="">Elige tu plantel</option>');
 									                        jQuery.each(planteles,function(index,value){
@@ -234,7 +234,7 @@ Template Name: Pagina Cursos
 														}
 													?>
 													<div id="formulario-cursos">                           
-							                            <form id="form1" method="post" action="http://crm.interlingua.com.mx/crm/registro">
+							                            <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro">
 							                                <input type="hidden" name="origin_id" value="<?php echo $origen;?>" />
 							                                <div id="nombre1Cursos">
 							                                    <input type="text" id="txtNombreCursos" name="name"  placeholder="Nombre Completo"/>
@@ -268,7 +268,7 @@ Template Name: Pagina Cursos
 							                                <div id="politicas1Cursos">                                    
 							                                    <input type="checkbox" id="chkPoliticasCursos" name="termino" checked />
 							                                    <div id="acepto1Cursos">
-							                                        <a href="http://dev.clicker360.com/interlingua_sitio/?page_id=71" target="_blank">Acepto las políticas de privacidad</a>
+							                                        <a href="http://www.interlingua.com.mx/politicas-de-privacidad/" target="_blank">Acepto las políticas de privacidad</a>
 							                                    </div>
 							                                </div>                                
 							                            </form>

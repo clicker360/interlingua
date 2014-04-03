@@ -49,12 +49,12 @@ Template Name: Contacto Alumnos
 									                    rules: {
 									                        name: {
 									                            required: true,
-									                            lettersonly: true,
+									                            //lettersonly: true,
 									                        },
 									                        email: {
 									                            required: true,
 									                            email: true,
-									                            remote: "http://crm.interlingua.com.mx/crm/prospects/checkUnique"
+									                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
 									                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
 									                        },									                       
 
@@ -129,7 +129,7 @@ Template Name: Contacto Alumnos
 									                        }
 									                    }
 									                });	
-									                jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
+									                jQuery.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
 									                    estados = JSON.parse(estados);      
 									                    jQuery("#cmbEstadosAlumnos").html('<option value="">Elige tu estado</option>');
 									                    jQuery.each(estados,function(index,value){
@@ -137,7 +137,7 @@ Template Name: Contacto Alumnos
 									                    });                        
 									                });
 									                jQuery("#cmbEstadosAlumnos").change(function(){
-									                    jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
+									                    jQuery.get("http://www.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
 									                        planteles = JSON.parse(planteles);      
 									                        jQuery("#cmbSucursalesAlumnos").html('<option value="">Elige tu plantel</option>');
 									                        jQuery.each(planteles,function(index,value){
@@ -208,7 +208,7 @@ Template Name: Contacto Alumnos
 												<div class="formulario-registro-cursos wrap">
 
 													<div id="formulario-alumnos">                           
-							                            <form id="form1" method="post" action="http://crm.interlingua.com.mx/crm/registro">
+							                            <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro">
 							                                <input type="hidden" name="origin_id" value="28" />
 							                                <div id="nombre1Alumnos">
 							                                    <input type="text" id="txtNombreAlumnos" name="name"  placeholder="Nombre Completo"/>
@@ -244,7 +244,7 @@ Template Name: Contacto Alumnos
 							                                <div id="politicas1Alumnos">                                    
 							                                    <input type="checkbox" id="chkPoliticasAlumnos" name="termino" checked />
 							                                    <div id="acepto1Alumnos">
-							                                        <a href="http://dev.clicker360.com/interlingua_sitio/?page_id=71" target="_blank">Acepto las políticas de privacidad</a>
+							                                        <a href="http://www.interlingua.com.mx/politicas-de-privacidad/" target="_blank">Acepto las políticas de privacidad</a>
 							                                    </div>
 							                                </div>                                
 							                            </form>

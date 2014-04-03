@@ -5638,6 +5638,55 @@ input[type=radio]{
 }
 
 
+/** 
+ * [Styles for smartphones]
+ * Update : 03/04/2014
+ */
+@media only screen and (min-width : 320px) and (max-width : 568px) { 
+  .header #inner-header .logo-header h1 a p {
+    text-indent: -999999em;
+    float: left;
+  }
+  .logo-header img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .logos-redes{
+    text-align: center;
+    padding: 0;
+    margin-top: -35px;
+  }
+  .logos-redes li{
+    background: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+  }
+  .telefonos-list li{
+    background: none;
+    text-align: center;
+    padding: 0;
+  }
+  .logos-redes li:first-child{
+    margin-left: -15px;
+  }
+  .ctr{
+    margin: auto;
+    display: block;
+  }
+  .boton-bolsa{
+    margin: auto;
+    display: block;
+  }
+  .menu-fijo {
+    position: fixed !important;
+    top: 0;
+  }
+}
+
+
 
 /*
 TABLET & SMALLER LAPTOPS

@@ -239,7 +239,7 @@ Template Name: Pagina Cursos
 							                                <div id="politicas1Cursos">                                    
 							                                    <input type="checkbox" id="chkPoliticasCursos" name="termino" checked />
 							                                    <div id="acepto1Cursos">
-							                                        <a href="http://dev.clicker360.com/interlingua_sitio/?page_id=71" target="_blank">Acepto las políticas de privacidad</a>
+							                                        <a href="http://www.interlingua.com.mx/politicas-de-privacidad/" target="_blank">Acepto las políticas de privacidad</a>
 							                                    </div>
 							                                </div>                                
 							                            </form>

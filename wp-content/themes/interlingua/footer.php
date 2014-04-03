@@ -79,8 +79,7 @@
 		<?php wp_footer(); ?>
 
 	</div> <!-- Container -->
-
-	 <?php if(is_home()){ ?> 
+	<?php if(is_home()){ ?> 
 	   <script type="text/javascript">
 	    jQuery(document).ready(function(){
 	        jQuery(".menu-item").children('a').click(function(e){
@@ -104,7 +103,7 @@
 		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		</script>
 
-	    <?php } ?>
-</body>
-</html> <!-- end page. what a ride! -->
+	  <?php } ?>
+	</body>
+                </html> <!-- end page. what a ride! -->
 

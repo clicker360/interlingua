@@ -100,8 +100,7 @@
                         email: {
                             required: true,
                             email: true,
-                            remote: "http://interlingua.clicker360.com/prospects/checkUnique"
-                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
+                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"                            
                         },
                         lada: {
                             required: true,

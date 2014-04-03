@@ -54,7 +54,7 @@ Template Name: Pagina Cursos
 									                        email: {
 									                            required: true,
 									                            email: true,
-									                            remote: "http://crm.interlingua.com.mx/crm//prospects/checkUnique"
+									                            remote: "http://www.interlingua.com.mx/crm//prospects/checkUnique"
 									                            //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
 
 									                        },
@@ -126,7 +126,7 @@ Template Name: Pagina Cursos
 									                        }
 									                    }
 									                });
-									                jQuery.get("http://crm.interlingua.com.mx/crm//prospects/getEstados/",function(estados){
+									                jQuery.get("http://www.interlingua.com.mx/crm//prospects/getEstados/",function(estados){
 									                    estados = JSON.parse(estados);      
 									                    jQuery("#cmbEstados").html('<option value="">Elige tu estado</option>');
 									                    jQuery.each(estados,function(index,value){
@@ -134,7 +134,7 @@ Template Name: Pagina Cursos
 									                    });                        
 									                });
 									                jQuery("#cmbEstados").change(function(){
-									                    jQuery.get("http://crm.interlingua.com.mx/crm//prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
+									                    jQuery.get("http://www.interlingua.com.mx/crm//prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
 									                        planteles = JSON.parse(planteles);      
 									                        jQuery("#cmbSucursales").html('<option value="">Elige tu plantel</option>');
 									                        jQuery.each(planteles,function(index,value){
@@ -203,7 +203,7 @@ Template Name: Pagina Cursos
 												<div class="formulario-registro-cursos wrap">
 
 													<div id="formulario-cursos">                           
-							                            <form id="form1" method="post" action="http://crm.interlingua.com.mx/crm//registro">
+							                            <form id="form1" method="post" action="http://www.interlingua.com.mx/crm//registro">
 							                                <input type="hidden" name="origin_id" value="12" />
 							                                <div id="nombre1Cursos">
 							                                    <input type="text" id="txtNombreCursos" name="name"  placeholder="Nombre Completo"/>

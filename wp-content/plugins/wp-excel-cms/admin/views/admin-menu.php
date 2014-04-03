@@ -146,7 +146,7 @@ $j(document).ready(function() {
                     <th style="width: 60px;text-align: center;">Action</th>
                     <th style="width: 60px;text-align: center;">Edit</th>
                     <th>Name</th>
-                    <th>Template-Code</th>
+                    <th>Shortcode</th>
                     <th>File Size</th>       
                      <th>Last Update</th>    
                 </tr>
@@ -156,7 +156,7 @@ $j(document).ready(function() {
                     <th style="text-align: center;">Action</th>
                     <th style="text-align: center;">Edit</th>
                     <th>Name</th>
-                    <th>Template-Code</th>
+                    <th>Shortcode</th>
                     <th>File Size</th>
                     <th>Last Update</th>       
                     
@@ -172,10 +172,10 @@ $j(document).ready(function() {
                  <td style="text-align: center;"><input type="checkbox" name="delete_slugs[]" value="<?php echo $file['slug'];?>" /></td>
                  <td style="text-align: center;"><a href="#" class="edit-entry" data-slug="<?php echo $file['slug'];?>">Edit</a></td>
                  <td class="row-title">
-                    <a href="<?php echo $this->upload_base_url.'/'.$file['filename']; ?>" target="_blank"><?php echo $file['filename']; ?></a>
+                    <a href="<?php echo $this->upload_base_url.'/'.$file['filename']; ?>" target="_blank"><?php echo $file['slug']; ?></a>
                     <div id="uploader-<?php echo $file['slug'];?>"> </div>
                  </td>
-                 <td><code>$data = wp_excel_cms_get("<?php echo $file['slug'];?>");</code></td>
+                 <td><code>[wp_excel_cms name="<?php echo $file['slug'];?>"]</code></td><!--$data = wp_excel_cms_get("<?php echo $file['slug'];?>");-->
                  <td><?php echo $this->formatSizeUnits($file['filesize']); ?></td>
                  <td><?php echo date(get_option('date_format'),$file['upload_time']); ?> | <?php echo date(get_option('time_format'),$file['upload_time']); ?></td>
              </tr>
@@ -211,21 +211,20 @@ $j(document).ready(function() {
 
     <?php endif; ?>
     
-    <h2>Example Usage in the Theme:</h2>
+    <h2>Shortcode:</h2>
+    <div style="background-color: #eaeaea;padding:5px;">
+    <pre>
+        [wp_excel_cms name="guestlist"]
+    </pre>
+    </div>    
+    
+    
+    <h2>Theme Code:</h2>
     <div style="background-color: #eaeaea;padding:5px;">
     <pre>
         $data = wp_excel_cms_get("guestlist");
-        
-        $i=0;
         foreach($guestlist as $guest){
-            if($i=0){
-                //first line
-                print_r($guest);
-            }else{
-                //all follwing lines
-                print_r($guest);               
-            }
-            $i++;   
+          print_r($guest);             
         }
     </pre>
     </div>

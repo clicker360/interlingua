@@ -183,7 +183,8 @@ function login() {
 
         $stmt->execute();
 
-        $_SESSION['nombre'] = trim($nombre) . " " . trim($paterno);
+        $_SESSION['nombre'] = utf8_encode(trim($nombre) . " " . trim($paterno));
+        $_SESSION['nombre_completo'] = utf8_encode(trim($nombre) . " " . trim($materno). " " .trim($paterno));
 
         $bdh = null;
     } catch (PDOException $e) {
@@ -232,11 +233,10 @@ function getAlumno() {
         $stmt->bindParam(20, $horario, PDO::PARAM_STR, 200);
         $stmt->bindParam(21, $registrado, PDO::PARAM_STR, 200);
 
-        $stmt->execute();
-        
-        if($registrado == 'Magazine'){
-            echo $nombre;
-            $alumno['nombre'] = trim($nombre) . " " . trim($paterno) . " " . trim($materno);
+        $stmt->execute();        
+        if(trim($registrado) == 'Magazine'){
+	  //echo $nombre;            	    
+            $alumno['nombre'] = $paterno;
             $alumno['matricula'] = trim($matricula);
             $alumno['nombrePlantel'] = trim($nombrePlantel);
             $alumno['plantel'] = trim($registrado);                        
@@ -359,10 +359,13 @@ function getPass() {
               echo $password."<br>";
               echo $email; */
 
-            $header = "From: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
-            $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-            $header .= "Mime-Version: 1.0 \r\n";
+            $header = "Reply-To: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
+            $header .= "Return-Path: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
+            $header .= "From: INTERLINGUA <contacto@interlingua.com.mx> \r\n";
+            $header .= "Organization: INTERLINGUA \r\n";
             $header .= "Content-type: text/html\r\n";
+            $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+            $header .= "Mime-Version: 1.0 \r\n";            
 
             $mensaje = '
 				<table width="650" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; padding:0; margin:0 auto;">
@@ -415,8 +418,8 @@ function getPass() {
 				</map>';
 
             $para = $email;
-            //$para = "hugo@clicker360.com,eric@clicker360.com,mmucino@interlingua.com.mx";
-            $asunto = 'Recuperación de contraseña';
+            //$para = "vaporic@gmail.com";
+            $asunto = 'INTERLINGUA Recuperar Contraseña';
 
             mail($para, $asunto, utf8_decode($mensaje), $header);
 

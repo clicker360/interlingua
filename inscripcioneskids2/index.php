@@ -1,6 +1,3 @@
-<?php
-    header('Location: http://www.interlingua.com.mx/buenfin');
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

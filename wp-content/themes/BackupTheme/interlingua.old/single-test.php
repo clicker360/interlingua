@@ -54,7 +54,7 @@ Template Name: Test Online
 						</div>
 						
 						<div class="twelvecol clearfix formulario-registro-cursos wrap">  
-							<form action="http://crm.interlingua.com.mx/crm/registro" name="frmReg" id="frmReg" method="post">
+							<form action="http://www.interlingua.com.mx/crm/registro" name="frmReg" id="frmReg" method="post">
                                 <div style="" id="ctn-registro">
                                     <input type="hidden" name="origin_id" value="90" />
                                     <input type="hidden" name="result_examen" id="result_examen" value="" />
@@ -134,7 +134,7 @@ jQuery(document).ready(function() {
             email: {
                 required: true,
                 email: true,
-                remote: "http://crm.interlingua.com.mx/crm/prospects/checkUnique"
+                remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
                 //remote: "http://localhost/interlingua/crm/prospects/checkUnique"
             },
             lada: {
@@ -206,7 +206,7 @@ jQuery(document).ready(function() {
     });
     
     // Combo de estados y planteles
-    jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
+    jQuery.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
         estados = JSON.parse(estados);      
         jQuery("#estado").html('<option value="">Elige tu estado</option>');
         jQuery.each(estados,function(index,value){
@@ -214,7 +214,7 @@ jQuery(document).ready(function() {
         });                        
     });
     jQuery("#estado").change(function(){
-        jQuery.get("http://crm.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
+        jQuery.get("http://www.interlingua.com.mx/crm/prospects/getPlanteles/"+jQuery(this).val(),function(planteles){
             planteles = JSON.parse(planteles);      
             jQuery("#plantel").html('<option value="">Elige tu plantel</option>');
             jQuery.each(planteles,function(index,value){
@@ -226,6 +226,9 @@ jQuery(document).ready(function() {
     // Section Test
     jQuery("#sendtest").on("click",function(e){
     	e.preventDefault();
+        jQuery('html,body').animate({
+     scrollTop: 0
+ }, 700);
 
     	var form = jQuery("#frmReg");
     	
@@ -235,7 +238,7 @@ jQuery(document).ready(function() {
 
     		jQuery.ajax({
 	            type:"post",
-	            url: "http://crm.interlingua.com.mx/crm/prospects/randomQuestion",
+	            url: "http://www.interlingua.com.mx/crm/prospects/randomQuestion",
 	            //data:{action:"send",email:inptMail},
 	            dataType:"json",
                 beforeSend: function() {
@@ -252,6 +255,11 @@ jQuery(document).ready(function() {
     });
 
     jQuery("#sendValidate").live("click",function(e){
+        
+        jQuery('html,body').animate({
+     scrollTop: 0
+ }, 700);
+
         e.preventDefault();
         var nivel = jQuery(this).attr("data-nivel");
         var flag = jQuery("#fla").attr("value");
@@ -266,7 +274,7 @@ jQuery(document).ready(function() {
         var itemVal = result.toString();
         jQuery.ajax({
             type:"post",
-            url: "http://crm.interlingua.com.mx/crm/prospects/validaTest",
+            url: "http://www.interlingua.com.mx/crm/prospects/validaTest",
             data: {items:itemVal,niv:nivel,fla:flag},
             dataType:"json",
             beforeSend: function() {
@@ -276,7 +284,7 @@ jQuery(document).ready(function() {
                 if (data.option == "random"){
                     jQuery.ajax({
                         type:"post",
-                        url: "http://crm.interlingua.com.mx/crm/prospects/randomQuestion",
+                        url: "http://www.interlingua.com.mx/crm/prospects/randomQuestion",
                         data:{nivel:data.nivel,flag:data.flag},
                         dataType:"json",
                         success:function(data){

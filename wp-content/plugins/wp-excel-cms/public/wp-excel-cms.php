@@ -16,6 +16,23 @@ function wp_excel_cms_get($name){
 }
 
 
+// [bartag foo="foo-value"]
+function wp_excel_cms_shortcode( $atts ) {
+	extract( shortcode_atts( array(
+		'name' => '',
+        'template' => 'default',
+	), $atts ) );
+
+    $excel_data     = new WP_Excel_Cms();
+    $data           = $excel_data->get_excel_data($name);
+    
+    $template = $excel_data->getTemplate($template, $data, $name);
+
+	return $template;
+}
+add_shortcode( 'wp_excel_cms', 'wp_excel_cms_shortcode' );
+
+
 
 /**
  * Plugin class. This class should ideally be used to work with the
@@ -94,10 +111,24 @@ class WP_Excel_Cms {
         $this->upload_base_url    = $upload_dir['baseurl'].'/wp-excel-cms';
         $this->upload_dir         = $upload_dir['basedir'].'/wp-excel-cms';
         $this->admin_plugin_url   = admin_url( "options-general.php?page=".$_GET["page"] );
-
-        
+        $this->plugin_dir         = plugin_dir_path( __FILE__ );
+        $this->template_dir       = $this->plugin_dir.'/templates';
 
 	}
+    
+    
+    public function getTemplate($template = 'default',$data = array(), $name = ''){
+         
+         $template_path = $this->template_dir.'/'.$template .'.php';
+        
+         ob_start();
+            include($template_path); //file_get_contents();
+            $out = ob_get_contents();
+        ob_end_clean();
+        
+        return $out;
+        
+    }
     
     
     

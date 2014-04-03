@@ -18,7 +18,7 @@ Template Name: Contacto Bolsa de Trabajo
 
 								<header class="article-header wrap">
 
-									<h2 class="curso-titulo">
+									<h1 class="curso-titulo">
 										<?php
 											$category = get_the_category();
 											if($category[0]){
@@ -26,7 +26,7 @@ Template Name: Contacto Bolsa de Trabajo
 											}
 										?>
 
-									</h2>
+									</h1>
 								<!--	<p class="byline vcard"><?php
 										printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link());
 									?></p> -->
@@ -179,40 +179,66 @@ Template Name: Contacto Bolsa de Trabajo
 
 								</header> <!-- end article header -->
 
+								
+								<!-- Comienza Menu Interno del Curso -->
+							<!-- 	<div class="menu-cursos wrap clearfix">
+									<ul>
+										<?php $argsVideos = array(
+											//'cat'		=> 9,
+											'post_type' => 'contacto',
+											);
+
+											$myVideos = new WP_Query( $argsVideos ); ?>
+											<?php if ($myVideos -> have_posts()) : 
+											while ($myVideos -> have_posts()) : $myVideos -> the_post(); ?>
+										<li>
+											<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										</li>
+											<?php endwhile; ?>
+											<?php else : ?>
+											<p><?php _e('No hay cursos de esta categoría'); ?></p>
+											<?php endif; wp_reset_query(); ?>
+									</ul>
+								</div>
+								
+							
+
+								<!--Termina Menu Interno del Curso -->
+
 								<!-- Comienza Contenedor de Curso -->
 									<div id="contenedor-curso" class="degradado-gris fullcol">
 										<div class="contenedor-curso-interior wrap">
 											<div class="contenedor-curso-informacion sevencol first">
-												<h1 class="titulo-del-curso">
+												<div class="titulo-contacto">
 													<?php echo get_the_title(); ?>
-													<span class="subtitulo-del-curso">
-														<?php
-															echo(types_render_field( "subtitulo-contacto", array( 'raw' => 'true'  ) ));
-														?>
-													</span>
-												</h1>
-												<p class="descripcion-del-curso">
+												</div>
+												<div class="subtitulo-contacto">
+													<?php
+														echo(types_render_field( "subtitulo-contacto", array( 'raw' => 'true'  ) ));
+													?>
+												</div>
+												<div class="descripcion-contacto">
 													<?php
 														echo(types_render_field( "descripcion-contacto", array( 'raw' => 'true'  ) ));
 													?>
-												</p>
+												</div>
 
 												<div class="contenido-bolsa">
 													<?php the_content(); ?>
 												</div>
 
-												<p class="nota-contacto">
+												<div class="nota-contacto">
 													<?php
 														echo(types_render_field( "nota-contacto", array( 'raw' => 'true'  ) ));
 													?>
-												</p>
+												</div>
 											</div>
 											<div class="contenedor-curso-formulario fivecol last">
-												<h3 class="titulo-formulario">
+												<div class="titulo-formulario">
 													<?php
 														echo(types_render_field( "titulo-formulario", array( 'raw' => 'true'  ) ));
 													?>
-												</h3>
+												</div>
 												<div class="formulario-registro-cursos wrap">
 
 													<div id="formulario-franquicias">                           
@@ -324,11 +350,11 @@ Template Name: Contacto Bolsa de Trabajo
 							                                </div>	-->
 															<?php if(is_page('bolsa-de-trabajo-4')){ ?>
 							                                <div id="comentario1Bolsa">
-							                                    <textarea cols=20 rows=10 id="txtComentarioFranquicias" name="comments"  placeholder="Escribe tu Comentario"></textarea>
+							                                    <textarea cols=20 rows 10 id="txtComentarioFranquicias" name="comments"  placeholder="Escribe tu Comentario"/></textarea>
 							                                </div>
 															<?php }else{ ?>
 							                                <div id="comentario1Bolsa">
-							                                    <textarea cols=20 rows=10 id="txtComentarioFranquicias" name="comments"  placeholder="Additional comments or questions"></textarea>
+							                                    <textarea cols=20 rows 10 id="txtComentarioFranquicias" name="comments"  placeholder="Additional comments or questions"/></textarea>
 							                                </div>
 															<?php } ?>
 

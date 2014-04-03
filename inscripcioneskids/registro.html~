@@ -42,7 +42,8 @@ $("#form1").validate({
                },
                email:{
                    required: true,
-                   email: true
+                   email: true,
+		   remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique",
                },
                lada:{
                    required: true,
@@ -56,7 +57,16 @@ $("#form1").validate({
                    minlength: 7,
                    maxlength: 8,
                },
+               mobile_number: {
+                   required: true,
+                   number: true,
+                   minlength: 10,
+                   maxlength: 10
+               },
                estado:{
+                   required: true
+               },
+               plantel: {
                    required: true
                },
                termino:{
@@ -72,6 +82,7 @@ $("#form1").validate({
                email:{
                    required: '*Ingresa tu correo electr&oacute;nico',
                    email: '*Ingresa un correo electr&oacute;nico correcto',
+	           remote: '*El correo electr&oacute;nico ya fue ingresado previamente',
                },
                lada:{
                    required: '*Valida LADA',
@@ -85,8 +96,17 @@ $("#form1").validate({
                    minlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
                    maxlength: '*10 n&uacute;meros para el tel&eacute;',
                },
+               mobile_number:{
+                   required: '*Valida n&uacute;mero de celular',
+                   number: '*Solo n&uacute;meros para el tel&eacute;fono',
+                   minlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
+                   maxlength: '*El tel&eacute; tiene que ser de 10 n&uacute;meros',
+               },
                estado:{
                    required: '*Debes seleccionar un estado'
+               },
+               plantel:{
+                   required: '*Debes seleccionar un plantel'
                },
                termino:{
                    required: '*Debes aceptar términos y condiciones'
@@ -94,6 +114,22 @@ $("#form1").validate({
            },
 
        });
+				$.get("http://www.interlingua.com.mx/crm/prospects/getEstados/",function(estados){
+                    estados = JSON.parse(estados);      
+                    $("#cmbEstados").html('<option value="">Elige tu estado</option>');
+                    $.each(estados,function(index,value){
+                        $("#cmbEstados").append('<option value="'+value+'">'+value+'</option>');
+                    });                        
+                });
+                $("#cmbEstados").change(function(){
+                    $.get("http://www.interlingua.com.mx/crm/prospects/getPlanteles/"+$(this).val(),function(planteles){
+                        planteles = JSON.parse(planteles);      
+                        $("#cmbSucursales").html('<option value="">Elige tu plantel</option>');
+                        $.each(planteles,function(index,value){
+                            $("#cmbSucursales").append('<option value="'+value+'">'+value+'</option>');
+                        });                        
+                    });
+                });
 });
 </script>
 
@@ -177,7 +213,7 @@ $("#form1").validate({
 				padding-left: 0px;
 				width:51px;
 				height:38px;
-				margin-top:30px;
+				margin-top:15px;
 				float: left;
 				font-size: 11px;
 				
@@ -202,7 +238,7 @@ $("#form1").validate({
 				margin-left:70px;
 				width:108px;
 				height:38px;				
-				margin-top:68px;
+				margin-top:53px;
 				position: absolute;
 				font-size: 11px;
 			}
@@ -221,12 +257,12 @@ $("#form1").validate({
 			
 			#estado1{
 				position:absolute;
-				margin-left:185px;
+				margin-left:0px;
 				border: none;
 				font-family: 'Cabin', sans-serif;
 				width:190px;
 				height:38px;
-				margin-top:68px;
+				margin-top:107px;
 				font-size: 11px;
 				
 			}
@@ -234,7 +270,7 @@ $("#form1").validate({
 				#cmbEstados{
 						font-family: 'Cabin', sans-serif;
 						border: solid 1px #e3e3e3;
-						width:168px;
+						width:180px;
 						padding-left: 10px;
 						height:38px;
 						background-color: #efefef;
@@ -266,7 +302,7 @@ $("#form1").validate({
 
 				}
 
-				#cmbEstados{
+				/*#cmbEstados{
 						font-family: 'Cabin', sans-serif;
 						border: solid 1px #e3e3e3;
 						width:179px;
@@ -274,8 +310,52 @@ $("#form1").validate({
 						height:42px;
 						background-color: #efefef;
 						float: left;
+			}*/
+			#celular1{
+				font-family: 'Cabin', sans-serif;
+				border: none;
+				width:167px;
+				padding-left: 0px;
+				height:38px;
+				float: left;
+				font-size: 11px;
+				margin-top: -38px;
+				margin-left: 185px;
+				margin-bottom: 50px;
+					
+				}
+
+					#txtCelular{
+						font-family: 'Cabin', sans-serif;
+						border: solid 1px #E3E3E3;
+						width:167px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #EFEFEF;
+						float: left;
+					}
+
+			#sucursal1{
+				position:absolute;
+				margin-left:185px;
+				border: none;
+				font-family: 'Cabin', sans-serif;
+				width:190px;
+				height:38px;
+				margin-top:107px;
+				font-size: 11px;
+				
 			}
-			
+							
+				#cmbSucursales{
+						font-family: 'Cabin', sans-serif;
+						border: solid 1px #e3e3e3;
+						width:180px;
+						padding-left: 10px;
+						height:38px;
+						background-color: #efefef;
+						float: left;
+			}
 
 				#errorpoliticas{
 						width:96px;
@@ -306,8 +386,8 @@ $("#form1").validate({
 			 	border:none;
 				width:241px;
 			  	height:62px;
-			  	margin-top: 110px;
-				margin-left:12px;				
+			  	margin-top: 160px;
+				margin-left:-305px;				
 			  	font-family: Arial;
 			  	font-size: 19px;
 			  	font-family: 'Muli', sans-serif;
@@ -315,6 +395,15 @@ $("#form1").validate({
 			  	color:#fff;
 			  	text-shadow: 1px 1px 3px #666666;
 
+			}
+
+			@-moz-document url-prefix() {
+				 #btnEnviar{
+				 	width:241px;
+				  	margin-top: 160px;
+					margin-left:-105px !important;			
+					font-size:  16px;
+				}
 			}
 			
 			#btnEnviar:hover {
@@ -337,15 +426,15 @@ $("#form1").validate({
 
 </style>
 	
-	<div id="p3">¡Haz que tus hijos aprovechen <br>sus vacaciones! <br></div>
+	<div id="p3">¡Haz que tus hijos <br>aprovechen sus tardes! <br></div>
 	
 	<div id="formulariodiv"> 
 
  
 
 
-<form id="form1" method="post" action="http://dev.clicker360.com/interlingua/crm/registro" target="_parent">
-<input type="hidden" name="origin_id" value="6" />
+<form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro" target="_parent">
+<input type="hidden" name="origin_id" value="5" />
 
 <div id="nombre1">
 <input type="text" id="txtNombre" name="name"  placeholder="Nombre Completo"/>
@@ -363,10 +452,13 @@ $("#form1").validate({
 <input type="text" id="txtTelefono" name="phone_number" maxlength="8" placeholder="Teléfono" />
 </div>
 
+<div id="celular1">
+    <input type="text" id="txtCelular" name="mobile_number" maxlength="10" placeholder="Celular">
+</div>
 
 <div id="estado1">
 <select id="cmbEstados" name="estado">
-    <option value="" selected="selected">Elige tu estado</option>
+    <!--<option value="" selected="selected">Elige tu estado</option>
     <option value="Aguascalientes">Aguascalientes</option>
     <option value="Baja California">Baja California</option>
     <option value="Baja California Sur">Baja California Sur</option>
@@ -398,9 +490,15 @@ $("#form1").validate({
     <option value="Tlaxcala">Tlaxcala</option>
     <option value="Veracruz">Veracruz</option>
     <option value="Yucatán">Yucatán</option>
-    <option value="Zacatecas">Zacatecas</option>
+    <option value="Zacatecas">Zacatecas</option>-->
 </select>
 </div>
+<div id="sucursal1">
+  <select id="cmbSucursales" name="plantel">
+    <option value="" selected="selected">Elige tu plantel</option>
+  </select>
+</div>
+
 </body>
 </html>
 

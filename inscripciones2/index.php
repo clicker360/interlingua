@@ -1,6 +1,3 @@
-<?php
-    header('Location: http://www.interlingua.com.mx/buenfin');
-?>
 <!DOCTYPE>
 <html lang="es">
 <head>
@@ -85,7 +82,8 @@ $("#form1").validate({
                },
                email:{
                    required: true,
-                   email: true
+                   email: true,
+                   remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"
                },
                lada:{
                    required: true,
@@ -114,6 +112,7 @@ $("#form1").validate({
                email:{
                    required: '*Ingresa tu correo electr&oacute;nico',
                    email: '*Ingresa un correo electr&oacute;nico correcto',
+                   remote: '*El correo electr&oacute;nico ya fue ingresado previamente',
                },
                lada:{
                    required: '*Valida LADA',

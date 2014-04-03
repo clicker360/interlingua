@@ -42,7 +42,7 @@ Template Name: Alumnos
                   alert("Error, por favor intentalo mas tarde.");
               },
               success:function(data){
-                if(data.nombre!=null && data.nombre!=""){jQuery("#nombre-alumno").html(data.nombre)}else{jQuery(".nombre-alumno").hide();jQuery("#nombre-alumno").hide()}
+                //if(data.nombre!=null && data.nombre!=""){jQuery("#nombre-alumno").html(data.nombre)}else{jQuery(".nombre-alumno").hide();jQuery("#nombre-alumno").hide()}
                 if(data.matricula!=null && data.matricula!=""){jQuery("#matricula-alumno").html(data.matricula)}else{jQuery(".matricula-alumno").hide();jQuery("#matricula-alumno").hide();}
                 if(data.plantel!=null && data.plantel!=""){jQuery("#ciudad-alumno").html(data.plantel)}else{jQuery(".ciudad-alumno").hide();jQuery("#ciudad-alumno").hide();}
                 if(data.nombrePlantel!=null && data.nombrePlantel!=""){jQuery("#nombre-plantel").html(data.nombrePlantel)}else{jQuery(".nombre-plantel").hide();jQuery("#nombre-plantel").hide();}
@@ -108,17 +108,15 @@ Template Name: Alumnos
 						<div class="datos-escuela-alumno">
 						<div class="informacion-alumno">
 							<div class="nombre-alumno">Nombre</div>
-							<div class="matricula-alumno">Matrícula</div>
-							<div class="ciudad-alumno">Plantel</div>
-                                                        <div class="nombre-plantel">Nombre de Plantel</div>
+							<div class="matricula-alumno">Matrícula</div>							
+                                                        <div class="nombre-plantel"><div id="ciudad-alumno" class="ciudad-alumno"></div></div>
 							<div class="curso-alumno">Curso</div>
 							<div class="hora-alumno">Horario</div>
 							<div class="nivel-alumno">Nivel</div>
 						</div>
 						<div class="informacion-alumno">
-							<div id="nombre-alumno" class="nombre-alumno"></div>
-                                                        <div id="matricula-alumno" class="matricula-alumno"></div>
-							<div id="ciudad-alumno" class="ciudad-alumno"></div>
+							<div id="nombre-alumno" class="nombre-alumno"><?php echo $_SESSION['nombre_completo']; ?></div>
+                                                        <div id="matricula-alumno" class="matricula-alumno"></div>							
                                                         <div id="nombre-plantel" class="nombre-plantel"></div>
 							<div id="curso-alumno" class="curso-alumno"></div>
 							<div id="hora-alumno" class="hora-alumno"></div>
