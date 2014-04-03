@@ -5648,9 +5648,10 @@ input[type=radio]{
     float: left;
   }
   .logo-header img {
-    max-width: 100%;
-    display: block;
-    margin: auto;
+    max-width: 100% !important;
+    display: block !important;
+    margin: auto !important;
+    position: relative !important;
   }
   .logos-redes{
     text-align: center;
