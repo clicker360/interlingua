@@ -5684,6 +5684,9 @@ input[type=radio]{
     position: fixed !important;
     top: 0;
   }
+  #megaMenu{
+    position: fixed !important;
+  }
 }
 
 
