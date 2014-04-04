@@ -5647,17 +5647,12 @@ input[type=radio]{
     text-indent: -999999em;
     float: left;
   }
-  .logo-header {
-    max-width: 100% !important;
-    display: block !important;
-    margin: auto !important;
-    position: relative !important;
-  }
   .logo-header img {
     max-width: 100% !important;
     display: block !important;
     margin: auto !important;
     position: relative !important;
+    float: left;
   }
   .logos-redes{
     text-align: center;
