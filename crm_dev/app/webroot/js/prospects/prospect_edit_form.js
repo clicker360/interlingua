@@ -49,6 +49,12 @@ $(document).ready(function() {
                     alert("Asegúrate de seleccionar medio de publicidad y medio de contacto");
                 }else{
                 jQuery("#myModal").reveal();
+                //Format Fecha de Naciomiento
+                var fechaNaci = $('#prospect_fecha_nacimiento').val();
+                var year = Date.parse(fechaNaci);
+                alert(new Date(year));
+
+
                 // Modal Save AS400
                 var params = {
                     name: $('#prospect_name').val(),
