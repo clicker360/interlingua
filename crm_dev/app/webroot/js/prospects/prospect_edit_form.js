@@ -55,7 +55,7 @@ $(document).ready(function() {
                 var year = year.getYear();                
                 var month = $('#prospect_fecha_nacimiento').val();
                 var month = month.split("-");
-                var fechaNaci = year+month[2]+month[1];
+                var fechaNaci = year+month[1]+month[0];
                 alert(fechaNaci);
 
 
