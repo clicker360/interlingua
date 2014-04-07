@@ -50,9 +50,12 @@ $(document).ready(function() {
                 }else{
                 jQuery("#myModal").reveal();
                 //Format Fecha de Naciomiento
-                var fechaNaci = $('#prospect_fecha_nacimiento').val();
-                var fechaNaci = Date.parse(fechaNaci);
-                var fechaNaci = fechaNaci.getYear();
+                var year = $('#prospect_fecha_nacimiento').val();
+                var year = Date.parse(year);
+                var year = year.getYear();                
+                var month = $('#prospect_fecha_nacimiento').val();
+                var month = month.split("-");
+                var fechaNaci = year+month[2]+month[1];
                 alert(fechaNaci);
 
 
