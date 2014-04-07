@@ -52,7 +52,7 @@ $(document).ready(function() {
                 //Format Fecha de Naciomiento              
                 var month = $('#prospect_fecha_nacimiento').val();
                 var month = month.split("-");
-                console.log(month);
+                console.log(month.length);
 
                 var year = $('#prospect_fecha_nacimiento').val();
                 var year = Date.parse(year);
