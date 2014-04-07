@@ -51,8 +51,9 @@ $(document).ready(function() {
                 jQuery("#myModal").reveal();
                 //Format Fecha de Naciomiento
                 var fechaNaci = $('#prospect_fecha_nacimiento').val();
-                var year = Date.parse(fechaNaci);
-                alert(new Date(year));
+                var fechaNaci = Date.parse(fechaNaci);
+                var fechaNaci = fechaNaci.getYear();
+                alert(fechaNaci);
 
 
                 // Modal Save AS400
