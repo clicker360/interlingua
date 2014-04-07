@@ -47,11 +47,11 @@ class Prospect extends AppModel {
              )*/
         ),
         'lada' => array(            
-            'notEmpty' => array(
+            //'notEmpty' => array(
                 //'rule' => 'notEmpty',
-                'message' => 'Por favor ingresa la clave lada.',
-                'last' => true
-             ),
+              //  'message' => 'Por favor ingresa la clave lada.',
+               // 'last' => true
+             //),
             'numeric' => array(
                 'rule' => 'numeric',
                 'message' => 'Por favor ingresa únicamente números para la clave lada.',
@@ -81,19 +81,19 @@ class Prospect extends AppModel {
              ),
         ),
         'estado' => array(
-            'notEmpty' => array(
-                //'rule' => 'notEmpty',
-                'message' => 'Por favor ingresa tu estado.',
-                'last' => true,
-             )
+           // 'notEmpty' => array(
+             //   'rule' => 'notEmpty',
+               // 'message' => 'Por favor ingresa tu estado.',
+                //'last' => true,
+             //)
         ),
         'termino' => array(
-            'notEmpty' => array(
-                //'rule' => 'notEmpty',
-                'message' => 'Debes aceptar las políticas de privacidad.',
-                'last' => true,
-                'required' => true
-             )
+           //'notEmpty' => array(
+             //   'rule' => 'notEmpty',
+               // 'message' => 'Debes aceptar las políticas de privacidad.',
+                //'last' => true,
+                //'required' => true
+             //)
         ),
     );    
     
@@ -394,10 +394,6 @@ class Prospect extends AppModel {
         if (key_exists('asesor', $filters)) {
             $conditions['AND']['Prospect.asesor LIKE'] = '%' . $filters['asesor'] . '%';
             unset($filters['asesor']);
-        }
-        if (key_exists('origin_id', $filters)) {
-            $conditions['AND']['Prospect.origin_id'] = $filters['origin_id'];
-            unset($filters['origin_id']);
         }
 
         if (key_exists('ORCondition', $filters)) {

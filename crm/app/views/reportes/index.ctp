@@ -1,23 +1,15 @@
 <?php
-echo $this->Html->script('utils/dynamic_combos', false);
-echo $this->Html->script('reportes/filters.js', false);
+    echo $this->Html->script('utils/dynamic_combos', false);
+    echo $this->Html->script('reportes/filters.js', false);
 $level=$this->Session->read('Auth.User.level');
-$arrayVal = array();
-$arrayVal["true|Todos"] = "Todos";
-foreach ($places as $value) {
-    foreach ($value as $val) {
-        $arrayVal[$val['id']."|".$val['name']] = $val['name'];
-    }
-}
-$fechas = array(
-    '1' => 'Hoy',
+$fechas = array('1' => 'Hoy',
     '2' => 'Ultimos 7 d&iacute;as',
     '3' => 'Ultimo mes',
-    '4' => 'D&iacute;a especifico<tr><td></td><td class="renglonDatos">D&iacute;a especifico:</td>
+    '5' => 'D&iacute;a especifico<tr><td></td><td class="renglonDatos">D&iacute;a especifico:</td>
                 <td class="renglonDatos">'.$form->input('Reporte.fecha_unica',array('class'=>'dia_especifico','type'=>'date','label'=>false,'div'=>false, 'minYear'=>(date('Y')-1), 'maxYear'=>(date('Y')+1))).'&nbsp;
                 </td>                
               </tr>',
-    '5' => 'Rango Especial'
+    '4' => 'Rango Especial'
 );
 $uanombres = array('0 a 7', '8 a 15', '16 a 30', 'Más de 30');
 
@@ -217,7 +209,7 @@ $uanombres = array('0 a 7', '8 a 15', '16 a 30', 'Más de 30');
 </table>
 <?php echo $form->end('Ver Reporte');
 } ?>
-
+<!----->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td><h1>Reportes.</h1></td>
@@ -231,14 +223,7 @@ $uanombres = array('0 a 7', '8 a 15', '16 a 30', 'Más de 30');
         <tr>
             <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <td class="renglonDatos">
-                  <div style="display:inline-block;">
-                      <?php echo $form->input('Reporte.tipo_fecha',array('type'=>'radio','label'=>false,'legend'=>false,'options'=>array('1'=>'Fecha Prospecto','2'=>'Fecha Ultima Atenci&oacute;n'),'value'=>'1')); ?>
-                  </div>
-                  <div style="display:inline-block;margin-left:15px;">
-                    Lugar: <?php echo $form->select('lugar', $arrayVal, NULL,array('empty'=>false));?>
-                  </div>
-                </td>
+                <td class="renglonDatos"><?php echo $form->input('Reporte.tipo_fecha',array('type'=>'radio','label'=>false,'legend'=>false,'options'=>array('1'=>'Fecha Prospecto','2'=>'Fecha Ultima Atenci&oacute;n'),'value'=>'1')); ?></td>
                 <td class="renglonDatos">&nbsp;</td>
                 <td class="renglonDatos">&nbsp;</td>
                 <td class="renglonDatos">&nbsp;</td>

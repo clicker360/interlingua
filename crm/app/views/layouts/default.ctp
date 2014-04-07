@@ -5,9 +5,9 @@
         <?php
         echo $this->Html->charset('utf-8');
         echo $this->Html->meta('icon');
-        echo $this->Html->css(array('style','core','calendario_ui/jquery-ui.calendario.css','reveal/reveal.css'));
+        echo $this->Html->css(array('style','core','calendario_ui/jquery-ui.calendario.css'));
         echo $this->Crm->js();
-        echo $this->Html->script(array('jquery/lib/jquery-1.4.3.min.js','jquery/ui/js/jquery-ui-1.8.5.custom.min.js','jquery/lib/jMonthCalendar.js','reveal/jquery.reveal.js'));
+        echo $this->Html->script(array('jquery/lib/jquery-1.4.3.min.js','jquery/ui/js/jquery-ui-1.8.5.custom.min.js','jquery/lib/jMonthCalendar.js'));
         echo $scripts_for_layout;
         ?>
     </head>

@@ -23,7 +23,7 @@
                 <td><?php echo @$event['Status']['StatusCategory']['name']; ?></td>
 
                 <td class="historial_event_title_cell">Status:</td>
-                <td class="statusName"><?php echo @$event['Status']['name']; ?></td>
+                <td><?php echo @$event['Status']['name']; ?></td>
             </tr>
             <tr>
                 <td class="historial_event_title_cell">Comentarios:</td>
