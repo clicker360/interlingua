@@ -49,12 +49,15 @@ $(document).ready(function() {
                     alert("Asegúrate de seleccionar medio de publicidad y medio de contacto");
                 }else{
                 jQuery("#myModal").reveal();
-                //Format Fecha de Naciomiento
-                var year = $('#prospect_fecha_nacimiento').val();
-                var year = Date.parse(year);
-                var year = year.getYear();                
+                //Format Fecha de Naciomiento              
                 var month = $('#prospect_fecha_nacimiento').val();
                 var month = month.split("-");
+                console.log(month);
+
+                var year = $('#prospect_fecha_nacimiento').val();
+                var year = Date.parse(year);
+                var year = year.getYear();  
+
                 var fechaNaci = year+month[1]+month[0];
                 alert(fechaNaci);
 
