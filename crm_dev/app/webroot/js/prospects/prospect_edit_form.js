@@ -49,7 +49,8 @@ $(document).ready(function() {
                     alert("Asegúrate de seleccionar medio de publicidad y medio de contacto");
                 }else{
                 jQuery("#myModal").reveal();
-                //Format Fecha de Naciomiento              
+                
+                //Format Fecha de Nacimiento              
                 var month = $('#prospect_fecha_nacimiento').val();
                 var month = month.split("-");
                 if (month.length > 1){
@@ -60,8 +61,6 @@ $(document).ready(function() {
                 }else{
                     var fechaNaci = $('#prospect_fecha_nacimiento').val();
                 }
-
-                alert(fechaNaci);
 
 
                 // Modal Save AS400
@@ -77,7 +76,7 @@ $(document).ready(function() {
                     medio_contacto_fls: ($('#prospect_medio_contacto option:selected').text()=="Selecciona medio de contacto")?"":$('#prospect_medio_contacto option:selected').text(),
                     medio_publicidad: $('#prospect_medio_publicidad').val(),
                     medio_publicidad_fls: ($('#prospect_medio_publicidad option:selected').text() == "Selecciona medio de publicidad")?"":$('#prospect_medio_publicidad option:selected').text(),
-                    fecha_nacimiento: $('#prospect_fecha_nacimiento').val(),
+                    fecha_nacimiento: fechaNaci,
                     clave_AS400: $('#prospect_as400').val(),
                     fecha_cita: $('#prospects_fecha_cita').val(),
                     plantel: $('#prospPlantel').val(),
