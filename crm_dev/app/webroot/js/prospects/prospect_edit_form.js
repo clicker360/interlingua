@@ -52,13 +52,15 @@ $(document).ready(function() {
                 //Format Fecha de Naciomiento              
                 var month = $('#prospect_fecha_nacimiento').val();
                 var month = month.split("-");
-                console.log(month.length);
+                if (month.length > 1){
+                    var year = $('#prospect_fecha_nacimiento').val();
+                    var year = Date.parse(year);
+                    var year = year.getYear();  
+                    var fechaNaci = year+month[1]+month[0];
+                }else{
+                    var fechaNaci = $('#prospect_fecha_nacimiento').val();
+                }
 
-                var year = $('#prospect_fecha_nacimiento').val();
-                var year = Date.parse(year);
-                var year = year.getYear();  
-
-                var fechaNaci = year+month[1]+month[0];
                 alert(fechaNaci);
 
 
