@@ -134,6 +134,20 @@ $("#form1").validate({
 </script>
 
 
+<script>
+  $(document).ready(function(){
+
+    // GET PARAM PERFORMANCE
+    function getParam(name){
+      var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      return results ? (results[1] || null) : null;
+    }
+    $("#medio").val(getParam('M'));
+
+  });
+</script> 
+
+
 <style type="text/css">
 
 
@@ -434,7 +448,7 @@ $("#form1").validate({
 
 
 <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro" target="_parent">
-<input type="hidden" name="medio" id="medio" value="<?php echo $_GET['M']?>">
+<input type="hidden" name="medio" id="medio" value="">
 <input type="hidden" name="micrositio" id="micrositio" value="/inscripcioneskids">
 <input type="hidden" name="origin_id" value="5" />
 
