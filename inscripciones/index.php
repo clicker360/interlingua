@@ -66,9 +66,6 @@
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" src="js/jquery-validate.min.js"></script>
         <script type="text/javascript" src="js/additional-methods.js"></script>
-
-
-
     </head>
 
 
@@ -218,6 +215,8 @@
                             <!--<form id="form1" method="post" action="../crm/registro">-->
                                 <input type="hidden" name="origin_id" value="3" />
                                 <input type="hidden" name="gclid" id="gclid" value="<?php echo $_GET['gclid']?>">
+                                <input type="hidden" name="medio" id="medio" value="<?php echo $_GET['M']?>">
+                                <input type="hidden" name="micrositio" id="micrositio" value="/inscripciones">
 
                                 <div id="nombre1">
                                     <input type="text" id="txtNombre" name="name"  placeholder="Nombre Completo"/>

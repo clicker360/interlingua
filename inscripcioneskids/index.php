@@ -116,8 +116,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			 
 				<div id="p4">¡Inscríbelos a <br><strong>INTERLINGUA</strong><br>y dales una herramienta<br> para la vida!</div>
 
- 
-<input type="submit" href="registro.html" id="btnlightbox" class="fancybox fancybox.iframe" value="¡Aparta su lugar aquí!" style="cursor:pointer" />
+<input type="submit" href="registro.html?M=<?php echo $_GET['m']?>" id="btnlightbox" class="fancybox fancybox.iframe" value="¡Aparta su lugar aquí!" style="cursor:pointer" />
 
 <!--<a id=" btnlightbox" class="fancybox fancybox.iframe" href="iframe.html">Iframe</a> -->
 
