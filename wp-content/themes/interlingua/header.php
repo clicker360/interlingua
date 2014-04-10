@@ -273,7 +273,7 @@ _gaq.push(['_trackPageview']);
 						<h1>
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
 								<p> Interlingua </p>
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Logo Interlingua">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="-">
 							</a>
 						<h1>
 					</div>

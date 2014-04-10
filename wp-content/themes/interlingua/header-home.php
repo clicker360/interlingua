@@ -359,8 +359,8 @@ jQuery.ajax({
 				<div id="contenedor-izquierdo"  class="sixcol clearfix">
 					<div class="logo-header ctr">
 						<h1 id="logo">
-							<a href="<?php echo home_url(); ?>" rel="nofollow" title="logo interlingua">
-								Logo Interlingua
+							<a href="<?php echo home_url(); ?>" rel="nofollow" title="-">
+								
 							</a>
 						</h1>
 					</div>

@@ -59,7 +59,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
-        <title>Interlingua - Inglés para la vida</title>
+        <title>Interlingua</title>
         <link href="style.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
