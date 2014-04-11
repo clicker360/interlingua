@@ -225,7 +225,7 @@
 
                     <aside id="sidebar">	
                         <div id="p3">Comprueba nuestro m&eacute;todo</div>
-                        <div id="p4"><strong>obtén una clase muestra GRATIS</strong></div>
+                        <div id="p4"><strong>Obtén una clase muestra GRATIS</strong></div>
                         <div id="formulariodiv"> 
 
 
