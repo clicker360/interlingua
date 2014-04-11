@@ -232,7 +232,7 @@
 
                             <form id="form1" method="post" action="http://www.interlingua.com.mx/crm/registro">
                             <!--<form id="form1" method="post" action="../crm/registro">-->
-                                <input type="hidden" name="origin_id" value="3" />
+                                <input type="hidden" name="origin_id" value="" />
                                 <input type="hidden" name="gclid" id="gclid" value="<?php echo $_GET['gclid']?>">
                                 <input type="hidden" name="medio" id="medio" value="<?php echo $_GET['M']?>">
                                 <input type="hidden" name="micrositio" id="micrositio" value="/registro">

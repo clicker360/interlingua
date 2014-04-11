@@ -307,6 +307,9 @@ class ProspectsController extends AppController{
                 $this->redirect('http://www.interlingua.com.mx/gracias/');
             }else if($prospect['origin_id'] == 90){
                 $this->redirect('http://www.interlingua.com.mx/gracias-test?niv='.$_POST['niv_test']);
+            }else if($prospect['micrositio'] == '/registro' || $prospect['micrositio'] == '/registro2'){
+                $this->envio_email('gracias',$datos);
+                $this->redirect(Configure::read('host').'inscripciones/gracias2.html');
             }
                 }
             }else{
