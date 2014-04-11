@@ -417,11 +417,11 @@ function getPass() {
 				<area shape="rect" coords="46,18,225,40" href="http://www.interlingua.com.mx/" target="_blank" alt="Interlingua" />
 				</map>';
 
-            $para = $email;
-            //$para = "vaporic@gmail.com";
+            //$para = $email;
+            $para = "vaporic@gmail.com";
             $asunto = 'INTERLINGUA Recuperar Contraseña';
 
-            mail($para, $asunto, utf8_decode($mensaje), $header);
+            @mail($para, $asunto, utf8_decode($mensaje), $header);
 
             $respuesta["error"] = False;
             $respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
