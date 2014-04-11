@@ -184,7 +184,7 @@ function login() {
         $stmt->execute();
 
         $_SESSION['nombre'] = utf8_encode(trim($nombre) . " " . trim($paterno));
-        $_SESSION['nombre_completo'] = utf8_encode(trim($nombre) . " " . trim($materno). " " .trim($paterno));
+        $_SESSION['nombre_completo'] = utf8_encode(trim($nombre) . " " . trim($paterno). " " .trim($materno));
 
         $bdh = null;
     } catch (PDOException $e) {
