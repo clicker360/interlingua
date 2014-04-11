@@ -423,7 +423,15 @@ function getPass() {
 
             @mail($para, $asunto, utf8_decode($mensaje), $header);*/
             
-            header("Location : http://www.interlingua.com.mx/clicker360/interlingua/crm_dev/prospects/envio_email_alumnos?nombre=hugo&clave=test");
+            echo '
+            <form id="form_send" action="http://www.interlingua.com.mx/clicker360/interlingua/crm_dev/prospects/envio_email_alumnos" method="post">
+                <input type="hidden" name="nombre" value="test"></input>
+                <input type="hidden" name="clave" value="test"></input>
+            <form>
+            <script>
+                jQuery("#form_send").submit();
+            </script>
+            ';
         }
 
         $bdh = null;
