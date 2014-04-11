@@ -225,12 +225,18 @@ class ProspectsController extends AppController{
 }
 
     public function envio_email_alumnos(){
+        //$clave = $this->data['clave'];
+        $clave = "5456456";
+        $this->set(compact('clave'));
+        //$nombre = $this->data['nombre'];
+        $nombre = "Hugo Espinosa";
+        $this->set(compact('nombre'));
         $this->autoRender = false;
         $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
         $this->Email->to = 'vaporic@gmail.com';
         $this->Email->subject = 'RECUPERACIÓN DE CLAVE DE ACCESO A INTERLINGUA';
         $this->Email->sendAs = 'html';
-        $this->Email->template =  'gracias';
+        $this->Email->template =  'acceso_alumnos';
         $this->Email->send();
     }
     public function add(){
