@@ -25,7 +25,7 @@ class ProspectsController extends AppController{
             $this->set(compact('openEvents'));
         }
         //Se permite que se acceda al método sin estar logeado.
-        $this->Auth->allow(array('store_prospect','kpi','envio_email','graciasProspect','checkUnique','getPlanteles','getEstados','sendMailContact','getRutaPlantel','randomQuestion','validaTest','saveAS400'));
+        $this->Auth->allow(array('store_prospect','kpi','envio_email','envio_email_alumnos','graciasProspect','checkUnique','getPlanteles','getEstados','sendMailContact','getRutaPlantel','randomQuestion','validaTest','saveAS400'));
     }
 
     /**************************************************************************
@@ -223,6 +223,16 @@ class ProspectsController extends AppController{
                 $this->Email->send();
     }
 }
+
+    public function envio_email_alumnos(){
+        $this->autoRender = false;
+        $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
+        $this->Email->to = 'vaporic@gmail.com';
+        $this->Email->subject = 'RECUPERACIÓN DE CLAVE DE ACCESO A INTERLINGUA';
+        $this->Email->sendAs = 'html';
+        $this->Email->template =  'gracias';
+        $this->Email->send();
+    }
     public function add(){
         
         $medium_categories  = $this->MediumCategory->find('list');
