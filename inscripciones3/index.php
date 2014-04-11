@@ -88,7 +88,7 @@
                     }
                     alert(erroresString);
                 }
-                $("#form1").validate({
+                 $("#form1").validate({
                     rules: {
                         name: {
                             required: true,
@@ -97,22 +97,41 @@
                         email: {
                             required: true,
                             email: true,
-                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"                            
+                            remote: "http://www.interlingua.com.mx/crm/prospects/checkUnique"  
                         },
                         lada: {
-                            required: true,
+                              required: {
+                                depends: function(element) {
+                                    var telefono = $("#txtTelefono").val();
+                                    if (telefono != "") {
+                                        return true
+                                    }else {
+                                        return false
+                                    }
+                                }
+                            },
                             number: true,
                             minlength: 2,
                             maxlength: 3,
                         },
                         phone_number: {
-                            required: true,
+                            required: {
+                                depends: function(element) {
+                                    var telefono = $("#txtTelefono").val();
+                                    var celular  = $("#txtCelular").val();
+                                    if (telefono === "" && celular === "") {
+                                        return true
+                                    }else {
+                                        return false
+                                    }
+                                }
+                            },
                             number: true,
                             minlength: 7,
                             maxlength: 8,
                         },
                         mobile_number: {
-                            required: true,
+                            required: false,
                             number: true,
                             minlength: 10,
                             maxlength: 10
@@ -144,7 +163,7 @@
                             maxlength: '*Solo 3 o 3 n&uacute;meros',
                         },
                         phone_number: {
-                            required: '*Valida n&uacute;mero telef&oacute;nico',
+                            required: '*Ingresa tel&eacute;fono o celular',
                             number: '*Solo n&uacute;meros para el tel&eacute;fono',
                             minlength: '*El tel&eacute;fono tiene que ser de 10 n&uacute;meros',
                             maxlength: '*El tel&eacute; tiene que ser de 10 n&uacute;meros',
