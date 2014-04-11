@@ -78,11 +78,11 @@ body{
               </tr>
               <tr>
                 <td align="left" width="591" valign="top" style="font: Bold 15px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;">
-                        <strong>Estimado <?php echo $nombre; ?> </strong>
+                        <strong>Estimado <?php echo $nombre; ?> </strong> <br /> <br />
                         &iexcl;Gracias por contactar el servicio de Acceso<br />
                         a Alumnos de Interlingua&#33;<br /><br />
 
-                        Tu acceso es el siguiente: <em><strong><?php echo $clave; ?></strong></em><br /><br />
+                        Tu acceso es el siguiente: <em><strong style="color:#0098AA !important;"><?php echo $clave; ?></strong></em><br /><br />
 
 
                         Recibe un cordial saludo y estamos para atenderte.
@@ -100,9 +100,6 @@ body{
       </table>
     
     </td>
-  </tr>
-  <tr>
-    <td><img src="footer.png" width="591" height="6" alt="" /></td>
   </tr>
 </table>
 
