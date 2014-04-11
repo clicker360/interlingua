@@ -107,10 +107,6 @@ body{
 
 
 <table width="591" border="0" align="center"  cellpadding="0" cellspacing="0">
- <tr>
-      <td align="center" valign="middle"><img src="shadow.png" width="356" height="15" alt="" /></td>
-      
-  </tr>
    <tr>
         <td align="center" valign="top" style="font:Bold 12px Arial, Helvetica, sans-serif; color:#2b2a2a; padding-top:12px;">Copyright © 2013 Interlingua.com</td>
       </tr>
