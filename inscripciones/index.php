@@ -349,7 +349,7 @@
         <footer>
 
             <div id="pie">
-                <div id="copyright">Todos los derechos reservados © Interlingua 2013</div>
+                <div id="copyright">Todos los derechos reservados © Interlingua 2014</div>
                 <div id="aviso"><a href="politicas.html" target="_blank">Aviso Privacidad</a></div>
 
             </div>
