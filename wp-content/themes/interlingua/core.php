@@ -422,30 +422,8 @@ function getPass() {
             $asunto = 'INTERLINGUA Recuperar Contraseña';
 
             @mail($para, $asunto, utf8_decode($mensaje), $header);*/
-            // Create map with request parameters
-            $params = array ('nombre' => 'test', 'clave' => 'test');
-             
-            // Build Http query using params
-            $query = http_build_query ($params);
-             
-            // Create Http context details
-            $contextData = array ( 
-                            'method' => 'POST',
-                            'header' => "Connection: close\r\n".
-                                        "Content-Length: ".strlen($query)."\r\n",
-                            'content'=> $query );
-             
-            // Create context resource for our request
-            $context = stream_context_create (array ( 'http' => $contextData ));
-             
-            // Read page rendered as result of your POST request
-            $result =  file_get_contents (
-                              'http://www.interlingua.com.mx/clicker360/interlingua/crm_dev/prospects/envio_email_alumnos',
-                              false,
-                              $context);
-
-            $respuesta["error"] = False;
-            $respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";
+            
+            header("Location : http://www.interlingua.com.mx/clicker360/interlingua/crm_dev/prospects/envio_email_alumnos?nombre=hugo&clave=test");
         }
 
         $bdh = null;

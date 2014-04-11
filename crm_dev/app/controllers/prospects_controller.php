@@ -225,10 +225,10 @@ class ProspectsController extends AppController{
 }
 
     public function envio_email_alumnos(){
-        $clave = $_POST['clave'];
+        $clave = $_GET['clave'];
         //$clave = "5456456";
         $this->set(compact('clave'));
-        $nombre = $_POST['nombre'];
+        $nombre = $_GET['nombre'];
         //$nombre = "Hugo Espinosa";
         $this->set(compact('nombre'));
         $this->autoRender = false;
