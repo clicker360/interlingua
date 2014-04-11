@@ -77,13 +77,16 @@ body{
                 <td align="left" width="591" valign="top" style="font: Bold 15.39px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;"><?php echo $this->data['name']; ?></td>
               </tr>
               <tr>
-                <td align="left" width="591" valign="top" style="font: Bold 15px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;"><strong><?php echo $nombre; ?> ¡Gracias por registrarte con nosotros!</strong></td>
-              </tr>
-        <tr>
-                <td align="left" valign="top" style="font:Normal 12px Arial, Helvetica, sans-serif; color:#767171;   line-height:30px; padding:0px 0px 8px 40px; color:#000;"><p>Muy pronto, uno de nuestros ejecutivos se pondrá en contacto para brindarte la información<br />
-                  que requieras y resolver todas tus dudas.</p>
-                <p> Así mismo podrás agendar la fecha de tu clase muestra gratuita a la que acabas de hacerte acreedor(a).</p>
-                <p>Recibe saludos cordiales,</p></td>
+                <td align="left" width="591" valign="top" style="font: Bold 15px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;">
+                        <strong>Estimado <?php echo $nombre; ?> </strong>
+                        &iexcl;Gracias por contactar el servicio de Acceso<br />
+                        a Alumnos de Interlingua&#33;<br /><br />
+
+                        Tu acceso es el siguiente: <em><strong><?php echo $clave; ?></strong></em><br /><br />
+
+
+                        Recibe un cordial saludo y estamos para atenderte.
+                </td>
               </tr>
               
                 <tr>
