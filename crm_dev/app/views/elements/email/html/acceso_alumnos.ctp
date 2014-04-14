@@ -82,7 +82,7 @@ body{
                         &iexcl;Gracias por contactar el servicio de Acceso<br />
                         a Alumnos de Interlingua&#33;<br /><br />
 
-                        Tu acceso es el siguiente: <em><strong style="color:#0098AA !important;"><?php echo $clave; ?></strong></em><br /><br />
+                        Tu acceso es el siguiente: <em><strong style="color:#0098AA !important;"><?php echo $_POST['clave']; ?></strong></em><br /><br />
 
 
                         Recibe un cordial saludo y estamos para atenderte.
