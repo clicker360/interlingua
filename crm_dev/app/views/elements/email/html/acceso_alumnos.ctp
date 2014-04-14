@@ -74,11 +74,11 @@ body{
     
     <table width="591" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td align="left" width="591" valign="top" style="font: Bold 15.39px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;"><?php echo $this->data['name']; ?></td>
+                <td align="left" width="591" valign="top" style="font: Bold 15.39px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;"></td>
               </tr>
               <tr>
                 <td align="left" width="591" valign="top" style="font: Bold 15px Arial, Helvetica, sans-serif; color:#504b4b; padding:15px 0px 8px 40px;">
-                        <strong>Estimado <?php echo $nombre; ?> </strong> <br /> <br />
+                        <strong>Estimado <?php echo $_POST['nombre']; ?> </strong> <br /> <br />
                         &iexcl;Gracias por contactar el servicio de Acceso<br />
                         a Alumnos de Interlingua&#33;<br /><br />
 
