@@ -225,7 +225,7 @@ class ProspectsController extends AppController{
 }
 
     public function envio_email_alumnos(){
-        echo $this->data['nombre'];
+        echo $_POST['email'];
         $this->autoRender = false;
         $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
         $this->Email->to = 'vaporic@gmail.com';

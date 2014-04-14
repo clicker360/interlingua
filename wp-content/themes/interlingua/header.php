@@ -182,8 +182,8 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["alumno"])) {
 		            			alert(data.mensaje);
 		            			location.reload();
 		            		}else{
-		            			alert(data.mensaje);
 		            			jQuery.post( "http://www.interlingua.com.mx/clicker360/interlingua/crm_dev/prospects/envio_email_alumnos", { nombre: data.nombre, clave: data.clave, email: data.email });
+		            			alert(data.mensaje);
 		            			location.reload();
 		            		}
 		            	}
