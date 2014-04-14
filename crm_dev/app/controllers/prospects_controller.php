@@ -228,8 +228,7 @@ class ProspectsController extends AppController{
         $this->autoRender = false;
         $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
         $this->Email->to = 'vaporic@gmail.com';
-        $this->Email->cc = $_POST['email'];
-        $this->Email->subject = 'RECUPERACIÓN DE CLAVE DE ACCESO A INTERLINGUA';
+        $this->Email->subject = 'RECUPERACIÓN DE CLAVE DE ACCESO A INTERLINGUA'.$_POST['email'];
         $this->Email->sendAs = 'html';
         $this->Email->template =  'acceso_alumnos';
         $this->Email->send();
