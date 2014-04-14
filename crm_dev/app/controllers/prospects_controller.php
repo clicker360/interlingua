@@ -225,12 +225,7 @@ class ProspectsController extends AppController{
 }
 
     public function envio_email_alumnos(){
-        $clave = $_GET['clave'];
-        //$clave = "5456456";
-        $this->set(compact('clave'));
-        $nombre = $_GET['nombre'];
-        //$nombre = "Hugo Espinosa";
-        $this->set(compact('nombre'));
+        echo $this->data['nombre'];
         $this->autoRender = false;
         $this->Email->from = 'Interlingua <contacto@interlingua.com.mx>';
         $this->Email->to = 'vaporic@gmail.com';

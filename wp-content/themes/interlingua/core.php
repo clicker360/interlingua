@@ -422,16 +422,11 @@ function getPass() {
             $asunto = 'INTERLINGUA Recuperar Contraseña';
 
             @mail($para, $asunto, utf8_decode($mensaje), $header);*/
-            
-            echo '
-            <form id="form_send" action="http://www.interlingua.com.mx/clicker360/interlingua/crm_dev/prospects/envio_email_alumnos" method="post">
-                <input type="hidden" name="nombre" value="test"></input>
-                <input type="hidden" name="clave" value="test"></input>
-            <form>
-            <script>
-                jQuery("#form_send").submit();
-            </script>
-            ';
+            $respuesta["nombre"] = $nombre.' '.$paretno.' '.$materno;
+            $respuesta["clave"] = $password;
+            $respuesta["email"] = $email;
+            $respuesta["error"] = False;
+            $respuesta["mensaje"] = "La contraseña fue enviada al correo que registraste";    
         }
 
         $bdh = null;
