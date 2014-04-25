@@ -2,7 +2,7 @@
     //echo $this->element('sql_dump');
 ?>
 
-<table border="1" cellspacing="0" cellpadding="2px">
+<table border="1" cellspacing="0" cellpadding="2px" style="background:#FFF;">
     <!--usuarios-->
     <tr>
         <td colspan="2"><?php echo $titulo ?></td>
