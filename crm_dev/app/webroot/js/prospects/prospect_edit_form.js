@@ -150,6 +150,8 @@ $(document).ready(function() {
                 });
                 }
             });
+        }else{
+            $(".submit").after("Prospecto guardado en AS400");
         }
     }
 
