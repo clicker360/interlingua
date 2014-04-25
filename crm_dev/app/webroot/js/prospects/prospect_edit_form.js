@@ -141,7 +141,7 @@ $(document).ready(function() {
                                     },
                                     ''
                                 );
-                                alert('El prospecto se registro correctamente en el sistema AS400');
+                                alert('El prospecto se registro correctamente en el sistema AS400 con la matricula '+data.mat);
                                 console.log(data.mat);
                                 window.location = data.mensaje;
                             }
