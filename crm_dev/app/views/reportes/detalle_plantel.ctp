@@ -125,6 +125,50 @@
         echo '<td><b>' . $totalPCP . '</b></td>';
         $totalPCP = 0;
         echo '</tr>';
+
+        //Genera Suma de totales
+        echo '<tr>';
+        echo '<td></td>';
+        echo '<td><strong>Totales</strong></td>';
+        $sum = 0;
+        $sumTot = 0;
+        $arrayPorcentaje = array();
+        foreach ($arraySum as $key => $value) {
+            foreach ($value as $x => $y) {
+                $y = (int)$y;
+                $sum = $sum + $y;
+            }
+            echo "<td><strong>";
+            echo $sum;
+            echo "</strong></td>";
+            $sumTot = $sumTot + $sum;
+            $sum = 0;
+        }
+        echo '<td><b>' . $sumTot . '</b></td>';
+        echo '</tr>';
+
+        ksort($arrCategories);
+        $cont = 0;
+        foreach ($arrCategories as $z => $val) {
+            echo '<tr>';
+            echo '<td></td>';
+            echo '<td><strong>'.$val.'</strong></td>';
+            foreach ($arraySum as $key => $value) {
+                foreach ($value as $x => $y) {
+                    $y = (int)$y;
+                    $sum2 = $sum2 + $y;
+                }
+                $sumTot2 = $sumTot2 + $sum2;
+                $sumE = $value[$cont]/$sum2;
+                $sumE = $sumE*100;
+                $sumE = round($sumE,2);
+                echo '<td><strong>'.$sumE.' %</strong></td>';
+                $sum2 = 0;
+            }
+            echo "<br>";
+            echo '</tr>';
+            $cont++;
+        }
     ?>
 </table>
 
