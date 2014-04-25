@@ -19,10 +19,10 @@ echo $form->create('');
         <td><?php echo $form->input('Prospect.estado', array('id' => 'search_prospect_estado', 'type' => 'text', 'label' => false)); ?></td>
     </tr>
     <tr>
-        <td>Lada:</td>
-        <td><?php echo $form->input('Prospect.lada', array('id' => 'search_prospect_lada', 'type' => 'text', 'label' => false)); ?></td>
         <td>Teléfono:</td>
         <td><?php echo $form->input('Prospect.phone_number', array('id' => 'search_prospect_phone_number', 'type' => 'text', 'label' => false)); ?></td>
+        <td>Plantel:</td>
+        <td><?php echo $form->input('Prospect.plantel', array('id' => 'search_prospect_plantel', 'type' => 'text', 'label' => false)); ?></td>
     </tr>
     <tr>
         <td>Categoria de status:</td>
