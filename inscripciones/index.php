@@ -88,6 +88,23 @@
                     }
                     alert(erroresString);
                 }
+
+
+                /* Form */
+                $("#form1").submit(function( event ){
+
+                    if ($(this).valid()){
+                        $("input:text,select").each(function(){
+                            $(this).prop('readonly', true);
+                        });
+
+                        $("input:submit").prop('disabled', true);
+                    }else{
+                        event.preventDefault();
+                    }
+                });              
+
+
                 $("#form1").validate({
                     rules: {
                         name: {

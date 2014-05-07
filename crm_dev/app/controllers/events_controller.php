@@ -137,7 +137,7 @@ class EventsController extends AppController{
         if (isset($this->data['Event']['id'])) { // This prospect have open events?
             //Se filtra el resultado por estatus finales. Y se valida que si no es final tenga un evento a futuro.
             //if(in_array($this->data['Event']['status_id'], array(2,5,10,11,12,15,26,20,25,24,27,28))){
-            if(in_array($this->data['Event']['status_id'], array(2,27,32,34,43,35,11,12,15,41,42,43,44,28,46))){
+            if(in_array($this->data['Event']['status_id'], array(2,27,32,34,43,35,11,12,15,41,42,43,44,28,46,48,49,50,51,52,53,54))){
             //if($this->data['Event']['status_id'] == 2 OR $this->data['Event']['status_id'] == 5 OR $this->data['Event']['status_id'] == 10 OR $this->data['Event']['status_id'] == 11 OR $this->data['Event']['status_id'] == 12  OR $this->data['Event']['status_id'] == 15 OR $this->data['Event']['status_id'] == 19) {
                 $prospect_id = '';
                 $evento_futuro = 0;
